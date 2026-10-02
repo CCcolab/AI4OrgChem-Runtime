@@ -27,7 +27,12 @@ if($LASTEXITCODE -ne 0){throw 'Image save failed; partial backup retained'}
 # Container-only /opt links cannot be stat'ed by Windows bsdtar. Preserve all
 # result copies and original runs; recover source separately from the image.
 $exclusions=@('*/classifier-view/configs','*/classifier-view/evidence')
-& tar.exe --exclude $exclusions[0] --exclude $exclusions[1] -czf (Join-Path $dest 'runs.tar.gz') -C (Split-Path -Parent $runs) (Split-Path -Leaf $runs)
+# Windows bsdtar stat's invalid links before applying excludes. An explicit
+# regular-file list prevents descending into those entries at all.
+$archiveList=Join-Path $dest 'run-archive-files.txt'
+$prefix=(Split-Path -Leaf $runs)+'/'
+[IO.File]::WriteAllLines($archiveList,[string[]]@($fileHashes | ForEach-Object {$prefix+$_.path}),[Text.UTF8Encoding]::new($false))
+& tar.exe -czf (Join-Path $dest 'runs.tar.gz') -C (Split-Path -Parent $runs) -T $archiveList
 if($LASTEXITCODE -ne 0){throw 'Run archive failed; partial backup retained'}
 & tar.exe -tf (Join-Path $dest 'runs.tar.gz') 1> (Join-Path $dest 'runs-archive-list.txt')
 if($LASTEXITCODE -ne 0){throw 'Cannot read run archive'}
