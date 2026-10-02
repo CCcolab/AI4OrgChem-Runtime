@@ -121,6 +121,98 @@
         "coulomb_energy_hartree": 3.410605131648481e-13,
         "exact_exchange_energy_hartree": 8.881784197001252e-15
       }
+    },
+    {
+      "run_id": "20261002T105729Z-evidence-7262f14bf797",
+      "task": "evidence",
+      "status": "PASS",
+      "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+      "runtime_commit": "c2cc5027d25defa32338b04cda577285dcc06cf9",
+      "runtime_code_sha256": "7aece0641285de490a4ff59a605b5684fbad305482ffc8daf63a093663d20762",
+      "process_exit_code": 0,
+      "runtime_exit_code": 0,
+      "numerical_qualification": "NOT_APPLICABLE",
+      "scientific_comparison": "NOT_APPLICABLE",
+      "wall_time_seconds": 1.0087911680000001,
+      "threads": 8,
+      "source_readonly": true,
+      "resource_peak": "UNKNOWN",
+      "image_digest": "UNKNOWN",
+      "image_id": "UNKNOWN",
+      "manifest_sha256": "aea9b3cac40f627c63da89366b4c07187b6b9fd873d0574a49e5981e09c3d5d5"
+    },
+    {
+      "run_id": "20261002T105731Z-core-tests-84c2141cb412",
+      "task": "core-tests",
+      "status": "PASS",
+      "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+      "runtime_commit": "c2cc5027d25defa32338b04cda577285dcc06cf9",
+      "runtime_code_sha256": "7aece0641285de490a4ff59a605b5684fbad305482ffc8daf63a093663d20762",
+      "process_exit_code": 0,
+      "runtime_exit_code": 0,
+      "numerical_qualification": "NOT_APPLICABLE",
+      "scientific_comparison": "NOT_APPLICABLE",
+      "wall_time_seconds": 2.2682283860000005,
+      "threads": 8,
+      "source_readonly": true,
+      "resource_peak": "UNKNOWN",
+      "image_digest": "UNKNOWN",
+      "image_id": "UNKNOWN",
+      "manifest_sha256": "43ca0815fa3d5add8542e435debbdc1af055c3ffa8f4e69b3f8070a2944e7039"
+    },
+    {
+      "run_id": "20261002T105733Z-p14-smoke-6358690e4876",
+      "task": "p14-smoke",
+      "status": "PASS",
+      "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+      "runtime_commit": "c2cc5027d25defa32338b04cda577285dcc06cf9",
+      "runtime_code_sha256": "7aece0641285de490a4ff59a605b5684fbad305482ffc8daf63a093663d20762",
+      "process_exit_code": 0,
+      "runtime_exit_code": 0,
+      "numerical_qualification": "PASS",
+      "scientific_comparison": "NOT_APPLICABLE",
+      "wall_time_seconds": 12.312073809,
+      "threads": 8,
+      "source_readonly": true,
+      "resource_peak": {
+        "peak_rss_mib": 547.87890625
+      },
+      "image_digest": "UNKNOWN",
+      "image_id": "UNKNOWN",
+      "manifest_sha256": "d04c26d615345de74ea09e5c1b653fd5a83d8cedd6cc5b76ebc2876fb36996f5",
+      "technical_endpoint_kcal_mol": 26.471605327226722,
+      "frozen_technical_endpoint_kcal_mol": 26.471605327226722,
+      "absolute_technical_residual_kcal_mol": 0.0
+    },
+    {
+      "run_id": "20261002T105746Z-p14-equivalence-5d389d942d59",
+      "task": "p14-equivalence",
+      "status": "PASS",
+      "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+      "runtime_commit": "c2cc5027d25defa32338b04cda577285dcc06cf9",
+      "runtime_code_sha256": "7aece0641285de490a4ff59a605b5684fbad305482ffc8daf63a093663d20762",
+      "process_exit_code": 0,
+      "runtime_exit_code": 0,
+      "numerical_qualification": "PASS",
+      "scientific_comparison": "NOT_APPLICABLE",
+      "wall_time_seconds": 13.840753973000002,
+      "threads": 8,
+      "source_readonly": true,
+      "resource_peak": {
+        "peak_rss_mib": 548.234375
+      },
+      "image_digest": "UNKNOWN",
+      "image_id": "UNKNOWN",
+      "manifest_sha256": "9c02507f1d8e3548d685ccf292bfb9b9f77f849e80af51610ba12a1142a78808",
+      "differences": {
+        "total_energy_hartree": 0.0,
+        "density_frobenius_norm": 6.034833410415508e-13,
+        "deleted_eri_count": 0,
+        "deleted_eri_fraction": 0.0,
+        "one_electron_energy_hartree": 0.0,
+        "coulomb_energy_hartree": 0.0,
+        "exact_exchange_energy_hartree": 3.552713678800501e-15
+      }
     }
   ]
 }

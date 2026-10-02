@@ -20,15 +20,29 @@
 | 项目 | 实测 |
 |---|---|
 | pip check | PASS：独立 venv 离线哈希安装 |
-| runtime 单元/过程测试 | PASS：9 项初测；后续新增项以 summary.json 为准 |
+| runtime 单元/过程测试 | PASS：最终 Linux 12 项全通过；含分类器冻结样例路径适配测试与真实 CLI 缺输入拒绝 |
+| PowerShell | PASS：7 项路径/语法检查；不代表 WSLc 命令已运行 |
 | L0 | PASS：十四项、P12、导航、P14 底层证据全部核验 |
 | L1 | PASS：三份原测试共 11 项 |
-| L2 | PASS：15/15 自身数值资格，约 12.6 秒，峰值 RSS 546.15 MiB |
+| L2 | PASS：15/15 自身数值资格，最终复验 12.31 秒，峰值 RSS 547.88 MiB |
 | STO-3G 等价性 | PASS；第一次源码缺失预检 FAIL 保留 |
 | 源码/证据 | 只读、任务前后 588 个文件哈希校验一致 |
 | 输出 | 与源码目录分离，在 Windows 宿主持久目录保留 |
 
 L2 技术端点 `26.471605327369403 kcal/mol`，固定提交同层级冻结值 `26.471605327226722 kcal/mol`，绝对差 `1.4268053405430692e-10 kcal/mol`。这是 STO-3G 技术对照，不是 L3 的 67.086899 端点复算，不能作科学定判。L3/L4 残差 UNKNOWN，未计算；WSL2/WSLc 相互残差 UNKNOWN。
+
+## 已提交代码的最终复验
+
+实现提交 `c2cc5027d25defa32338b04cda577285dcc06cf9` 在干净 runtime 工作区完成复验，四份新 manifest 都包含真实 runtime commit 与代码/锁快照摘要 `7aece0641285de490a4ff59a605b5684fbad305482ffc8daf63a093663d20762`。本报告和汇总的后续提交只更新文档/验收摘要。
+
+| task | 最终运行 ID | 结果 |
+|---|---|---|
+| evidence | 20261002T105729Z-evidence-7262f14bf797 | PASS |
+| core-tests | 20261002T105731Z-core-tests-84c2141cb412 | PASS，11 原测试 |
+| p14-smoke | 20261002T105733Z-p14-smoke-6358690e4876 | PASS，15/15 |
+| p14-equivalence | 20261002T105746Z-p14-equivalence-5d389d942d59 | PASS，13.84 秒 |
+
+最终 L2 技术端点 `26.471605327226722 kcal/mol`，与同层级冻结值的本次绝对差为 `0.0 kcal/mol`；这不是对其他平台或将来运行逐位相同的承诺。等价性两实现总能绝对差 `0.0 Eh`，密度 Frobenius 差 `6.034833410415508e-13`。所有九份已记录运行（含一次预检失败）的输出哈希已经汇总脚本复核，见 summary.json。12 项测试与 PowerShell 7 项检查的小型记录见 checks.json；CI、容器和 WSLc 仍未执行。
 
 原始日志目录：`D:\AI4Science\ai4orgchem-runtime-runs\20261002-wsl2`。首次三个运行 ID：`20261002T104043Z-evidence-ab57bf8dbabf`、`20261002T104045Z-core-tests-6b8796c8ba75`、`20261002T104047Z-p14-smoke-afbe6f3bce33`。这些在首次提交前执行，runtime_commit 为 UNKNOWN，未伪补写。后续已识别提交的执行记录另行汇总，不覆盖历史 manifest。
 
