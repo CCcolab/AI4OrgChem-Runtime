@@ -1,5 +1,7 @@
 # WSLc 能力与实测矩阵
 
+本轮收尾决定（2026-10-02）：用户为优先保护原 AI4OrgChem 科研运行环境，暂停 WSL 升级和 WSLc 实机验收。WSLc 继续 BLOCKED / NOT_EXECUTED；后续恢复须明确授权。本地 Docker OCI 已验证范围保留，不替代 WSLc 支持声明。
+
 2026-10-02 本机：Windows 10.0.26300.9550（wsl --version 输出）、AMD64、WSL 2.3.26.0、内核 5.15.167.4-1。Ubuntu-24.04 可执行。PATH 中未发现 wslc.exe，无法读取本机 wslc --help；**WSLc 平台验收 BLOCKED，各项测试 NOT_EXECUTED**。用户授权启动已有 Docker Desktop 4.78.0 后，Docker 29.5.3 Linux/amd64 引擎可用；**本地 OCI 干净构建、L0—L2/等价性与本轮安全/持久性验收 PASS**。未更新 WSL、修改全局配置、重启或安装其他引擎。下表专门记录 WSLc，仍全部 NOT_EXECUTED。
 
 微软[官方入门文档](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers)与[概览](https://learn.microsoft.com/en-us/windows/wsl/wsl-container)在核查日列出 WSL 2.9.3+ 前提；该数字来自文档，不是本项目实测最低版本。[3.0.1 发布记录](https://github.com/microsoft/WSL/releases/tag/3.0.1)对应 2026-09-29 GA。官方[GA 公告](https://blogs.windows.com/windowsdeveloper/2026/09/29/wsl-containers-now-generally-available/)说明 --mount、构建运行与存储路径配置；Compose 仍列为后续计划。本项目不依赖 Compose。

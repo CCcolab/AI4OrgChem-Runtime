@@ -238,5 +238,15 @@
     "platform": "linux/amd64"
   },
   "image_user": "10001:10001",
-  "published": false
+  "published": false,
+  "platform_upgrade_decision": {
+    "date": "2026-10-02",
+    "status": "DEFERRED_BY_USER",
+    "reason": "Prioritize preservation of the original AI4OrgChem scientific environment",
+    "wsl_upgrade": "NOT_EXECUTED",
+    "wslc_acceptance": "BLOCKED",
+    "wslc_tests": "NOT_EXECUTED",
+    "resume_requires_explicit_user_authorization": true,
+    "completed_deliverables_retained": true
+  }
 }
