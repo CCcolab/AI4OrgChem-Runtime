@@ -27,6 +27,8 @@ def memory_snapshot(proc=Path('/proc'), cgroup=Path('/sys/fs/cgroup')):
     try:
         memberships = (proc / 'self/cgroup').read_text().splitlines()
         mounts = (proc / 'self/mountinfo').read_text().splitlines()
+        unmounted_v2 = False
+        usable_v1 = False
         for row in memberships:
             _, controllers, relative = row.split(':', 2)
             version = 2 if controllers == '' else 1
@@ -63,9 +65,18 @@ def memory_snapshot(proc=Path('/proc'), cgroup=Path('/sys/fs/cgroup')):
                     leaf = leaf.parent
                 if not found_counter:
                     errors.append('memory controller counters unavailable')
+                elif version == 1:
+                    usable_v1 = True
                 break
             if not matched_mount:
-                errors.append('memory cgroup mount unavailable')
+                if version == 2:
+                    # Hybrid kernels may list an unused unified hierarchy while
+                    # memory is exclusively attached to a visible v1 controller.
+                    unmounted_v2 = True
+                else:
+                    errors.append('memory cgroup mount unavailable')
+        if unmounted_v2 and not usable_v1:
+            errors.append('memory cgroup mount unavailable')
     except (OSError, ValueError) as exc:
         errors.append(type(exc).__name__)
     values = ([host] if host is not None else []) + [v for v in samples if v is not None]

@@ -45,6 +45,10 @@ class ResourceTests(unittest.TestCase):
             (group / 'memory/memory.limit_in_bytes').write_text('900')
             (group / 'memory/memory.usage_in_bytes').write_text('100')
             self.assertEqual(memory_snapshot(proc, group)['effective_available_bytes'], 800)
+            # Docker on a hybrid kernel: v1 memory is authoritative, while the
+            # unmounted, unused v2 membership must not hide its real limit.
+            (proc / 'self/cgroup').write_text('5:memory:/\n0::/\n')
+            self.assertEqual(memory_snapshot(proc, group)['effective_available_bytes'], 800)
 
     def test_missing_cgroup_counters_fail_closed(self):
         with tempfile.TemporaryDirectory() as directory:
