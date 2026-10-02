@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-02",
+  "task": "p14-fixed",
+  "status": "PASS",
+  "run_id": "20261002T123033Z-p14-fixed-d621c0cfab97",
+  "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+  "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+  "process_exit_code": 0,
+  "output_hashes_verified": true,
+  "manifest_sha256": "26aaa26fe14a890305e2bff86dfedb300b48ef2334b6a1bb8679581f35e5c480",
+  "raw_directory": "D:\\AI4Science\\ai4orgchem-runtime-runs\\20261002-l3\\20261002T123033Z-p14-fixed-d621c0cfab97",
+  "cpu": "Intel Core Ultra 9 185H",
+  "physical_cores": 16,
+  "logical_processors": 22,
+  "requested_threads": 8,
+  "sample_cpu_percent": 798.87,
+  "sample_container_memory_gib": 5.077,
+  "result": {
+    "anchor_gate_verdict": "PASS",
+    "wall_time_seconds": 54.36957464700026,
+    "peak_rss_mib": 8800.86328125,
+    "fixed_geometry_endpoint_kcal_mol": 67.08689934803395,
+    "source_comparison": {
+      "G_source_energy_hartree": -460.6304,
+      "G_energy_residual_hartree": 0.009631057372416763,
+      "PLG_source_energy_hartree": -460.7373,
+      "PLG_energy_residual_hartree": 0.009621278124541277,
+      "source_delta_E_GP_kcal_mol": 67.08,
+      "fixed_endpoint_residual_kcal_mol": 0.006899348033954311
+    },
+    "acceptance_checks": {
+      "ordinary_G_converged": true,
+      "ordinary_at_PLG_converged": true,
+      "conditional_PLG_converged": true,
+      "ordinary_G_78_electrons": true,
+      "ordinary_at_PLG_78_electrons": true,
+      "conditional_PLG_78_electrons": true,
+      "single_tensor_memory_mode": true,
+      "energy_components_close": true,
+      "commutator_closed": true,
+      "density_idempotent": true,
+      "endpoint_positive": true,
+      "scientific_classification_deferred": true
+    }
+  },
+  "wslc": "BLOCKED / NOT_EXECUTED",
+  "L4": "NOT_EXECUTED"
+}

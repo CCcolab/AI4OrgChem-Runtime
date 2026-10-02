@@ -10,7 +10,7 @@
 | L1 core-tests | PASS | PASS | NOT_EXECUTED |
 | L2 p14-smoke | PASS | PASS | NOT_EXECUTED |
 | p14-equivalence | PASS（另保留一次预检 FAIL） | PASS | NOT_EXECUTED |
-| L3 p14-fixed | NOT_EXECUTED | NOT_EXECUTED | NOT_EXECUTED |
+| L3 p14-fixed | NOT_EXECUTED | PASS（固定几何 anchor 资格） | NOT_EXECUTED |
 | L4 p14-optimize | NOT_EXECUTED | NOT_EXECUTED | NOT_EXECUTED |
 | p14-classify 实际四输入联合分类 | NOT_EXECUTED | NOT_EXECUTED | NOT_EXECUTED |
 

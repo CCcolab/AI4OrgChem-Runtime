@@ -38,6 +38,7 @@
 | --rm 后四份 manifest 与全部输出哈希 | PASS |
 | 封装测试 | PASS，12 项，无跳过；含合成中断保留测试 |
 | Docker stop 信号语义、完整 L4 中断 | NOT_EXECUTED |
-| L3/L4、四份新输入联合分类 | NOT_EXECUTED |
+| L3 p14-fixed | PASS，后续授权实跑 12/12 anchor 资格，见 l3-summary.json |
+| L4、四份新输入联合分类 | NOT_EXECUTED |
 
 本地镜像与记录见 [OCI 汇总](../validation/oci-summary.json)。L4 可保存检查点，但不支持恢复运行。
