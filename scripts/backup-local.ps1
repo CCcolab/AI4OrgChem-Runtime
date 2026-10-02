@@ -24,7 +24,10 @@ $fileHashes=@(Get-ChildItem -LiteralPath $runs -Recurse -File | Where-Object {-n
 $fileHashes | ConvertTo-Json -Depth 4 | Set-Content (Join-Path $dest 'run-files.sha256.json') -Encoding utf8
 & $engine image save --output (Join-Path $dest 'candidate-image.tar') $identity.Id
 if($LASTEXITCODE -ne 0){throw 'Image save failed; partial backup retained'}
-& tar.exe -czf (Join-Path $dest 'runs.tar.gz') -C (Split-Path -Parent $runs) (Split-Path -Leaf $runs)
+# Container-only /opt links cannot be stat'ed by Windows bsdtar. Preserve all
+# result copies and original runs; recover source separately from the image.
+$exclusions=@('*/classifier-view/configs','*/classifier-view/evidence')
+& tar.exe --exclude $exclusions[0] --exclude $exclusions[1] -czf (Join-Path $dest 'runs.tar.gz') -C (Split-Path -Parent $runs) (Split-Path -Leaf $runs)
 if($LASTEXITCODE -ne 0){throw 'Run archive failed; partial backup retained'}
 & tar.exe -tf (Join-Path $dest 'runs.tar.gz') 1> (Join-Path $dest 'runs-archive-list.txt')
 if($LASTEXITCODE -ne 0){throw 'Cannot read run archive'}
@@ -38,7 +41,7 @@ if($LASTEXITCODE -ne 0){throw 'Source snapshot failed'}
 $record=[ordered]@{date_utc=[DateTime]::UtcNow.ToString('o');runtime_repository_commit=$revision;
     image_id=$identity.Id;image_repo_digests=$identity.RepoDigests;image_runtime_commit=$identity.Config.Labels.'org.opencontainers.image.revision';
     image_tag_hint=$Image;runs_root=$runs;run_files=$fileHashes.Count;wslc='BLOCKED / NOT_EXECUTED';L4_resume_supported=$false;
-    scope='Local backup only; upstream project and global scientific environments excluded';files=@()}
+    scope='Local backup only; upstream project and global scientific environments excluded';excluded_container_source_symlinks=$exclusions;files=@()}
 foreach($f in Get-ChildItem -LiteralPath $dest -File){$record.files+=@{name=$f.Name;bytes=$f.Length;sha256=(Get-FileHash -LiteralPath $f.FullName -Algorithm SHA256).Hash.ToLowerInvariant()}}
 $record|ConvertTo-Json -Depth 8|Set-Content (Join-Path $dest 'backup-manifest.json') -Encoding utf8
 Get-FileHash -LiteralPath (Join-Path $dest 'backup-manifest.json') -Algorithm SHA256 | Format-List | Out-File (Join-Path $dest 'backup-manifest.sha256.txt') -Encoding utf8
