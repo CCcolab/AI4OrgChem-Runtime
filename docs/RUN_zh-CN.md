@@ -1,6 +1,6 @@
 # 分层运行合同
 
-Windows 使用 scripts/run-wslc.ps1。容器内稳定接口为 `python -m runtime.cli run TASK`，entrypoint 自动调用。任务白名单：evidence、core-tests、p14-smoke、p14-equivalence、p14-fixed、p14-optimize、p14-classify。未知 task/参数由 argparse/PowerShell 拒绝。
+Windows 日常使用 scripts/start-runtime.ps1，可从 PowerShell 5.1 自动选择已有 7.3+，固定 Docker；底层 scripts/run-wslc.ps1 仍需 PowerShell 7.3+，默认 WSLc 仅为待验收候选。当前 Docker 用法和备份见 LOCAL_DELIVERY_zh-CN.md。容器内稳定接口为 `python -m runtime.cli run TASK`，entrypoint 自动调用。任务白名单：evidence、core-tests、p14-smoke、p14-equivalence、p14-fixed、p14-optimize、p14-classify。未知 task/参数由 argparse/PowerShell 拒绝。
 
 ```powershell
 ./scripts/run-wslc.ps1 -Task evidence -Image ai4orgchem-runtime:candidate -OutputRoot 'D:\AI4Science\ai4orgchem-runtime-runs\我的复核 output'
@@ -20,7 +20,7 @@ L0 顺序核验十四项、P12、导航和 P14 内部证据；不做新科学计
 
 ## L3/L4 状态与资源
 
-接口已实现但未实跑，不标为支持。当前目标主机 Ubuntu-24.04 WSL2：约 15.8 GiB VM 内存，核查时 MemAvailable 约 15 GiB。L3/L4 参考耗时 UNKNOWN，L4 最多多次状态计算与有限差分优化；不存在本轮高成本执行预算，未启动。不得用 L2 约 546 MiB/12.6 s 外推 L4。
+本机 Docker 已按后续授权实跑 L3/L4，均通过原资格门禁。L3 耗时 54.37 秒、L4 耗时 21.20 分钟，峰值均约 8.60 GiB；这是单次实测，不保证不同负载或输入的时间/峰值。VM 内存约 15.43 GiB；每次启动仍须通过有效内存预检。L4 多次状态计算与有限差分优化，未来执行仍需预算，不能用 L2 耗时外推。
 
 L4 检查点持久保存；源码无恢复能力，不提供 resume。重新开始建立全新运行目录，旧检查点保留供审计。不复制旧检查点冒充恢复状态。
 
@@ -37,7 +37,7 @@ L4 检查点持久保存；源码无恢复能力，不提供 resume。重新开�
   -SourceLevelRun D:\AI4Science\ai4orgchem-runtime-runs\my-reproduction\FIXED_RUN
 ```
 
-上游分类器 partial/disagreement 可以退出 0；manifest 保留原退出码并将联合资格非 PASS 记为 FAIL，不把科学分歧伪造为程序异常或 PASS。完整新四结果分类尚未执行。
+上游分类器 partial/disagreement 可以退出 0；manifest 保留原退出码并将联合资格非 PASS 记为 FAIL，不把科学分歧伪造为程序异常或 PASS。完整新四结果分类已在本机 Docker 执行，PASS/consistent；来源和限制见 validation/classification-summary.json。WSLc 尚未执行。
 
 ## 独立 WSL2 验收
 
