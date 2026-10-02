@@ -205,8 +205,6 @@
   },
   "wslc_acceptance": "BLOCKED",
   "wslc_tests": "NOT_EXECUTED",
-  "L3": "NOT_EXECUTED",
-  "L4": "NOT_EXECUTED",
   "L4_resume_supported": false,
   "source_lock": {
     "schema_version": 1,
@@ -248,5 +246,11 @@
     "wslc_tests": "NOT_EXECUTED",
     "resume_requires_explicit_user_authorization": true,
     "completed_deliverables_retained": true
+  },
+  "scope_note": "Final OCI L0-L2 acceptance only; later L3/L4/classification in separate summaries",
+  "current_status_reference": "final-delivery-status.json",
+  "excluded_at_oci_acceptance": {
+    "L3": "NOT_EXECUTED",
+    "L4": "NOT_EXECUTED"
   }
 }

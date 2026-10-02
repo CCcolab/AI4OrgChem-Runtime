@@ -16,20 +16,41 @@ jobs:
       - name: Build identified local image (no registry push)
         shell: bash
         run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/ai4orgchem-runs"
           docker build -f container/Dockerfile -t ai4orgchem-runtime:ci \
             --build-arg RUNTIME_COMMIT="$GITHUB_SHA" \
-            --build-arg DEPENDENCY_LOCK_SHA256="$(sha256sum locks/requirements-linux-amd64.txt | cut -d ' ' -f 1)" .
+            --build-arg DEPENDENCY_LOCK_SHA256="$(sha256sum locks/requirements-linux-amd64.txt | cut -d ' ' -f 1)" . \
+            2>&1 | tee "$RUNNER_TEMP/ai4orgchem-runs/build.log"
+          docker image inspect ai4orgchem-runtime:ci > "$RUNNER_TEMP/ai4orgchem-runs/image-inspect.json"
       - name: Wrapper tests
-        run: docker run --rm --entrypoint python --mount type=bind,source="$PWD/tests",target=/tests,readonly ai4orgchem-runtime:ci -m unittest discover -s /tests -v
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --network none --entrypoint python \
+            --mount type=bind,source="$PWD/tests",target=/tests,readonly \
+            ai4orgchem-runtime:ci -m unittest discover -s /tests -v \
+            2>&1 | tee "$RUNNER_TEMP/ai4orgchem-runs/wrapper-tests.log"
       - name: L0 and L1 offline with persistent output
         shell: bash
         run: |
+          set -euo pipefail
           mkdir -p "$RUNNER_TEMP/ai4orgchem-runs"
           sudo chown 10001:10001 "$RUNNER_TEMP/ai4orgchem-runs"
+          IMAGE_ID=$(docker image inspect --format '{{.Id}}' ai4orgchem-runtime:ci)
           for task in evidence core-tests; do
             docker run --rm --network none \
               --mount type=bind,source="$RUNNER_TEMP/ai4orgchem-runs",target=/work \
-              ai4orgchem-runtime:ci run "$task"
+              --env AI4ORGCHEM_IMAGE_ID="$IMAGE_ID" \
+              "$IMAGE_ID" run "$task"
           done
       - name: Container permissions and persistence
         run: docker run --rm --network none --mount type=bind,source="$RUNNER_TEMP/ai4orgchem-runs",target=/work --entrypoint python ai4orgchem-runtime:ci -m runtime.platform_probe
+      - name: Preserve execution evidence (including failures; no release publication)
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: candidate-validation-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/ai4orgchem-runs
+          if-no-files-found: warn
+          retention-days: 7

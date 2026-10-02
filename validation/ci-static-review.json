@@ -1,0 +1,8 @@
+{
+  "review_date": "2026-10-03",
+  "static_review": "COMPLETED",
+  "execution": "NOT_EXECUTED",
+  "workflow_sha256": "f5f51624f0e1665012a384fdacb74ff062377d45a43ac6e0a223518b48335e9a",
+  "checks": "YAML parse, trigger/permission/runner/action pins, no scientific high-cost tasks, no publish commands, offline wrapper, artifact retention",
+  "note": "Structural assertions are static review only, not a real workflow run"
+}

@@ -1,5 +1,7 @@
 # 本地交付与日常使用
 
+当前状态（2026-10-03）：本地 Docker L0—L4/等价性/联合分类已验证，WSLc 暂缓并保持 BLOCKED / NOT_EXECUTED；CI 静态审查完成、运行 NOT_EXECUTED；许可映射与对应源码提供未齐，公开发布仍阻塞。身份与范围以 validation/final-delivery-status.json 和 DELIVERY_REVIEW_2026-10-03_zh-CN.md 为准，既有备份为历史快照。
+
 截至 2026-10-02，本机 Docker 候选已完成 L0—L4、STO-3G 等价性及四份新结果联合分类。联合结果为 consistent，仅适用于固定 C12H6 来源代理、PLG 定义及五参数平面 D3h 协议。WSLc 仍 BLOCKED / NOT_EXECUTED；升级和实机验收暂停。未公开发布，未赋予训练资格。
 
 ## Windows PowerShell 5.1 或 PowerShell 7 入口

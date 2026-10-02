@@ -1,5 +1,7 @@
 # 2026-10-02 候选环境实施与验证报告
 
+本文件为分阶段历史报告。2026-10-03 最终交付审查与当前结论见 [DELIVERY_REVIEW_2026-10-03_zh-CN.md](DELIVERY_REVIEW_2026-10-03_zh-CN.md) 和 final-delivery-status.json；下文的阶段性 NOT_EXECUTED/UNKNOWN 保留对应时间语义，不能替代后续最终记录。CI 仅静态审查，未执行；发布许可问题仍未结案。
+
 ## 后续授权的 L3 实测更新
 
 用户完成首次使用后明确授权启动 L3。本地 Docker 候选 p14-fixed 已完成，manifest PASS、退出码 0，全部输出哈希复核一致；原始记录位于 `D:\AI4Science\ai4orgchem-runtime-runs\20261002-l3`，小型汇总见 [l3-summary.json](l3-summary.json)。下文未运行 L3 的陈述保留为此前阶段历史，本节更新其当前 Docker 状态。

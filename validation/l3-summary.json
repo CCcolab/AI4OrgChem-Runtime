@@ -45,5 +45,7 @@
     }
   },
   "wslc": "BLOCKED / NOT_EXECUTED",
-  "L4": "NOT_EXECUTED"
+  "L4": "NOT_EXECUTED",
+  "scope_note": "State at this task completion; later joint classification completed",
+  "subsequent_classification_summary": "classification-summary.json"
 }

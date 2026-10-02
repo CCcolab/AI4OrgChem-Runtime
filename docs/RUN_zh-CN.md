@@ -1,5 +1,7 @@
 # 分层运行合同
 
+当前状态（2026-10-03）：本地 Docker L0—L4/等价性/联合分类已验证，WSLc 暂缓并保持 BLOCKED / NOT_EXECUTED；CI 静态审查完成、运行 NOT_EXECUTED；许可映射与对应源码提供未齐，公开发布仍阻塞。身份与范围以 validation/final-delivery-status.json 和 DELIVERY_REVIEW_2026-10-03_zh-CN.md 为准，既有备份为历史快照。
+
 Windows 日常使用 scripts/start-runtime.ps1，可从 PowerShell 5.1 自动选择已有 7.3+，固定 Docker；底层 scripts/run-wslc.ps1 仍需 PowerShell 7.3+，默认 WSLc 仅为待验收候选。当前 Docker 用法和备份见 LOCAL_DELIVERY_zh-CN.md。容器内稳定接口为 `python -m runtime.cli run TASK`，entrypoint 自动调用。任务白名单：evidence、core-tests、p14-smoke、p14-equivalence、p14-fixed、p14-optimize、p14-classify。未知 task/参数由 argparse/PowerShell 拒绝。
 
 ```powershell

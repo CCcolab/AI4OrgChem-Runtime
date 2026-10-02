@@ -1,5 +1,7 @@
 # v0.1.0 候选发布材料（未发布）
 
+2026-10-03 审查结论：发布仍 BLOCKED。实际系统/数值库许可、署名与对应源码提供机制有未解决项，详见 docs/LICENSE_REVIEW_zh-CN.md；WSLc 未验收，CI 静态审查完成但运行 NOT_EXECUTED。只有本地候选，不公开发布。
+
 建议标题：AI4OrgChem Reproducible Runtime v0.1.0。
 
 当前发布就绪状态：BLOCKED。本地 OCI 候选已构建且本轮验收 PASS，WSLc 未验收，不能把下述候选定位当作已实现的公开承诺。

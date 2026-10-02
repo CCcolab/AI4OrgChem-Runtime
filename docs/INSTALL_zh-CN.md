@@ -1,5 +1,7 @@
 # 安装与构建
 
+当前状态（2026-10-03）：本地 Docker L0—L4/等价性/联合分类已验证，WSLc 暂缓并保持 BLOCKED / NOT_EXECUTED；CI 静态审查完成、运行 NOT_EXECUTED；许可映射与对应源码提供未齐，公开发布仍阻塞。身份与范围以 validation/final-delivery-status.json 和 DELIVERY_REVIEW_2026-10-03_zh-CN.md 为准，既有备份为历史快照。
+
 当前无公开镜像。先阅读平台矩阵；本机 WSLc 验收 NOT_EXECUTED，不声明已支持。
 
 Windows 目标主机使用 PowerShell 7.3+（启动器固定 Standard 原生命令参数传递，保护空格/引号路径），需要微软官方文档要求的 WSL/WSLc，并能运行 `wslc version`、`wslc --help`。现有本机 WSL 2.3.26.0 不满足核查日文档所述 WSL 2.9.3+。更新 WSL 会改变全局运行环境，由用户在准备目标主机时明确执行；脚本不自动更新。无需安装 Compose。

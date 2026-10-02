@@ -1,5 +1,7 @@
 # WSLc 能力与实测矩阵
 
+当前状态（2026-10-03）：本地 Docker L0—L4/等价性/联合分类已验证，WSLc 暂缓并保持 BLOCKED / NOT_EXECUTED；CI 静态审查完成、运行 NOT_EXECUTED；许可映射与对应源码提供未齐，公开发布仍阻塞。身份与范围以 validation/final-delivery-status.json 和 DELIVERY_REVIEW_2026-10-03_zh-CN.md 为准，既有备份为历史快照。
+
 本轮收尾决定（2026-10-02）：用户为优先保护原 AI4OrgChem 科研运行环境，暂停 WSL 升级和 WSLc 实机验收。WSLc 继续 BLOCKED / NOT_EXECUTED；后续恢复须明确授权。本地 Docker OCI 已验证范围保留，不替代 WSLc 支持声明。
 
 2026-10-02 本机：Windows 10.0.26300.9550（wsl --version 输出）、AMD64、WSL 2.3.26.0、内核 5.15.167.4-1。Ubuntu-24.04 可执行。PATH 中未发现 wslc.exe，无法读取本机 wslc --help；**WSLc 平台验收 BLOCKED，各项测试 NOT_EXECUTED**。用户授权启动已有 Docker Desktop 4.78.0 后，Docker 29.5.3 Linux/amd64 引擎可用；**本地 OCI 干净构建、L0—L2/等价性与本轮安全/持久性验收 PASS**。未更新 WSL、修改全局配置、重启或安装其他引擎。下表专门记录 WSLc，仍全部 NOT_EXECUTED。

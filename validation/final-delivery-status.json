@@ -1,0 +1,28 @@
+{
+  "review_date": "2026-10-03",
+  "docker_tasks": {
+    "evidence": "PASS",
+    "core-tests": "PASS",
+    "p14-smoke": "PASS",
+    "p14-equivalence": "PASS",
+    "p14-fixed": "PASS",
+    "p14-optimize": "PASS",
+    "p14-classify": "PASS"
+  },
+  "scientific_classification": "consistent, fixed C12H6/planar D3h protocol only",
+  "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+  "build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+  "host_provenance": "provenance-review.json",
+  "wslc_gate": "BLOCKED",
+  "wslc_execution": "NOT_EXECUTED",
+  "CI_static_review": "COMPLETED",
+  "CI_execution": "NOT_EXECUTED",
+  "license_review": "COMPLETED_WITH_OPEN_ITEMS",
+  "public_release_readiness": "BLOCKED",
+  "published": false,
+  "L4_resume_supported": false,
+  "L3_L4_strict_network_isolation": "NOT_EXECUTED",
+  "L4_real_interruption": "NOT_EXECUTED",
+  "environment_restore_test": "NOT_EXECUTED",
+  "previous_backup_is_historical_snapshot": true
+}

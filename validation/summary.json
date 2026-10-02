@@ -6,9 +6,6 @@
   "oci_tests": "PASS",
   "wslc_acceptance": "BLOCKED",
   "wslc_tests": "NOT_EXECUTED",
-  "p14_fixed": "NOT_EXECUTED",
-  "p14_optimize": "NOT_EXECUTED",
-  "new_four_input_classification": "NOT_EXECUTED",
   "runs": [
     {
       "run_id": "20261002T104043Z-evidence-ab57bf8dbabf",
@@ -215,5 +212,12 @@
       }
     }
   ],
-  "oci_summary": "oci-summary.json"
+  "oci_summary": "oci-summary.json",
+  "scope_note": "Historical WSL2 records only",
+  "current_status_reference": "final-delivery-status.json",
+  "historical_wsl2_advanced_tasks": {
+    "p14_fixed": "NOT_EXECUTED",
+    "p14_optimize": "NOT_EXECUTED",
+    "new_four_input_classification": "NOT_EXECUTED"
+  }
 }

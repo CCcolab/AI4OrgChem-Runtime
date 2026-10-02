@@ -52,7 +52,9 @@
     },
     {
       "name": "GitHub CI",
-      "status": "NOT_EXECUTED"
+      "status": "NOT_EXECUTED",
+      "static_review": "COMPLETED",
+      "review": "CI_REVIEW_2026-10-03_zh-CN.md"
     },
     {
       "name": "OCI clean build",
