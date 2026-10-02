@@ -1,0 +1,242 @@
+{
+  "status": "PASS",
+  "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+  "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+  "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+  "network": "none",
+  "scope": "Docker OCI only; WSLc NOT_EXECUTED; no L3/L4",
+  "date": "2026-10-02",
+  "image_tag": "ai4orgchem-runtime:oci-candidate-20261002",
+  "raw_logs_relative_location": "../ai4orgchem-runtime-runs/20261002-oci",
+  "checks": [
+    {
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "name": "permissions-offline",
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "name": "evidence",
+      "status": "PASS"
+    },
+    {
+      "status": "PASS",
+      "name": "evidence-container-deleted"
+    },
+    {
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "name": "core-tests",
+      "status": "PASS"
+    },
+    {
+      "status": "PASS",
+      "name": "core-tests-container-deleted"
+    },
+    {
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "name": "p14-smoke",
+      "status": "PASS"
+    },
+    {
+      "status": "PASS",
+      "name": "p14-smoke-container-deleted"
+    },
+    {
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "name": "p14-equivalence",
+      "status": "PASS"
+    },
+    {
+      "status": "PASS",
+      "name": "p14-equivalence-container-deleted"
+    },
+    {
+      "exit_code": 37,
+      "expected_exit_code": 37,
+      "name": "exit-code-37",
+      "status": "PASS"
+    },
+    {
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "name": "low-memory-refusal",
+      "status": "PASS"
+    },
+    {
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "name": "wrapper-tests",
+      "status": "PASS"
+    },
+    {
+      "name": "persistent-output-hashes-after-container-deletion",
+      "manifests": 4,
+      "status": "PASS"
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "20261002T111546Z-evidence-eb8faa387218",
+      "task": "evidence",
+      "status": "PASS",
+      "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+      "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+      "runtime_code_sha256": "2bd8d97648c0a13b68f301ab88bff3d6595d269606f21b0c1c2374b9ce7cea95",
+      "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+      "process_exit_code": 0,
+      "numerical_qualification": "NOT_APPLICABLE",
+      "wall_time_seconds": 0.7347341690000349,
+      "resource_peak": "UNKNOWN",
+      "source_readonly": true,
+      "manifest_sha256": "773027593a0dd4c77365c69beb2e6e449fdc511934ed8f26d51e240b45927fac"
+    },
+    {
+      "run_id": "20261002T111548Z-core-tests-1651766c39cd",
+      "task": "core-tests",
+      "status": "PASS",
+      "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+      "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+      "runtime_code_sha256": "2bd8d97648c0a13b68f301ab88bff3d6595d269606f21b0c1c2374b9ce7cea95",
+      "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+      "process_exit_code": 0,
+      "numerical_qualification": "NOT_APPLICABLE",
+      "wall_time_seconds": 0.8072691539999823,
+      "resource_peak": "UNKNOWN",
+      "source_readonly": true,
+      "manifest_sha256": "9c69ff76b99e974d4797729e0cef28d25d0f4a63322cd82a3d43ba35ecc6acb2"
+    },
+    {
+      "run_id": "20261002T111549Z-p14-smoke-611ad4389dee",
+      "task": "p14-smoke",
+      "status": "PASS",
+      "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+      "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+      "runtime_code_sha256": "2bd8d97648c0a13b68f301ab88bff3d6595d269606f21b0c1c2374b9ce7cea95",
+      "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+      "process_exit_code": 0,
+      "numerical_qualification": "PASS",
+      "wall_time_seconds": 9.73829970099996,
+      "resource_peak": {
+        "peak_rss_mib": 549.9375
+      },
+      "source_readonly": true,
+      "manifest_sha256": "5eae98643cfe4e7ddee612c53be1e5006ef5d1532bbca0e488aa98fd72f883a9",
+      "technical_endpoint_kcal_mol": 26.47160532579993,
+      "acceptance_checks": {
+        "ordinary_G_converged": true,
+        "ordinary_at_PLG_converged": true,
+        "conditional_PLG_converged": true,
+        "ordinary_G_78_electrons": true,
+        "ordinary_at_PLG_78_electrons": true,
+        "conditional_PLG_78_electrons": true,
+        "G_source_geometry_reconstructed": true,
+        "PLG_source_geometry_reconstructed": true,
+        "interfragment_pi_overlap_zero": true,
+        "interfragment_pi_fock_zero": true,
+        "exchange_integrals_deleted": true,
+        "energy_components_close": true,
+        "commutator_closed": true,
+        "density_idempotent": true,
+        "scientific_classification_disabled": true
+      },
+      "frozen_technical_endpoint_kcal_mol": 26.471605327226722,
+      "absolute_technical_residual_kcal_mol": 1.426791129688354e-09
+    },
+    {
+      "run_id": "20261002T111600Z-p14-equivalence-a83e2e3a8f2f",
+      "task": "p14-equivalence",
+      "status": "PASS",
+      "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+      "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+      "runtime_code_sha256": "2bd8d97648c0a13b68f301ab88bff3d6595d269606f21b0c1c2374b9ce7cea95",
+      "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+      "process_exit_code": 0,
+      "numerical_qualification": "PASS",
+      "wall_time_seconds": 11.675013456999977,
+      "resource_peak": {
+        "peak_rss_mib": 551.37890625
+      },
+      "source_readonly": true,
+      "manifest_sha256": "be87f5d1a2288f4adbee826966ca1062fedee3d83c1bcf330fa5c383c5e1c212",
+      "differences": {
+        "total_energy_hartree": 2.2737367544323206e-13,
+        "density_frobenius_norm": 6.226066644162052e-13,
+        "deleted_eri_count": 0,
+        "deleted_eri_fraction": 0.0,
+        "one_electron_energy_hartree": 0.0,
+        "coulomb_energy_hartree": 2.2737367544323206e-13,
+        "exact_exchange_energy_hartree": 7.105427357601002e-15
+      },
+      "acceptance_checks": {
+        "reference_converged": true,
+        "memory_controlled_converged": true,
+        "total_energy_equal": true,
+        "density_equal": true,
+        "deleted_count_equal": true,
+        "deleted_fraction_equal": true,
+        "one_electron_equal": true,
+        "coulomb_equal": true,
+        "exact_exchange_equal": true,
+        "single_tensor_mode_reported": true
+      }
+    }
+  ],
+  "platform_probe": {
+    "status": "PASS",
+    "checks": {
+      "non_root": true,
+      "readonly:/opt/ai4orgchem/evidence/P01-P14/P14/result.json": true,
+      "readonly:/opt/ai4orgchem/software/pyproject.toml": true,
+      "source_hashes": true
+    },
+    "memory": {
+      "host_available_bytes": 15367524352,
+      "cgroup_remaining_bytes": [
+        "unlimited"
+      ],
+      "effective_available_bytes": 15367524352,
+      "errors": []
+    }
+  },
+  "wslc_acceptance": "BLOCKED",
+  "wslc_tests": "NOT_EXECUTED",
+  "L3": "NOT_EXECUTED",
+  "L4": "NOT_EXECUTED",
+  "L4_resume_supported": false,
+  "source_lock": {
+    "schema_version": 1,
+    "source_repository": "https://github.com/CCcolab/AI4OrgChem",
+    "source_tag": "v0.3.2",
+    "source_tag_object": "afd91ea6ec6847b329ee75a7b20ed564560d9460",
+    "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+    "source_archive_url": "https://codeload.github.com/CCcolab/AI4OrgChem/tar.gz/28511f3d84fa65707a107cde1e8121a7b4334ecb",
+    "source_archive_sha256": "f4a0a416c227218d0bc84bf597cb43f2ba0a32695566e131bdcc6b19ac3f207e",
+    "acquisition_method": "git ls-remote annotated tag dereference; independent detached shallow clone; commit-addressed codeload archive",
+    "verified_date": "2026-10-02",
+    "python_package_version": "0.1.0"
+  },
+  "base_image_lock": {
+    "image": "docker.io/library/python:3.12.13-slim-bookworm",
+    "digest": "sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2",
+    "linux_amd64_manifest_digest": "sha256:6e13e65c55e33adf203d77ee371cf8bf5d81bd4902ef07565721f46bf44917af",
+    "platform": "linux/amd64",
+    "source": "Docker Hub Registry v2 manifest response Docker-Content-Digest",
+    "verified_date": "2026-10-02",
+    "status": "USED_IN_SUCCESSFUL_OCI_BUILD"
+  },
+  "dependency_lock_sha256": "a8dbe44d12930427ca1f377b17eba3fcdb17b6dd922737884b3b77d0d9c4ea71",
+  "docker": {
+    "desktop": "4.78.0 (229452)",
+    "client": "29.5.3",
+    "server": "29.5.3",
+    "context": "desktop-linux",
+    "platform": "linux/amd64"
+  },
+  "image_user": "10001:10001",
+  "published": false
+}

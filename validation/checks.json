@@ -2,16 +2,70 @@
   "date": "2026-10-02",
   "tested_runtime_commit": "c2cc5027d25defa32338b04cda577285dcc06cf9",
   "checks": [
-    {"name": "independent candidate pip check", "platform": "WSL2 Ubuntu-24.04", "status": "PASS", "exit_code": 0},
-    {"name": "runtime unittest suite", "platform": "WSL2 Ubuntu-24.04", "status": "PASS", "tests": 12, "skipped": 0, "exit_code": 0},
-    {"name": "upstream core implementation tests", "platform": "WSL2 Ubuntu-24.04", "status": "PASS", "tests": 11, "exit_code": 0},
-    {"name": "PowerShell AST and path safety", "platform": "Windows PowerShell 7", "status": "PASS", "checks": 7, "exit_code": 0},
-    {"name": "classifier path adapter frozen-fixture equivalence", "status": "PASS", "scope": "wrapper fixture only, not a new four-input scientific rerun"},
-    {"name": "CLI refusal of missing fresh classification inputs", "status": "PASS", "expected_runtime_exit_code": 2},
-    {"name": "subprocess failure propagation", "status": "PASS", "expected_process_exit_code": 37},
-    {"name": "synthetic interruption checkpoint retention", "status": "PASS", "scope": "wrapper process behavior, not full L4 scientific interruption"},
-    {"name": "GitHub CI", "status": "NOT_EXECUTED"},
-    {"name": "OCI clean build", "status": "NOT_EXECUTED", "gate": "BLOCKED"},
-    {"name": "WSLc target acceptance", "status": "NOT_EXECUTED", "gate": "BLOCKED"}
-  ]
+    {
+      "name": "independent candidate pip check",
+      "platform": "WSL2 Ubuntu-24.04",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "name": "runtime unittest suite",
+      "platform": "WSL2 Ubuntu-24.04",
+      "status": "PASS",
+      "tests": 12,
+      "skipped": 0,
+      "exit_code": 0
+    },
+    {
+      "name": "upstream core implementation tests",
+      "platform": "WSL2 Ubuntu-24.04",
+      "status": "PASS",
+      "tests": 11,
+      "exit_code": 0
+    },
+    {
+      "name": "PowerShell AST and path safety",
+      "platform": "Windows PowerShell 7",
+      "status": "PASS",
+      "checks": 7,
+      "exit_code": 0
+    },
+    {
+      "name": "classifier path adapter frozen-fixture equivalence",
+      "status": "PASS",
+      "scope": "wrapper fixture only, not a new four-input scientific rerun"
+    },
+    {
+      "name": "CLI refusal of missing fresh classification inputs",
+      "status": "PASS",
+      "expected_runtime_exit_code": 2
+    },
+    {
+      "name": "subprocess failure propagation",
+      "status": "PASS",
+      "expected_process_exit_code": 37
+    },
+    {
+      "name": "synthetic interruption checkpoint retention",
+      "status": "PASS",
+      "scope": "wrapper process behavior, not full L4 scientific interruption"
+    },
+    {
+      "name": "GitHub CI",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "name": "OCI clean build",
+      "status": "PASS",
+      "gate": "PASS",
+      "evidence": "oci-summary.json",
+      "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7"
+    },
+    {
+      "name": "WSLc target acceptance",
+      "status": "NOT_EXECUTED",
+      "gate": "BLOCKED"
+    }
+  ],
+  "oci_checks": "oci-summary.json"
 }

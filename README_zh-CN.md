@@ -6,15 +6,15 @@
 
 | 入口 | 独立 WSL2 候选环境 | OCI 镜像 | Windows WSLc |
 |---|---|---|---|
-| L0 evidence | PASS | NOT_EXECUTED | NOT_EXECUTED |
-| L1 core-tests | PASS | NOT_EXECUTED | NOT_EXECUTED |
-| L2 p14-smoke | PASS | NOT_EXECUTED | NOT_EXECUTED |
-| p14-equivalence | PASS（另保留一次预检 FAIL） | NOT_EXECUTED | NOT_EXECUTED |
+| L0 evidence | PASS | PASS | NOT_EXECUTED |
+| L1 core-tests | PASS | PASS | NOT_EXECUTED |
+| L2 p14-smoke | PASS | PASS | NOT_EXECUTED |
+| p14-equivalence | PASS（另保留一次预检 FAIL） | PASS | NOT_EXECUTED |
 | L3 p14-fixed | NOT_EXECUTED | NOT_EXECUTED | NOT_EXECUTED |
 | L4 p14-optimize | NOT_EXECUTED | NOT_EXECUTED | NOT_EXECUTED |
 | p14-classify 实际四输入联合分类 | NOT_EXECUTED | NOT_EXECUTED | NOT_EXECUTED |
 
-WSL2 的 PASS 不代表容器或 WSLc 已支持。L0 只核验冻结证据；L1 是核心实现测试；L2 是 STO-3G 技术试跑，不作为科学复算认证。
+本地 Docker OCI 候选已完成断网、非 root、源码只读、退出码与删除容器后输出保留验收；WSLc 仍为 BLOCKED，Docker 结果不替代 WSLc。详见 validation/oci-summary.json。L4 可保存检查点，但不支持恢复运行。L0 只核验冻结证据；L1 是核心实现测试；L2 是 STO-3G 技术试跑，不作为科学复算认证。
 
 构建和目标主机运行（WSLc 候选，需实际验收）：
 

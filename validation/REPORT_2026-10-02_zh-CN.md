@@ -1,17 +1,17 @@
 # 2026-10-02 候选环境实施与验证报告
 
-这是实际记录，不是镜像/WSLc 验收完成声明。原项目工作区、科学源码、协议与冻结证据未修改；未推送、发布镜像、打正式标签或发布 Release。
+这是实际记录：本地 Docker OCI 本轮验收已通过，WSLc 仍未执行。下方 WSL2 历史记录和启动前阻塞保留；最新 OCI 结果见末节。原项目工作区、科学源码、协议与冻结证据未修改；未推送、发布镜像、打正式标签或发布 Release。
 
 ## 阶段状态
 
 | 阶段 | 状态 | 依据 |
 |---|---|---|
 | A 来源/入口/平台核查 | PASS | 固定标签与 SHA、归档与 588 文件哈希、源码审查和平台工具记录 |
-| B 构建工程与依赖锁 | BLOCKED（实现已交付） | 17 wheel 哈希锁、基础摘要和 Dockerfile 已形成；无运行中容器引擎，未构建镜像 |
-| C 任务封装与持久输出 | BLOCKED（WSL2 实跑子集 PASS） | L0—L2/等价性成功；Windows WSLc 启动器尚无实机验收 |
+| B 构建工程与依赖锁 | PASS（本地 OCI） | 固定来源与 17 wheel 锁，从干净 runtime 仓库实际构建成功 |
+| C 任务封装与持久输出 | Docker 子集 PASS；WSLc BLOCKED | L0—L2/等价性、权限、离线、退出码、持久输出通过；WSLc 尚无实机验收 |
 | D WSL2/WSLc 对照 | BLOCKED | WSL2 有记录，WSLc 工具版本条件不足，相关测试 NOT_EXECUTED |
 | E L3/L4/本次联合分类 | NOT_EXECUTED | 接口完成，耗时预算未知，高成本任务未授权预算/未启动 |
-| F 候选文档与发布材料 | 候选材料已交付 | 发布就绪仍受 B—D 阻塞；不是正式发布 |
+| F 候选文档与发布材料 | 候选材料已交付 | 发布就绪仍受 WSLc 验收及许可清单待办阻塞；不是正式发布 |
 
 ## 已执行结果
 
@@ -42,13 +42,13 @@ L2 技术端点 `26.471605327369403 kcal/mol`，固定提交同层级冻结值 `
 | p14-smoke | 20261002T105733Z-p14-smoke-6358690e4876 | PASS，15/15 |
 | p14-equivalence | 20261002T105746Z-p14-equivalence-5d389d942d59 | PASS，13.84 秒 |
 
-最终 L2 技术端点 `26.471605327226722 kcal/mol`，与同层级冻结值的本次绝对差为 `0.0 kcal/mol`；这不是对其他平台或将来运行逐位相同的承诺。等价性两实现总能绝对差 `0.0 Eh`，密度 Frobenius 差 `6.034833410415508e-13`。所有九份已记录运行（含一次预检失败）的输出哈希已经汇总脚本复核，见 summary.json。12 项测试与 PowerShell 7 项检查的小型记录见 checks.json；CI、容器和 WSLc 仍未执行。
+最终 L2 技术端点 `26.471605327226722 kcal/mol`，与同层级冻结值的本次绝对差为 `0.0 kcal/mol`；这不是对其他平台或将来运行逐位相同的承诺。等价性两实现总能绝对差 `0.0 Eh`，密度 Frobenius 差 `6.034833410415508e-13`。所有九份已记录运行（含一次预检失败）的输出哈希已经汇总脚本复核，见 summary.json。12 项测试与 PowerShell 7 项检查的小型记录见 checks.json；该 WSL2 验收时 CI、容器和 WSLc 尚未执行；后续 Docker 结果见末节。
 
 原始日志目录：`D:\AI4Science\ai4orgchem-runtime-runs\20261002-wsl2`。首次三个运行 ID：`20261002T104043Z-evidence-ab57bf8dbabf`、`20261002T104045Z-core-tests-6b8796c8ba75`、`20261002T104047Z-p14-smoke-afbe6f3bce33`。这些在首次提交前执行，runtime_commit 为 UNKNOWN，未伪补写。后续已识别提交的执行记录另行汇总，不覆盖历史 manifest。
 
 等价性首次预检失败 ID `20261002T104545Z-p14-equivalence-126b8b2e7cd6`：旧 `/tmp/...` 源码目录已不存在，588 文件缺失，未进入科学计算。重新获取同一固定归档到新持久 Linux 目录后运行 `20261002T104918Z-p14-equivalence-26d968497afa` 通过。没有修改哈希规则、数值规则或容差。
 
-## 平台阻塞与限制
+## 启动 Docker 前的历史阻塞与限制（由末节更新 OCI 状态）
 
 WSL 安装包 2.3.26.0，Windows AMD64；官方核查日要求 WSL 2.9.3+ 方有 WSLc，本机 wslc 与别名不可访问且已知安装路径不存在。WSLc 平台验收 BLOCKED、全部相关运行 NOT_EXECUTED。
 
@@ -59,3 +59,30 @@ Docker Desktop 已安装但未启动：无相关后台进程，两个引擎管�
 L4 写检查点但不能 resume；过程测试证明封装中断保留已写检查点，尚无完整 L4 实跑中断证明。分类器路径适配已实现；本次四份新科学结果未齐，联合分类 NOT_EXECUTED，缺输入拒绝已经测试。
 
 镜像候选摘要 UNKNOWN（尚无镜像）；基础镜像摘要不是最终镜像摘要。没有“B—D 全部完成”或“WSLc 已支持”的声明。
+
+## 用户授权后的 Docker OCI 最终验收
+
+Docker Desktop 4.78.0（229452）已启动，Docker 客户端/服务端 29.5.3，desktop-linux、Linux/amd64。从干净 runtime 提交 `f30b2906794d14f9030daab779c0d6a7cd4bd6f7` 构建，无同级原项目依赖。
+
+候选 tag：`ai4orgchem-runtime:oci-candidate-20261002`；本地镜像 ID/索引摘要：`sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54`。这是本地构建身份，尚无公开 registry 发布。四份运行均记录源码提交、runtime 提交、代码快照、依赖和镜像身份，详见 [OCI 汇总](oci-summary.json)。
+
+| 项目 | 最终实测 |
+|---|---|
+| L0 / L1 | PASS；冻结证据校验 / 11 项原核心测试 |
+| L2 | PASS，15/15；端点 26.47160532579993 kcal/mol |
+| 同层冻结值及 WSL2 最终端点残差 | 1.426791129688354e-09 kcal/mol |
+| STO-3G 等价性 | PASS；总能差 2.2737367544323206e-13 Eh，密度 Frobenius 差 6.226066644162052e-13 |
+| 非 root、源码/证据只读 | PASS；USER 10001:10001，写打开被拒绝，588 文件任务前后哈希一致 |
+| 离线 / 路径 | PASS；--network none，中文与空格 bind 目录 |
+| 退出码 | PASS；任务退出 0，合成进程实际退出 37；封装传播由过程测试覆盖 |
+| 真实 256 MiB 限额 | PASS；cgroup 剩余 258629632 字节，errors=[]，资源 helper 显式 MemoryError 退出 1 |
+| 删除容器后保留输出 | PASS；四个容器已不存在，四份 manifest 与全部输出 SHA-256 复核 |
+| 封装测试 | PASS；Linux 容器 12 项全通过，无跳过 |
+
+L2 与 STO-3G 等价性属于技术验收，科学容差、规则、协议、冻结文件均未改变。上述残差不代表 L3 端点复算或 WSLc 对照。
+
+首轮镜像验收通过后发现混合 cgroup 挂载识别问题：存在有效 v1 memory 控制器及未挂载的 v2 membership，封装保守报告 UNKNOWN。修正仅在有效 v1 可读时采用其限额，缺失/不可读控制器仍拒绝；新增回归断言后从干净提交重新构建并完整复验。中途一次 PowerShell 括号语法错误在运行前失败，已修正，错误日志未删除。
+
+原始目录：`D:\AI4Science\ai4orgchem-runtime-runs\20261002-oci`。保留 engine-version.log、两次 build-attempt 日志、cgroup-diagnostic.log、acceptance-01/02 历史与错误记录；最终为 acceptance-03 目录及 acceptance-03-console/error.log。构建仅有固定 linux/amd64 的 Dockerfile lint 提示，无构建失败。小型汇总入 Git，大日志/结果仍独立保留。
+
+WSLc 升级与验收条件单列于 [安装指南](../docs/INSTALL_zh-CN.md)。本轮未升级 WSL、修改全局配置或重启，未运行 L3/L4/新四输入联合分类，未公开发布或创建正式标签/Release。Docker stop 的原生信号语义未实测；合成中断测试不等于完整 L4 中断。**L4 可保存检查点，但不支持恢复运行。** B 本地 OCI 构建已通过；C 的 WSLc 部分及 D 仍 BLOCKED。

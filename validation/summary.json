@@ -1,9 +1,9 @@
 {
   "date": "2026-10-02",
-  "scope": "independent WSL2 candidate, not OCI/WSLc acceptance",
+  "scope": "historical independent WSL2 runs; latest OCI results in oci-summary.json",
   "raw_logs_relative_location": "../ai4orgchem-runtime-runs/20261002-wsl2",
-  "oci_build": "BLOCKED",
-  "oci_tests": "NOT_EXECUTED",
+  "oci_build": "PASS",
+  "oci_tests": "PASS",
   "wslc_acceptance": "BLOCKED",
   "wslc_tests": "NOT_EXECUTED",
   "p14_fixed": "NOT_EXECUTED",
@@ -214,5 +214,6 @@
         "exact_exchange_energy_hartree": 3.552713678800501e-15
       }
     }
-  ]
+  ],
+  "oci_summary": "oci-summary.json"
 }

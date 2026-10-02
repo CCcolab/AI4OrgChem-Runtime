@@ -50,8 +50,8 @@ P14 固定几何冻结端点 67.086899 kcal/mol、生产优化 67.679719 kcal/mo
 
 ## 许可证与剩余风险
 
-保留上游 LICENSE/NOTICE/AUTHORS；runtime 使用 Apache-2.0。依赖元数据和下载身份见 wheels.lock.json，安装的 dist-info 保留第三方许可。NumPy/SciPy/PySCF/h5py 等所带数值库许可须随镜像保留；镜像未构建，基础组件/动态链接/许可证最终清单仍待镜像验收。原著 Figshare 的许可不用于覆盖代码许可。
+保留上游 LICENSE/NOTICE/AUTHORS；runtime 使用 Apache-2.0。依赖元数据和下载身份见 wheels.lock.json，安装的 dist-info 保留第三方许可。NumPy/SciPy/PySCF/h5py 等所带数值库许可须随镜像保留；镜像已构建且 L0—L2/等价性动态库运行通过；完整基础组件/动态链接许可证清单仍待发布前专项核查。原著 Figshare 的许可不用于覆盖代码许可。
 
 已执行：独立固定归档获取、588 文件校验、候选依赖离线安装、WSL2 L0—L2 与 STO-3G 等价性。等价性首次预检发现 /tmp 旧源码目录已不存在，588 文件缺失、无额外文件；保留 FAIL，并改用新独立 Linux 持久目录获取同一固定归档后实跑 PASS。只观测到 /tmp 目录缺失，不把具体清理机制作为已证实原因。
 
-未执行：无同级目录的真实 OCI 干净构建、非 root 容器挂载/离线验收、WSLc 平台对照、L3/L4、完整本次输入联合分类。当前平台缺口阻止 B/C/D 的平台验收，不阻止封装与验收脚本交付。
+OCI 已从干净 runtime 仓库构建，不引用同级原项目；非 root/只读/离线及 L0—L2/等价性验收 PASS。未执行：WSLc 平台对照、L3/L4、完整本次输入联合分类。WSLc 缺口继续阻塞 C/D 的目标平台验收。

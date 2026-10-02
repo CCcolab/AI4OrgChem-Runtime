@@ -6,6 +6,6 @@
 
 已测试代码提交 c2cc5027d25defa32338b04cda577285dcc06cf9：Linux 12 项 wrapper 测试、11 原核心测试、L0/L2/等价性通过，PowerShell 7 项检查通过。九份原运行含一次预检失败均保留；最后四份带真实 commit 的 manifest 见 validation/summary.json。文档/汇总后续提交不回写历史 manifest。CI 未在 GitHub 执行。
 
-当前阻塞：已安装 Docker Desktop 未启动，WSL 2.3.26.0 未满足 WSLc 文档版本条件。用户在正常终端选择启动现有 Desktop 或更新 WSL 后，先重新诊断，实际干净构建，再 Linux/WSLc 验收。不自动全局更新、启用功能、重启或对外发布。
+Docker Desktop 已按用户授权启动，本地 OCI 构建与验收 PASS；最终镜像运行提交 f30b2906794d14f9030daab779c0d6a7cd4bd6f7，详见 validation/oci-summary.json。当前阻塞：WSL 2.3.26.0 未满足 WSLc 文档版本条件。WSLc 升级需单独授权，验收条件详见 INSTALL；不能用 Docker 结果代替。不自动全局更新、启用功能、重启或对外发布。
 
 验收之后更新真实矩阵。L3/L4 未运行，参考耗时/预算 UNKNOWN；运行前报告资源与预算条件。无上游 resume 功能。完整联合分类仅接受本次四份可追溯结果，不使用冻结值代替。
