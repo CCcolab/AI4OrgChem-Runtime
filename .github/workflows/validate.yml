@@ -1,0 +1,35 @@
+name: Candidate runtime validation
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  linux:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - name: Build identified local image (no registry push)
+        shell: bash
+        run: |
+          docker build -f container/Dockerfile -t ai4orgchem-runtime:ci \
+            --build-arg RUNTIME_COMMIT="$GITHUB_SHA" \
+            --build-arg DEPENDENCY_LOCK_SHA256="$(sha256sum locks/requirements-linux-amd64.txt | cut -d ' ' -f 1)" .
+      - name: Wrapper tests
+        run: docker run --rm --entrypoint python --mount type=bind,source="$PWD/tests",target=/tests,readonly ai4orgchem-runtime:ci -m unittest discover -s /tests -v
+      - name: L0 and L1 offline with persistent output
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/ai4orgchem-runs"
+          sudo chown 10001:10001 "$RUNNER_TEMP/ai4orgchem-runs"
+          for task in evidence core-tests; do
+            docker run --rm --network none \
+              --mount type=bind,source="$RUNNER_TEMP/ai4orgchem-runs",target=/work \
+              ai4orgchem-runtime:ci run "$task"
+          done
+      - name: Container permissions and persistence
+        run: docker run --rm --network none --mount type=bind,source="$RUNNER_TEMP/ai4orgchem-runs",target=/work --entrypoint python ai4orgchem-runtime:ci -m runtime.platform_probe

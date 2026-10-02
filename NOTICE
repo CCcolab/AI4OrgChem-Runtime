@@ -1,0 +1,15 @@
+AI4OrgChem Reproducible Runtime
+Copyright 2026 Xiao Chen.
+
+Runtime wrappers and documentation are licensed under Apache-2.0.
+Scientific software and evidence are obtained unchanged from:
+AI4OrgChem, Copyright 2026 Xiao Chen, Apache-2.0
+https://github.com/CCcolab/AI4OrgChem
+commit 28511f3d84fa65707a107cde1e8121a7b4334ecb (v0.3.2).
+The image retains upstream LICENSE, NOTICE and AUTHORS.md in /opt/ai4orgchem.
+Dependencies and base-image components retain their own licenses.
+No monograph full text, original historical program, private result or credential
+is distributed. References to the monograph do not relicense runtime software.
+
+AI-assisted engineering was provided through OpenAI Codex. Scientific claims
+and publication responsibility remain with the human project owner.

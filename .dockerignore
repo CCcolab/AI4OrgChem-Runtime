@@ -1,0 +1,13 @@
+*
+!container/
+!container/**
+!runtime/
+!runtime/**
+!locks/
+!locks/**
+!scripts/
+!scripts/fetch-source.py
+!LICENSE
+!NOTICE
+**/__pycache__
+**/*.pyc

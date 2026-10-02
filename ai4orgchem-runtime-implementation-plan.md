@@ -1,0 +1,235 @@
+# ai4orgchem-runtime 实施方案
+
+请按照以下任务书实施 AI4OrgChem 可复算运行环境。本文是设计与验收要求，不表示镜像、WSLc 兼容性或新仓库已经实现。先完成仓库审查和平台能力核查，再按阶段执行。
+
+## AI4OrgChem 项目介绍
+
+[AI4OrgChem](https://github.com/CCcolab/AI4OrgChem) 围绕虞忠衡教授专著《Questioning Fundamental Principles of Organic Chemistry》中的主要科学命题，开展 AI 辅助的独立计算与证据核验。项目不使用原著作者的程序代码，而是将命题转化为可检查的计算协议、独立实现和公开证据。发起人负责问题选择、范围与资源控制、专业沟通以及解释和发布责任；AI Agent 承担资料梳理、程序实现、计算推进、输出检查和证据组织等工作。
+
+原项目本轮工作已收尾。v0.3.2 对 P01—P14 十四项命题给出“一致”的分类，但各项采用的证据路径不同，包括独立计算、公开数值重分析及其他证据核验，不能将其表述为十四项均完成同等级量子化学复算。P12 已形成 N12、N14、N16 三个受测点的新协议复算证据，相关判定以这些受测点及公开协议为边界。论文稿尚未经过同行评审，项目结果不构成对原著理论的普遍认证。
+
+已有成果包括科学程序与条件 SCF 实现、计算协议与测试、冻结结果、证据账本和审计记录，以及分层的典型程序复算指南。指南提供从普通 Python 证据核验、核心实现测试，到 P14 技术试跑、固定几何复算和五参数结构优化的不同入口。Codex 应先理解这些入口分别检查什么，再进行环境封装。
+
+ai4orgchem-runtime 承接的是这些已有程序和公开协议的运行与交付需求：固定源码和依赖，提供分层启动、资源预检、输出持久化及平台验证，让外部用户更容易检查和复算原项目。科学代码、协议、冻结证据和科学判定继续由 AI4OrgChem 管理；新项目交付可复算运行环境，其成果以实际运行和环境验证报告衡量。
+
+## 一 项目目标与交付边界
+
+项目名称：AI4OrgChem Reproducible Runtime。中文名称：AI4OrgChem 可复算运行环境。拟建仓库：CCcolab/ai4orgchem-runtime。首个发布目标：v0.1.0。首个适配目标：Windows 上的 WSL Containers，命令行工具为 wslc。
+
+交付一个固定依赖、可重建、结果可持久保存的 CPU 复算环境，降低外部用户运行公开程序的门槛。复用现有 AI4OrgChem 科学代码，不重写通用量子化学引擎，不重新建设化学数据库，不改变 P01—P14 的冻结证据或科学判定。
+
+第一阶段最低交付范围为 L0 证据核验、L1 条件 SCF 核心测试、L2 P14 技术试跑。目标范围包括 L3 固定几何科学层级复算和 L4 五参数生产优化，但只有各自完成实际验证后才能在发布页标为支持。达到最低交付范围可以收尾，未完成的高级入口明确列为待验证，不启动额外科学计算来扩大项目。
+
+不纳入本阶段：MACE/NequIP GPU 训练、PySR、证据 Agent 在线服务、WebUI、Kubernetes、多用户调度、新命题、新分子系列以及尚未正式开放的 P09/P10 入口。
+
+## 二 开始实施前的审查
+
+在实际工作区读取适用的 AGENTS.md、原项目的发布检查要求和许可证。先检查 ai4orgchem-runtime 是否已存在；若存在，读取其文件与历史，保留用户已有修改，不能覆盖重建。
+
+核对原项目以下材料及其引用的运行代码：
+- README.md、README_zh-CN.md、AUTHORS.md、LICENSE、NOTICE。
+- reproducibility/TYPICAL_PROGRAMS_zh-CN.md、RUNBOOK_zh-CN.md、PLATFORM_MATRIX_zh-CN.md、environment.yml。
+- software/pyproject.toml。
+- 本任务书列出的科学脚本、测试文件和冻结结果。
+- 已有环境版本记录、检查点实现、内存检查实现与发布验收记录。
+
+公开 environment.yml 采用 Python 3.12，NumPy >=2.0,<3，SciPy >=1.14,<2，PySCF >=2.8,<3。以上是兼容范围，不是已验证历史依赖的精确版本。优先从实际运行记录取得依赖版本；缺失时标注 UNKNOWN，并建立新的候选运行环境，不能声称复刻历史环境。
+
+形成 docs/SOURCE_AUDIT_zh-CN.md，记录发现、代码路径、版本来源、当前运行入口及实现风险。源码事实优先于示意设计；需要调整本任务书中的路径方案时，记录原因并保持科学语义不变。
+
+## 三 原项目和新仓库的关系
+
+AI4OrgChem 管理科学程序、协议、冻结证据与判定；ai4orgchem-runtime 管理镜像构建、资源预检、运行封装、平台适配和环境验证报告。
+
+构建时获取原项目固定提交，不能复制一套长期独立维护的科学源码。以 v0.3.2 为初始候选来源，但必须解析标签对应的完整 commit SHA，读取该提交的文件，写入 source.lock.json。main 分支只能用于调查，不能作为发布镜像的浮动输入。
+
+锁定记录至少包括 source_repository、source_tag、source_commit、source_archive_sha256（使用归档包时）、获取方式与时间。镜像标签记录源码提交、runtime 提交、构建环境与依赖锁摘要。原项目的科学标签 v0.3.2 与 Python 包版本属于不同标识，不要混用。
+
+如果发现必须修改科学源码，先在 runtime 中完成问题复现与报告。修复应单独提交到原项目并接受其检查；不能在镜像构建过程中偷偷修改科学规则、分类器、容差或冻结结果。
+
+### 本地目录与工作区约定
+
+明确采用同级独立仓库布局：新项目根目录为 `D:\AI4Science\ai4orgchem-runtime`，不建立在 `D:\AI4Science\AI4OrgChem\ai4orgchem-runtime` 下。
+
+| Windows 路径 | 用途 | Git 管理 |
+| --- | --- | --- |
+| `D:\AI4Science\AI4OrgChem` | 原项目本地检出，供源码审查与历史结果对照 | 原项目独立仓库 |
+| `D:\AI4Science\ai4orgchem-runtime` | 新项目根目录，存放构建、锁定记录、启动器、文档和验证摘要 | 新项目独立仓库 |
+| `D:\AI4Science\ai4orgchem-runtime-runs\<run-id>` | 建议的持久输出目录，保存日志、结果和检查点 | 不作为源码仓库，不自动提交 |
+
+两个仓库分别维护 Git 历史、远程地址、标签和发布版本。`D:\AI4Science` 作为工作区父目录，不为本方案新建父级 Git 仓库；若现有父目录已处于 Git 管理之下，先记录实际情况并处理仓库边界，不能擅自删除或重置已有历史。
+
+Codex 实施 runtime 时以 `D:\AI4Science\ai4orgchem-runtime` 为当前工作目录，可读取同级 AI4OrgChem 进行审查。发布构建依照 `locks/source.lock.json` 获取固定提交，不能依赖 `..\AI4OrgChem` 的存在或未提交修改。必须验证在没有同级原项目目录的干净工作区中仍可构建。构建获取的上游源码属于临时构建材料，不再成为第二套手工维护的科学源码。
+
+本方案第五章中的 `container/`、`locks/`、`runtime/`、`scripts/`、`docs/`、`validation/` 和 `tests/` 均相对于新项目根目录。启动器允许用户显式指定输出目录，上表输出位置仅为默认建议，不依赖当前工作目录，也不得自动清理历史结果。
+
+普通 WSL 分发版采用默认 Windows 驱动器挂载时，上述新项目路径通常对应 `/mnt/d/AI4Science/ai4orgchem-runtime`；这不代表 WSLc 容器内路径。容器继续采用第四章的 `/opt/ai4orgchem`、`/opt/runtime` 和 `/work` 布局，宿主目录到容器输出目录的映射须按实际 WSLc 能力验证。大量临时文件优先放在 Linux 文件系统，持久结果与检查点须在容器删除后仍可保留。
+
+## 四 技术架构
+
+优先构建一个 linux/amd64 CPU 镜像，候选基础系统为 Ubuntu 24.04。基础镜像须固定摘要，并保留许可证和署名。Python 使用原项目要求的 3.12 分支；micromamba 或其他安装方式由审查后选择，优先沿用原项目可验证的依赖路径。
+
+镜像构建完成后，运行任务不临时 pip install、不 git pull、不调用大模型 API，也不需要原著全文、私有目录或 API 密钥。尽量验证离线运行能力，构建与镜像拉取仍可能需要网络。
+
+建议镜像内部布局：
+- /opt/ai4orgchem：固定提交的科学源码和冻结证据。
+- /opt/runtime：运行封装与资源预检。
+- /work：本次运行的持久输出目录。
+
+源码和 evidence 对运行用户不可写；任务输出可写。默认非 root 用户运行。Linux 和 Windows 挂载权限分别实测，不能为绕过权限问题直接要求长期 privileged 或将整个主机磁盘暴露给容器。
+
+原脚本默认写 runs/reproduction，需审查当前工作目录、相对路径和输出规则。优先通过受控工作目录、构建时设置的输出链接或已支持的输出参数适配；每次运行使用独立输出根目录。方案不得导致计算读取旧输出，也不得覆盖 evidence。实现中不要假定只设置一个环境变量就能改变原脚本输出路径。
+
+构建文件和依赖锁应让用户重建功能一致的环境，不承诺镜像字节完全相同。记录基础镜像摘要、精确依赖和关键依赖包来源；若采用锁定工具，校验平台和下载内容。新解析版本要经过验证，不能直接称为历史参考版本。
+
+## 五 仓库结构建议
+
+| 路径 | 用途 |
+| --- | --- |
+| README.md、README_zh-CN.md | 项目定位、支持范围和最短运行路径 |
+| LICENSE、NOTICE | runtime 自有代码许可与上游署名 |
+| container/Dockerfile | 通用 OCI 镜像构建定义，实际 WSLc 支持须核实 |
+| container/entrypoint.sh | 容器内任务分派与退出码传递 |
+| locks/source.lock.json | 科学源码身份 |
+| locks/ | 已选平台的依赖锁与基础镜像记录 |
+| runtime/ | 资源预检、任务适配、日志和报告收集 |
+| scripts/run-wslc.ps1 | Windows WSLc 运行入口 |
+| scripts/build-wslc.ps1 | 经过核实后的 WSLc 构建入口 |
+| docs/INSTALL_zh-CN.md | 安装前提、版本和平台检查 |
+| docs/RUN_zh-CN.md | 分层运行和结果判读 |
+| docs/WSLC_COMPATIBILITY_zh-CN.md | WSLc 能力与实测矩阵 |
+| docs/SOURCE_AUDIT_zh-CN.md | 源码和历史环境审查 |
+| docs/TROUBLESHOOTING_zh-CN.md | 常见失败与恢复 |
+| validation/ | 验证计划、实际报告和小型验收摘要 |
+| tests/ | runtime 的关键行为测试 |
+| .github/workflows/ | 构建与轻量核验，发布流程另行控制 |
+
+结构可以合理简化，避免为了目录完整而生成空文件。原始计算日志、密度文件和检查点不直接堆入 Git；发布需要的证据另行归档，并在报告中给出身份和位置。
+
+## 六 任务入口与运行合同
+
+以下 task ID 是新 runtime 拟实现的接口，不是当前已经存在的命令。先实现稳定的容器内接口，例如 runtime run TASK；Windows 脚本负责将用户参数转换为经过核查的 wslc 参数。
+
+| Task ID | 上游入口 | 验收语义 |
+| --- | --- | --- |
+| evidence | validate_public_evidence.py、validate_p12_evidence.py、validate_evidence_navigation.py | 核验冻结证据内部完整性，不执行科学复算 |
+| core-tests | test_p09_conditional_scf.py、test_p09_energy_assembly.py、test_p09_eri_mask.py | 核心实现规则测试，不代表完整分子复算 |
+| p14-smoke | run_p14_benzotricyclobutadiene_smoke.py | STO-3G 技术试跑，不作为科学定判值 |
+| p14-equivalence | validate_p14_memory_controlled_conditional_scf.py | STO-3G 两种实现等价性检查，不声称科学层级等价 |
+| p14-fixed | run_p14_benzotricyclobutadiene_source_level_fixed_geometry.py | L3 固定几何复算及自身资格检查 |
+| p14-optimize | run_p14_benzotricyclobutadiene_production_optimization.py | L4 五参数生产优化及自身资格检查 |
+| p14-classify | classify_p14_strained_aromatic_pi_distortivity.py | 显式读取本次四类结果进行联合判断 |
+
+evidence 按上游定义检查十四项记录及 P12 公开账本，不修改分类。core-tests 必须使用原测试，保留失败即阻止继续解释的规则。
+
+p14-classify 禁止依赖上游默认冻结结果作为本次复算输入。必须显式提供本次 smoke、optimization、equivalence、source-level 四份结果；缺失任何一项时拒绝分类，不能退回旧结果。各文件需记录相同科学源码身份、兼容协议及各自运行身份；允许同一复算集合中的分阶段运行，不要求时间完全相同。
+
+若提供组合命令，先明确哪些前置输出必须存在，并校验身份和完整性。程序退出码、数值资格状态、科学比较结果分别记录。不得为了任务看起来成功而将 FAIL 改成 PASS。
+
+## 七 资源控制和输出持久化
+
+默认线程数以指南的 8 线程为候选，受实际主机限制；核对 OMP、BLAS 与科学脚本线程设置，避免嵌套线程导致超额使用。不得声称容器 CPU 配额等同于科学库线程设置。
+
+L3 上游至少要求 13,000 MiB 可用内存，L4 至少 13 GiB；两项阈值保持上游定义，不能随意互换。容器内检查应同时考虑实际可用内存和 cgroup 限制，防止读取主机总内存而错误放行。WSLc 的主机资源分配方式与容器限制须各自核查；不要照搬 Docker 参数。
+
+高内存任务默认串行。锁应覆盖 runtime 管理的同一主机运行集合，而非只锁单个容器目录。操作系统无法跨用户保障的限制需说明。避免阻塞用户已有任务；不杀其他进程，不自动修改全局 WSL 配置。
+
+每次运行建立唯一目录，包含 run-manifest.json、stdout/stderr 日志、原脚本 JSON 和报告、输入与输出 SHA-256、耗时及可获取的资源数据。manifest 记录原项目 commit、runtime commit、镜像摘要（由宿主启动器注入）、任务、实际命令、依赖、线程、内存限制、平台和退出状态。测不到的数据写 UNKNOWN，不能伪造为 0。
+
+日志避免包含令牌、完整环境变量或不必要的个人主机信息。用户目录可使用报告内相对路径。输出目录由用户指定；不得自动清理历史运行。
+
+L4 检查点必须持久保存，区分重新开始与恢复。恢复前检查源码、镜像、输入哈希与计算参数；实现如何恢复以源码实际能力为准。若不支持恢复，不虚构 resume 参数。
+
+## 八 WSLc 能力核查和启动器实现
+
+实施时重新读取微软官方文档、WSL 发布记录及本机 wslc --help。记录 Windows、WSL、WSLc 版本与 CPU 架构，不提前编造最低版本号。
+
+实际核查：镜像构建/导入/拉取、OCI 镜像及 GHCR 获取、目录挂载和只读挂载、资源限制、非 root、退出码、日志、信号与停止行为、容器删除后的持久数据、带空格及中文路径。
+
+2026年9月29日官方公告已介绍构建和运行能力、--mount 及存储路径配置；Compose 在该公告中仍为后续计划，因此首版不能依赖 Compose。实施当天状态若有变化，应记录来源与版本再决定。
+
+PowerShell 启动器应使用参数数组和正确路径处理，不用拼接 shell 字符串、不使用 Invoke-Expression。任务 ID 采用白名单，拒绝未知参数或非法挂载路径；启动前创建输出目录、检测权限、检查镜像身份，运行后准确传递任务状态。
+
+在实际 Windows WSLc 环境验证挂载映射，不能假定 /mnt/c 路径与普通 WSL 分发版相同。科学临时文件放容器 Linux 文件系统或经过验证的卷；最终结果导出到持久位置。若选择不同存储方式，实测性能与检查点持久性。
+
+本机没有 Windows/WSLc 时，可在 Linux 容器完成通用镜像验证，WSLc 状态必须写 NOT_EXECUTED。生成可运行的 Windows 验收脚本及输出收集方式，要求目标主机实际执行后再认定支持。Docker 测试不能替代 WSLc 测试。
+
+## 九 分阶段执行与停止条件
+
+| 阶段 | 工作 | 通过条件 |
+| --- | --- | --- |
+| A | 审查源码、解析固定提交、核查 WSLc | 来源身份与能力矩阵明确，未知项有标记 |
+| B | 实现镜像和锁定依赖 | 干净构建成功，环境与上游 API 兼容 |
+| C | 实现 L0—L2、输出持久化和启动器 | 实际日志、结果和退出状态可追溯，冻结证据未被修改 |
+| D | WSL2 与 WSLc 对照验证 | 同一输入协议下，最低支持入口符合判据 |
+| E | 按预算验证 L3、L4 和联合分类 | 各入口实跑合格；失败或未执行状态如实报告 |
+| F | 文档与候选发布包 | 镜像身份、支持矩阵、日志位置和限制一致 |
+
+首先完成 A—D 的可审阅实现。L3—L4 是既有公开案例的运行环境验证，不扩展科学问题；高成本运行前给出主机、预期资源、参考耗时或未知状态。若已有预算和授权覆盖则继续，否则将实现做完整并明确所缺执行条件，不反复要求同一授权。
+
+预检不足时停止高成本任务；结果不合格时保留失败报告并调查，不能降低容差。若必须大幅改变科学方法，移出本阶段。
+
+## 十 有意义的验证要求
+
+runtime 测试聚焦以下风险：只读证据不被写入、输出不会丢失、低内存正确拒绝、子程序失败准确传播、分类器缺输入拒绝、旧结果不会混入本次运行、异常中断后检查点存在、路径空格及中文正确处理。
+
+测试资源预检的不同 cgroup 情形可以使用受控样例，但实际平台支持必须由真实运行证明。关键封装测试之外，不大量增加仅重复实现逻辑的测试。
+
+对照验证应记录两组结果：
+1. 原项目既有冻结值与候选环境结果。
+2. 同一精确依赖候选环境在普通 WSL2 和 WSLc 的结果。
+
+不要把第二组当作独立方法验证。对照系统一致有助于定位环境差异，不意味着两份独立科学证据。
+
+P14 冻结参考为固定几何端点 67.086899 kcal/mol、生产优化端点 67.679719 kcal/mol、dΔr 0.172204 Å。实际容差从固定提交的分类器及协议读取，不能自行指定。记录绝对残差及资格状态，不承诺逐位相同。
+
+最终分类同时检查科学比较与数值资格。测试通过、程序正常退出、结果接近和命题判定一致分别报告。如果使用只读源码导致 Python 或 pytest 缓存写入失败，调整缓存配置，不放开 evidence 写权限。
+
+GitHub Linux CI 可以承担构建、L0 和适当的 L1 测试。L2 是否进入 CI 取决于实测资源；L3—L4 不作为每次提交的昂贵必跑项。WSLc 仅在真实支持的 Windows 运行器上测试；托管 runner 不具备条件时由受控目标主机验证，报告 NOT_EXECUTED 而非给出伪通过。不要在不可信 PR 中使用含凭证的自托管 runner。
+
+## 十一 发布形式与验收矩阵
+
+GitHub 仓库公开构建文件、精确锁、封装代码、中文指南、支持矩阵和验证摘要。镜像候选地址为 ghcr.io/cccolab/ai4orgchem-runtime，实际命名和可见性需核查。GitHub Release 发布说明、镜像摘要、源码映射、验证报告和必要的校验清单。
+
+最小发布矩阵：
+| 入口 | Linux 容器状态 | Windows WSLc 状态 | 发布承诺 |
+| --- | --- | --- | --- |
+| L0 证据核验 | 待实际记录 | 待实际记录 | 通过后开放 |
+| L1 核心测试 | 待实际记录 | 待实际记录 | 通过后开放 |
+| L2 技术试跑 | 待实际记录 | 待实际记录 | 通过后开放，非科学复算认证 |
+| L3 固定几何 | 待实际记录 | 待实际记录 | 独立验证后开放 |
+| L4 生产优化 | 待实际记录 | 待实际记录 | 独立验证后开放 |
+| 联合分类 | 待实际记录 | 待实际记录 | 本次输入齐全且检查通过后开放 |
+
+状态采用 PASS、FAIL、NOT_EXECUTED、BLOCKED，并附记录位置。没有真实 WSLc 验收时，只能交付候选适配，不能宣称 WSLc 已支持。
+
+发布先形成可审阅的代码、报告、镜像候选和 Release 文案。本任务书本身不授权更改仓库可见性、向外部人员发送消息或立即推送公开镜像、打正式标签、发布 Release。若用户后续已明确授权则直接按该范围执行；否则准备完成后只进行一次明确的发布确认。
+
+检查原项目 Apache 2.0、依赖许可证、镜像组件与署名；不要把 Figshare 介绍材料的许可证自动套用到代码。不纳入原著全文、历史原作者代码、私有结果或凭证。
+
+## 十二 完成交付与最终报告
+
+必须交付：
+1. 固定来源及依赖的容器构建工程。
+2. 容器内分层任务入口及经过验证的 WSLc PowerShell 启动器。
+3. 持久化输出、检查点和运行身份记录。
+4. 中文安装运行指南、错误处理说明和平台矩阵。
+5. 实际环境对照验证报告，包括失败与未执行项。
+6. 候选发布材料和 GHCR 镜像发布流程。
+
+最终向用户报告：完成的文件及提交、原项目 commit、依赖锁与镜像身份、每个层级实际执行状态、结果残差、是否修改原项目、未解决限制与发布状态。不要用“全部完成”掩盖未执行的 WSLc 或高级计算。
+
+对外成果表述根据真实验收范围填写：
+“发布基于 WSLc 的 AI4OrgChem 可复算运行环境，提供固定依赖、分层任务入口、持久化结果及环境对照验证。”
+若只有 L0—L2，通过后写“证据核验与技术试跑环境”；若 L3—L4 也完成，列明对应科学复算入口。所有表述均不新增命题判定，不构成科学认证。
+
+## 十三 参考材料
+
+- 原项目：https://github.com/CCcolab/AI4OrgChem
+- 典型程序指南：https://github.com/CCcolab/AI4OrgChem/blob/main/reproducibility/TYPICAL_PROGRAMS_zh-CN.md
+- 公开环境：https://github.com/CCcolab/AI4OrgChem/blob/main/reproducibility/environment.yml
+- 平台矩阵：https://github.com/CCcolab/AI4OrgChem/blob/main/reproducibility/PLATFORM_MATRIX_zh-CN.md
+- 软件依赖：https://github.com/CCcolab/AI4OrgChem/blob/main/software/pyproject.toml
+- 微软 WSL Containers 正式可用公告：https://blogs.windows.com/windowsdeveloper/2026/09/29/wsl-containers-now-generally-available/
+
+实施时将上游链接转换为已核对 commit 的永久链接；版本、参数和兼容性以实际源码、官方文档和目标主机运行结果为准。

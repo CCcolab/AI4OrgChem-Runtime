@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "source_repository": "https://github.com/CCcolab/AI4OrgChem",
+  "source_tag": "v0.3.2",
+  "source_tag_object": "afd91ea6ec6847b329ee75a7b20ed564560d9460",
+  "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "source_archive_url": "https://codeload.github.com/CCcolab/AI4OrgChem/tar.gz/28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "source_archive_sha256": "f4a0a416c227218d0bc84bf597cb43f2ba0a32695566e131bdcc6b19ac3f207e",
+  "acquisition_method": "git ls-remote annotated tag dereference; independent detached shallow clone; commit-addressed codeload archive",
+  "verified_date": "2026-10-02",
+  "python_package_version": "0.1.0"
+}

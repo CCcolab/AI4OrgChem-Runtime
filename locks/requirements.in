@@ -1,0 +1,10 @@
+# New candidate, not a reconstruction of every historical job environment.
+# Scientific versions from public P14 snapshot and read-only local inventory.
+numpy==2.5.1
+scipy==1.18.0
+pyscf==2.14.0
+h5py==3.16.0
+PyYAML==6.0.3
+jsonschema==4.26.0
+pytest==8.4.2
+setuptools==78.1.0
