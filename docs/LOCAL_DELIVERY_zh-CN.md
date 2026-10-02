@@ -40,3 +40,11 @@ PowerShell 7.3+ 执行 scripts/backup-local.ps1 -Destination 绝对路径。使�
 4. 在新输出目录跑 evidence/core-tests/p14-smoke，确认恢复后的环境再开展科研计算。
 
 备份仍在同一 D 盘，属于本地快照；应另行复制到独立存储以抵御磁盘损坏。当前交付不是正式 Release。完整镜像基础组件许可清单、CI 和 WSLc 平台验收仍待完成。
+
+## 本轮备份与启动复验
+
+最终交付位置为 D:\AI4Science\ai4orgchem-runtime-deliveries\20261002-handoff。此前成功备份 20261002-verified 已完成 256 普通运行文件、19 镜像 blob 及归档清单校验；早期失败尝试保留，原因是 Windows tar 处理容器源码链接与中文文件列表失败，最终改用 .NET ZIP。
+
+Windows PowerShell 5.1 测试使用单个子进程的 -ExecutionPolicy Bypass，仅验证本地已审查脚本，未更改用户/系统执行策略。若你自己的终端阻止脚本，请使用已有 PowerShell 7 运行入口，或自行决定单次进程策略，不修改全局配置。
+
+校验命令：python scripts/verify-local-backup.py D:\AI4Science\ai4orgchem-runtime-deliveries\20261002-handoff。该检查逐项验证归档、ZIP 内的运行文件及镜像 blob；没有执行 Docker 重新加载或系统环境恢复。备份清单记录真实仓库与镜像提交，两者不同属于正常的宿主工具/文档后续更新。

@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-02",
+  "bootstrap": "PASS",
+  "bootstrap_platform": "Windows PowerShell 5.1 -> PowerShell 7.6.5",
+  "bootstrap_run_id": "20261002T144551Z-evidence-d53bc4cf86a4",
+  "unicode_space_path": "PASS",
+  "powershell_checks": 7,
+  "powershell_status": "PASS",
+  "backup_integrity_status": "PASS",
+  "verified_snapshot": "D:/AI4Science/ai4orgchem-runtime-deliveries/20261002-verified",
+  "verified_run_files": 256,
+  "verified_image_blobs": 19,
+  "final_snapshot": "D:/AI4Science/ai4orgchem-runtime-deliveries/20261002-handoff",
+  "restore_engine_test": "NOT_EXECUTED",
+  "global_execution_policy_changed": false,
+  "wslc": "BLOCKED / NOT_EXECUTED",
+  "published": false
+}

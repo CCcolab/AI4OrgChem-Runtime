@@ -10,11 +10,11 @@ CPU 为 Intel Core Ultra 9 185H，16 物理核心/22 逻辑处理器；容器 af
 
 本次采用现有 Docker 启动器，运行不需要网络但未显式 --network none，不将本次 L3 声称为网络隔离实测。L4 与新四输入联合分类仍 NOT_EXECUTED；L4 可保存检查点，但不支持恢复运行。WSL 升级和 WSLc 实机验收继续暂缓，WSLc 保持 BLOCKED / NOT_EXECUTED。
 
-## 本轮收尾决定
+## WSLc 暂缓决定（随后获授权继续 Docker L3/L4）
 
 2026-10-02 用户明确要求优先保护原 AI4OrgChem 科研运行环境，暂停 WSL 升级和 WSLc 实机验收。本轮收尾，不继续平台升级或验收；后续恢复须由用户明确授权。原项目未启用 Docker，不将 runtime 的 Docker 验收视为原项目运行方式，也不据此推断原项目完全不依赖 WSL。
 
-WSLc 状态保持 **BLOCKED**，相关实机测试保持 **NOT_EXECUTED**，不宣称已支持。已完成的独立 runtime 实现、来源/依赖锁、本地 Docker OCI 镜像、验收日志和报告全部保留，Docker 的 PASS 范围不变。原项目已修改和未跟踪文件保留；未升级 WSL、修改全局配置、重启或公开发布。L3/L4 仍未执行；L4 可保存检查点，但不支持恢复运行。
+WSLc 状态保持 **BLOCKED**，相关实机测试保持 **NOT_EXECUTED**，不宣称已支持。已完成的独立 runtime 实现、来源/依赖锁、本地 Docker OCI 镜像、验收日志和报告全部保留，Docker 的 PASS 范围不变。原项目已修改和未跟踪文件保留；未升级 WSL、修改全局配置、重启或公开发布。暂缓决定时 L3/L4 未执行；随后授权的 Docker L3/L4 已完成，见相应更新章节。L4 可保存检查点，但不支持恢复运行。
 
 这是实际记录：本地 Docker OCI 本轮验收已通过，WSLc 仍未执行。下方 WSL2 历史记录和启动前阻塞保留；最新 OCI 结果见末节。原项目工作区、科学源码、协议与冻结证据未修改；未推送、发布镜像、打正式标签或发布 Release。
 
@@ -26,7 +26,7 @@ WSLc 状态保持 **BLOCKED**，相关实机测试保持 **NOT_EXECUTED**，不�
 | B 构建工程与依赖锁 | PASS（本地 OCI） | 固定来源与 17 wheel 锁，从干净 runtime 仓库实际构建成功 |
 | C 任务封装与持久输出 | Docker 子集 PASS；WSLc BLOCKED | L0—L2/等价性、权限、离线、退出码、持久输出通过；WSLc 尚无实机验收 |
 | D WSL2/WSLc 对照 | BLOCKED | WSL2 有记录，WSLc 工具版本条件不足，相关测试 NOT_EXECUTED |
-| E L3/L4/本次联合分类 | NOT_EXECUTED | 接口完成，耗时预算未知，高成本任务未授权预算/未启动 |
+| E L3/L4/本次联合分类 | PASS（本地 Docker） | 后续明确授权已实跑通过；见 l3/l4/classification-summary.json |
 | F 候选文档与发布材料 | 候选材料已交付 | 发布就绪仍受 WSLc 验收及许可清单待办阻塞；不是正式发布 |
 
 ## 已执行结果
@@ -122,3 +122,11 @@ manifest、decision_verdict 均 PASS，退出码 0，13 项 decision_checks 与 
 原著完整 Cartesian 坐标未公开；C–H 来源代理、五参数子空间等限制见输出。结论不代表全 Cartesian 频率分析、更广对称性搜索或 19 分子面板复现。production_label=false、training_eligible=false，不自动授予发布/训练许可。
 
 阶段 E 的本地 Docker L3/L4/本次联合分类均已实跑通过，先前 NOT_EXECUTED 为历史状态。WSLc 仍 BLOCKED / NOT_EXECUTED，阶段 D 未完成；不公开发布。L4 检查点不支持恢复运行。CI、许可证发布清单和目标 WSLc 实机验收仍未完成。
+
+## 本地交付完善
+
+已增加 PowerShell 5.1 bootstrap，自动查找已有 7.3+，实际 evidence 运行 20261002T144551Z-evidence-d53bc4cf86a4 在中文/空格目录 PASS；7 项 PowerShell 检查 PASS。默认目录初始化问题已修正，缺少输出参数的首次测试调用未成功，其后补齐参数复验通过。未修改 PATH 或全局执行策略。
+
+本地备份工程已交付，成功快照 20261002-verified 含 256 普通运行文件与约 454.8 MB 镜像 tar；全部文件及 19 个镜像 blob 已校验。最终带当前宿主脚本/文档的快照位于 runtime-deliveries/20261002-handoff，身份和 SHA-256 以 backup-manifest.json 为准。Windows tar 两类兼容失败的尝试与日志保留；普通文件改用 .NET ZIP，明确排除容器 configs/evidence 源码链接，其源内容保存在镜像内。
+
+备份不覆盖原项目、全局科学环境，也不代表异盘灾备或恢复实测。镜像科学/runtime 提交 f30b290... 保持不变，新宿主工具和文档不要求重复 L3/L4。WSLc 继续 BLOCKED / NOT_EXECUTED，无公开发布、无 WSL 升级。
