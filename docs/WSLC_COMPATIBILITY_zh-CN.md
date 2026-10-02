@@ -1,6 +1,6 @@
 # WSLc 能力与实测矩阵
 
-当前状态（2026-10-03）：本地 Docker L0—L4/等价性/联合分类已验证，WSLc 暂缓并保持 BLOCKED / NOT_EXECUTED；CI 静态审查完成、运行 NOT_EXECUTED；许可映射与对应源码提供未齐，公开发布仍阻塞。身份与范围以 validation/final-delivery-status.json 和 DELIVERY_REVIEW_2026-10-03_zh-CN.md 为准，既有备份为历史快照。
+当前状态（2026-10-03）：本地 Docker L0—L4/等价性/联合分类已验证，WSLc 暂缓并保持 BLOCKED / NOT_EXECUTED；CI 静态审查完成、运行 NOT_EXECUTED；**镜像分发 BLOCKED；源码公开另行确认**。L0—L2、等价性及指定验收探针已断网验证，L3/L4 严格断网 NOT_EXECUTED。身份与范围以 validation/final-delivery-status.json 和 DELIVERY_REVIEW_2026-10-03_zh-CN.md 为准，既有备份为历史快照。
 
 本轮收尾决定（2026-10-02）：用户为优先保护原 AI4OrgChem 科研运行环境，暂停 WSL 升级和 WSLc 实机验收。WSLc 继续 BLOCKED / NOT_EXECUTED；后续恢复须明确授权。本地 Docker OCI 已验证范围保留，不替代 WSLc 支持声明。
 
@@ -29,13 +29,13 @@
 
 同一 Windows 用户的容器启动器使用宿主 FileShare.None 锁，所有相关容器同时绑定同一 /locks；Linux 入口使用 flock。不同用户、不同锁目录、手工启动或与未受 runtime 管理的科学任务之间不保证统一排他；不能因此宣称全主机所有进程都已受控。用户须保持中高内存任务串行。
 
-## Docker OCI 独立支持矩阵（2026-10-02）
+## 本地 Docker 候选镜像支持矩阵（2026-10-02）
 
 | 项目 | 本地 Docker 候选 |
 |---|---|
 | 干净构建、镜像身份、L0—L2、STO-3G 等价性 | PASS |
 | 非 root UID/GID 10001、源码/证据禁止写入、588 文件哈希 | PASS |
-| --network none、中文/空格 bind 路径 | PASS |
+| L0—L2、等价性及指定探针 --network none；中文/空格 bind 路径 | PASS |
 | 退出 0/37、256 MiB 低内存预检拒绝 | PASS |
 | --rm 后四份 manifest 与全部输出哈希 | PASS |
 | 封装测试 | PASS，12 项，无跳过；含合成中断保留测试 |
@@ -43,5 +43,6 @@
 | L3 p14-fixed | PASS，后续授权实跑 12/12 anchor 资格，见 l3-summary.json |
 | L4 p14-optimize | PASS，18/18 优化资格，见 l4-summary.json |
 | 四份新输入联合分类 | PASS：consistent，见 classification-summary.json |
+| L3/L4 严格网络隔离 | NOT_EXECUTED |
 
 本地镜像与记录见 [OCI 汇总](../validation/oci-summary.json)。L4 可保存检查点，但不支持恢复运行。

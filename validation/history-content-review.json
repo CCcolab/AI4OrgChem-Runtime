@@ -1,0 +1,15 @@
+{
+  "base_commit": "4d1903021190cbe5867f14cdb47ed1cbefe743cf",
+  "commits": 17,
+  "file_objects_read": 175,
+  "utf8_decode": "PASS",
+  "json_objects_parsed": 41,
+  "credential_pattern_findings": [],
+  "full_bodies_available": "history-bodies/<git-blob>.txt",
+  "history_rewritten": false,
+  "scope": "All baseline main-reachable file bodies read/exported and checked; new documentation reviewed separately",
+  "review_limits": "Mechanical scan/JSON checks and targeted content review are not certification of all history or image distribution",
+  "publication_authorization": "NOT_GRANTED",
+  "disclosure_objects": 68,
+  "disclosure_review": "Local paths/tool versions retained intentionally for provenance; commit author Codex (AI4OrgChem local), email ai4orgchem@localhost remain visible; final disclosure approval pending"
+}

@@ -1,6 +1,6 @@
 # AI4OrgChem 可复算运行环境
 
-2026-10-03 交付审查完成：本地 Docker 已验证 L0—L4、等价性与固定协议联合分类；WSLc **BLOCKED / NOT_EXECUTED**；CI **静态审查完成，运行 NOT_EXECUTED**。第三方许可证/源码提供仍有发布阻塞项，不声明发布就绪。见 [最终审查摘要](validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md)、[许可证审查](docs/LICENSE_REVIEW_zh-CN.md)。
+2026-10-03 交付审查完成：本地 Docker 已验证 L0—L4、等价性与固定协议联合分类；WSLc **BLOCKED / NOT_EXECUTED**；CI **静态审查完成，运行 NOT_EXECUTED**。**镜像分发 BLOCKED；源码公开另行确认**。见 [最终审查摘要](validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md)、[许可证审查](docs/LICENSE_REVIEW_zh-CN.md)。
 
 日常使用入口：`./scripts/start-runtime.ps1 -Task evidence`，可从 Windows PowerShell 5.1 自动调用已有 PowerShell 7。镜像、日志备份及恢复说明见 [本地交付指南](docs/LOCAL_DELIVERY_zh-CN.md)。当前以本地 Docker 实测为交付范围；WSLc 升级及验收暂停。
 
@@ -8,7 +8,7 @@
 
 当前为 **v0.1.0 开发候选**，未公开发布。上游来源为 `v0.3.2` / `28511f3d84fa65707a107cde1e8121a7b4334ecb`；上游 Python 包版本另为 `0.1.0`。
 
-| 入口 | 独立 WSL2 候选环境 | OCI 镜像 | Windows WSLc |
+| 入口 | 独立 WSL2 候选环境 | 本地 Docker 候选镜像 | Windows WSLc |
 |---|---|---|---|
 | L0 evidence | PASS | PASS | NOT_EXECUTED |
 | L1 core-tests | PASS | PASS | NOT_EXECUTED |
@@ -18,9 +18,22 @@
 | L4 p14-optimize | NOT_EXECUTED | PASS（优化资格） | NOT_EXECUTED |
 | p14-classify 实际四输入联合分类 | NOT_EXECUTED | PASS：consistent（固定协议范围） | NOT_EXECUTED |
 
-本地 Docker OCI 候选已完成断网、非 root、源码只读、退出码与删除容器后输出保留验收；WSLc 仍为 BLOCKED，Docker 结果不替代 WSLc。详见 validation/oci-summary.json。L4 可保存检查点，但不支持恢复运行。L0 只核验冻结证据；L1 是核心实现测试；L2 是 STO-3G 技术试跑，不作为科学复算认证。
+本地 Docker 候选的 L0—L2、等价性及指定验收探针已断网验证，同时验证了非 root、源码只读、退出码与删除容器后输出保留；**L3/L4 严格断网未执行**。WSLc 仍为 BLOCKED，Docker 结果不替代 WSLc。详见 validation/oci-summary.json。L4 可保存检查点，但不支持恢复运行。L0 只核验冻结证据；L1 是核心实现测试；L2 是 STO-3G 技术试跑，不作为科学复算认证。
 
-构建和目标主机运行（WSLc 候选，需实际验收）：
+## Docker 自行构建与运行
+
+在干净的 runtime 检出中，使用 PowerShell 7.3+ 和已可用的 Docker Linux/amd64 引擎。构建需要网络，无需公开镜像：
+
+```powershell
+./scripts/build-wslc.ps1 -Engine docker -Tag ai4orgchem-runtime:local-source-candidate
+./scripts/run-wslc.ps1 -Engine docker -Task evidence -Image ai4orgchem-runtime:local-source-candidate -OutputRoot 'D:\AI4Science\ai4orgchem-runtime-runs\source-review'
+```
+
+build-wslc.ps1 虽以 WSLc 命名，也支持显式 Docker 引擎。自行构建会形成新的 runtime/镜像身份；既有验收结果只属于记录中的旧候选，不能直接作为新镜像的通过证明。普通启动器没有强制网络隔离。已有本地验证镜像可使用前述 PowerShell 5.1 启动入口。
+
+## 未验收的 WSLc 候选适配
+
+本机 WSL 升级和 WSLc 实测已暂停。以下仅说明候选接口，不是当前已验证的使用路径：
 
 ```powershell
 ./scripts/probe-wslc.ps1 -OutputDirectory D:\AI4Science\ai4orgchem-runtime-runs\platform-probe
@@ -33,7 +46,9 @@
 
 不纳入 GPU 训练、在线 Agent 服务、新命题、P09/P10 尚未开放入口或原著全文。运行任务不临时安装软件、更新源码或调用大模型 API。项目不新增科学判定，也不构成科学认证。
 
-第三方许可补充包与未解决的对应源码要求见 [源码交付方案](docs/CORRESPONDING_SOURCE_zh-CN.md)及[材料校验记录](validation/license-materials-review.json)。取得通知不等于 binary/source 对应关系已证明；公开发布保持 BLOCKED。
+首次向获授权仓库推送会触发现有 CI，执行构建/轻量测试并上传运行证据附件，保留七天；日志和附件须纳入公开范围审阅。CI 不推送镜像、不打正式标签、不发布 Release；当前实际运行仍为 NOT_EXECUTED。
+
+第三方许可补充包与未解决的对应源码要求见 [源码交付方案](docs/CORRESPONDING_SOURCE_zh-CN.md)及[材料校验记录](validation/license-materials-review.json)。取得通知不等于 binary/source 对应关系已证明；**镜像分发 BLOCKED；源码公开另行确认**。
 
 
-Source-only publication and image distribution are assessed separately: [publication boundaries and local candidate](docs/PUBLICATION_BOUNDARIES_zh-CN.md). No public release; native wheel provenance remains unresolved.
+源码公开和镜像分发分别评估，见[公开边界与本地候选](docs/PUBLICATION_BOUNDARIES_zh-CN.md)。原生 wheel 来源仍有未解决项，两类公开操作均未执行。
