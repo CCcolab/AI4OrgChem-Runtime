@@ -2166,5 +2166,8 @@
       "status": "NOT_ACQUIRED",
       "required": "exact .dsc, original tarballs, Debian patches and build materials; verify archive checksums"
     }
-  ]
+  ],
+  "historical_snapshot": true,
+  "latest_material_review": "source-materials-final-review.json",
+  "latest_candidate_package": "D:/AI4Science/ai4orgchem-runtime-deliveries/20261003-final-candidate"
 }

@@ -49,7 +49,7 @@ Docker 可用于独立通用 OCI 候选验收（不能替代 WSLc）：
 
 构建脚本要求 reviewed commit 与干净 runtime 工作区，注入 runtime commit 和依赖锁摘要，完成后核查镜像标签和非 root 用户。工作目录的 .build 被忽略，只保存本地构建材料。Dockerfile 默认 linux/amd64、Python 3.12.13 官方 Debian slim 固定索引摘要，镜像内 /opt/venv 使用离线哈希安装；不会创建或修改用户原有 conda/micromamba 环境。
 
-本地镜像已成功构建，下载校验、L0—L2 动态库运行、非 root 挂载和离线运行已实测；完整基础组件许可证清单与 WSLc 验收仍待补齐。build 失败保留日志，不通过现场 pip install 或更换浮动依赖绕过。
+本地镜像已成功构建，下载校验、L0—L2 动态库运行、非 root 挂载和离线运行已实测；组件清单与 Debian/Python 源码材料已补齐，原生 wheel 来源/通知交付与 WSLc 验收仍待完成。build 失败保留日志，不通过现场 pip install 或更换浮动依赖绕过。
 
 ## 本地 Docker 验收复用
 

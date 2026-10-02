@@ -51,3 +51,6 @@
 ## 许可材料续审
 
 已形成 211 文件本地材料包并逐文件校验 ZIP：203 份镜像文本和 8 份上游补充材料。Libxc 7.0.0 MPL-2.0 与 HDF5 2.0.0 主 BSD-3-Clause 已取得正文；XCFun 固定提交源码及 PySCF 补丁、libcint v6.1.3 源码已保存。73 组 Debian 对应源码尚未取得；实际 wheel 的补丁、构建参数及数值库来源仍需映射，发布 BLOCKED 不变。详情见 docs/CORRESPONDING_SOURCE_zh-CN.md 与 validation/license-materials-review.json。镜像未重建，CI/WSLc 状态未变。
+
+
+最新许可/源码与候选包续审见 [公开边界说明](../docs/PUBLICATION_BOUNDARIES_zh-CN.md)。20261002 备份和首次 211 文件材料包是历史快照；当前候选包路径为 D:\AI4Science\ai4orgchem-runtime-deliveries\20261003-final-candidate。所有执行后哈希与归档验证以该目录 package-manifest.json、package-verification.json 和 backup-verification.json 为准。

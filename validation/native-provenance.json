@@ -1,0 +1,164 @@
+{
+  "libraries": [
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/numpy.libs/libquadmath-2284e583-a9307bba.so.0.0.0",
+      "sha256": "6bc3069003caec1f075be3c51ae8355332f081fa9465910c4b5724e7fe7d8ad4",
+      "elf_compiler_comments": [],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/numpy.libs/libgfortran-83c28eba-b4027c22.so.5.0.0",
+      "sha256": "fd1eab02b28ddb97628ca82220f0141336e390990d1d92ae6a3475aaf4f51b03",
+      "elf_compiler_comments": [],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-017048f4.so",
+      "sha256": "7f88e5cb3075a73d1610511f5de871c93e11701e862341c002ec8db936a60af8",
+      "elf_compiler_comments": [
+        "GCC: (GNU) 14.2.1 20250110 (Red Hat 14.2.1-10)",
+        "GCC: (GNU) 8.5.0 20210514 (Red Hat 8.5.0-28)"
+      ],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/h5py.libs/libhdf5_hl-69da89c9.so.320.0.0",
+      "sha256": "c42fb5846fa65835756661844c59a60dde848212f4b35e04bae1d9fb177536f9",
+      "elf_compiler_comments": [
+        "GCC: (GNU) 14.2.1 20250110 (Red Hat 14.2.1-10)"
+      ],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/h5py.libs/libaec-a27cf049.so.0.1.4",
+      "sha256": "9a7239926b162e0dbe41a1fc0181e55ecd29d5dbfa56ffde42bec8ad4b4f2db6",
+      "elf_compiler_comments": [
+        "GCC: (GNU) 14.2.1 20250110 (Red Hat 14.2.1-10)"
+      ],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/h5py.libs/libsz-c6be10dd.so.2.0.1",
+      "sha256": "a4a964d66f834b7787c9697de019565333ecd190ad19579ea1805056f9bc7d56",
+      "elf_compiler_comments": [
+        "GCC: (GNU) 14.2.1 20250110 (Red Hat 14.2.1-10)"
+      ],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/h5py.libs/libhdf5-9e18f0c6.so.320.0.0",
+      "sha256": "1f63f3c02f02dcd702fce63a0f6dc6786430bf1b989926c6850d2026b2c8b424",
+      "elf_compiler_comments": [
+        "GCC: (GNU) 14.2.1 20250110 (Red Hat 14.2.1-10)",
+        "GCC: (GNU) 8.5.0 20210514 (Red Hat 8.5.0-28)"
+      ],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/scipy.libs/libgfortran-83c28eba.so.5.0.0",
+      "sha256": "e554879fee7eda80055b6ca1407a54d00050874f830cc86b2bf3f50df5c7bb2b",
+      "elf_compiler_comments": [],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/scipy.libs/libquadmath-2284e583.so.0.0.0",
+      "sha256": "a9307bbaa353623fa014e8b682d50c4629f5e5c7d61daa9a8652f7d165cd421a",
+      "elf_compiler_comments": [],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/scipy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+      "sha256": "c6090048eccc763522c12ef016f81da6b627cb3a044f55cf0479a839c41c0980",
+      "elf_compiler_comments": [],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/scipy.libs/libquadmath-96973f99-934c22de.so.0.0.0",
+      "sha256": "6ed5137f412781ad7863439fb543613f620b43c32b63292a0029246162f5bbc6",
+      "elf_compiler_comments": [],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-5f890258.so",
+      "sha256": "2a5b4c1a6311873c59132b2ceaaf3c26258a17350b7cd27ea8782a47e3322981",
+      "elf_compiler_comments": [
+        "GCC: (GNU) 10.2.1 20210130 (Red Hat 10.2.1-11)",
+        "GCC: (GNU) 4.8.5 20150623 (Red Hat 4.8.5-44)",
+        "Linker: LLD 21.1.6 (https://github.com/llvm/llvm-project.git a832a5222e489298337fbb5876f8dcaf072c5cca)",
+        "clang version 21.1.6 (https://github.com/llvm/llvm-project.git a832a5222e489298337fbb5876f8dcaf072c5cca)"
+      ],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/pyscf/lib/libgomp-a34b3233.so.1.0.0",
+      "sha256": "3a7eaece7231911be2fbb1b3e7cb4cb5c2e0f84e0c2bb73739472b5a1feec8c1",
+      "elf_compiler_comments": [],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/pyscf/lib/libgfortran-91cc3cb1.so.3.0.0",
+      "sha256": "55e3eb67306c2ff17e6f8a0810eaa0dcb26e94cd83924c5065d5040e87814608",
+      "elf_compiler_comments": [],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/pyscf/lib/libquadmath-96973f99.so.0.0.0",
+      "sha256": "934c22ded0e7d169c4d4678876c96051adf3d94545da962f60b41659b075da3b",
+      "elf_compiler_comments": [],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/pyscf/lib/libxcfun_itrf.so",
+      "sha256": "5ba15b20c81767b2ef434b087caceb2f4f163db5fe376d2ec267501b25136aac",
+      "elf_compiler_comments": [
+        "GCC: (GNU) 10.2.1 20210130 (Red Hat 10.2.1-11)"
+      ],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/pyscf/lib/libxc_itrf.so",
+      "sha256": "5f09c9ad1296e1ab106ca00a2ad9a4f1a29e102c9e06c23511d6ba9710a69613",
+      "elf_compiler_comments": [
+        "GCC: (GNU) 10.2.1 20210130 (Red Hat 10.2.1-11)"
+      ],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/pyscf/lib/libgfortran-040039e1.so.5.0.0",
+      "sha256": "14afb3129b1a8b50bc40a3b0820c7f1152ea9bc10121aab152943f7057472886",
+      "elf_compiler_comments": [],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/pyscf/lib/libopenblas-r0-f650aae0.3.3.so",
+      "sha256": "79ec02b53f573cd7116a89f04c397473018e7fda05720b354d43505c19d47958",
+      "elf_compiler_comments": [],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/pyscf/lib/deps/lib64/libxcfun.so",
+      "sha256": "69a381159a6dc1646a963d23f3376f2770f8d2cb2148cce015c2b9184ec55c5e",
+      "elf_compiler_comments": [
+        "GCC: (GNU) 10.2.1 20210130 (Red Hat 10.2.1-11)"
+      ],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/pyscf/lib/deps/lib/libcint.so",
+      "sha256": "950bb0a297507369dce95b9013ef2c5b64b0fa36a0018c303c98e95efce7db7e",
+      "elf_compiler_comments": [
+        "GCC: (GNU) 10.2.1 20210130 (Red Hat 10.2.1-11)"
+      ],
+      "exact_source_build": "UNKNOWN"
+    },
+    {
+      "path": "/opt/venv/lib/python3.12/site-packages/pyscf/lib/deps/lib/libxc.so",
+      "sha256": "d120371b37f4729dfc21f3b0575e563ef9b0254839926c41c0c02f5082143548",
+      "elf_compiler_comments": [
+        "GCC: (GNU) 10.2.1 20210130 (Red Hat 10.2.1-11)"
+      ],
+      "exact_source_build": "UNKNOWN"
+    }
+  ],
+  "scope": "Compiler strings alone do not establish runtime source version, patches or build options"
+}

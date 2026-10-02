@@ -1,0 +1,1333 @@
+{
+  "components": [
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "CacheControl",
+      "version": "0.14.1",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/cachecontrol/LICENSE.txt"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 12,
+        "matched": 12,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "Apache-2.0"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "distlib",
+      "version": "0.3.9",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/distlib/LICENSE.txt"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 13,
+        "matched": 13,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "PSF and retained historical licenses"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "distro",
+      "version": "1.9.0",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/distro/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 3,
+        "matched": 3,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "Apache-2.0"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "msgpack",
+      "version": "1.1.0",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/msgpack/COPYING"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 4,
+        "matched": 4,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "Apache-2.0"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "packaging",
+      "version": "24.2",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/packaging/LICENSE",
+        "pip-parent-sdist/pip/_vendor/packaging/LICENSE.APACHE",
+        "pip-parent-sdist/pip/_vendor/packaging/LICENSE.BSD"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 16,
+        "matched": 16,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "Apache-2.0 OR BSD-2-Clause"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "platformdirs",
+      "version": "4.3.6",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/platformdirs/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 8,
+        "matched": 8,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "pyproject-hooks",
+      "version": "1.2.0",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/pyproject_hooks/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 4,
+        "matched": 4,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "requests",
+      "version": "2.32.3",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/requests/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 18,
+        "matched": 18,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "Apache-2.0"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "certifi",
+      "version": "2024.8.30",
+      "transitive_in_vendor_txt": true,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/certifi/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 3,
+        "matched": 3,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MPL-2.0"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "idna",
+      "version": "3.10",
+      "transitive_in_vendor_txt": true,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/idna/LICENSE.md"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 8,
+        "matched": 8,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "BSD-3-Clause"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "urllib3",
+      "version": "1.26.20",
+      "transitive_in_vendor_txt": true,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/urllib3/LICENSE.txt"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 39,
+        "matched": 39,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "rich",
+      "version": "13.9.4",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/rich/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 77,
+        "matched": 77,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "pygments",
+      "version": "2.18.0",
+      "transitive_in_vendor_txt": true,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/pygments/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 36,
+        "matched": 36,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "BSD-2-Clause"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "typing_extensions",
+      "version": "4.12.2",
+      "transitive_in_vendor_txt": true,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/typing_extensions.LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 1,
+        "matched": 1,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "PSF-2.0 and retained historical clauses"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "resolvelib",
+      "version": "1.0.1",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/resolvelib/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 7,
+        "matched": 7,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "ISC"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "setuptools",
+      "version": "70.3.0",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/pkg_resources/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 1,
+        "matched": 1,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT (vendored pkg_resources)"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "tomli",
+      "version": "2.2.1",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/tomli/LICENSE",
+        "pip-parent-sdist/pip/_vendor/tomli/LICENSE-HEADER"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 4,
+        "matched": 4,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    },
+    {
+      "parent": "pip",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "truststore",
+      "version": "0.10.0",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/truststore/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 6,
+        "matched": 6,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "autocommand",
+      "version": "2.2.2",
+      "metadata_license": "LGPLv3",
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "LGPL-3.0 text; or-later grant needs source header/metadata confirmation"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 6,
+        "matched": 6,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "LGPL-3.0 (metadata LGPLv3; or-later grant not asserted)"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "backports.tarfile",
+      "version": "1.2.0",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "MIT"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 0,
+        "matched": 0,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT (installed original notice)"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "importlib_metadata",
+      "version": "8.0.0",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata-8.0.0.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "Apache-2.0"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 12,
+        "matched": 12,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "Apache-2.0"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "inflect",
+      "version": "7.3.1",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/inflect-7.3.1.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "MIT"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 3,
+        "matched": 3,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT (installed original notice)"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "jaraco.collections",
+      "version": "5.1.0",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/jaraco.collections-5.1.0.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "MIT"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 0,
+        "matched": 0,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT (installed original notice)"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "jaraco.context",
+      "version": "5.3.0",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/jaraco.context-5.3.0.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "MIT"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 0,
+        "matched": 0,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT (installed original notice)"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "jaraco.functools",
+      "version": "4.0.1",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/jaraco.functools-4.0.1.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "MIT"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 0,
+        "matched": 0,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT (installed original notice)"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "jaraco.text",
+      "version": "3.12.1",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/jaraco.text-3.12.1.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "MIT"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 0,
+        "matched": 0,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT (installed original notice)"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "more-itertools",
+      "version": "10.3.0",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/more_itertools-10.3.0.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "MIT"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 3,
+        "matched": 3,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT (installed original notice)"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "packaging",
+      "version": "24.2",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/packaging-24.2.dist-info/LICENSE.APACHE",
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/packaging-24.2.dist-info/LICENSE.BSD",
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/packaging-24.2.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "Apache-2.0",
+        "BSD-family; exact clauses preserved in text",
+        "Text retained; exact expression needs review"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 16,
+        "matched": 16,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "Apache-2.0 OR BSD-2-Clause"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "platformdirs",
+      "version": "4.2.2",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/platformdirs-4.2.2.dist-info/licenses/LICENSE"
+      ],
+      "license_families": [
+        "MIT"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 8,
+        "matched": 8,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "tomli",
+      "version": "2.0.1",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/tomli-2.0.1.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "MIT"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 4,
+        "matched": 4,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "typeguard",
+      "version": "4.3.0",
+      "metadata_license": "MIT",
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/typeguard-4.3.0.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "MIT"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 13,
+        "matched": 13,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT (installed original notice)"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "typing_extensions",
+      "version": "4.12.2",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/typing_extensions-4.12.2.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "PSF-2.0 and any retained historical clauses"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 1,
+        "matched": 1,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "PSF-2.0 and retained historical clauses"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "wheel",
+      "version": "0.45.1",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/wheel-0.45.1.dist-info/LICENSE.txt"
+      ],
+      "license_families": [
+        "MIT"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 28,
+        "matched": 28,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT (installed original notice)"
+    },
+    {
+      "parent": "setuptools",
+      "environment": "/opt/venv/lib/python3.12/site-packages",
+      "name": "zipp",
+      "version": "3.19.2",
+      "metadata_license": null,
+      "license_files": [
+        "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/zipp-3.19.2.dist-info/LICENSE"
+      ],
+      "license_families": [
+        "MIT"
+      ],
+      "status": "NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 4,
+        "matched": 4,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT (installed original notice)"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "CacheControl",
+      "version": "0.14.1",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/cachecontrol/LICENSE.txt"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 12,
+        "matched": 12,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "Apache-2.0"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "distlib",
+      "version": "0.3.9",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/distlib/LICENSE.txt"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 13,
+        "matched": 13,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "PSF and retained historical licenses"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "distro",
+      "version": "1.9.0",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/distro/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 3,
+        "matched": 3,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "Apache-2.0"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "msgpack",
+      "version": "1.1.0",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/msgpack/COPYING"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 4,
+        "matched": 4,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "Apache-2.0"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "packaging",
+      "version": "24.2",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/packaging/LICENSE",
+        "pip-parent-sdist/pip/_vendor/packaging/LICENSE.APACHE",
+        "pip-parent-sdist/pip/_vendor/packaging/LICENSE.BSD"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 16,
+        "matched": 16,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "Apache-2.0 OR BSD-2-Clause"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "platformdirs",
+      "version": "4.3.6",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/platformdirs/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 8,
+        "matched": 8,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "pyproject-hooks",
+      "version": "1.2.0",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/pyproject_hooks/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 4,
+        "matched": 4,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "requests",
+      "version": "2.32.3",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/requests/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 18,
+        "matched": 18,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "Apache-2.0"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "certifi",
+      "version": "2024.8.30",
+      "transitive_in_vendor_txt": true,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/certifi/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 3,
+        "matched": 3,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MPL-2.0"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "idna",
+      "version": "3.10",
+      "transitive_in_vendor_txt": true,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/idna/LICENSE.md"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 8,
+        "matched": 8,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "BSD-3-Clause"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "urllib3",
+      "version": "1.26.20",
+      "transitive_in_vendor_txt": true,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/urllib3/LICENSE.txt"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 39,
+        "matched": 39,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "rich",
+      "version": "13.9.4",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/rich/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 77,
+        "matched": 77,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "pygments",
+      "version": "2.18.0",
+      "transitive_in_vendor_txt": true,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/pygments/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 36,
+        "matched": 36,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "BSD-2-Clause"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "typing_extensions",
+      "version": "4.12.2",
+      "transitive_in_vendor_txt": true,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/typing_extensions.LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 1,
+        "matched": 1,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "PSF-2.0 and retained historical clauses"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "resolvelib",
+      "version": "1.0.1",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/resolvelib/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 7,
+        "matched": 7,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "ISC"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "setuptools",
+      "version": "70.3.0",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/pkg_resources/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 1,
+        "matched": 1,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT (vendored pkg_resources)"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "tomli",
+      "version": "2.2.1",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/tomli/LICENSE",
+        "pip-parent-sdist/pip/_vendor/tomli/LICENSE-HEADER"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 4,
+        "matched": 4,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    },
+    {
+      "parent": "pip",
+      "environment": "/usr/local/lib/python3.12/site-packages",
+      "name": "truststore",
+      "version": "0.10.0",
+      "transitive_in_vendor_txt": false,
+      "license_files": [],
+      "license_families": [],
+      "status": "NOTICE_NOT_FOUND",
+      "supplemental_notice_files": [
+        "pip-parent-sdist/pip/_vendor/truststore/LICENSE"
+      ],
+      "source_notice_status": "MATCHING_PARENT_SDIST_NOTICE_FOUND",
+      "python_source_comparison": {
+        "files": 6,
+        "matched": 6,
+        "not_matched": []
+      },
+      "obligations": "Retain complete original notices; preserve applicable source terms; parent sources supplied locally, public retrieval not enabled",
+      "license_mapping": "MIT"
+    }
+  ],
+  "source_summary": {
+    "files": 634,
+    "matched": 634,
+    "unmatched": 0
+  },
+  "scope": "Installed Python source hashes and original notices; not static/native code certification",
+  "actual_image_notices": {
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/typing_extensions-4.12.2.dist-info/LICENSE": {
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "license_families": [
+        "PSF-2.0 and any retained historical clauses"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata-8.0.0.dist-info/LICENSE": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "license_families": [
+        "Apache-2.0"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE": {
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "license_families": [
+        "MIT"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/more_itertools-10.3.0.dist-info/LICENSE": {
+      "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+      "license_families": [
+        "MIT"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/jaraco.context-5.3.0.dist-info/LICENSE": {
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "license_families": [
+        "MIT"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/zipp-3.19.2.dist-info/LICENSE": {
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "license_families": [
+        "MIT"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/tomli-2.0.1.dist-info/LICENSE": {
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+      "license_families": [
+        "MIT"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/packaging-24.2.dist-info/LICENSE.APACHE": {
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "license_families": [
+        "Apache-2.0"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/packaging-24.2.dist-info/LICENSE.BSD": {
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+      "license_families": [
+        "BSD-family; exact clauses preserved in text"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/packaging-24.2.dist-info/LICENSE": {
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+      "license_families": [
+        "Text retained; exact expression needs review"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE": {
+      "sha256": "ade78d04982d69972d444a8e14a94f87a2334dd3855cc80348ea8e240aa0df2d",
+      "license_families": [
+        "LGPL-3.0 text; or-later grant needs source header/metadata confirmation"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/inflect-7.3.1.dist-info/LICENSE": {
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "license_families": [
+        "MIT"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/jaraco.text-3.12.1.dist-info/LICENSE": {
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "license_families": [
+        "MIT"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/wheel-0.45.1.dist-info/LICENSE.txt": {
+      "sha256": "30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654",
+      "license_families": [
+        "MIT"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/jaraco.collections-5.1.0.dist-info/LICENSE": {
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "license_families": [
+        "MIT"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/jaraco.functools-4.0.1.dist-info/LICENSE": {
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "license_families": [
+        "MIT"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/typeguard-4.3.0.dist-info/LICENSE": {
+      "sha256": "6163f7987dfb38d6bc320ce2b70b2f02b862bc41126516d552ef1cd43247e758",
+      "license_families": [
+        "MIT"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/platformdirs-4.2.2.dist-info/licenses/LICENSE": {
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+      "license_families": [
+        "MIT"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/wheel/vendored/packaging/LICENSE.APACHE": {
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "license_families": [
+        "Apache-2.0"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/wheel/vendored/packaging/LICENSE.BSD": {
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+      "license_families": [
+        "BSD-family; exact clauses preserved in text"
+      ]
+    },
+    "/opt/venv/lib/python3.12/site-packages/setuptools/_vendor/wheel/vendored/packaging/LICENSE": {
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+      "license_families": [
+        "Text retained; exact expression needs review"
+      ]
+    }
+  },
+  "supplemental_notices": {
+    "pip-parent-sdist/pip/_vendor/cachecontrol/LICENSE.txt": {
+      "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/distlib/LICENSE.txt": {
+      "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/distro/LICENSE": {
+      "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/msgpack/COPYING": {
+      "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/packaging/LICENSE": {
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/packaging/LICENSE.APACHE": {
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/packaging/LICENSE.BSD": {
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/platformdirs/LICENSE": {
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/pyproject_hooks/LICENSE": {
+      "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/requests/LICENSE": {
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/certifi/LICENSE": {
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/idna/LICENSE.md": {
+      "sha256": "a59f0b0ef3635874109a4461ca44ff7a70d50696e814767bfaf721d4c9b0db0f",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/urllib3/LICENSE.txt": {
+      "sha256": "c37bf186e27cf9dbe9619e55edfe3cea7b30091ceb3da63c7dacbe0e6d77907b",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/rich/LICENSE": {
+      "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/pygments/LICENSE": {
+      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/typing_extensions.LICENSE": {
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/resolvelib/LICENSE": {
+      "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/pkg_resources/LICENSE": {
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/tomli/LICENSE": {
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/tomli/LICENSE-HEADER": {
+      "sha256": "97ce9330905a172dde870ee0361d89beb95ba3bd0f4545796aa91a8c01a43531",
+      "source": "pip 25.0.1 hash-verified sdist"
+    },
+    "pip-parent-sdist/pip/_vendor/truststore/LICENSE": {
+      "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+      "source": "pip 25.0.1 hash-verified sdist"
+    }
+  },
+  "nested_module_notice_note": {
+    "path": "setuptools/_vendor/wheel/vendored/packaging",
+    "version": "UNKNOWN (empty __init__.py; do not invent a release version)",
+    "source": "Included in hash-matched setuptools 78.1.0 parent sdist",
+    "license": "Apache-2.0 OR BSD-2-Clause; all original license files preserved",
+    "counting": "52 records are vendor.txt/dist-info environment records, not an exhaustive number of upstream projects"
+  }
+}

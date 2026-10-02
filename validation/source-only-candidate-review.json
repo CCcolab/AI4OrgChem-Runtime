@@ -1,0 +1,9 @@
+{
+  "scope": "Current tracked and nonignored source candidate; limited credential signatures and binary-artifact extension review, not universal secret detection",
+  "files_reviewed": 93,
+  "known_credential_signature_findings": [],
+  "binary_archive_artifacts": [],
+  "git_remote": "NONE",
+  "public_source_authorized": false,
+  "public_image_authorized": false
+}

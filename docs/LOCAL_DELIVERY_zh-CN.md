@@ -41,7 +41,7 @@ PowerShell 7.3+ 执行 scripts/backup-local.ps1 -Destination 绝对路径。使�
 3. 将 runs.zip 解压到新的恢复父目录。run-files.sha256.json 用于复核普通文件。归档使用 .NET ZIP 支持中文路径，并明确排除 classifier-view 中指向 /opt/ai4orgchem 的容器内源码链接；源内容已保存在镜像中。四份输入副本、原运行结果、result、report、manifest 与日志均保留，排除模式记录在清单中，不修改全局链接权限。
 4. 在新输出目录跑 evidence/core-tests/p14-smoke，确认恢复后的环境再开展科研计算。
 
-备份仍在同一 D 盘，属于本地快照；应另行复制到独立存储以抵御磁盘损坏。当前交付不是正式 Release。完整镜像基础组件许可清单、CI 和 WSLc 平台验收仍待完成。
+备份仍在同一 D 盘，属于本地快照；应另行复制到独立存储以抵御磁盘损坏。当前交付不是正式 Release。具体原生 wheel 来源和通知交付、CI 实跑及 WSLc 验收仍待完成；组件清单和 Debian/Python 源码已补齐。
 
 ## 本轮备份与启动复验
 
@@ -50,3 +50,6 @@ PowerShell 7.3+ 执行 scripts/backup-local.ps1 -Destination 绝对路径。使�
 Windows PowerShell 5.1 测试使用单个子进程的 -ExecutionPolicy Bypass，仅验证本地已审查脚本，未更改用户/系统执行策略。若你自己的终端阻止脚本，请使用已有 PowerShell 7 运行入口，或自行决定单次进程策略，不修改全局配置。
 
 校验命令：python scripts/verify-local-backup.py D:\AI4Science\ai4orgchem-runtime-deliveries\20261002-handoff。该检查逐项验证归档、ZIP 内的运行文件及镜像 blob；没有执行 Docker 重新加载或系统环境恢复。备份清单记录真实仓库与镜像提交，两者不同属于正常的宿主工具/文档后续更新。
+
+
+最新许可/源码与候选包续审见 [公开边界说明](PUBLICATION_BOUNDARIES_zh-CN.md)。20261002 备份和首次 211 文件材料包是历史快照；当前候选包路径为 D:\AI4Science\ai4orgchem-runtime-deliveries\20261003-final-candidate。所有执行后哈希与归档验证以该目录 package-manifest.json、package-verification.json 和 backup-verification.json 为准。

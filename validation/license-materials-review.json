@@ -14,5 +14,8 @@
   "XCFun_patch": "compliance/upstream/pyscf-libxcfun.patch",
   "binary_source_correspondence": "UNKNOWN",
   "corresponding_source_complete": false,
-  "public_release_readiness": "BLOCKED"
+  "public_release_readiness": "BLOCKED",
+  "historical_snapshot": true,
+  "latest_material_review": "source-materials-final-review.json",
+  "latest_candidate_package": "D:/AI4Science/ai4orgchem-runtime-deliveries/20261003-final-candidate"
 }

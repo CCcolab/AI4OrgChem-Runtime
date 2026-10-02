@@ -2,7 +2,9 @@
 
 审查日期：2026-10-03。对象为本地 `sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54`，不是新构建镜像。断网、非 root 读取实际 dpkg、Python METADATA/RECORD、许可证文件及共享库 ldd；只加载数值库读取版本，没有科研计算。审查完成但有未解决项，**发布许可就绪 BLOCKED**。
 
-全量逐组件清单见 [component-license-inventory.json](../validation/component-license-inventory.json)：105 Debian 包、虚拟环境 18 Python 分发包、基础环境另一份 pip，42 条内嵌依赖版本记录（含环境重复项）、191 共享库文件。203 份许可证/署名/版本文件全文与 SHA-256 保存在 `D:\AI4Science\ai4orgchem-runtime-runs\20261003-review\components.json`。原始包作者/版权以这些全文为准，不用本表替代署名。逐组件版本、来源、许可证据、义务、缺失项都有记录；不是完成所有文件级许可证判定的声明。
+全量逐组件清单见 [component-license-inventory.json](../validation/component-license-inventory.json)：105 Debian 包、虚拟环境 18 Python 分发包、基础环境另一份 pip，52 条内嵌依赖环境记录、191 共享库文件。原 42 条漏计 pip 缩进行的传递组件，现已修正。203 份首轮许可证/署名/版本文件全文与 SHA-256 保存在 `D:\AI4Science\ai4orgchem-runtime-runs\20261003-review\components.json`；追加 vendor-notices.json 和本地候选补充包记录后续材料。原始版权以全文为准，不用本表替代署名；不是完成所有文件级许可证判定的声明。
+
+最新续审：73/73 Debian 精确源版本的 236 份归档已取得，三个索引的签名与哈希链 PASS；18/18 Python 精确版本 sdist 已取得。634/634 内嵌 Python 文件与父包源码匹配，补出 pip 的 21 份通知。setuptools 内嵌 autocommand 为 LGPLv3。原生 wheel 来源和实际分发通知仍有具体阻塞，详见 [源码/镜像分发边界](PUBLICATION_BOUNDARIES_zh-CN.md)及 [最新材料结论](../validation/source-materials-final-review.json)。
 
 ## 系统、Python 与署名
 
@@ -16,7 +18,7 @@
 | PySCF | 2.14.0，锁定 PyPI wheel | 主体 Apache-2.0，LICENSE/NOTICE 可读；内嵌库不自动继承 Apache |
 | h5py | 3.16.0，锁定 PyPI wheel | 主体 BSD-3-Clause、LZF 署名保留；内嵌 HDF5/libaec 等另核对 |
 | attrs/jsonschema/jsonschema-specifications/rpds-py/referencing/iniconfig | 26.1.0 / 4.26.0 / 2025.9.1 / 2026.6.3 / 0.37.0 / 2.3.0 | MIT；保留版权、许可与免责 |
-| pytest/pluggy/PyYAML/setuptools/pip | 8.4.2 / 1.6.0 / 6.0.3 / 78.1.0 / 25.0.1 | 主体 MIT；setuptools 与 pip 内嵌组件各自许可，42 条版本记录不等于 42 个独立已结案许可 |
+| pytest/pluggy/PyYAML/setuptools/pip | 8.4.2 / 1.6.0 / 6.0.3 / 78.1.0 / 25.0.1 | 主体 MIT；52 条内嵌环境记录各有原许可映射，含 autocommand LGPLv3、certifi MPL-2.0 等，不随主体改为 MIT |
 | Pygments/typing_extensions/packaging | 2.21.0 / 4.16.0 / 26.3 | BSD-2-Clause / PSF-2.0 / Apache-2.0 OR BSD-2-Clause；保留原始选择、条款与署名 |
 
 ## 实际携带的数值库
@@ -41,9 +43,9 @@
 1. 为 GPL/LGPL 系统包及内嵌运行库匹配精确源版本、补丁、构建材料，并建立符合对应许可证的源码随附/提供机制。仅有 Debian tracker 或 GitHub 首页链接不足以证明对应源码义务已满足；不自动替发布者作出书面承诺。[GPL 条款](https://www.gnu.org/licenses/gpl.html)、[LGPL 条款](https://www.gnu.org/licenses/lgpl.html)。
 2. 为 MPL XCFun 明确对应源码的获取方式并保留许可通知；发布 executable form 时不能遗漏源码提供信息。[MPL 2.0 第 3 节](https://www.mozilla.org/en-US/MPL/2.0/)。
 3. 补全 PySCF/HDF5/libaec/libsz 等内嵌库的原始许可和署名包；核查精确 binary 来源，未知版本继续 UNKNOWN。不得为解决许可问题随意替换科学库或浮动升级。
-4. 完成 pip/setuptools 内嵌依赖与 16 个系统自由文本版权文件的文件级映射。原始文本存在不等于机器提取标签完整；不能自动把 GPL 字样或多许可任选项改成单一许可证。
+4. pip/setuptools 内嵌版本、原许可与 Python 源文件对应已补齐，见 vendor-license-mapping.json。16 个系统自由文本版权仍待进一步文件级判读，原始条款和精确源码已保存；未归一化单一 SPDX 不等于许可文本缺失，不能将多许可和例外改成单一许可证。
 5. 镜像 `org.opencontainers.image.licenses=Apache-2.0` 只能描述 runtime 自有代码，不代表所有内容都属 Apache。现有镜像不修改、不重新标为全面许可合格；未来合规构建须提供独立第三方清单和通知。
 
-续审补充：HDF5 2.0.0 官方 LICENSE 主许可为 BSD-3-Clause，完整文本已另存；镜像本身尚未增加这些通知，libaec/libsz 精确版本和完整来源仍 UNKNOWN。实际镜像 203 份文本加 8 份上游材料组成 211 文件补充包，ZIP 逐文件哈希校验 PASS，73 组 Debian source package/version 的对应源码尚未取得。详情见 [材料记录](../validation/license-materials-review.json)、[全量材料锁](../validation/license-materials-manifest.json)及[对应源码方案](CORRESPONDING_SOURCE_zh-CN.md)。许可材料取到不等于 binary 对应关系已证明，也不等于分发合规已完成。
+首次续审历史：HDF5 2.0.0 官方 LICENSE 主许可为 BSD-3-Clause；203 份镜像文本加 8 份上游材料的 211 文件补充包通过校验，当时 Debian 源码未取得。其历史 [材料记录](../validation/license-materials-review.json)和[材料锁](../validation/license-materials-manifest.json)保持原身份；当前已取得全部 Debian 源码，以最新 source-acquisition.json/source-verification.json 为准。镜像未增加补充通知，libaec/libsz 精确来源仍 UNKNOWN。
 
 本轮保留全部原许可文本，没有发现自有代码署名丢失；但第三方映射与源码提供事项足以继续阻塞公开镜像发布。没有替换依赖、重建镜像或对外分发。

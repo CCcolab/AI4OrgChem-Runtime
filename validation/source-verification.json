@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "files_verified": 254,
+  "debian_indexes": [
+    {
+      "suite": "bookworm",
+      "signature": "PASS",
+      "signed_index_hash": "PASS",
+      "validsig": [
+        "[GNUPG:] VALIDSIG 4CB50190207B4758A3F73A796ED0E7B82643E131 2026-07-11 1783765031 0 4 0 1 8 01 B8B80B5B623EAB6AD8775C45B7C5D7D6350947F8",
+        "[GNUPG:] VALIDSIG B8E5F13176D2A7A75220028078DBA3BC47EF2265 2026-07-11 1783765032 0 4 0 1 8 01 04B54C3CDCA79751B16BC6B5225629DF75B188BD",
+        "[GNUPG:] VALIDSIG 4D64FEC119C2029067D6E791F8D2585B8783D481 2026-07-11 1783765141 0 4 0 22 8 01 4D64FEC119C2029067D6E791F8D2585B8783D481"
+      ],
+      "trust_anchor": "Debian archive keyring from existing pinned image",
+      "log": "indexes/bookworm/signature.log"
+    },
+    {
+      "suite": "bookworm-updates",
+      "signature": "PASS",
+      "signed_index_hash": "PASS",
+      "validsig": [
+        "[GNUPG:] VALIDSIG 4CB50190207B4758A3F73A796ED0E7B82643E131 2026-10-02 1790972082 0 4 0 1 8 01 B8B80B5B623EAB6AD8775C45B7C5D7D6350947F8",
+        "[GNUPG:] VALIDSIG B8E5F13176D2A7A75220028078DBA3BC47EF2265 2026-10-02 1790972093 0 4 0 1 8 01 04B54C3CDCA79751B16BC6B5225629DF75B188BD"
+      ],
+      "trust_anchor": "Debian archive keyring from existing pinned image",
+      "log": "indexes/bookworm-updates/signature.log"
+    },
+    {
+      "suite": "bookworm-security",
+      "signature": "PASS",
+      "signed_index_hash": "PASS",
+      "validsig": [
+        "[GNUPG:] VALIDSIG ED541312A33F1128F10B1C6C54404762BBB6E853 2026-10-02 1790964049 0 4 0 1 8 01 AC530D520F2F3269F5E98313A48449044AAD5C5D",
+        "[GNUPG:] VALIDSIG B0CAB9266E8C3929798B3EEEBDE6D2B9216EC7A8 2026-10-02 1790964049 0 4 0 1 8 01 05AB90340C0C5E797F44A8C8254CF3B5AEC0A8F0"
+      ],
+      "trust_anchor": "Debian archive keyring from existing pinned image",
+      "log": "indexes/bookworm-security/signature.log"
+    }
+  ],
+  "debian_version_mapping": "Exact dpkg source package/version to signed Sources index",
+  "python_hash_anchor": "PyPI exact-version JSON; no independent signature verification",
+  "wheel_embedded_binary_source_correspondence": "UNKNOWN",
+  "scope": "Archive authenticity/integrity and version mapping; not binary rebuild equivalence"
+}

@@ -2,6 +2,8 @@
 
 对象：已验证候选镜像 `sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54`。本方案不构成发布者书面源码提供承诺，也不宣称已满足全部分发义务。公开发布保持 BLOCKED。
 
+最新执行结果：73 组 Debian 精确源码已取得并通过签名索引与归档哈希验证；18 份 Python sdist、4 份原生/基础版本源码、已锁科学提交归档与 XCFun/libcint 材料均已保留。52 条内嵌环境记录及 634 个 Python 文件来源已映射；具体阻塞和源码公开/镜像分发区别见 PUBLICATION_BOUNDARIES_zh-CN.md。下述首次材料包是历史记录，当前包为 20261003-final-candidate。
+
 ## 已形成的本地材料
 
 `scripts/collect-license-materials.py` 从实际镜像审查证据提取完整许可证和署名，保持镜像路径层次；可选下载官方补充材料。输出 `manifest.json` 和 `third-party-materials.zip`，对 ZIP 每个材料文件重新计算 SHA-256。包内 manifest 与仓库验证记录说明来源与未知项。原始镜像、科学依赖和验收结果不改变。

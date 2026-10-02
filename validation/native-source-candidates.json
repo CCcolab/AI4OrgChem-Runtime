@@ -1,0 +1,38 @@
+[
+  {
+    "path": "libxc-7.0.0.tar.gz",
+    "url": "https://gitlab.com/libxc/libxc/-/archive/7.0.0/libxc-7.0.0.tar.gz",
+    "sha256": "8d4e343041c9cd869833822f57744872076ae709a613c118d70605539fb13a77",
+    "bytes": 67985837,
+    "status": "ACQUIRED",
+    "hash_anchor": "Observed official HTTPS download; not independently signed",
+    "binary_build_correspondence": "UNKNOWN"
+  },
+  {
+    "path": "hdf5-2.0.0.tar.gz",
+    "url": "https://codeload.github.com/HDFGroup/hdf5/tar.gz/refs/tags/hdf5_2.0.0",
+    "sha256": "ea5d2b7f1343d9da9e43546f389a8fc2698597fdd710f2843a605742e54edaa2",
+    "bytes": 42038672,
+    "status": "ACQUIRED",
+    "hash_anchor": "Observed official HTTPS download; not independently signed",
+    "binary_build_correspondence": "UNKNOWN"
+  },
+  {
+    "path": "Python-3.12.13.tar.xz",
+    "url": "https://www.python.org/ftp/python/3.12.13/Python-3.12.13.tar.xz",
+    "sha256": "c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+    "bytes": 20801708,
+    "status": "ACQUIRED",
+    "hash_anchor": "Observed official HTTPS download; not independently signed",
+    "binary_build_correspondence": "UNKNOWN"
+  },
+  {
+    "path": "h5py-3.16.0-git.tar.gz",
+    "url": "https://codeload.github.com/h5py/h5py/tar.gz/refs/tags/3.16.0",
+    "sha256": "9c3aa5e1fc0c33ae8501a17987af2f986c8ba3ade25da66c78738a5abefea133",
+    "bytes": 467561,
+    "status": "ACQUIRED",
+    "hash_anchor": "Observed official HTTPS download; not independently signed",
+    "binary_build_correspondence": "UNKNOWN"
+  }
+]

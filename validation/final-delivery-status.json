@@ -25,5 +25,12 @@
   "L4_real_interruption": "NOT_EXECUTED",
   "environment_restore_test": "NOT_EXECUTED",
   "previous_backup_is_historical_snapshot": true,
-  "license_materials": "license-materials-review.json"
+  "license_materials": "license-materials-review.json",
+  "debian_corresponding_sources": "73/73 ACQUIRED_SIGNED_INDEX_HASH_VERIFIED",
+  "python_parent_sources": "18/18 SDIST_ACQUIRED",
+  "vendor_source_mapping": "634/634 Python files MATCH; 52 environment component records",
+  "github_source_publication": "REVIEWABLE_SOURCE_ONLY_CANDIDATE; NOT_PUBLISHED; authorization and target repository unresolved",
+  "image_distribution": "BLOCKED_NATIVE_SOURCE_CORRESPONDENCE_AND_NOTICE_DELIVERY",
+  "current_local_candidate_directory": "D:/AI4Science/ai4orgchem-runtime-deliveries/20261003-final-candidate",
+  "current_package_integrity_evidence": "External package-manifest.json and package-verification.json in candidate directory"
 }
