@@ -17,7 +17,7 @@ $engine=Get-Engine 'docker'
 $identity=Get-ImageIdentity $engine $Image
 $running=(& $engine container ls --quiet | Out-String).Trim()
 if($LASTEXITCODE -ne 0 -or $running){throw 'Complete container runs before taking a consistent backup'}
-Get-Command tar.exe -ErrorAction Stop | Out-Null
+Add-Type -AssemblyName System.IO.Compression
 $fileHashes=@(Get-ChildItem -LiteralPath $runs -Recurse -File | Where-Object {-not ($_.Attributes -band [IO.FileAttributes]::ReparsePoint)} | ForEach-Object {
     @{path=$_.FullName.Substring($runs.Length+1).Replace('\','/');bytes=$_.Length;sha256=(Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant()}
 })
@@ -32,10 +32,17 @@ $exclusions=@('*/classifier-view/configs','*/classifier-view/evidence')
 $archiveList=Join-Path $dest 'run-archive-files.txt'
 $prefix=(Split-Path -Leaf $runs)+'/'
 [IO.File]::WriteAllLines($archiveList,[string[]]@($fileHashes | ForEach-Object {$prefix+$_.path}),[Text.UTF8Encoding]::new($false))
-& tar.exe -czf (Join-Path $dest 'runs.tar.gz') -C (Split-Path -Parent $runs) -T $archiveList
-if($LASTEXITCODE -ne 0){throw 'Run archive failed; partial backup retained'}
-& tar.exe -tf (Join-Path $dest 'runs.tar.gz') 1> (Join-Path $dest 'runs-archive-list.txt')
-if($LASTEXITCODE -ne 0){throw 'Cannot read run archive'}
+$archive=[IO.Compression.ZipArchive]::new([IO.File]::Create((Join-Path $dest 'runs.zip')),[IO.Compression.ZipArchiveMode]::Create)
+try {
+    foreach($file in $fileHashes){
+        $entry=$archive.CreateEntry($prefix+$file.path,[IO.Compression.CompressionLevel]::Optimal)
+        $inputStream=[IO.File]::OpenRead((Join-Path $runs $file.path))
+        $outputStream=$entry.Open()
+        try {$inputStream.CopyTo($outputStream)}finally{$outputStream.Dispose();$inputStream.Dispose()}
+    }
+}finally{$archive.Dispose()}
+$verify=[IO.Compression.ZipArchive]::new([IO.File]::OpenRead((Join-Path $dest 'runs.zip')),[IO.Compression.ZipArchiveMode]::Read)
+try {if($verify.Entries.Count -ne $fileHashes.Count){throw 'Archive file count differs'}}finally{$verify.Dispose()}
 & git -C $root bundle create (Join-Path $dest 'runtime-history.bundle') --all
 if($LASTEXITCODE -ne 0){throw 'Git bundle failed'}
 & git -C $root bundle verify (Join-Path $dest 'runtime-history.bundle') 1> (Join-Path $dest 'bundle-verify.log') 2>&1

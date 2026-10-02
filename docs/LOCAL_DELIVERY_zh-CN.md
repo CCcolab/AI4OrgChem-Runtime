@@ -36,7 +36,7 @@ PowerShell 7.3+ 执行 scripts/backup-local.ps1 -Destination 绝对路径。使�
 
 1. git clone runtime-history.bundle 到新的 runtime 目录，或将 runtime-source.zip 解压到新的目录。
 2. docker load --input candidate-image.tar，再核对 image inspect 的源码/runtime/锁身份。按清单中的 image_tag_hint 重新标记加载的镜像；离线镜像导出不保证 registry digest 或签名附件一并保存，不声称公开仓库身份已恢复。
-3. tar -xzf runs.tar.gz -C 新的恢复父目录。run-files.sha256.json 用于复核普通文件。Windows tar 无法读取 classifier-view 中指向 /opt/ai4orgchem 的 configs/evidence 链接，因此归档明确排除这两类容器内源码链接；源内容已保存在镜像中。四份输入副本、原运行结果、result、report、manifest 与日志均保留，排除模式记录在清单中，不修改全局链接权限。
+3. 将 runs.zip 解压到新的恢复父目录。run-files.sha256.json 用于复核普通文件。归档使用 .NET ZIP 支持中文路径，并明确排除 classifier-view 中指向 /opt/ai4orgchem 的容器内源码链接；源内容已保存在镜像中。四份输入副本、原运行结果、result、report、manifest 与日志均保留，排除模式记录在清单中，不修改全局链接权限。
 4. 在新输出目录跑 evidence/core-tests/p14-smoke，确认恢复后的环境再开展科研计算。
 
 备份仍在同一 D 盘，属于本地快照；应另行复制到独立存储以抵御磁盘损坏。当前交付不是正式 Release。完整镜像基础组件许可清单、CI 和 WSLc 平台验收仍待完成。
