@@ -11,7 +11,7 @@
 | L2 p14-smoke | PASS | PASS | NOT_EXECUTED |
 | p14-equivalence | PASS（另保留一次预检 FAIL） | PASS | NOT_EXECUTED |
 | L3 p14-fixed | NOT_EXECUTED | PASS（固定几何 anchor 资格） | NOT_EXECUTED |
-| L4 p14-optimize | NOT_EXECUTED | NOT_EXECUTED | NOT_EXECUTED |
+| L4 p14-optimize | NOT_EXECUTED | PASS（优化资格） | NOT_EXECUTED |
 | p14-classify 实际四输入联合分类 | NOT_EXECUTED | NOT_EXECUTED | NOT_EXECUTED |
 
 本地 Docker OCI 候选已完成断网、非 root、源码只读、退出码与删除容器后输出保留验收；WSLc 仍为 BLOCKED，Docker 结果不替代 WSLc。详见 validation/oci-summary.json。L4 可保存检查点，但不支持恢复运行。L0 只核验冻结证据；L1 是核心实现测试；L2 是 STO-3G 技术试跑，不作为科学复算认证。

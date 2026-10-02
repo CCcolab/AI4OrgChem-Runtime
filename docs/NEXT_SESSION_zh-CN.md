@@ -13,3 +13,5 @@
 Docker Desktop 已按用户授权启动，本地 OCI 构建与验收 PASS；最终镜像运行提交 f30b2906794d14f9030daab779c0d6a7cd4bd6f7，详见 validation/oci-summary.json。当前阻塞：WSL 2.3.26.0 未满足 WSLc 文档版本条件。WSLc 升级需单独授权，验收条件详见 INSTALL；不能用 Docker 结果代替。不自动全局更新、启用功能、重启或对外发布。
 
 验收之后更新真实矩阵。L3/L4 未运行，参考耗时/预算 UNKNOWN；运行前报告资源与预算条件。无上游 resume 功能。完整联合分类仅接受本次四份可追溯结果，不使用冻结值代替。
+
+后续授权 L4 已完成：18/18 优化资格 PASS，21.20 分钟，峰值 RSS 8.60 GiB，全部输出哈希一致，见 validation/l4-summary.json。此前 L4 未运行说明属于历史状态。新四输入联合分类尚未执行；L4 检查点不支持恢复运行，WSLc 暂缓决定不变。

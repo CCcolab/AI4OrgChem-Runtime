@@ -102,3 +102,11 @@ L2 与 STO-3G 等价性属于技术验收，科学容差、规则、协议、冻
 原始目录：`D:\AI4Science\ai4orgchem-runtime-runs\20261002-oci`。保留 engine-version.log、两次 build-attempt 日志、cgroup-diagnostic.log、acceptance-01/02 历史与错误记录；最终为 acceptance-03 目录及 acceptance-03-console/error.log。构建仅有固定 linux/amd64 的 Dockerfile lint 提示，无构建失败。小型汇总入 Git，大日志/结果仍独立保留。
 
 WSLc 升级与验收条件单列于 [安装指南](../docs/INSTALL_zh-CN.md)。本轮未升级 WSL、修改全局配置或重启，未运行 L3/L4/新四输入联合分类，未公开发布或创建正式标签/Release。Docker stop 的原生信号语义未实测；合成中断测试不等于完整 L4 中断。**L4 可保存检查点，但不支持恢复运行。** B 本地 OCI 构建已通过；C 的 WSLc 部分及 D 仍 BLOCKED。
+
+## 后续授权的 L4 实测更新
+
+用户授权的 Docker p14-optimize 完成，manifest PASS、程序与封装退出码 0；18 项上游 production 资格全部通过。G 和 PLG 优化器均成功，未触及参数边界，梯度满足原协议容差。耗时 1272.177734144 秒（21.20 分钟、0.353 小时），峰值 RSS 8801.19921875 MiB（约 8.60 GiB）。请求 8 线程；启动初期 CPU 采样曾为 1547.50%，不能将请求线程数描述为强制 CPU 上限。
+
+优化端点 67.67971905631804 kcal/mol，d_delta_r_GP 为 0.1722036356645249 Å；同层冻结值对照残差单列于 [l4-summary.json](l4-summary.json)。全部 manifest 输出 SHA-256 复核一致，checkpoint.json 保留，launcher stderr 为空；原始目录 D:\AI4Science\ai4orgchem-runtime-runs\20261002-l4\20261002T123346Z-p14-optimize-d7f348003891。
+
+本节更新此前“L4 未运行”的历史状态，仅代表本机 Docker 本次优化资格 PASS。production_label 和 training_eligible 仍为 false；完整新四输入联合分类尚未执行，不将优化门禁代替最终分类或训练资格。科学代码、规则、协议与容差未改变。运行不需要网络但本次未显式网络隔离；未执行 L4 实跑中断或恢复。L4 可保存检查点，但不支持恢复运行。WSL 升级、WSLc 验收继续暂缓，WSLc BLOCKED / NOT_EXECUTED。
