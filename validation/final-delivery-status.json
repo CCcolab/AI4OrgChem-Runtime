@@ -24,5 +24,6 @@
   "L3_L4_strict_network_isolation": "NOT_EXECUTED",
   "L4_real_interruption": "NOT_EXECUTED",
   "environment_restore_test": "NOT_EXECUTED",
-  "previous_backup_is_historical_snapshot": true
+  "previous_backup_is_historical_snapshot": true,
+  "license_materials": "license-materials-review.json"
 }

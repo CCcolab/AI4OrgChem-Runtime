@@ -1,0 +1,18 @@
+{
+  "review_date": "2026-10-03",
+  "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+  "files": 211,
+  "zip_integrity": "PASS",
+  "zip_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261003-license-materials\\third-party-materials.zip",
+  "zip_sha256": "8f83ac4f39e7751bc1bf5db8f68b260650b45e2adf0d8f636536f556f4e92496",
+  "debian_source_requirements": 73,
+  "debian_sources_acquired": 0,
+  "fetch_failures": [],
+  "Libxc_7_0_0_license": "MPL-2.0",
+  "HDF5_2_0_0_main_license": "BSD-3-Clause",
+  "XCFun_recipe_commit": "a89b783497d4fe146b477ac7a053303ce4189e9a",
+  "XCFun_patch": "compliance/upstream/pyscf-libxcfun.patch",
+  "binary_source_correspondence": "UNKNOWN",
+  "corresponding_source_complete": false,
+  "public_release_readiness": "BLOCKED"
+}

@@ -30,9 +30,9 @@
 | libquadmath | 多份实际 so 已记录，精确 GCC 编译版本 UNKNOWN | LGPL 系列；逐份版本、条款和对应源码交付路径未齐 |
 | HDF5 | h5py runtime 2.0.0 | HDF Group BSD 风格；现有 h5py 许可文本不足以确认完整独立 HDF5 署名已随 binary 交付 |
 | libaec/libsz | 有实际 binary，精确版本 UNKNOWN | 不凭 libsz 名称推断原 SZIP 授权；实际构建、许可及署名需映射 |
-| Libxc | API 返回 7.0.0 | 官方对应 COPYING 页面可定位但本轮无法取到条款正文；镜像内独立许可文本未找到，精确许可映射 UNKNOWN |
-| XCFun | API 返回 2.1.1 | [对应 v2.1.1 LICENSE](https://github.com/dftlibs/xcfun/blob/v2.1.1/LICENSE.md) 为 MPL-2.0；独立条款和对应源码交付映射尚未形成 |
-| libcint | 安装 cint.h 为 6.1.3 | [上游许可](https://github.com/sunqm/libcint/blob/master/LICENSE) 为 Apache-2.0；镜像独立署名/精确 binary 构建来源尚未结案 |
+| Libxc | API 返回 7.0.0 | 官方 7.0.0 COPYING 已补充采集，为 MPL-2.0；对应源码和实际 binary 构建映射仍 UNKNOWN |
+| XCFun | API 返回 2.1.1 | 固定构建配方提交 a89b783497d4fe146b477ac7a053303ce4189e9a 的 MPL-2.0 文本及源码已取得，PySCF 自带补丁另保存；实际 wheel 应用补丁情况 UNKNOWN，不能用未修改 v2.1.1 源码替代 |
+| libcint | 安装 cint.h 为 6.1.3 | v6.1.3 官方 Apache-2.0 文本及源码已补充取得；精确 binary 构建来源尚未结案 |
 
 191 个共享库包括 Python 扩展与上述依赖，不表示 191 个独立软件项目。ldd 为动态链接证据；未由 ldd 推断静态内嵌代码许可或证明许可证完整。即使某库未在 P14 中被调用，只要随镜像分发仍需审查。
 
@@ -43,5 +43,7 @@
 3. 补全 PySCF/HDF5/libaec/libsz 等内嵌库的原始许可和署名包；核查精确 binary 来源，未知版本继续 UNKNOWN。不得为解决许可问题随意替换科学库或浮动升级。
 4. 完成 pip/setuptools 内嵌依赖与 16 个系统自由文本版权文件的文件级映射。原始文本存在不等于机器提取标签完整；不能自动把 GPL 字样或多许可任选项改成单一许可证。
 5. 镜像 `org.opencontainers.image.licenses=Apache-2.0` 只能描述 runtime 自有代码，不代表所有内容都属 Apache。现有镜像不修改、不重新标为全面许可合格；未来合规构建须提供独立第三方清单和通知。
+
+续审补充：HDF5 2.0.0 官方 LICENSE 主许可为 BSD-3-Clause，完整文本已另存；镜像本身尚未增加这些通知，libaec/libsz 精确版本和完整来源仍 UNKNOWN。实际镜像 203 份文本加 8 份上游材料组成 211 文件补充包，ZIP 逐文件哈希校验 PASS，73 组 Debian source package/version 的对应源码尚未取得。详情见 [材料记录](../validation/license-materials-review.json)、[全量材料锁](../validation/license-materials-manifest.json)及[对应源码方案](CORRESPONDING_SOURCE_zh-CN.md)。许可材料取到不等于 binary 对应关系已证明，也不等于分发合规已完成。
 
 本轮保留全部原许可文本，没有发现自有代码署名丢失；但第三方映射与源码提供事项足以继续阻塞公开镜像发布。没有替换依赖、重建镜像或对外分发。

@@ -4612,8 +4612,8 @@
       "owner": "pyscf",
       "link_evidence_record": "components.json libraries[]; ldd output",
       "version": "2.1.1 (PySCF xcfun API)",
-      "license": "MPL-2.0 (upstream v2.1.1 LICENSE.md)",
-      "source": "https://github.com/dftlibs/xcfun/blob/v2.1.1/LICENSE.md",
+      "license": "MPL-2.0 (recipe commit a89b783497d4fe146b477ac7a053303ce4189e9a LICENSE.md acquired)",
+      "source": "https://github.com/dftlibs/xcfun/blob/a89b783497d4fe146b477ac7a053303ce4189e9a/LICENSE.md",
       "obligations": "include notice and make corresponding MPL source available; exact binary source mapping pending"
     },
     {
@@ -4632,7 +4632,7 @@
       "owner": "pyscf",
       "link_evidence_record": "components.json libraries[]; ldd output",
       "version": "7.0.0 (PySCF libxc API)",
-      "license": "UNKNOWN exact bundled license; upstream 7.0.0 COPYING needs retrieval",
+      "license": "MPL-2.0 (official 7.0.0 COPYING acquired); binary source correspondence UNKNOWN",
       "source": "https://gitlab.com/libxc/libxc/-/blob/7.0.0/COPYING",
       "obligations": "exact license/notice/source mapping required before distribution"
     },

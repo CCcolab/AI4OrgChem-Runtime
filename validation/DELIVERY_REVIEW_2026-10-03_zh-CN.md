@@ -47,3 +47,7 @@
 未发现最终科学输入/输出身份错配；已修正摘要历史范围不明和 CI 证据保存问题。上述许可事项及 WSLc 缺口仍影响原定发布；无公开发布授权，未推送、打正式标签或 Release。
 
 原始审查资料及采集脚本在 `D:\AI4Science\ai4orgchem-runtime-runs\20261003-review`，audit-files.sha256.json 记录原始证据摘要；不把大许可证全文或原始日志加入源码 Git。
+
+## 许可材料续审
+
+已形成 211 文件本地材料包并逐文件校验 ZIP：203 份镜像文本和 8 份上游补充材料。Libxc 7.0.0 MPL-2.0 与 HDF5 2.0.0 主 BSD-3-Clause 已取得正文；XCFun 固定提交源码及 PySCF 补丁、libcint v6.1.3 源码已保存。73 组 Debian 对应源码尚未取得；实际 wheel 的补丁、构建参数及数值库来源仍需映射，发布 BLOCKED 不变。详情见 docs/CORRESPONDING_SOURCE_zh-CN.md 与 validation/license-materials-review.json。镜像未重建，CI/WSLc 状态未变。

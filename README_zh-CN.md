@@ -32,3 +32,5 @@
 安装条件见 [安装指南](docs/INSTALL_zh-CN.md)，任务参数、输出和状态见 [运行指南](docs/RUN_zh-CN.md)，实际状态见 [验证报告](validation/REPORT_2026-10-02_zh-CN.md)。源码审查见 [审查报告](docs/SOURCE_AUDIT_zh-CN.md)。
 
 不纳入 GPU 训练、在线 Agent 服务、新命题、P09/P10 尚未开放入口或原著全文。运行任务不临时安装软件、更新源码或调用大模型 API。项目不新增科学判定，也不构成科学认证。
+
+第三方许可补充包与未解决的对应源码要求见 [源码交付方案](docs/CORRESPONDING_SOURCE_zh-CN.md)及[材料校验记录](validation/license-materials-review.json)。取得通知不等于 binary/source 对应关系已证明；公开发布保持 BLOCKED。
