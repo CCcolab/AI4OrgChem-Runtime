@@ -15,3 +15,5 @@ Docker Desktop 已按用户授权启动，本地 OCI 构建与验收 PASS；最�
 验收之后更新真实矩阵。L3/L4 未运行，参考耗时/预算 UNKNOWN；运行前报告资源与预算条件。无上游 resume 功能。完整联合分类仅接受本次四份可追溯结果，不使用冻结值代替。
 
 后续授权 L4 已完成：18/18 优化资格 PASS，21.20 分钟，峰值 RSS 8.60 GiB，全部输出哈希一致，见 validation/l4-summary.json。此前 L4 未运行说明属于历史状态。新四输入联合分类尚未执行；L4 检查点不支持恢复运行，WSLc 暂缓决定不变。
+
+四份新结果联合分类已完成：20261002T144015Z-p14-classify-675fab20a66f，PASS/consistent，13 判定和 19 优化资格检查全部通过，见 validation/classification-summary.json。此前分类未运行为历史状态。Docker 本地 L0—L4、等价性和分类已有记录；WSLc 仍暂缓，发布与训练未获授权。分类 result 中上游历史环境字段不可冒充本次运行身份，以 manifest 为准。

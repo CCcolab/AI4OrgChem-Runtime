@@ -40,6 +40,6 @@
 | Docker stop 信号语义、完整 L4 中断 | NOT_EXECUTED |
 | L3 p14-fixed | PASS，后续授权实跑 12/12 anchor 资格，见 l3-summary.json |
 | L4 p14-optimize | PASS，18/18 优化资格，见 l4-summary.json |
-| 四份新输入联合分类 | NOT_EXECUTED |
+| 四份新输入联合分类 | PASS：consistent，见 classification-summary.json |
 
 本地镜像与记录见 [OCI 汇总](../validation/oci-summary.json)。L4 可保存检查点，但不支持恢复运行。

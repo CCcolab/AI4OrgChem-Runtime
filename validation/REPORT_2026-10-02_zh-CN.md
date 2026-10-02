@@ -110,3 +110,15 @@ WSLc 升级与验收条件单列于 [安装指南](../docs/INSTALL_zh-CN.md)。�
 优化端点 67.67971905631804 kcal/mol，d_delta_r_GP 为 0.1722036356645249 Å；同层冻结值对照残差单列于 [l4-summary.json](l4-summary.json)。全部 manifest 输出 SHA-256 复核一致，checkpoint.json 保留，launcher stderr 为空；原始目录 D:\AI4Science\ai4orgchem-runtime-runs\20261002-l4\20261002T123346Z-p14-optimize-d7f348003891。
 
 本节更新此前“L4 未运行”的历史状态，仅代表本机 Docker 本次优化资格 PASS。production_label 和 training_eligible 仍为 false；完整新四输入联合分类尚未执行，不将优化门禁代替最终分类或训练资格。科学代码、规则、协议与容差未改变。运行不需要网络但本次未显式网络隔离；未执行 L4 实跑中断或恢复。L4 可保存检查点，但不支持恢复运行。WSL 升级、WSLc 验收继续暂缓，WSLc BLOCKED / NOT_EXECUTED。
+
+## 四份新结果联合分类完成
+
+后续授权联合分类运行 20261002T144015Z-p14-classify-675fab20a66f 已完成。实际输入为本次 smoke 20261002T115757Z-p14-smoke-5edcc0ade184、等价性 20261002T111600Z-p14-equivalence-a83e2e3a8f2f、L3 20261002T123033Z-p14-fixed-d621c0cfab97、L4 20261002T123346Z-p14-optimize-d7f348003891，全部输出哈希预核对一致。四份 manifest 均为 PASS、源与 runtime 提交相同；入口另核对协议、输入哈希、依赖版本及 result 哈希。未用冻结 JSON 替代本次输入，未修改科学分类规则。
+
+manifest、decision_verdict 均 PASS，退出码 0，13 项 decision_checks 与 19 项 optimization_eligibility_checks 全部 true。分类 consistent（与原著一致），限定于冻结的 C12H6 来源代理和 PLG 操作定义、预注册平面 D3h 五参数子空间。优化 dΔr 残差 -0.006796364335475091 Å，优化端点残差 +0.5997190563180368 kcal/mol，固定几何端点残差 +0.006899348033954311 kcal/mol；这些是相对来源报告值，不与同层冻结实现微小残差混用。
+
+全部分类输出哈希复核一致，stderr 为空，原始文件在 D:\AI4Science\ai4orgchem-runtime-runs\20261002T144015Z-p14-classify-675fab20a66f；摘要见 [classification-summary.json](classification-summary.json)。结果中的 runtime_provenance=WSL_2_Ubuntu_24_04 与 source_calculation_git_commit 来自上游协议历史快照，不是本次 Docker 实机来源；实际来源以本次 run-manifest.json 为准，未改写上游科学结果字段。
+
+原著完整 Cartesian 坐标未公开；C–H 来源代理、五参数子空间等限制见输出。结论不代表全 Cartesian 频率分析、更广对称性搜索或 19 分子面板复现。production_label=false、training_eligible=false，不自动授予发布/训练许可。
+
+阶段 E 的本地 Docker L3/L4/本次联合分类均已实跑通过，先前 NOT_EXECUTED 为历史状态。WSLc 仍 BLOCKED / NOT_EXECUTED，阶段 D 未完成；不公开发布。L4 检查点不支持恢复运行。CI、许可证发布清单和目标 WSLc 实机验收仍未完成。
