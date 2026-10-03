@@ -1,0 +1,326 @@
+{
+  "scientific_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "all_references_match_locked_bytes": true,
+  "files": [
+    {
+      "path": "configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml",
+      "sha256": "f64fed4aeb172deaf5c71e637af367656e24b867570061987a5311fdbe48e06b",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml"
+    },
+    {
+      "path": "configs/qm/p09_exchange_integral_classes_v0.1.yaml",
+      "sha256": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/configs/qm/p09_exchange_integral_classes_v0.1.yaml"
+    },
+    {
+      "path": "evidence/P01-P14/README_zh-CN.md",
+      "sha256": "ae18cd1cbb8a564e7bd507ca85c2f302aef818def1fb512e7f9f582873d2fe7e",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/README_zh-CN.md"
+    },
+    {
+      "path": "evidence/P01-P14/EVIDENCE_COMPANION_EN.md",
+      "sha256": "b1a17cdcf2c86c2a0a6b20367154f0d1b5f748628db8db7a3d40929dfaf6c695",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/EVIDENCE_COMPANION_EN.md"
+    },
+    {
+      "path": "evidence/P01-P14/P01/data-card.md",
+      "sha256": "04013950752b0246026329854e28919d59986352597bb4521ceab3e3dd3a7224",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P01/data-card.md"
+    },
+    {
+      "path": "evidence/P01-P14/P01/protocol.md",
+      "sha256": "006f72c60d5522ef48129e5b4b6128416fdd24db9cc9160df7c626b939618dd7",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P01/protocol.md"
+    },
+    {
+      "path": "evidence/P01-P14/P01/report.md",
+      "sha256": "ae2aeabdf0903514050e9fb00e4381a1b880a2abc48e0150dc1d4bfe1d551eca",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P01/report.md"
+    },
+    {
+      "path": "evidence/P01-P14/P02/data-card.md",
+      "sha256": "45b6b9ea18f0cba6e6634de821bf1d4f0d46ac07d31c2407fc1728398d9d4797",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P02/data-card.md"
+    },
+    {
+      "path": "evidence/P01-P14/P02/protocol.md",
+      "sha256": "be7d749948891faca0a890d9e45650d1f233577307a977510b2e849d172a5a3e",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P02/protocol.md"
+    },
+    {
+      "path": "evidence/P01-P14/P02/report.md",
+      "sha256": "c97f8a26d28d6304c3b179c99ce0d6d43327ca29b298be9c9044dc554e1e033c",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P02/report.md"
+    },
+    {
+      "path": "evidence/P01-P14/P03/data-card.md",
+      "sha256": "d32d7925057feba8a6e7f2e5caa005c13cb1e273f80d8b5fccaf2ab82e0fa37f",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P03/data-card.md"
+    },
+    {
+      "path": "evidence/P01-P14/P03/protocol.md",
+      "sha256": "608115444918eaf2b3011dc3b68d1ccc467d104a587e25a56cef9bf039fc0865",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P03/protocol.md"
+    },
+    {
+      "path": "evidence/P01-P14/P03/report.md",
+      "sha256": "d06b8de077005cec5c48b092b55544b83182a25588cd73069e7ba0dab3f3e037",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P03/report.md"
+    },
+    {
+      "path": "evidence/P01-P14/P04/data-card.md",
+      "sha256": "f8641032148a2f304c382c17cf5971a88b928a3fefdc87240434558527147179",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P04/data-card.md"
+    },
+    {
+      "path": "evidence/P01-P14/P04/protocol.md",
+      "sha256": "8a4082c2ec9169eed1ba80e686616caa538414a301a3e4be7774a87fb06ac9df",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P04/protocol.md"
+    },
+    {
+      "path": "evidence/P01-P14/P04/report.md",
+      "sha256": "b60247cc8f38a0ef745669c4db3692189f7e72231da62ab2788d99259f3eb769",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P04/report.md"
+    },
+    {
+      "path": "evidence/P01-P14/P05/data-card.md",
+      "sha256": "318f5bd33d93962ce808ac32e005a0720db34747089a2f8bdcca68119cc70cee",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P05/data-card.md"
+    },
+    {
+      "path": "evidence/P01-P14/P05/protocol.md",
+      "sha256": "2f64488a9a8682257ef432305b82985b45793739ffc73e015ae98a99fe3eb6f9",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P05/protocol.md"
+    },
+    {
+      "path": "evidence/P01-P14/P05/report.md",
+      "sha256": "3346886d91ff9396654e7eac0611ae669ec1357f02f7904e0d649f5a00ad8a46",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P05/report.md"
+    },
+    {
+      "path": "evidence/P01-P14/P06/data-card.md",
+      "sha256": "43c7697b7c74a93546a8e290cabae71fa94b45c20aff47548795107d3245fdb9",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P06/data-card.md"
+    },
+    {
+      "path": "evidence/P01-P14/P06/protocol.md",
+      "sha256": "b22829cfce4cfd4fa9bb5537d4474b355466f7993d7ab4d3a11d8a00cc2132f8",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P06/protocol.md"
+    },
+    {
+      "path": "evidence/P01-P14/P06/report.md",
+      "sha256": "56bb23cb3027dc20f0822cff8b886a1bebe4d579cd222b2abc58976296b1d6d3",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P06/report.md"
+    },
+    {
+      "path": "evidence/P01-P14/P07/data-card.md",
+      "sha256": "75a623d7473bc00ae3ce64e1390063e432a7b6eb2790f5df264aec6e8592dfee",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P07/data-card.md"
+    },
+    {
+      "path": "evidence/P01-P14/P07/protocol.md",
+      "sha256": "ca24bff3a9612a5c8b1196bae27a678eba83bf3b74c826c6c55d1bb92293aea2",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P07/protocol.md"
+    },
+    {
+      "path": "evidence/P01-P14/P07/report.md",
+      "sha256": "29ba3184ebb6056a2a8aa344a74259db62cb34fdcc25587ef4640abec1bf98cb",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P07/report.md"
+    },
+    {
+      "path": "evidence/P01-P14/P08/data-card.md",
+      "sha256": "77a8e93d6284c2454f64fe851aad3e12efe97d2feadf296611ce379b8743f81b",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P08/data-card.md"
+    },
+    {
+      "path": "evidence/P01-P14/P08/protocol.md",
+      "sha256": "babd5653f16c1925546661965df805d4c6161301ffb3e023b61239ac70715b40",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P08/protocol.md"
+    },
+    {
+      "path": "evidence/P01-P14/P08/report.md",
+      "sha256": "2ee189b5662edabae9940924273546da939376cb6c77b9d90ec7db36e0245258",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P08/report.md"
+    },
+    {
+      "path": "evidence/P01-P14/P09/data-card.md",
+      "sha256": "5abd1d361c360e9f83e50550120fb9a12712e08e8204c6833b06c26377be5d7e",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P09/data-card.md"
+    },
+    {
+      "path": "evidence/P01-P14/P09/protocol.md",
+      "sha256": "cc55d026487c9260b6ea342c9ea7bec6a15df0a79be9d296a67deaacb68c2313",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P09/protocol.md"
+    },
+    {
+      "path": "evidence/P01-P14/P09/report.md",
+      "sha256": "8f96709bdad1646238d5b3ed4fbafb92deb7507545ac04b5eb1c95cc6a6b20ed",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P09/report.md"
+    },
+    {
+      "path": "evidence/P01-P14/P10/data-card.md",
+      "sha256": "d5c50749b4b8ee10e5df46dcdf4d1ce6625b46e4d30ec11485c749df2eab426e",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P10/data-card.md"
+    },
+    {
+      "path": "evidence/P01-P14/P10/protocol.md",
+      "sha256": "b4f29a2109594658e6a80423e21d3f6d6db07e7c62a5aa28ef4b001bda141d47",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P10/protocol.md"
+    },
+    {
+      "path": "evidence/P01-P14/P10/report.md",
+      "sha256": "7ec4e21eac802e593e27a029cce3d533c2e84505b7814481e8097990f97d43c9",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P10/report.md"
+    },
+    {
+      "path": "evidence/P01-P14/P12/data-card.md",
+      "sha256": "039787c68d23f62fb56cd7d6c8cadf1e9a7a26fb8fd27a1b9b3a957e3509bb77",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P12/data-card.md"
+    },
+    {
+      "path": "evidence/P01-P14/P12/protocol.md",
+      "sha256": "90361d39e710cf2d9927f91e1c53b81a4310684bcac71706fbfb2e7946ae191b",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P12/protocol.md"
+    },
+    {
+      "path": "evidence/P01-P14/P12/report.md",
+      "sha256": "820f5394859beb925b796e25826cee658a7e381957ee89e80f9fbd4ca5353e82",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P12/report.md"
+    },
+    {
+      "path": "evidence/P01-P14/P13/data-card.md",
+      "sha256": "7783a9f3d0b400d29a7e94c1ae20caf4c2c0ee042a3f9f6a7f4d9969d56c7db4",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P13/data-card.md"
+    },
+    {
+      "path": "evidence/P01-P14/P13/protocol.md",
+      "sha256": "0eeaa5d932f8f3587e19aa34ad98a14c54085709ae9010de93d4624c786904e4",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P13/protocol.md"
+    },
+    {
+      "path": "evidence/P01-P14/P13/report.md",
+      "sha256": "bf29ae1f7855cb7c4a8d259342e1078f134e3ab2d5c09ca7ac204556d4bac3af",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P13/report.md"
+    },
+    {
+      "path": "evidence/P01-P14/P14/data-card.md",
+      "sha256": "7df1c3900aab073847b7fefeb15db05fc3b95bee927c299d5afd1226fd2e7bf7",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P14/data-card.md"
+    },
+    {
+      "path": "evidence/P01-P14/P14/protocol.md",
+      "sha256": "efeba6a07cacba6b00eca5918dd4928cf4b3ebadf3133df6afc0c6eacc40d73a",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P14/protocol.md"
+    },
+    {
+      "path": "evidence/P01-P14/P14/report.md",
+      "sha256": "df7caa0c4b68b4c3e2eaea3e9149b202357a14a815c3816332186fb594285f24",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P14/report.md"
+    },
+    {
+      "path": "software/scripts/validate_public_evidence.py",
+      "sha256": "f0d5347c10a9417d9e23b0d9083d867b662d94b038d9b1dde2862584e69e70ef",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/scripts/validate_public_evidence.py"
+    },
+    {
+      "path": "software/scripts/validate_p12_evidence.py",
+      "sha256": "e3a33a6e1712dd6d1052f1f714e7186a6ad54573ea3d7f28d7aec79e269d03c8",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/scripts/validate_p12_evidence.py"
+    },
+    {
+      "path": "software/scripts/validate_evidence_navigation.py",
+      "sha256": "02ae33c7c28783f47e700b62619795d9493aae13218c2e2c5396691ad5c670bf",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/scripts/validate_evidence_navigation.py"
+    },
+    {
+      "path": "software/scripts/validate_p14_evidence.py",
+      "sha256": "247b86aeb91a011df2488e38e11dd400a07d816462aa8bf0188a477424aee732",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/scripts/validate_p14_evidence.py"
+    },
+    {
+      "path": "software/scripts/run_p14_benzotricyclobutadiene_smoke.py",
+      "sha256": "4a9ef67b13ce43d6fef1ff23d060c1675bc8e356766e5ecb8c449eaa644abf0b",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/scripts/run_p14_benzotricyclobutadiene_smoke.py"
+    },
+    {
+      "path": "software/scripts/validate_p14_memory_controlled_conditional_scf.py",
+      "sha256": "4ae13c258052395142c8c0f2b24271ee63d51535c2c4dff181d29f93fce8e655",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/scripts/validate_p14_memory_controlled_conditional_scf.py"
+    },
+    {
+      "path": "software/scripts/run_p14_benzotricyclobutadiene_source_level_fixed_geometry.py",
+      "sha256": "7d5498efdd40c7f2d765414cf1c39f098b6c5ef67a1f6d6254aa939e8f04a7b9",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/scripts/run_p14_benzotricyclobutadiene_source_level_fixed_geometry.py"
+    },
+    {
+      "path": "software/scripts/run_p14_benzotricyclobutadiene_production_optimization.py",
+      "sha256": "5f0181b5ecb3df6c74e95dbd4c137529be5ea07e146b3f7bf86ddbf0f201bf65",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/scripts/run_p14_benzotricyclobutadiene_production_optimization.py"
+    },
+    {
+      "path": "software/scripts/classify_p14_strained_aromatic_pi_distortivity.py",
+      "sha256": "f620b7abd67f9b86d50bf63d2a58614ee8c1c74ba0c57e845838d8cdf6fbb2b1",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/scripts/classify_p14_strained_aromatic_pi_distortivity.py"
+    },
+    {
+      "path": "software/tests/test_p09_conditional_scf.py",
+      "sha256": "15c1327e0588826579b08ae0cf911dca670a95c766238617e330d9f38eb6d7ac",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/tests/test_p09_conditional_scf.py"
+    },
+    {
+      "path": "software/tests/test_p09_energy_assembly.py",
+      "sha256": "2b3ecaed51b69a93eb75964b80fe0a4fad9f00d8e9f531ba41ffdf719249d2ec",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/tests/test_p09_energy_assembly.py"
+    },
+    {
+      "path": "software/tests/test_p09_eri_mask.py",
+      "sha256": "ffd59fee6c12816102623e133addb5fbcc5e6ea89b7a6897ee88a24e0e4f530e",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/tests/test_p09_eri_mask.py"
+    },
+    {
+      "path": "software/src/ai4orgchem/qm/p09_ao_classification.py",
+      "sha256": "7cf6212e9ff4ae97e4239c1e35a0a8d72b89c68d88d49953c2a26a2b1d0f8842",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/src/ai4orgchem/qm/p09_ao_classification.py"
+    },
+    {
+      "path": "software/src/ai4orgchem/qm/p09_conditional_scf.py",
+      "sha256": "33c7eeeb19bcdbc1d21fa30aa32694ca333b859a9cdc22caaad8ed064060d0ab",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/src/ai4orgchem/qm/p09_conditional_scf.py"
+    },
+    {
+      "path": "software/src/ai4orgchem/qm/p09_eri_mask.py",
+      "sha256": "411c42820211be609e4f8c984339037ba0731bc005255a79177d6f1b247c47df",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/src/ai4orgchem/qm/p09_eri_mask.py"
+    },
+    {
+      "path": "software/src/ai4orgchem/qm/p09_energy_assembly.py",
+      "sha256": "71c50e5202d4bf4fb8be2f8c07f6a87bc11e15aa0a2bafee9c25f338d5f226a0",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/src/ai4orgchem/qm/p09_energy_assembly.py"
+    },
+    {
+      "path": "evidence/P01-P14/P14/inputs/source_proxy_G.xyz",
+      "sha256": "fa2b0a1c88d467bd51fec6e140a07a65f74a64ad7e63fbf550d611b3b60c571c",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P14/inputs/source_proxy_G.xyz"
+    },
+    {
+      "path": "evidence/P01-P14/P14/inputs/source_proxy_PLG.xyz",
+      "sha256": "0fd8593ebdf93b59642abbb8b9a84336e30de74d5fc3f4a8721cb2412d3fbcc7",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P14/inputs/source_proxy_PLG.xyz"
+    },
+    {
+      "path": "evidence/P01-P14/P12/n12-same-basis-ledger.json",
+      "sha256": "bba1bbeb15f7376a9446531c0238e694994b7f26cfdd497632b1936dbdefc2cc",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P12/n12-same-basis-ledger.json"
+    },
+    {
+      "path": "evidence/P01-P14/P12/n14-same-basis-ledger.json",
+      "sha256": "6409ad10cf47b7ecbdcc6248c156dec673cd8473d8b000b3f48d937910e022d6",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P12/n14-same-basis-ledger.json"
+    },
+    {
+      "path": "evidence/P01-P14/P12/n16-same-basis-ledger.json",
+      "sha256": "29bc336739475af39ef92bca1460f0ccbf127db411571a895e608c3c8d864200",
+      "url": "https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/evidence/P01-P14/P12/n16-same-basis-ledger.json"
+    }
+  ]
+}

@@ -39,3 +39,5 @@ Third-party notice materials and outstanding corresponding-source requirements: 
 
 
 Source-only publication and image distribution are assessed separately: [publication boundaries and local candidate](docs/PUBLICATION_BOUNDARIES_zh-CN.md). Native wheel provenance remains unresolved; neither publication action has been performed.
+
+Professional review documentation (Chinese): [S1–S6 services and task mapping](docs/PROFESSIONAL_SERVICES_zh-CN.md), [result interpretation](docs/REVIEW_RESULTS_zh-CN.md), [three user paths](docs/USER_PATHS_zh-CN.md), and [historical Docker example](docs/examples/P14_REVIEW_20261002_zh-CN.md). The [review report](docs/templates/REVIEW_REPORT_zh-CN.md) and [feedback](docs/templates/FEEDBACK_zh-CN.md) templates are filled manually. An automatic summarizer is not implemented; the seven task IDs are unchanged. This documentation supplement requires separate publication-scope review from the previous `2460eef` candidate.

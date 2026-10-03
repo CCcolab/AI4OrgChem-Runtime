@@ -1,13 +1,15 @@
 # 分层运行合同
 
-当前状态（2026-10-03）：本地 Docker L0—L4/等价性/联合分类已验证，WSLc 暂缓并保持 BLOCKED / NOT_EXECUTED；CI 静态审查完成、运行 NOT_EXECUTED；许可映射与对应源码提供未齐，公开发布仍阻塞。身份与范围以 validation/final-delivery-status.json 和 DELIVERY_REVIEW_2026-10-03_zh-CN.md 为准，既有备份为历史快照。
+当前状态（2026-10-03）：指定本地 Docker 候选 L0—L4/等价性/联合分类已验证；严格断网仅覆盖 L0—L2、等价性与指定探针，L3/L4 严格断网未执行。WSLc 暂缓并保持 BLOCKED / NOT_EXECUTED；CI 静态审查完成、运行 NOT_EXECUTED。镜像分发 BLOCKED；源码公开另行确认。身份与范围以 validation/final-delivery-status.json 和 DELIVERY_REVIEW_2026-10-03_zh-CN.md 为准，既有备份为历史快照。
+
+专业阅读入口：[模块与规则对应表](PROFESSIONAL_SERVICES_zh-CN.md)、[结果判读](REVIEW_RESULTS_zh-CN.md)、[三类用户路径](USER_PATHS_zh-CN.md)、[已有验收示例](examples/P14_REVIEW_20261002_zh-CN.md)。文档示例不自动启动新运行；本轮沿用已有结果。
 
 Windows 日常使用 scripts/start-runtime.ps1，可从 PowerShell 5.1 自动选择已有 7.3+，固定 Docker；底层 scripts/run-wslc.ps1 仍需 PowerShell 7.3+，默认 WSLc 仅为待验收候选。当前 Docker 用法和备份见 LOCAL_DELIVERY_zh-CN.md。容器内稳定接口为 `python -m runtime.cli run TASK`，entrypoint 自动调用。任务白名单：evidence、core-tests、p14-smoke、p14-equivalence、p14-fixed、p14-optimize、p14-classify。未知 task/参数由 argparse/PowerShell 拒绝。
 
 ```powershell
-./scripts/run-wslc.ps1 -Task evidence -Image ai4orgchem-runtime:candidate -OutputRoot 'D:\AI4Science\ai4orgchem-runtime-runs\我的复核 output'
-./scripts/run-wslc.ps1 -Task core-tests -Image ai4orgchem-runtime:candidate
-./scripts/run-wslc.ps1 -Task p14-smoke -Image ai4orgchem-runtime:candidate -Threads 8
+./scripts/run-wslc.ps1 -Engine docker -Task evidence -Image ai4orgchem-runtime:oci-candidate-20261002 -OutputRoot 'D:\AI4Science\ai4orgchem-runtime-runs\我的复核 output'
+./scripts/run-wslc.ps1 -Engine docker -Task core-tests -Image ai4orgchem-runtime:oci-candidate-20261002
+./scripts/run-wslc.ps1 -Engine docker -Task p14-smoke -Image ai4orgchem-runtime:oci-candidate-20261002 -Threads 8
 ```
 
 每次自动建立唯一 UTC 时间+task+随机 ID 目录；不复用 runs/reproduction，不读取旧输出，不清理历史结果。包含 run-manifest.json、各子程序 stdout/stderr、P14 原输出 result.json/report.md 和适用的 checkpoint.json。日志不主动输出全部环境变量、令牌或用户目录。
@@ -31,7 +33,7 @@ L4 检查点持久保存；源码无恢复能力，不提供 resume。重新开�
 必须先获得本次 smoke、optimization、equivalence、source-level 四个完整运行目录，每份 manifest 的 task、PASS/原退出码、源 commit、输入哈希、依赖版本、协议及输出哈希需匹配。允许分阶段运行，不要求同一时间。不能传冻结 JSON 或缺 manifest 的历史文件。
 
 ```powershell
-./scripts/run-wslc.ps1 -Task p14-classify -Image ai4orgchem-runtime:candidate `
+./scripts/run-wslc.ps1 -Engine docker -Task p14-classify -Image ai4orgchem-runtime:oci-candidate-20261002 `
   -OutputRoot D:\AI4Science\ai4orgchem-runtime-runs\my-reproduction `
   -SmokeRun D:\AI4Science\ai4orgchem-runtime-runs\my-reproduction\SMOKE_RUN `
   -OptimizationRun D:\AI4Science\ai4orgchem-runtime-runs\my-reproduction\OPTIMIZE_RUN `
