@@ -53,7 +53,7 @@ def execute(args):
     save(output/'preflight.json', preflight)
     save(output/'runtime-progress.json', {'stage': 'INPUT_CHECK_COMPLETED', 'scf_executed': False})
     if args.action == 'check':
-        (output/'report.md').write_text(report(preflight), encoding='utf-8')
+        (output/'report.md').write_text(report(preflight, bundle['request']), encoding='utf-8')
         manifest(output, action='check', input_status='VALID', execution_status='COMPLETED',
                  numerical_status='NOT_EXECUTED', compute_eligible=preflight['compute_eligible'], identities=identities)
         return 0
@@ -91,7 +91,7 @@ def execute(args):
             result['numerical_status'] = 'NUMERICALLY_QUALIFIED' if result['comparison_available'] else 'NOT_QUALIFIED'
     validate(result, 'user-molecule-result-v1.json')
     save(output/'result.json', result)
-    (output/'report.md').write_text(report(result), encoding='utf-8')
+    (output/'report.md').write_text(report(result, bundle['request']), encoding='utf-8')
     manifest(output, action='compute', check_receipt_sha256=expected_receipt, identities=identities,
              execution_status=result['execution_status'], numerical_status=result['numerical_status'])
     return 20 if result['execution_status'] == 'BLOCKED' else (0 if result['comparison_available'] else 30)
@@ -113,7 +113,8 @@ def main():
     if args.action == 'report':
         path = Path(args.run_directory)
         record = load(path/('result.json' if (path/'result.json').exists() else 'preflight.json'))
-        print(report(record))
+        request_path = path/'input/request.normalized.json'
+        print(report(record, load(request_path) if request_path.exists() else None))
         return 0
     try:
         return execute(args)

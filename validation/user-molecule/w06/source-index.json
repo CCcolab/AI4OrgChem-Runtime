@@ -1,0 +1,35 @@
+{
+  "scope": "Reviewed working bytes; Git export identity recorded separately",
+  "runtime_parent_commit": "39922083d91025b4efaef4ab5972860c91e2df55",
+  "local_sources": [
+    {
+      "path": "docs/USER_MOLECULE_TECHNICAL_PLAN_zh-CN.md",
+      "sha256": "6c0fa47cb0e8acac602ebb3c4c1a2268b5b3cb80ad0d443e5c39922d85b310a6"
+    },
+    {
+      "path": "docs/USER_MOLECULE_ENTRY_DESIGN_zh-CN.md",
+      "sha256": "f531d6d08f0275ee2639f622b52243a7ba59bc878d4676ee01016d6fa5052bd6"
+    },
+    {
+      "path": "docs/USER_MOLECULE_CONDITION_DEFINITION_zh-CN.md",
+      "sha256": "7b8214fcb550bd571d5c94fcd5facf19a2cf5cd528cbc7a8a1080f4117717e36"
+    },
+    {
+      "path": "validation/user-molecule/w05/reference-plan.json",
+      "sha256": "831e4974c05d41ed7caa7d28883e03b77683bfe78966f51a1f9c2b76b79257b2"
+    },
+    {
+      "path": "validation/user-molecule/w05/pending-decisions.json",
+      "sha256": "64f80727015a7462d677167d2a099391a571f6bca955829b810a148d67074d17"
+    },
+    {
+      "path": "locks/source.user-molecule.lock.json",
+      "sha256": "b0b8d99f381a4d430023306239374f359140c26fed435d464ecbcb8b04ed82b8"
+    }
+  ],
+  "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "science_rules_path": "configs/qm/p09_exchange_integral_classes_v0.1.yaml",
+  "science_rules_sha256": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+  "no_new_external_method_claims": true,
+  "production_core_changed": false
+}

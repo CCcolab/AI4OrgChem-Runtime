@@ -1,0 +1,14 @@
+{
+  "revision": "W06-ENGINEERING-1",
+  "date": "2026-10-05",
+  "implementation": "ARRAY_REFERENCE_AND_READONLY_ASSESSMENT_CANDIDATE",
+  "engineering_execution": "NOT_EXECUTED",
+  "molecular_reference_execution": "NOT_EXECUTED",
+  "molecular_numerical_acceptance": "NOT_EXECUTED",
+  "scope_approval": "NOT_REVIEWED",
+  "D2_W05": "BLOCKED / NOT_EXECUTED",
+  "D3_W06": "BLOCKED / NOT_EXECUTED",
+  "compute_enabled": false,
+  "source_only_not_in_current_image": true,
+  "scientific_core_changed": false
+}

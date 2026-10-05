@@ -6,6 +6,8 @@ Isolated branch update (2026-10-05): the W01–W04 user-molecule engineering can
 
 [Local W01–W05 engineering/contract CI](docs/USER_MOLECULE_CI_20261005_zh-CN.md) passed 38 unit tests, 10 integration actions and four platform probes. GitHub Actions remains **NOT_EXECUTED**; W05 numerical acceptance remains blocked.
 
+[W06 engineering](docs/USER_MOLECULE_W06_ENGINEERING_zh-CN.md) adds an independent array-level conditional reference, read-only scope assessment and a short user brief. Molecular/reference/resource/research acceptance is pending; Compute remains disabled. These additions are not baked into the existing r3 image.
+
 Delivery review (2026-10-03): local Docker L0–L4, equivalence and scoped joint classification are verified. WSLc is **BLOCKED / NOT_EXECUTED**. CI is **statically reviewed; execution NOT_EXECUTED**. **Image distribution is BLOCKED; source-only publication requires separate confirmation.** Apache-2.0 covers runtime-owned code, not every image component. See [final review](validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md) and [license review](docs/LICENSE_REVIEW_zh-CN.md).
 
 [中文说明](README_zh-CN.md)

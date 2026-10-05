@@ -2,6 +2,8 @@
 
 2026-10-05 / W05-PREPARATION-1。入口支持 Check 和只读 Report；Compute 已接通适配器与监督，但两个 profile 均禁用计算，返回 BLOCKED / 20，等待 W05 数值/资源和 W06 研究验收。当前没有新分子能量或研究合格结果。输入合法不代表方法或资源合格。最新 [验收准备记录](USER_MOLECULE_W05_PREPARATION_zh-CN.md) 保存两份候选输入及四次实际 Check。
 
+[W06 工程增补](USER_MOLECULE_W06_ENGINEERING_zh-CN.md) 已实现参考/资格判读与短简报候选，测试源码可只读挂载复用旧镜像；现有 r3 的生产启动入口不因此升级，仍使用原报告且禁用 Compute。不得将本轮 toy 测试当作用户分子数值验收。
+
 ## 1. 从隔离工作区使用
 
 ```powershell

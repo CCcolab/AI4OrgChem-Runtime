@@ -1,5 +1,5 @@
 {
-  "revision": "W05-PREPARATION-1",
+  "revision": "W06-ENGINEERING-1",
   "date": "2026-10-05",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -24,15 +24,20 @@
       "validation": "SCOPED_LOCAL_DOCKER_ENGINEERING_PASS"
     },
     "W05": {
-      "implementation": "PREPARATION_COMPLETED; REFERENCE_AND_ACCEPTANCE_DRIVERS_NOT_IMPLEMENTED",
+      "implementation": "PREPARATION_COMPLETED; PARTIAL_SHARED_ARRAY_REFERENCE_IMPLEMENTED; ORDINARY_AND_ACCEPTANCE_DRIVERS_MISSING",
       "validation": "FOUR_METADATA_CHECKS_AND_GUARDED_RESEARCH_INSPECT_PASS",
       "numerical_acceptance": "NOT_EXECUTED",
       "ready_to_execute_scf": false,
       "status_record": "validation/user-molecule/w05/preparation-status.json"
     },
     "W06": {
-      "implementation": "NOT_STARTED",
-      "validation": "NOT_EXECUTED"
+      "implementation": "ARRAY_REFERENCE_AND_READONLY_ASSESSMENT_IMPLEMENTED",
+      "validation": "ENGINEERING_TESTS_PENDING",
+      "molecular_reference": "NOT_EXECUTED",
+      "research_scope": "NOT_REVIEWED",
+      "D3_exit": "BLOCKED / NOT_EXECUTED",
+      "production_activation": false,
+      "record": "validation/user-molecule/w06/engineering-review.json"
     },
     "W07": {
       "implementation": "FULL_RESEARCH_USER_DELIVERY_NOT_STARTED; engineering guide provided",
@@ -53,7 +58,7 @@
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Resolve B01-B06, implement independent reference and missing gates, freeze per-field thresholds and bounded acceptance budget before pilot numerical acceptance; W06 remains separate",
+  "next_bounded_task": "Close W05 B01-B06, ordinary/acceptance drivers and calibrated budget; only then execute D2 and W06 molecular/reference/scope acceptance",
   "scientific_pending": [
     "collision/conditioning/gap criteria",
     "resource calibration and maximum compute nAO",
@@ -67,5 +72,6 @@
   "ci_execution_scope": "GitHub Actions; local CI recorded separately",
   "ci_local_execution": "PASS_ENGINEERING_CONTRACTS_ONLY",
   "latest_ci_record": "validation/user-molecule/ci-local-20261005.json",
-  "ci_local_test_commit": "c671025e2a2933ed26e9406ee4b878f1163c443c"
+  "ci_local_test_commit": "c671025e2a2933ed26e9406ee4b878f1163c443c",
+  "latest_w06_record": "validation/user-molecule/w06/engineering-review.json"
 }
