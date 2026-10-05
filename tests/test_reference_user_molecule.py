@@ -123,6 +123,24 @@ class ReferenceTests(unittest.TestCase):
         self.assertFalse(result['converged'])
         self.assertEqual(result['variational_status'], 'NOT_ESTABLISHED')
 
+    def test_complete_iteration_nonorthogonal_metric_and_nonzero_interactions(self):
+        metric=np.array([[1.,.2],[.2,1.]])
+        result=self.run_toy(overlap=metric,aos=(SIGMA,SIGMA))
+        self.assertTrue(result['converged'])
+        self.assertAlmostEqual(result['total_energy_hartree'], -2/np.sqrt(.96), places=12)
+        self.assertAlmostEqual(result['masked_metric_electron_count'],2.,places=12)
+        self.assertLess(result['closed_shell_idempotency_relative_residual'],1e-12)
+        self.assertLess(result['final_commutator_frobenius_norm'],1e-12)
+        eri=np.zeros((2,)*4); eri[0,0,0,0]=.4; eri[1,1,1,1]=.3
+        result=self.run_toy(h=np.diag([-2.,.5]),eri=eri,nuclear=1.)
+        self.assertTrue(result['converged'])
+        self.assertAlmostEqual(result['components_hartree']['one_electron'],-4.)
+        self.assertAlmostEqual(result['components_hartree']['coulomb'],.8)
+        self.assertAlmostEqual(result['components_hartree']['exact_exchange'],-.08)
+        self.assertAlmostEqual(result['total_energy_hartree'],-2.28)
+        self.assertAlmostEqual(result['Fcond'][0,0],-1.28)
+        self.assertEqual(result['masked_metric_electron_count'],2.)
+
     def test_global_full_occupancy_gap_undefined(self):
         result = self.run_toy(electrons=4, density=2*np.eye(2))
         self.assertIsNone(result['occupied_virtual_gap_hartree'])

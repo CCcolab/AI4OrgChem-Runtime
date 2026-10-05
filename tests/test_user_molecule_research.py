@@ -6,7 +6,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from runtime.user_molecule.research import assess, BINDINGS
+from runtime.user_molecule.research import assess, BINDINGS, result_fingerprint
 from runtime.user_molecule.records import report
 
 
@@ -61,7 +61,7 @@ class ResearchTests(unittest.TestCase):
         self.assertEqual(assess(self.record,'pilot-unregistered')['research_status'],'NOT_QUALIFIED')
 
     def synthetic_registry(self, root):
-        bindings = self.record['identities']
+        bindings = {**self.record['identities'], 'result_content_sha256':result_fingerprint(self.record)}
         scope = {'scope_id':'SYNTHETIC_UNIT_TEST_ONLY','scope_version':'1',
                  'profile_id':self.request['calculation_profile'],'bindings':bindings}
         for key in ('method_review','acceptance','complete_reference','resource_review'):
@@ -98,6 +98,12 @@ class ResearchTests(unittest.TestCase):
                 value=copy.deepcopy(self.record); value['identities'][key]='CHANGED'
                 with self.subTest(key=key):
                     self.assertEqual(assess(value,self.request['calculation_profile'],registry,root)['research_status'],'NOT_REVIEWED')
+            altered=copy.deepcopy(self.record)
+            altered['ordinary']['total_energy_hartree']=-3.
+            altered['conditional']['total_energy_hartree']=-2.5
+            # Same internally consistent difference/identities, changed actual
+            # energies: the original reviewed result must not certify this one.
+            self.assertEqual(assess(altered,self.request['calculation_profile'],registry,root)['research_status'],'NOT_REVIEWED')
 
     def test_tampered_missing_ambiguous_or_escaped_receipt_fails(self):
         with tempfile.TemporaryDirectory() as directory:

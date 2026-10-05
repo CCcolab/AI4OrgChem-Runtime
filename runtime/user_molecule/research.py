@@ -15,6 +15,12 @@ def finite(value):
     return type(value) in (int, float) and math.isfinite(value)
 
 
+def result_fingerprint(record):
+    """Canonical JSON identity, distinct from the raw result.json file hash."""
+    raw = json.dumps(record, ensure_ascii=False, sort_keys=True, separators=(',', ':'), allow_nan=False).encode('utf-8')
+    return hashlib.sha256(raw).hexdigest()
+
+
 def _receipt(root, reference):
     root = Path(root).resolve()
     path = (root / reference['path']).resolve()
@@ -72,8 +78,14 @@ def assess(record, profile_id=None, registry=None, evidence_root=None):
         return result
     result['research_status'] = 'NOT_REVIEWED'
     identities = record.get('identities', {})
+    try:
+        fingerprint = result_fingerprint(record)
+    except (ValueError, TypeError):
+        result['reasons'] = ['RESULT_CONTENT_NOT_STRICT_JSON']
+        return result
     matching = [s for s in (registry or {}).get('scopes', []) if s.get('profile_id') == profile_id and all(
-        identities.get(key) and s.get('bindings', {}).get(key) == identities[key] for key in BINDINGS)]
+        identities.get(key) and s.get('bindings', {}).get(key) == identities[key] for key in BINDINGS)
+        and s.get('bindings', {}).get('result_content_sha256') == fingerprint]
     if not matching:
         result['reasons'] = ['NO_EXACT_REVIEWED_SCOPE_MATCH']
         return result
