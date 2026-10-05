@@ -131,8 +131,8 @@ def main():
 
     minimal = """import subprocess,sys,venv
 assert sys.version_info[:2]==(3,12)
-venv.create('/tmp/input-ci-venv',with_pip=True)
-p='/tmp/input-ci-venv/bin/python'
+venv.create('/ci-env/input-ci-venv',with_pip=True)
+p='/ci-env/input-ci-venv/bin/python'
 subprocess.run([p,'-m','pip','install','--no-index','--find-links','/ci-wheels','--only-binary=:all:',
  '--require-hashes','-r','locks/requirements-user-molecule-ci.txt'],check=True)
 subprocess.run([p,'-m','pip','check'],check=True)
@@ -141,7 +141,8 @@ with open('/output/dependencies.txt','w') as stream:
 subprocess.run([p,'-m','unittest','discover','-s','tests','-p','test_user_molecule_*.py','-v'],check=True)
 """
     container('input-resource-w05-contracts', ['-c', minimal],
-        ['--mount', f'type=bind,source={options.wheels.resolve()},target=/ci-wheels,readonly'])
+        ['--mount', f'type=bind,source={options.wheels.resolve()},target=/ci-wheels,readonly',
+         '--tmpfs', '/ci-env:rw,nosuid,nodev,exec,size=67108864,mode=1777'])
     container('scientific-adapter-engineering', ['-m', 'unittest', 'discover',
         '-s', '/opt/ai4orgchem/software/tests', '-p', 'test_user_molecule_adapter.py', '-v'])
     for pattern in ('test_runtime.py', 'test_process.py', 'test_classifier_adapter.py'):
