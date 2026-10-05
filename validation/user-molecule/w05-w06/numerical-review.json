@@ -1089,8 +1089,8 @@
   },
   "same_D_scope": "OPTIMIZED_COPY_CONTRACTION_ONLY; SEPARATED_NONOPTIMIZED_SAME_D_MOLECULAR_WITNESS_NOT_EXECUTED",
   "stored_array_diagnosis": {
-    "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\diagnosis\\endpoint-diagnosis.json",
-    "sha256": "a29a33a0626caa9c0a4331370c8718c5695cf430fd10a8486087bd391b2d5703",
+    "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\diagnosis\\endpoint-diagnosis-v3.json",
+    "sha256": "5d85398287cfb8b5599dc053d4ae2c824edef492897870bc807c4813b2bbdd68",
     "purpose": "Readonly stored-array postprocess; no new SCF, no qualified-state approval"
   },
   "preservation": {
