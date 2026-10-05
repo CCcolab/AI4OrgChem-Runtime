@@ -6,6 +6,8 @@
 
 [W01—W05 本地 CI](USER_MOLECULE_CI_20261005_zh-CN.md) 已通过受测工程/合同检查；GitHub Actions 与 W05 数值验收仍 NOT_EXECUTED。本页和 implementation-state 的 ci_execution 指远端 Actions，本地执行另行登记。
 
+最新 [W01—W06 本地 CI](USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md) 已通过63项独立单元用例与受测集成/平台检查；当前源码与旧镜像身份分别记录，不改变研究验收与 Compute 门禁。
+
 ## 1. 实施时首先阅读
 
 | 文件 | 用途 |

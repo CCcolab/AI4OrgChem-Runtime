@@ -38,7 +38,8 @@
       "D3_exit": "BLOCKED / NOT_EXECUTED",
       "production_activation": false,
       "record": "validation/user-molecule/w06/engineering-review.json",
-      "engineering_test_commit": "43e80de31140d8685b5087ac5ac56654c7e68e28"
+      "engineering_test_commit": "43e80de31140d8685b5087ac5ac56654c7e68e28",
+      "latest_engineering_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json"
     },
     "W07": {
       "implementation": "FULL_RESEARCH_USER_DELIVERY_NOT_STARTED; engineering guide provided",
@@ -53,7 +54,7 @@
   "new_build": "EXECUTED; r3 PASS",
   "new_scientific_runs": "NOT_EXECUTED",
   "compute_enabled": false,
-  "new_service_tests": "Historical W01-W04/W05/local CI retained; W06 adds 54 scoped unit tests, one guarded metadata Check, Compute refusal and readonly Report; no molecular SCF",
+  "new_service_tests": "Current W01-W06 local CI: 63 unique unit tests/102 executions, 10 PS launcher actions, 3 guarded W06 Python service actions, 4 platform probes, metadata and AST/path guards; no molecular SCF",
   "wslc": "BLOCKED / NOT_EXECUTED; paused",
   "colab": "DEFERRED",
   "ci_execution": "NOT_EXECUTED",
@@ -71,8 +72,9 @@
   "history": "LOCAL-SETUP-1 retained in prior Git commits and preimplementation snapshot",
   "latest_preparation_record": "validation/user-molecule/w05/preparation-status.json",
   "ci_execution_scope": "GitHub Actions; local CI recorded separately",
-  "ci_local_execution": "PASS_ENGINEERING_CONTRACTS_ONLY",
-  "latest_ci_record": "validation/user-molecule/ci-local-20261005.json",
-  "ci_local_test_commit": "c671025e2a2933ed26e9406ee4b878f1163c443c",
-  "latest_w06_record": "validation/user-molecule/w06/engineering-review.json"
+  "ci_local_execution": "PASS_SCOPED_W01_W06_ENGINEERING_ONLY",
+  "latest_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json",
+  "ci_local_test_commit": "2dce58cffd5208231772ca1c55ac037bcd0cc9b9",
+  "latest_w06_record": "validation/user-molecule/w06/engineering-review.json",
+  "previous_ci_record": "validation/user-molecule/ci-local-20261005.json"
 }

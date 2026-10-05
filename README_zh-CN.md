@@ -6,6 +6,8 @@ W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 已保存两份�
 
 [W01—W05 本地工程/合同 CI](docs/USER_MOLECULE_CI_20261005_zh-CN.md) 已通过38项单元测试、10个集成用例和4项平台探针；GitHub Actions 未执行，该结论不代表 W05 数值验收通过。
 
+最新 [W01—W06 本地工程 CI](docs/USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md) 已通过63项独立单元用例（102次执行）、10个Windows集成动作、3个W06服务动作、4项平台探针和7项PowerShell检查。此前批次保留；新分子科学验收、GitHub Actions与WSLc状态不因此升级。
+
 [W06 工程候选](docs/USER_MOLECULE_W06_ENGINEERING_zh-CN.md) 增加独立数组条件参考、只读研究资格判读和短简报；分子参考/资源/研究验收仍未执行，Compute 保持关闭。当前 r3 镜像尚不包含这些增补。
 
 2026-10-03 交付审查完成：本地 Docker 已验证 L0—L4、等价性与固定协议联合分类；WSLc **BLOCKED / NOT_EXECUTED**；CI **静态审查完成，运行 NOT_EXECUTED**。**镜像分发 BLOCKED；源码公开另行确认**。见 [最终审查摘要](validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md)、[许可证审查](docs/LICENSE_REVIEW_zh-CN.md)。
