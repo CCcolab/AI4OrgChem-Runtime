@@ -27,10 +27,11 @@ $hostRecord=[ordered]@{run_id=$runId;action=$Action;started_utc=[DateTime]::UtcN
     image_id=$null;launcher_sha256=(Get-FileHash -LiteralPath $PSCommandPath -Algorithm SHA256).Hash.ToLowerInvariant();
     common_sha256=(Get-FileHash -LiteralPath (Join-Path $PSScriptRoot 'UserMolecule.Common.ps1')).Hash.ToLowerInvariant();
     termination_reason=$null;oom_killed=$null}
-$engine=$null;$containerId=$null;$lock=$null;$code=40;$removed=$false
+$engine=$null;$containerId=$null;$lock=$null;$code=40;$removed=$false;$failureCode=40
 Write-UserMoleculeJson (Join-Path $run 'host-execution.json') $hostRecord
 try{
     $engine=(Get-Command docker.exe -ErrorAction Stop).Source
+    $failureCode=10
     $requestPath=(Resolve-Path -LiteralPath $Request).Path
     Assert-UserMoleculePlainPath $requestPath
     $bytes=[IO.File]::ReadAllBytes($requestPath)
@@ -53,6 +54,7 @@ try{
     if($resources.threads -lt 1 -or $resources.threads -gt 2 -or $resources.memory_limit_mib -lt 128 -or $resources.memory_limit_mib -gt 4096 -or $resources.wall_time_limit_seconds -lt 1 -or $resources.wall_time_limit_seconds -gt 900){throw 'Resources exceed engineering candidate limits'}
     $hostRecord['original_request_sha256']=(Get-FileHash -LiteralPath $requestPath -Algorithm SHA256).Hash.ToLowerInvariant()
     $hostRecord['original_geometry_sha256']=(Get-FileHash -LiteralPath $geometry -Algorithm SHA256).Hash.ToLowerInvariant()
+    $failureCode=40
     $snapshot=Join-Path (Join-Path $output '.inputs') $runId
     New-Item -ItemType Directory -Path $snapshot -Force|Out-Null
     Assert-UserMoleculePlainPath $snapshot
@@ -87,6 +89,11 @@ try{
     $runtimeArgs=@($Action.ToLowerInvariant(),'--request','/input/request.json','--output-dir','/output')
     if($Action -eq 'Compute'){$args+=@('--mount',"type=bind,source=$CheckRun,target=/check,readonly");$runtimeArgs+=@('--check-run','/check','--lock-root','/locks')}
     $args+=@($identity.Id)+$runtimeArgs
+    $hostRecord['docker_executable']=$engine
+    $hostRecord['container_create_arguments']=$args
+    $hostRecord['runtime_arguments']=$runtimeArgs
+    $hostRecord['input_snapshot_directory']=$snapshot
+    Write-UserMoleculeJson (Join-Path $run 'host-execution.json') $hostRecord
     $containerId=Invoke-UserMoleculeDocker $engine $args $errorLog
     if($containerId -notmatch '^[a-f0-9]{64}$'){throw 'Docker did not return an actual container ID'}
     $hostRecord.container_id=$containerId;$hostRecord.status='CREATED'
@@ -101,7 +108,7 @@ try{
     $hostRecord.status=if($code -eq 0){'COMPLETED'}elseif($code -eq 20){'BLOCKED'}else{'FAILED'}
 }catch{
     $hostRecord.status='FAILED';$hostRecord['error']=$_.Exception.Message
-    $hostRecord.termination_reason='HOST_OR_ENGINE_ERROR';$code=40
+    $hostRecord.termination_reason=if($failureCode -eq 10){'INVALID_INPUT'}else{'HOST_OR_ENGINE_ERROR'};$code=$failureCode
 }finally{
     if($containerId -and $engine){
         try{

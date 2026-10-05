@@ -42,4 +42,6 @@ Compute： W02 复核回执 → W04 执行监督 → W03 两态计算 → 资格
 
 ## 4. 本轮所处位置
 
-当前仅建立目录、保存文档和基线：W01 IN_PROGRESS，Git 隔离工作区尚未创建；W02—W07 NOT_STARTED。新服务 NOT_IMPLEMENTED，新构建/计算/验收 NOT_EXECUTED。工程准入已获用户授权，后续无需重复确认同一范围；科学待审项、资源冻结及发布边界仍分别保留。
+LOCAL-SETUP-1 当时仅建立目录；后续 W01—W04 工程批次已建立隔离 Git 工作区、严格检查、inspect/compute 适配器、专用新候选和宿主监督。Check/Report、计算门禁拒绝与受限容器探针已有实际记录，见 [本轮交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md)。
+
+Compute profile 仍禁用；W03 compute 数值运行、W05/W06 参考/校准/研究验收 NOT_EXECUTED，D1 的科学判据也未全部冻结。不得将 W01—W04 工程实现表述为全部科学或 D1—D3 验收通过。W07 完整用户科研样例未开始，已提供当前工程入口指南。

@@ -30,6 +30,7 @@ examples/user-molecule/templates 中的四碳输入仅用于 AO/解析工程检�
 
 ```powershell
 # 替换为检查实际生成的目录。
+$checkRun = 'D:\AI4Science\user-molecule-runs\这里替换为实际的check目录名'
 .\scripts\start-user-molecule.ps1 -Action Report -RunDirectory $checkRun
 
 # 当前按合同拒绝计算并保留原因，预期退出 20；没有 SCF 或能量。
@@ -42,5 +43,7 @@ examples/user-molecule/templates 中的四碳输入仅用于 AO/解析工程检�
 ## 5. 支持边界
 
 PowerShell 5.1 入口查找已有 PS 7.3+，不自动安装；无需宿主 PySCF。运行使用非 root、只读输入/软件、断网和有限内存/CPU/时间，实际平台证据在 validation/user-molecule 与本轮 deliveries。
+
+本轮实际 AO 检查是 pilot / STO-3G 工程夹具；research / 6-31G(d) 的 inspect 未实测，两个 profile 的 SCF 均未执行。最终镜像与宿主记录、失败说明及支持矩阵见 [W01—W04 交付记录](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md)。
 
 同定义独立数值参考与成熟方法解释对照尚未执行；变分性 NOT_ESTABLISHED、稳定性 NOT_EXECUTED，不宣称单键能、实验测量、普遍共轭/芳香性结论或任意分子适用。原 L4 可保存检查点但不能恢复。WSLc BLOCKED、Colab DEFERRED、CI 实跑 NOT_EXECUTED、镜像分发 BLOCKED；公开继续暂停。

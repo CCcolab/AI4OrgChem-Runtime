@@ -1,5 +1,7 @@
 # 用户分子计算服务：完整技术方案与实施步骤
 
+后续实施状态：W01—W04 工程候选和低成本检查已实际形成；本文 TECHNICAL-PLAN-1 描述设计当时的状态与合同，当前实现、镜像和未完成事项按 [交付记录](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md) 与 [用户指南](USER_MOLECULE_RUN_zh-CN.md)。新分子 SCF、W05/W06 及研究资格仍未执行或批准。
+
 日期：2026-10-05；TECHNICAL-PLAN-1。用户已明确同意进入实施阶段，工程范围准入记为 APPROVED_FOR_IMPLEMENTATION；新服务仍 NOT_IMPLEMENTED，新增构建/计算/验收 NOT_EXECUTED。科学方法复审、完整 profile、资源校准和研究范围批准保持各自状态，不能用工程批准代替科学资格。
 
 本轮交付技术方案，后续按下述步骤实施；本轮未执行新代码、镜像构建或分子计算。依据：[专业实施方案](../ai4orgchem-runtime-implementation-plan-professional-revised.md)、[设计与 A01—A18](USER_MOLECULE_ENTRY_DESIGN_zh-CN.md)、[本地实施细则](USER_MOLECULE_IMPLEMENTATION_DETAILS_zh-CN.md)、[C01—C06](USER_MOLECULE_ENTRY_SCENARIOS_zh-CN.md)、[条件核与参考合同](USER_MOLECULE_CONDITION_DEFINITION_zh-CN.md)。接口、目录和错误码为拟实现合同，实际代码尚不存在。

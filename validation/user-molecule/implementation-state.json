@@ -1,38 +1,63 @@
 {
-  "revision": "LOCAL-SETUP-1",
+  "revision": "W01-W04-ENGINEERING-1",
   "date": "2026-10-05",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
-  "directory_preparation": "COMPLETE",
-  "documentation_saved": true,
-  "service_implementation": "NOT_IMPLEMENTED",
+  "service_implementation": "ENGINEERING_CANDIDATE_COMPUTE_GATED",
   "work_packages": {
-    "W01": "IN_PROGRESS: directories, baseline and documents saved; Git worktrees not created",
-    "W02": "NOT_STARTED",
-    "W03": "NOT_STARTED",
-    "W04": "NOT_STARTED",
-    "W05": "NOT_STARTED",
-    "W06": "NOT_STARTED",
-    "W07": "NOT_STARTED"
+    "W01": {
+      "implementation": "COMPLETE",
+      "validation": "BASELINE_AND_PRESERVATION_CHECKED"
+    },
+    "W02": {
+      "implementation": "REQUEST_AND_CHECK_IMPLEMENTED",
+      "validation": "INPUT_METADATA_CHECKS_PASS",
+      "scientific_criteria": "NOT_FROZEN; D1 acceptance remains partial"
+    },
+    "W03": {
+      "implementation": "INSPECT_AND_COMPUTE_ADAPTER_IMPLEMENTED",
+      "validation": "INSPECT_AND_GATE_TESTS_PASS",
+      "compute_numerical_execution": "NOT_EXECUTED"
+    },
+    "W04": {
+      "implementation": "CONTAINER_AND_HOST_SUPERVISION_IMPLEMENTED",
+      "validation": "SCOPED_LOCAL_DOCKER_ENGINEERING_PASS"
+    },
+    "W05": {
+      "implementation": "NOT_STARTED",
+      "validation": "NOT_EXECUTED"
+    },
+    "W06": {
+      "implementation": "NOT_STARTED",
+      "validation": "NOT_EXECUTED"
+    },
+    "W07": {
+      "implementation": "FULL_RESEARCH_USER_DELIVERY_NOT_STARTED; engineering guide provided",
+      "validation": "NOT_EXECUTED"
+    }
   },
-  "reserved_git_workspaces": {
-    "runtime": "NOT_CREATED",
-    "science": "NOT_CREATED"
+  "git_workspaces": {
+    "runtime": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime",
+    "science": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\science",
+    "branch": "implementation/user-molecule-w01-w04"
   },
-  "new_build": "NOT_EXECUTED",
+  "new_build": "EXECUTED; r3 PASS",
   "new_scientific_runs": "NOT_EXECUTED",
-  "new_service_tests": "NOT_EXECUTED",
+  "compute_enabled": false,
+  "new_service_tests": "31 unit tests, 9 integration actions, 4 scoped container probes passed",
   "wslc": "BLOCKED / NOT_EXECUTED; paused",
   "colab": "DEFERRED",
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Create isolated Git workspace preserving original changes, then implement W02 strict input/check contracts.",
+  "next_bounded_task": "W05: freeze reviewed fixtures/criteria/resource budget and perform independent technical acceptance; W06 remains separate",
   "scientific_pending": [
-    "full profiles",
     "collision/conditioning/gap criteria",
-    "reference fixtures and thresholds",
-    "resource calibration",
-    "method scope approval"
-  ]
+    "resource calibration and maximum compute nAO",
+    "full effective profile review",
+    "independent basic/full conditional reference",
+    "reviewed molecular scope and at least two new systems",
+    "energy/operator/occupation interpretation; variational status NOT_ESTABLISHED; stability NOT_EXECUTED"
+  ],
+  "history": "LOCAL-SETUP-1 retained in prior Git commits and preimplementation snapshot"
 }

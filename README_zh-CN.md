@@ -1,5 +1,7 @@
 # AI4OrgChem 可复算运行环境
 
+2026-10-05 隔离分支增补：用户分子入口 W01—W04 工程候选已建立，Check 和 Report 已实测；Compute 保持 BLOCKED，尚未执行新分子 SCF 或 W05/W06 科学验收。使用 [新入口指南](docs/USER_MOLECULE_RUN_zh-CN.md)，核查 [本轮交付与支持矩阵](docs/USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md)。下文 L0—L4 结论属于原七任务候选，不转移为新服务的科学资格。原主工作区与既有候选保留。
+
 2026-10-03 交付审查完成：本地 Docker 已验证 L0—L4、等价性与固定协议联合分类；WSLc **BLOCKED / NOT_EXECUTED**；CI **静态审查完成，运行 NOT_EXECUTED**。**镜像分发 BLOCKED；源码公开另行确认**。见 [最终审查摘要](validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md)、[许可证审查](docs/LICENSE_REVIEW_zh-CN.md)。
 
 日常使用入口：`./scripts/start-runtime.ps1 -Task evidence`，可从 Windows PowerShell 5.1 自动调用已有 PowerShell 7。镜像、日志备份及恢复说明见 [本地交付指南](docs/LOCAL_DELIVERY_zh-CN.md)。当前以本地 Docker 实测为交付范围；WSLc 升级及验收暂停。

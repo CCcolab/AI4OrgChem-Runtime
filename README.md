@@ -1,5 +1,7 @@
 # AI4OrgChem Reproducible Runtime
 
+Isolated branch update (2026-10-05): the W01–W04 user-molecule engineering candidate has tested Check and Report entry points. Compute remains **BLOCKED**; no new-molecule SCF or W05/W06 scientific acceptance was executed. See the [new entry guide](docs/USER_MOLECULE_RUN_zh-CN.md) and [delivery/support matrix](docs/USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md). The legacy L0–L4 evidence below belongs to the original seven-task candidate and does not qualify the new service. The original workspace and candidate are preserved.
+
 Delivery review (2026-10-03): local Docker L0–L4, equivalence and scoped joint classification are verified. WSLc is **BLOCKED / NOT_EXECUTED**. CI is **statically reviewed; execution NOT_EXECUTED**. **Image distribution is BLOCKED; source-only publication requires separate confirmation.** Apache-2.0 covers runtime-owned code, not every image component. See [final review](validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md) and [license review](docs/LICENSE_REVIEW_zh-CN.md).
 
 [中文说明](README_zh-CN.md)

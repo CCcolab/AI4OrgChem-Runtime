@@ -1,127 +1,102 @@
 {
-  "revision": "LOCAL-SETUP-1",
+  "revision": "W01-W04-ENGINEERING-1",
   "date": "2026-10-05",
+  "active_runtime_workspace": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime",
+  "original_runtime_preserved": "D:\\AI4Science\\ai4orgchem-runtime",
   "directories": [
     {
       "owner": "runtime",
-      "path": "D:\\AI4Science\\ai4orgchem-runtime\\runtime\\user_molecule",
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime\\runtime\\user_molecule",
       "relative_path": "runtime/user_molecule",
-      "step": "W02-W04",
-      "purpose": "Future independent service package; no runnable module yet",
-      "created_this_round": true
+      "purpose": "Implemented check/compute/report package",
+      "status": "CREATED_AND_POPULATED"
     },
     {
       "owner": "runtime",
-      "path": "D:\\AI4Science\\ai4orgchem-runtime\\schemas",
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime\\schemas",
       "relative_path": "schemas",
-      "step": "W02",
-      "purpose": "Future versioned request/preflight/result schemas",
-      "created_this_round": true
+      "purpose": "Versioned engineering schemas",
+      "status": "CREATED_AND_POPULATED"
     },
     {
       "owner": "runtime",
-      "path": "D:\\AI4Science\\ai4orgchem-runtime\\profiles\\user-molecule",
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime\\profiles\\user-molecule",
       "relative_path": "profiles/user-molecule",
-      "step": "W03/W05/W06",
-      "purpose": "Future frozen profiles; no enabled configuration yet",
-      "created_this_round": true
+      "purpose": "Two fixed candidate profiles; Compute disabled",
+      "status": "CREATED_AND_POPULATED"
     },
     {
       "owner": "runtime",
-      "path": "D:\\AI4Science\\ai4orgchem-runtime\\examples\\user-molecule",
-      "relative_path": "examples/user-molecule",
-      "step": "W02/W07",
-      "purpose": "Future reviewed user examples",
-      "created_this_round": true
-    },
-    {
-      "owner": "runtime",
-      "path": "D:\\AI4Science\\ai4orgchem-runtime\\examples\\user-molecule\\templates",
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime\\examples\\user-molecule\\templates",
       "relative_path": "examples/user-molecule/templates",
-      "step": "W02",
-      "purpose": "Future request templates; no fixture invented",
-      "created_this_round": true
+      "purpose": "AO-only four-carbon fixture; no reference energies",
+      "status": "CREATED_AND_POPULATED"
     },
     {
       "owner": "runtime",
-      "path": "D:\\AI4Science\\ai4orgchem-runtime\\tests\\fixtures\\user-molecule",
-      "relative_path": "tests/fixtures/user-molecule",
-      "step": "W02/W05/W06",
-      "purpose": "Future frozen small fixtures; no expected energies yet",
-      "created_this_round": true
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime\\tests",
+      "relative_path": "tests",
+      "purpose": "Input/resource tests; legacy tests preserved",
+      "status": "CREATED_AND_POPULATED"
     },
     {
       "owner": "runtime",
-      "path": "D:\\AI4Science\\ai4orgchem-runtime\\validation\\user-molecule",
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime\\validation\\user-molecule",
       "relative_path": "validation/user-molecule",
-      "step": "W01-W07",
-      "purpose": "Setup records now; actual acceptance records later",
-      "created_this_round": true
+      "purpose": "Build and implementation status",
+      "status": "CREATED_AND_POPULATED"
     },
     {
-      "owner": "external",
-      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule",
-      "relative_path": "ai4orgchem-runtime-workspaces/user-molecule",
-      "step": "W01",
-      "purpose": "Isolated development workspace parent",
-      "created_this_round": true
+      "owner": "runtime",
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime\\scripts",
+      "relative_path": "scripts",
+      "purpose": "New launchers and shared supervision helpers",
+      "status": "CREATED_AND_POPULATED"
     },
     {
-      "owner": "external",
-      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime",
-      "relative_path": "ai4orgchem-runtime-workspaces/user-molecule/runtime",
-      "step": "W01",
-      "purpose": "Empty reserved path, not a Git checkout",
-      "created_this_round": true
+      "owner": "runtime",
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime\\container",
+      "relative_path": "container",
+      "purpose": "New candidate Dockerfile and independent ignore",
+      "status": "CREATED_AND_POPULATED"
+    },
+    {
+      "owner": "runtime",
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime\\locks",
+      "relative_path": "locks",
+      "purpose": "New source lock alongside unchanged legacy locks",
+      "status": "CREATED_AND_POPULATED"
     },
     {
       "owner": "external",
       "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\science",
-      "relative_path": "ai4orgchem-runtime-workspaces/user-molecule/science",
-      "step": "W01/W03",
-      "purpose": "Empty reserved path, not a Git checkout",
-      "created_this_round": true
-    },
-    {
-      "owner": "external",
-      "path": "D:\\AI4Science\\user-molecule-inputs",
-      "relative_path": "user-molecule-inputs",
-      "step": "W02/W07",
-      "purpose": "Private input parent, outside runtime repository",
-      "created_this_round": true
+      "purpose": "Independent published-source worktree with adapter; original research checkout preserved",
+      "status": "EXISTS"
     },
     {
       "owner": "external",
       "path": "D:\\AI4Science\\user-molecule-inputs\\requests",
-      "relative_path": "user-molecule-inputs/requests",
-      "step": "W02/W07",
-      "purpose": "Future user request folders",
-      "created_this_round": true
+      "purpose": "Private user input parent",
+      "status": "EXISTS"
     },
     {
       "owner": "external",
       "path": "D:\\AI4Science\\user-molecule-runs",
-      "relative_path": "user-molecule-runs",
-      "step": "W04/W07",
-      "purpose": "Future unique check/run output directories",
-      "created_this_round": true
+      "purpose": "Unique check/compute outputs and read-only input snapshots",
+      "status": "EXISTS"
     },
     {
       "owner": "external",
-      "path": "D:\\AI4Science\\user-molecule-runs\\locks",
-      "relative_path": "user-molecule-runs/locks",
-      "step": "W04",
-      "purpose": "Future shared runtime locks",
-      "created_this_round": true
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-runs\\.host-locks",
+      "purpose": "Default Windows shared compute lock; compatible with legacy launcher",
+      "status": "EXISTS"
     },
     {
       "owner": "external",
-      "path": "D:\\AI4Science\\user-molecule-runs\\scratch",
-      "relative_path": "user-molecule-runs/scratch",
-      "step": "W04",
-      "purpose": "Future bounded scratch; no files generated now",
-      "created_this_round": true
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w01-w04",
+      "purpose": "Build archives, raw evidence, reports and local backup",
+      "status": "EXISTS"
     }
   ],
-  "empty_checkouts_are_not_repositories": true
+  "historical_placeholder_manifest": "Prior LOCAL-SETUP-1 Git/snapshot record; not current implementation"
 }

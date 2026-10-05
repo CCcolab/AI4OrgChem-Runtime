@@ -1,8 +1,8 @@
 # 用户分子服务：当前实施文档入口
 
-日期：2026-10-05；LOCAL-SETUP-1。本页索引当前工作区的最新方案文件。工程范围 APPROVED_FOR_IMPLEMENTATION；目录准备完成，W01 IN_PROGRESS，服务 NOT_IMPLEMENTED。当前文件和历史归档分别保留，不以新索引冒充独立审阅通过。
+日期：2026-10-05；W01-W04-ENGINEERING-1。本页指向隔离分支的实际实现与方案。W01 基线与工作区完成；W02 请求/元数据检查已实测但科学判据未闭合；W03 适配器实现且 inspect 已测，compute 数值运行未执行；W04 新候选、启动器和受限容器探针已实测。Compute 仍 BLOCKED；未继承旧七任务或研究资格。
 
-隔离工程更新 W01—W04：当前分支已新增输入检查、科学适配器、宿主监督和专用候选构建；实际进度和执行证据按 validation/user-molecule 的新记录，操作入口见 [用户指南](USER_MOLECULE_RUN_zh-CN.md)。上述 LOCAL-SETUP-1 和各方案的“未实现”段落保留为编写时历史，新 profile 仍禁用 Compute，未继承旧七任务或研究验收。
+操作从 [用户指南](USER_MOLECULE_RUN_zh-CN.md) 开始；实际身份、支持矩阵、失败与未决项见 [本轮交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md)。LOCAL-SETUP-1 和 TECHNICAL-PLAN-1 的未实现描述为编写时历史，当前状态以本轮记录为准。工程交付不代表独立科学审阅通过。
 
 ## 1. 实施时首先阅读
 
@@ -15,7 +15,7 @@
 | [本地服务实施细则](USER_MOLECULE_IMPLEMENTATION_DETAILS_zh-CN.md) | D0—D3 阶段出口、职责与科学待办 |
 | [专业实施方案](../ai4orgchem-runtime-implementation-plan-professional-revised.md) | 项目定位、现有服务、用户分子主线与 C06 |
 
-这些是工程/审阅材料。未来用户指南将以“提交分子—检查—计算—判读—导出”为主，不要求专业用户先读本表全部文件。
+这些是工程/审阅材料。用户从新入口指南准备和检查自己的输入，无需先读本表全部文件；实际计算须等待验收与门禁闭合。
 
 ## 2. 科学、场景和生态依据
 
@@ -46,6 +46,6 @@
 - [directory-manifest.json](../validation/user-molecule/directory-manifest.json)：本轮登记目录、用途和对应步骤。
 - [implementation-state.json](../validation/user-molecule/implementation-state.json)：当前工作包、新服务、平台和公开状态。
 
-本轮最新文档快照位于 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261005-user-molecule-preimplementation-setup\latest\`，按原目录保存；同级 `LATEST_DOCUMENTS_MANIFEST.json` 记录实际大小和 SHA-256。编辑前文件在 before，静态核查在 STATIC_REVIEW.json。快照是本地保存，不是源码发布候选、完整代码备份或可运行安装包。
+目录准备历史快照保留在 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261005-user-molecule-preimplementation-setup\latest\`。本轮工程与验证记录保存在 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261005-user-molecule-w01-w04\`，含构建归档、实际命令/日志、验证与保留核查。它们不属于旧外审包。
 
-后续编辑以工作区原路径为主，不修改历史快照；每次需要留存时创建新的版本目录。现有 runtime 提交仍为 `0288eb8`，本轮新增文档、目录占位和准备 JSON 未提交，公开范围继续另行确认。
+原 runtime 主工作区仍为 `0288eb8`，原未跟踪方案继续保留。后续工程使用 `D:\AI4Science\ai4orgchem-runtime-workspaces\user-molecule\runtime` 的独立分支；科学适配器使用相邻 science 工作区，来源于固定发布提交的独立 checkout。新增代码/文档/历史需另行确认公开范围。
