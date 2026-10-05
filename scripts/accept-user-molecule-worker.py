@@ -318,6 +318,7 @@ def scientific(args):
             failed_metric_ids=[item['metric_id'] for item in result['checks'] if not item['pass']])
         (output/'exception.log').write_text(traceback.format_exc(),encoding='utf-8')
     finally:
+        result['research_status']='NOT_REVIEWED' if result['status']=='PASS_ACCEPTANCE_ONLY' else 'NOT_QUALIFIED'
         phase('FINAL_RECORD')
         stop.set(); monitor.join(timeout=2)
         result['elapsed_seconds'] = time.monotonic()-started
