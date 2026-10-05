@@ -81,7 +81,7 @@ def scientific(args):
     from ai4orgchem.qm.p09_conditional_scf import run_p09_conditional_rks, _evaluate_density
     from ai4orgchem.qm.p09_ao_classification import apply_interfragment_pi_matrix_mask
     from ai4orgchem.qm.p09_energy_assembly import apply_eri_tensor_mask
-    contract_path = ROOT/'validation/user-molecule/w05-w06/acceptance-contract-v1.json'
+    contract_path = ROOT/'validation/user-molecule/w05-w06/acceptance-contract-v2.json'
     contract = load(contract_path)
     fixture = next(f for f in contract['fixtures'] if f['id'] == args.fixture)
     source = Path('/opt/ai4orgchem')
@@ -93,7 +93,7 @@ def scientific(args):
     if profile['compute_enabled'] is not False:
         raise ValueError('Acceptance driver requires blocked production profile')
     # A new acceptance request identity, never an in-place production profile edit.
-    request = dict(request, resources={'threads': 1, 'memory_limit_mib': 4096, 'wall_time_limit_seconds': 900})
+    request = dict(request, resources={'threads': 1, 'memory_limit_mib': contract['budget']['memory_mib'], 'wall_time_limit_seconds': contract['budget']['process_seconds']})
     for name, expected in profile['expected_dependencies'].items():
         if importlib.metadata.version(name) != expected:
             raise ValueError('Pinned dependency mismatch: '+name)
@@ -186,8 +186,8 @@ def scientific(args):
         memory_fields = dict(line.split(':',1) for line in Path('/proc/meminfo').read_text().splitlines())
         vm_available = int(memory_fields['MemAvailable'].strip().split()[0])*1024
         result['vm_available_memory_bytes_before_scf'] = vm_available
-        if vm_available < 5*1024**3:
-            raise GateFailure('VM observed available memory below 4 GiB budget plus 1 GiB headroom')
+        if vm_available < (contract['budget']['memory_mib']+contract['budget']['available_headroom_mib'])*1024**2:
+            raise GateFailure('VM observed available memory below frozen process budget plus headroom')
         coordinates = np.array([atom[1] for atom in atoms])
         minimum_distance = min(float(np.linalg.norm(a-b)) for i,a in enumerate(coordinates) for b in coordinates[i+1:])
         gate('T01.minimum_distance', -minimum_distance, -contract['engineering_gates']['minimum_pair_distance_angstrom'], 'angstrom', 'NEGATED_PAIR_MINIMUM_V1')

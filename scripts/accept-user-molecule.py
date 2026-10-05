@@ -33,7 +33,7 @@ def main():
     git=lambda *a:subprocess.check_output(['git',*a],cwd=ROOT).decode().strip()
     if git('status','--porcelain'):
         raise ValueError('Clean committed runtime required')
-    contract_path=ROOT/'validation/user-molecule/w05-w06/acceptance-contract-v1.json'
+    contract_path=ROOT/'validation/user-molecule/w05-w06/acceptance-contract-v2.json'
     contract=load(contract_path)
     candidate=load(ROOT/'validation/user-molecule/candidate-image.json')
     image=candidate['image_id']
@@ -49,6 +49,10 @@ def main():
     labels=image_inspect['Config']['Labels']
     if labels.get('ai4orgchem.source.commit')!=candidate['science_commit'] or labels.get('org.opencontainers.image.revision')!=candidate['runtime_build_commit']:
         raise ValueError('Image lineage mismatch')
+    output.mkdir(parents=True)
+    admission={'runtime_test_commit':git('rev-parse','HEAD'),'contract_sha256':file_hash(contract_path),
+        'actual_process_memory_mib':contract['budget']['memory_mib'],
+        'headroom_mib':contract['budget']['available_headroom_mib'],'status':'CHECKING'}
     # Keep ample host headroom; a hard Docker cap is not a reservation of VM RAM.
     host_available=None
     if os.name=='nt':
@@ -58,12 +62,15 @@ def main():
         if not ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(memory)):
             raise OSError('Host memory observation unavailable')
         host_available=memory.avail_phys
-        if not args.tests_only and host_available<5*1024**3:
-            raise ValueError('Need at least 5 GiB observed host free memory; no automatic host config changes')
+        admission['host_available_memory_bytes']=host_available
+        if not args.tests_only and host_available<(contract['budget']['memory_mib']+contract['budget']['available_headroom_mib'])*1024**2:
+            admission.update(status='BLOCKED',reason='HOST_MEMORY_BELOW_BUDGET_PLUS_HEADROOM');save(output/'admission.json',admission)
+            raise ValueError('Observed host free memory below frozen budget plus headroom; no automatic host changes')
     engine_info=json.loads(docker('info','--format','{{json .}}'))
-    if not args.tests_only and engine_info['MemTotal']<5*1024**3:
+    if not args.tests_only and engine_info['MemTotal']<(contract['budget']['memory_mib']+contract['budget']['available_headroom_mib'])*1024**2:
+        admission.update(status='BLOCKED',reason='VM_TOTAL_BELOW_BUDGET_PLUS_HEADROOM');save(output/'admission.json',admission)
         raise ValueError('Docker VM total memory below bounded run + headroom')
-    output.mkdir(parents=True)
+    admission['status']='PASS_HOST_AND_VM_TOTAL_ONLY';save(output/'admission.json',admission)
     save(output/'docker-server.json',server)
     # Restrict saved engine info to platform/resource fields, avoiding irrelevant host secrets.
     save(output/'engine-resource.json',{key:engine_info.get(key) for key in ('MemTotal','NCPU','CgroupVersion','CgroupDriver','OperatingSystem','KernelVersion')})
@@ -102,7 +109,7 @@ def main():
                 'rules_sha256':load(export/'locks/source.user-molecule.lock.json')['condition_rules_sha256'],
                 'mode':'SEQUENTIAL_ACCEPTANCE_BUNDLE_V1','runtime_test_commit':commit,'image_id':image,
                 'contract_sha256':file_hash(contract_path)}
-            limit=900;memory_mib=4096
+            limit=contract['budget']['process_seconds'];memory_mib=contract['budget']['memory_mib']
         else:
             identity={'geometry_sha256':'0'*64,'profile_sha256':file_hash(contract_path),'dependencies_sha256':file_hash(export/'locks/requirements-linux-amd64.txt'),
                 'mode':'GUARDED_UNIT_TESTS','runtime_test_commit':commit,'image_id':image}
@@ -158,7 +165,7 @@ def main():
                     external={'source':'DOCKER_INSPECT','container_id':cid,'oom_killed':state['OOMKilled'],
                         'state_finished_at':state['FinishedAt'],'evidence_sha256':file_hash(destination/'container-inspect.json'),
                         'resource_identity_sha256':identity_digest(identity)}
-                    resource=qualify_exact_fixture(identity,record['nao'],[observation],memory_limit_mib=4096,threads=1,external_oom_evidence=external)
+                    resource=qualify_exact_fixture(identity,record['nao'],[observation],memory_limit_mib=memory_mib,threads=1,external_oom_evidence=external)
                     phases={row['name'] for row in record.get('phases',[])}
                     if not {'PRODUCTION_CONDITIONAL_SINGLE','PRODUCTION_CONDITIONAL_COPY','CONDITIONAL_RECOMPUTE'} <= phases:
                         resource['status']='BLOCKED';resource['reasons'].append('FULL_ACCEPTANCE_BUNDLE_NOT_EXECUTED')
