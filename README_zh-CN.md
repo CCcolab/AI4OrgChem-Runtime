@@ -2,7 +2,7 @@
 
 2026-10-05 隔离分支现状：Check 和 Report 可用，生产 Compute 保持 **BLOCKED**。[W05—W06 受限分子验收](docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md) 已执行，普通态及同密度算子对照在所列范围内通过，但条件态驻定、两存储路径等价性和完整参考门禁失败，不能进入正式 W07。下文 L0—L4 属于原七任务候选，不转移为新服务科学资格；原工作区与既有交付保留。
 
-W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 是此前的元数据批次。本轮补齐独立普通态、完整条件参考桥接和验收/记账驱动，84项工程单元测试通过；四组完整流程的原生峰值已测，实际限额1 GiB、1 CPU、零 swap。资源结论限定精确夹具，不构成通用计算规模或研究范围批准。
+W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 是此前的元数据批次。先前验收驱动84项工程测试和四组完整流程峰值保留；最新 [求解器 v2](docs/USER_MOLECULE_SOLVER_V2_zh-CN.md) 的122项工程测试通过，乙烯 pilot 两条同密度对照通过，但三条条件路径仍失败。实际限额1 GiB、1 CPU、零 swap，资源结论限定精确流程，不构成通用用户计算规模或研究范围批准。
 
 [W01—W05 本地工程/合同 CI](docs/USER_MOLECULE_CI_20261005_zh-CN.md) 已通过38项单元测试、10个集成用例和4项平台探针；GitHub Actions 未执行，该结论不代表 W05 数值验收通过。
 

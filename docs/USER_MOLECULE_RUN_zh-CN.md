@@ -2,6 +2,8 @@
 
 2026-10-05 / W05-W06-NUMERICAL-EVIDENCE-1。入口支持 Check 和只读 Report；两个生产 profile 均禁用 Compute，返回 BLOCKED / 20。本轮受限验收已有新分子诊断能量，但条件态/等价性/完整参考未通过，没有研究合格结果。输入合法不代表方法或资源合格。最新 [数值验收记录](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md) 说明失败与资源实测范围；它不开放用户计算。
 
+后续 [求解器 v2](USER_MOLECULE_SOLVER_V2_zh-CN.md) 已通过 122 项工程测试并在乙烯 pilot 拒绝假停止；唯一新分子诊断仍失败。两条同密度路径已在该夹具通过，完整迭代与资源推广资格尚未闭合，用户 Compute 状态不变。
+
 [W06 工程增补](USER_MOLECULE_W06_ENGINEERING_zh-CN.md) 已实现参考/资格判读与短简报候选，测试源码可只读挂载复用旧镜像；现有 r3 的生产启动入口不因此升级，仍使用原报告且禁用 Compute。不得将本轮 toy 测试当作用户分子数值验收。
 
 ## 1. 从隔离工作区使用

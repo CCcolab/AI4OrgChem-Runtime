@@ -1,5 +1,5 @@
 {
-  "revision": "W05-W06-NUMERICAL-EVIDENCE-1",
+  "revision": "SOLVER-V2-FAILED-EVIDENCE-1",
   "date": "2026-10-05",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -26,23 +26,24 @@
     },
     "W05": {
       "implementation": "ORDINARY_REFERENCE_AND_BOUNDED_ACCEPTANCE_DRIVERS_IMPLEMENTED",
-      "validation": "ORDINARY_AND_OPTIMIZED_SAME_D_COMPARISONS_PASS_SCOPED; CONDITIONAL_GATES_FAIL",
+      "validation": "T04_AND_BOTH_SAME_D_PATHS_PASS_FOR_PILOT_ETHENE_ONLY; STRICT_CONDITIONAL_GATES_FAIL",
       "numerical_acceptance": "EXECUTED_FAILED_FROZEN_GATES",
       "ready_to_execute_scf": false,
-      "status_record": "validation/user-molecule/w05-w06/numerical-review.json"
+      "status_record": "validation/user-molecule/solver-v2/review.json",
+      "solver_v2_numerical_acceptance": "EXECUTED_FAILED_CANDIDATE_V2"
     },
     "W06": {
       "implementation": "ARRAY_REFERENCE_AND_READONLY_ASSESSMENT_IMPLEMENTED",
-      "validation": "84 GUARDED ENGINEERING UNIT TESTS PASS; ACTUAL MOLECULAR GATES FAIL",
+      "validation": "122 GUARDED ENGINEERING UNIT TESTS PASS; V2 MOLECULAR GATES FAIL",
       "molecular_reference": "EXECUTED_FAILED_FROZEN_GATES",
       "research_scope": "NOT_REVIEWED",
       "D3_exit": "BLOCKED",
       "production_activation": false,
       "record": "validation/user-molecule/w06/engineering-review.json",
       "latest_engineering_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json",
-      "latest_numerical_record": "validation/user-molecule/w05-w06/numerical-review.json",
+      "latest_numerical_record": "validation/user-molecule/solver-v2/review.json",
       "historical_engineering_test_commit": "43e80de31140d8685b5087ac5ac56654c7e68e28",
-      "latest_engineering_test_commit": "65c5848d0a9fe58d4f7320e15eadeba2ebd61db6"
+      "latest_engineering_test_commit": "8d05ecf89329f0738a61d0955576bfb430ba11d6"
     },
     "W07": {
       "implementation": "FULL_RESEARCH_USER_DELIVERY_NOT_STARTED; engineering guide provided",
@@ -55,19 +56,19 @@
     "branch": "implementation/user-molecule-w01-w04"
   },
   "new_build": "EXECUTED; r3 PASS",
-  "new_scientific_runs": "EXECUTED_ACCEPTANCE_ONLY_NOT_QUALIFIED",
+  "new_scientific_runs": "EXECUTED_ACCEPTANCE_ONLY_NOT_QUALIFIED; v2 first diagnostic also failed",
   "compute_enabled": false,
-  "new_service_tests": "Final new-driver engineering source:84 guarded unit cases PASS; old full W01-W06 63 unique/102 executions and integration probes remain separate historical evidence",
+  "new_service_tests": "Final metadata candidate:122 unique guarded engineering unit tests PASS; current molecular evidence remains failed",
   "wslc": "BLOCKED / NOT_EXECUTED; paused",
   "colab": "DEFERRED",
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Read-only scientific review of SCF stopping/state selection using retained failed evidence; no automatic new calculation, profile activation or W07 research exit",
+  "next_bounded_task": "Method review of occupied-state selection/fixed-point existence and solver strategy using retained v1/v2 evidence; no automatic new molecular attempts",
   "scientific_pending": [
-    "conditional stationarity/convergence and state-selection contract",
+    "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
-    "separated nonoptimized molecular same-D witness",
+    "separated nonoptimized same-D witness for other molecule/profile identities; pilot ethene now covered",
     "per-mode peaks and general-user resource qualification",
     "real method scope responsibility and two qualified research systems",
     "professional-user interpretation trial",
@@ -81,7 +82,9 @@
   "ci_local_test_commit": "2dce58cffd5208231772ca1c55ac037bcd0cc9b9",
   "latest_w06_record": "validation/user-molecule/w06/engineering-review.json",
   "previous_ci_record": "validation/user-molecule/ci-local-20261005.json",
-  "latest_numerical_record": "validation/user-molecule/w05-w06/numerical-review.json",
-  "scientific_test_commit": "65c5848d0a9fe58d4f7320e15eadeba2ebd61db6",
-  "previous_numerical_preparation_record": "validation/user-molecule/w05/preparation-status.json"
+  "latest_numerical_record": "validation/user-molecule/solver-v2/review.json",
+  "scientific_test_commit": "c8a580f70d7dba721758b77c0c534c31b50953b8",
+  "previous_numerical_preparation_record": "validation/user-molecule/w05/preparation-status.json",
+  "latest_guarded_engineering_test_commit": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
+  "previous_numerical_record": "validation/user-molecule/w05-w06/numerical-review.json"
 }

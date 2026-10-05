@@ -2,7 +2,7 @@
 
 Isolated branch update (2026-10-05): Check and Report work; production Compute remains **BLOCKED**. [Bounded W05–W06 molecular acceptance](docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md) has now executed. Ordinary and same-density operator comparisons passed in their stated scope, but conditional stationarity, storage-path equivalence and full-reference gates failed. No qualified research result or formal W07 exit is claimed. The original workspaces and legacy L0–L4 evidence remain preserved.
 
-[W05 preparation](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) is a historical metadata-only batch. The new acceptance batch implemented missing drivers and passed 84 guarded engineering unit tests; it measured exact 1-GiB/one-CPU/no-swap sequential fixture bundles. This does not calibrate a general user resource model or grant method scope.
+[W05 preparation](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) is a historical metadata-only batch. The earlier 84-test driver and four fixture bundles remain recorded. The latest [solver-v2 candidate](docs/USER_MOLECULE_SOLVER_V2_zh-CN.md) passed 122 guarded engineering tests and both same-density paths for pilot ethene, but all three conditional solves failed. Exact 1-GiB/one-CPU/no-swap bundle observations do not calibrate a general user resource model or grant method scope.
 
 [Local W01–W05 engineering/contract CI](docs/USER_MOLECULE_CI_20261005_zh-CN.md) passed 38 unit tests, 10 integration actions and four platform probes. GitHub Actions remains **NOT_EXECUTED**; W05 numerical acceptance remains blocked.
 
