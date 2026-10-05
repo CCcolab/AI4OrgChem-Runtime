@@ -157,7 +157,7 @@ def fixed_point(*, density, h, overlap, eri, aos, entries, electrons, hybrid,
             try:
                 diagonalized = pulay.update(f, error)
             except (np.linalg.LinAlgError, ValueError) as error_value:
-                if (isinstance(error_value, ValueError)
+                if (isinstance(error_value, ValueError) and not isinstance(error_value, np.linalg.LinAlgError)
                         and str(error_value) != 'Unusable affine DIIS coefficients'):
                     raise
                 fallbacks += pulay.fallbacks - before
