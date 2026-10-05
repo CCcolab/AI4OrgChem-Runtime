@@ -4,6 +4,8 @@ Isolated branch update (2026-10-05): Check and Report work; production Compute r
 
 [W05 preparation](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) is a historical metadata-only batch. The earlier 84-test driver and four fixture bundles remain recorded. The latest [solver-v2 candidate](docs/USER_MOLECULE_SOLVER_V2_zh-CN.md) passed 122 guarded engineering tests and both same-density paths for pilot ethene, but all three conditional solves failed. Exact 1-GiB/one-CPU/no-swap bundle observations do not calibrate a general user resource model or grant method scope.
 
+The 2026-10-06 [stored-evidence method review](docs/USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md) locates a narrow initial occupied-boundary spectrum, documents occupied-projector jumps and states the energy/operator stationarity criterion. No new molecular calculation or method approval is claimed. The [next solver design](docs/USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md) is DESIGN_ONLY; W07/Compute remains BLOCKED.
+
 [Local W01–W05 engineering/contract CI](docs/USER_MOLECULE_CI_20261005_zh-CN.md) passed 38 unit tests, 10 integration actions and four platform probes. GitHub Actions remains **NOT_EXECUTED**; W05 numerical acceptance remains blocked.
 
 The earlier [full local W01–W06 engineering CI](docs/USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md) passed 63 unique unit cases (102 executions), 10 Windows integration actions, three W06 service actions, four platform probes and seven PowerShell checks. It remains separate from the new numerical failures. GitHub Actions is NOT_EXECUTED; WSLc is BLOCKED/paused.

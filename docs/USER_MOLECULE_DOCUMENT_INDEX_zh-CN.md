@@ -4,6 +4,8 @@
 
 操作从 [用户指南](USER_MOLECULE_RUN_zh-CN.md) 开始；最新身份、范围与缺口见 [求解器 v2 实测](USER_MOLECULE_SOLVER_V2_zh-CN.md)，其 122 项工程测试通过、单例条件数值失败。此前 [数值审查](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md)、[W05 准备](USER_MOLECULE_W05_PREPARATION_zh-CN.md) 与 [W01—W04 交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md) 为历史批次，不冒充当前状态。
 
+2026-10-06 最新增补为 [存量方法审阅](USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)与 [下一版求解设计](USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)：只读定位保存初始谱的8/9占据边界、占据跳变与能量—算子判据；新增科学进程为0。方法责任审阅未签署，新策略 DESIGN_ONLY，Compute/W07仍BLOCKED。
+
 [W01—W05 本地 CI](USER_MOLECULE_CI_20261005_zh-CN.md) 已通过历史工程/合同检查；GitHub Actions 仍 NOT_EXECUTED，新分子数值验收已执行但失败。本页和 implementation-state 的 ci_execution 指远端 Actions，本地执行另行登记。
 
 此前完整 [W01—W06 本地 CI](USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md) 的63项独立用例及集成/平台记录保留；先前驱动84项、新求解器最终122项工程用例分别登记，科学数值失败另行报告，Compute 门禁不变。
@@ -21,6 +23,8 @@
 | [W05—W06 数值验收与资源实测](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md) | 实际失败、精确范围峰值、身份与三个前置条件现状 |
 | [求解器 v2 实测及前置条件](USER_MOLECULE_SOLVER_V2_zh-CN.md) | 严格真实端态停止、两个同 D 收缩路径、122 项工程 PASS 和唯一分子 FAIL；当前记录 |
 | [SCF/研究范围审阅入口](USER_MOLECULE_SCF_REVIEW_REQUEST_zh-CN.md) | 依据原始失败提出具体科学审阅问题，不代签批准 |
+| [存量方法审阅（2026-10-06）](USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md) | 精确保存谱定位、100周期历史、允许变化/导数判据；0新增科学计算 |
+| [下一版求解与验收前置](USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md) | 具体方法决策与保留原方程的残差求解提案；DESIGN_ONLY |
 | [设计与验收合同](USER_MOLECULE_ENTRY_DESIGN_zh-CN.md) | 输入与资格合同，A01—A18 最低要求 |
 | [本地服务实施细则](USER_MOLECULE_IMPLEMENTATION_DETAILS_zh-CN.md) | D0—D3 阶段出口、职责与科学待办 |
 | [专业实施方案](../ai4orgchem-runtime-implementation-plan-professional-revised.md) | 项目定位、现有服务、用户分子主线与 C06 |

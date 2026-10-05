@@ -1,0 +1,72 @@
+{
+  "version": "NEXT_SOLVER_DESIGN_1",
+  "date": "2026-10-06",
+  "status": "DESIGN_ONLY",
+  "implementation": "NOT_IMPLEMENTED",
+  "numerical_execution": "NOT_EXECUTED",
+  "authorization_scope": "User requested the next stored-evidence/method-review step; no new molecular batch is activated.",
+  "current_scientific_process_allowance": 0,
+  "reuses_old_budget": false,
+  "production_activation": false,
+  "W07": "BLOCKED",
+  "basis_record": "validation/user-molecule/method-review-20261006/review.json",
+  "original_contract": "validation/user-molecule/solver-v2/acceptance-contract-v2.json",
+  "original_contract_sha256": "00e1cb3cb2241e0bb549b8e220e099951e5dc5d54e7aa8c146b1eb5df82559bd",
+  "science_equations_changed": false,
+  "acceptance_thresholds_changed": false,
+  "preferred_candidate": "Residual-controlled occupied-projector/orbital-rotation solution of the unchanged projected stationarity equation; retain strict true-Aufbau endpoint checks.",
+  "candidate_status": "PROPOSAL_ONLY_NOT_APPROVED_OR_IMPLEMENTED",
+  "stopping_requirements": "All existing true-operator endpoint gates, global 2/0 Aufbau map/gap, storage P12/P13 and full reference T06; commuting excited determinant alone is insufficient.",
+  "required_method_decisions": [
+    {
+      "id": "M01",
+      "question": "Which state is intended: global closed-shell projected fixed point or a specified local/block occupancy state?",
+      "decision": null
+    },
+    {
+      "id": "M02",
+      "question": "Which density/orbital variations are allowed, and what relationship must hold between G, projected F and E?",
+      "decision": null
+    },
+    {
+      "id": "M03",
+      "question": "How are near-degenerate occupied boundaries, comparable roots and the retained final gap gate interpreted?",
+      "decision": null
+    },
+    {
+      "id": "M04",
+      "question": "What operational energy interpretation and research restrictions are accepted?",
+      "decision": null
+    }
+  ],
+  "method_responsibility": {
+    "reviewer_identity": null,
+    "role": null,
+    "date": null,
+    "decision": null,
+    "approved_scope": null,
+    "status": "PENDING_REAL_REVIEW"
+  },
+  "before_any_new_scientific_execution": [
+    "Freeze a new implementation/solver contract after method decisions, including exact parameters and rejection policy.",
+    "Complete independent, meaningful guarded engineering tests; do not transfer the old 122 PASS to new code.",
+    "Register fresh fixed fixture, same D, all comparison thresholds, process/evaluation/time/memory limits and authorization.",
+    "Record all actual current/candidate/returned operator states and projector identities.",
+    "Settle old budgets and preserve every old failure; no automatic retry, fixture switch or tolerance relaxation."
+  ],
+  "future_implementation_gates": {
+    "method_scope": "PENDING_REAL_REVIEW",
+    "conditional_response_adapter": "NOT_IMPLEMENTED",
+    "new_solver_engineering_tests": "NOT_EXECUTED",
+    "new_molecular_acceptance": "NOT_EXECUTED",
+    "per_mode_and_general_resources": "BLOCKED",
+    "two_qualified_research_systems_and_real_user_trial": "BLOCKED"
+  },
+  "deferred": {
+    "wslc": "BLOCKED/PAUSED",
+    "github_actions": "NOT_EXECUTED",
+    "image_distribution": "BLOCKED",
+    "public_push": "NOT_AUTHORIZED"
+  },
+  "checkpoint_limit": "Legacy L4 saves checkpoints but does not support resume."
+}

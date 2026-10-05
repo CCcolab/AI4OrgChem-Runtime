@@ -4,6 +4,8 @@
 
 W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 是此前的元数据批次。先前验收驱动84项工程测试和四组完整流程峰值保留；最新 [求解器 v2](docs/USER_MOLECULE_SOLVER_V2_zh-CN.md) 的122项工程测试通过，乙烯 pilot 两条同密度对照通过，但三条条件路径仍失败。实际限额1 GiB、1 CPU、零 swap，资源结论限定精确流程，不构成通用用户计算规模或研究范围批准。
 
+2026-10-06 [存量方法审阅](docs/USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)定位了初始占据边界的窄谱区间和历史占据跳变，并给出能量—算子关系判据；没有新增分子计算或方法批准。[下一版求解设计](docs/USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)仍为 DESIGN_ONLY，W07/Compute 保持 BLOCKED。
+
 [W01—W05 本地工程/合同 CI](docs/USER_MOLECULE_CI_20261005_zh-CN.md) 已通过38项单元测试、10个集成用例和4项平台探针；GitHub Actions 未执行，该结论不代表 W05 数值验收通过。
 
 此前完整 [W01—W06 本地工程 CI](docs/USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md) 的63项独立单元用例（102次执行）及集成/平台记录保留，与本轮数值失败分别登记。GitHub Actions 仍 NOT_EXECUTED，WSLc 仍 BLOCKED/暂停。

@@ -1,0 +1,85 @@
+{
+  "version": "METHOD_REVIEW_SOURCES_1",
+  "access_date": "2026-10-06",
+  "source_baseline_runtime_commit": "a2cda61da582cb406bc478d068af35b2c6cd9609",
+  "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "local_sources": [
+    {
+      "science_path": "software/src/ai4orgchem/qm/p09_conditional_scf.py",
+      "sha256": "33c7eeeb19bcdbc1d21fa30aa32694ca333b859a9cdc22caaad8ed064060d0ab",
+      "frozen_difference": "NONE"
+    },
+    {
+      "science_path": "software/src/ai4orgchem/qm/p09_ao_classification.py",
+      "sha256": "7cf6212e9ff4ae97e4239c1e35a0a8d72b89c68d88d49953c2a26a2b1d0f8842",
+      "frozen_difference": "NONE"
+    },
+    {
+      "science_path": "software/src/ai4orgchem/qm/p09_energy_assembly.py",
+      "sha256": "71c50e5202d4bf4fb8be2f8c07f6a87bc11e15aa0a2bafee9c25f338d5f226a0",
+      "frozen_difference": "NONE"
+    },
+    {
+      "science_path": "software/src/ai4orgchem/qm/p09_eri_mask.py",
+      "sha256": "411c42820211be609e4f8c984339037ba0731bc005255a79177d6f1b247c47df",
+      "frozen_difference": "NONE"
+    },
+    {
+      "science_path": "configs/qm/p09_exchange_integral_classes_v0.1.yaml",
+      "sha256": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+      "frozen_difference": "NONE"
+    }
+  ],
+  "external_sources": [
+    {
+      "id": "R1",
+      "title": "PySCF SCF user guide",
+      "url": "https://pyscf.org/user/scf.html",
+      "authority": "OFFICIAL_DOCUMENTATION",
+      "checked": "DIIS/SOSCF/damping and distinction of convergence from stability",
+      "limit": "Does not grant convergence or variationality to the project-specific masked equations."
+    },
+    {
+      "id": "R2",
+      "title": "PySCF nr_rks source/API",
+      "url": "https://pyscf.org/_modules/pyscf/dft/numint.html#nr_rks",
+      "authority": "OFFICIAL_SOURCE",
+      "checked": "Fixed grid/D input; nelec, excsum, vmat; XC deriv=1 assembly",
+      "limit": "No installed-2.14.0 derivative finite-difference verification in this turn."
+    },
+    {
+      "id": "R3",
+      "title": "PySCF Newton RHF gradient/response source",
+      "url": "https://pyscf.org/_modules/pyscf/soscf/newton_ah.html#gen_g_hop_rhf",
+      "authority": "OFFICIAL_SOURCE",
+      "checked": "get_fock and gen_response supply gradient/Hessian action",
+      "limit": "No conditional response adapter exists or was implemented by this review."
+    },
+    {
+      "id": "R4",
+      "title": "PySCF SCF DIIS source",
+      "url": "https://pyscf.org/_modules/pyscf/scf/diis.html",
+      "authority": "OFFICIAL_SOURCE",
+      "checked": "EDIIS energy_elec call and D/F interpolation; ADIIS construction",
+      "limit": "Not a tested adapter for the frozen conditional functional/operator pairing."
+    },
+    {
+      "id": "R5",
+      "title": "SciPy eigh 1.18.0 manual",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh.html",
+      "authority": "OFFICIAL_DOCUMENTATION",
+      "checked": "Default lower=True, generalized type=1, SPD metric, ascending eigenvalues",
+      "limit": "Used to name the stored matrix convention; no eigh call made this turn."
+    },
+    {
+      "id": "R6",
+      "title": "PySCF occupation add-ons source",
+      "url": "https://pyscf.org/_modules/pyscf/scf/addons.html",
+      "authority": "OFFICIAL_SOURCE",
+      "checked": "MOM/follow_state and fractional occupation alternatives alter occupancy selection",
+      "limit": "No such add-on installed, invoked or adopted in this turn."
+    }
+  ],
+  "external_source_version_policy": "Dynamic official pages are design references, not installed-code receipts; the saved molecular receipt alone identifies tested library versions.",
+  "scientific_references_policy": "Existing BLW/ALMO/NBO/cDFT comparison is retained; no external-method equivalence or calculation newly claimed."
+}

@@ -1,6 +1,6 @@
 {
-  "revision": "SOLVER-V2-FAILED-EVIDENCE-1",
-  "date": "2026-10-05",
+  "revision": "METHOD-REVIEW-20261006-1",
+  "date": "2026-10-06",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
   "service_implementation": "ENGINEERING_CANDIDATE_COMPUTE_GATED",
@@ -43,7 +43,8 @@
       "latest_engineering_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json",
       "latest_numerical_record": "validation/user-molecule/solver-v2/review.json",
       "historical_engineering_test_commit": "43e80de31140d8685b5087ac5ac56654c7e68e28",
-      "latest_engineering_test_commit": "8d05ecf89329f0738a61d0955576bfb430ba11d6"
+      "latest_engineering_test_commit": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
+      "method_static_review": "COMPLETE; scope responsibility remains PENDING_REAL_REVIEW"
     },
     "W07": {
       "implementation": "FULL_RESEARCH_USER_DELIVERY_NOT_STARTED; engineering guide provided",
@@ -64,7 +65,7 @@
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Method review of occupied-state selection/fixed-point existence and solver strategy using retained v1/v2 evidence; no automatic new molecular attempts",
+  "next_bounded_task": "Real method decisions on global/block occupancy, allowable variations, near-degenerate root policy and interpretation; then separately freeze an unchanged-equation residual-solver implementation/acceptance contract. No new numerical batch activated.",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -86,5 +87,9 @@
   "scientific_test_commit": "c8a580f70d7dba721758b77c0c534c31b50953b8",
   "previous_numerical_preparation_record": "validation/user-molecule/w05/preparation-status.json",
   "latest_guarded_engineering_test_commit": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
-  "previous_numerical_record": "validation/user-molecule/w05-w06/numerical-review.json"
+  "previous_numerical_record": "validation/user-molecule/w05-w06/numerical-review.json",
+  "latest_method_review_record": "validation/user-molecule/method-review-20261006/review.json",
+  "latest_solver_design": "validation/user-molecule/method-review-20261006/solver-next-design.json",
+  "method_readonly_review": "COMPLETE_STORED_EVIDENCE_AND_ALGEBRA; NOT_REAL_METHOD_APPROVAL",
+  "new_scientific_runs_this_method_review": 0
 }
