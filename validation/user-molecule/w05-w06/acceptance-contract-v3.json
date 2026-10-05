@@ -1,0 +1,89 @@
+{
+  "version": "W05-W06-ACCEPTANCE-ONLY-3",
+  "purpose": "Bounded numerical code-validation and resource observations; no production activation or method-scope approval",
+  "authorization_basis": "User request 2026-10-05: 璇疯В鍐冲垪鍑虹殑涓変釜鍓嶇疆鏉′欢; acceptance-only implementation and bounded small-fixture tests",
+  "method_review_status": "PENDING_REAL_REVIEW",
+  "production_activation": false,
+  "budget": {
+    "batch_seconds": 7200,
+    "process_seconds": 900,
+    "memory_mib": 1024,
+    "threads": 1,
+    "maximum_scientific_processes": 8,
+    "swap": false,
+    "serial": true,
+    "available_headroom_mib": 1024
+  },
+  "fixtures": [
+    {
+      "id": "pilot-ethene",
+      "request": "examples/user-molecule/w05-candidates/ethene-planar-technical-v1/request-pilot.json",
+      "role": "calibration"
+    },
+    {
+      "id": "pilot-butadiene",
+      "request": "examples/user-molecule/w05-candidates/butadiene-p08-G-fixed-v1/request-pilot.json",
+      "role": "validation; historical geometry reuse, not a new research example"
+    },
+    {
+      "id": "research-ethene",
+      "request": "examples/user-molecule/w05-candidates/ethene-planar-technical-v1/request-research.json",
+      "role": "research-profile code validation, not research qualification"
+    },
+    {
+      "id": "research-ethyne",
+      "request": "examples/user-molecule/acceptance/ethyne-linear-technical-v1/request-research.json",
+      "role": "new analytic code fixture; degeneracy diagnostic, not approved chemistry scope"
+    },
+    {
+      "id": "pilot-ethyne",
+      "request": "examples/user-molecule/acceptance/ethyne-linear-technical-v1/request-pilot.json",
+      "role": "Second analytic small-pilot code fixture; not approved triple-bond interpretation"
+    }
+  ],
+  "engineering_gates": {
+    "minimum_pair_distance_angstrom": 0.4,
+    "masked_overlap_condition_number_max": 1000000.0,
+    "final_non_diis_gap_minimum_hartree": 1e-06,
+    "maximum_reference_nao": 40,
+    "explanation": "Conservative acceptance-driver guards only, not universal chemical or resource-domain thresholds; epsilon*kappa <= approximately 2.3e-10. Small/nonfinite final-operator gap blocks comparable-root acceptance, with no changed occupations, regularization or tolerance."
+  },
+  "T04": {
+    "total_energy_hartree": 1e-09,
+    "component_hartree": 1e-08,
+    "density_frobenius": 1e-07,
+    "fock_frobenius": 1e-07,
+    "electron_count_abs": 1e-07
+  },
+  "T05": {
+    "mask_max_abs": 0.0,
+    "matrix_max_abs": 1e-10,
+    "matrix_frobenius": 1e-09,
+    "component_hartree": 1e-09,
+    "total_energy_hartree": 1e-09,
+    "grid_electron_count_abs": 1e-09
+  },
+  "T06": {
+    "total_energy_hartree": 1e-08,
+    "component_hartree": 1e-06,
+    "density_frobenius": 1e-06,
+    "fock_frobenius": 1e-06
+  },
+  "P12": {
+    "energy_difference_hartree": 1e-10
+  },
+  "P13": {
+    "density_difference_frobenius": 1e-09
+  },
+  "threshold_basis": "T04: same pinned raw engine, frozen ordinary stopping; T05: same exact D and raw arrays with independently contracted algebra; T06: frozen density stopping 2e-8 plus different Pulay endpoint allowance. Engineering candidate values frozen before first molecular execution; never relaxed after observations. P12/P13 unchanged from earlier contract.",
+  "state_selection": "Same byte-identified D0, global closed-shell Aufbau 2/0. Compare density/occupied subspace and final recomputed non-DIIS operator; no equality claim for trajectories or MO signs. Different endpoints: ROOT_NOT_COMPARABLE, no research comparison.",
+  "resource_scope": "Exact tested geometry/profile/dependency/rules/acceptance-bundle identity only; combined-process cgroup peak does not isolate per-mode peak or justify a general nAO model. No arbitrary-user Compute opening.",
+  "interpretation_candidate": "Specified fixed-geometry conditional fixed-point functional response Eordinary-Econditional; not bond energy, experimental measurement, CT/POL decomposition, other-method equivalence or a proven variational minimum.",
+  "remaining_external_requirements": [
+    "Real responsible method reviewer and scope receipt",
+    "A01-A18 applicable acceptance, including professional user trial",
+    "Independent phase/mode resource calibration before general-user production activation"
+  ],
+  "resource_revision_basis": "Host free memory about 3.8 GiB blocked the initial 4 GiB + 1 GiB admission before any molecular SCF. Reduce hard process limit to 1 GiB with 1 GiB observed host/VM headroom; retain global persistent ledger ceiling 4 GiB and 7200 s. All scientific settings and T/P comparison tolerances identical to v1.",
+  "correction_basis": "Finite NumPy nuclear-energy scalar was falsely rejected by the acceptance wrapper (3 cases). Repair scalar normalization, retain failed evidence and the same persistent 7200-second ledger/1-GiB cap/900-second limit. Permit 3 corrected cases plus new pilot ethyne technical fixture, 8 total scientific attempts including first4. Real butadiene commutator failure is not rerun or waived. No automatic retry or scientific/tolerance changes."
+}

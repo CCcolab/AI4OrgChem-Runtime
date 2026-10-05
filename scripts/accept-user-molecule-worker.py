@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from runtime.user_molecule.records import load, save, file_hash
 from runtime.user_molecule.acceptance_resources import collect_cgroup
+from runtime.user_molecule.acceptance_metrics import finite_scalar
 
 
 class GateFailure(ValueError):
@@ -81,7 +82,7 @@ def scientific(args):
     from ai4orgchem.qm.p09_conditional_scf import run_p09_conditional_rks, _evaluate_density
     from ai4orgchem.qm.p09_ao_classification import apply_interfragment_pi_matrix_mask
     from ai4orgchem.qm.p09_energy_assembly import apply_eri_tensor_mask
-    contract_path = ROOT/'validation/user-molecule/w05-w06/acceptance-contract-v2.json'
+    contract_path = ROOT/'validation/user-molecule/w05-w06/acceptance-contract-v3.json'
     contract = load(contract_path)
     fixture = next(f for f in contract['fixtures'] if f['id'] == args.fixture)
     source = Path('/opt/ai4orgchem')
@@ -152,11 +153,12 @@ def scientific(args):
         save(output/(name+'.json'), record)
         return record
     def gate(name, value, threshold, units, formula, operator='NOT_APPLICABLE', exact=False):
-        valid = type(value) in (int, float) and np.isfinite(value)
-        result['checks'].append({'metric_id': name, 'value': float(value) if valid else None,
+        number = finite_scalar(value)
+        valid = number is not None
+        result['checks'].append({'metric_id': name, 'value': number,
             'threshold': threshold, 'threshold_version': contract['version'], 'formula_version': formula,
             'units': units, 'required': True, 'operator_source': operator,
-            'pass': bool(valid and (value == threshold if exact else value <= threshold))})
+            'pass': bool(valid and (number == threshold if exact else number <= threshold))})
     def truth(name, condition):
         gate(name, 0 if condition else 1, 0, 'boolean_failure_count', 'EXACT_BOOLEAN_V1', exact=True)
     def matrices(prefix, left, right, names, maxabs, fro=None):

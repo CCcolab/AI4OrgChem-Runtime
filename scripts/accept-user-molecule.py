@@ -33,7 +33,7 @@ def main():
     git=lambda *a:subprocess.check_output(['git',*a],cwd=ROOT).decode().strip()
     if git('status','--porcelain'):
         raise ValueError('Clean committed runtime required')
-    contract_path=ROOT/'validation/user-molecule/w05-w06/acceptance-contract-v2.json'
+    contract_path=ROOT/'validation/user-molecule/w05-w06/acceptance-contract-v3.json'
     contract=load(contract_path)
     candidate=load(ROOT/'validation/user-molecule/candidate-image.json')
     image=candidate['image_id']
