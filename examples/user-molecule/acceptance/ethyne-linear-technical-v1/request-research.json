@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "service": "user-molecule-fixed",
+  "geometry_file": "molecule.xyz",
+  "coordinate_unit": "angstrom",
+  "charge": 0,
+  "multiplicity": 1,
+  "research_question": "Analytic ethyne acceptance-only code fixture; fixed xy parity selects pz, not a claim about the entire triple bond; method scope pending real review",
+  "condition_definition_acknowledged": true,
+  "fragments": [{"id": "A", "carbon_atom_indices_1based": [1]}, {"id": "B", "carbon_atom_indices_1based": [2]}],
+  "condition_profile": "cross-fragment-pi-2011-v1",
+  "calculation_profile": "research-b3lypg-631gd-grid3-v1",
+  "resources": {"threads": 1, "memory_limit_mib": 4096, "wall_time_limit_seconds": 900}
+}
