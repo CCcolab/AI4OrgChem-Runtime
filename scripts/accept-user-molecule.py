@@ -15,7 +15,7 @@ import uuid
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from runtime.user_molecule.records import load,save,file_hash
-from runtime.user_molecule.acceptance_resources import Budget,qualify_exact_fixture
+from runtime.user_molecule.acceptance_resources import Budget,qualify_exact_fixture,identity_digest,_lock
 
 
 def main():
@@ -24,7 +24,9 @@ def main():
     parser.add_argument('--batch-ledger',type=Path,required=True)
     parser.add_argument('--tests-only',action='store_true')
     parser.add_argument('--fixture',action='append')
+    parser.add_argument('--lock-root',type=Path,default=Path(r'D:\AI4Science\ai4orgchem-runtime-runs\.host-locks'))
     args=parser.parse_args()
+    args.lock_root.mkdir(parents=True,exist_ok=True)
     output=args.output_root.resolve()
     if output.exists() or output==ROOT or ROOT in output.parents:
         raise ValueError('Fresh evidence directory outside runtime required')
@@ -84,6 +86,11 @@ def main():
             raise ValueError('Unknown acceptance fixture')
     results=[]
     for case in cases:
+        if not args.tests_only:
+            prior=budget.snapshot()['runs'].values()
+            scientific_count=sum(row['identity']['mode']!='GUARDED_UNIT_TESTS' for row in prior)
+            if scientific_count>=contract['budget']['maximum_scientific_processes']:
+                raise ValueError('Persistent scientific process-count ceiling reached; no automatic retry')
         destination=output/case['id'];destination.mkdir()
         if case['request']:
             request=load(export/case['request'])
@@ -109,6 +116,7 @@ def main():
             '--tmpfs','/tmp:rw,nosuid,nodev,size=67108864,mode=1777',
             '--mount',f'type=bind,source={export},target=/workspace,readonly',
             '--mount',f'type=bind,source={destination},target=/output',
+            '--mount',f'type=bind,source={args.lock_root.resolve()},target=/locks',
             '--workdir','/workspace','-e','PYTHONPATH=/workspace:/opt/ai4orgchem/software/src',
             '-e','OMP_NUM_THREADS=1','-e','OPENBLAS_NUM_THREADS=1','-e','PYTHONDONTWRITEBYTECODE=1',
             '-e','AI4ORGCHEM_SOURCE=/opt/ai4orgchem','-e','AI4ORGCHEM_RUNTIME_TEST_COMMIT='+commit,
@@ -147,7 +155,13 @@ def main():
             elif (destination/'result.json').exists():
                 record=load(destination/'result.json');execution['status']=record['status'];observation=record.get('cgroup_final')
                 if record.get('nao'):
-                    resource=qualify_exact_fixture(identity,record['nao'],[observation],memory_limit_mib=4096,threads=1)
+                    external={'source':'DOCKER_INSPECT','container_id':cid,'oom_killed':state['OOMKilled'],
+                        'state_finished_at':state['FinishedAt'],'evidence_sha256':file_hash(destination/'container-inspect.json'),
+                        'resource_identity_sha256':identity_digest(identity)}
+                    resource=qualify_exact_fixture(identity,record['nao'],[observation],memory_limit_mib=4096,threads=1,external_oom_evidence=external)
+                    phases={row['name'] for row in record.get('phases',[])}
+                    if not {'PRODUCTION_CONDITIONAL_SINGLE','PRODUCTION_CONDITIONAL_COPY','CONDITIONAL_RECOMPUTE'} <= phases:
+                        resource['status']='BLOCKED';resource['reasons'].append('FULL_ACCEPTANCE_BUNDLE_NOT_EXECUTED')
                     save(destination/'resource-candidate.json',resource)
                     execution['resource_status']=resource['status']
             else:
@@ -158,17 +172,34 @@ def main():
         except Exception as exc:
             execution.update(status='FAIL_SUPERVISOR',error=type(exc).__name__+': '+str(exc),termination_reason=reason)
         finally:
+            cleanup_errors=[];confirmed_stopped=False
             if cid:
-                inspected=json.loads(docker('inspect',cid))[0]
-                if inspected['Config']['Labels'].get('ai4orgchem.acceptance-run')!=token:
-                    raise ValueError('Cleanup ownership mismatch')
-                if inspected['State']['Running']:
-                    docker('kill',cid)
-                logs=subprocess.run(['docker','logs',cid],capture_output=True,timeout=30)
-                (destination/'stdout.log').write_bytes(logs.stdout);(destination/'stderr.log').write_bytes(logs.stderr)
-                docker('rm',cid);execution['container_removed']=True
+                try:
+                    inspected=json.loads(docker('inspect',cid))[0]
+                    if inspected['Config']['Labels'].get('ai4orgchem.acceptance-run')!=token:
+                        raise ValueError('Cleanup ownership mismatch')
+                    if inspected['State']['Running']:
+                        docker('kill',cid)
+                    inspected=json.loads(docker('inspect',cid))[0]
+                    confirmed_stopped=not inspected['State']['Running']
+                    logs=subprocess.run(['docker','logs',cid],capture_output=True,timeout=30)
+                    (destination/'stdout.log').write_bytes(logs.stdout);(destination/'stderr.log').write_bytes(logs.stderr)
+                    if confirmed_stopped:
+                        docker('rm',cid);execution['container_removed']=True
+                except Exception as exc:
+                    cleanup_errors.append(type(exc).__name__+': '+str(exc))
             execution['elapsed_seconds']=time.monotonic()-begin
-            budget.settle(run_id,execution['elapsed_seconds'],reason,observation)
+            execution['cleanup_errors']=cleanup_errors
+            if confirmed_stopped or cid is None:
+                try:
+                    budget.settle(run_id,execution['elapsed_seconds'],reason,observation)
+                    execution['budget_state']='SETTLED'
+                except Exception as exc:
+                    cleanup_errors.append('Budget settlement: '+str(exc))
+                    execution['budget_state']='RESERVED_UNKNOWN'
+            else:
+                execution['budget_state']='RESERVED_TERMINATION_UNKNOWN'
+                execution['worker_status']=execution['status'];execution['status']='BLOCKED_TERMINATION_UNKNOWN'
             save(destination/'execution.json',execution)
             files={p.relative_to(destination).as_posix():{'sha256':file_hash(p),'size_bytes':p.stat().st_size} for p in destination.rglob('*') if p.is_file() and p.name!='manifest.json'}
             save(destination/'manifest.json',{'files':files,'container_removed':execution['container_removed']})
@@ -176,9 +207,17 @@ def main():
             print(json.dumps({'fixture':case['id'],'status':execution['status'],'wall_seconds':execution['elapsed_seconds'],'resource_status':execution.get('resource_status')},ensure_ascii=False),flush=True)
         if args.tests_only and execution['status']!='PASS':
             break
+        if execution.get('budget_state')!='SETTLED' or not execution['container_removed']:
+            break
     save(output/'batch-summary.json',{'runs':results,'budget':budget.snapshot(),'production_activation':False,'method_review_status':'PENDING_REAL_REVIEW'})
     return 0 if all(row['status'] in ('PASS','PASS_ACCEPTANCE_ONLY') for row in results) else 30
 
 
 if __name__=='__main__':
-    sys.exit(main())
+    # Same default host lock used by the existing PowerShell Compute launcher.
+    # A custom lock directory must be shared by every compute entry point.
+    index=sys.argv.index('--lock-root')+1 if '--lock-root' in sys.argv else None
+    lock_root=Path(sys.argv[index]) if index is not None else Path(r'D:\AI4Science\ai4orgchem-runtime-runs\.host-locks')
+    lock_root.mkdir(parents=True,exist_ok=True)
+    with _lock(lock_root/'windows-quantum.lock'):
+        sys.exit(main())

@@ -342,6 +342,7 @@ def run_conditional(ordinary, rule_path, expected_sha256, settings=None, progres
         "settings_effective": dict(profile["conditional"] if settings is None else settings),
         "molecular_execution": "EXECUTED_DIAGNOSTIC_NOT_ACCEPTED",
         "molecular_acceptance": "PENDING_ACCEPTANCE_EVALUATION", "research_status": "NOT_QUALIFIED",
+        "undefined_diagnostics": [{"field": "history[0].energy_change_hartree", "reason": "NO_PREVIOUS_CYCLE_ENERGY"}],
         "stability_analysis": "NOT_EXECUTED",
         "array_identities": {key: array_identity(value) for key, value in exported_arrays.items()}})
     forbidden = np.array([[left.kind == right.kind == "pi" and left.group != right.group

@@ -5,7 +5,7 @@ import tempfile
 import unittest
 
 from runtime.user_molecule.acceptance_resources import (
-    Budget, BudgetBusy, ResourceError, _lock, collect_cgroup,
+    Budget, BudgetBusy, ResourceError, _lock, _resolve_v1_paths, collect_cgroup, collect_cgroup_v1,
     identity_digest, qualify_exact_fixture,
 )
 
@@ -35,6 +35,25 @@ class AcceptanceResourceTests(unittest.TestCase):
         for name, content in values.items():
             (directory / name).write_text(content, encoding='ascii')
         return directory
+
+    def cgroup_v1(self):
+        memory, cpu = self.root / 'memory-v1', self.root / 'cpu-v1'
+        memory.mkdir()
+        cpu.mkdir()
+        bound = str(4096 * 1024 ** 2)
+        values = {'memory.usage_in_bytes': '120', 'memory.max_usage_in_bytes': '900',
+                  'memory.limit_in_bytes': bound, 'memory.memsw.limit_in_bytes': bound,
+                  'memory.failcnt': '0', 'memory.oom_control': 'oom_kill_disable 0\nunder_oom 0\noom_kill 0\n'}
+        for name, value in values.items():
+            (memory / name).write_text(value, encoding='ascii')
+        (cpu / 'cpu.cfs_quota_us').write_text('100000', encoding='ascii')
+        (cpu / 'cpu.cfs_period_us').write_text('100000', encoding='ascii')
+        return memory, cpu
+
+    def v1_inspect(self):
+        return {'source': 'DOCKER_INSPECT', 'oom_killed': False, 'container_id': 'a' * 64,
+                'evidence_sha256': 'b' * 64, 'resource_identity_sha256': identity_digest(IDENTITY),
+                'state_finished_at': '2026-10-05T10:30:00Z'}
 
     def test_reservation_survives_reopen_and_insufficient_budget_blocks(self):
         budget = self.budget()
@@ -176,6 +195,109 @@ class AcceptanceResourceTests(unittest.TestCase):
                         {**sample, 'cpu_quota_us': 200000}):
             with self.subTest(changed=changed):
                 self.assertEqual(qualify_exact_fixture(IDENTITY, 14, [changed])['status'], 'BLOCKED')
+
+    def test_v1_native_definitions_and_hard_limits_are_preserved(self):
+        value = collect_cgroup_v1(*self.cgroup_v1(), phase='ordinary-final')
+        self.assertEqual(value['source'], 'CGROUP_V1')
+        self.assertEqual(value['status'], 'COMPLETE')
+        self.assertEqual(value['memory_current_bytes'], 120)
+        self.assertEqual(value['memory_peak_bytes'], 900)
+        self.assertEqual(value['memory_swap_limit_bytes'], 0)
+        self.assertNotIn('oom', value['memory_events'])
+        self.assertEqual(value['memory_events']['limit_failures'], 0)
+        self.assertEqual(qualify_exact_fixture(IDENTITY, 14, [value])['status'], 'RESOURCE_CANDIDATE_EXACT_FIXTURE')
+
+    def test_v1_observes_actual_paths_and_does_not_reset_peak(self):
+        memory, cpu = self.cgroup_v1()
+        before = {str(path): path.read_bytes() for directory in (memory, cpu) for path in directory.iterdir()}
+        value = collect_cgroup_v1(memory, cpu)
+        self.assertEqual(value['files']['memory.max_usage_in_bytes'], str(memory / 'memory.max_usage_in_bytes'))
+        self.assertFalse(value['peak_reset_performed'])
+        self.assertEqual(before, {str(path): path.read_bytes() for directory in (memory, cpu) for path in directory.iterdir()})
+
+    def test_v1_combined_memsw_limit_is_converted_to_swap_allowance(self):
+        memory, cpu = self.cgroup_v1()
+        (memory / 'memory.memsw.limit_in_bytes').write_text(str(4097 * 1024 ** 2), encoding='ascii')
+        value = collect_cgroup_v1(memory, cpu)
+        self.assertEqual(value['memory_swap_limit_bytes'], 1024 ** 2)
+        self.assertEqual(qualify_exact_fixture(IDENTITY, 14, [value])['status'], 'BLOCKED')
+
+    def test_v1_missing_oom_kill_count_requires_bound_completed_inspect(self):
+        memory, cpu = self.cgroup_v1()
+        (memory / 'memory.oom_control').write_text('oom_kill_disable 0\nunder_oom 0\n', encoding='ascii')
+        value = collect_cgroup_v1(memory, cpu)
+        self.assertIsNone(value['memory_events']['oom_kill'])
+        self.assertFalse(value['oom_kill_counter_available'])
+        self.assertEqual(qualify_exact_fixture(IDENTITY, 14, [value])['status'], 'BLOCKED')
+        candidate = qualify_exact_fixture(IDENTITY, 14, [value], external_oom_evidence=self.v1_inspect())
+        self.assertEqual(candidate['status'], 'RESOURCE_CANDIDATE_EXACT_FIXTURE')
+        self.assertIn('NOT_PROOF_OOM_NEVER_OCCURRED', candidate['oom_claim'])
+
+    def test_v1_oom_false_alone_and_wrong_identity_cannot_substitute_history(self):
+        memory, cpu = self.cgroup_v1()
+        (memory / 'memory.oom_control').write_text('oom_kill_disable 0\nunder_oom 0\n', encoding='ascii')
+        value = collect_cgroup_v1(memory, cpu)
+        for evidence in ({'oom_killed': False}, {**self.v1_inspect(), 'resource_identity_sha256': 'c' * 64},
+                         {**self.v1_inspect(), 'state_finished_at': '0001-01-01T00:00:00Z'},
+                         {**self.v1_inspect(), 'oom_killed': True}):
+            with self.subTest(evidence=evidence):
+                self.assertEqual(qualify_exact_fixture(IDENTITY, 14, [value], external_oom_evidence=evidence)['status'], 'BLOCKED')
+
+    def test_v1_limit_failure_current_oom_or_kill_refuses_candidate(self):
+        memory, cpu = self.cgroup_v1()
+        for failcnt, control in (('1', 'oom_kill_disable 0\nunder_oom 0\noom_kill 0\n'),
+                                 ('0', 'oom_kill_disable 0\nunder_oom 1\noom_kill 0\n'),
+                                 ('0', 'oom_kill_disable 0\nunder_oom 0\noom_kill 1\n')):
+            (memory / 'memory.failcnt').write_text(failcnt, encoding='ascii')
+            (memory / 'memory.oom_control').write_text(control, encoding='ascii')
+            with self.subTest(failcnt=failcnt, control=control):
+                sample = collect_cgroup_v1(memory, cpu)
+                self.assertEqual(qualify_exact_fixture(IDENTITY, 14, [sample], external_oom_evidence=self.v1_inspect())['status'], 'BLOCKED')
+
+    def test_v1_unknown_memsw_support_refuses_no_swap_claim(self):
+        memory, cpu = self.cgroup_v1()
+        (memory / 'memory.memsw.limit_in_bytes').unlink()
+        value = collect_cgroup_v1(memory, cpu)
+        self.assertEqual(value['status'], 'PARTIAL')
+        self.assertIsNone(value['memory_swap_limit_bytes'])
+        self.assertEqual(qualify_exact_fixture(IDENTITY, 14, [value])['status'], 'BLOCKED')
+
+    def test_v1_unbounded_kernel_sentinel_and_cpu_quota_are_unknown_limits(self):
+        memory, cpu = self.cgroup_v1()
+        (memory / 'memory.memsw.limit_in_bytes').write_text('9223372036854771712', encoding='ascii')
+        (cpu / 'cpu.cfs_quota_us').write_text('-1', encoding='ascii')
+        value = collect_cgroup_v1(memory, cpu)
+        self.assertTrue(value['memory_swap_limit_unbounded'])
+        self.assertTrue(value['cpu_limit_unbounded'])
+        self.assertIsNone(value['cpu_quota_us'])
+        self.assertEqual(qualify_exact_fixture(IDENTITY, 14, [value])['status'], 'BLOCKED')
+
+    def test_v1_membership_resolves_relative_to_controller_mount_root(self):
+        cgroup, mountinfo = self.root / 'cgroup.proc', self.root / 'mountinfo.proc'
+        cgroup.write_text('5:memory:/docker/container/child\n4:cpu,cpuacct:/docker/container/child\n', encoding='ascii')
+        mountinfo.write_text('29 23 0:25 /docker/container /sys/fs/cgroup/memory ro - cgroup cgroup rw,memory\n'
+                            '30 23 0:26 /docker/container /sys/fs/cgroup/cpu,cpuacct ro - cgroup cgroup rw,cpu,cpuacct\n', encoding='ascii')
+        paths = _resolve_v1_paths(cgroup, mountinfo)
+        self.assertEqual(paths['memory']['resolved_path'], str(Path('/sys/fs/cgroup/memory') / 'child'))
+        self.assertEqual(paths['cpu']['membership_path'], '/docker/container/child')
+        self.assertEqual(paths['memory']['path_resolution'], 'MEMBERSHIP_RELATIVE_TO_MOUNT_ROOT')
+
+    def test_v1_namespace_root_and_mountinfo_escaped_paths_are_preserved(self):
+        cgroup, mountinfo = self.root / 'cgroup.proc', self.root / 'mountinfo.proc'
+        cgroup.write_text('5:memory:/\n4:cpu,cpuacct:/\n', encoding='ascii')
+        mountinfo.write_text('29 23 0:25 /docker/container /sys/cgroup/memory\\040space ro - cgroup cgroup rw,memory\n'
+                            '30 23 0:26 /docker/container /sys/cgroup/cpu ro - cgroup cgroup rw,cpu,cpuacct\n', encoding='ascii')
+        paths = _resolve_v1_paths(cgroup, mountinfo)
+        self.assertEqual(paths['memory']['resolved_path'], str(Path('/sys/cgroup/memory space')))
+        self.assertEqual(paths['memory']['path_resolution'], 'CGROUP_NAMESPACE_ROOT')
+
+    def test_v1_discovery_never_falls_back_to_unrelated_parent_mount(self):
+        cgroup, mountinfo = self.root / 'cgroup.proc', self.root / 'mountinfo.proc'
+        cgroup.write_text('5:memory:/different/child\n4:cpu,cpuacct:/different/child\n', encoding='ascii')
+        mountinfo.write_text('29 23 0:25 /docker/container /sys/cgroup/memory ro - cgroup cgroup rw,memory\n'
+                            '30 23 0:26 /docker/container /sys/cgroup/cpu ro - cgroup cgroup rw,cpu,cpuacct\n', encoding='ascii')
+        with self.assertRaises(ResourceError):
+            _resolve_v1_paths(cgroup, mountinfo)
 
 
 if __name__ == '__main__':

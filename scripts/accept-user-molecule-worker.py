@@ -18,6 +18,10 @@ from runtime.user_molecule.records import load, save, file_hash
 from runtime.user_molecule.acceptance_resources import collect_cgroup
 
 
+class GateFailure(ValueError):
+    pass
+
+
 def import_audit():
     results = []
     for name in ('reference/user_molecule.py', 'reference/ordinary_molecule.py'):
@@ -37,6 +41,7 @@ def import_audit():
 
 def unit_tests(output):
     audit = import_audit()
+    save(output/'resource-observation.json',collect_cgroup())
     # Fail immediately if any test starts scientific work, including indirectly.
     from pyscf import scf, dft, gto
     def forbidden(*args, **kwargs):
@@ -58,6 +63,7 @@ def unit_tests(output):
                 ids.append(item.id())
     flatten(suite)
     result = unittest.TextTestRunner(verbosity=2).run(suite)
+    save(output/'resource-observation-final.json',collect_cgroup())
     save(output/'unit-tests.json', {'status': 'PASS' if result.wasSuccessful() and not result.skipped else 'FAIL',
         'executions': result.testsRun, 'ids': ids, 'failures': len(result.failures), 'errors': len(result.errors),
         'skipped': len(result.skipped), 'import_audit': audit, 'scientific_work': 'FORBIDDEN'})
@@ -140,6 +146,9 @@ def scientific(args):
         record['undefined_diagnostics'] = [{'field': f'history[{i}].energy_change_hartree',
             'reason': 'NO_PREVIOUS_CYCLE_ENERGY'} for i, row in enumerate(raw.get('history', []))
             if row.get('energy_change_hartree') is not None and not np.isfinite(row['energy_change_hartree'])]
+        if name.startswith('conditional-'):
+            record['gap_operator_source']='LAST_DIAGONALIZATION_POSSIBLY_DIIS'
+            record['final_operator_source']='RECOMPUTED_AT_RETURNED_DENSITY_NO_DIIS'
         save(output/(name+'.json'), record)
         return record
     def gate(name, value, threshold, units, formula, operator='NOT_APPLICABLE', exact=False):
@@ -174,18 +183,25 @@ def scientific(args):
             'Eh', 'NEGATED_OCC_VIRTUAL_GAP_V1', 'RECOMPUTED_AT_RETURNED_DENSITY_NO_DIIS')
         return gap
     try:
+        memory_fields = dict(line.split(':',1) for line in Path('/proc/meminfo').read_text().splitlines())
+        vm_available = int(memory_fields['MemAvailable'].strip().split()[0])*1024
+        result['vm_available_memory_bytes_before_scf'] = vm_available
+        if vm_available < 5*1024**3:
+            raise GateFailure('VM observed available memory below 4 GiB budget plus 1 GiB headroom')
         coordinates = np.array([atom[1] for atom in atoms])
         minimum_distance = min(float(np.linalg.norm(a-b)) for i,a in enumerate(coordinates) for b in coordinates[i+1:])
         gate('T01.minimum_distance', -minimum_distance, -contract['engineering_gates']['minimum_pair_distance_angstrom'], 'angstrom', 'NEGATED_PAIR_MINIMUM_V1')
         if minimum_distance < contract['engineering_gates']['minimum_pair_distance_angstrom']:
-            raise ValueError('Acceptance collision guard failed before scientific work')
+            raise GateFailure('Acceptance collision guard failed before scientific work')
         independent = ordinary_ref.run_ordinary(request, atoms, profile, progress=phase)
         np.savez(output/'ordinary-reference.npz', **independent.arrays)
         save(output/'ordinary-reference.json', independent.record)
         phase('TESTED_ORDINARY_SCF')
         mol, mf, descriptors = tested.build(request, atoms, profile)
+        result['nao'] = int(mol.nao_nr())
         truth('nao.reference_limit', mol.nao_nr() <= contract['engineering_gates']['maximum_reference_nao'])
         energy = float(mf.kernel())
+        result['grid_points'] = len(mf.grids.weights)
         d = np.asarray(mf.make_rdm1())
         s, h = mf.get_ovlp(), mf.get_hcore()
         j, k = mf.get_jk(mol, d, hermi=1)
@@ -212,10 +228,12 @@ def scientific(args):
         truth('T04.AO_labels_exact', mol.ao_labels(fmt=False) == independent.context.mol.ao_labels(fmt=False))
         truth('T04.AO_descriptors_exact', [(a.kind,a.group) for a in independent.context.aos] == [(a.kind,a.fragment) for a in descriptors])
         if not qualification('ordinary.tested', ordinary, False):
-            raise ValueError('Ordinary qualification failed; conditional work blocked')
+            raise GateFailure('Ordinary qualification failed; conditional work blocked')
         # Independent ordinary metrics use the same frozen thresholds, not a self-generated tolerance.
         if not qualification('ordinary.reference', independent.record, False):
-            raise ValueError('Independent ordinary qualification failed; conditional work blocked')
+            raise GateFailure('Independent ordinary qualification failed; conditional work blocked')
+        if not all(item['pass'] for item in result['checks']):
+            raise GateFailure('Ordinary comparison/identity gate failed; conditional work blocked')
         d0 = independent.arrays['density'].copy()
         np.save(output/'common-D0.npy', d0, allow_pickle=False)
         result['common_density_sha256'] = file_hash(output/'common-D0.npy')
@@ -228,7 +246,7 @@ def scientific(args):
         gate('T02.kappa', float(np.linalg.cond(st)), contract['engineering_gates']['masked_overlap_condition_number_max'], 'dimensionless', 'KAPPA2_MASKED_OVERLAP_V1')
         truth('P11.positive_overlap', float(np.linalg.eigvalsh(st).min()) > 0)
         if float(np.linalg.eigvalsh(st).min()) <= 0 or np.linalg.cond(st) > contract['engineering_gates']['masked_overlap_condition_number_max']:
-            raise ValueError('Masked overlap guard failed; conditional work blocked')
+            raise GateFailure('Masked overlap guard failed; conditional work blocked')
         phase('SAME_D_OPERATOR_LEDGER')
         callback, _ = ref.original_grid_xc(independent.context.mean_field)
         same_ref = ref.evaluate(d0, ht, st, s, masked, aos, hybrid, mol.energy_nuc(), callback)
@@ -249,6 +267,8 @@ def scientific(args):
             gate('T05.component.'+rkey, abs(same_ref['components_hartree'][rkey]-value),contract['T05']['component_hartree'],'Eh','ABS_COMPONENT_DIFFERENCE_V1')
         gate('T05.total',abs(same_ref['total_energy_hartree']-same_prod['total_energy']),contract['T05']['total_energy_hartree'],'Eh','ABS_TOTAL_ENERGY_DIFFERENCE_V1')
         gate('T05.grid_electrons',abs(same_ref['grid_electron_count']-same_prod['grid_electron_count']),contract['T05']['grid_electron_count_abs'],'electrons','ABS_ELECTRON_DIFFERENCE_V1')
+        if not all(item['pass'] for item in result['checks']):
+            raise GateFailure('Same-D operator/ledger gate failed; conditional SCF blocked')
         del pmask, ptensor, masked, same_ref, same_prod, mapped
         production = {}
         for mode, controlled in (('single',True),('copy',False)):
@@ -259,10 +279,13 @@ def scientific(args):
             record = split('conditional-'+mode,value)
             qualification('conditional.'+mode, record, True)
             # Reconstruct final operator for explicit no-DIIS spectrum diagnostics.
-            tensor,_ = ref.mask_integrals(raw,aos,entries)
-            final = ref.evaluate(value['density'],ht,st,s,tensor,aos,hybrid,mol.energy_nuc(),callback)
-            production[mode]['acceptance_final_F'] = final['Fcond']
-            result[mode+'_final_non_diis_gap_hartree'] = final_gap(mode,final['Fcond'],st)
+            tensor,_ = apply_eri_tensor_mask(raw,descriptors,entries)
+            final = _evaluate_density(mean_field=mf,density=value['density'],masked_hcore=ht,masked_overlap=st,
+                physical_overlap=s,masked_eri=tensor,descriptors=descriptors,exact_exchange_fraction=hybrid,
+                optimize_eri_contractions=not controlled)
+            production[mode]['acceptance_final_F'] = final['fock']
+            split('conditional-'+mode+'-final-operator',final)
+            result[mode+'_final_non_diis_gap_hartree'] = final_gap(mode,final['fock'],st)
             del tensor,final
         gate('P12.storage_energy',abs(production['single']['total_energy_hartree']-production['copy']['total_energy_hartree']),contract['P12']['energy_difference_hartree'],'Eh','ABS_TOTAL_ENERGY_DIFFERENCE_V1')
         gate('P13.storage_density',float(np.linalg.norm(production['single']['density']-production['copy']['density'])),contract['P13']['density_difference_frobenius'],'density_AO','FROBENIUS_DIFFERENCE_V1')
@@ -289,7 +312,8 @@ def scientific(args):
         result['diagnostic_delta_hartree'] = energy-production['single']['total_energy_hartree']
         result['endpoint_classification'] = 'COMPARABLE_WITHIN_FROZEN_ENGINEERING_THRESHOLDS' if result['numerical_evidence_pass'] else 'ROOT_OR_NUMERICAL_GATES_NOT_QUALIFIED'
     except Exception as exc:
-        result.update(status='FAIL_EXECUTION', error=type(exc).__name__+': '+str(exc))
+        result.update(status='FAIL_NUMERICAL_GATES' if isinstance(exc,GateFailure) else 'FAIL_EXECUTION', error=type(exc).__name__+': '+str(exc),
+            failed_metric_ids=[item['metric_id'] for item in result['checks'] if not item['pass']])
         (output/'exception.log').write_text(traceback.format_exc(),encoding='utf-8')
     finally:
         phase('FINAL_RECORD')
@@ -307,7 +331,12 @@ def main():
     parser.add_argument('--tests-only',action='store_true')
     args=parser.parse_args()
     args.output.mkdir(parents=True,exist_ok=True)
-    return unit_tests(args.output) if args.tests_only else scientific(args)
+    if args.tests_only:
+        return unit_tests(args.output)
+    import fcntl
+    with Path('/locks/quantum.lock').open('a+') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        return scientific(args)
 
 
 if __name__=='__main__':
