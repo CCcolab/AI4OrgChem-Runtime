@@ -1,0 +1,29 @@
+{
+  "runtime_build_commit": "5fae2bd0f0a2d68c8209d06e4b07bcebef06792d",
+  "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "runtime_archive_sha256": "3b549bcf7996c3591a8097c807da78e576a9546b851ce2ab424bd9afba3150a4",
+  "science_archive_sha256": "92cb1a467b9c5c502fbc0e353c17f0083218c8dfdbb322fb51f7aa6e8db5eb73",
+  "tag": "ai4orgchem-user-molecule:engineering-20261005-r2",
+  "build_command": [
+    "docker",
+    "build",
+    "--network=none",
+    "--file",
+    "container/Dockerfile.user-molecule",
+    "--build-arg",
+    "RUNTIME_COMMIT=5fae2bd0f0a2d68c8209d06e4b07bcebef06792d",
+    "--build-arg",
+    "SCIENCE_COMMIT=cc7437901119e71ef7945a12813c021c383e7648",
+    "--build-arg",
+    "DEPENDENCY_LOCK_SHA256=a8dbe44d12930427ca1f377b17eba3fcdb17b6dd922737884b3b77d0d9c4ea71",
+    "--tag",
+    "ai4orgchem-user-molecule:engineering-20261005-r2",
+    "."
+  ],
+  "build_exit_code": 0,
+  "build_log": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w01-w04\\docker-build-r2.log",
+  "clean_context": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w01-w04\\clean-build-context-r2",
+  "image_id": "sha256:0942a94438147e048a0a099478ae837cbd75148b9bd0a33842dfe69c5176dc26",
+  "science_runs": "NOT_EXECUTED",
+  "distribution": "BLOCKED"
+}

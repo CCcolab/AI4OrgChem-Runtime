@@ -21,7 +21,7 @@ if(-not $selected){throw 'PowerShell 7.3+ not found; provide its existing execut
 $args=@('-NoProfile','-File',(Join-Path $PSScriptRoot 'run-user-molecule.ps1'),'-Action',$Action)
 foreach($name in @('Image','Request','CheckRun','RunDirectory','OutputRoot','LockRoot','CancelFile')){
     $value=Get-Variable -Name $name -ValueOnly
-    if($value){$args+=@('-'+$name,$value)}
+    if($value){$args+=@("-$name",$value)}
 }
 if($KeepContainer){$args+='-KeepContainer'}
 & $selected @args

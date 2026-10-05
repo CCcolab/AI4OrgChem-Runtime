@@ -5,17 +5,16 @@ from runtime.resources import memory_snapshot
 from .records import load, file_hash
 
 
-def cpu_snapshot(root=Path('/sys/fs/cgroup')):
+def cpu_snapshot(proc=Path('/proc/self')):
     samples, errors = [], []
     try:
-        memberships = Path('/proc/self/cgroup').read_text().splitlines()
-        mounts = Path('/proc/self/mountinfo').read_text().splitlines()
+        memberships = (proc / 'cgroup').read_text().splitlines()
+        mounts = (proc / 'mountinfo').read_text().splitlines()
         for membership in memberships:
             _, controllers, relative = membership.split(':', 2)
             version = 2 if not controllers else 1
             if version == 1 and 'cpu' not in controllers.split(','):
                 continue
-            found = False
             for mount in mounts:
                 left, right = mount.split(' - ', 1)
                 fields, fs = left.split(), right.split()
@@ -31,23 +30,28 @@ def cpu_snapshot(root=Path('/sys/fs/cgroup')):
                 while True:
                     if version == 2 and (leaf / 'cpu.max').exists():
                         quota, period = (leaf / 'cpu.max').read_text().split()
-                        samples.append(None if quota == 'max' else int(quota)/int(period)); found = True
+                        samples.append(None if quota == 'max' else int(quota)/int(period))
                     if version == 1 and (leaf / 'cpu.cfs_quota_us').exists():
                         quota = int((leaf / 'cpu.cfs_quota_us').read_text())
                         period = int((leaf / 'cpu.cfs_period_us').read_text())
-                        samples.append(None if quota < 0 else quota/period); found = True
+                        samples.append(None if quota < 0 else quota/period)
                     if leaf == mount_path:
                         break
                     leaf = leaf.parent
                 break
-            if not found:
-                errors.append('CPU hierarchy counters unavailable')
+        # A hybrid host can list an unused v2 hierarchy while CPU is controlled
+        # by v1. Missing counters in that unused hierarchy do not invalidate
+        # the quota read from the actual CPU controller.
+        if not samples:
+            errors.append('CPU hierarchy counters unavailable')
     except (OSError, ValueError, ZeroDivisionError) as exc:
         errors.append(type(exc).__name__)
     affinity = len(os.sched_getaffinity(0)) if hasattr(os, 'sched_getaffinity') else os.cpu_count()
     known = [x for x in samples if x is not None]
     return {'affinity_cpus': affinity, 'quota_cpus': min(known) if known else None,
-            'quota_samples': samples, 'errors': errors}
+            'quota_samples': samples,
+            'effective_cpus': min([affinity] + known) if affinity is not None and not errors else None,
+            'errors': errors}
 
 
 def observations():
