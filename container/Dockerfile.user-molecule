@@ -1,0 +1,41 @@
+FROM --platform=linux/amd64 docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2 AS source
+WORKDIR /opt/runtime
+COPY locks locks
+COPY scripts/fetch-user-molecule-source.py scripts/fetch-user-molecule-source.py
+COPY build-inputs/science.tar /tmp/science.tar
+RUN python scripts/fetch-user-molecule-source.py /tmp/science.tar /opt/ai4orgchem
+
+FROM --platform=linux/amd64 docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2
+ARG RUNTIME_COMMIT
+ARG SCIENCE_COMMIT
+ARG DEPENDENCY_LOCK_SHA256
+LABEL org.opencontainers.image.title="AI4OrgChem user-molecule engineering candidate" \
+      org.opencontainers.image.revision=$RUNTIME_COMMIT \
+      ai4orgchem.source.commit=$SCIENCE_COMMIT \
+      ai4orgchem.source.baseline="28511f3d84fa65707a107cde1e8121a7b4334ecb" \
+      ai4orgchem.source.tag-status="unpublished-local-commit-not-v0.3.2" \
+      ai4orgchem.dependency-lock.sha256=$DEPENDENCY_LOCK_SHA256 \
+      ai4orgchem.user-molecule.status="engineering-only-compute-gated"
+ENV PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 \
+    AI4ORGCHEM_RUNTIME_COMMIT=$RUNTIME_COMMIT AI4ORGCHEM_SOURCE=/opt/ai4orgchem
+WORKDIR /opt/runtime
+COPY --from=source /opt/ai4orgchem /opt/ai4orgchem
+COPY build-inputs/wheels /wheels
+COPY locks locks
+RUN python -m venv /opt/venv \
+ && /opt/venv/bin/python -m pip install --no-index --find-links /wheels --require-hashes -r locks/requirements-linux-amd64.txt \
+ && /opt/venv/bin/python -m pip check
+COPY runtime runtime
+COPY schemas schemas
+COPY profiles profiles
+COPY tests tests
+COPY examples examples
+COPY LICENSE NOTICE /opt/runtime/
+RUN useradd --uid 10001 --create-home runner \
+ && mkdir -p /output /locks /input /scratch \
+ && chown runner:runner /output /locks /scratch \
+ && chmod -R a-w /opt/ai4orgchem /opt/runtime /opt/venv
+ENV PATH="/opt/venv/bin:$PATH" PYTHONPATH=/opt/ai4orgchem/software/src
+USER 10001:10001
+ENTRYPOINT ["/opt/venv/bin/python", "-m", "runtime.user_molecule"]
+CMD ["--help"]

@@ -1,0 +1,108 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "input_status": {
+      "enum": [
+        "VALID",
+        "INVALID",
+        "UNSUPPORTED"
+      ]
+    },
+    "execution_status": {
+      "enum": [
+        "NOT_EXECUTED",
+        "COMPLETED",
+        "FAILED",
+        "BLOCKED"
+      ]
+    },
+    "numerical_status": {
+      "enum": [
+        "NOT_EXECUTED",
+        "NUMERICALLY_QUALIFIED",
+        "NOT_QUALIFIED"
+      ]
+    },
+    "research_status": {
+      "enum": [
+        "NOT_REVIEWED",
+        "NOT_QUALIFIED",
+        "TECHNICAL_ONLY"
+      ]
+    },
+    "comparison_available": {
+      "type": "boolean"
+    },
+    "delta_hartree": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "delta_kcal_mol": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ordinary": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "conditional": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "ordinary_tests": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "conditional_tests": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "undefined_diagnostics": {
+      "type": "array"
+    },
+    "variational_status": {
+      "const": "NOT_ESTABLISHED"
+    },
+    "stability_analysis": {
+      "const": "NOT_EXECUTED"
+    },
+    "identities": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "input_status",
+    "execution_status",
+    "numerical_status",
+    "research_status",
+    "comparison_available",
+    "delta_hartree",
+    "delta_kcal_mol",
+    "reasons",
+    "identities"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "pilot-b3lypg-sto3g-grid2-v1",
+  "state": "ENGINEERING_CANDIDATE_NOT_NUMERICALLY_ACCEPTED",
+  "inspect_enabled": true,
+  "compute_enabled": false,
+  "blocked_reasons": [
+    "W05_NUMERICAL_ACCEPTANCE_NOT_EXECUTED",
+    "RESOURCE_MODEL_NOT_CALIBRATED",
+    "COLLISION_CONDITIONING_GAP_CRITERIA_NOT_FROZEN"
+  ],
+  "basis": "sto-3g",
+  "xc": "B3LYPG",
+  "grid": {
+    "level": 2,
+    "prune": "nwchem_prune",
+    "radi_method": "treutler",
+    "radii_adjust": "treutler_atomic_radii_adjust",
+    "atomic_radii": "BRAGG_RADII",
+    "becke_scheme": "original_becke",
+    "alignment": 8,
+    "atom_grid": {}
+  },
+  "ordinary": {
+    "init_guess": "minao",
+    "conv_tol": 1e-09,
+    "conv_tol_grad": 3.1622776601683795e-05,
+    "max_cycle": 100,
+    "diis": true,
+    "diis_space": 8,
+    "diis_start_cycle": 1,
+    "damp": 0.0,
+    "level_shift": 0.0,
+    "direct_scf": true,
+    "direct_scf_tol": 1e-13,
+    "max_memory_mb": 512
+  },
+  "conditional": {
+    "maximum_cycles": 100,
+    "density_tolerance": 2e-08,
+    "energy_tolerance": 1e-09,
+    "diis_start_cycle": 2,
+    "diis_space": 8,
+    "damping_cycles": 2,
+    "damping": 0.2,
+    "memory_controlled_eri": true
+  },
+  "thresholds": {
+    "status": "CANDIDATE_PENDING_W05",
+    "electron_count_abs": 1e-07,
+    "energy_closure_hartree": 1e-09,
+    "commutator_frobenius": 1e-05,
+    "idempotency_relative": 1e-07,
+    "mask_max_abs": 1e-12
+  },
+  "maximum_inspect_nao": 80,
+  "maximum_compute_nao": null,
+  "resource_model": null,
+  "collision_minimum_angstrom": null,
+  "masked_overlap_condition_number_max": null,
+  "gap_criterion": null,
+  "method_scope_approval": null,
+  "expected_dependencies": {
+    "pyscf": "2.14.0",
+    "numpy": "2.5.1",
+    "scipy": "1.18.0"
+  },
+  "hartree_to_kcal_mol": 627.5094740631
+}

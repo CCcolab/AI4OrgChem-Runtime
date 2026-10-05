@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "input_status": {
+      "enum": [
+        "VALID",
+        "INVALID",
+        "UNSUPPORTED"
+      ]
+    },
+    "compute_eligible": {
+      "type": "boolean"
+    },
+    "method_status": {
+      "const": "NOT_REVIEWED"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "inspection": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "resources": {
+      "type": "object"
+    },
+    "identities": {
+      "type": "object"
+    },
+    "atom_mapping": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "input_status",
+    "compute_eligible",
+    "method_status",
+    "reasons",
+    "inspection",
+    "resources",
+    "identities",
+    "atom_mapping"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "acquisition_method": "local_git_archive",
+  "source_repository": "https://github.com/CCcolab/AI4OrgChem",
+  "source_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "source_tag": null,
+  "source_tag_reason": "UNPUBLISHED_LOCAL_COMMIT_NOT_V032",
+  "source_archive_sha256": "92cb1a467b9c5c502fbc0e353c17f0083218c8dfdbb322fb51f7aa6e8db5eb73",
+  "source_archive_format": "tar",
+  "condition_rules_sha256": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+  "verified_date": "2026-10-05",
+  "frozen_baseline_files_unchanged": 588
+}
