@@ -83,7 +83,7 @@ def scientific(args):
     from runtime.user_molecule.solver_candidate import run_candidate_conditional_rks
     from ai4orgchem.qm.p09_ao_classification import apply_interfragment_pi_matrix_mask
     from ai4orgchem.qm.p09_energy_assembly import apply_eri_tensor_mask
-    contract_path = ROOT/'validation/user-molecule/solver-v2/acceptance-contract-v1.json'
+    contract_path = ROOT/'validation/user-molecule/solver-v2/acceptance-contract-v2.json'
     contract = load(contract_path)
     fixture = next(f for f in contract['fixtures'] if f['id'] == args.fixture)
     source = Path('/opt/ai4orgchem')

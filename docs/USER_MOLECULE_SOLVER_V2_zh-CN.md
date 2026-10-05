@@ -19,7 +19,7 @@ PySCF 提供 DIIS 等成熟求解组件；本候选复用其数值部件，条�
 3. 硬限额 1 CPU、1 GiB、零 swap、900 s/进程；7200 s 总账，科学进程最多 1 个。旧总账和全部失败文件必须先核对未变，新账引用其身份，时间余额不复用为自动重试。
 4. 原镜像仅作固定依赖环境，干净 Git 导出只读挂载；新代码没有烘焙进镜像。非 root、离线、源码只读，容器删除后输出仍留在宿主。
 
-实际合同：[acceptance-contract-v1.json](../validation/user-molecule/solver-v2/acceptance-contract-v1.json)。本批次仍为合并流程峰值，不能代替两个模式独立资源校准，也不能推出任意用户分子的最大 nAO。
+当前合同：[acceptance-contract-v2.json](../validation/user-molecule/solver-v2/acceptance-contract-v2.json)。v1 和首次 119 项工程测试（1 失败、1 错误）保留；在分子执行前修正历史状态断言及工程报告分类。独立参考解析用例的不可用 DIIS 系数促使另行登记算术外推失败处理：拒绝该外推、清空历史、本周期及随后两周期使用真实 F，并记录原因，仍不增加周期或改变方程。本批次仍为合并流程峰值，不能代替两个模式独立资源校准，也不能推出任意用户分子的最大 nAO。
 
 ## 仍需审阅
 

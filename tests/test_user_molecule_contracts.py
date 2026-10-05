@@ -63,7 +63,12 @@ class W05PreparationContractTests(unittest.TestCase):
         state = load(ROOT / 'validation/user-molecule/implementation-state.json')
         self.assertFalse(state['compute_enabled'])
         self.assertFalse(state['work_packages']['W05']['ready_to_execute_scf'])
-        self.assertEqual(state['work_packages']['W05']['numerical_acceptance'], 'NOT_EXECUTED')
+        # Preparation files remain historical; actual failed runs must not be
+        # relabelled NOT_EXECUTED merely to satisfy a preparation-era test.
+        self.assertIn(state['work_packages']['W05']['numerical_acceptance'],
+                      ('NOT_EXECUTED', 'EXECUTED_FAILED_FROZEN_GATES'))
+        self.assertFalse(state['work_packages']['W06']['production_activation'])
+        self.assertTrue(state['work_packages']['W07']['validation'].startswith('BLOCKED'))
         for criterion in load(RECORDS / 'criteria-register.json')['criteria']:
             self.assertEqual(criterion['scientific_acceptance'], 'NOT_EXECUTED')
             if criterion['value'] is None:

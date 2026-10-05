@@ -185,6 +185,42 @@ class IterationTests(unittest.TestCase):
         self.assertEqual(result['stop_reason'], 'FINAL_RECHECK_FAILED')
         self.assertEqual(result['final_candidate_energy_recheck_hartree'], 1.)
 
+    def test_diis_arithmetic_failure_uses_raw_current_and_next_two_cycles(self):
+        for failure in (np.linalg.LinAlgError('Singular matrix'),
+                        ValueError('Unusable affine DIIS coefficients')):
+            with self.subTest(failure=type(failure).__name__):
+                class ArithmeticFailure(RawDiis):
+                    def update(self, fock, xerr):
+                        raise failure
+                calls = 0
+                evaluator = constant_evaluator(np.diag([-1., 1.]))
+                def tracked(density):
+                    nonlocal calls
+                    calls += 1
+                    value = evaluator(density)
+                    # Prevent a true stop until both scheduled raw cycles run.
+                    energy = float(calls >= 3)
+                    value['total_energy'] = value['one_electron_energy'] = energy
+                    return value
+                result = self.run_toy(evaluate=tracked, diis_factory=ArithmeticFailure)
+                history = result['history']
+                self.assertEqual(history[0]['diagonalization_operator'], 'RAW_F_DIIS_ARITHMETIC_REFUSAL')
+                self.assertEqual(history[0]['diis_update_failure']['message'], str(failure))
+                self.assertEqual(history[0]['diis_reset_count'], 1)
+                self.assertEqual(history[1]['diagonalization_operator'], 'RAW_F_REFINEMENT')
+                self.assertEqual(history[2]['diagonalization_operator'], 'RAW_F_REFINEMENT')
+                self.assertEqual(result['diis_arithmetic_reset_count'], 1)
+                self.assertEqual(result['plateau_reset_count'], 0)
+                self.assertEqual(result['false_stop_count'], 0)
+                self.assertEqual(result['evaluation_count'], 7)
+                self.assertLessEqual(result['evaluation_count'], result['evaluation_limit'])
+                self.assertTrue(result['converged'])  # Raw endpoint, never the arithmetic event, qualifies.
+        class InvalidInput(RawDiis):
+            def update(self, fock, xerr):
+                raise ValueError('Invalid array shape')
+        with self.assertRaisesRegex(ValueError, 'Invalid array shape'):
+            self.run_toy(diis_factory=InvalidInput)
+
     def test_invalid_or_relaxed_settings_are_rejected(self):
         for kwargs in (dict(maximum_cycles=101), dict(maximum_cycles=True),
                        dict(density_tolerance=3e-8), dict(energy_tolerance=2e-9),

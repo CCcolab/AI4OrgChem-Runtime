@@ -20,6 +20,26 @@ class FrozenIncorrectPulay:
         return np.diag([-1.0, 1.0])
 
 
+class UnusablePulay(FrozenIncorrectPulay):
+    def update(self, fock, error):
+        raise ValueError('Unusable affine DIIS coefficients')
+
+
+class BrokenArithmeticPulay(FrozenIncorrectPulay):
+    def update(self, fock, error):
+        raise np.linalg.LinAlgError('singular affine system')
+
+
+class InvalidConfigurationPulay(FrozenIncorrectPulay):
+    def update(self, fock, error):
+        raise ValueError('Bad DIIS configuration')
+
+
+class NonfiniteExtrapolationPulay(FrozenIncorrectPulay):
+    def update(self, fock, error):
+        return np.full(fock.shape, float('nan'))
+
+
 class ReferenceV2Tests(unittest.TestCase):
     def run_toy(self, **changes):
         settings = dict(maximum_cycles=8, density_tolerance=2e-8, energy_tolerance=1e-9,
@@ -178,6 +198,38 @@ class ReferenceV2Tests(unittest.TestCase):
         self.assertAlmostEqual(result['masked_metric_electron_count'], 2.0, places=12)
         self.assertLess(result['final_raw_aufbau_density_relative_residual'], 2e-8)
         self.assertLess(result['final_commutator_frobenius_norm'], 1e-12)
+
+    def test_arithmetically_unusable_diis_is_rejected_then_two_raw_cycles(self):
+        settings = dict(maximum_cycles=4, density_tolerance=2e-8, energy_tolerance=1e-9,
+                        diis_start_cycle=2, diis_space=8, damping_cycles=2,
+                        damping=0.2, memory_controlled_eri=True)
+        with patch.object(v1, 'Pulay', UnusablePulay):
+            result = self.run_toy(settings=settings,
+                                  overlap=np.array([[1.0, 0.2], [0.2, 1.0]]))
+        self.assertEqual(result['diis_arithmetic_reset_count'], 1)
+        self.assertEqual(result['solver_reset_count'], 1)
+        self.assertEqual(result['plateau_reset_count'], 0)
+        failed = result['history'][1]
+        self.assertEqual(failed['diagonalized_operator_source'], 'RAW_F_AFTER_UNUSABLE_DIIS_EXTRAPOLATION')
+        self.assertEqual(failed['diis_update_failure']['exception_type'], 'ValueError')
+        self.assertEqual(failed['diis_update_failure']['message'], 'Unusable affine DIIS coefficients')
+        for row in result['history'][2:4]:
+            self.assertEqual(row['diagonalized_operator_source'], 'RAW_F_AFTER_UNUSABLE_DIIS_EXTRAPOLATION_RESET')
+            self.assertEqual(row['diis_gram']['vectors'], 0)
+        self.assertFalse(result['converged'])
+        self.assertEqual(result['functional_evaluation_count'], 9)
+
+    def test_linear_algebra_failure_does_not_itself_qualify_or_hide_errors(self):
+        with patch.object(v1, 'Pulay', BrokenArithmeticPulay):
+            result = self.run_toy()
+        self.assertTrue(result['converged'])
+        self.assertTrue(all(result['qualification_tests'].values()))
+        self.assertEqual(result['diis_arithmetic_reset_count'], 1)
+        self.assertEqual(result['history'][1]['diis_update_failure']['exception_type'], 'LinAlgError')
+        for implementation in (InvalidConfigurationPulay, NonfiniteExtrapolationPulay):
+            with self.subTest(implementation=implementation.__name__), patch.object(v1, 'Pulay', implementation):
+                with self.assertRaises(ValueError):
+                    self.run_toy()
 
     def test_reference_v2_has_no_production_import_and_keeps_v1_untouched(self):
         source = Path(ref.__file__).read_text(encoding='utf-8')

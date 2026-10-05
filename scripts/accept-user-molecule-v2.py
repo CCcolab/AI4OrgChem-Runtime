@@ -34,7 +34,7 @@ def main():
     git=lambda *a:subprocess.check_output(['git',*a],cwd=ROOT).decode().strip()
     if git('status','--porcelain'):
         raise ValueError('Clean committed runtime required')
-    contract_path=ROOT/'validation/user-molecule/solver-v2/acceptance-contract-v1.json'
+    contract_path=ROOT/'validation/user-molecule/solver-v2/acceptance-contract-v2.json'
     contract=load(contract_path)
     prior_check=verify_previous_evidence(contract)
     candidate=load(ROOT/'validation/user-molecule/candidate-image.json')
@@ -161,7 +161,7 @@ def main():
             elif reason!='TIMEOUT':
                 reason='COMPLETED' if code==0 else 'WORKER_FAILED'
             execution.update(container_exit_code=code,oom_killed=state['OOMKilled'],termination_reason=reason)
-            if code==0 and args.tests_only:
+            if args.tests_only and (destination/'unit-tests.json').exists():
                 execution['status']=load(destination/'unit-tests.json')['status']
             elif (destination/'result.json').exists():
                 record=load(destination/'result.json');execution['status']=record['status'];observation=record.get('cgroup_final')

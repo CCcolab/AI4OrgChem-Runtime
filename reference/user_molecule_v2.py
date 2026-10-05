@@ -5,6 +5,9 @@ frozen conditional equation, global closed-shell Aufbau occupation and v1
 array-level reference evaluation. It changes only the stopping/reset strategy:
 an apparent DIIS plateau must pass an independently evaluated real-F endpoint;
 an unqualified plateau clears Pulay and uses two subsequent raw-F cycles.
+V2.1 also rejects an arithmetically unusable Pulay extrapolation, clears its
+history and uses raw F for this cycle and the following two cycles. Invalid
+inputs and nonfinite functional/residual values remain hard errors.
 There is no production import, MOM, level shift, fractional/fragment occupation,
 scientific-rule change or relaxed numerical threshold in this module.
 """
@@ -14,7 +17,7 @@ from scipy.linalg import eigh
 from reference import user_molecule as original
 
 
-STRATEGY = 'INDEPENDENT_REAL_F_ENDPOINT_PLATEAU_RESET_V2_CANDIDATE'
+STRATEGY = 'INDEPENDENT_REAL_F_ENDPOINT_PLATEAU_AND_DIIS_FAILURE_RESET_V2_1_CANDIDATE'
 FINAL_OPERATOR = 'RECOMPUTED_AT_RETURNED_DENSITY_NO_DIIS'
 THRESHOLDS = {
     'commutator_frobenius': 1e-5,
@@ -132,6 +135,8 @@ def fixed_point(*, density, h, overlap, eri, aos, entries, electrons, hybrid,
     pulay = original.Pulay(settings['diis_space'])
     history, previous_energy, previous_candidate = [], None, None
     converged, raw_cycles, resets, fallbacks, evaluations = False, 0, 0, 0, 0
+    plateau_resets, arithmetic_resets = 0, 0
+    raw_reason = None
     coefficients = eigenvalues = occupations = None
     for cycle in range(1, settings['maximum_cycles'] + 1):
         if progress:
@@ -140,15 +145,34 @@ def fixed_point(*, density, h, overlap, eri, aos, entries, electrons, hybrid,
         evaluations += 1
         f = evaluated['Fcond']
         error = f @ d @ st - st @ d @ f
+        if not np.isfinite(f).all() or not np.isfinite(error).all():
+            raise ValueError('Nonfinite real-F residual before DIIS')
+        update_failure, arithmetic_reset = None, False
         if raw_cycles:
             diagonalized = f.copy()
             raw_cycles -= 1
-            operator = 'RAW_F_AFTER_UNQUALIFIED_PLATEAU'
+            operator = raw_reason
         elif cycle >= settings['diis_start_cycle']:
             before = pulay.fallbacks
-            diagonalized = pulay.update(f, error)
-            fallbacks += pulay.fallbacks - before
-            operator = 'INDEPENDENT_AFFINE_DIIS'
+            try:
+                diagonalized = pulay.update(f, error)
+            except (np.linalg.LinAlgError, ValueError) as error_value:
+                if (isinstance(error_value, ValueError)
+                        and str(error_value) != 'Unusable affine DIIS coefficients'):
+                    raise
+                fallbacks += pulay.fallbacks - before
+                update_failure = {'exception_type': type(error_value).__name__,
+                                  'message': str(error_value),
+                                  'action': 'REJECT_EXTRAPOLATION_CLEAR_PULAY_USE_CURRENT_PLUS_TWO_RAW_F_CYCLES'}
+                pulay = original.Pulay(settings['diis_space'])
+                raw_cycles, resets, arithmetic_reset = 2, resets + 1, True
+                arithmetic_resets += 1
+                raw_reason = 'RAW_F_AFTER_UNUSABLE_DIIS_EXTRAPOLATION_RESET'
+                diagonalized = f.copy()
+                operator = 'RAW_F_AFTER_UNUSABLE_DIIS_EXTRAPOLATION'
+            else:
+                fallbacks += pulay.fallbacks - before
+                operator = 'INDEPENDENT_AFFINE_DIIS'
         else:
             diagonalized = f.copy()
             operator = 'RAW_F_BEFORE_DIIS_START'
@@ -179,6 +203,8 @@ def fixed_point(*, density, h, overlap, eri, aos, entries, electrons, hybrid,
             'legacy_small_step_plateau': bool(plateau),
             'candidate_endpoint_qualified': bool(qualified),
             'diis_gram': _gram_diagnostics(pulay),
+            'diis_update_failure': update_failure,
+            'diis_arithmetic_reset': arithmetic_reset,
             'occupied_subspace_overlap_with_previous_candidate':
                 None if previous_candidate is None else float(np.trace(0.5 * candidate @ st @ (0.5 * previous_candidate) @ st)),
             'plateau_reset': False,
@@ -188,8 +214,12 @@ def fixed_point(*, density, h, overlap, eri, aos, entries, electrons, hybrid,
             d, converged = candidate, True
             break
         if plateau:
+            plateau_resets += 1
             pulay = original.Pulay(settings['diis_space'])
-            raw_cycles, resets = 2, resets + 1
+            raw_cycles = 2
+            raw_reason = 'RAW_F_AFTER_UNQUALIFIED_PLATEAU'
+            if not arithmetic_reset:
+                resets += 1
             row['plateau_reset'] = True
             row['scheduled_raw_f_cycles'] = 2
         previous_energy, previous_candidate = evaluated['total_energy_hartree'], candidate.copy()
@@ -244,7 +274,9 @@ def fixed_point(*, density, h, overlap, eri, aos, entries, electrons, hybrid,
         'final_operator_source': FINAL_OPERATOR,
         'diis_implementation': 'INDEPENDENT_AFFINE_GRAM_SOLVE_V1',
         'diis_least_squares_fallbacks': fallbacks,
-        'plateau_reset_count': resets,
+        'plateau_reset_count': plateau_resets,
+        'diis_arithmetic_reset_count': arithmetic_resets,
+        'solver_reset_count': resets,
         'pending_raw_f_cycles': raw_cycles,
         'functional_evaluation_count': evaluations,
         'functional_evaluation_maximum': 2 * settings['maximum_cycles'] + 1,

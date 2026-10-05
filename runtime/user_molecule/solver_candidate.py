@@ -156,7 +156,8 @@ def iterate_candidate(*, initial_density: np.ndarray, overlap: np.ndarray, elect
     """Bounded generic iteration; toy evaluators make false-stop tests possible.
 
     Only a legacy small-step *and* a qualified fresh endpoint can stop.  A false
-    plateau clears DIIS, then exactly two subsequent cycles use raw F.  There is
+    plateau or arithmetic DIIS refusal clears DIIS; when iteration continues,
+    the next two cycles use raw F.  There is
     no MOM, fractional occupancy, fragment electron constraint or level shift.
     Evaluation bound is two per cycle plus one final check, at most 201.
     """
@@ -184,6 +185,7 @@ def iterate_candidate(*, initial_density: np.ndarray, overlap: np.ndarray, elect
     d = 0.5*(d+d.T)
     diis = diis_factory(diis_space)
     history, evaluations, resets, raw_remaining = [], 0, 0, 0
+    arithmetic_resets, plateau_resets = 0, 0
     previous_energy, previous_coefficients, last_candidate_energy = None, None, None
     last_coefficients = last_energies = last_occupations = None
     converged, stop_reason = False, "MAXIMUM_CYCLES_EXHAUSTED"
@@ -209,12 +211,33 @@ def iterate_candidate(*, initial_density: np.ndarray, overlap: np.ndarray, elect
                 "evaluation_count": evaluations, "reason": stop_reason})
             break
         commutator = f @ d @ s - s @ d @ f
+        if not np.isfinite(commutator).all():
+            stop_reason = "NONFINITE_CURRENT_COMMUTATOR"
+            history.append({"cycle": cycle, "legacy_stop_candidate": False, "endpoint_qualified": False,
+                "evaluation_count": evaluations, "reason": stop_reason})
+            break
         raw_cycle = raw_remaining > 0
+        update_failure = None
         if raw_cycle:
             diagonalized, operator = f, "RAW_F_REFINEMENT"
             raw_remaining -= 1
         elif cycle >= diis_start_cycle:
-            diagonalized, operator = np.asarray(diis.update(f, xerr=commutator), dtype=float), "PULAY_DIIS"
+            try:
+                diagonalized = np.asarray(diis.update(f, xerr=commutator), dtype=float)
+                operator = "PULAY_DIIS"
+            except (np.linalg.LinAlgError, ValueError) as error:
+                # Invalid API/shape/configuration errors must remain errors.
+                # Only arithmetic solve failure or a specifically unusable
+                # extrapolation is recoverable with a finite unchanged raw F.
+                if isinstance(error, ValueError) and not isinstance(error, np.linalg.LinAlgError) and str(error) not in {
+                    "Unusable affine DIIS coefficients",
+                }:
+                    raise
+                update_failure = {"exception_type": type(error).__name__, "message": str(error)}
+                diis, resets = diis_factory(diis_space), resets+1
+                arithmetic_resets += 1
+                raw_remaining = RAW_REFINEMENT_CYCLES
+                diagonalized, operator = f, "RAW_F_DIIS_ARITHMETIC_REFUSAL"
         else:
             diagonalized, operator = f, "RAW_F_BEFORE_DIIS"
         if not np.isfinite(diagonalized).all():
@@ -241,7 +264,10 @@ def iterate_candidate(*, initial_density: np.ndarray, overlap: np.ndarray, elect
             "diagonalization_operator": operator, "legacy_stop_candidate": bool(legacy_stop),
             "endpoint_qualified": gate["qualified"], "endpoint": _endpoint_record(gate),
             "true_stop": bool(legacy_stop and gate["qualified"] and candidate_energy_change <= energy_tolerance),
-            "diis_reset": reset, "evaluation_count": evaluations,
+            "diis_reset": bool(reset or update_failure is not None),
+            "false_stop_rejected": reset, "diis_update_failure": update_failure,
+            "diis_reset_count": resets + int(reset and update_failure is None),
+            "evaluation_count": evaluations,
             "occupied_subspace_change_frobenius": _subspace_change(previous_coefficients, coefficients, s, electrons//2),
             "raw_mapped_occupied_subspace_change_frobenius": _subspace_change(coefficients, gate["raw_mo_coefficients"], s, electrons//2)
                 if gate["raw_mo_coefficients"] is not None else None})
@@ -254,7 +280,10 @@ def iterate_candidate(*, initial_density: np.ndarray, overlap: np.ndarray, elect
             d, stop_reason = candidate, "NONFINITE_CANDIDATE_ENDPOINT"
             break
         if reset:
-            diis, resets, raw_remaining = diis_factory(diis_space), resets+1, RAW_REFINEMENT_CYCLES
+            plateau_resets += 1
+            if update_failure is None:
+                diis, resets = diis_factory(diis_space), resets+1
+            raw_remaining = RAW_REFINEMENT_CYCLES
         previous_energy = float(evaluated["total_energy"])
         weight = damping if cycle <= damping_cycles else 0.0
         d = (1-weight)*candidate + weight*d
@@ -268,9 +297,12 @@ def iterate_candidate(*, initial_density: np.ndarray, overlap: np.ndarray, elect
         "density": d, "final_evaluation": final, "endpoint_gate": _endpoint_record(gate),
         "history": history, "stop_reason": stop_reason, "solver_id": SOLVER_ID,
         "final_candidate_energy_recheck_hartree": final_energy_recheck,
-        "solver_strategy": "LEGACY_STEP_PLUS_TRUE_ENDPOINT_RESET_DIIS_RAW_TWO_CYCLES_V2",
+        "solver_strategy": "TRUE_ENDPOINT_PLATEAU_AND_ARITHMETIC_DIIS_REFUSAL_RAW_TWO_CYCLES_V2_1",
+        "solver_revision": "V2.1_ARITHMETIC_DIIS_REFUSAL",
         "diis_implementation": "PYSCF_LIB_DIIS", "diis_reset_count": resets,
-        "false_stop_count": sum(bool(row.get("diis_reset")) for row in history),
+        "solver_reset_count": resets, "diis_arithmetic_reset_count": arithmetic_resets,
+        "plateau_reset_count": plateau_resets,
+        "false_stop_count": sum(bool(row.get("false_stop_rejected")) for row in history),
         "evaluation_count": evaluations, "evaluation_limit": 2*maximum_cycles+1,
         "maximum_cycles": maximum_cycles, "raw_refinement_cycles_after_reset": RAW_REFINEMENT_CYCLES,
         "final_operator_source": "RECOMPUTED_AT_RETURNED_DENSITY_NO_DIIS",

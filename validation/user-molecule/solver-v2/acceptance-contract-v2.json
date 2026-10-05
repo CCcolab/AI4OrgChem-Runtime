@@ -1,0 +1,108 @@
+{
+  "version": "SOLVER-V2-ACCEPTANCE-ONLY-2",
+  "purpose": "One pilot-ethene diagnostic of strict final-operator stopping; unchanged equations and acceptance tolerances; no production activation",
+  "authorization_basis": "User continuation 2026-10-05 after proposed solver correction and bounded new acceptance batch",
+  "method_review_status": "PENDING_REAL_REVIEW",
+  "production_activation": false,
+  "budget": {
+    "batch_seconds": 7200,
+    "process_seconds": 900,
+    "memory_mib": 1024,
+    "threads": 1,
+    "maximum_scientific_processes": 1,
+    "swap": false,
+    "serial": true,
+    "available_headroom_mib": 1024
+  },
+  "fixtures": [
+    {
+      "id": "pilot-ethene",
+      "request": "examples/user-molecule/w05-candidates/ethene-planar-technical-v1/request-pilot.json",
+      "role": "calibration"
+    }
+  ],
+  "engineering_gates": {
+    "minimum_pair_distance_angstrom": 0.4,
+    "masked_overlap_condition_number_max": 1000000.0,
+    "final_non_diis_gap_minimum_hartree": 1e-06,
+    "maximum_reference_nao": 40,
+    "explanation": "Conservative acceptance-driver guards only, not universal chemical or resource-domain thresholds; epsilon*kappa <= approximately 2.3e-10. Small/nonfinite final-operator gap blocks comparable-root acceptance, with no changed occupations, regularization or tolerance."
+  },
+  "T04": {
+    "total_energy_hartree": 1e-09,
+    "component_hartree": 1e-08,
+    "density_frobenius": 1e-07,
+    "fock_frobenius": 1e-07,
+    "electron_count_abs": 1e-07
+  },
+  "T05": {
+    "mask_max_abs": 0.0,
+    "matrix_max_abs": 1e-10,
+    "matrix_frobenius": 1e-09,
+    "component_hartree": 1e-09,
+    "total_energy_hartree": 1e-09,
+    "grid_electron_count_abs": 1e-09
+  },
+  "T06": {
+    "total_energy_hartree": 1e-08,
+    "component_hartree": 1e-06,
+    "density_frobenius": 1e-06,
+    "fock_frobenius": 1e-06
+  },
+  "P12": {
+    "energy_difference_hartree": 1e-10
+  },
+  "P13": {
+    "density_difference_frobenius": 1e-09
+  },
+  "threshold_basis": "T04: same pinned raw engine, frozen ordinary stopping; T05: same exact D and raw arrays with independently contracted algebra; T06: frozen density stopping 2e-8 plus different Pulay endpoint allowance. Engineering candidate values frozen before first molecular execution; never relaxed after observations. P12/P13 unchanged from earlier contract.",
+  "state_selection": "Same byte-identified D0, global closed-shell Aufbau 2/0. Compare density/occupied subspace and final recomputed non-DIIS operator; no equality claim for trajectories or MO signs. Different endpoints: ROOT_NOT_COMPARABLE, no research comparison.",
+  "resource_scope": "One sequential diagnostic bundle of a new exact code identity; not per-mode resource qualification, not general-user resource calibration.",
+  "interpretation_candidate": "Specified fixed-geometry conditional fixed-point functional response Eordinary-Econditional; not bond energy, experimental measurement, CT/POL decomposition, other-method equivalence or a proven variational minimum.",
+  "remaining_external_requirements": [
+    "Real responsible method reviewer and scope receipt",
+    "A01-A18 applicable acceptance, including professional user trial",
+    "Independent phase/mode resource calibration before general-user production activation"
+  ],
+  "resource_revision_basis": "Host free memory about 3.8 GiB blocked the initial 4 GiB + 1 GiB admission before any molecular SCF. Reduce hard process limit to 1 GiB with 1 GiB observed host/VM headroom; retain global persistent ledger ceiling 4 GiB and 7200 s. All scientific settings and T/P comparison tolerances identical to v1.",
+  "correction_basis": "Repair stopping semantics in separately named production-candidate and independent-reference solvers; retain all old failures; this does not approve the method.",
+  "batch_id": "solver-v2-first-diagnostic-20261005",
+  "solver_strategy": {
+    "version": "STRICT_ENDPOINT_RAW_RETRY_V2",
+    "legacy_small_step_trigger": "density <= 2e-8 and previous/current energy change <= 1e-9 Eh",
+    "endpoint": "Recompute F/E at candidate D; all original qualification gates and candidate/current energy change <= 1e-9 Eh",
+    "raw_aufbau_map": "||D_raw-D||F/max(||D_raw||F,1) <= 2e-8; same masked metric and global closed-shell 2/0",
+    "final_non_diis_gap_minimum_hartree": 1e-06,
+    "failed_plateau_action": "Clear DIIS history; next two cycles use raw F; no occupation, equation or threshold change",
+    "maximum_cycles": 100,
+    "maximum_functional_evaluations": 201,
+    "MO_density_role": "Final raw operator orbitals are diagnostic; last iteration orbitals retained separately; not a claim they reconstruct a failed returned D",
+    "diis_update_arithmetic_failure_action": "Reject unusable affine coefficients / linear solve failure; clear DIIS; this cycle and next two cycles use raw F, log reason; no extra cycles"
+  },
+  "prior_evidence": {
+    "evidence_root": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance",
+    "delivery_commit": "8fc64a43389947301c6b50587eb8fa173090050d",
+    "numerical_test_commit": "65c5848d0a9fe58d4f7320e15eadeba2ebd61db6",
+    "previous_manifest_sha256": "b8b34833ecfc7f390a0d041b22676710ac64b4fc32499c674bbd408b7c29ddab",
+    "previous_budget_sha256": "afca60d5ca9b178853632c2cfe9372ee3f48e741338a959ca3624c5d6b25d03a",
+    "previous_scientific_attempts": 8,
+    "old_budget_is_not_reset": true
+  },
+  "engineering_correction": {
+    "previous_contract_sha256": "7212203a6983a398375d8cf690ac94c53bb2efb15a0fd01cd31f8fc00b82c3df",
+    "engineering_source_commit": "64a2f9fb52fd17b08c80a8f62645b8d21f4548cc",
+    "initial_tests": {
+      "executions": 119,
+      "failures": 1,
+      "errors": 1,
+      "skipped": 0
+    },
+    "issues": [
+      "Historical-state assertion outdated",
+      "Independent affine DIIS coefficients unusable in near-zero residual analytical fixture",
+      "Supervisor ignored available failed unit report"
+    ],
+    "science_not_started": true,
+    "budget_not_reset": true
+  }
+}
