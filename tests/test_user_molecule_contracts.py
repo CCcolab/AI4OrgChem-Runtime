@@ -96,7 +96,14 @@ class W05PreparationContractTests(unittest.TestCase):
     def test_frozen_source_materials_and_rule_identity_match(self):
         for source in load(RECORDS / 'source-index.json')['local_sources']:
             if source['owner'] == 'runtime':
-                self.assertEqual(digest(ROOT / source['path']), source['sha256'])
+                # The index records the reviewed Windows working bytes. A Linux
+                # checkout may use LF. Verify this particular historical hash
+                # by an exact EOL transformation; any other change still fails.
+                raw = (ROOT / source['path']).read_bytes()
+                lf = raw.replace(b'\r\n', b'\n')
+                with self.subTest(source=source['path']):
+                    self.assertIn(source['sha256'],
+                        {hashlib.sha256(data).hexdigest() for data in (raw, lf, lf.replace(b'\n', b'\r\n'))})
         lock = load(ROOT / 'locks/source.user-molecule.lock.json')
         state = load(RECORDS / 'preparation-status.json')
         self.assertEqual(state['science_commit'], lock['source_commit'])

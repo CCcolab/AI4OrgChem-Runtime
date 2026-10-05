@@ -7,6 +7,7 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import tarfile
 import time
 import uuid
 
@@ -41,6 +42,15 @@ def main():
         'working_files_sha256': {name: sha(root/name) for name in git('ls-files').splitlines()},
         'scientific_scf': 'NOT_EXECUTED', 'github_actions': 'NOT_EXECUTED', 'build': 'NOT_EXECUTED'}
     save(output/'BASELINE.json', baseline)
+    archive = output/'runtime-test-source.tar'
+    subprocess.run(['git', 'archive', '--format=tar', '-o', str(archive), baseline['runtime_test_commit']], cwd=root, check=True)
+    exported_root = output/'runtime-test-source'
+    exported_root.mkdir()
+    with tarfile.open(archive) as source:
+        source.extractall(exported_root, filter='data')
+    save(output/'test-source.json', {'runtime_test_commit': baseline['runtime_test_commit'],
+        'archive_sha256': sha(archive), 'test_mount': str(exported_root),
+        'scope': 'Clean Git export including declared per-file EOL attributes; no image rebuild'})
     def docker(*args):
         result = subprocess.run(['docker', *args], capture_output=True, timeout=20)
         if result.returncode:
@@ -68,7 +78,7 @@ def main():
             '--security-opt', 'no-new-privileges', '--user', '10001:10001',
             '--label', 'ai4orgchem.local-ci.run-id='+token,
             '--tmpfs', '/tmp:rw,nosuid,nodev,size=67108864,mode=1777',
-            '--mount', f'type=bind,source={root},target=/workspace,readonly',
+            '--mount', f'type=bind,source={exported_root},target=/workspace,readonly',
             '--mount', f'type=bind,source={directory},target=/output', '--workdir', '/workspace',
             '-e', 'OMP_NUM_THREADS=1', '-e', 'OPENBLAS_NUM_THREADS=1',
             '-e', 'USER_MOLECULE_PROFILE=/workspace/profiles/user-molecule/pilot-b3lypg-sto3g-grid2-v1.json',
