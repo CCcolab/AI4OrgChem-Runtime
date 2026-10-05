@@ -23,14 +23,16 @@ jobs:
             --build-arg DEPENDENCY_LOCK_SHA256="$(sha256sum locks/requirements-linux-amd64.txt | cut -d ' ' -f 1)" . \
             2>&1 | tee "$RUNNER_TEMP/ai4orgchem-runs/build.log"
           docker image inspect ai4orgchem-runtime:ci > "$RUNNER_TEMP/ai4orgchem-runs/image-inspect.json"
-      - name: Wrapper tests
+      - name: Legacy wrapper tests (user-molecule contracts have a separate job)
         shell: bash
         run: |
           set -euo pipefail
-          docker run --rm --network none --entrypoint python \
-            --mount type=bind,source="$PWD/tests",target=/tests,readonly \
-            ai4orgchem-runtime:ci -m unittest discover -s /tests -v \
-            2>&1 | tee "$RUNNER_TEMP/ai4orgchem-runs/wrapper-tests.log"
+          for pattern in test_runtime.py test_process.py test_classifier_adapter.py; do
+            docker run --rm --network none --entrypoint python \
+              --mount type=bind,source="$PWD/tests",target=/tests,readonly \
+              ai4orgchem-runtime:ci -m unittest discover -s /tests -p "$pattern" -v \
+              2>&1 | tee "$RUNNER_TEMP/ai4orgchem-runs/wrapper-$pattern.log"
+          done
       - name: L0 and L1 offline with persistent output
         shell: bash
         run: |
@@ -52,5 +54,38 @@ jobs:
         with:
           name: candidate-validation-${{ github.run_id }}-${{ github.run_attempt }}
           path: ${{ runner.temp }}/ai4orgchem-runs
+          if-no-files-found: warn
+          retention-days: 7
+  user-molecule-contracts:
+    # Input/resource/fixture checks only, with an isolated minimal dependency set.
+    # The unpublished adapter
+    # and Docker/PowerShell acceptance remain a separately recorded local run.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - name: Strict input, resource and W05 fixture contracts (no SCF)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -c 'import sys; assert sys.version_info[:2] == (3, 12), "CI lock requires CPython 3.12"'
+          mkdir -p "$RUNNER_TEMP/user-molecule-contracts"
+          python3 -m venv "$RUNNER_TEMP/user-molecule-ci-venv"
+          PYTHON="$RUNNER_TEMP/user-molecule-ci-venv/bin/python"
+          "$PYTHON" -m pip install --only-binary=:all: --require-hashes \
+            -r locks/requirements-user-molecule-ci.txt \
+            2>&1 | tee "$RUNNER_TEMP/user-molecule-contracts/install.log"
+          "$PYTHON" -m pip check
+          "$PYTHON" -m pip freeze > "$RUNNER_TEMP/user-molecule-contracts/dependencies.txt"
+          "$PYTHON" -m unittest discover -s tests -p 'test_user_molecule_*.py' -v \
+            2>&1 | tee "$RUNNER_TEMP/user-molecule-contracts/tests.log"
+      - name: Preserve contract evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: user-molecule-contracts-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/user-molecule-contracts
           if-no-files-found: warn
           retention-days: 7
