@@ -4,6 +4,8 @@
 
 操作从 [用户指南](USER_MOLECULE_RUN_zh-CN.md) 开始；当前实际身份、范围与缺口见 [W05 准备](USER_MOLECULE_W05_PREPARATION_zh-CN.md)，此前构建和监督见历史 [W01—W04 交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md)。LOCAL-SETUP-1、TECHNICAL-PLAN-1 和旧交付的描述为编写时状态。工程/准备交付不代表独立科学审阅通过。
 
+[W01—W05 本地 CI](USER_MOLECULE_CI_20261005_zh-CN.md) 已通过受测工程/合同检查；GitHub Actions 与 W05 数值验收仍 NOT_EXECUTED。本页和 implementation-state 的 ci_execution 指远端 Actions，本地执行另行登记。
+
 ## 1. 实施时首先阅读
 
 | 文件 | 用途 |

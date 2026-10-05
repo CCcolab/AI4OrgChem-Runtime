@@ -2,6 +2,8 @@
 
 2026-10-05 / W05-PREPARATION-1。W05 的输入、配置身份、判据登记、独立参考设计和候选预算已整理；数值验收仍 NOT_EXECUTED，Compute 仍 BLOCKED。本轮没有 SCF、优化、能量或研究分类结果。不能把本页的准备完成称为 W05 完成。
 
+后续 [本地 CI 增补](USER_MOLECULE_CI_20261005_zh-CN.md) 已验证受测工程/准备合同；下述准备批原始记录不覆盖，科学验收及远端 GitHub Actions 状态仍未执行。
+
 ## 1. 已完成的低成本检查
 
 | 候选输入 | 两个碳 π 组（XYZ 从 1 编号） | STO-3G / grid 2 nAO | 6-31G(d) / grid 3 nAO | 实际结果 |

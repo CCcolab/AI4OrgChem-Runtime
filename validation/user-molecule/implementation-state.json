@@ -63,5 +63,9 @@
     "energy/operator/occupation interpretation; variational status NOT_ESTABLISHED; stability NOT_EXECUTED"
   ],
   "history": "LOCAL-SETUP-1 retained in prior Git commits and preimplementation snapshot",
-  "latest_preparation_record": "validation/user-molecule/w05/preparation-status.json"
+  "latest_preparation_record": "validation/user-molecule/w05/preparation-status.json",
+  "ci_execution_scope": "GitHub Actions; local CI recorded separately",
+  "ci_local_execution": "PASS_ENGINEERING_CONTRACTS_ONLY",
+  "latest_ci_record": "validation/user-molecule/ci-local-20261005.json",
+  "ci_local_test_commit": "c671025e2a2933ed26e9406ee4b878f1163c443c"
 }

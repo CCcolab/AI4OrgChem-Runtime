@@ -46,4 +46,4 @@ PowerShell 5.1 入口查找已有 PS 7.3+，不自动安装；无需宿主 PySCF
 
 pilot / STO-3G 与 research / 6-31G(d) 已完成两份候选输入的 AO/元数据 Check；research 的 d π 分类另有禁止 SCF/格点/ERI 调用的守卫实测。两个 profile 的 SCF 均未执行；资格继续 false。身份及当前范围见 [W05 准备记录](USER_MOLECULE_W05_PREPARATION_zh-CN.md)；此前镜像构建、监督与失败说明见保留的历史 [W01—W04 交付记录](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md)。
 
-同定义独立数值参考与成熟方法解释对照尚未执行；变分性 NOT_ESTABLISHED、稳定性 NOT_EXECUTED，不宣称单键能、实验测量、普遍共轭/芳香性结论或任意分子适用。原 L4 可保存检查点但不能恢复。WSLc BLOCKED、Colab DEFERRED、CI 实跑 NOT_EXECUTED、镜像分发 BLOCKED；公开继续暂停。
+同定义独立数值参考与成熟方法解释对照尚未执行；变分性 NOT_ESTABLISHED、稳定性 NOT_EXECUTED，不宣称单键能、实验测量、普遍共轭/芳香性结论或任意分子适用。原 L4 可保存检查点但不能恢复。WSLc BLOCKED、Colab DEFERRED、镜像分发 BLOCKED；公开继续暂停。本地工程/合同 [CI 检查已通过](USER_MOLECULE_CI_20261005_zh-CN.md)，GitHub Actions 实跑仍 NOT_EXECUTED；该通过不打开 Compute。

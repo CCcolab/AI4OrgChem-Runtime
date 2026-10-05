@@ -1,0 +1,67 @@
+{
+  "status": "LOCAL_CI_ENGINEERING_PASS",
+  "runtime_test_commit": "c671025e2a2933ed26e9406ee4b878f1163c443c",
+  "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+  "runtime_image_build_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+  "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "unit_counts": {
+    "input-resource-w05-contracts": 22,
+    "scientific-adapter-engineering": 4,
+    "legacy-test_runtime": 7,
+    "legacy-test_process": 3,
+    "legacy-test_classifier_adapter": 2
+  },
+  "unit_test_total": 38,
+  "host_integration_actions": 10,
+  "research_metadata_guard": "PASS",
+  "github_actions": "NOT_EXECUTED",
+  "new_image_build": "NOT_EXECUTED",
+  "scientific_scf": "NOT_EXECUTED",
+  "W05_numerical_acceptance": "BLOCKED / NOT_EXECUTED",
+  "production_compute_enabled": false,
+  "publication": "NOT_EXECUTED",
+  "wslc": "BLOCKED / NOT_EXECUTED; paused",
+  "platform_probe_count": 4,
+  "evidence_root": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-ci",
+  "evidence_sha256": {
+    "attempt-1/BASELINE.json": "846a5ba7d5699fe5b60ca677e1fb8fe74d02a403182880cdb20d96bd660e57ff",
+    "attempt-1/input-resource-w05-contracts/execution.json": "3ba90200827f3369fdf88c89ac375e053037e1fa5ed01fee484c0c498fb3382a",
+    "attempt-2/BASELINE.json": "fdca1f1e72ca86f639a9847a9d2652e53f525ba65e1875559b55be224c2b5670",
+    "attempt-2/summary.json": "eefae5868fff2201dcc2ed26ca2b3065054067c6a588a233a5e59b207a3b658f",
+    "WORKFLOW_STATIC_REVIEW.json": "61a7b97597471538ece9b902efd71f78c87af0e956730fd4caa18ec89226c07c",
+    "EVIDENCE_AND_PRESERVATION_REVIEW.json": "5a4cd9a399a535ba5ee5c471d24d14f9655d371380340a7d5d1a2cdf81f977ab"
+  },
+  "failed_attempt": "attempt-1: noexec temporary venv, fixed only in isolated CI environment; logs retained",
+  "workflow_review": {
+    "status": "STATIC_REVIEW_COMPLETED",
+    "workflow_sha256": "df2cb94adf97e54787b6b826c1b96f15538da19c493ad0266942ed6980398379",
+    "workflow_git_blob": "50003d0ef7fb303fc2bdc863d0c519c0bd0bea71",
+    "yaml_parser": "PyYAML 6.0.3 pure Python from existing locked wheel; no host installation",
+    "bash_blocks_syntax_checked": 5,
+    "permissions": {
+      "contents": "read"
+    },
+    "jobs": [
+      "linux",
+      "user-molecule-contracts"
+    ],
+    "pinned_actions": [
+      "actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+      "actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+      "actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+      "actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02"
+    ],
+    "remote_github_execution": "NOT_EXECUTED",
+    "image_build_this_round": "NOT_EXECUTED",
+    "local_workflow_equivalence_limit": "Local minimal dependency installation uses existing wheels offline; GitHub online installation, Ubuntu runner, Actions actions, build and artifact upload not executed here",
+    "new_service_remote_scope": "input/resource/fixture contracts; excludes unpublished science adapter, Docker/PowerShell and numerical acceptance"
+  },
+  "scope_by_work_package": {
+    "W01": "Recorded preservation/source locks checked",
+    "W02": "Input/resource engineering pass; scientific criteria partial",
+    "W03": "Metadata/disabled-compute gates pass; numerical NOT_EXECUTED",
+    "W04": "Scoped Docker/PowerShell supervision pass; no rebuild",
+    "W05": "Preparation contracts pass; numerical and peak calibration BLOCKED / NOT_EXECUTED"
+  },
+  "github_limit": "No actual runner, remote build, online install, artifact upload or workflow dispatch"
+}
