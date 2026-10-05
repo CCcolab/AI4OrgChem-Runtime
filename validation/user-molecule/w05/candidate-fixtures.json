@@ -1,0 +1,147 @@
+{
+  "revision": "W05-PREPARATION-1",
+  "fixtures": [
+    {
+      "id": "ethene-planar-technical-v1",
+      "formula": "C2H4",
+      "xyz_path": "examples/user-molecule/w05-candidates/ethene-planar-technical-v1/molecule.xyz",
+      "xyz_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+      "atom_count": 6,
+      "electron_count": 16,
+      "charge": 0,
+      "multiplicity": 1,
+      "coordinate_unit": "angstrom",
+      "fragments_1based": {
+        "A": [
+          1
+        ],
+        "B": [
+          2
+        ]
+      },
+      "maximum_abs_z_angstrom": 0.0,
+      "minimum_pair_distance_angstrom": 1.09,
+      "origin": {
+        "kind": "ANALYTIC_TEST_GEOMETRY",
+        "generator": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-preparation\\prepare_inputs.py",
+        "parameters": {
+          "CC_angstrom": 1.34,
+          "CH_angstrom": 1.09,
+          "HCC_angle_degrees": 120
+        },
+        "interpretation": "Chosen fixed test parameters; not experimental, optimized or a literature reference. Carbon split is a mathematical control, not a claimed bond energy partition."
+      },
+      "bytes_status": "FIXED_FOR_REVIEW",
+      "method_scope": "PENDING_REVIEW",
+      "scientific_execution": "NOT_EXECUTED",
+      "expected_energies": null,
+      "requests": [
+        {
+          "profile_id": "pilot-b3lypg-sto3g-grid2-v1",
+          "path": "examples/user-molecule/w05-candidates/ethene-planar-technical-v1/request-pilot.json",
+          "sha256": "a348a5a63631c5d394d034e6b3538f5fc4229b3d50c79d9134a3726c842f07f9",
+          "resources": {
+            "threads": 1,
+            "memory_limit_mib": 512,
+            "wall_time_limit_seconds": 60
+          },
+          "preflight_execution": "PASS_METADATA_ONLY",
+          "run_directory": "D:\\AI4Science\\user-molecule-runs\\w05-preparation\\check-20261005T085824Z-4a1cdea1f0bd4e749b0acce790464a60",
+          "normalized_request_sha256": "46a9f72bcf346e3be353d98291d8873a957675329f907ffd8271ca72df61bbab",
+          "nao": 14,
+          "basis_expansion_sha256": "397234c7936b4f3e5fd1523c2b1cc12c8766be4ac5abc876c10f79096439b0ed"
+        },
+        {
+          "profile_id": "research-b3lypg-631gd-grid3-v1",
+          "path": "examples/user-molecule/w05-candidates/ethene-planar-technical-v1/request-research.json",
+          "sha256": "87df2748465fca1c400332f3e26a9367192df95ac4177abcbdea66fd5f3596e2",
+          "resources": {
+            "threads": 1,
+            "memory_limit_mib": 512,
+            "wall_time_limit_seconds": 60
+          },
+          "preflight_execution": "PASS_METADATA_ONLY",
+          "run_directory": "D:\\AI4Science\\user-molecule-runs\\w05-preparation\\check-20261005T085829Z-30862b5aae524e7b8a6ad725fdd4c58b",
+          "normalized_request_sha256": "c261ccc77bc63cb90884aab8c153b81737157d50478fe4a85f6fc9eb62b730da",
+          "nao": 36,
+          "basis_expansion_sha256": "91189faaecb03fa633bc3516a168728d00524ca7715ff837f9ac4a272ec0a504"
+        }
+      ],
+      "measurement_note": "Distances are geometry observations; no collision threshold is inferred from them."
+    },
+    {
+      "id": "butadiene-p08-G-fixed-v1",
+      "formula": "C4H6",
+      "xyz_path": "examples/user-molecule/w05-candidates/butadiene-p08-G-fixed-v1/molecule.xyz",
+      "xyz_sha256": "e7ed960314fc44e42053a7d4913efa953e26a918a75b9ac09d4744168e4aa20c",
+      "atom_count": 10,
+      "electron_count": 30,
+      "charge": 0,
+      "multiplicity": 1,
+      "coordinate_unit": "angstrom",
+      "fragments_1based": {
+        "A": [
+          1,
+          2
+        ],
+        "B": [
+          3,
+          4
+        ]
+      },
+      "maximum_abs_z_angstrom": 2.4435226763862975e-14,
+      "minimum_pair_distance_angstrom": 1.0858194456773087,
+      "origin": {
+        "kind": "FROZEN_UPSTREAM_COORDINATES_ONLY",
+        "source_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+        "source_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "source_path": "evidence/P01-P14/P08/result.json",
+        "source_sha256": "a707a595ef7eeb5669fd704a1967a8f4f92f5405912af7641e91975daff9e420",
+        "json_pointer": "/ground_geometry/atoms",
+        "coordinate_unit": "angstrom",
+        "unit_basis": "science-v0.2/scripts/science_v0.2/run_wp2_open_program_anchors.py anchor_specs uses these atoms with gto.M unit=Angstrom",
+        "unit_basis_sha256": "bbdeb06b31d6cfff25771bf90467406ceec1dc721d089d72035cd1e79e8a4eee",
+        "transformation": "Reformat atoms to XYZ, round-trip floats; preserve atom order and tiny z values; no rotation, projection or optimization",
+        "interpretation": "P08 GL2014 result energies/labels are not expected values for the P09 2011 user-molecule definition."
+      },
+      "bytes_status": "FIXED_FOR_REVIEW",
+      "method_scope": "PENDING_REVIEW",
+      "scientific_execution": "NOT_EXECUTED",
+      "expected_energies": null,
+      "requests": [
+        {
+          "profile_id": "pilot-b3lypg-sto3g-grid2-v1",
+          "path": "examples/user-molecule/w05-candidates/butadiene-p08-G-fixed-v1/request-pilot.json",
+          "sha256": "b563d2870d257830752a1284e26192ff7f19ad86455a03730148c40c390c9dad",
+          "resources": {
+            "threads": 1,
+            "memory_limit_mib": 512,
+            "wall_time_limit_seconds": 60
+          },
+          "preflight_execution": "PASS_METADATA_ONLY",
+          "run_directory": "D:\\AI4Science\\user-molecule-runs\\w05-preparation\\check-20261005T085833Z-ab72e3ca135d42009cce3e21fc2ab4dc",
+          "normalized_request_sha256": "1cee903e7191615fd7f950dce11b325aa0c608f3651bb44096997147567f8329",
+          "nao": 26,
+          "basis_expansion_sha256": "397234c7936b4f3e5fd1523c2b1cc12c8766be4ac5abc876c10f79096439b0ed"
+        },
+        {
+          "profile_id": "research-b3lypg-631gd-grid3-v1",
+          "path": "examples/user-molecule/w05-candidates/butadiene-p08-G-fixed-v1/request-research.json",
+          "sha256": "e3bae2acfbfb368e27449017926a11d37925af9aea56aa671bf227db1301593a",
+          "resources": {
+            "threads": 1,
+            "memory_limit_mib": 512,
+            "wall_time_limit_seconds": 60
+          },
+          "preflight_execution": "PASS_METADATA_ONLY",
+          "run_directory": "D:\\AI4Science\\user-molecule-runs\\w05-preparation\\check-20261005T085838Z-96a229ca6ca44416aa7ced352ab01c71",
+          "normalized_request_sha256": "6f369f388ad91426f5f92e52cef7be0198f7fc240b2a24ec91b45aba87c8222f",
+          "nao": 68,
+          "basis_expansion_sha256": "91189faaecb03fa633bc3516a168728d00524ca7715ff837f9ac4a272ec0a504"
+        }
+      ],
+      "measurement_note": "Distances are geometry observations; no collision threshold is inferred from them."
+    }
+  ],
+  "scientific_scope": "Candidate code-validation fixtures; not approved research examples or two new scientific results"
+}

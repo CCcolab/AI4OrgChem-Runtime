@@ -1,5 +1,5 @@
 {
-  "revision": "W01-W04-ENGINEERING-1",
+  "revision": "W05-PREPARATION-1",
   "date": "2026-10-05",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -16,7 +16,7 @@
     },
     "W03": {
       "implementation": "INSPECT_AND_COMPUTE_ADAPTER_IMPLEMENTED",
-      "validation": "INSPECT_AND_GATE_TESTS_PASS",
+      "validation": "PILOT_AND_RESEARCH_METADATA_INSPECT_PASS; COMPUTE_GATED",
       "compute_numerical_execution": "NOT_EXECUTED"
     },
     "W04": {
@@ -24,8 +24,11 @@
       "validation": "SCOPED_LOCAL_DOCKER_ENGINEERING_PASS"
     },
     "W05": {
-      "implementation": "NOT_STARTED",
-      "validation": "NOT_EXECUTED"
+      "implementation": "PREPARATION_COMPLETED; REFERENCE_AND_ACCEPTANCE_DRIVERS_NOT_IMPLEMENTED",
+      "validation": "FOUR_METADATA_CHECKS_AND_GUARDED_RESEARCH_INSPECT_PASS",
+      "numerical_acceptance": "NOT_EXECUTED",
+      "ready_to_execute_scf": false,
+      "status_record": "validation/user-molecule/w05/preparation-status.json"
     },
     "W06": {
       "implementation": "NOT_STARTED",
@@ -44,13 +47,13 @@
   "new_build": "EXECUTED; r3 PASS",
   "new_scientific_runs": "NOT_EXECUTED",
   "compute_enabled": false,
-  "new_service_tests": "31 unit tests, 9 integration actions, 4 scoped container probes passed",
+  "new_service_tests": "31 unit tests, 9 integration actions, 4 scoped container probes passed; W05 adds four metadata-only Checks and one guarded research inspect, no science runs",
   "wslc": "BLOCKED / NOT_EXECUTED; paused",
   "colab": "DEFERRED",
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "W05: freeze reviewed fixtures/criteria/resource budget and perform independent technical acceptance; W06 remains separate",
+  "next_bounded_task": "Resolve B01-B06, implement independent reference and missing gates, freeze per-field thresholds and bounded acceptance budget before pilot numerical acceptance; W06 remains separate",
   "scientific_pending": [
     "collision/conditioning/gap criteria",
     "resource calibration and maximum compute nAO",
@@ -59,5 +62,6 @@
     "reviewed molecular scope and at least two new systems",
     "energy/operator/occupation interpretation; variational status NOT_ESTABLISHED; stability NOT_EXECUTED"
   ],
-  "history": "LOCAL-SETUP-1 retained in prior Git commits and preimplementation snapshot"
+  "history": "LOCAL-SETUP-1 retained in prior Git commits and preimplementation snapshot",
+  "latest_preparation_record": "validation/user-molecule/w05/preparation-status.json"
 }

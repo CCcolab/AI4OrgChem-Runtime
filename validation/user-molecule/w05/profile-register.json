@@ -1,0 +1,41 @@
+{
+  "profiles": [
+    {
+      "id": "pilot-b3lypg-sto3g-grid2-v1",
+      "path": "profiles/user-molecule/pilot-b3lypg-sto3g-grid2-v1.json",
+      "snapshot_path": "validation/user-molecule/w05/profile-snapshots/pilot-b3lypg-sto3g-grid2-v1.json",
+      "sha256": "c3359c80f2b292c14875335b8e14a22e37f35858581402b0b47e0f20c6884f45",
+      "configuration_bytes": "SNAPSHOT_FIXED",
+      "scientific_acceptance": "NOT_EXECUTED",
+      "compute_enabled": false,
+      "host_snapshot_sha256": "c3359c80f2b292c14875335b8e14a22e37f35858581402b0b47e0f20c6884f45",
+      "git_blob_sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9",
+      "git_blob_object_id": "534250becfcc463e883a5fcb36944225bc1a3745",
+      "build_archive_sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9",
+      "image_profile_sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9",
+      "image_identity_verification": "MATCHES_ACTUAL_CHECK_PREFLIGHT_PROFILE_HASH",
+      "runtime_build_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+      "byte_transformation": "Host CRLF -> Git/build LF; exact byte comparison passed for this file",
+      "parsed_configuration_equal": true
+    },
+    {
+      "id": "research-b3lypg-631gd-grid3-v1",
+      "path": "profiles/user-molecule/research-b3lypg-631gd-grid3-v1.json",
+      "snapshot_path": "validation/user-molecule/w05/profile-snapshots/research-b3lypg-631gd-grid3-v1.json",
+      "sha256": "257b7578569584e46b2eef4fd48a5fbc965e87b5f7d9a989433f3a187a590f8d",
+      "configuration_bytes": "SNAPSHOT_FIXED",
+      "scientific_acceptance": "NOT_EXECUTED",
+      "compute_enabled": false,
+      "host_snapshot_sha256": "257b7578569584e46b2eef4fd48a5fbc965e87b5f7d9a989433f3a187a590f8d",
+      "git_blob_sha256": "65839a55949e196b79d03fdd8f7b7da81ff3d36eb1a6d68d84766dce7caf62b9",
+      "git_blob_object_id": "e939aa4a6d614bb5e01011ea9ed198e4a7f4d071",
+      "build_archive_sha256": "65839a55949e196b79d03fdd8f7b7da81ff3d36eb1a6d68d84766dce7caf62b9",
+      "image_profile_sha256": "65839a55949e196b79d03fdd8f7b7da81ff3d36eb1a6d68d84766dce7caf62b9",
+      "image_identity_verification": "MATCHES_ACTUAL_CHECK_PREFLIGHT_PROFILE_HASH",
+      "runtime_build_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+      "byte_transformation": "Host CRLF -> Git/build LF; exact byte comparison passed for this file",
+      "parsed_configuration_equal": true
+    }
+  ],
+  "rule": "sha256 is the preserved host snapshot identity; image_profile_sha256 is used by actual Check. Each CRLF/LF relationship was verified separately; no settings or image changed."
+}

@@ -1,0 +1,131 @@
+{
+  "research_guard": {
+    "record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-preparation\\guarded-research-probe\\guarded-inspect.json",
+    "status": "PASS_METADATA_ONLY",
+    "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+    "nao": 56,
+    "pi_aos": 16,
+    "d_pi_aos": 8,
+    "d_pi_components": [
+      "xz",
+      "yz"
+    ],
+    "profile_sha256": "65839a55949e196b79d03fdd8f7b7da81ff3d36eb1a6d68d84766dce7caf62b9",
+    "scientific_execution": "NOT_EXECUTED"
+  },
+  "candidate_checks": [
+    {
+      "fixture_id": "ethene-planar-technical-v1",
+      "profile_id": "pilot-b3lypg-sto3g-grid2-v1",
+      "run_directory": "D:\\AI4Science\\user-molecule-runs\\w05-preparation\\check-20261005T085824Z-4a1cdea1f0bd4e749b0acce790464a60",
+      "nao": 14,
+      "electrons": 16,
+      "exit_code": 0,
+      "compute_eligible": false,
+      "reasons": [
+        "W05_NUMERICAL_ACCEPTANCE_NOT_EXECUTED",
+        "RESOURCE_MODEL_NOT_CALIBRATED",
+        "COLLISION_CONDITIONING_GAP_CRITERIA_NOT_FROZEN"
+      ],
+      "identities": {
+        "request_sha256": "a348a5a63631c5d394d034e6b3538f5fc4229b3d50c79d9134a3726c842f07f9",
+        "normalized_sha256": "46a9f72bcf346e3be353d98291d8873a957675329f907ffd8271ca72df61bbab",
+        "geometry_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+        "profile_sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9",
+        "request_schema_sha256": "4600556280be12a8b7ab61c85393d1143d5b2d98132fa19208604d5e1a600a38",
+        "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+        "science_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "source_manifest_sha256": "7849c43d4c31127f67f73970284d175daa3b0e7e5e09585d5d25fe13c6655c49",
+        "runtime_build_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+        "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+        "condition_rules_sha256": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2"
+      },
+      "manifest_sha256": "dad6e8f19fba9973d7ec13c40043390b6ae79ae3f66582293878aa8598a00d6c"
+    },
+    {
+      "fixture_id": "ethene-planar-technical-v1",
+      "profile_id": "research-b3lypg-631gd-grid3-v1",
+      "run_directory": "D:\\AI4Science\\user-molecule-runs\\w05-preparation\\check-20261005T085829Z-30862b5aae524e7b8a6ad725fdd4c58b",
+      "nao": 36,
+      "electrons": 16,
+      "exit_code": 0,
+      "compute_eligible": false,
+      "reasons": [
+        "W05_NUMERICAL_ACCEPTANCE_NOT_EXECUTED",
+        "RESOURCE_MODEL_NOT_CALIBRATED",
+        "COLLISION_CONDITIONING_GAP_CRITERIA_NOT_FROZEN"
+      ],
+      "identities": {
+        "request_sha256": "87df2748465fca1c400332f3e26a9367192df95ac4177abcbdea66fd5f3596e2",
+        "normalized_sha256": "c261ccc77bc63cb90884aab8c153b81737157d50478fe4a85f6fc9eb62b730da",
+        "geometry_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+        "profile_sha256": "65839a55949e196b79d03fdd8f7b7da81ff3d36eb1a6d68d84766dce7caf62b9",
+        "request_schema_sha256": "4600556280be12a8b7ab61c85393d1143d5b2d98132fa19208604d5e1a600a38",
+        "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+        "science_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "source_manifest_sha256": "7849c43d4c31127f67f73970284d175daa3b0e7e5e09585d5d25fe13c6655c49",
+        "runtime_build_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+        "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+        "condition_rules_sha256": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2"
+      },
+      "manifest_sha256": "e5c74b649563574b99e2e3d4796476c72d7d5fd4df45ece61f4b774405bcc69a"
+    },
+    {
+      "fixture_id": "butadiene-p08-G-fixed-v1",
+      "profile_id": "pilot-b3lypg-sto3g-grid2-v1",
+      "run_directory": "D:\\AI4Science\\user-molecule-runs\\w05-preparation\\check-20261005T085833Z-ab72e3ca135d42009cce3e21fc2ab4dc",
+      "nao": 26,
+      "electrons": 30,
+      "exit_code": 0,
+      "compute_eligible": false,
+      "reasons": [
+        "W05_NUMERICAL_ACCEPTANCE_NOT_EXECUTED",
+        "RESOURCE_MODEL_NOT_CALIBRATED",
+        "COLLISION_CONDITIONING_GAP_CRITERIA_NOT_FROZEN"
+      ],
+      "identities": {
+        "request_sha256": "b563d2870d257830752a1284e26192ff7f19ad86455a03730148c40c390c9dad",
+        "normalized_sha256": "1cee903e7191615fd7f950dce11b325aa0c608f3651bb44096997147567f8329",
+        "geometry_sha256": "e7ed960314fc44e42053a7d4913efa953e26a918a75b9ac09d4744168e4aa20c",
+        "profile_sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9",
+        "request_schema_sha256": "4600556280be12a8b7ab61c85393d1143d5b2d98132fa19208604d5e1a600a38",
+        "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+        "science_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "source_manifest_sha256": "7849c43d4c31127f67f73970284d175daa3b0e7e5e09585d5d25fe13c6655c49",
+        "runtime_build_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+        "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+        "condition_rules_sha256": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2"
+      },
+      "manifest_sha256": "182d0e0b9eb3e8234404d6fd0e3d45e306ddf637f38b09a7f069ce1c98a63791"
+    },
+    {
+      "fixture_id": "butadiene-p08-G-fixed-v1",
+      "profile_id": "research-b3lypg-631gd-grid3-v1",
+      "run_directory": "D:\\AI4Science\\user-molecule-runs\\w05-preparation\\check-20261005T085838Z-96a229ca6ca44416aa7ced352ab01c71",
+      "nao": 68,
+      "electrons": 30,
+      "exit_code": 0,
+      "compute_eligible": false,
+      "reasons": [
+        "W05_NUMERICAL_ACCEPTANCE_NOT_EXECUTED",
+        "RESOURCE_MODEL_NOT_CALIBRATED",
+        "COLLISION_CONDITIONING_GAP_CRITERIA_NOT_FROZEN"
+      ],
+      "identities": {
+        "request_sha256": "e3bae2acfbfb368e27449017926a11d37925af9aea56aa671bf227db1301593a",
+        "normalized_sha256": "6f369f388ad91426f5f92e52cef7be0198f7fc240b2a24ec91b45aba87c8222f",
+        "geometry_sha256": "e7ed960314fc44e42053a7d4913efa953e26a918a75b9ac09d4744168e4aa20c",
+        "profile_sha256": "65839a55949e196b79d03fdd8f7b7da81ff3d36eb1a6d68d84766dce7caf62b9",
+        "request_schema_sha256": "4600556280be12a8b7ab61c85393d1143d5b2d98132fa19208604d5e1a600a38",
+        "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+        "science_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "source_manifest_sha256": "7849c43d4c31127f67f73970284d175daa3b0e7e5e09585d5d25fe13c6655c49",
+        "runtime_build_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+        "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+        "condition_rules_sha256": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2"
+      },
+      "manifest_sha256": "7ef60f49b7e064caee62e24539ec7e54e3b7226ac93081adbee2d9d31acd968b"
+    }
+  ],
+  "scope": "AO, effective profile, mapping, input and provenance only; no numerical/research qualification"
+}

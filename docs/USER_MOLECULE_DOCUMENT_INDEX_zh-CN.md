@@ -1,8 +1,8 @@
 # 用户分子服务：当前实施文档入口
 
-日期：2026-10-05；W01-W04-ENGINEERING-1。本页指向隔离分支的实际实现与方案。W01 基线与工作区完成；W02 请求/元数据检查已实测但科学判据未闭合；W03 适配器实现且 inspect 已测，compute 数值运行未执行；W04 新候选、启动器和受限容器探针已实测。Compute 仍 BLOCKED；未继承旧七任务或研究资格。
+日期：2026-10-05；W05-PREPARATION-1。本页指向隔离分支的实际实现与方案。W01—W04 工程候选保留；W05 已完成两份候选输入、两 profile 的四次 Check、research 守卫 inspect、判据与预算登记，但参考实现与数值验收未执行。Compute 仍 BLOCKED；未继承旧七任务或研究资格。
 
-操作从 [用户指南](USER_MOLECULE_RUN_zh-CN.md) 开始；实际身份、支持矩阵、失败与未决项见 [本轮交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md)。LOCAL-SETUP-1 和 TECHNICAL-PLAN-1 的未实现描述为编写时历史，当前状态以本轮记录为准。工程交付不代表独立科学审阅通过。
+操作从 [用户指南](USER_MOLECULE_RUN_zh-CN.md) 开始；当前实际身份、范围与缺口见 [W05 准备](USER_MOLECULE_W05_PREPARATION_zh-CN.md)，此前构建和监督见历史 [W01—W04 交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md)。LOCAL-SETUP-1、TECHNICAL-PLAN-1 和旧交付的描述为编写时状态。工程/准备交付不代表独立科学审阅通过。
 
 ## 1. 实施时首先阅读
 
@@ -11,6 +11,8 @@
 | [完整技术方案与实施步骤](USER_MOLECULE_TECHNICAL_PLAN_zh-CN.md) | 架构、接口、状态、资源、来源与 W01—W07；首要工程依据 |
 | [技术设计与步骤对应](USER_MOLECULE_DESIGN_STEP_MAP_zh-CN.md) | 解释各部件在七步中的分工 |
 | [本地目录结构](USER_MOLECULE_DIRECTORY_LAYOUT_zh-CN.md) | 实际位置、占位状态、输入/输出与备份 |
+| [W05 准备记录](USER_MOLECULE_W05_PREPARATION_zh-CN.md) | 实测元数据、候选夹具、19 项判据、参考与资源提案；数值未执行 |
+| [W05 决策单](templates/USER_MOLECULE_W05_DECISIONS_zh-CN.md) | B01—B07 的具体证据与出口；未填写不代表批准 |
 | [设计与验收合同](USER_MOLECULE_ENTRY_DESIGN_zh-CN.md) | 输入与资格合同，A01—A18 最低要求 |
 | [本地服务实施细则](USER_MOLECULE_IMPLEMENTATION_DETAILS_zh-CN.md) | D0—D3 阶段出口、职责与科学待办 |
 | [专业实施方案](../ai4orgchem-runtime-implementation-plan-professional-revised.md) | 项目定位、现有服务、用户分子主线与 C06 |
@@ -45,7 +47,10 @@
 
 - [directory-manifest.json](../validation/user-molecule/directory-manifest.json)：本轮登记目录、用途和对应步骤。
 - [implementation-state.json](../validation/user-molecule/implementation-state.json)：当前工作包、新服务、平台和公开状态。
+- [w05/preparation-status.json](../validation/user-molecule/w05/preparation-status.json)：当前准备、实际四次检查与未执行范围。
 
 目录准备历史快照保留在 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261005-user-molecule-preimplementation-setup\latest\`。本轮工程与验证记录保存在 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261005-user-molecule-w01-w04\`，含构建归档、实际命令/日志、验证与保留核查。它们不属于旧外审包。
 
 原 runtime 主工作区仍为 `0288eb8`，原未跟踪方案继续保留。后续工程使用 `D:\AI4Science\ai4orgchem-runtime-workspaces\user-molecule\runtime` 的独立分支；科学适配器使用相邻 science 工作区，来源于固定发布提交的独立 checkout。新增代码/文档/历史需另行确认公开范围。
+
+W05 本轮新记录独立保存于 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261005-user-molecule-w05-preparation\`，不覆盖旧交付或外审包。四次 Check 的原始输出位于 `D:\AI4Science\user-molecule-runs\w05-preparation\`。

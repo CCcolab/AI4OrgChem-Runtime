@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "service": "user-molecule-fixed",
+  "geometry_file": "molecule.xyz",
+  "coordinate_unit": "angstrom",
+  "charge": 0,
+  "multiplicity": 1,
+  "research_question": "W05 候选夹具：指定条件定义的代码验证；方法范围待审，尚不开展研究计算",
+  "condition_definition_acknowledged": true,
+  "fragments": [
+    {
+      "id": "A",
+      "carbon_atom_indices_1based": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "B",
+      "carbon_atom_indices_1based": [
+        3,
+        4
+      ]
+    }
+  ],
+  "condition_profile": "cross-fragment-pi-2011-v1",
+  "calculation_profile": "pilot-b3lypg-sto3g-grid2-v1",
+  "resources": {
+    "threads": 1,
+    "memory_limit_mib": 512,
+    "wall_time_limit_seconds": 60
+  }
+}

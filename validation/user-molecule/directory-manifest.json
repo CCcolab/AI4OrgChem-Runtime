@@ -1,5 +1,5 @@
 {
-  "revision": "W01-W04-ENGINEERING-1",
+  "revision": "W05-PREPARATION-1",
   "date": "2026-10-05",
   "active_runtime_workspace": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime",
   "original_runtime_preserved": "D:\\AI4Science\\ai4orgchem-runtime",
@@ -95,6 +95,26 @@
       "owner": "external",
       "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w01-w04",
       "purpose": "Build archives, raw evidence, reports and local backup",
+      "status": "EXISTS"
+    },
+    {
+      "owner": "runtime",
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime\\examples\\user-molecule\\w05-candidates",
+      "relative_path": "examples/user-molecule/w05-candidates",
+      "purpose": "Two fixed candidate geometries and four metadata-only requests; method scope pending",
+      "status": "CREATED_AND_POPULATED"
+    },
+    {
+      "owner": "runtime",
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime\\validation\\user-molecule\\w05",
+      "relative_path": "validation/user-molecule/w05",
+      "purpose": "Profiles, criteria, reference and budget proposals; numerical NOT_EXECUTED",
+      "status": "CREATED_AND_POPULATED"
+    },
+    {
+      "owner": "external",
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-preparation",
+      "purpose": "Metadata evidence and separate preparation backup; old delivery unchanged",
       "status": "EXISTS"
     }
   ],

@@ -1,0 +1,50 @@
+{
+  "scope": "Concrete review worksheet; no fabricated approver or approval",
+  "decisions": [
+    {
+      "id": "B01",
+      "decision": "Approve or revise candidate geometries/pi groups for technical tests; research scope is separate; reused P08 geometry is not automatically a new-system acceptance fixture",
+      "material": "candidate-fixtures.json",
+      "status": "PENDING_METHOD_REVIEW"
+    },
+    {
+      "id": "B02",
+      "decision": "Freeze collision distance and masked overlap conditioning policy",
+      "material": "criteria-register.json T01/T02",
+      "status": "TBD"
+    },
+    {
+      "id": "B03",
+      "decision": "Freeze degeneracy/small-gap diagnostic policy and operator-source output",
+      "material": "criteria-register.json T03",
+      "status": "TBD"
+    },
+    {
+      "id": "B04",
+      "decision": "Review full effective profile, independent reference definitions and per-field comparison thresholds",
+      "material": "profile-register.json / reference-plan.json / T04-T06",
+      "status": "PENDING_REVIEW"
+    },
+    {
+      "id": "B05",
+      "decision": "Approve bounded calibration/numerical batch and implement phase/accounting/peak controls",
+      "material": "resource-budget-proposal.json",
+      "status": "PROPOSED_NOT_EXECUTED"
+    },
+    {
+      "id": "B06",
+      "decision": "Implement/audit acceptance drivers and missing gates before claiming D2",
+      "material": "reference-plan.json; reserved fields are not active gates",
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "B07",
+      "decision": "W06 energy/operator/occupation explanation, complete reference and actual research scope approval",
+      "material": "existing condition/method contracts",
+      "status": "DEFERRED_TO_W06"
+    }
+  ],
+  "approver": null,
+  "approved_at": null,
+  "scientific_scf_budget_authorized": false
+}

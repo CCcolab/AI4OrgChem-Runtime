@@ -1,0 +1,128 @@
+{
+  "status": "SPECIFICATION_PREPARED; IMPLEMENTATION_AND_NUMERICAL_EXECUTION_NOT_EXECUTED",
+  "lineage": {
+    "rules": "Fixed fifteen-class YAML may be read as data, with its locked SHA; not called as a code oracle",
+    "independent_required": [
+      "AO parity/mapping verification",
+      "scalar deletion and eightfold closure",
+      "scalar J/K contractions",
+      "component ledger",
+      "h/S/F projection",
+      "density/occupation/conditional iteration"
+    ],
+    "forbidden_imports_for_reference": [
+      "ai4orgchem.qm.user_molecule_adapter",
+      "ai4orgchem.qm.p09_eri_mask",
+      "ai4orgchem.qm.p09_ao_classification",
+      "ai4orgchem.qm.p09_energy_assembly",
+      "ai4orgchem.qm.p09_conditional_scf",
+      "ai4orgchem.lfmo.gl2014"
+    ],
+    "shared_dependencies": [
+      "Pinned PySCF raw integrals and semilocal XC",
+      "Pinned NumPy/SciPy linear algebra"
+    ],
+    "shared_blind_spots": [
+      "Does not independently validate integral engine, LibXC functional or linear algebra libraries"
+    ],
+    "previous_source_tests": "Old mask/energy tests call production helpers; useful regression, not this independent reference"
+  },
+  "layers": [
+    {
+      "id": "R01",
+      "purpose": "Independent ordinary RKS driver",
+      "input": "same XYZ/atoms, profile full effective settings",
+      "comparison": [
+        "energy",
+        "density",
+        "electron count",
+        "five energy components",
+        "effective grids/settings"
+      ],
+      "threshold_ids": [
+        "T04"
+      ],
+      "implementation": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "R02",
+      "purpose": "Independent toy and same-D scalar witness",
+      "input": "versioned symmetric toy tensor and fixed common density; real raw I/S/h for allowed small fixture",
+      "comparison": [
+        "all fifteen ordered witnesses",
+        "eightfold closure",
+        "allowed quartets preserved",
+        "Itilde",
+        "J",
+        "K",
+        "h/S",
+        "Fraw/Fcond",
+        "each energy component"
+      ],
+      "threshold_ids": [
+        "T05"
+      ],
+      "implementation": "NOT_IMPLEMENTED",
+      "rule": "Do not use tested output as sole expected; float tolerances frozen before first run"
+    },
+    {
+      "id": "R03",
+      "purpose": "Two production ERI storage paths",
+      "input": "same converged ordinary D, geometry/profile/initial conditions; acceptance-only mode identity",
+      "comparison": [
+        "energy difference",
+        "density Frobenius",
+        "deletion counts",
+        "qualification diagnostics"
+      ],
+      "threshold_ids": [
+        "P12",
+        "P13"
+      ],
+      "implementation": "ACCEPTANCE_DRIVER_NOT_IMPLEMENTED",
+      "limitation": "Shared production core and rule logic; not independent conditional reference"
+    },
+    {
+      "id": "R04",
+      "purpose": "Independent complete conditional fixed point",
+      "input": "small fixture <=40 nAO, same D initialization/global occupation strategy/stopping contract",
+      "comparison": [
+        "operators and components first",
+        "occupation/state/iteration diagnostics",
+        "then final energies and density"
+      ],
+      "threshold_ids": [
+        "T06"
+      ],
+      "implementation": "NOT_IMPLEMENTED",
+      "phase": "W06 research opening requirement"
+    },
+    {
+      "id": "R05",
+      "purpose": "Invariants and failure semantics",
+      "input": "A/B rename, paired reorder/mapping, internal single-group control, gate failure and nonfinite records",
+      "comparison": [
+        "model identity",
+        "zero deletion internal control",
+        "required gates and null comparison on failure"
+      ],
+      "implementation": "ACCEPTANCE_CASES_NOT_IMPLEMENTED",
+      "note": "Single-group is internal math control, not a valid public two-group request"
+    }
+  ],
+  "state_selection": "Keep global closed-shell get_occ strategy; no MOM/fractional occupancy/level shift/rotation or rule changes to force agreement. Degeneracy or differing fixed points require reviewed classification, not tolerance relaxation.",
+  "method_comparison": {
+    "BLW_ALMO_NBO_cDFT": "Separate scientific explanation track; existing method table remains evidence, numeric external runs NOT_EXECUTED",
+    "not_an_equivalence_gate": true,
+    "no_extra_installation_in_this_batch": true
+  },
+  "freeze_before_execution": [
+    "reference code commit and import audit",
+    "input/normalized geometry/profile/rule hashes",
+    "per-field tolerances and required/diagnostic classification",
+    "common density generation recipe and exact density identity",
+    "state-selection policy",
+    "science budget and running purpose acceptance-only"
+  ],
+  "activation_boundary": "Any acceptance-only enable flag is scoped to a reviewed driver/profile with new identity; do not edit production v1 profiles or publish a ready Compute claim."
+}

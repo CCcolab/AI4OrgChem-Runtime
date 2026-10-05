@@ -1,0 +1,103 @@
+{
+  "status": "PROPOSED_FOR_REVIEW_NOT_SCF_AUTHORIZATION",
+  "this_batch": {
+    "allowed_actions": [
+      "four Check runs",
+      "guarded research metadata probe",
+      "documents and byte snapshots"
+    ],
+    "scientific_processes_executed": 0,
+    "per_check": {
+      "cpus": 1,
+      "threads": 1,
+      "memory_mib": 512,
+      "memory_swap_total_mib": 512,
+      "wall_seconds": 60
+    }
+  },
+  "future_candidate_ceilings": {
+    "scalar_reference_nao_max": 40,
+    "scalar_reference_threads": 1,
+    "ordinary_and_path_nao_max": 80,
+    "ordinary_and_path_threads_max": 2,
+    "hard_memory_mib_max": 4096,
+    "hard_memory_bytes_max": 4294967296,
+    "per_scientific_process_wall_seconds_max": 900,
+    "per_science_batch_sum_child_wall_seconds_max": 7200,
+    "swap": "none",
+    "execution": "serial shared runtime lock"
+  },
+  "first_science_batch_proposal": {
+    "profile": "pilot-b3lypg-sto3g-grid2-v1",
+    "fixtures": [
+      "ethene-planar-technical-v1",
+      "butadiene-p08-G-fixed-v1"
+    ],
+    "ordinary_independent_driver_processes_max": 2,
+    "two_state_single_tensor_processes_max": 2,
+    "two_state_reference_copy_processes_max": 2,
+    "fixed_density_reference_processes_max": 2,
+    "fixed_density_reference_per_process_wall_seconds_max": 600,
+    "worst_case_reserved_child_wall_seconds": 6600,
+    "remaining_within_7200_seconds": 600,
+    "note": "Scheduling ceilings only, not predicted runtime or guaranteed convergence; calibration measured within these same bounded processes. Actual child times, failures/retries and derivatives all count; stop before exceeding the batch budget."
+  },
+  "research_science_batch": "DEFERRED until pilot accepted; separate reviewed budget required, not a second implicit 7200-second allowance",
+  "scale_observations": [
+    {
+      "fixture_id": "ethene-planar-technical-v1",
+      "profile_id": "pilot-b3lypg-sto3g-grid2-v1",
+      "nao": 14,
+      "single_float64_eri_lower_bound_bytes": 307328,
+      "single_float64_eri_lower_bound_mib": 0.2930908203125,
+      "reference_two_float64_plus_one_bool_tensor_floor_bytes": 653072,
+      "process_peak_bytes": null,
+      "peak_calibration": "NOT_EXECUTED",
+      "scalar_reference_nao_le_40": true
+    },
+    {
+      "fixture_id": "ethene-planar-technical-v1",
+      "profile_id": "research-b3lypg-631gd-grid3-v1",
+      "nao": 36,
+      "single_float64_eri_lower_bound_bytes": 13436928,
+      "single_float64_eri_lower_bound_mib": 12.814453125,
+      "reference_two_float64_plus_one_bool_tensor_floor_bytes": 28553472,
+      "process_peak_bytes": null,
+      "peak_calibration": "NOT_EXECUTED",
+      "scalar_reference_nao_le_40": true
+    },
+    {
+      "fixture_id": "butadiene-p08-G-fixed-v1",
+      "profile_id": "pilot-b3lypg-sto3g-grid2-v1",
+      "nao": 26,
+      "single_float64_eri_lower_bound_bytes": 3655808,
+      "single_float64_eri_lower_bound_mib": 3.4864501953125,
+      "reference_two_float64_plus_one_bool_tensor_floor_bytes": 7768592,
+      "process_peak_bytes": null,
+      "peak_calibration": "NOT_EXECUTED",
+      "scalar_reference_nao_le_40": true
+    },
+    {
+      "fixture_id": "butadiene-p08-G-fixed-v1",
+      "profile_id": "research-b3lypg-631gd-grid3-v1",
+      "nao": 68,
+      "single_float64_eri_lower_bound_bytes": 171051008,
+      "single_float64_eri_lower_bound_mib": 163.126953125,
+      "reference_two_float64_plus_one_bool_tensor_floor_bytes": 363483392,
+      "process_peak_bytes": null,
+      "peak_calibration": "NOT_EXECUTED",
+      "scalar_reference_nao_le_40": false
+    }
+  ],
+  "resource_model": null,
+  "approved_maximum_compute_nao": null,
+  "calibration_plan": [
+    "Measure cgroup current/peak, actual Docker limits, wall time, observed grids and phase; RSS separately is not total cgroup peak",
+    "Bind envelope to ERI storage mode, grid/profile/dependency identities and tested fixtures; tensor lower bounds omit buffers, temporaries, Python and grids",
+    "Account for two float64 tensors plus bool mask for copy mode, tmpfs and safety allowance; do not infer process peak from 8*nAO^4",
+    "Test envelope against a held-out or boundary measurement before extrapolation; if samples insufficient, restrict qualification to exact tested fixtures",
+    "Use effective cgroup/VM available memory plus hard request cap at start; unknown/insufficient resources => BLOCKED",
+    "Do not increase limits automatically, restart failed jobs to reset accounting, or run old L3/L4"
+  ],
+  "boundary": "Research butadiene nAO=68 exceeds scalar reference ceiling 40; restrict scalar/full small reference candidate to ethene nAO=36 or review a new approach/budget. Do not increase the ceiling."
+}
