@@ -37,3 +37,9 @@
 本地 Docker 的原 W01—W04 工程范围已验证；本轮测试是干净新源码只读挂载到旧镜像的工程验证。WSLc BLOCKED / NOT_EXECUTED，WSL 升级暂停；GitHub Actions NOT_EXECUTED；镜像分发 BLOCKED；源码推送/正式标签/Release 未授权。旧 L3/L4 不重算，L4 保存检查点但不支持恢复。
 
 实际执行次数、提交、镜像身份和日志索引以 [本轮验证记录](../validation/user-molecule/w06/engineering-review.json) 为准；该记录不把静态实现列为科学 PASS。
+
+## 本轮实际验证
+
+最终测试提交 `43e80de31140d8685b5087ac5ac56654c7e68e28`，只读干净 Git 导出运行在现有 r3 镜像。54 项单元测试（32 请求/资源/准备/资格与简报、15 独立参考 toy、7 旧 runtime 回归）全部通过，无跳过；一项实际元数据 Check、Compute BLOCKED/20、只读 Report 均通过。分子 SCF/网格/积分调用被禁止；完整分子参考与 W05/W06 数值验收仍 NOT_EXECUTED。测试容器非 root、断网、源码只读、1 CPU/512 MiB/noswap/120 秒上限，已删除且输出文件哈希复核通过。
+
+第一轮 `3500d0b` 的 53 项 PASS 保留为历史；第二轮补结果正文指纹绑定及非正交/非零 ERI 解析 toy。未新增依赖或随包第三方代码。当前 CI 配置未修改，未来最小依赖 job 将匹配新增的 10 项研究/简报测试；数组参考未加入远端 job，GitHub Actions 仍未执行。

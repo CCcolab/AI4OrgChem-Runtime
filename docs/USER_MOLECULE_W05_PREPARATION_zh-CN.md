@@ -4,6 +4,8 @@
 
 后续 [本地 CI 增补](USER_MOLECULE_CI_20261005_zh-CN.md) 已验证受测工程/准备合同；下述准备批原始记录不覆盖，科学验收及远端 GitHub Actions 状态仍未执行。
 
+后续 [W06 工程记录](USER_MOLECULE_W06_ENGINEERING_zh-CN.md) 已实现部分共享的独立数组参考、资格判读与短简报候选。本页以下及 w05 JSON 保留准备时事实；普通独立驱动、完整分子验收驱动、资源/数值与方法范围仍未闭合，Compute 继续关闭。
+
 ## 1. 已完成的低成本检查
 
 | 候选输入 | 两个碳 π 组（XYZ 从 1 编号） | STO-3G / grid 2 nAO | 6-31G(d) / grid 3 nAO | 实际结果 |
