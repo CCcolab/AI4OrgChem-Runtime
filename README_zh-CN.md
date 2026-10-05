@@ -1,14 +1,14 @@
 # AI4OrgChem 可复算运行环境
 
-2026-10-05 隔离分支增补：用户分子入口 W01—W04 工程候选已建立，Check 和 Report 已实测；Compute 保持 BLOCKED，尚未执行新分子 SCF 或 W05/W06 科学验收。使用 [新入口指南](docs/USER_MOLECULE_RUN_zh-CN.md)，核查 [本轮交付与支持矩阵](docs/USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md)。下文 L0—L4 结论属于原七任务候选，不转移为新服务的科学资格。原主工作区与既有候选保留。
+2026-10-05 隔离分支现状：Check 和 Report 可用，生产 Compute 保持 **BLOCKED**。[W05—W06 受限分子验收](docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md) 已执行，普通态及同密度算子对照在所列范围内通过，但条件态驻定、两存储路径等价性和完整参考门禁失败，不能进入正式 W07。下文 L0—L4 属于原七任务候选，不转移为新服务科学资格；原工作区与既有交付保留。
 
-W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 已保存两份候选分子、两配置四次元数据 Check、判据/独立参考/资源提案；数值验收 NOT_EXECUTED，生产 Compute 继续关闭，研究范围待审。
+W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 是此前的元数据批次。本轮补齐独立普通态、完整条件参考桥接和验收/记账驱动，84项工程单元测试通过；四组完整流程的原生峰值已测，实际限额1 GiB、1 CPU、零 swap。资源结论限定精确夹具，不构成通用计算规模或研究范围批准。
 
 [W01—W05 本地工程/合同 CI](docs/USER_MOLECULE_CI_20261005_zh-CN.md) 已通过38项单元测试、10个集成用例和4项平台探针；GitHub Actions 未执行，该结论不代表 W05 数值验收通过。
 
-最新 [W01—W06 本地工程 CI](docs/USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md) 已通过63项独立单元用例（102次执行）、10个Windows集成动作、3个W06服务动作、4项平台探针和7项PowerShell检查。此前批次保留；新分子科学验收、GitHub Actions与WSLc状态不因此升级。
+此前完整 [W01—W06 本地工程 CI](docs/USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md) 的63项独立单元用例（102次执行）及集成/平台记录保留，与本轮数值失败分别登记。GitHub Actions 仍 NOT_EXECUTED，WSLc 仍 BLOCKED/暂停。
 
-[W06 工程候选](docs/USER_MOLECULE_W06_ENGINEERING_zh-CN.md) 增加独立数组条件参考、只读研究资格判读和短简报；分子参考/资源/研究验收仍未执行，Compute 保持关闭。当前 r3 镜像尚不包含这些增补。
+[W06 工程候选](docs/USER_MOLECULE_W06_ENGINEERING_zh-CN.md) 和新参考通过干净提交的只读挂载复用旧 r3 镜像，尚未重建到镜像内。[SCF与方法审阅任务书](docs/USER_MOLECULE_SCF_REVIEW_REQUEST_zh-CN.md) 列出真实剩余阻塞；没有数值合格研究结果，没有公开发布。
 
 2026-10-03 交付审查完成：本地 Docker 已验证 L0—L4、等价性与固定协议联合分类；WSLc **BLOCKED / NOT_EXECUTED**；CI **静态审查完成，运行 NOT_EXECUTED**。**镜像分发 BLOCKED；源码公开另行确认**。见 [最终审查摘要](validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md)、[许可证审查](docs/LICENSE_REVIEW_zh-CN.md)。
 

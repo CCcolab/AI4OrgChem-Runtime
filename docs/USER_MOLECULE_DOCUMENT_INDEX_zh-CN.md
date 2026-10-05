@@ -1,12 +1,12 @@
 # 用户分子服务：当前实施文档入口
 
-日期：2026-10-05；W06-ENGINEERING-1。本页指向隔离分支的实际实现与方案。W01—W04 工程候选保留；W05 已完成两份候选输入、两 profile 的四次 Check、research 守卫 inspect、判据与预算登记。W06 新增独立数组参考与只读资格判读候选，但分子参考/数值验收未执行，普通驱动与完整验收/资源闭环仍缺。Compute 仍 BLOCKED；未继承旧七任务或研究资格。
+日期：2026-10-05；W05-W06-NUMERICAL-EVIDENCE-1。独立普通态、完整条件参考桥接、验收及原生资源记账已实现并实测；普通态/同 D 对照通过所列门禁，条件资格/路径等价性/完整参考失败，资源仅覆盖精确夹具流程。Compute 和正式 W07 仍 BLOCKED，研究范围待真实审阅。此前工程/准备记录保留为历史。
 
-操作从 [用户指南](USER_MOLECULE_RUN_zh-CN.md) 开始；当前实际身份、范围与缺口见 [W05 准备](USER_MOLECULE_W05_PREPARATION_zh-CN.md)，此前构建和监督见历史 [W01—W04 交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md)。LOCAL-SETUP-1、TECHNICAL-PLAN-1 和旧交付的描述为编写时状态。工程/准备交付不代表独立科学审阅通过。
+操作从 [用户指南](USER_MOLECULE_RUN_zh-CN.md) 开始；最新身份、范围与缺口见 [数值审查](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md)。此前 [W05 准备](USER_MOLECULE_W05_PREPARATION_zh-CN.md) 与 [W01—W04 交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md) 为历史批次，不冒充当前状态。
 
-[W01—W05 本地 CI](USER_MOLECULE_CI_20261005_zh-CN.md) 已通过受测工程/合同检查；GitHub Actions 与 W05 数值验收仍 NOT_EXECUTED。本页和 implementation-state 的 ci_execution 指远端 Actions，本地执行另行登记。
+[W01—W05 本地 CI](USER_MOLECULE_CI_20261005_zh-CN.md) 已通过历史工程/合同检查；GitHub Actions 仍 NOT_EXECUTED，新分子数值验收已执行但失败。本页和 implementation-state 的 ci_execution 指远端 Actions，本地执行另行登记。
 
-最新 [W01—W06 本地 CI](USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md) 已通过63项独立单元用例与受测集成/平台检查；当前源码与旧镜像身份分别记录，不改变研究验收与 Compute 门禁。
+此前完整 [W01—W06 本地 CI](USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md) 的63项独立用例及集成/平台记录保留；本轮新增驱动最终84项单元用例通过，科学数值失败另行报告，Compute 门禁不变。
 
 ## 1. 实施时首先阅读
 
@@ -18,6 +18,8 @@
 | [W05 准备记录](USER_MOLECULE_W05_PREPARATION_zh-CN.md) | 实测元数据、候选夹具、19 项判据、参考与资源提案；数值未执行 |
 | [W05 决策单](templates/USER_MOLECULE_W05_DECISIONS_zh-CN.md) | B01—B07 的具体证据与出口；未填写不代表批准 |
 | [W06 工程候选及缺口](USER_MOLECULE_W06_ENGINEERING_zh-CN.md) | 独立数组迭代/资格判读/短简报，真实执行与研究开放分别记录 |
+| [W05—W06 数值验收与资源实测](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md) | 实际失败、精确范围峰值、身份与三个前置条件现状 |
+| [SCF/研究范围审阅入口](USER_MOLECULE_SCF_REVIEW_REQUEST_zh-CN.md) | 依据原始失败提出具体科学审阅问题，不代签批准 |
 | [设计与验收合同](USER_MOLECULE_ENTRY_DESIGN_zh-CN.md) | 输入与资格合同，A01—A18 最低要求 |
 | [本地服务实施细则](USER_MOLECULE_IMPLEMENTATION_DETAILS_zh-CN.md) | D0—D3 阶段出口、职责与科学待办 |
 | [专业实施方案](../ai4orgchem-runtime-implementation-plan-professional-revised.md) | 项目定位、现有服务、用户分子主线与 C06 |

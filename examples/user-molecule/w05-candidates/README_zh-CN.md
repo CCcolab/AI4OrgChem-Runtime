@@ -2,6 +2,8 @@
 
 2026-10-05。两种固定 xy 平面、中性单重态 C/H 输入，供验收准备审阅。每个目录包含 molecule.xyz、request-pilot.json 和 request-research.json；不是已获准的研究模板，没有 expected 能量。原子编号从 1 起，两组只指定碳 π 归属；氢的 σ AO 不需被分配到 π 组。
 
+后续 [受限数值验收](../../../docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md) 已执行：乙烯条件态未通过，丁二烯 pilot 普通态门禁失败；丁二烯 research 条件参考未执行（68 nAO 超过参考40上限）。下表是此前元数据 Check，不能作数值或研究资格。
+
 | 目录 | π 组 | 几何来源 | 当前结果 |
 |---|---|---|---|
 | ethene-planar-technical-v1 | [1] / [2] | 指定参数构造的解析几何，非实验或优化 | 两 profile Check 通过，14/36 nAO |

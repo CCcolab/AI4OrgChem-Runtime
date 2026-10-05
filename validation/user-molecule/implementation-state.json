@@ -1,5 +1,5 @@
 {
-  "revision": "W06-ENGINEERING-1",
+  "revision": "W05-W06-NUMERICAL-EVIDENCE-1",
   "date": "2026-10-05",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -12,38 +12,40 @@
     "W02": {
       "implementation": "REQUEST_AND_CHECK_IMPLEMENTED",
       "validation": "INPUT_METADATA_CHECKS_PASS",
-      "scientific_criteria": "NOT_FROZEN; D1 acceptance remains partial"
+      "scientific_criteria": "ACCEPTANCE_ONLY_CANDIDATE_GUARDS_FROZEN; production scientific scope not approved"
     },
     "W03": {
       "implementation": "INSPECT_AND_COMPUTE_ADAPTER_IMPLEMENTED",
       "validation": "PILOT_AND_RESEARCH_METADATA_INSPECT_PASS; COMPUTE_GATED",
-      "compute_numerical_execution": "NOT_EXECUTED"
+      "compute_numerical_execution": "NOT_EXECUTED",
+      "acceptance_driver_execution": "EXECUTED_UNQUALIFIED; production adapter Compute stays disabled"
     },
     "W04": {
       "implementation": "CONTAINER_AND_HOST_SUPERVISION_IMPLEMENTED",
       "validation": "SCOPED_LOCAL_DOCKER_ENGINEERING_PASS"
     },
     "W05": {
-      "implementation": "PREPARATION_COMPLETED; PARTIAL_SHARED_ARRAY_REFERENCE_IMPLEMENTED; ORDINARY_AND_ACCEPTANCE_DRIVERS_MISSING",
-      "validation": "FOUR_METADATA_CHECKS_AND_GUARDED_RESEARCH_INSPECT_PASS",
-      "numerical_acceptance": "NOT_EXECUTED",
+      "implementation": "ORDINARY_REFERENCE_AND_BOUNDED_ACCEPTANCE_DRIVERS_IMPLEMENTED",
+      "validation": "ORDINARY_AND_OPTIMIZED_SAME_D_COMPARISONS_PASS_SCOPED; CONDITIONAL_GATES_FAIL",
+      "numerical_acceptance": "EXECUTED_FAILED_FROZEN_GATES",
       "ready_to_execute_scf": false,
-      "status_record": "validation/user-molecule/w05/preparation-status.json"
+      "status_record": "validation/user-molecule/w05-w06/numerical-review.json"
     },
     "W06": {
       "implementation": "ARRAY_REFERENCE_AND_READONLY_ASSESSMENT_IMPLEMENTED",
-      "validation": "54 UNIT TESTS AND THREE GUARDED ENGINEERING ACTIONS PASS; MOLECULAR ACCEPTANCE NOT_EXECUTED",
-      "molecular_reference": "NOT_EXECUTED",
+      "validation": "84 GUARDED ENGINEERING UNIT TESTS PASS; ACTUAL MOLECULAR GATES FAIL",
+      "molecular_reference": "EXECUTED_FAILED_FROZEN_GATES",
       "research_scope": "NOT_REVIEWED",
-      "D3_exit": "BLOCKED / NOT_EXECUTED",
+      "D3_exit": "BLOCKED",
       "production_activation": false,
       "record": "validation/user-molecule/w06/engineering-review.json",
       "engineering_test_commit": "43e80de31140d8685b5087ac5ac56654c7e68e28",
-      "latest_engineering_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json"
+      "latest_engineering_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json",
+      "latest_numerical_record": "validation/user-molecule/w05-w06/numerical-review.json"
     },
     "W07": {
       "implementation": "FULL_RESEARCH_USER_DELIVERY_NOT_STARTED; engineering guide provided",
-      "validation": "NOT_EXECUTED"
+      "validation": "BLOCKED; W05/W06 actual numerical and scope gates unresolved"
     }
   },
   "git_workspaces": {
@@ -52,29 +54,33 @@
     "branch": "implementation/user-molecule-w01-w04"
   },
   "new_build": "EXECUTED; r3 PASS",
-  "new_scientific_runs": "NOT_EXECUTED",
+  "new_scientific_runs": "EXECUTED_ACCEPTANCE_ONLY_NOT_QUALIFIED",
   "compute_enabled": false,
-  "new_service_tests": "Current W01-W06 local CI: 63 unique unit tests/102 executions, 10 PS launcher actions, 3 guarded W06 Python service actions, 4 platform probes, metadata and AST/path guards; no molecular SCF",
+  "new_service_tests": "Final new-driver engineering source:84 guarded unit cases PASS; old full W01-W06 63 unique/102 executions and integration probes remain separate historical evidence",
   "wslc": "BLOCKED / NOT_EXECUTED; paused",
   "colab": "DEFERRED",
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Close W05 B01-B06, ordinary/acceptance drivers and calibrated budget; only then execute D2 and W06 molecular/reference/scope acceptance",
+  "next_bounded_task": "Read-only scientific review of SCF stopping/state selection using retained failed evidence; no automatic new calculation, profile activation or W07 research exit",
   "scientific_pending": [
-    "collision/conditioning/gap criteria",
-    "resource calibration and maximum compute nAO",
-    "full effective profile review",
-    "independent basic/full conditional reference",
-    "reviewed molecular scope and at least two new systems",
-    "energy/operator/occupation interpretation; variational status NOT_ESTABLISHED; stability NOT_EXECUTED"
+    "conditional stationarity/convergence and state-selection contract",
+    "two storage path equivalence and independent full reference acceptance",
+    "separated nonoptimized molecular same-D witness",
+    "per-mode peaks and general-user resource qualification",
+    "real method scope responsibility and two qualified research systems",
+    "professional-user interpretation trial",
+    "variational status NOT_ESTABLISHED; stability NOT_EXECUTED"
   ],
-  "history": "LOCAL-SETUP-1 retained in prior Git commits and preimplementation snapshot",
+  "history": "Previous setup/preparation/engineering states retained in Git and immutable earlier deliveries",
   "latest_preparation_record": "validation/user-molecule/w05/preparation-status.json",
   "ci_execution_scope": "GitHub Actions; local CI recorded separately",
   "ci_local_execution": "PASS_SCOPED_W01_W06_ENGINEERING_ONLY",
   "latest_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json",
   "ci_local_test_commit": "2dce58cffd5208231772ca1c55ac037bcd0cc9b9",
   "latest_w06_record": "validation/user-molecule/w06/engineering-review.json",
-  "previous_ci_record": "validation/user-molecule/ci-local-20261005.json"
+  "previous_ci_record": "validation/user-molecule/ci-local-20261005.json",
+  "latest_numerical_record": "validation/user-molecule/w05-w06/numerical-review.json",
+  "scientific_test_commit": "65c5848d0a9fe58d4f7320e15eadeba2ebd61db6",
+  "previous_numerical_preparation_record": "validation/user-molecule/w05/preparation-status.json"
 }

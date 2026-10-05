@@ -1,0 +1,1113 @@
+{
+  "revision": "W05-W06-NUMERICAL-EVIDENCE-1",
+  "date": "2026-10-05",
+  "runtime_test_commit": "65c5848d0a9fe58d4f7320e15eadeba2ebd61db6",
+  "image_identity": {
+    "runtime_test_commit": "65c5848d0a9fe58d4f7320e15eadeba2ebd61db6",
+    "source_archive_sha256": "d36f830d9812ab948cd5ab21ef6f78dceaf393c43ee603869ef33fdaf2a47c2b",
+    "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+    "image_runtime_build_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+    "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+    "contract_sha256": "69c877be0ed70833dae4d3248e13d57bcc43440c8918de03be12d254f7abb6be",
+    "host_available_memory_bytes": 4299153408,
+    "scope": "New committed source mounted read-only over existing image; not a rebuilt service image"
+  },
+  "production_compute_enabled": false,
+  "scientific_rules_changed": false,
+  "tolerances_relaxed": false,
+  "science_execution": "EXECUTED_ACCEPTANCE_ONLY_NOT_QUALIFIED",
+  "local_engineering_tests": {
+    "status": "PASS",
+    "executions": 84,
+    "ids": [
+      "test_user_molecule_acceptance_metrics.ScalarRecordTests.test_engine_numpy_real_scalars_keep_zero_and_signed_residuals",
+      "test_user_molecule_acceptance_metrics.ScalarRecordTests.test_nonfinite_bool_complex_and_array_cannot_be_metric_values",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_cgroup_peak_is_read_without_reset_and_limits_are_observed",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_corrupt_existing_ledger_is_preserved_and_refused",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_existing_batch_limits_cannot_be_reset_or_increased",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_failures_and_termination_overhead_charge_actual_wall",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_hard_ceilings_and_identity_are_checked_before_reservation",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_missing_peak_unbounded_limits_and_bad_events_stay_unknown",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_mutating_caller_identity_does_not_mutate_reservation",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_negative_nonfinite_boolean_and_missing_reason_are_rejected",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_observed_oom_peak_overrun_and_swap_refuse_resource_candidate",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_os_lock_refuses_second_holder_without_reset",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_overrun_is_not_clamped_to_reservation",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_reservation_survives_reopen_and_insufficient_budget_blocks",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_resource_envelope_binds_exact_fixture_and_never_extrapolates",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_same_run_cannot_be_rereserved_or_resettled",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_combined_memsw_limit_is_converted_to_swap_allowance",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_discovery_never_falls_back_to_unrelated_parent_mount",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_limit_failure_current_oom_or_kill_refuses_candidate",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_membership_resolves_relative_to_controller_mount_root",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_missing_oom_kill_count_requires_bound_completed_inspect",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_namespace_root_and_mountinfo_escaped_paths_are_preserved",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_native_definitions_and_hard_limits_are_preserved",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_observes_actual_paths_and_does_not_reset_peak",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_oom_false_alone_and_wrong_identity_cannot_substitute_history",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_unbounded_kernel_sentinel_and_cpu_quota_are_unknown_limits",
+      "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_unknown_memsw_support_refuses_no_swap_claim",
+      "test_user_molecule_contracts.W05PreparationContractTests.test_frozen_source_materials_and_rule_identity_match",
+      "test_user_molecule_contracts.W05PreparationContractTests.test_geometry_and_request_bytes_match_review_receipts",
+      "test_user_molecule_contracts.W05PreparationContractTests.test_groups_cover_carbon_exactly_and_electron_count_is_consistent",
+      "test_user_molecule_contracts.W05PreparationContractTests.test_missing_acceptance_decisions_do_not_become_compute_permission",
+      "test_user_molecule_contracts.W05PreparationContractTests.test_no_process_peak_or_compute_size_is_inferred_from_eri_lower_bounds",
+      "test_user_molecule_contracts.W05PreparationContractTests.test_proposed_batch_fits_registered_cumulative_ceiling",
+      "test_user_molecule_contracts.W05PreparationContractTests.test_raw_snapshots_and_actual_image_profile_identity_remain_distinct",
+      "test_user_molecule_input.UserMoleculeInputTests.test_carbon_groups_missing_overlap_hydrogen_out_of_range",
+      "test_user_molecule_input.UserMoleculeInputTests.test_duplicate_and_nonfinite_json",
+      "test_user_molecule_input.UserMoleculeInputTests.test_geometry_path_escape_absolute_uri_missing",
+      "test_user_molecule_input.UserMoleculeInputTests.test_input_mutation_changes_receipt_identity",
+      "test_user_molecule_input.UserMoleculeInputTests.test_request_size_cap",
+      "test_user_molecule_input.UserMoleculeInputTests.test_resource_integer_and_hard_bounds",
+      "test_user_molecule_input.UserMoleculeInputTests.test_strict_atomic_records_reject_nan",
+      "test_user_molecule_input.UserMoleculeInputTests.test_symlink_rejected",
+      "test_user_molecule_input.UserMoleculeInputTests.test_unicode_space_input_and_explicit_atom_mapping",
+      "test_user_molecule_input.UserMoleculeInputTests.test_unknown_fields_types_limits_and_profiles",
+      "test_user_molecule_input.UserMoleculeInputTests.test_xyz_truncation_extra_structure_element_nonfinite_nonplanar_collision",
+      "test_user_molecule_ordinary_reference.OrdinaryReferenceTests.test_array_identity_canonical_order_and_finite_requirement",
+      "test_user_molecule_ordinary_reference.OrdinaryReferenceTests.test_build_freezes_explicit_configuration_without_grid_or_scf",
+      "test_user_molecule_ordinary_reference.OrdinaryReferenceTests.test_conditional_bridge_analytical_fixed_point_and_frozen_initial_density",
+      "test_user_molecule_ordinary_reference.OrdinaryReferenceTests.test_dependency_and_nao_cap_rejected_before_any_grid_or_integral",
+      "test_user_molecule_ordinary_reference.OrdinaryReferenceTests.test_fake_engine_ordinary_recomputes_metrics_and_separates_json_arrays",
+      "test_user_molecule_ordinary_reference.OrdinaryReferenceTests.test_invalid_functional_arrays_and_nonfinite_xc_rejected",
+      "test_user_molecule_ordinary_reference.OrdinaryReferenceTests.test_no_production_import_or_helper_calls",
+      "test_user_molecule_ordinary_reference.OrdinaryReferenceTests.test_ordinary_energy_coefficients_and_no_conditional_projection",
+      "test_user_molecule_ordinary_reference.OrdinaryReferenceTests.test_ordinary_nonconvergence_recorded_without_research_approval",
+      "test_user_molecule_ordinary_reference.OrdinaryReferenceTests.test_unsupported_grid_units_mapping_threads_and_orientation_fail_before_build",
+      "test_user_molecule_preflight.CpuHierarchyTests.test_hybrid_inactive_v2_does_not_hide_v1_limit",
+      "test_user_molecule_preflight.CpuHierarchyTests.test_missing_and_malformed_counters_remain_unknown",
+      "test_user_molecule_preflight.CpuHierarchyTests.test_unlimited_v1_still_honors_affinity",
+      "test_user_molecule_preflight.CpuHierarchyTests.test_v2_nested_ancestor_and_fractional_quota",
+      "test_user_molecule_research.ResearchTests.test_bare_qualified_string_cannot_approve_research",
+      "test_user_molecule_research.ResearchTests.test_brief_request_check_sign_limits_and_no_html_injection",
+      "test_user_molecule_research.ResearchTests.test_changed_each_identity_never_inherits_scope",
+      "test_user_molecule_research.ResearchTests.test_exact_scope_receipts_and_no_mutation",
+      "test_user_molecule_research.ResearchTests.test_failed_or_blocked_execution_and_wrong_energy_identity",
+      "test_user_molecule_research.ResearchTests.test_missing_actual_reference_or_budget_cannot_pass",
+      "test_user_molecule_research.ResearchTests.test_no_real_scopes_registered",
+      "test_user_molecule_research.ResearchTests.test_pilot_success_is_technical_only",
+      "test_user_molecule_research.ResearchTests.test_required_failure_partial_state_nonfinite_and_empty_tests",
+      "test_user_molecule_research.ResearchTests.test_tampered_missing_ambiguous_or_escaped_receipt_fails",
+      "test_reference_user_molecule.ReferenceTests.test_all_fifteen_ordered_witnesses",
+      "test_reference_user_molecule.ReferenceTests.test_all_scalar_mask_decisions_and_internal_single_group_control",
+      "test_reference_user_molecule.ReferenceTests.test_analytical_complete_iteration_global_occupation_and_final_metrics",
+      "test_reference_user_molecule.ReferenceTests.test_complete_iteration_nonorthogonal_metric_and_nonzero_interactions",
+      "test_reference_user_molecule.ReferenceTests.test_eightfold_closure_and_allowed_integrals",
+      "test_reference_user_molecule.ReferenceTests.test_exact_matrix_mask_and_no_source_mutation",
+      "test_reference_user_molecule.ReferenceTests.test_exact_rule_identity_required",
+      "test_reference_user_molecule.ReferenceTests.test_failure_nonfinite_nonpositive_metric_and_iteration_limit",
+      "test_reference_user_molecule.ReferenceTests.test_global_full_occupancy_gap_undefined",
+      "test_reference_user_molecule.ReferenceTests.test_independent_ao_classification_spd_orientation_and_mapping",
+      "test_reference_user_molecule.ReferenceTests.test_independent_diis_affine_and_singular_fallback",
+      "test_reference_user_molecule.ReferenceTests.test_limits_before_large_array_copy",
+      "test_reference_user_molecule.ReferenceTests.test_non_diagonal_same_density_jk_and_hand_ledger",
+      "test_reference_user_molecule.ReferenceTests.test_reference_has_no_production_import_or_function_call",
+      "test_reference_user_molecule.ReferenceTests.test_rename_and_paired_permutation_preserve_model"
+    ],
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "import_audit": [
+      {
+        "path": "reference/user_molecule.py",
+        "sha256": "b45ff07b3ef31ea960bd4de94a3072ffa2699c8355e4d6633775b1915eeb75d6",
+        "imports": [
+          "dataclasses",
+          "hashlib",
+          "itertools",
+          "pathlib",
+          "numpy",
+          "scipy.linalg",
+          "yaml"
+        ],
+        "status": "PASS_STATIC_IMPORT_AND_DIRECT_NAME_AUDIT"
+      },
+      {
+        "path": "reference/ordinary_molecule.py",
+        "sha256": "d30696cc55370c02f8384d1aaaa6eaaa36aa607ed619e99a8e00f7cbc2a914ac",
+        "imports": [
+          "dataclasses",
+          "hashlib",
+          "importlib.metadata",
+          "json",
+          "math",
+          "numpy",
+          "scipy.linalg",
+          "reference",
+          "pyscf",
+          "pyscf.dft"
+        ],
+        "status": "PASS_STATIC_IMPORT_AND_DIRECT_NAME_AUDIT"
+      }
+    ],
+    "scientific_work": "FORBIDDEN"
+  },
+  "remote_ci": "NOT_EXECUTED",
+  "wslc": "BLOCKED / NOT_EXECUTED; paused",
+  "image_rebuild": "NOT_EXECUTED",
+  "public_push_release": "NOT_EXECUTED; not authorized",
+  "new_image_distribution": "BLOCKED",
+  "variational_status": "NOT_ESTABLISHED",
+  "stability_analysis": "NOT_EXECUTED",
+  "runs": [
+    {
+      "case": "pilot-ethene",
+      "attempt": "numerical-a3",
+      "status": "FAIL_NUMERICAL_GATES",
+      "nao": 14,
+      "failed_metric_ids": [
+        "conditional.single.commutator",
+        "conditional.copy.commutator",
+        "P12.storage_energy",
+        "P13.storage_density",
+        "conditional.reference.commutator",
+        "T06.energy",
+        "T06.components.coulomb",
+        "T06.components.semilocal_xc",
+        "T06.density",
+        "T06.fock"
+      ],
+      "error": null,
+      "comparison_available": false,
+      "delta_hartree": null,
+      "research_qualification": "NOT_QUALIFIED",
+      "raw_wrapper_research_status": "NOT_REVIEWED",
+      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a3\\pilot-ethene\\result.json",
+      "result_sha256": "39672405b58d0af0ec2478532c2edf424e3a4957f332a7b040cad65b209d192d",
+      "wall_seconds": 7.812000000005355,
+      "container_exit_code": 30,
+      "container_removed": true,
+      "oom_killed": false,
+      "resource_status": "RESOURCE_CANDIDATE_EXACT_FIXTURE",
+      "resource_scope": "EXACT_GEOMETRY_PROFILE_DEPENDENCIES_AND_MODE_ONLY",
+      "peak_mib": 118.81640625,
+      "T04": {
+        "passed": 13,
+        "total": 13
+      },
+      "T05": {
+        "passed": 21,
+        "total": 21
+      },
+      "comparisons": {
+        "P12.storage_energy": {
+          "value": 1.7651784958161443e-06,
+          "threshold": 1e-10,
+          "units": "Eh",
+          "pass": false
+        },
+        "P13.storage_density": {
+          "value": 8.364965699054258e-06,
+          "threshold": 1e-09,
+          "units": "density_AO",
+          "pass": false
+        },
+        "T06.energy": {
+          "value": 9.9955683481312e-06,
+          "threshold": 1e-08,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.one_electron": {
+          "value": 1.457075882171921e-08,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": true
+        },
+        "T06.components.coulomb": {
+          "value": 1.145947858560703e-05,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.exact_exchange": {
+          "value": 3.576778015990101e-07,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": true
+        },
+        "T06.components.semilocal_xc": {
+          "value": 1.0916616783873678e-06,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.nuclear_repulsion": {
+          "value": 0.0,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": true
+        },
+        "T06.density": {
+          "value": 2.8284271254736333,
+          "threshold": 1e-06,
+          "units": "density_AO",
+          "pass": false
+        },
+        "T06.fock": {
+          "value": 2.230577179174094,
+          "threshold": 1e-06,
+          "units": "Eh_AO",
+          "pass": false
+        }
+      },
+      "terminal_states": {
+        "ordinary-tested": {
+          "converged": true,
+          "cycles": null,
+          "total_energy_hartree": -77.6213186207867,
+          "final_commutator_frobenius_norm": 6.207913132036585e-07,
+          "closed_shell_idempotency_relative_residual": 6.026537305070795e-15,
+          "occupied_virtual_gap_hartree": null,
+          "gap_operator_source": null,
+          "energy_component_closure_residual_hartree": 4.263256414560601e-14,
+          "last_iteration": null
+        },
+        "conditional-single": {
+          "converged": true,
+          "cycles": 49,
+          "total_energy_hartree": -77.1841412985577,
+          "final_commutator_frobenius_norm": 0.4709994367787375,
+          "closed_shell_idempotency_relative_residual": 1.900212297332937e-15,
+          "occupied_virtual_gap_hartree": 2.442857884782379e-06,
+          "gap_operator_source": "LAST_DIAGONALIZATION_POSSIBLY_DIIS",
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": {
+            "cycle": 49.0,
+            "total_energy_hartree": -77.18414129832371,
+            "energy_change_hartree": 1.2309442354307976e-10,
+            "density_residual": 2.373534197686196e-10,
+            "commutator_frobenius_norm": 0.4709994374323939,
+            "masked_metric_electron_count": 16.0,
+            "physical_metric_electron_count": 15.99999999999252
+          }
+        },
+        "conditional-copy": {
+          "converged": true,
+          "cycles": 84,
+          "total_energy_hartree": -77.1841430637362,
+          "final_commutator_frobenius_norm": 0.47099449479561495,
+          "closed_shell_idempotency_relative_residual": 1.7442847829912936e-15,
+          "occupied_virtual_gap_hartree": 1.0651146284401669e-08,
+          "gap_operator_source": "LAST_DIAGONALIZATION_POSSIBLY_DIIS",
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": {
+            "cycle": 84.0,
+            "total_energy_hartree": -77.18414306102619,
+            "energy_change_hartree": 8.544418506062357e-10,
+            "density_residual": 5.7805446975271306e-09,
+            "commutator_frobenius_norm": 0.47099450784836083,
+            "masked_metric_electron_count": 16.000000000000004,
+            "physical_metric_electron_count": 16.00000000267414
+          }
+        },
+        "conditional-reference": {
+          "converged": true,
+          "cycles": 29,
+          "total_energy_hartree": -77.18413130298936,
+          "final_commutator_frobenius_norm": 0.47102740433004425,
+          "closed_shell_idempotency_relative_residual": 1.4620367377446226e-15,
+          "occupied_virtual_gap_hartree": 1.6214588036467248e-05,
+          "gap_operator_source": "LAST_DIAGONALIZATION_POSSIBLY_DIIS",
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": {
+            "cycle": 29,
+            "total_energy_hartree": -77.18413130173076,
+            "density_residual": 2.3171105427882145e-09,
+            "energy_change_hartree": 5.001936642656801e-10,
+            "commutator_frobenius": 0.4710274077087529
+          }
+        }
+      }
+    },
+    {
+      "case": "pilot-ethyne",
+      "attempt": "numerical-a3",
+      "status": "FAIL_NUMERICAL_GATES",
+      "nao": 12,
+      "failed_metric_ids": [
+        "conditional.single.converged",
+        "conditional.single.commutator",
+        "conditional.copy.commutator",
+        "P12.storage_energy",
+        "P13.storage_density",
+        "conditional.reference.converged",
+        "conditional.reference.commutator",
+        "T06.energy",
+        "T06.components.one_electron",
+        "T06.components.coulomb",
+        "T06.components.exact_exchange",
+        "T06.components.semilocal_xc",
+        "T06.density",
+        "T06.fock"
+      ],
+      "error": null,
+      "comparison_available": false,
+      "delta_hartree": null,
+      "research_qualification": "NOT_QUALIFIED",
+      "raw_wrapper_research_status": "NOT_REVIEWED",
+      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a3\\pilot-ethyne\\result.json",
+      "result_sha256": "c1c5a292e6004bedab5c69ceb9145d07ee4dc4a1cc9162d844312e2387f1530e",
+      "wall_seconds": 14.969000000011874,
+      "container_exit_code": 30,
+      "container_removed": true,
+      "oom_killed": false,
+      "resource_status": "RESOURCE_CANDIDATE_EXACT_FIXTURE",
+      "resource_scope": "EXACT_GEOMETRY_PROFILE_DEPENDENCIES_AND_MODE_ONLY",
+      "peak_mib": 87.80859375,
+      "T04": {
+        "passed": 13,
+        "total": 13
+      },
+      "T05": {
+        "passed": 21,
+        "total": 21
+      },
+      "comparisons": {
+        "P12.storage_energy": {
+          "value": 0.03531402733844402,
+          "threshold": 1e-10,
+          "units": "Eh",
+          "pass": false
+        },
+        "P13.storage_density": {
+          "value": 2.830132691249474,
+          "threshold": 1e-09,
+          "units": "density_AO",
+          "pass": false
+        },
+        "T06.energy": {
+          "value": 0.03531693497278354,
+          "threshold": 1e-08,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.one_electron": {
+          "value": 0.0004619870941269255,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.coulomb": {
+          "value": 0.038563627856134985,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.exact_exchange": {
+          "value": 0.0008500689272459283,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.semilocal_xc": {
+          "value": 0.0028586110502324402,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.nuclear_repulsion": {
+          "value": 0.0,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": true
+        },
+        "T06.density": {
+          "value": 2.8301323940628684,
+          "threshold": 1e-06,
+          "units": "density_AO",
+          "pass": false
+        },
+        "T06.fock": {
+          "value": 2.05231146862217,
+          "threshold": 1e-06,
+          "units": "Eh_AO",
+          "pass": false
+        }
+      },
+      "terminal_states": {
+        "ordinary-tested": {
+          "converged": true,
+          "cycles": null,
+          "total_energy_hartree": -76.35537789903724,
+          "final_commutator_frobenius_norm": 7.33220656492818e-08,
+          "closed_shell_idempotency_relative_residual": 2.3007249458436606e-15,
+          "occupied_virtual_gap_hartree": null,
+          "gap_operator_source": null,
+          "energy_component_closure_residual_hartree": 2.842170943040401e-14,
+          "last_iteration": null
+        },
+        "conditional-single": {
+          "converged": false,
+          "cycles": 100,
+          "total_energy_hartree": -75.87466905986082,
+          "final_commutator_frobenius_norm": 0.7718826155408901,
+          "closed_shell_idempotency_relative_residual": 1.5847872020421317e-15,
+          "occupied_virtual_gap_hartree": 0.007601071581934321,
+          "gap_operator_source": "LAST_DIAGONALIZATION_POSSIBLY_DIIS",
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": {
+            "cycle": 100.0,
+            "total_energy_hartree": -75.86940762210676,
+            "energy_change_hartree": 0.00826878891614058,
+            "density_residual": 0.0030979471835456407,
+            "commutator_frobenius_norm": 0.7830940803092276,
+            "masked_metric_electron_count": 14.0,
+            "physical_metric_electron_count": 14.000000000000004
+          }
+        },
+        "conditional-copy": {
+          "converged": true,
+          "cycles": 45,
+          "total_energy_hartree": -75.90998308719927,
+          "final_commutator_frobenius_norm": 0.6904957528990315,
+          "closed_shell_idempotency_relative_residual": 1.5536850128882473e-15,
+          "occupied_virtual_gap_hartree": 7.079516204377967e-07,
+          "gap_operator_source": "LAST_DIAGONALIZATION_POSSIBLY_DIIS",
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": {
+            "cycle": 45.0,
+            "total_energy_hartree": -75.90998308480226,
+            "energy_change_hartree": 8.908500603865832e-10,
+            "density_residual": 1.6325186835167033e-09,
+            "commutator_frobenius_norm": 0.6904957588929292,
+            "masked_metric_electron_count": 13.999999999999998,
+            "physical_metric_electron_count": 14.000000000016872
+          }
+        },
+        "conditional-reference": {
+          "converged": false,
+          "cycles": 100,
+          "total_energy_hartree": -75.9099859948336,
+          "final_commutator_frobenius_norm": 0.6904885577577053,
+          "closed_shell_idempotency_relative_residual": 1.7363476019372763e-15,
+          "occupied_virtual_gap_hartree": 3.926709796209238e-08,
+          "gap_operator_source": "LAST_DIAGONALIZATION_POSSIBLY_DIIS",
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": {
+            "cycle": 100,
+            "total_energy_hartree": -75.90998589682313,
+            "density_residual": 0.6363015022240566,
+            "energy_change_hartree": 1.596608143472622e-07,
+            "commutator_frobenius": 0.6904887998341565
+          }
+        }
+      }
+    },
+    {
+      "case": "research-ethene",
+      "attempt": "numerical-a3",
+      "status": "FAIL_NUMERICAL_GATES",
+      "nao": 36,
+      "failed_metric_ids": [
+        "conditional.single.converged",
+        "conditional.single.commutator",
+        "conditional.copy.converged",
+        "conditional.copy.commutator",
+        "P12.storage_energy",
+        "P13.storage_density",
+        "conditional.reference.converged",
+        "conditional.reference.commutator",
+        "T06.energy",
+        "T06.components.one_electron",
+        "T06.components.coulomb",
+        "T06.components.exact_exchange",
+        "T06.components.semilocal_xc",
+        "T06.density",
+        "T06.fock"
+      ],
+      "error": null,
+      "comparison_available": false,
+      "delta_hartree": null,
+      "research_qualification": "NOT_QUALIFIED",
+      "raw_wrapper_research_status": "NOT_REVIEWED",
+      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a3\\research-ethene\\result.json",
+      "result_sha256": "4d2728ce72d72d91eafa9d45aab6867c2f378d930b3cbfa5dcab3eeed5eebd6c",
+      "wall_seconds": 58.296000000002095,
+      "container_exit_code": 30,
+      "container_removed": true,
+      "oom_killed": false,
+      "resource_status": "RESOURCE_CANDIDATE_EXACT_FIXTURE",
+      "resource_scope": "EXACT_GEOMETRY_PROFILE_DEPENDENCIES_AND_MODE_ONLY",
+      "peak_mib": 214.71875,
+      "T04": {
+        "passed": 13,
+        "total": 13
+      },
+      "T05": {
+        "passed": 21,
+        "total": 21
+      },
+      "comparisons": {
+        "P12.storage_energy": {
+          "value": 0.21698420302163868,
+          "threshold": 1e-10,
+          "units": "Eh",
+          "pass": false
+        },
+        "P13.storage_density": {
+          "value": 1.9997455114605323,
+          "threshold": 1e-09,
+          "units": "density_AO",
+          "pass": false
+        },
+        "T06.energy": {
+          "value": 0.20332188563745035,
+          "threshold": 1e-08,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.one_electron": {
+          "value": 0.3367104469717219,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.coulomb": {
+          "value": 0.605838420413022,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.exact_exchange": {
+          "value": 0.012606614950217754,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.semilocal_xc": {
+          "value": 0.05319947285362048,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.nuclear_repulsion": {
+          "value": 0.0,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": true
+        },
+        "T06.density": {
+          "value": 1.9891740571966305,
+          "threshold": 1e-06,
+          "units": "density_AO",
+          "pass": false
+        },
+        "T06.fock": {
+          "value": 3.7554769019324286,
+          "threshold": 1e-06,
+          "units": "Eh_AO",
+          "pass": false
+        }
+      },
+      "terminal_states": {
+        "ordinary-tested": {
+          "converged": true,
+          "cycles": null,
+          "total_energy_hartree": -78.58505227287108,
+          "final_commutator_frobenius_norm": 3.1267861963920185e-06,
+          "closed_shell_idempotency_relative_residual": 5.319115044607285e-15,
+          "occupied_virtual_gap_hartree": null,
+          "gap_operator_source": null,
+          "energy_component_closure_residual_hartree": 2.842170943040401e-14,
+          "last_iteration": null
+        },
+        "conditional-single": {
+          "converged": false,
+          "cycles": 100,
+          "total_energy_hartree": -78.25655882948098,
+          "final_commutator_frobenius_norm": 1.0805335087952552,
+          "closed_shell_idempotency_relative_residual": 1.3253157439345777e-15,
+          "occupied_virtual_gap_hartree": 0.021117334965801787,
+          "gap_operator_source": "LAST_DIAGONALIZATION_POSSIBLY_DIIS",
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": {
+            "cycle": 100.0,
+            "total_energy_hartree": -78.05741258079539,
+            "energy_change_hartree": 0.013374277439453408,
+            "density_residual": 0.525587678531865,
+            "commutator_frobenius_norm": 1.8897320211015294,
+            "masked_metric_electron_count": 16.00000000000001,
+            "physical_metric_electron_count": 15.999996085375352
+          }
+        },
+        "conditional-copy": {
+          "converged": false,
+          "cycles": 100,
+          "total_energy_hartree": -78.03957462645934,
+          "final_commutator_frobenius_norm": 1.9459231073370318,
+          "closed_shell_idempotency_relative_residual": 3.412926406503338e-15,
+          "occupied_virtual_gap_hartree": 0.11381286134458574,
+          "gap_operator_source": "LAST_DIAGONALIZATION_POSSIBLY_DIIS",
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": {
+            "cycle": 100.0,
+            "total_energy_hartree": -78.05064947834452,
+            "energy_change_hartree": 0.003116005096956087,
+            "density_residual": 0.007783803223495689,
+            "commutator_frobenius_norm": 1.9116283377107328,
+            "masked_metric_electron_count": 15.999999999999993,
+            "physical_metric_electron_count": 15.999997440703668
+          }
+        },
+        "conditional-reference": {
+          "converged": false,
+          "cycles": 100,
+          "total_energy_hartree": -78.05323694384353,
+          "final_commutator_frobenius_norm": 1.9037200935260277,
+          "closed_shell_idempotency_relative_residual": 1.9419603058716515e-15,
+          "occupied_virtual_gap_hartree": 0.10915033857063555,
+          "gap_operator_source": "LAST_DIAGONALIZATION_POSSIBLY_DIIS",
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": {
+            "cycle": 100,
+            "total_energy_hartree": -77.94428699489202,
+            "density_residual": 0.06606436977709533,
+            "energy_change_hartree": 0.32917951781999477,
+            "commutator_frobenius": 2.220133440206661
+          }
+        }
+      }
+    },
+    {
+      "case": "research-ethyne",
+      "attempt": "numerical-a3",
+      "status": "FAIL_NUMERICAL_GATES",
+      "nao": 32,
+      "failed_metric_ids": [
+        "conditional.single.converged",
+        "conditional.single.commutator",
+        "conditional.copy.converged",
+        "conditional.copy.commutator",
+        "P12.storage_energy",
+        "P13.storage_density",
+        "conditional.reference.converged",
+        "conditional.reference.commutator",
+        "T06.energy",
+        "T06.components.one_electron",
+        "T06.components.coulomb",
+        "T06.components.exact_exchange",
+        "T06.components.semilocal_xc",
+        "T06.density",
+        "T06.fock"
+      ],
+      "error": null,
+      "comparison_available": false,
+      "delta_hartree": null,
+      "research_qualification": "NOT_QUALIFIED",
+      "raw_wrapper_research_status": "NOT_REVIEWED",
+      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a3\\research-ethyne\\result.json",
+      "result_sha256": "ba2a55fc4d26c2957a89f7f294e6e7b85e15c31bc76f74202d1153e984ecf2a6",
+      "wall_seconds": 24.48499999998603,
+      "container_exit_code": 30,
+      "container_removed": true,
+      "oom_killed": false,
+      "resource_status": "RESOURCE_CANDIDATE_EXACT_FIXTURE",
+      "resource_scope": "EXACT_GEOMETRY_PROFILE_DEPENDENCIES_AND_MODE_ONLY",
+      "peak_mib": 155.96484375,
+      "T04": {
+        "passed": 13,
+        "total": 13
+      },
+      "T05": {
+        "passed": 21,
+        "total": 21
+      },
+      "comparisons": {
+        "P12.storage_energy": {
+          "value": 0.21354408948161563,
+          "threshold": 1e-10,
+          "units": "Eh",
+          "pass": false
+        },
+        "P13.storage_density": {
+          "value": 2.132849588009474,
+          "threshold": 1e-09,
+          "units": "density_AO",
+          "pass": false
+        },
+        "T06.energy": {
+          "value": 0.05106054427525919,
+          "threshold": 1e-08,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.one_electron": {
+          "value": 0.1032129581713832,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.coulomb": {
+          "value": 0.17428423512055957,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.exact_exchange": {
+          "value": 0.004181405788671544,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.semilocal_xc": {
+          "value": 0.01582932688525851,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": false
+        },
+        "T06.components.nuclear_repulsion": {
+          "value": 0.0,
+          "threshold": 1e-06,
+          "units": "Eh",
+          "pass": true
+        },
+        "T06.density": {
+          "value": 0.09152746304551015,
+          "threshold": 1e-06,
+          "units": "density_AO",
+          "pass": false
+        },
+        "T06.fock": {
+          "value": 0.1435215523795203,
+          "threshold": 1e-06,
+          "units": "Eh_AO",
+          "pass": false
+        }
+      },
+      "terminal_states": {
+        "ordinary-tested": {
+          "converged": true,
+          "cycles": null,
+          "total_energy_hartree": -77.32368522638251,
+          "final_commutator_frobenius_norm": 2.0714877206081217e-06,
+          "closed_shell_idempotency_relative_residual": 3.1526448992106447e-15,
+          "occupied_virtual_gap_hartree": null,
+          "gap_operator_source": null,
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": null
+        },
+        "conditional-single": {
+          "converged": false,
+          "cycles": 100,
+          "total_energy_hartree": -76.84460699913913,
+          "final_commutator_frobenius_norm": 1.7706911162529146,
+          "closed_shell_idempotency_relative_residual": 1.4912433200277396e-15,
+          "occupied_virtual_gap_hartree": 0.0038698348560657903,
+          "gap_operator_source": "LAST_DIAGONALIZATION_POSSIBLY_DIIS",
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": {
+            "cycle": 100.0,
+            "total_energy_hartree": -76.59482386709375,
+            "energy_change_hartree": 0.1376883796938273,
+            "density_residual": 0.11403077966739421,
+            "commutator_frobenius_norm": 2.41950505702993,
+            "masked_metric_electron_count": 13.999999999999995,
+            "physical_metric_electron_count": 14.000054636988803
+          }
+        },
+        "conditional-copy": {
+          "converged": false,
+          "cycles": 100,
+          "total_energy_hartree": -76.63106290965752,
+          "final_commutator_frobenius_norm": 2.3358585990199905,
+          "closed_shell_idempotency_relative_residual": 4.157155052888322e-15,
+          "occupied_virtual_gap_hartree": 0.015062338978658274,
+          "gap_operator_source": "LAST_DIAGONALIZATION_POSSIBLY_DIIS",
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": {
+            "cycle": 100.0,
+            "total_energy_hartree": -76.67390061724095,
+            "energy_change_hartree": 0.31458869477127394,
+            "density_residual": 0.020193645419409406,
+            "commutator_frobenius_norm": 2.235700482971603,
+            "masked_metric_electron_count": 14.0,
+            "physical_metric_electron_count": 14.000030036627635
+          }
+        },
+        "conditional-reference": {
+          "converged": false,
+          "cycles": 100,
+          "total_energy_hartree": -76.79354645486387,
+          "final_commutator_frobenius_norm": 1.9281823309027983,
+          "closed_shell_idempotency_relative_residual": 8.248443953433275e-16,
+          "occupied_virtual_gap_hartree": 0.011572342441049571,
+          "gap_operator_source": "LAST_DIAGONALIZATION_POSSIBLY_DIIS",
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": {
+            "cycle": 100,
+            "total_energy_hartree": -76.78014398405327,
+            "density_residual": 0.006774452938523951,
+            "energy_change_hartree": 0.04020938504191918,
+            "commutator_frobenius": 1.9669493136565288
+          }
+        }
+      }
+    }
+  ],
+  "history": [
+    {
+      "case": "pilot-butadiene",
+      "attempt": "numerical-a2",
+      "status": "FAIL_NUMERICAL_GATES",
+      "nao": 26,
+      "failed_metric_ids": [
+        "ordinary.tested.commutator"
+      ],
+      "error": "GateFailure: Ordinary qualification failed; conditional work blocked",
+      "comparison_available": false,
+      "delta_hartree": null,
+      "research_qualification": "NOT_QUALIFIED",
+      "raw_wrapper_research_status": "NOT_REVIEWED",
+      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a2\\pilot-butadiene\\result.json",
+      "result_sha256": "bd8c2e48d2ad862d6b5eeb33619182fa4550f2b715d3e5dcee3c86b8f0f5288a",
+      "wall_seconds": 5.26500000001397,
+      "container_exit_code": 30,
+      "container_removed": true,
+      "oom_killed": false,
+      "resource_status": "BLOCKED",
+      "resource_scope": "EXACT_GEOMETRY_PROFILE_DEPENDENCIES_AND_MODE_ONLY",
+      "peak_mib": 167.30859375,
+      "T04": {
+        "passed": 13,
+        "total": 13
+      },
+      "T05": {
+        "passed": 0,
+        "total": 0
+      },
+      "comparisons": {},
+      "terminal_states": {
+        "ordinary-tested": {
+          "converged": true,
+          "cycles": null,
+          "total_energy_hartree": -154.07501878473977,
+          "final_commutator_frobenius_norm": 2.7382987172043826e-05,
+          "closed_shell_idempotency_relative_residual": 5.185212867477369e-14,
+          "occupied_virtual_gap_hartree": null,
+          "gap_operator_source": null,
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": null
+        }
+      }
+    },
+    {
+      "case": "pilot-ethene",
+      "attempt": "numerical-a2",
+      "status": "FAIL_NUMERICAL_GATES",
+      "nao": 14,
+      "failed_metric_ids": [
+        "T05.component.nuclear_repulsion"
+      ],
+      "error": "GateFailure: Same-D operator/ledger gate failed; conditional SCF blocked",
+      "comparison_available": false,
+      "delta_hartree": null,
+      "research_qualification": "NOT_QUALIFIED",
+      "raw_wrapper_research_status": "NOT_REVIEWED",
+      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a2\\pilot-ethene\\result.json",
+      "result_sha256": "a5bfc58c1c3f3b24ac82fddfc16ab15fe6edaf13e89f09df6f2bcf2660bc94e3",
+      "wall_seconds": 3.2190000000118744,
+      "container_exit_code": 30,
+      "container_removed": true,
+      "oom_killed": false,
+      "resource_status": "BLOCKED",
+      "resource_scope": "EXACT_GEOMETRY_PROFILE_DEPENDENCIES_AND_MODE_ONLY",
+      "peak_mib": 103.1484375,
+      "T04": {
+        "passed": 13,
+        "total": 13
+      },
+      "T05": {
+        "passed": 20,
+        "total": 21
+      },
+      "comparisons": {},
+      "terminal_states": {
+        "ordinary-tested": {
+          "converged": true,
+          "cycles": null,
+          "total_energy_hartree": -77.6213186207867,
+          "final_commutator_frobenius_norm": 6.207913132036585e-07,
+          "closed_shell_idempotency_relative_residual": 6.026537305070795e-15,
+          "occupied_virtual_gap_hartree": null,
+          "gap_operator_source": null,
+          "energy_component_closure_residual_hartree": 4.263256414560601e-14,
+          "last_iteration": null
+        }
+      }
+    },
+    {
+      "case": "research-ethene",
+      "attempt": "numerical-a2",
+      "status": "FAIL_NUMERICAL_GATES",
+      "nao": 36,
+      "failed_metric_ids": [
+        "T05.component.nuclear_repulsion"
+      ],
+      "error": "GateFailure: Same-D operator/ledger gate failed; conditional SCF blocked",
+      "comparison_available": false,
+      "delta_hartree": null,
+      "research_qualification": "NOT_QUALIFIED",
+      "raw_wrapper_research_status": "NOT_REVIEWED",
+      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a2\\research-ethene\\result.json",
+      "result_sha256": "ef412eb9e6a208792088bf926cdc70377d1c0e322b28185b4ddc842dbdb73e69",
+      "wall_seconds": 5.25,
+      "container_exit_code": 30,
+      "container_removed": true,
+      "oom_killed": false,
+      "resource_status": "BLOCKED",
+      "resource_scope": "EXACT_GEOMETRY_PROFILE_DEPENDENCIES_AND_MODE_ONLY",
+      "peak_mib": 213.11328125,
+      "T04": {
+        "passed": 13,
+        "total": 13
+      },
+      "T05": {
+        "passed": 20,
+        "total": 21
+      },
+      "comparisons": {},
+      "terminal_states": {
+        "ordinary-tested": {
+          "converged": true,
+          "cycles": null,
+          "total_energy_hartree": -78.58505227287108,
+          "final_commutator_frobenius_norm": 3.1267861963920185e-06,
+          "closed_shell_idempotency_relative_residual": 5.319115044607285e-15,
+          "occupied_virtual_gap_hartree": null,
+          "gap_operator_source": null,
+          "energy_component_closure_residual_hartree": 2.842170943040401e-14,
+          "last_iteration": null
+        }
+      }
+    },
+    {
+      "case": "research-ethyne",
+      "attempt": "numerical-a2",
+      "status": "FAIL_NUMERICAL_GATES",
+      "nao": 32,
+      "failed_metric_ids": [
+        "T05.component.nuclear_repulsion"
+      ],
+      "error": "GateFailure: Same-D operator/ledger gate failed; conditional SCF blocked",
+      "comparison_available": false,
+      "delta_hartree": null,
+      "research_qualification": "NOT_QUALIFIED",
+      "raw_wrapper_research_status": "NOT_REVIEWED",
+      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a2\\research-ethyne\\result.json",
+      "result_sha256": "d02e0a9f8325781e206e3b4b410644e569126a8e8cbe29bdec181893cc6518ff",
+      "wall_seconds": 4.594000000011874,
+      "container_exit_code": 30,
+      "container_removed": true,
+      "oom_killed": false,
+      "resource_status": "BLOCKED",
+      "resource_scope": "EXACT_GEOMETRY_PROFILE_DEPENDENCIES_AND_MODE_ONLY",
+      "peak_mib": 161.5,
+      "T04": {
+        "passed": 13,
+        "total": 13
+      },
+      "T05": {
+        "passed": 20,
+        "total": 21
+      },
+      "comparisons": {},
+      "terminal_states": {
+        "ordinary-tested": {
+          "converged": true,
+          "cycles": null,
+          "total_energy_hartree": -77.32368522638251,
+          "final_commutator_frobenius_norm": 2.0714877206081217e-06,
+          "closed_shell_idempotency_relative_residual": 3.1526448992106447e-15,
+          "occupied_virtual_gap_hartree": null,
+          "gap_operator_source": null,
+          "energy_component_closure_residual_hartree": 0.0,
+          "last_iteration": null
+        }
+      }
+    }
+  ],
+  "budget": {
+    "limits": {
+      "total_seconds": 7200,
+      "max_process_seconds": 900,
+      "memory_limit_mib": 4096,
+      "threads": 1,
+      "swap_allowed": false
+    },
+    "actual_process_memory_mib": 1024,
+    "consumed_wall_seconds": 138.14000000004307,
+    "unresolved_reservations": 0,
+    "engineering_processes": 4,
+    "scientific_processes": 8,
+    "reset_performed": false,
+    "ledger_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\budget.json",
+    "ledger_sha256": "afca60d5ca9b178853632c2cfe9372ee3f48e741338a959ca3624c5d6b25d03a"
+  },
+  "prerequisites": {
+    "1_W05_numerical_foundation": {
+      "implementation": "COMPLETE_BOUNDED_DRIVERS",
+      "ordinary_independent_comparison": "PASS_SCOPED",
+      "same_D_operators": "PASS_SCOPED",
+      "two_storage_paths": "FAIL",
+      "complete_conditional_reference": "FAIL",
+      "overall": "BLOCKED_REAL_NUMERICAL_FAILURES"
+    },
+    "2_resource_qualification": {
+      "accounting_and_native_cgroup": "IMPLEMENTED_AND_TESTED",
+      "exact_bundle_observation": "FOUR_CASES_MEASURED_1_GIB_NO_SWAP_SINGLE_CPU",
+      "per_mode_peaks": "NOT_ISOLATED",
+      "general_user_resource_model": "NOT_CALIBRATED",
+      "production_maximum_compute_nao": null,
+      "overall": "PARTIAL_EXACT_FIXTURE_ONLY"
+    },
+    "3_W06_research_qualification": {
+      "complete_reference": "EXECUTED_FAILED_FROZEN_GATES",
+      "method_scope": "PENDING_REAL_REVIEW",
+      "two_qualified_new_research_systems": 0,
+      "professional_user_trial": "NOT_EXECUTED",
+      "overall": "BLOCKED"
+    },
+    "W07_formal_research_delivery": "BLOCKED"
+  },
+  "same_D_scope": "OPTIMIZED_COPY_CONTRACTION_ONLY; SEPARATED_NONOPTIMIZED_SAME_D_MOLECULAR_WITNESS_NOT_EXECUTED",
+  "stored_array_diagnosis": {
+    "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\diagnosis\\endpoint-diagnosis.json",
+    "sha256": "a29a33a0626caa9c0a4331370c8718c5695cf430fd10a8486087bd391b2d5703",
+    "purpose": "Readonly stored-array postprocess; no new SCF, no qualified-state approval"
+  },
+  "preservation": {
+    "status": "PASS_SCOPED_PRESERVATION",
+    "original_files": [
+      {
+        "root": "D:\\AI4Science\\ai4orgchem-runtime",
+        "file_count": 108,
+        "status": "PASS"
+      },
+      {
+        "root": "D:\\AI4Science\\AI4OrgChem",
+        "file_count": 5,
+        "status": "PASS"
+      }
+    ],
+    "original_git_status_unchanged": true,
+    "science_files_unchanged": 591,
+    "historical_manifests": {
+      "20261005-user-molecule-w01-w04": 145,
+      "20261005-user-molecule-w05-preparation": 100,
+      "20261005-user-molecule-ci": 553,
+      "20261005-user-molecule-w06-engineering": 449,
+      "20261005-user-molecule-w01-w06-local-ci": 600
+    },
+    "historical_archives_unchanged": 3
+  }
+}
