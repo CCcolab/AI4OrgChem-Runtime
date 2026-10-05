@@ -156,6 +156,7 @@
       "attempt": "numerical-a3",
       "status": "FAIL_NUMERICAL_GATES",
       "nao": 14,
+      "runtime_test_commit": "65c5848d0a9fe58d4f7320e15eadeba2ebd61db6",
       "failed_metric_ids": [
         "conditional.single.commutator",
         "conditional.copy.commutator",
@@ -173,7 +174,7 @@
       "delta_hartree": null,
       "research_qualification": "NOT_QUALIFIED",
       "raw_wrapper_research_status": "NOT_REVIEWED",
-      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "raw_status_note": "The corresponding tested wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
       "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a3\\pilot-ethene\\result.json",
       "result_sha256": "39672405b58d0af0ec2478532c2edf424e3a4957f332a7b040cad65b209d192d",
       "wall_seconds": 7.812000000005355,
@@ -327,6 +328,7 @@
       "attempt": "numerical-a3",
       "status": "FAIL_NUMERICAL_GATES",
       "nao": 12,
+      "runtime_test_commit": "65c5848d0a9fe58d4f7320e15eadeba2ebd61db6",
       "failed_metric_ids": [
         "conditional.single.converged",
         "conditional.single.commutator",
@@ -348,7 +350,7 @@
       "delta_hartree": null,
       "research_qualification": "NOT_QUALIFIED",
       "raw_wrapper_research_status": "NOT_REVIEWED",
-      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "raw_status_note": "The corresponding tested wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
       "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a3\\pilot-ethyne\\result.json",
       "result_sha256": "c1c5a292e6004bedab5c69ceb9145d07ee4dc4a1cc9162d844312e2387f1530e",
       "wall_seconds": 14.969000000011874,
@@ -502,6 +504,7 @@
       "attempt": "numerical-a3",
       "status": "FAIL_NUMERICAL_GATES",
       "nao": 36,
+      "runtime_test_commit": "65c5848d0a9fe58d4f7320e15eadeba2ebd61db6",
       "failed_metric_ids": [
         "conditional.single.converged",
         "conditional.single.commutator",
@@ -524,7 +527,7 @@
       "delta_hartree": null,
       "research_qualification": "NOT_QUALIFIED",
       "raw_wrapper_research_status": "NOT_REVIEWED",
-      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "raw_status_note": "The corresponding tested wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
       "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a3\\research-ethene\\result.json",
       "result_sha256": "4d2728ce72d72d91eafa9d45aab6867c2f378d930b3cbfa5dcab3eeed5eebd6c",
       "wall_seconds": 58.296000000002095,
@@ -678,6 +681,7 @@
       "attempt": "numerical-a3",
       "status": "FAIL_NUMERICAL_GATES",
       "nao": 32,
+      "runtime_test_commit": "65c5848d0a9fe58d4f7320e15eadeba2ebd61db6",
       "failed_metric_ids": [
         "conditional.single.converged",
         "conditional.single.commutator",
@@ -700,7 +704,7 @@
       "delta_hartree": null,
       "research_qualification": "NOT_QUALIFIED",
       "raw_wrapper_research_status": "NOT_REVIEWED",
-      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "raw_status_note": "The corresponding tested wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
       "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a3\\research-ethyne\\result.json",
       "result_sha256": "ba2a55fc4d26c2957a89f7f294e6e7b85e15c31bc76f74202d1153e984ecf2a6",
       "wall_seconds": 24.48499999998603,
@@ -856,6 +860,7 @@
       "attempt": "numerical-a2",
       "status": "FAIL_NUMERICAL_GATES",
       "nao": 26,
+      "runtime_test_commit": "792fcd4de37eb2ab1d03482fed9126c6085fdb8f",
       "failed_metric_ids": [
         "ordinary.tested.commutator"
       ],
@@ -864,7 +869,7 @@
       "delta_hartree": null,
       "research_qualification": "NOT_QUALIFIED",
       "raw_wrapper_research_status": "NOT_REVIEWED",
-      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "raw_status_note": "The corresponding tested wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
       "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a2\\pilot-butadiene\\result.json",
       "result_sha256": "bd8c2e48d2ad862d6b5eeb33619182fa4550f2b715d3e5dcee3c86b8f0f5288a",
       "wall_seconds": 5.26500000001397,
@@ -902,6 +907,7 @@
       "attempt": "numerical-a2",
       "status": "FAIL_NUMERICAL_GATES",
       "nao": 14,
+      "runtime_test_commit": "792fcd4de37eb2ab1d03482fed9126c6085fdb8f",
       "failed_metric_ids": [
         "T05.component.nuclear_repulsion"
       ],
@@ -910,7 +916,7 @@
       "delta_hartree": null,
       "research_qualification": "NOT_QUALIFIED",
       "raw_wrapper_research_status": "NOT_REVIEWED",
-      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "raw_status_note": "The corresponding tested wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
       "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a2\\pilot-ethene\\result.json",
       "result_sha256": "a5bfc58c1c3f3b24ac82fddfc16ab15fe6edaf13e89f09df6f2bcf2660bc94e3",
       "wall_seconds": 3.2190000000118744,
@@ -948,6 +954,7 @@
       "attempt": "numerical-a2",
       "status": "FAIL_NUMERICAL_GATES",
       "nao": 36,
+      "runtime_test_commit": "792fcd4de37eb2ab1d03482fed9126c6085fdb8f",
       "failed_metric_ids": [
         "T05.component.nuclear_repulsion"
       ],
@@ -956,7 +963,7 @@
       "delta_hartree": null,
       "research_qualification": "NOT_QUALIFIED",
       "raw_wrapper_research_status": "NOT_REVIEWED",
-      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "raw_status_note": "The corresponding tested wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
       "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a2\\research-ethene\\result.json",
       "result_sha256": "ef412eb9e6a208792088bf926cdc70377d1c0e322b28185b4ddc842dbdb73e69",
       "wall_seconds": 5.25,
@@ -994,6 +1001,7 @@
       "attempt": "numerical-a2",
       "status": "FAIL_NUMERICAL_GATES",
       "nao": 32,
+      "runtime_test_commit": "792fcd4de37eb2ab1d03482fed9126c6085fdb8f",
       "failed_metric_ids": [
         "T05.component.nuclear_repulsion"
       ],
@@ -1002,7 +1010,7 @@
       "delta_hartree": null,
       "research_qualification": "NOT_QUALIFIED",
       "raw_wrapper_research_status": "NOT_REVIEWED",
-      "raw_status_note": "Tested65c5848 wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
+      "raw_status_note": "The corresponding tested wrapper left its initial NOT_REVIEWED label after numeric failure. Raw records retained; final derived qualification is NOT_QUALIFIED. Future wrapper now separates pending method review from failed numerical qualification.",
       "result_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w05-w06-acceptance\\numerical-a2\\research-ethyne\\result.json",
       "result_sha256": "d02e0a9f8325781e206e3b4b410644e569126a8e8cbe29bdec181893cc6518ff",
       "wall_seconds": 4.594000000011874,
