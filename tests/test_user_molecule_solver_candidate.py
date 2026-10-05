@@ -112,6 +112,9 @@ class IterationTests(unittest.TestCase):
         self.assertEqual(result['stop_reason'], 'QUALIFIED_TRUE_ENDPOINT')
         self.assertFalse(result['history'][0]['legacy_stop_candidate'])
         self.assertTrue(result['history'][1]['true_stop'])
+        self.assertEqual(result['final_energy_recheck_status'], 'EXECUTED')
+        self.assertIsNone(result['final_energy_recheck_reason'])
+        self.assertTrue(result['qualification_tests']['final_energy_recheck'])
         self.assertEqual(result['gap_operator_source'], 'RECOMPUTED_AT_RETURNED_DENSITY_NO_DIIS')
 
     def test_false_plateau_clears_diis_and_next_two_cycles_use_raw_f(self):
@@ -140,6 +143,10 @@ class IterationTests(unittest.TestCase):
         self.assertEqual(len(calls), 5)
         self.assertEqual(result['stop_reason'], 'MAXIMUM_CYCLES_EXHAUSTED')
         self.assertEqual(result['research_status'], 'NOT_QUALIFIED')
+        self.assertIsNone(result['final_candidate_energy_recheck_hartree'])
+        self.assertEqual(result['final_energy_recheck_status'], 'NOT_EXECUTED_NO_QUALIFIED_STOP')
+        self.assertEqual(result['final_energy_recheck_reason'], 'NO_QUALIFIED_STOP_CANDIDATE_TO_RECHECK')
+        self.assertFalse(result['qualification_tests']['final_energy_recheck'])
         self.assertFalse(result['raw_mo_density_matches_returned_density'])
         np.testing.assert_array_equal(result['density'], np.diag([2., 0.]))
         np.testing.assert_array_equal(result['mapped_density'], np.diag([0., 2.]))
@@ -184,6 +191,9 @@ class IterationTests(unittest.TestCase):
         self.assertFalse(result['converged'])
         self.assertEqual(result['stop_reason'], 'FINAL_RECHECK_FAILED')
         self.assertEqual(result['final_candidate_energy_recheck_hartree'], 1.)
+        self.assertEqual(result['final_energy_recheck_status'], 'EXECUTED')
+        self.assertIsNone(result['final_energy_recheck_reason'])
+        self.assertFalse(result['qualification_tests']['final_energy_recheck'])
 
     def test_diis_arithmetic_failure_uses_raw_current_and_next_two_cycles(self):
         for failure in (np.linalg.LinAlgError('Singular matrix'),

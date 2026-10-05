@@ -69,6 +69,7 @@ class ReferenceV2Tests(unittest.TestCase):
         self.assertEqual(result['final_raw_aufbau_density_relative_residual'], 0.0)
         self.assertEqual(result['gap_operator_source'], ref.FINAL_OPERATOR)
         self.assertTrue(result['mo_density_matches_returned'])
+        self.assertEqual(result['state_comparability'], 'COMPARABLE_CANDIDATE')
         for key in ('density', 'Fraw', 'Fcond', 'J', 'K', 'Vxc', 'masked_overlap',
                     'masked_hcore', 'masked_eri', 'mo_coefficients',
                     'mo_energies_hartree', 'mo_occupations'):
@@ -91,6 +92,7 @@ class ReferenceV2Tests(unittest.TestCase):
         self.assertEqual(result['plateau_reset_count'], 1)
         self.assertEqual(result['pending_raw_f_cycles'], 2)
         self.assertFalse(result['mo_density_matches_returned'])
+        self.assertEqual(result['state_comparability'], 'NOT_QUALIFIED')
         self.assertEqual(result['mo_density_role'], 'FINAL_RAW_AUFBAU_MAP_DIAGNOSTIC')
         np.testing.assert_array_equal(result['last_diagonalization_mo_energies_hartree'], [-1.0, 1.0])
         self.assertGreater(result['final_non_diis_gap_hartree'], 2.0)
@@ -117,6 +119,7 @@ class ReferenceV2Tests(unittest.TestCase):
         self.assertTrue(result['qualification_tests']['commutator'])
         self.assertFalse(result['qualification_tests']['converged'])
         self.assertEqual(result['functional_evaluation_count'], 3)
+        self.assertEqual(result['state_comparability'], 'NOT_QUALIFIED')
 
     def test_non_aufbau_stationary_density_is_not_a_qualified_endpoint(self):
         # A diagonal excited occupancy commutes with F but is not its raw Aufbau map.
@@ -139,6 +142,7 @@ class ReferenceV2Tests(unittest.TestCase):
         full = self.run_toy(electrons=4, density=2 * np.eye(2))
         self.assertFalse(full['converged'])
         self.assertIsNone(full['final_non_diis_gap_hartree'])
+        self.assertEqual(full['state_comparability'], 'GAP_UNDEFINED')
         self.assertEqual(full['undefined_diagnostics'][0]['reason'], 'NO_VIRTUAL_ORBITALS')
 
     def test_nonfinite_and_bad_metric_are_rejected_without_repair(self):
@@ -159,6 +163,7 @@ class ReferenceV2Tests(unittest.TestCase):
         self.assertFalse(result['converged'])
         self.assertFalse(result['qualification_tests']['final_energy_recheck'])
         self.assertEqual(result['stopping_reason'], 'FINAL_RECHECK_FAILED')
+        self.assertEqual(result['state_comparability'], 'NOT_QUALIFIED')
         self.assertTrue(result['qualification_tests']['commutator'])
         self.assertTrue(result['qualification_tests']['energy_closure'])
 

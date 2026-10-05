@@ -297,6 +297,10 @@ def iterate_candidate(*, initial_density: np.ndarray, overlap: np.ndarray, elect
         "density": d, "final_evaluation": final, "endpoint_gate": _endpoint_record(gate),
         "history": history, "stop_reason": stop_reason, "solver_id": SOLVER_ID,
         "final_candidate_energy_recheck_hartree": final_energy_recheck,
+        "final_energy_recheck_status": "EXECUTED" if final_energy_recheck is not None else
+            "NOT_EXECUTED_NO_QUALIFIED_STOP",
+        "final_energy_recheck_reason": None if final_energy_recheck is not None else
+            "NO_QUALIFIED_STOP_CANDIDATE_TO_RECHECK",
         "solver_strategy": "TRUE_ENDPOINT_PLATEAU_AND_ARITHMETIC_DIIS_REFUSAL_RAW_TWO_CYCLES_V2_1",
         "solver_revision": "V2.1_ARITHMETIC_DIIS_REFUSAL",
         "diis_implementation": "PYSCF_LIB_DIIS", "diis_reset_count": resets,
@@ -406,7 +410,8 @@ def run_candidate_conditional_rks(mean_field, descriptors, source_entries, *, in
         "deleted_eri_fraction": int(deleted)/total_count, "eri_storage_mode": storage,
         "exact_exchange_fraction": float(hybrid), "acceptance_final_F": np.asarray(final["fock"]),
         "frozen_equations": "P09_SOURCE_EVALUATE_DENSITY_UNCHANGED",
-        "molecular_acceptance": "NOT_EXECUTED"})
+        "molecular_acceptance": "PENDING_ACCEPTANCE_EVALUATION",
+        "molecular_execution": "EXECUTED_CANDIDATE_DIAGNOSTIC_NOT_ACCEPTED"})
     for key in ("one_electron_energy", "coulomb_energy", "exact_exchange_energy", "semilocal_xc_energy"):
         value[key+"_hartree"] = float(final[key])
     return value

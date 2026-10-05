@@ -248,7 +248,9 @@ def fixed_point(*, density, h, overlap, eri, aos, entries, electrons, hybrid,
         'stopping_reason': ('QUALIFIED_REAL_F_FIXED_POINT' if converged else
                             'FINAL_RECHECK_FAILED' if preliminary_converged else 'MAXIMUM_CYCLES'),
         'final_energy_recheck_change_hartree': final_energy_recheck,
-        'state_comparability': 'COMPARABLE_CANDIDATE' if tests['final_non_diis_gap'] else 'ROOT_AMBIGUOUS',
+        'state_comparability': ('GAP_UNDEFINED' if metrics['final_non_diis_gap_hartree'] is None else
+                                'ROOT_AMBIGUOUS' if not tests['final_non_diis_gap'] else
+                                'COMPARABLE_CANDIDATE' if converged and all(tests.values()) else 'NOT_QUALIFIED'),
         'mo_coefficients': raw_coefficients, 'mo_energies_hartree': raw_energies,
         'mo_occupations': raw_occupations,
         'mo_operator_source': FINAL_OPERATOR,
