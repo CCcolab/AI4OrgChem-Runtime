@@ -1,5 +1,5 @@
 {
-  "revision": "HOST-REPORT-ENGINEERING-20261006",
+  "revision": "W07-ENGINEERING-TRIAL-20261006",
   "date": "2026-10-06",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -47,8 +47,10 @@
       "method_static_review": "COMPLETE; scope responsibility remains PENDING_REAL_REVIEW"
     },
     "W07": {
-      "implementation": "FULL_RESEARCH_USER_DELIVERY_NOT_STARTED; engineering guide provided",
-      "validation": "BLOCKED; W05/W06 actual numerical and scope gates unresolved"
+      "implementation": "ENGINEERING_GUIDE_FEEDBACK_AND_CHECK_REPORT_EXPORT_DEMONSTRATION_READY; full research delivery not accepted",
+      "validation": "BLOCKED_FOR_RESEARCH; W05/W06 numerical/resource/scope/user gates unresolved",
+      "engineering_trial": "CHECK_REPORT_EXPORT_DEMONSTRATION_PASS_GUIDE_AND_FEEDBACK_PREPARED",
+      "real_user_feedback": "PENDING_NOT_EXECUTED"
     }
   },
   "git_workspaces": {
@@ -65,7 +67,7 @@
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "After real method definitions and consistency findings arrive, resolve disagreement and goal/gate compatibility, version any protocol change, then freeze a compatible solver and bounded acceptance budget.",
+  "next_bounded_task": "Collect real user engineering feedback and potential feature additions; method-owner definitions and external consistency consultation deferred until consolidated. No solver activation, new scientific batch, gate relaxation or research W07 exit.",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -102,5 +104,14 @@
     "report_integrations": 11,
     "scope": "HOST_SOURCE_ONLY; no image rebuild or scientific execution"
   },
-  "new_scientific_runs_this_host_report_round": 0
+  "new_scientific_runs_this_host_report_round": 0,
+  "latest_w07_engineering_trial_record": "validation/user-molecule/w07-engineering-trial-20261006.json",
+  "method_consultation_schedule": {
+    "status": "DEFERRED_BY_USER",
+    "initiation_this_round": "NOT_EXECUTED",
+    "resume_condition": "Potential feature additions collected; request definitions and external consistency opinions together.",
+    "scientific_definition_or_method_approval": false
+  },
+  "new_scf_executions_this_w07_round": 0,
+  "new_check_containers_this_w07_round": 1
 }

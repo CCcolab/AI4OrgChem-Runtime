@@ -6,7 +6,9 @@ W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 是此前的元�
 
 2026-10-06 [存量方法审阅](docs/USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)定位了初始占据边界的窄谱区间和历史占据跳变，并给出能量—算子关系判据；没有新增分子计算或方法批准。[下一版求解设计](docs/USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)仍为 DESIGN_ONLY，W07/Compute 保持 BLOCKED。
 
-等待方法决定期间，已补齐 [主机只读 Report 与导出](docs/USER_MOLECULE_REPORT_20261006_zh-CN.md)：保护旧运行目录、核对记录字节/身份、区分未执行与数值失败，并保留宿主/容器退出码。48项标准库测试和11项主机报告集成通过。基础模式核对登记字节并读取历史快照；高级模式检查关键证据并导出派生报告。不重算、不启动新容器、不重建镜像，Compute/W07仍关闭。
+此前 [主机只读 Report 与导出](docs/USER_MOLECULE_REPORT_20261006_zh-CN.md) 增补保护旧运行目录、核对记录字节/身份、区分未执行与数值失败，并保留宿主/容器退出码。其48项标准库测试和11项主机报告集成通过。基础模式核对登记字节并读取历史快照；高级模式检查关键证据并导出派生报告。该增补轮次没有重算、启动新容器或重建镜像。
+
+最新 [W07 工程试用指南](docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 提供输入、Check、报告/导出三步流程及反馈模板。已用现有乙烯夹具完成一次真实容器 Check 和三项主机报告操作；无 SCF、网格、完整 ERI 或 Compute。这是工程人员演示，真实专业用户试用仍待完成。方法责任人定义与外部一致性咨询按用户要求延后，待扩展内容齐备后集中征询；方法仍未审，正式 W07 和生产 Compute 保持 **BLOCKED**。
 
 [W01—W05 本地工程/合同 CI](docs/USER_MOLECULE_CI_20261005_zh-CN.md) 已通过38项单元测试、10个集成用例和4项平台探针；GitHub Actions 未执行，该结论不代表 W05 数值验收通过。
 

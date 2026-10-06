@@ -1,5 +1,7 @@
 # 本地用户分子入口：当前工程候选
 
+准备自己的输入、执行 Check、读取和导出报告，从 [W07 三步工程试用](USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 开始；不要求先阅读全部实施文档。当前提供输入/报告操作，Compute 与正式科研验收仍关闭。
+
 2026-10-05 / W05-W06-NUMERICAL-EVIDENCE-1。入口支持 Check 和只读 Report；两个生产 profile 均禁用 Compute，返回 BLOCKED / 20。本轮受限验收已有新分子诊断能量，但条件态/等价性/完整参考未通过，没有研究合格结果。输入合法不代表方法或资源合格。最新 [数值验收记录](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md) 说明失败与资源实测范围；它不开放用户计算。
 
 后续 [求解器 v2](USER_MOLECULE_SOLVER_V2_zh-CN.md) 已通过 122 项工程测试并在乙烯 pilot 拒绝假停止；唯一新分子诊断仍失败。两条同密度路径已在该夹具通过，完整迭代与资源推广资格尚未闭合，用户 Compute 状态不变。

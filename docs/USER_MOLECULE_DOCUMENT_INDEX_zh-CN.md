@@ -4,6 +4,8 @@
 
 操作从 [用户指南](USER_MOLECULE_RUN_zh-CN.md) 开始；最新身份、范围与缺口见 [求解器 v2 实测](USER_MOLECULE_SOLVER_V2_zh-CN.md)，其 122 项工程测试通过、单例条件数值失败。此前 [数值审查](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md)、[W05 准备](USER_MOLECULE_W05_PREPARATION_zh-CN.md) 与 [W01—W04 交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md) 为历史批次，不冒充当前状态。
 
+2026-10-06 [W07 三步工程试用](USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 已提供自有输入准备、Check、报告导出与反馈路径；现有乙烯夹具的工程演示通过，真实用户反馈待填写。四问咨询按用户指示延后，待扩展齐备后集中征询；方法状态保持未审，正式 W07/Compute 仍 BLOCKED。
+
 2026-10-06 最新增补为 [存量方法审阅](USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)与 [下一版求解设计](USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)：只读定位保存初始谱的8/9占据边界、占据跳变与能量—算子判据；新增科学进程为0。方法责任审阅未签署，新策略 DESIGN_ONLY，Compute/W07仍BLOCKED。
 
 [W01—W05 本地 CI](USER_MOLECULE_CI_20261005_zh-CN.md) 已通过历史工程/合同检查；GitHub Actions 仍 NOT_EXECUTED，新分子数值验收已执行但失败。本页和 implementation-state 的 ci_execution 指远端 Actions，本地执行另行登记。
@@ -27,6 +29,8 @@
 | [下一版求解与验收前置](USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md) | 具体方法决策与保留原方程的残差求解提案；DESIGN_ONLY |
 | [MDR-001 方法决定记录](USER_MOLECULE_METHOD_DECISIONS_001_zh-CN.md) | 入口四问：方法责任人定义、外部一致性核查及分歧；DRAFT/PENDING，不自动批准或重审P01—P14 |
 | [主机 Report 与导出](USER_MOLECULE_REPORT_20261006_zh-CN.md) | 等待方法决定期间的只读工程增补：完整性、历史失败/宿主终态、身份、仅新目录导出；不启动计算 |
+| [W07 三步工程试用](USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) | 自有输入准备、Check、报告导出与反馈；现有夹具工程演示通过，正式科研验收仍 BLOCKED |
+| [W07 工程反馈模板](templates/USER_MOLECULE_W07_FEEDBACK_zh-CN.md) | 由实际使用者填写操作事实和反馈；不代填用户意见或科学批准 |
 | [设计与验收合同](USER_MOLECULE_ENTRY_DESIGN_zh-CN.md) | 输入与资格合同，A01—A18 最低要求 |
 | [本地服务实施细则](USER_MOLECULE_IMPLEMENTATION_DETAILS_zh-CN.md) | D0—D3 阶段出口、职责与科学待办 |
 | [专业实施方案](../ai4orgchem-runtime-implementation-plan-professional-revised.md) | 项目定位、现有服务、用户分子主线与 C06 |
