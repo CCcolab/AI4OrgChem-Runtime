@@ -83,7 +83,7 @@
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Design/test budget-aware independent-reference Jacobian and matched diagnostic snapshots with fake callbacks; current candidate is design-only. No new molecular process or occupation/operator change authorized by this readonly round.",
+  "next_bounded_task": "Internal occupation/service-domain method design using existing evidence; scientific route unchanged. No new molecular process is authorized by this fake-engineering increment.",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -406,5 +406,18 @@
     "delta_hartree": null
   },
   "latest_readonly_analysis_record": "validation/user-molecule/seed-v2-readonly-20261007.json",
-  "latest_internal_scope_decision": "validation/user-molecule/method-decisions/mdr-003/record.json"
+  "latest_internal_scope_decision": "validation/user-molecule/method-decisions/mdr-003/record.json",
+  "budget_recording_engineering": {
+    "status": "IMPLEMENTED_SCOPED_ENGINEERING_PASS_NOT_MOLECULARLY_EXECUTED",
+    "unit_test_code_commit": "1a1c0c261141f02058669f710ef402d906695c1c",
+    "demo_code_commit": "d5eeb6bc6388cddbc896bde2766d91d4644a14c9",
+    "new_molecular_F_calls": 0,
+    "new_scientific_budget": null,
+    "scientific_default_path_changed": false,
+    "profile_compute_enabled": false,
+    "record": "validation/user-molecule/budget-recording-20261007.json",
+    "unique_unit_tests": 122,
+    "synthetic_examples": 3
+  },
+  "latest_engineering_increment_record": "validation/user-molecule/budget-recording-20261007.json"
 }

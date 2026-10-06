@@ -1,5 +1,7 @@
 # 用户分子服务：当前实施文档入口
 
+最新 [预算感知与匹配诊断记录工程](USER_MOLECULE_BUDGET_RECORDING_20261007_zh-CN.md)已实现，122项专项模拟测试和三个导出示例通过。新分子F/SCF为0，未接入科学worker、未改门槛，Compute仍BLOCKED。
+
 最新 [V2存量矩阵内部分析](USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md)已确认窄π谱空间中的秩一占据和参考预算返回语义，并澄清能量导数关系。新增F/SCF/容器为0，原门槛及Compute BLOCKED保留；下一工程候选仅为预算感知诊断设计，未实现/执行。
 
 最新 [V2种子实施与一次诊断](USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)已完成：专项239项PASS、零F种子PASS、数值不合格；Compute关闭。下述以前轮次的未实现/未执行状态属于当时记录。

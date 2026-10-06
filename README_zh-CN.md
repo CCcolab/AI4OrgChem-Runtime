@@ -1,5 +1,7 @@
 # AI4OrgChem 可复算运行环境
 
+最新 [预算感知与匹配诊断记录工程](docs/USER_MOLECULE_BUDGET_RECORDING_20261007_zh-CN.md)已实现，122项专项模拟测试和三个导出示例通过。新分子F/SCF为0，未接入科学worker、未改门槛，Compute仍BLOCKED。
+
 最新 [V2存量矩阵内部分析](docs/USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md)已确认窄π谱空间中的秩一占据和参考预算返回语义，并澄清能量导数关系。新增F/SCF/容器为0，原门槛及Compute BLOCKED保留；下一工程候选仅为预算感知诊断设计，未实现/执行。
 
 最新 [V2种子实施与诊断](docs/USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)：239项专项工程测试及零F种子准入通过；一次591F/约4.82分钟诊断完成，生产最终占据/能隙门禁失败，参考最终门禁未完成。原算子与门槛保留，Compute仍BLOCKED；完整CI及旧结果不重跑。

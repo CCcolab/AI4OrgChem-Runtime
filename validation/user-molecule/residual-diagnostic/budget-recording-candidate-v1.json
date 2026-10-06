@@ -1,6 +1,6 @@
 {
   "schema_version": "budget-recording-engineering-candidate-v1",
-  "status": "DESIGN_ONLY_NOT_IMPLEMENTED_NOT_EXECUTED",
+  "status": "IMPLEMENTED_SCOPED_ENGINEERING_PASS; MOLECULAR_NOT_EXECUTED",
   "scope": "Independent reference diagnostic budget and snapshots; unchanged target/evaluator/gates",
   "source_runtime_execution_commit": "60d76deeb468fdd2dc2c444b7cf60d95a9dd9290",
   "scientific_authorization": false,
@@ -47,5 +47,24 @@
     "Energy-minimum claims",
     "WSL upgrade/WSLc",
     "Publication"
-  ]
+  ],
+  "revision": "0.2",
+  "engineering_record": "../budget-recording-20261007.json",
+  "original_design": {
+    "path": "revisions/budget-recording-candidate-v1-design.json",
+    "sha256": "243f159346b402b19343b83b9c1a05021107fdc0bc5f67c49a2ba9e800ab960f",
+    "preserved_bytes": true
+  },
+  "implementation": {
+    "pure_reference": "reference/residual_budgeted_candidate.py",
+    "fake_prepared_adapter": "reference/residual_budgeted_seed.py",
+    "default_scientific_route_changed": false,
+    "unit_tests": 31,
+    "regressions": 91,
+    "synthetic_examples": 3
+  },
+  "refusal_tail_policy": "NO_AUTOMATIC_CALLBACK_AFTER_BUDGET_REFUSAL",
+  "normal_tail_policy": "TWO_RESERVED_ORIGINAL_GATES_WHEN_ADMITTED; ALL_ACTUAL_CALLBACKS_CHARGED",
+  "private_scipy_api_version": "1.18.0",
+  "new_molecular_F_calls": 0
 }
