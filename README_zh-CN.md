@@ -1,5 +1,7 @@
 # AI4OrgChem 可复算运行环境
 
+[近简并规则与验收候选V2](docs/USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md) 已明确为“普通态占据子空间按屏蔽度量重正交的初值”；原最终2/0、Aufbau映射和正能隙门槛保留。候选尚未实现或外审，不重复诊断、不启用Compute。[外部评审入口](docs/USER_MOLECULE_NEAR_DEGENERACY_REVIEW_zh-CN.md) 已准备，未对外发送。
+
 最新 [实时准入与条件初始化诊断](docs/USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.md) 已执行：单个1 GiB/1 CPU/零swap进程复用旧普通态，三路径各求值一次，均因约1e-14 Hartree的初始能隙未满足原1e-6门槛而拒绝；轨道迭代未启动。同D0算子/能量/已准备mask子范围通过，完整T05及合格P12/P13/T06未执行。实时资源范围仅覆盖本次准备与初始化，科研W07/生产Compute仍BLOCKED。原始记录保留，后续仅修正独立参考拒绝标签并通过数组回归；没有重复真实诊断或重建镜像。
 
 [最小准备、独立参考与持久化预算](docs/USER_MOLECULE_PREPARATION_REFERENCE_20261006_zh-CN.md) 已补齐，97个唯一用例形成按版本核对的通过覆盖（72新项＋25资源回归），并完成真实PySCF旧缓存映射；这不是一次97项完整CI。该准备轮没有新真实条件计算；后续实时诊断另见上方，生产Compute仍BLOCKED。此前 [条件算子桥](docs/USER_MOLECULE_RESIDUAL_BRIDGE_20261006_zh-CN.md)、[纯数组残差原型](docs/USER_MOLECULE_RESIDUAL_PROTOTYPE_20261006_zh-CN.md) 和旧失败保留，旧完整CI不自动包含这些增补。

@@ -1,5 +1,7 @@
 # 用户分子服务：当前实施文档入口
 
+[近简并规则与验收候选V2](USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md) 和 [外审入口](USER_MOLECULE_NEAR_DEGENERACY_REVIEW_zh-CN.md) 给出仅变初值的明确提案；旧最终门槛保留，尚未实现/实测或外审，不覆盖下方已完成诊断。
+
 最新 [实时准入与条件初始化诊断](USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.md) 已完成一次实际受限进程：三路径各真实F(D0)一次，初始能隙约1e-14低于原1e-6门槛而拒绝，迭代0。同D0算子/能量/已准备mask子范围PASS；完整T05及合格P12/P13/T06未执行。峰值118.5MiB只覆盖本次准备和初始化，不代表完整迭代容量；生产Compute/科研W07继续BLOCKED。
 
 此前 [最小准备、独立参考与持久化预算](USER_MOLECULE_PREPARATION_REFERENCE_20261006_zh-CN.md) 已补齐，97个唯一用例按版本核对通过（不是一次完整CI），真实PySCF旧缓存映射通过；没有新条件计算/科学批准。900秒/1GiB/603slot单进程方案仅为候选，该工程准备轮未创建实际科学预约；后续已在独立合同与新账本完成上方实时诊断，生产Compute保持BLOCKED。此前 [条件算子桥](USER_MOLECULE_RESIDUAL_BRIDGE_20261006_zh-CN.md)、[残差原型](USER_MOLECULE_RESIDUAL_PROTOTYPE_20261006_zh-CN.md)、旧完整CI及v2失败原记录保留。

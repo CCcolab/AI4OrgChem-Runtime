@@ -265,5 +265,19 @@
     "P12_P13_T06": "NOT_EXECUTED_UNQUALIFIED_ENDPOINTS",
     "metadata_only_followup_commit": "ea41793daea5f175cddaf9e077217e3337c5c216",
     "followup_real_execution": "NOT_EXECUTED"
+  },
+  "latest_method_candidate_record": "validation/user-molecule/method-decisions/mdr-002/record.json",
+  "near_degeneracy_candidate": {
+    "id": "MDR-002",
+    "revision": "0.1",
+    "status": "DRAFT_FOR_SCOPED_REVIEW_NOT_APPROVED",
+    "policy_id": "MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2",
+    "implementation": "NOT_IMPLEMENTED",
+    "new_real_scientific_execution": "NOT_EXECUTED",
+    "scientific_protocol_approved": false,
+    "external_review_status": "NOT_SUBMITTED_NO_EXTERNAL_OPINION_RECEIVED",
+    "production_activation": false,
+    "final_gate_thresholds_changed": false,
+    "existing_diagnostic_unchanged": true
   }
 }
