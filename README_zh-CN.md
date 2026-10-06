@@ -1,20 +1,22 @@
 # AI4OrgChem 可复算运行环境
 
-[最小准备、独立参考与持久化预算](docs/USER_MOLECULE_PREPARATION_REFERENCE_20261006_zh-CN.md) 已补齐，97个唯一用例形成按版本核对的通过覆盖（72新项＋25资源回归），并完成真实PySCF旧缓存映射；这不是一次97项完整CI。新真实条件计算未执行，生产Compute仍BLOCKED。此前 [条件算子桥](docs/USER_MOLECULE_RESIDUAL_BRIDGE_20261006_zh-CN.md)、[纯数组残差原型](docs/USER_MOLECULE_RESIDUAL_PROTOTYPE_20261006_zh-CN.md) 和旧失败保留，旧完整CI不自动包含这些增补。
+最新 [实时准入与条件初始化诊断](docs/USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.md) 已执行：单个1 GiB/1 CPU/零swap进程复用旧普通态，三路径各求值一次，均因约1e-14 Hartree的初始能隙未满足原1e-6门槛而拒绝；轨道迭代未启动。同D0算子/能量/已准备mask子范围通过，完整T05及合格P12/P13/T06未执行。实时资源范围仅覆盖本次准备与初始化，科研W07/生产Compute仍BLOCKED。原始记录保留，后续仅修正独立参考拒绝标签并通过数组回归；没有重复真实诊断或重建镜像。
 
-本轮 [W01—W07 本地工程 CI](docs/USER_MOLECULE_CI_W01_W07_20261006_zh-CN.md) 已通过176个独立单元用例（284次执行）、启动器10项、平台4项及W07宿主报告9项；18个测试容器按成功删除回执移除，输出保留。新增科学计算为0，科研Compute仍BLOCKED，真人反馈不阻塞当前工程交付。GitHub Actions仍NOT_EXECUTED，来源和平台边界保持分列。
+[最小准备、独立参考与持久化预算](docs/USER_MOLECULE_PREPARATION_REFERENCE_20261006_zh-CN.md) 已补齐，97个唯一用例形成按版本核对的通过覆盖（72新项＋25资源回归），并完成真实PySCF旧缓存映射；这不是一次97项完整CI。该准备轮没有新真实条件计算；后续实时诊断另见上方，生产Compute仍BLOCKED。此前 [条件算子桥](docs/USER_MOLECULE_RESIDUAL_BRIDGE_20261006_zh-CN.md)、[纯数组残差原型](docs/USER_MOLECULE_RESIDUAL_PROTOTYPE_20261006_zh-CN.md) 和旧失败保留，旧完整CI不自动包含这些增补。
+
+此前完整 [W01—W07 本地工程 CI](docs/USER_MOLECULE_CI_W01_W07_20261006_zh-CN.md) 已通过176个独立单元用例（284次执行）、启动器10项、平台4项及W07宿主报告9项；18个测试容器按成功删除回执移除，输出保留。新增科学计算为0，科研Compute仍BLOCKED，真人反馈不阻塞当前工程交付。GitHub Actions仍NOT_EXECUTED，来源和平台边界保持分列。
 
 2026-10-05 隔离分支现状：Check 和 Report 可用，生产 Compute 保持 **BLOCKED**。[W05—W06 受限分子验收](docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md) 已执行，普通态及同密度算子对照在所列范围内通过，但条件态驻定、两存储路径等价性和完整参考门禁失败，不能进入正式 W07。下文 L0—L4 属于原七任务候选，不转移为新服务科学资格；原工作区与既有交付保留。
 
 W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 是此前的元数据批次。先前验收驱动84项工程测试和四组完整流程峰值保留；最新 [求解器 v2](docs/USER_MOLECULE_SOLVER_V2_zh-CN.md) 的122项工程测试通过，乙烯 pilot 两条同密度对照通过，但三条条件路径仍失败。实际限额1 GiB、1 CPU、零 swap，资源结论限定精确流程，不构成通用用户计算规模或研究范围批准。
 
-2026-10-06 的既有 [存量方法审阅](docs/USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)定位了初始占据边界的窄谱区间和历史占据跳变，并给出能量—算子关系判据；没有新增分子计算或方法批准。[旧下一版分子求解设计](docs/USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)保留为历史候选。准备映射、候选初始化、独立参考及持久化记账工程已实现；单进程900秒/1GiB/三路径603slot预算仅登记为候选，新真实条件诊断、实时资源准入及科学范围尚未验收。科研 W07/Compute 保持 BLOCKED。
+2026-10-06 的既有 [存量方法审阅](docs/USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)定位了初始占据边界的窄谱区间和历史占据跳变，并给出能量—算子关系判据；没有新增分子计算或方法批准。[旧下一版分子求解设计](docs/USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)保留为历史候选。准备映射、候选初始化、独立参考及持久化记账工程已实现；旧工程方案仅登记单进程900秒/1GiB/603slot候选；后续已另立实时执行合同完成一次初始化拒绝诊断，科学范围仍未验收。科研 W07/Compute 保持 BLOCKED。
 
 此前 [主机只读 Report 与导出](docs/USER_MOLECULE_REPORT_20261006_zh-CN.md) 增补保护旧运行目录、核对记录字节/身份、区分未执行与数值失败，并保留宿主/容器退出码。其48项标准库测试和11项主机报告集成通过。基础模式核对登记字节并读取历史快照；高级模式检查关键证据并导出派生报告。该增补轮次没有重算、启动新容器或重建镜像。
 
 最新 [W07 工程试用指南](docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 提供输入、Check、报告/导出三步流程及反馈模板。已用现有乙烯夹具完成一次真实容器 Check 和三项主机报告操作；无 SCF、网格、完整 ERI 或 Compute。这是历史工程人员演示；真人试用与反馈现按用户要求 DEFERRED_BY_USER，作为未来可选事项，不阻塞当前工程验收。方法责任人定义与外部一致性咨询按用户要求延后，待扩展内容齐备后集中征询；方法仍未审，正式 W07 和生产 Compute 保持 **BLOCKED**。
 
-本轮 [W07 代理模拟自测](docs/USER_MOLECULE_W07_SELFTEST_zh-CN.md) 已通过9个启动器场景（8个容器）、6个宿主保护/历史失败判读场景及12个宿主 parser 用例。覆盖已有乙烯/丁二烯两 profile 的 Check、输入/身份拒绝、只读报告与导出；两次 Compute CLI 仅执行拒绝探针，新科学计算为0。本地工程交付可收尾，科研 W07/生产 Compute 仍 BLOCKED；模拟不冒充真人体验或数值合格。
+此前 [W07 代理模拟自测](docs/USER_MOLECULE_W07_SELFTEST_zh-CN.md) 已通过9个启动器场景（8个容器）、6个宿主保护/历史失败判读场景及12个宿主 parser 用例。覆盖已有乙烯/丁二烯两 profile 的 Check、输入/身份拒绝、只读报告与导出；两次 Compute CLI 仅执行拒绝探针，该轮新科学计算为0。本地工程交付已形成，科研 W07/生产 Compute 仍 BLOCKED；模拟不冒充真人体验或数值合格。
 
 W07 本地源码/证据候选另含可搬移 Check 和失败样例、源码备份及新服务专属支持/来源矩阵。两类样例搬移后和从重建的 runtime Git 源码读取均通过，科学源码解包匹配591个锁定文件。候选包不含 Docker 镜像或依赖，不宣称完整环境恢复；r3 实际安装组件的完整许可审计仍 NOT_EXECUTED。[交付范围](docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md#交付范围按需查阅) 明确这些边界，不移用旧镜像验收结论。
 

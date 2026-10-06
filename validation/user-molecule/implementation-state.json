@@ -1,5 +1,5 @@
 {
-  "revision": "PREPARATION-INDEPENDENT-REFERENCE-DURABLE-BUDGET-ENGINEERING-20261006",
+  "revision": "LIVE-RESIDUAL-INITIALIZATION-DIAGNOSTIC-20261006",
   "date": "2026-10-06",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -31,7 +31,9 @@
       "ready_to_execute_scf": false,
       "status_record": "validation/user-molecule/solver-v2/review.json",
       "solver_v2_numerical_acceptance": "EXECUTED_FAILED_CANDIDATE_V2",
-      "latest_residual_engineering_record": "validation/user-molecule/preparation-reference-20261006.json"
+      "latest_residual_engineering_record": "validation/user-molecule/preparation-reference-20261006.json",
+      "latest_numerical_record": "validation/user-molecule/residual-live-20261006.json",
+      "latest_residual_validation": "EXECUTED_INITIALIZATION_REFUSED_UNCHANGED_GAP; solver iterations NOT_EXECUTED"
     },
     "W06": {
       "implementation": "ARRAY_REFERENCE_AND_READONLY_ASSESSMENT_IMPLEMENTED",
@@ -42,14 +44,15 @@
       "production_activation": false,
       "record": "validation/user-molecule/w06/engineering-review.json",
       "latest_engineering_ci_record": "validation/user-molecule/ci-local-w01-w07-20261006.json",
-      "latest_numerical_record": "validation/user-molecule/solver-v2/review.json",
+      "latest_numerical_record": "validation/user-molecule/residual-live-20261006.json",
       "historical_engineering_test_commit": "43e80de31140d8685b5087ac5ac56654c7e68e28",
       "latest_engineering_test_commit": "44ad90e0e3b293879ec67b7a10475825cde05d3a",
       "method_static_review": "COMPLETE; scope responsibility remains PENDING_REAL_REVIEW",
       "latest_complete_local_ci_record": "validation/user-molecule/ci-local-w01-w07-20261006.json",
       "solver_v2_historical_engineering_test_commit": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
       "historical_w01_w06_engineering_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json",
-      "latest_residual_engineering_record": "validation/user-molecule/preparation-reference-20261006.json"
+      "latest_residual_engineering_record": "validation/user-molecule/preparation-reference-20261006.json",
+      "latest_residual_reference": "EXECUTED_INITIALIZATION_REFUSED; same-D operator-energy subset PASS"
     },
     "W07": {
       "implementation": "LOCAL_ENGINEERING_SOURCE_EVIDENCE_HANDOFF_AND_AGENT_SELFTEST_COMPLETE; research acceptance pending",
@@ -68,7 +71,7 @@
     "branch": "implementation/user-molecule-w01-w04"
   },
   "new_build": "EXECUTED; r3 PASS",
-  "new_scientific_runs": "EXECUTED_ACCEPTANCE_ONLY_NOT_QUALIFIED; v2 first diagnostic also failed",
+  "new_scientific_runs": "EXECUTED_ACCEPTANCE_ONLY_UNQUALIFIED; latest residual initialization refused; old v2 failures preserved",
   "compute_enabled": false,
   "new_service_tests": "Latest local W01-W07 CI:176 unique engineering unit tests /284 executions; scientific numerical failures unchanged",
   "wslc": "BLOCKED / NOT_EXECUTED; paused",
@@ -183,7 +186,7 @@
     "tested_runtime_commit": "f95987802edab11c90a659f1b6a4ec32942d4edc",
     "record": "validation/user-molecule/residual-bridge-20261006.json",
     "initialization": "EXPLICIT_ENGINEERING_V1_PRESERVE_OR_FIRST_RAW_GLOBAL_AUFBAU; NOT_APPROVED_SCIENTIFIC_PROTOCOL",
-    "first_raw_initial_gap_guard_hartree": 1e-6,
+    "first_raw_initial_gap_guard_hartree": 1e-06,
     "object_global_callback_limit": 201,
     "new_scientific_process_budget": "VERSIONED_MINIMAL_PROCESS_PROPOSAL_RECORDED; REAL_SCIENTIFIC_RESERVATION_NOT_CREATED",
     "real_molecular_preparation": "EXISTING_ORDINARY_CACHE_AND_ACTUAL_PINNED_ENGINE_METADATA_MAPPING_EXECUTED_PASS; NO_NEW_ORDINARY_SCF_GRID_INTEGRALS",
@@ -197,7 +200,8 @@
     "new_real_scientific_calls": 0,
     "new_test_containers": 1,
     "all_test_containers_removed": true,
-    "old_scientific_failures_and_budgets": "PRESERVED_NOT_RESET"
+    "old_scientific_failures_and_budgets": "PRESERVED_NOT_RESET",
+    "record_scope": "HISTORICAL_ENGINEERING_ROUND; new scientific_execution is recorded separately in residual_live_diagnostic"
   },
   "new_scientific_runs_this_residual_bridge": 0,
   "latest_preparation_reference_record": "validation/user-molecule/preparation-reference-20261006.json",
@@ -223,7 +227,43 @@
     "all_engineering_wall_ledgers_settled": true,
     "initial_failures": "PRESERVED; expectation, duplicate discovery and uncaptured metadata refusal are distinguished",
     "production_activation": false,
-    "old_scientific_failures_and_budgets": "PRESERVED_NOT_RESET"
+    "old_scientific_failures_and_budgets": "PRESERVED_NOT_RESET",
+    "record_scope": "HISTORICAL_ENGINEERING_ROUND; new scientific_execution is recorded separately in residual_live_diagnostic"
   },
-  "new_scientific_runs_this_preparation_reference_round": 0
+  "new_scientific_runs_this_preparation_reference_round": 0,
+  "latest_residual_execution_record": "validation/user-molecule/residual-live-20261006.json",
+  "residual_live_diagnostic": {
+    "status": "ADMISSION_COMPLETED_DIAGNOSTIC_EXECUTED_UNQUALIFIED",
+    "identity": {
+      "geometry_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+      "profile_sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9",
+      "dependencies_sha256": "5c355f34ff1199b82da60da9d49d1e7e138af86db18b356a49ffceb71980743b",
+      "mode": "LIVE_CONDITIONAL_DIAGNOSTIC",
+      "execution_contract_sha256": "5316d2d241b4c48202619e5574d10b5035d6ceaee21c577230aed58da2efc6b1",
+      "runtime_test_commit": "c5d07cb4c29d01896cdf0e89c2793b4c653ed10e",
+      "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+      "image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+      "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+      "science_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+      "ordinary_record_sha256": "b0a9fd8a2487d725668823b75966176e98eb25551f40b9f177b485141ecb9663",
+      "ordinary_arrays_sha256": "2a0318c42ee47001e2774ea6b4fec8317b1887c744a2720e71033a75b18f6051"
+    },
+    "scientific_execution": "EXECUTED_DIAGNOSTIC_UNQUALIFIED",
+    "scientific_processes": 1,
+    "true_conditional_callbacks": 3,
+    "callback_slots": 3,
+    "new_ordinary_scf_grid_full_eri": 0,
+    "resource_status": "RESOURCE_CANDIDATE_EXACT_FIXTURE_EXECUTED_INITIALIZATION_SCOPE_ONLY",
+    "comparison_available": false,
+    "delta_hartree": null,
+    "record": "validation/user-molecule/residual-live-20261006.json",
+    "iterations": 0,
+    "stop_reason": "ROOT_AMBIGUOUS_INITIALIZATION",
+    "production_activation": false,
+    "method_approval": false,
+    "full_T05": "NOT_EXECUTED_COMPLETE_MASK_ZERO_ITEMS",
+    "P12_P13_T06": "NOT_EXECUTED_UNQUALIFIED_ENDPOINTS",
+    "metadata_only_followup_commit": "ea41793daea5f175cddaf9e077217e3337c5c216",
+    "followup_real_execution": "NOT_EXECUTED"
+  }
 }
