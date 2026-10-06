@@ -1,8 +1,12 @@
-"""W06 tests and one actual metadata Check/blocked Compute, no molecular SCF."""
+"""W01-W07 engineering groups and metadata/refusal probes, no molecular SCF.
+
+The historical script/record names are retained for earlier CI receipts.
+"""
 import contextlib
 import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import sys
 from types import SimpleNamespace
@@ -17,7 +21,20 @@ def save(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False)+'\n', encoding='utf-8')
 
 
+def test_ids(suite):
+    if isinstance(suite, unittest.TestSuite):
+        return [identity for child in suite for identity in test_ids(child)]
+    return [suite.id()]
+
+
 def main():
+    # New synthetic fixtures stay on the writable container tmpfs, never in a
+    # read-only source checkout or an earlier immutable delivery directory.
+    for variable, leaf in (
+        ('AI4ORGCHEM_EVIDENCE_TEST_STAGE', 'evidence'),
+        ('AI4ORGCHEM_REPORT_TEST_STAGE', 'report-export'),
+        ('AI4ORGCHEM_PRESERVATION_TEST_STAGE', 'run-preservation')):
+        os.environ[variable] = str(Path('/tmp/ai4orgchem-guarded-tests') / leaf)
     # Enforce the numerical boundary during the whole test process, not just by
     # trusting the test names. Imports/metadata remain available; all molecular
     # SCF, grid construction and integral calls below are forbidden.
@@ -31,14 +48,17 @@ def main():
     gto.Mole.intor = forbidden
     gto.Mole.intor_by_shell = forbidden
     rows = []
-    for pattern in ('test_user_molecule_*.py', 'test_reference_user_molecule.py', 'test_runtime.py'):
+    for pattern in ('test_user_molecule_*.py', 'test_reference_user_molecule.py',
+                    'test_reference_user_molecule_v2.py', 'test_runtime.py'):
         suite = unittest.defaultTestLoader.discover(str(ROOT/'tests'), pattern=pattern)
+        identities = test_ids(suite)
         result = unittest.TextTestRunner(verbosity=2).run(suite)
         rows.append({'pattern':pattern,'tests':result.testsRun,'failures':len(result.failures),
-                     'errors':len(result.errors),'skipped':len(result.skipped)})
+                     'errors':len(result.errors),'skipped':len(result.skipped),'test_ids':identities})
         save(OUTPUT/'test-progress.json', {'groups':rows})
-        if not result.wasSuccessful() or result.skipped:
-            raise RuntimeError('Unit group failed or was skipped: '+pattern)
+        if (not result.testsRun or not result.wasSuccessful() or result.skipped
+                or len(identities) != len(set(identities)) or len(identities) != result.testsRun):
+            raise RuntimeError('Unit group failed, was empty or skipped: '+pattern)
     from runtime.user_molecule.__main__ import execute, main as cli_main
     from runtime.user_molecule.records import load
     import runtime.user_molecule.records as records
@@ -70,6 +90,7 @@ def main():
     (OUTPUT/'readonly-report.txt').write_text(stream.getvalue(),encoding='utf-8')
     save(OUTPUT/'w06-engineering-tests.json', {'status':'PASS_ENGINEERING_ONLY','groups':rows,
         'unit_test_total':sum(row['tests'] for row in rows),'metadata_check':'PASS; nAO=14',
+        'unit_test_ids':[identity for row in rows for identity in row['test_ids']],
         'blocked_compute':'PASS; exit=20; no energies','readonly_report':'PASS; bytes unchanged',
         'guarded_operations':['SCF.kernel','hf.kernel','Grids.build','Mole.intor','Mole.intor_by_shell'],
         'molecular_scf':'NOT_EXECUTED','molecular_reference':'NOT_EXECUTED',

@@ -34,7 +34,8 @@ def main():
     git = lambda *args: subprocess.check_output(['git', *args], cwd=root).decode('utf-8').strip()
     if git('status', '--porcelain'):
         raise ValueError('CI requires a clean committed runtime')
-    image = load(root/'validation/user-molecule/candidate-image.json')['image_id']
+    candidate = load(root/'validation/user-molecule/candidate-image.json')
+    image = candidate['image_id']
     if not re.fullmatch(r'sha256:[0-9a-f]{64}', image):
         raise ValueError('An immutable candidate image ID is required')
     rows = []
@@ -61,6 +62,7 @@ def main():
     save(output/'docker-version.json', json.loads(docker('version', '--format', '{{json .Server}}')))
     science_lock = load(root/'locks/source.user-molecule.lock.json')
     assert inspect_image['Config']['Labels']['ai4orgchem.source.commit'] == science_lock['source_commit']
+    assert inspect_image['Config']['Labels']['org.opencontainers.image.revision'] == candidate['runtime_build_commit']
     for name, expected in load(root/'locks/source-files.sha256.json').items():
         assert sha(options.legacy_source/name) == expected, name
 
@@ -138,7 +140,7 @@ subprocess.run([p,'-m','pip','install','--no-index','--find-links','/ci-wheels',
 subprocess.run([p,'-m','pip','check'],check=True)
 with open('/output/dependencies.txt','w') as stream:
  subprocess.run([p,'-m','pip','freeze'],stdout=stream,check=True)
-subprocess.run([p,'-m','unittest','discover','-s','tests','-p','test_user_molecule_*.py','-v'],check=True)
+subprocess.run([p,'scripts/ci-unit-user-molecule.py','--output-root','/output/minimal-units'],check=True)
 """
     container('input-resource-w05-contracts', ['-c', minimal],
         ['--mount', f'type=bind,source={options.wheels.resolve()},target=/ci-wheels,readonly',
@@ -150,6 +152,9 @@ subprocess.run([p,'-m','unittest','discover','-s','tests','-p','test_user_molecu
             ['--mount', f'type=bind,source={options.legacy_source.resolve()},target=/legacy-source,readonly',
              '-e', 'AI4ORGCHEM_TEST_SOURCE=/legacy-source'])
     container('research-metadata-guard', ['scripts/ci-guard-user-molecule.py'], seconds=60)
+    container('w01-w07-guarded-engineering', ['scripts/ci-guard-w06.py'],
+        ['--mount', f'type=bind,source={options.legacy_source.resolve()},target=/legacy-source,readonly',
+         '-e', 'AI4ORGCHEM_TEST_SOURCE=/legacy-source'])
 
     def host(name, command, expected=0):
         log = output/(name+'.log')
@@ -240,17 +245,28 @@ subprocess.run([p,'-m','unittest','discover','-s','tests','-p','test_user_molecu
     counts = {}
     for name in ('input-resource-w05-contracts', 'scientific-adapter-engineering',
                  'legacy-test_runtime', 'legacy-test_process', 'legacy-test_classifier_adapter'):
+        if name == 'input-resource-w05-contracts':
+            counts[name] = load(output/name/'minimal-units/summary.json')['unit_test_total']
+            continue
         logs = (output/name/'stdout.log').read_text()+(output/name/'stderr.log').read_text()
         match = re.search(r'Ran (\d+) tests? in', logs)
         assert match, name
         counts[name] = int(match[1])
+    guarded = load(output/'w01-w07-guarded-engineering/w06-engineering-tests.json')
+    assert guarded['status'] == 'PASS_ENGINEERING_ONLY'
+    counts['w01-w07-guarded-engineering'] = guarded['unit_test_total']
+    packages = load(root/'validation/user-molecule/implementation-state.json')['work_packages']
+    prior_science = packages['W05']['numerical_acceptance']
     assert not git('status', '--porcelain')
     save(output/'summary.json', {'status': 'LOCAL_CI_ENGINEERING_PASS', 'runtime_test_commit': baseline['runtime_test_commit'],
         'image_id': image, 'runtime_image_build_commit': inspect_image['Config']['Labels']['org.opencontainers.image.revision'],
         'science_commit': science_lock['source_commit'], 'unit_counts': counts, 'unit_test_total': sum(counts.values()),
+        'unit_count_meaning': 'Test executions; minimal/full groups and legacy runtime intentionally overlap, not unique tests',
         'host_integration_actions': 10, 'platform_probes': platform['probes'], 'research_metadata_guard': 'PASS', 'tests': rows,
         'github_actions': 'NOT_EXECUTED', 'new_image_build': 'NOT_EXECUTED', 'scientific_scf': 'NOT_EXECUTED',
-        'W05_numerical_acceptance': 'BLOCKED / NOT_EXECUTED', 'production_compute_enabled': False,
+        'W05_numerical_acceptance': prior_science,
+        'W06_molecular_reference': packages['W06']['molecular_reference'],
+        'numerical_acceptance_this_run': 'NOT_EXECUTED', 'production_compute_enabled': False,
         'publication': 'NOT_EXECUTED', 'wslc': 'BLOCKED / NOT_EXECUTED; paused'})
     print('Local CI completed: '+str(output), flush=True)
 

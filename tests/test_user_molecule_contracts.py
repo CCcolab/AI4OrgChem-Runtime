@@ -68,7 +68,12 @@ class W05PreparationContractTests(unittest.TestCase):
         self.assertIn(state['work_packages']['W05']['numerical_acceptance'],
                       ('NOT_EXECUTED', 'EXECUTED_FAILED_FROZEN_GATES'))
         self.assertFalse(state['work_packages']['W06']['production_activation'])
-        self.assertTrue(state['work_packages']['W07']['validation'].startswith('BLOCKED'))
+        w07 = state['work_packages']['W07']
+        self.assertTrue(w07['validation'].startswith('PASS_SCOPED_'))
+        self.assertIn('BLOCKED_FOR_RESEARCH', w07['validation'])
+        self.assertEqual(w07['real_user_feedback'],
+                         'DEFERRED_BY_USER_NOT_CURRENT_ENGINEERING_BLOCKER')
+        self.assertTrue(state['scientific_pending'])
         for criterion in load(RECORDS / 'criteria-register.json')['criteria']:
             self.assertEqual(criterion['scientific_acceptance'], 'NOT_EXECUTED')
             if criterion['value'] is None:

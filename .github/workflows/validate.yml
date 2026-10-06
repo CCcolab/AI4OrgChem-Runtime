@@ -57,16 +57,18 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
   user-molecule-contracts:
-    # Input/resource/fixture checks only, with an isolated minimal dependency set.
-    # The unpublished adapter
-    # and Docker/PowerShell acceptance remain a separately recorded local run.
+    # Input/resource/fixture/receipt/report engineering with minimal dependencies.
+    # The script explicitly classifies every user-molecule unit file. NumPy array
+    # witnesses, v1/v2 references and the unpublished scientific adapter remain a
+    # separately recorded local guarded run; this job does not cover those groups.
+    # Docker/PowerShell/W07 scenario acceptance also remains local.
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
         with:
           persist-credentials: false
-      - name: Strict input, resource and W05 fixture contracts (no SCF)
+      - name: Strict input, resource, fixture and W07 report contracts (no science)
         shell: bash
         run: |
           set -euo pipefail
@@ -79,7 +81,8 @@ jobs:
             2>&1 | tee "$RUNNER_TEMP/user-molecule-contracts/install.log"
           "$PYTHON" -m pip check
           "$PYTHON" -m pip freeze > "$RUNNER_TEMP/user-molecule-contracts/dependencies.txt"
-          "$PYTHON" -m unittest discover -s tests -p 'test_user_molecule_*.py' -v \
+          "$PYTHON" scripts/ci-unit-user-molecule.py \
+            --output-root "$RUNNER_TEMP/user-molecule-contracts/minimal-units" \
             2>&1 | tee "$RUNNER_TEMP/user-molecule-contracts/tests.log"
       - name: Preserve contract evidence
         if: always()

@@ -1,6 +1,7 @@
 """Local JSON evidence tests; never import or execute scientific engines."""
 import hashlib
 import json
+import os
 from pathlib import Path
 import tempfile
 from types import SimpleNamespace
@@ -11,7 +12,9 @@ from runtime.user_molecule.evidence import read_run_report
 from runtime.user_molecule.input import InputError
 
 
-STAGE = Path(r'D:\AI4Science\ai4orgchem-runtime-deliveries\20261006-user-molecule-report-engineering\evidence-tests')
+STAGE = Path(os.environ.get(
+    'AI4ORGCHEM_EVIDENCE_TEST_STAGE',
+    str(Path(tempfile.gettempdir()) / 'ai4orgchem-evidence-tests')))
 
 
 class EvidenceTests(unittest.TestCase):
