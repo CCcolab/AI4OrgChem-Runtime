@@ -97,10 +97,31 @@ class IndependentResidualTests(unittest.TestCase):
         self.assertTrue(any(row['phase'] == 'SCIPY_TRF_RESIDUAL' for row in result['evaluation_ledger']))
 
     def test_far_root_requires_reanchoring_beyond_initial_chart(self):
-        result,_ = self.solve(Evaluator('far'),density=np.diag([2.,0.]))
+        # Delta to the exact ground root is pi/4-.1 > .25, while the
+        # initial residual Jacobian is nonzero.  The old theta=0 fixture
+        # lies at a nonroot stationary point of the residual merit; its
+        # rejection is retained as the separate limitation test below.
+        result,_ = self.solve(Evaluator('far'),density=projector(-.1))
         self.assertTrue(result['engine_qualified'])
         np.testing.assert_allclose(result['density'],[[1.,-1.],[-1.,1.]],rtol=0,atol=2e-8)
         self.assertGreaterEqual(len(result['history']),3)
+
+    def test_nonroot_stationary_merit_is_rejected_despite_existing_true_root(self):
+        # For this constant F, R(theta)=cos(2*theta).  At theta=0,
+        # dR/dtheta=0 and J.T@R=0 even though R=1.  TRF can correctly
+        # stop on gtol without finding the known root theta=-pi/4.
+        # Original endpoint gates must refuse this algorithmic limitation.
+        initial = np.diag([2.,0.])
+        result,_ = self.solve(Evaluator('far'),density=initial)
+        self.assertFalse(result['engine_qualified'])
+        self.assertEqual(result['stop_reason'],'NO_RESIDUAL_IMPROVEMENT')
+        self.assertEqual(result['scipy_result']['status'],1)
+        self.assertAlmostEqual(result['history'][0]['before_residual_norm'],1.,places=14)
+        self.assertAlmostEqual(result['history'][0]['after_residual_norm'],1.,places=14)
+        self.assertFalse(result['endpoint_gate']['checks']['commutator'])
+        self.assertFalse(result['endpoint_gate']['checks']['mapped_density'])
+        self.assertTrue(result['endpoint_gate']['checks']['raw_gap'])
+        np.testing.assert_array_equal(result['density'],initial)
 
     def test_dense_spd_metric_and_analytical_projector(self):
         s = np.array([[1.,.2],[.2,1.]])
