@@ -1,0 +1,474 @@
+{
+  "id": "MDR-002",
+  "revision": "0.2",
+  "date": "2026-10-06",
+  "status": "DRAFT_FOR_SCOPED_REVIEW_NOT_APPROVED",
+  "proposal_author": "Codex; not a method-owner or external reviewer signature",
+  "request_source": "DIRECT_USER_MESSAGE",
+  "request_text": "请明确近简并占据规则与验收目标，然后需要进行外部评审？",
+  "base_runtime_commit": "9b14bab01804dd6580ddff55772e107fe5ae6aa3",
+  "parent_record": {
+    "id": "MDR-001",
+    "revision": "0.1",
+    "path": "../mdr-001/record.json",
+    "sha256": "05c49f7c1b70ac2b8be28c47d0812ccb86a56b5cf4b6171c4e664b4097acb172",
+    "original_record_preserved": true
+  },
+  "policy_id": "MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2",
+  "scientific_protocol_approved": false,
+  "implementation": "NOT_IMPLEMENTED",
+  "new_real_scientific_execution": "NOT_EXECUTED",
+  "new_scientific_budget": null,
+  "production_activation": false,
+  "external_review_status": "USER_PROVIDED_STATIC_FEEDBACK_RECEIVED_FORMAL_SCIENTIFIC_OPINIONS_PENDING",
+  "scope": {
+    "initial_fixture": "ethene-planar-technical-v1",
+    "profile_id": "pilot-b3lypg-sto3g-grid2-v1",
+    "n_ao": 14,
+    "electron_count": 16,
+    "change": "Only initial density construction; original operator, global closed-shell occupation and final gates preserved",
+    "not_included": [
+      "Fractional occupation",
+      "MOM or IMOM state tracking",
+      "Level shift or random symmetry breaking",
+      "Per-fragment electron quotas",
+      "Acceptance of final degenerate boundary",
+      "Original P01-P14 automatic review/rerun"
+    ]
+  },
+  "proposed_definitions": {
+    "D01": "Symmetric PSD density, global closed-shell rank N/2 under masked metric; Tr(S_tilde D)=N; D S_tilde D=2D",
+    "D02": "Verified old ordinary occupied column space C0; B=C0^T S_tilde C0; seed=2 C0 B^-1 C0^T; initial F gap diagnostic only; no initial F eigenvector tie selection; final global Aufbau positive-gap selection unchanged",
+    "D03": "At most an operational original-functional value at a qualified conditional fixed point; research delta interpretation requires actual scoped review; energy stationarity/stability not established",
+    "D04": "All unchanged final true-F/occupation/map/gap/numeric gates, individually qualified same-root endpoint comparisons; resource and scientific interpretation separate"
+  },
+  "ordinary_origin": {
+    "kind": "REUSE_PRIOR_FULL_INDEPENDENT_ORDINARY_REFERENCE",
+    "source_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-solver-v2\\numerical-a1\\pilot-ethene",
+    "record_file": "ordinary-reference.json",
+    "record": {
+      "size_bytes": 11741,
+      "sha256": "b0a9fd8a2487d725668823b75966176e98eb25551f40b9f177b485141ecb9663"
+    },
+    "arrays_file": "ordinary-reference.npz",
+    "arrays": {
+      "size_bytes": 1728678,
+      "sha256": "2a0318c42ee47001e2774ea6b4fec8317b1887c744a2720e71033a75b18f6051"
+    },
+    "common_density_identity": {
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "order": "C",
+      "sha256": "9dc813178f17be82f7c231c7b9d0a0494e8d4bcd2acea05ac2605bf3bf268f8a"
+    },
+    "array_identities": {
+      "density": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "9dc813178f17be82f7c231c7b9d0a0494e8d4bcd2acea05ac2605bf3bf268f8a"
+      },
+      "hcore": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "b626383143be0295b58aee4d7f553398f0df0cb54af8541e0795056525faaa1a"
+      },
+      "overlap": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "957372152a6fab1b90f084598f010f73aa8c09ce5ec3a1c383c6195a23732d78"
+      },
+      "eri": {
+        "shape": [
+          14,
+          14,
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "793d3d8ad2a02c43186c6e038229a4219507058486c1d433dae3a0bb97301ca6"
+      },
+      "grid_coords": {
+        "shape": [
+          43904,
+          3
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "ec697731d0429ecf2bd11defd2fd75414286ba950e8b0afc6aea012890e9aad7"
+      },
+      "grid_weights": {
+        "shape": [
+          43904
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "2b97965e448ea3d57aabfff3b51c2d2f1aa2c27c026444bc21bb608ef6452d68"
+      }
+    },
+    "nuclear_repulsion_hartree": 33.23272494899829,
+    "forbidden_mix": "Do not substitute production common-D0.npy or scalar-only ordinary-tested.json for this complete record/array identity."
+  },
+  "required_old_array_identities": {
+    "density": {
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "order": "C",
+      "sha256": "9dc813178f17be82f7c231c7b9d0a0494e8d4bcd2acea05ac2605bf3bf268f8a"
+    },
+    "overlap": {
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "order": "C",
+      "sha256": "957372152a6fab1b90f084598f010f73aa8c09ce5ec3a1c383c6195a23732d78"
+    },
+    "mo_coefficients": {
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "order": "C",
+      "sha256": "c4ebf474d3dc13e14bd08bbaaff09797805da345877b220b6dc9a5ecea0ba42e"
+    },
+    "mo_occupations": {
+      "shape": [
+        14
+      ],
+      "dtype": "<f8",
+      "order": "C",
+      "sha256": "425b2c4fbffb758896a2c8bb66fe2387cf784b2911147d2d48a195ee29a5bb9e"
+    }
+  },
+  "initialization": {
+    "occupied_selection_from_cache": "Exactly N/2 mo_coefficients columns with mo_occupations==2; all other occupations exactly0",
+    "input_checks": [
+      "Whole-file and every used-array SHA, shape and finite values",
+      "Old ordinary qualification and electron count",
+      "C0^T S C0≈I; 2 C0 C0^T≈D0",
+      "S, S_tilde and B SPD and bounded conditioning"
+    ],
+    "seed_formula": "Dseed=2 C0 (C0^T S_tilde C0)^-1 C0^T",
+    "coefficient_formula": "Cseed=C0 (C0^T S_tilde C0)^(-1/2)",
+    "input_or_seed_relative_frobenius_tolerance_candidate": 1e-10,
+    "relative_denominator": "max(norm(expected,Frobenius),1)",
+    "condition_number_max_candidate": 1000000.0,
+    "min_eigenvalue_requirement": "strictly positive",
+    "singular_or_nonfinite_action": "REFUSE_NO_PSEUDOINVERSE_NO_REGULARIZATION_NO_F_CALL",
+    "old_cache_rewritten": false,
+    "same_parent_seed_across_three_paths": true,
+    "no_initial_F_eigenvector_selection": true,
+    "initial_gap_scope": "DIAGNOSTIC_NOT_ENDPOINT_QUALIFICATION",
+    "basis_invariance": "Seed formula invariant under invertible occupied-column basis transform; this does not waive parent MO validation",
+    "seed_validation_target": "Masked-metric orthonormality and projector/electron checks; not a conditional fixed point",
+    "physical_metric_and_grid_electron_counts": "Separate diagnostics; not automatically equal N",
+    "matrix_expected_checks": [
+      {
+        "actual": "C0^T S C0",
+        "expected": "I_nocc"
+      },
+      {
+        "actual": "2 C0 C0^T",
+        "expected": "D0"
+      },
+      {
+        "actual": "Cseed^T S_tilde Cseed",
+        "expected": "I_nocc"
+      },
+      {
+        "actual": "Dseed S_tilde Dseed",
+        "expected": "2Dseed"
+      },
+      {
+        "actual": "Qseed Qseed^T",
+        "expected": "Q0 Q0^T",
+        "Q": "Euclidean orthonormal column basis"
+      }
+    ],
+    "seed_electron_count_abs_max": 1e-07,
+    "solver_admission_checks": {
+      "status": "SPECIFIED_NOT_EXECUTED_FOR_V2",
+      "conjunction": "Definition-layer seed checks AND each existing path solver admission; no combined PASS",
+      "metric": "Masked overlap S_tilde",
+      "H": "S_tilde^(1/2)",
+      "X": "S_tilde^(-1/2)",
+      "Pseed": "0.5 H Dseed H",
+      "paths": [
+        "production_copy",
+        "production_owned",
+        "independent_reference"
+      ],
+      "input_constraints": {
+        "finite_real_same_size_density_and_metric": true,
+        "matrix_symmetry_rtol": 0,
+        "matrix_symmetry_atol": 1e-12,
+        "strict_positive_definite_metric": true,
+        "global_closed_shell_integer_electrons": true,
+        "at_least_one_virtual_orbital": true,
+        "occupied_virtual_variables_max": 64,
+        "finite_whitening_and_projector": true
+      },
+      "projector_trace": {
+        "formula": "abs(trace(Pseed)-N/2)",
+        "threshold": 1e-10,
+        "kind": "ABSOLUTE_OCCUPIED_ORBITAL_COUNT",
+        "denominator": null,
+        "required_on_all_paths": true
+      },
+      "projector_idempotency": {
+        "formula": "norm(Pseed@Pseed-Pseed,Frobenius)",
+        "threshold": 1e-10,
+        "kind": "ABSOLUTE_WHITENED_PROJECTOR_FROBENIUS",
+        "denominator": null,
+        "required_on_all_paths": true
+      },
+      "production_density_reconstruction": {
+        "formula": "Drec=2 X Uocc Uocc^T X^T",
+        "Uocc": "Top N/2 eigenvectors of sym(Pseed)",
+        "finite_reconstruction_required": true,
+        "residual": "norm(Drec-Dseed,Frobenius)/max(norm(Dseed,Frobenius),1)",
+        "threshold": 1e-10,
+        "paths": [
+          "production_copy",
+          "production_owned"
+        ],
+        "reference_current_extra_reconstruction_gate": "NOT_IMPLEMENTED_IN_EXISTING_REFERENCE_ENTRY",
+        "use_reconstructed_density_to_replace_input": false
+      },
+      "failure_action": "Reject that path before its first functional callback; do not project, repair or relax",
+      "record_fields": [
+        "path_id",
+        "input_density_identity",
+        "metric_identity",
+        "formula",
+        "metric_and_units",
+        "denominator",
+        "unchanged_threshold",
+        "actual_value_or_unknown_reason",
+        "pass_or_refusal",
+        "code_commit_and_source_location"
+      ],
+      "source_locations": {
+        "production": "runtime/user_molecule/residual_candidate.py:79-121; residual_bridge.py:454-522",
+        "independent_reference": "reference/residual_candidate.py:114-153"
+      },
+      "source_commit": "f8a2f4c30ac2d7d310027465a0fb83216a0fd6a1",
+      "definition_layer_AO_relative_idempotency_retained": true,
+      "different_metrics_not_interchangeable": true,
+      "definition_layer_electron_abs_1e_minus_7_retained": true
+    }
+  },
+  "final_acceptance": {
+    "operator": "True unextrapolated projected conditional F(D_returned)",
+    "commutator_frobenius_max": 1e-05,
+    "electron_count_abs_max": 1e-07,
+    "idempotency_relative_max": 1e-07,
+    "energy_closure_hartree_max": 1e-09,
+    "overlap_and_fock_mask_max_abs": 1e-12,
+    "raw_aufbau_map_relative_max": 2e-08,
+    "raw_aufbau_map_absolute_max": 2e-08,
+    "final_gap_min_hartree": 1e-06,
+    "returned_and_mapped_energy_recheck_hartree_max": 1e-09,
+    "final_near_degenerate_action": "REFUSE_NO_RESEARCH_DELTA",
+    "state_comparison": "Same rank-N/2 occupied projector/density; whole partially-filled cluster agreement insufficient",
+    "comparisons": {
+      "T05_same_density": {
+        "mask_max_abs": 0.0,
+        "matrix_max_abs": 1e-10,
+        "matrix_frobenius": 1e-09,
+        "component_hartree": 1e-09,
+        "total_energy_hartree": 1e-09,
+        "grid_electron_count_abs": 1e-09
+      },
+      "P12_energy_difference_hartree": 1e-10,
+      "P13_density_difference_frobenius": 1e-09,
+      "T06_total_energy_hartree": 1e-08,
+      "T06_component_hartree": 1e-06,
+      "T06_density_frobenius": 1e-06,
+      "T06_fock_frobenius": 1e-06,
+      "acceptance": "All endpoints must individually pass unchanged original AO commutator/count/idempotency/mask/closure/raw-Aufbau/final-gap gates before same-state comparison; trajectories or close energy alone are insufficient.",
+      "raw_integrals_and_XC": "Shared PySCF dependencies; not independently validated by this reference"
+    },
+    "changes_to_final_gate_thresholds": false,
+    "mapped_density_recheck_all_original_endpoint_gates_required": true,
+    "mapped_density_recheck_raw_map_absolute_max": 2e-08
+  },
+  "engineering_acceptance_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12"
+  ],
+  "engineering_execution_this_round": "NOT_EXECUTED_DESIGN_STATIC_REVIEW_ONLY",
+  "roles": {
+    "method_owner": {
+      "identity": null,
+      "date": null,
+      "definition_source": null,
+      "approval": null
+    },
+    "external_computational_chemistry_reviewer": {
+      "identity": null,
+      "date": null,
+      "opinion_source": null,
+      "findings": null
+    }
+  },
+  "external_questions": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08"
+  ],
+  "evidence": {
+    "latest_diagnostic_record": "../../residual-live-20261006.json",
+    "actual_diagnostic_runtime_commit": "c5d07cb4c29d01896cdf0e89c2793b4c653ed10e",
+    "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+    "image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+    "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+    "old_three_path_refusal_preserved": true,
+    "initial_gaps_hartree": {
+      "production_copy": 1.2156942119645464e-14,
+      "production_owned": 1.5487611193520934e-14,
+      "independent_reference": 1.3655743202889425e-14
+    },
+    "solver_iterations": 0,
+    "old_true_F_calls": 3,
+    "old_process_closed_no_retry": true
+  },
+  "scientific_unknowns": [
+    "Seed compatibility with intended conditional state",
+    "Final positive-gap target applicability",
+    "Original-AO physical/grid density count versus masked-metric count and energy comparison meaning",
+    "G versus Pmask(G) stationarity on allowed density variations",
+    "Qualified endpoint and full iterative resource envelopes"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://manual.q-chem.com/latest/topic_mom.html",
+      "title": "Q-Chem 7.0 MOM/IMOM official documentation",
+      "checked_date": "2026-10-06",
+      "use": "Alternative state selection changes orbital selection; not adopted"
+    },
+    {
+      "url": "https://pubs.acs.org/doi/10.1021/jp801738f",
+      "title": "Gilbert/Besley/Gill 2008 MOM paper",
+      "checked_date": "2026-10-06",
+      "access": "Publisher search metadata/abstract; full text not accessed",
+      "use": "Original method context, not conditional-kernel equivalence"
+    },
+    {
+      "url": "https://pyscf.org/_modules/pyscf/scf/addons.html",
+      "title": "PySCF follow_state/frac_occ source",
+      "checked_date": "2026-10-06",
+      "use": "Existing alternatives, not invoked or certified for masked metric"
+    },
+    {
+      "url": "https://pyscf.org/user/scf.html#stability-analysis",
+      "title": "PySCF stability analysis",
+      "checked_date": "2026-10-06",
+      "use": "Convergence does not establish local energy minimum"
+    }
+  ],
+  "scope_boundaries": {
+    "wslc": "BLOCKED_PAUSED",
+    "github_actions": "NOT_EXECUTED",
+    "image_distribution": "BLOCKED",
+    "external_contact": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "public_push_tag_release": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "real_user_feedback": "DEFERRED_BY_USER_NOT_REVIEW_PRECONDITION",
+    "legacy_L4_resume": "UNSUPPORTED_CHECKPOINT_SAVE_ONLY"
+  },
+  "parent_revision": "0.1",
+  "previous_revision_record": {
+    "path": "revisions/0.1-record.json",
+    "sha256": "aaf236611e31e4fd27c131a64e079f874307924e5e038e90b12d4dcfa1c75e09",
+    "source_commit": "f8a2f4c30ac2d7d310027465a0fb83216a0fd6a1",
+    "preserved_bytes": true
+  },
+  "feedback_receipts": [
+    {
+      "source": "DIRECT_USER_PROVIDED_REVIEW_TRANSCRIPTION",
+      "path": "review-feedback-0.1_zh-CN.md",
+      "sha256": "f9981d673afbc07a382cc7f32be7184c76024e3fb879e6fa1bd35ae8215a43a8",
+      "actual_reviewer_identity_supplied": false,
+      "actual_method_owner_definition_received": false,
+      "reported_payload_count": 82,
+      "material_integrity": "USER_REPORTED_SIZE_SHA256_MATCH",
+      "scope": "Material verification and static review only; no new computation",
+      "corresponding_local_review_package_sha256": "b012790cbd36aac59ae30300afdfe8e0c13ed5246c6ae08e710282bfbe5f3867",
+      "formal_external_scientific_opinion_received": false,
+      "scientific_approval": false,
+      "accepted_document_changes": [
+        "A02 existing solver entry checks explicit, separate metrics and old thresholds retained",
+        "User-molecule UM-P12/UM-P13 aliases distinct from original scientific proposition IDs"
+      ],
+      "requires_further_scientific_review": [
+        "Target conditional state vs final positive-gap requirement",
+        "Masked metric count vs original AO/grid count and energy-difference use",
+        "Conditional operator vs energy derivative over allowed variations"
+      ]
+    }
+  ],
+  "engineering_acceptance_detail": {
+    "A02": "Definition-layer seed metrics plus per-path existing absolute whitened trace/idempotency and production reconstruction entry checks; all remain NOT_EXECUTED for V2"
+  },
+  "acceptance_identifier_mapping": {
+    "namespace": "USER_MOLECULE_ACCEPTANCE_NOT_ORIGINAL_P01_P14_PROPOSITIONS",
+    "display_aliases_only": true,
+    "historical_machine_keys_renamed": false,
+    "UM-P12": {
+      "legacy_criterion_id": "P12",
+      "legacy_machine_key": "P12_energy_difference_hartree",
+      "formula": "abs(E_production_owned-E_production_copy)",
+      "threshold": 1e-10,
+      "unit": "Hartree",
+      "scope": "Two production ERI storage/contraction paths; not original scientific proposition P12",
+      "legacy_metric_id": "P12.storage_energy"
+    },
+    "UM-P13": {
+      "legacy_criterion_id": "P13",
+      "legacy_machine_key": "P13_density_difference_frobenius",
+      "formula": "norm(D_production_owned-D_production_copy,Frobenius)",
+      "threshold": 1e-09,
+      "unit": "AO_density_Frobenius",
+      "scope": "Two production ERI storage/contraction paths; not original scientific proposition P13",
+      "legacy_metric_id": "P13.storage_density"
+    },
+    "independent_reference_comparison": "T06; not UM-P12 or UM-P13",
+    "threshold_source": "Unchanged final_acceptance.comparisons frozen from the existing contract"
+  }
+}

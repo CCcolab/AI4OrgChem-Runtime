@@ -1,8 +1,8 @@
 # 近简并占据规则与验收目标：窄范围候选 V2
 
-2026-10-06；MDR-002 修订0.2 / DRAFT_FOR_SCOPED_REVIEW。已收到用户转交的材料核验与静态审阅反馈；方法责任人定义和正式科学相容性意见仍待提供。候选标识：`MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2`。**只提议改变初始化，保留原最终占据和资格门槛**；代码未实现，新计算未执行，预算未创建，生产 Compute 关闭。反馈与原修订见 [登记记录](../validation/user-molecule/method-decisions/mdr-002/record.json)。
+2026-10-06；MDR-002 修订0.3 / DRAFT_INTERNAL_DEFINITION_AND_VALIDATION。已收到用户转交的材料核验与静态反馈；用户现已明确取消外部专家流程，内部方法定义、推导与实际验证继续。候选标识：`MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2`。**只提议改变初始化，保留原最终占据和资格门槛**；代码未实现，新计算未执行，预算未创建，生产 Compute 关闭。反馈与原修订见 [登记记录](../validation/user-molecule/method-decisions/mdr-002/record.json)。
 
-机器记录：[record.json](../validation/user-molecule/method-decisions/mdr-002/record.json)。评审入口：[评审任务与反馈表](USER_MOLECULE_NEAR_DEGENERACY_REVIEW_zh-CN.md)。[MDR-001 修订0.1](USER_MOLECULE_METHOD_DECISIONS_001_zh-CN.md)作为历史四问原样保留；本文不补造责任人、身份或批准意见。
+机器记录：[record.json](../validation/user-molecule/method-decisions/mdr-002/record.json)。当前入口：[内部定义与验证](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md)。旧外审页保留为已取消流程的历史导航。[MDR-001 修订0.1](USER_MOLECULE_METHOD_DECISIONS_001_zh-CN.md)作为历史四问原样保留；本文不补造责任人、身份或批准意见。
 
 ## 1. 要计算的状态及本次改变
 
@@ -18,7 +18,7 @@
 | 排序、符号与内部旋转 | 比较密度和占据投影；MO符号、列顺序或整个已占据空间内部旋转不定义新态 |
 | 部分占据简并簇 | 占据/空轨道混合可能改变 D；不能只因整个簇相同而判同态；本候选不接受最终边界近简并 |
 
-这不是接纳零 gap 的新科学方法，也不增加 MOM、分数占据、smearing、level shift、破对称扰动、开壳层或块占据。若外审认为目标必须采用这些定义，应另立协议，不把它们加入本候选后仍称原规则通过。
+这不是接纳零 gap 的新科学方法，也不增加 MOM、分数占据、smearing、level shift、破对称扰动、开壳层或块占据。若内部分析确认目标必须采用这些定义，应另立协议，不把它们加入本候选后仍称原规则通过。
 
 ## 2. 具体初始化定义
 
@@ -104,11 +104,11 @@ UM-P12/UM-P13比较两生产存储路径；T06另比较生产路径与独立参�
 
 ## 4. 能量和科学声明目标
 
-初步可审解释只限“指定条件算子固定点上的原核功能式值及固定几何操作性响应”。是否允许对外报告 Eordinary−Econditional，仍取决于方法责任人的用途定义和外审意见。当前正式科研差值保持空值。
+初步可审解释只限“指定条件算子固定点上的原核功能式值及固定几何操作性响应”。是否允许对外报告 Eordinary−Econditional，仍须项目内部明确用途、建立推导与实际验收证据。当前正式科研差值保持空值。
 
 原核的能量形式导数 G 与迭代算子 F̃=Pmask(G) 不同。F̃固定点、账本闭合、低能量或正gap都不能独立证明所报 E 驻定、稳定或最低。要声称驻定，须对已定义允许变化核查 `Cvirᵀ(G−F̃)Cocc` 或等价导数关系；要声称稳定极小值，还需专门的稳定性证据。本候选不增加未经审阅的数值驻定/稳定门槛，也不先宣称这些性质。
 
-允许的技术成功状态为 `QUALIFIED_CONDITIONAL_FIXED_POINT_CANDIDATE`；不称物理基态、稳定能量最小值、化学键能、实验微观测量或 BLW/ALMO/NBO/cDFT 等价。本页的阈值与公式是代理提出的待审合同，不填为责任人已经批准。
+允许的技术成功状态为 `QUALIFIED_CONDITIONAL_FIXED_POINT_CANDIDATE`；不称物理基态、稳定能量最小值、化学键能、实验微观测量或 BLW/ALMO/NBO/cDFT 等价。本页阈值与公式是内部候选合同，科学解释尚未建立；不再要求外部专家签署。
 
 ## 5. 新政策的工程验收清单（均未执行）
 
@@ -129,10 +129,10 @@ UM-P12/UM-P13比较两生产存储路径；T06另比较生产路径与独立参�
 
 工程数组测试可在另行授权的范围内先做；真实分子验证须冻结新政策、参考实现、精确初值、预算和授权。此前900秒进程已结清、三个路径已关闭，余槽不是本候选的额度。新候选仍 `NOT_IMPLEMENTED / NOT_EXECUTED`。
 
-## 6. 成熟方法依据与外审范围
+## 6. 成熟方法依据与内部核查范围
 
 MOM/IMOM用于控制迭代占据跟随，与本候选的单次初值转换不同；官方文档表明它改变轨道选择步骤，不能把启用它当成不涉及状态定义的普通参数调整。[Q-Chem 7.0 官方手册](https://manual.q-chem.com/latest/topic_mom.html)、[Gilbert、Besley、Gill 原始MOM论文](https://pubs.acs.org/doi/10.1021/jp801738f)。
 
 PySCF已有跟随占据和分数占据工具，可以作为备选研究参照；本候选不调用它们，也不把现成工具视为支持本项目屏蔽度量/原XC定义的证明。[PySCF官方源码](https://pyscf.org/_modules/pyscf/scf/addons.html)。SCF收敛与稳定性是不同问题，符合本页分开声明的要求。[PySCF稳定性说明](https://pyscf.org/user/scf.html#stability-analysis)。资料查阅日期2026-10-06；在线版本不是本机锁定版本认证。
 
-外审限于本项目条件核、该初始化候选、最终目标与能量解释的相容性。原P01—P14不自动重新认证或推翻；明确发现共享关联问题后再单独分析。WSLc、WSL升级和发布不属此次范围。
+内部核查限于本项目条件核、该初始化候选、最终目标与能量解释的相容性；外部专家征询已取消。原P01—P14不自动重新认证或推翻；明确发现共享关联问题后再单独分析。WSLc、WSL升级和发布不属此次范围。

@@ -1,5 +1,7 @@
 # 用户分子计算入口：独立设计与验收合同
 
+当前流程覆盖说明（2026-10-06）：用户已明确取消外部专家咨询、回复及签署前置（CANCELLED_BY_USER）。按 [内部定义与验证](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 推进；下文原设计/历史状态保留，不再作为等待外部意见的条件。既有数值/资源门槛、失败和发布边界仍有效。
+
 设计日期：2026-10-05；评审修订版 DRAFT-3。状态：DESIGN_ONLY / NOT_IMPLEMENTED；D0=PENDING_REVIEW。本文定义新增服务，不表示现有镜像、七个任务或登记案例已经支持用户分子。编写本文未进行新科学计算、镜像构建、平台升级或公开发布。
 
 2026-10-05 优先级调整 COLAB-ADDENDUM-2：保留 [Colab 用户入口与专项验收](USER_MOLECULE_COLAB_ENTRY_zh-CN.md)作为后续可选入口；首版以本地 Docker 和启动器完成用户分子流程，不要求专业用户会用 Notebook。Colab 的 CB0—CB3/NB01—NB12 暂缓，不是本地 D0—D3 的前置条件或验收阻塞；未来启用时仍须独立实测，不能继承 Docker 验收。DRAFT-3 与 COLAB-ADDENDUM-1 已交付原包保留不变，当前优先级修订尚未提交。

@@ -1,6 +1,8 @@
 # AI4OrgChem 可复算运行环境
 
-[近简并规则与验收候选V2](docs/USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md) 已明确为“普通态占据子空间按屏蔽度量重正交的初值”；原最终2/0、Aufbau映射和正能隙门槛保留。已收到材料/静态反馈并补齐A02准入与UM编号；候选尚未实现或取得正式科学相容性意见，不重复诊断、不启用Compute。[外部评审入口](docs/USER_MOLECULE_NEAR_DEGENERACY_REVIEW_zh-CN.md) 已准备，未对外发送。
+用户已明确取消外部专家咨询、意见征询及签署流程（CANCELLED_BY_USER）。后续按 [内部定义与验证](docs/USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 推进，不等待外部回复；三个科学问题保留为内部工作项。现有数值失败和资源门槛保留，V2仍未实现/实测，Compute关闭。
+
+[近简并规则与验收候选V2](docs/USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md) 已明确为“普通态占据子空间按屏蔽度量重正交的初值”；原最终2/0、Aufbau映射和正能隙门槛保留。已收到材料/静态反馈并补齐A02准入与UM编号；候选尚未实现，内部科学相容性与实际验收待完成，不重复诊断、不启用Compute。原专项外审材料保留为历史，其咨询流程已取消。
 
 最新 [实时准入与条件初始化诊断](docs/USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.md) 已执行：单个1 GiB/1 CPU/零swap进程复用旧普通态，三路径各求值一次，均因约1e-14 Hartree的初始能隙未满足原1e-6门槛而拒绝；轨道迭代未启动。同D0算子/能量/已准备mask子范围通过，完整T05及合格P12/P13/T06未执行。实时资源范围仅覆盖本次准备与初始化，科研W07/生产Compute仍BLOCKED。原始记录保留，后续仅修正独立参考拒绝标签并通过数组回归；没有重复真实诊断或重建镜像。
 
@@ -16,7 +18,7 @@ W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 是此前的元�
 
 此前 [主机只读 Report 与导出](docs/USER_MOLECULE_REPORT_20261006_zh-CN.md) 增补保护旧运行目录、核对记录字节/身份、区分未执行与数值失败，并保留宿主/容器退出码。其48项标准库测试和11项主机报告集成通过。基础模式核对登记字节并读取历史快照；高级模式检查关键证据并导出派生报告。该增补轮次没有重算、启动新容器或重建镜像。
 
-最新 [W07 工程试用指南](docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 提供输入、Check、报告/导出三步流程及反馈模板。已用现有乙烯夹具完成一次真实容器 Check 和三项主机报告操作；无 SCF、网格、完整 ERI 或 Compute。这是历史工程人员演示；真人试用与反馈现按用户要求 DEFERRED_BY_USER，作为未来可选事项，不阻塞当前工程验收。方法责任人定义与外部一致性咨询按用户要求延后，待扩展内容齐备后集中征询；方法仍未审，正式 W07 和生产 Compute 保持 **BLOCKED**。
+最新 [W07 工程试用指南](docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 提供输入、Check、报告/导出三步流程及反馈模板。已用现有乙烯夹具完成一次真实容器 Check 和三项主机报告操作；无 SCF、网格、完整 ERI 或 Compute。这是历史工程人员演示；真人试用与反馈现按用户要求 DEFERRED_BY_USER，作为未来可选事项，不阻塞当前工程验收。原外部一致性咨询已按用户最新指示取消；内部定义与验证尚未完成，正式 W07 和生产 Compute 保持 **BLOCKED**。
 
 此前 [W07 代理模拟自测](docs/USER_MOLECULE_W07_SELFTEST_zh-CN.md) 已通过9个启动器场景（8个容器）、6个宿主保护/历史失败判读场景及12个宿主 parser 用例。覆盖已有乙烯/丁二烯两 profile 的 Check、输入/身份拒绝、只读报告与导出；两次 Compute CLI 仅执行拒绝探针，该轮新科学计算为0。本地工程交付已形成，科研 W07/生产 Compute 仍 BLOCKED；模拟不冒充真人体验或数值合格。
 

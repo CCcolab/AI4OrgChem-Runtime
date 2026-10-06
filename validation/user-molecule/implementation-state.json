@@ -47,7 +47,7 @@
       "latest_numerical_record": "validation/user-molecule/residual-live-20261006.json",
       "historical_engineering_test_commit": "43e80de31140d8685b5087ac5ac56654c7e68e28",
       "latest_engineering_test_commit": "44ad90e0e3b293879ec67b7a10475825cde05d3a",
-      "method_static_review": "COMPLETE; scope responsibility remains PENDING_REAL_REVIEW",
+      "method_static_review": "COMPLETE; INTERNAL_SCOPE_DEFINITION_AND_EVIDENCE_PENDING; external expert process CANCELLED_BY_USER",
       "latest_complete_local_ci_record": "validation/user-molecule/ci-local-w01-w07-20261006.json",
       "solver_v2_historical_engineering_test_commit": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
       "historical_w01_w06_engineering_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json",
@@ -79,7 +79,7 @@
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Bind actual future candidate code/image/cache identity and check live resource admission before a fresh one-process conditional diagnostic reservation under the recorded900s/1GiB/603slot proposal. Preparation mapping, independent reference and persistent accounting are implemented; scientific interpretation and production activation remain unapproved. Do not reuse v2 budgets or promote fake/cached-metadata acceptance to research qualification.",
+  "next_bounded_task": "Implement and test the V2 seed and independent seed reference under unchanged A02/final gates. Internal method work proceeds without external expert responses. Any real scientific process needs its own frozen identity, resource admission and fresh budget; this cancellation creates none.",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -105,8 +105,8 @@
   "latest_solver_design": "validation/user-molecule/method-review-20261006/solver-next-design.json",
   "method_readonly_review": "COMPLETE_STORED_EVIDENCE_AND_ALGEBRA; NOT_REAL_METHOD_APPROVAL",
   "new_scientific_runs_this_method_review": 0,
-  "latest_method_decision_record": "validation/user-molecule/method-decisions/mdr-001/record.json",
-  "method_decision_status": "PENDING_DEFINITION_AND_CONSISTENCY_REVIEW; separate owner/external roles",
+  "latest_method_decision_record": "validation/user-molecule/method-decisions/mdr-002/record.json",
+  "method_decision_status": "INTERNAL_DEFINITION_AND_VALIDATION_PENDING; external expert process CANCELLED_BY_USER",
   "latest_host_report_engineering_record": "validation/user-molecule/report-engineering-20261006.json",
   "host_report_engineering": {
     "status": "PASS_SCOPED_HOST_REPORT_ENGINEERING_ONLY",
@@ -118,10 +118,14 @@
   "new_scientific_runs_this_host_report_round": 0,
   "latest_w07_engineering_trial_record": "validation/user-molecule/w07-engineering-trial-20261006.json",
   "method_consultation_schedule": {
-    "status": "DEFERRED_BY_USER",
+    "status": "CANCELLED_BY_USER",
     "initiation_this_round": "NOT_EXECUTED",
-    "resume_condition": "Potential feature additions collected; request definitions and external consistency opinions together.",
-    "scientific_definition_or_method_approval": false
+    "resume_condition": null,
+    "automatic_resume": false,
+    "required_for_implementation": false,
+    "required_for_compute": false,
+    "scientific_definition_or_method_approval": false,
+    "decision_record": "validation/user-molecule/method-decisions/mdr-002/external-review-cancellation.json"
   },
   "new_scf_executions_this_w07_round": 0,
   "new_check_containers_this_w07_round": 1,
@@ -269,13 +273,13 @@
   "latest_method_candidate_record": "validation/user-molecule/method-decisions/mdr-002/record.json",
   "near_degeneracy_candidate": {
     "id": "MDR-002",
-    "revision": "0.2",
-    "status": "DRAFT_FOR_SCOPED_REVIEW_NOT_APPROVED",
+    "revision": "0.3",
+    "status": "DRAFT_INTERNAL_DEFINITION_AND_VALIDATION",
     "policy_id": "MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2",
     "implementation": "NOT_IMPLEMENTED",
     "new_real_scientific_execution": "NOT_EXECUTED",
     "scientific_protocol_approved": false,
-    "external_review_status": "USER_PROVIDED_STATIC_FEEDBACK_RECEIVED_FORMAL_SCIENTIFIC_OPINIONS_PENDING",
+    "external_review_status": "CANCELLED_BY_USER",
     "production_activation": false,
     "final_gate_thresholds_changed": false,
     "existing_diagnostic_unchanged": true,
@@ -285,6 +289,28 @@
       "UM-P12",
       "UM-P13"
     ],
-    "historical_machine_keys_renamed": false
-  }
+    "historical_machine_keys_renamed": false,
+    "external_review_required": false,
+    "internal_method_status": "CANDIDATE_DEFINITION_AVAILABLE_INTERNAL_VALIDATION_PENDING",
+    "implementation_requires_external_opinion": false
+  },
+  "historical_method_decision_record_before_cancellation": "validation/user-molecule/method-decisions/mdr-001/record.json",
+  "internal_method_work_items": [
+    {
+      "id": "I01",
+      "topic": "Target conditional state and final positive-gap service domain",
+      "status": "PENDING_INTERNAL_ANALYSIS"
+    },
+    {
+      "id": "I02",
+      "topic": "Masked-metric versus original AO/grid electron counts and energy-difference uses",
+      "status": "PENDING_INTERNAL_ANALYSIS"
+    },
+    {
+      "id": "I03",
+      "topic": "Conditional operator versus energy derivative over allowed variations",
+      "status": "PENDING_INTERNAL_ANALYSIS"
+    }
+  ],
+  "compute_blocked_basis": "Actual conditional endpoint numerical acceptance not passed; V2 not implemented/executed and internal scope/resource evidence incomplete. External expert opinion is not a prerequisite."
 }

@@ -1,5 +1,7 @@
 # 用户分子计算服务：完整技术方案与实施步骤
 
+当前流程覆盖说明（2026-10-06）：用户已明确取消外部专家咨询、回复及签署前置（CANCELLED_BY_USER）。按 [内部定义与验证](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 推进；下文原设计/历史状态保留，不再作为等待外部意见的条件。既有数值/资源门槛、失败和发布边界仍有效。
+
 后续实施状态：W01—W04 工程候选和低成本检查已实际形成；本文 TECHNICAL-PLAN-1 描述设计当时的状态与合同，当前实现、镜像和未完成事项按 [交付记录](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md) 与 [用户指南](USER_MOLECULE_RUN_zh-CN.md)。新分子 SCF、W05/W06 及研究资格仍未执行或批准。
 
 日期：2026-10-05；TECHNICAL-PLAN-1。用户已明确同意进入实施阶段，工程范围准入记为 APPROVED_FOR_IMPLEMENTATION；新服务仍 NOT_IMPLEMENTED，新增构建/计算/验收 NOT_EXECUTED。科学方法复审、完整 profile、资源校准和研究范围批准保持各自状态，不能用工程批准代替科学资格。

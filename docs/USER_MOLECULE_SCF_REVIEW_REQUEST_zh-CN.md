@@ -1,5 +1,7 @@
 # 条件 SCF 与研究范围审阅入口
 
+历史材料说明（2026-10-06）：本文的外部专家征询/意见/签署流程已被用户明确取消，保留原文以便追溯，不是当前执行前置。当前工作按 [内部定义与验证](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 进行；科学问题与原验收门槛继续内部处理，旧失败不改判。
+
 2026-10-05。这是基于实际失败的审阅任务书，不是范围批准书。先读 [实测摘要](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md)，再按问题查阅 [冻结条件定义](USER_MOLECULE_CONDITION_DEFINITION_zh-CN.md) 与 [方法对照](USER_MOLECULE_METHOD_COMPARISON_zh-CN.md)。复核数据和源码身份在本轮交付目录与 `validation/user-molecule/w05-w06/numerical-review.json`。
 
 新增 [v2 实测](USER_MOLECULE_SOLVER_V2_zh-CN.md) 已确认严格端态检查能拒绝旧式假停止；共同 D0 与前轮一致，pilot 乙烯优化/非优化同 D 对照全部通过。三条完整路径仍耗尽 100 周期/201 求值，真实对易子和 Aufbau 映射失败。请优先判断现有全局 2/0 的固定点/状态选择是否适合该夹具，以及下一版求解策略所需证据；不将失败端态解释成多个合格根。原始数组只读复算和完整新轨迹已随本轮本地交付保留。

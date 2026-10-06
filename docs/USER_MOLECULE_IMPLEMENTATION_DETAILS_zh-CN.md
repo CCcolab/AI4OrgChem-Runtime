@@ -1,10 +1,12 @@
 # 用户分子与化学键微观研究：本地服务实施细则
 
+当前流程覆盖说明（2026-10-06）：用户已明确取消外部专家咨询、回复及签署前置（CANCELLED_BY_USER）。按 [内部定义与验证](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 推进；下文原设计/历史状态保留，不再作为等待外部意见的条件。既有数值/资源门槛、失败和发布边界仍有效。
+
 日期：2026-10-05；实施细则修订版 LOCAL-MOLECULE-DETAILS-1，配套 DRAFT-3 与 COLAB-ADDENDUM-2。状态：DESIGN_ONLY；D0=PENDING_REVIEW，新用户分子服务 NOT_IMPLEMENTED，新增数值与平台验收 NOT_EXECUTED。本次授权是纳入研究用途和重整实施细则，不是立即实现科学代码、运行新分子或公开发布。
 
 后续准入更新 TECHNICAL-PLAN-1：用户已明确可以进入实施阶段，工程范围 APPROVED_FOR_IMPLEMENTATION；上段描述此前文档增补轮次。当前可推进基线和 D1 工程实现，不因待审研究解释停止全部工程；科学方法/参数/参考/资源门槛分别保留，不能借工程批准写为 PASS。接口、模块、来源构建与 W01—W07 见 [完整技术方案](USER_MOLECULE_TECHNICAL_PLAN_zh-CN.md)。本轮仍仅提供方案和步骤，未执行新代码、构建或计算。
 
-本细则与 [专业实施方案](../ai4orgchem-runtime-implementation-plan-professional-revised.md)、[设计与 A01—A18 合同](USER_MOLECULE_ENTRY_DESIGN_zh-CN.md)、[场景 C01—C06](USER_MOLECULE_ENTRY_SCENARIOS_zh-CN.md)、[条件操作与独立参考](USER_MOLECULE_CONDITION_DEFINITION_zh-CN.md)、[已有方法对照](USER_MOLECULE_METHOD_COMPARISON_zh-CN.md)、[生态复用](USER_MOLECULE_ECOSYSTEM_REUSE_zh-CN.md)共同使用。这里重排交付次序，不改科学方程、候选容差或 A01—A18 的最低要求；未冻结字段继续列 TBD，不以细则替代外部方法复审。
+本细则与 [专业实施方案](../ai4orgchem-runtime-implementation-plan-professional-revised.md)、[设计与 A01—A18 合同](USER_MOLECULE_ENTRY_DESIGN_zh-CN.md)、[场景 C01—C06](USER_MOLECULE_ENTRY_SCENARIOS_zh-CN.md)、[条件操作与独立参考](USER_MOLECULE_CONDITION_DEFINITION_zh-CN.md)、[已有方法对照](USER_MOLECULE_METHOD_COMPARISON_zh-CN.md)、[生态复用](USER_MOLECULE_ECOSYSTEM_REUSE_zh-CN.md)共同使用。这里重排交付次序，不改科学方程、候选容差或 A01—A18 的最低要求；未冻结字段继续列 TBD，内部方法定义与验证按用户最新取消外部流程的指示开展。
 
 ## 1. 服务目标和“化学键微观研究”的含义
 
@@ -46,7 +48,7 @@
 
 | 步骤 / 阶段 | 具体实施内容 | 交付文件或材料 | 必须达到的出口 |
 |---|---|---|---|
-| 1 设计冻结 / D0 | 复审 R1—R6、Q01—Q09；确认 C06 解释；登记完整 profile、错误语义、候选体系/分片、参考谱系、资源/比较阈值和 TBD 责任 | 设计审阅意见、范围记录候选、参数表、夹具与预算登记 | 外部意见明确允许的实施阶段；未定项逐项列出；不作者自签研究适用性 |
+| 1 设计冻结 / D0 | 复审 R1—R6、Q01—Q09；确认 C06 解释；登记完整 profile、错误语义、候选体系/分片、参考谱系、资源/比较阈值和 TBD 责任 | 设计审阅意见、范围记录候选、参数表、夹具与预算登记 | 项目内部定义明确实施阶段；未定项逐项列出，真实科学与数值证据独立完成；不要求外部专家签署 |
 | 2 本地输入检查 / D1 | 实现严格 schema、XYZ/编号/单位/路径验证、只读快照、原子表、受限 AO/nAO 检查、profile 启用状态；提供请求模板和检查启动器 | schema、模板、preflight/manifest、错误码与低成本用例 | A02—A04、A11 检查部分实际通过；无 SCF/完整 ERI；未知方法保持 NOT_REVIEWED；计算资源未定则拒绝计算 |
 | 3 科学适配与参考 / D2 准备 | 共用固定 PySCF 做普通 RKS；显式传参调用冻结条件核；序列化能量/度量/状态；独立普通驱动、标量规则和固定密度算子参考 | 科学适配器、参数/profile 身份、独立参考及共享依赖说明、toy/分量检查记录 | 不调用被测辅助生成唯一参考；十五类/排列/系数/度量可核查；核心变更单独科学审查；缺完整条件参考不得提前称 D3 |
 | 4 Docker 封装与 pilot / D2 | 新来源锁/候选构建；资源校准和受限执行；非 root、只读、断网、持久输出、取消/超时/受限故障；在获准预算内跑冻结小夹具 | 新候选身份、构建日志、两态结果、参考残差、故障/隔离记录 | D2 相关资格、独立基础参考、A11—A13/A17 实际通过；pilot 为 TECHNICAL_ONLY，失败仍 NOT_QUALIFIED；不借旧 PASS |

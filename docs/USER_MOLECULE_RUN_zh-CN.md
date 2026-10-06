@@ -1,5 +1,7 @@
 # 本地用户分子入口：当前工程候选
 
+当前流程覆盖说明（2026-10-06）：用户已明确取消外部专家咨询、回复及签署前置（CANCELLED_BY_USER）。按 [内部定义与验证](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 推进；下文原设计/历史状态保留，不再作为等待外部意见的条件。既有数值/资源门槛、失败和发布边界仍有效。
+
 准备自己的输入、执行 Check、读取和导出报告，从 [W07 三步工程试用](USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 开始；不要求先阅读全部实施文档。当前提供输入/报告操作，Compute 与正式科研验收仍关闭。
 
 2026-10-05 / W05-W06-NUMERICAL-EVIDENCE-1。入口支持 Check 和只读 Report；两个生产 profile 均禁用 Compute，返回 BLOCKED / 20。本轮受限验收已有新分子诊断能量，但条件态/等价性/完整参考未通过，没有研究合格结果。输入合法不代表方法或资源合格。最新 [数值验收记录](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md) 说明失败与资源实测范围；它不开放用户计算。
@@ -54,4 +56,4 @@ PowerShell 5.1 入口查找已有 PS 7.3+，不自动安装；无需宿主 PySCF
 
 pilot / STO-3G 与 research / 6-31G(d) 的普通态及小夹具条件 SCF 已在验收驱动中执行，最终数值资格未通过，生产资格继续 false。原生峰值仅覆盖精确顺序验收流程，通用资源模型仍未校准。身份及当前范围见 [数值验收记录](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md)；此前镜像构建与监督见历史 [W01—W04 交付记录](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md)。
 
-同定义独立数值参考已执行但完整条件比较失败；成熟方法外部计算仍未执行，真实方法审阅待办。变分性 NOT_ESTABLISHED、稳定性 NOT_EXECUTED，不宣称单键能、实验测量、普遍共轭/芳香性结论或任意分子适用。原 L4 可保存检查点但不能恢复。WSLc BLOCKED、Colab DEFERRED、镜像分发 BLOCKED；公开继续暂停。工程测试通过不打开 Compute；GitHub Actions 实跑仍 NOT_EXECUTED。
+同定义独立数值参考已执行但完整条件比较失败；成熟方法外部计算仍未执行，内部方法定义与证据仍待完成。变分性 NOT_ESTABLISHED、稳定性 NOT_EXECUTED，不宣称单键能、实验测量、普遍共轭/芳香性结论或任意分子适用。原 L4 可保存检查点但不能恢复。WSLc BLOCKED、Colab DEFERRED、镜像分发 BLOCKED；公开继续暂停。工程测试通过不打开 Compute；GitHub Actions 实跑仍 NOT_EXECUTED。

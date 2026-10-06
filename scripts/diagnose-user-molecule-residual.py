@@ -153,7 +153,7 @@ def main():
         scientific_execution_authorized=True,production_activation=False,method_approval=False,
         authorization_basis={'source':'DIRECT_USER_MESSAGE','message':'请继续下一步实施准入和诊断',
             'scope':'ONE_FIXED_PILOT_CONDITIONAL_DIAGNOSTIC_REUSING_ORDINARY_CACHE_NO_RETRY'},
-        method_review_status='DEFERRED_BY_USER_NOT_APPROVED',
+        method_review_status='EXTERNAL_REVIEW_CANCELLED_BY_USER_INTERNAL_METHOD_VALIDATION_PENDING',
         process_contract={'memory_limit_mib':1024,'threads':1,'swap_allowed':False,'maximum_scientific_processes':1,
             'batch_wall_seconds':900,'process_wall_seconds':900,'serial_paths':True,'automatic_retry':False,
             'candidate_callbacks_per_path':201,'conditional_callback_slots_total':603},

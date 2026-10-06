@@ -1,6 +1,8 @@
 # 用户分子服务：当前实施文档入口
 
-[近简并规则与验收候选V2](USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md) 和 [外审入口](USER_MOLECULE_NEAR_DEGENERACY_REVIEW_zh-CN.md) 给出仅变初值的明确提案；旧最终门槛保留，修订0.2已采纳材料/静态反馈、补齐求解器准入和UM编号；尚未实现/实测或取得正式科学意见，不覆盖下方已完成诊断。
+当前流程：[内部定义与验证](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md)。用户已明确取消外部专家流程，不再延期或等待集中征询；历史外审包和反馈保留。V2内部工程可继续，实际数值/资源门槛和科研解释证据仍须完成，Compute关闭。
+
+[近简并规则与验收候选V2](USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md) 和 [内部核查入口](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 给出仅变初值的明确提案；旧最终门槛保留，修订0.2已采纳材料/静态反馈、补齐求解器准入和UM编号；尚未实现/实测，内部科学证据待完成，不覆盖下方已完成诊断。
 
 最新 [实时准入与条件初始化诊断](USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.md) 已完成一次实际受限进程：三路径各真实F(D0)一次，初始能隙约1e-14低于原1e-6门槛而拒绝，迭代0。同D0算子/能量/已准备mask子范围PASS；完整T05及合格P12/P13/T06未执行。峰值118.5MiB只覆盖本次准备和初始化，不代表完整迭代容量；生产Compute/科研W07继续BLOCKED。
 
@@ -12,13 +14,13 @@
 
 操作从 [用户指南](USER_MOLECULE_RUN_zh-CN.md) 开始；最新身份、范围与缺口见 [实时条件诊断](USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.md)。此前 [求解器 v2 实测](USER_MOLECULE_SOLVER_V2_zh-CN.md) 的122项工程测试和单例条件数值失败保留；它与 [数值审查](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md)、[W05 准备](USER_MOLECULE_W05_PREPARATION_zh-CN.md) 和 [W01—W04 交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md) 均为历史批次。
 
-2026-10-06 [W07 三步工程试用](USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 已提供自有输入准备、Check、报告导出与反馈路径；既有乙烯夹具的工程演示保留；真人反馈按用户要求 DEFERRED_BY_USER，未来可选，不阻塞当前工程验收。四问咨询按用户指示延后，待扩展齐备后集中征询；方法状态保持未审，正式 W07/Compute 仍 BLOCKED。
+2026-10-06 [W07 三步工程试用](USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 已提供自有输入准备、Check、报告导出与反馈路径；既有乙烯夹具的工程演示保留；真人反馈按用户要求 DEFERRED_BY_USER，未来可选，不阻塞当前工程验收。外部四问咨询已取消，三个问题转为内部工作项；内部方法状态保持未完成，正式 W07/Compute 仍 BLOCKED。
 
 最新 [W07 模拟自测](USER_MOLECULE_W07_SELFTEST_zh-CN.md) 已实际通过9个启动器、6个保护/历史失败判读和12个宿主 parser 场景；8个新容器均删除，输出保留，0新科学计算。模拟自测仅完成已列工程范围，科研 W07/Compute 门禁不变。
 
 W07 源码与存量证据候选已补齐新服务支持/来源/备份范围；两类样例搬移及 Git 源码重建后的只读报告通过，591 个科学源码文件匹配来源锁。实际条目见 [交付登记](../validation/user-molecule/w07-delivery-20261006.json)；包不含镜像或依赖，不代表完整环境恢复或 r3 许可分发审查闭合。
 
-2026-10-06 的既有增补为 [存量方法审阅](USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)与 [旧下一版分子求解设计](USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)：只读定位保存初始谱的8/9占据边界、占据跳变与能量—算子判据；新增科学进程为0。旧设计保留为历史候选，残差原型与prepared-data桥另列；方法责任审阅未签署，候选工程规则不构成科学协议冻结或分子资格，科研 Compute/W07 仍BLOCKED。
+2026-10-06 的既有增补为 [存量方法审阅](USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)与 [旧下一版分子求解设计](USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)：只读定位保存初始谱的8/9占据边界、占据跳变与能量—算子判据；新增科学进程为0。旧设计保留为历史候选，残差原型与prepared-data桥另列；内部定义与适用范围证据尚未完成，候选工程规则不构成科学协议冻结或分子资格，科研 Compute/W07 仍BLOCKED。
 
 [W01—W05 本地 CI](USER_MOLECULE_CI_20261005_zh-CN.md) 已通过历史工程/合同检查；GitHub Actions 仍 NOT_EXECUTED，新分子数值验收已执行但失败。本页和 implementation-state 的 ci_execution 指远端 Actions，本地执行另行登记。
 
@@ -42,7 +44,7 @@ W07 源码与存量证据候选已补齐新服务支持/来源/备份范围；�
 | [下一版求解与验收前置](USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md) | 旧分子策略为历史设计候选；后续残差原型和prepared-data桥另列 |
 | [条件算子桥与显式初始化](USER_MOLECULE_RESIDUAL_BRIDGE_20261006_zh-CN.md) | 21项假后端+67项回归，工程初始化/预算/身份；真实分子验收未执行 |
 | [最小准备、独立参考与持久化预算](USER_MOLECULE_PREPARATION_REFERENCE_20261006_zh-CN.md) | 97项按版本覆盖、实际旧缓存映射、精确基组表示兼容、独立参考及单进程/回调账本；新条件计算未执行 |
-| [MDR-001 方法决定记录](USER_MOLECULE_METHOD_DECISIONS_001_zh-CN.md) | 入口四问：方法责任人定义、外部一致性核查及分歧；DRAFT/PENDING，不自动批准或重审P01—P14 |
+| [MDR-001 方法决定记录](USER_MOLECULE_METHOD_DECISIONS_001_zh-CN.md) | 历史四问与咨询安排；外部过程已取消，当前采用内部定义/验证，不自动批准或重审P01—P14 |
 | [主机 Report 与导出](USER_MOLECULE_REPORT_20261006_zh-CN.md) | 等待方法决定期间的只读工程增补：完整性、历史失败/宿主终态、身份、仅新目录导出；不启动计算 |
 | [W07 三步工程试用](USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) | 自有输入准备、Check、报告导出与反馈；现有夹具工程演示通过，正式科研验收仍 BLOCKED |
 | [W07 代理模拟自测](USER_MOLECULE_W07_SELFTEST_zh-CN.md) | 实际场景、错误码、原状态、身份、未知及工程验收范围；不冒充真人反馈 |
@@ -66,8 +68,8 @@ W07 源码与存量证据候选已补齐新服务支持/来源/备份范围；�
 
 | 文件 | 用途/状态 |
 |---|---|
-| [外部评审任务书](USER_MOLECULE_EXTERNAL_REVIEW_zh-CN.md) | 待审问题和科学证据要求 |
-| [评审反馈模板](templates/USER_MOLECULE_REVIEW_RESPONSE_zh-CN.md) | 结构化记录审阅结论与缺口 |
+| [历史外部评审任务书](USER_MOLECULE_EXTERNAL_REVIEW_zh-CN.md) | 旧流程历史材料，外部征询已取消 |
+| [历史评审反馈模板](templates/USER_MOLECULE_REVIEW_RESPONSE_zh-CN.md) | 既有材料保留，不作为当前外部意见要求 |
 | [DRAFT-3 意见处理记录](USER_MOLECULE_DRAFT3_REVIEW_RESPONSE_zh-CN.md) | 历史文档回应，不能替代当前实现验收 |
 | [用户提供的 DRAFT-2 外审意见](../AI4OrgChem-user-molecule-DRAFT2-review_zh-CN.md) | 来源材料；正文意见不自动变成执行授权 |
 | [Colab 设计](USER_MOLECULE_COLAB_ENTRY_zh-CN.md) | DEFERRED，后续可选；不阻塞本地服务 |

@@ -1,5 +1,7 @@
 # 方法决定记录 MDR-001
 
+历史材料说明（2026-10-06）：本文的外部专家征询/意见/签署流程已被用户明确取消，保留原文以便追溯，不是当前执行前置。当前工作按 [内部定义与验证](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 进行；科学问题与原验收门槛继续内部处理，旧失败不改判。
+
 2026-10-06；修订 0.1；**DRAFT / PENDING_DEFINITION_AND_CONSISTENCY_REVIEW**。本记录供方法责任人说明目标条件态及能量含义，外部计算化学审阅者核查定义、实现和验收是否相容。两方分别记录意见，不要求共同给出同一个答案。目前方法定义与外部一致性结论均为空，不代表科学方法批准、求解器选择完成或计算授权。
 
 规范记录：[record.json](../validation/user-molecule/method-decisions/mdr-001/record.json)。本次反馈：[review-feedback.md](../validation/user-molecule/method-decisions/mdr-001/review-feedback.md)；用户进一步收窄的范围/责任：[scope-clarification.md](../validation/user-molecule/method-decisions/mdr-001/scope-clarification.md)。依据为 `edd683b` 的 [存量方法审阅](USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)、[下一版设计](USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)及其固定证据；原包和数值失败均保留。
