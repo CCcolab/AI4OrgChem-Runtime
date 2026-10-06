@@ -83,7 +83,7 @@
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Read-only internal analysis of saved occupation/near-degeneracy and reference budget records; no automatic new calculation, rule relaxation or service activation.",
+  "next_bounded_task": "Design/test budget-aware independent-reference Jacobian and matched diagnostic snapshots with fake callbacks; current candidate is design-only. No new molecular process or occupation/operator change authorized by this readonly round.",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -303,21 +303,24 @@
   "internal_method_work_items": [
     {
       "id": "I01",
-      "topic": "Target conditional state and final positive-gap service domain",
-      "status": "PENDING_INTERNAL_ANALYSIS"
+      "topic": "Target and near-degenerate occupied boundary",
+      "confirmed": "Original positive-gap/raw-Aufbau scope remains. Exact represented-matrix inertia locates orbital8/9 in a narrow pi cluster and the saved occupied projector has rank1 there.",
+      "status": "SAVED_ENDPOINT_REJECTION_EXPLAINED; ALTERNATIVE_ROOTS_OR_NEW_OCCUPATION_PROTOCOL_NOT_ESTABLISHED"
     },
     {
       "id": "I02",
-      "topic": "Masked-metric versus original AO/grid electron counts and energy-difference uses",
-      "status": "PENDING_INTERNAL_ANALYSIS"
+      "topic": "Electron metrics and energy interpretation",
+      "confirmed": "Masked16 vs physical16.474536 vs grid16.474537; frozen conditional energy uses maskedh/ERI plus originalAO/gridXC.",
+      "status": "METRIC_RELATION_DOCUMENTED; PHYSICAL_USES_AND_RESEARCH_DELTA_NOT_APPROVED"
     },
     {
       "id": "I03",
-      "topic": "Conditional operator versus energy derivative over allowed variations",
-      "status": "PENDING_INTERNAL_ANALYSIS"
+      "topic": "Conditional operator and energy derivative",
+      "confirmed": "Formal derivativeG differs from projectedF. Under stated fixed-grid XC derivative assumptions, actual saved production tangent mismatch is near roundoff.",
+      "status": "FORMAL_RELATION_AND_SAVED_ALGEBRA_ESTABLISHED; NUMERIC_ENERGY_DERIVATIVES_AND_STABILITY_NOT_EXECUTED"
     }
   ],
-  "compute_blocked_basis": "Production final mapped density and positive gap failed; reference final gate not completed under frozen budget. Internal scientific interpretation remains incomplete; external expert opinion is not required.",
+  "compute_blocked_basis": "Actual projectedF mapped-occupation/positive-gap failures; reference final gates not completed; interpretation and general service scope incomplete. External expert opinion is not a prerequisite.",
   "seed_v2_diagnostic": {
     "status": "IMPLEMENTED_EXECUTED_DIAGNOSTIC_UNQUALIFIED",
     "identity": {
@@ -401,5 +404,7 @@
     "reference_final_gate_status": "NOT_EXECUTED_BUDGET_STOP; DO_NOT_INFER_PRODUCTION_GAP_FAILURE",
     "compute_enabled": false,
     "delta_hartree": null
-  }
+  },
+  "latest_readonly_analysis_record": "validation/user-molecule/seed-v2-readonly-20261007.json",
+  "latest_internal_scope_decision": "validation/user-molecule/method-decisions/mdr-003/record.json"
 }

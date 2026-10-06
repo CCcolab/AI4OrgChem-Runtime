@@ -1,5 +1,7 @@
 # AI4OrgChem Reproducible Runtime
 
+Latest [stored-matrix internal analysis](docs/USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md): the saved boundary contains a two-dimensional narrow π cluster with rank-one occupation; the reference returned its initial seed after a budget guard. Formal energy-derivative relations and recorded sample roles are clarified. No new F/SCF or container run occurred; Compute remains BLOCKED.
+
 Latest [seed-V2 implementation and diagnostic](docs/USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md): 239 targeted engineering cases and zero-F cached seed admission passed. One 591-F diagnostic took about 4.82 minutes; production mapped-occupation/positive-gap gates failed, and the reference final gate was not completed within budget. Original operators/thresholds remain; Compute is BLOCKED. This is not a repeated full CI or a rerun of old results.
 
 External expert consultation, opinion collection and signatures are CANCELLED_BY_USER. Development follows [internal definition and validation](docs/USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md), without waiting for external responses. The three scientific questions remain internal work items. Existing numerical failures and resource gates remain; V2 is implemented and has undergone one bounded diagnostic; final qualification has not passed and Compute is disabled.

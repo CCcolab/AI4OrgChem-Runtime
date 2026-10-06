@@ -1,5 +1,7 @@
 # 用户分子服务：当前实施文档入口
 
+最新 [V2存量矩阵内部分析](USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md)已确认窄π谱空间中的秩一占据和参考预算返回语义，并澄清能量导数关系。新增F/SCF/容器为0，原门槛及Compute BLOCKED保留；下一工程候选仅为预算感知诊断设计，未实现/执行。
+
 最新 [V2种子实施与一次诊断](USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)已完成：专项239项PASS、零F种子PASS、数值不合格；Compute关闭。下述以前轮次的未实现/未执行状态属于当时记录。
 
 当前流程：[内部定义与验证](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md)。用户已明确取消外部专家流程，不再延期或等待集中征询；历史外审包和反馈保留。V2内部工程可继续，实际数值/资源门槛和科研解释证据仍须完成，Compute关闭。

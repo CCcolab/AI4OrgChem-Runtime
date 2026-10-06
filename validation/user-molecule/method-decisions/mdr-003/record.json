@@ -1,0 +1,65 @@
+{
+  "id": "MDR-003",
+  "revision": "0.1",
+  "date": "2026-10-07",
+  "status": "INTERNAL_SAVED_EVIDENCE_SCOPE_DECISION",
+  "scope": "Existing user-molecule conditionalSCF seedV2 evidence only; not originalP01-P14 recertification",
+  "author_role": "Codex internal engineering and algebra analysis; no external expert process",
+  "user_request": "请继续",
+  "source": "DIRECT_USER_MESSAGE",
+  "parent_decision": {
+    "id": "MDR-002",
+    "revision": "0.4",
+    "path": "../mdr-002/record.json",
+    "sha256": "3d6c1dd1d5ac6561759b356e8fadbff88a086d785e6cc2f8afb3b8e87b50d8a2",
+    "preserved_bytes": true
+  },
+  "analysis_record": "../../seed-v2-readonly-20261007.json",
+  "report": "../../../../docs/USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md",
+  "scientific_definition_changed": false,
+  "acceptance_thresholds_changed": false,
+  "scientific_protocol_approved": false,
+  "production_activation": false,
+  "scientific_delta": null,
+  "external_review_status": "CANCELLED_BY_USER",
+  "external_review_required": false,
+  "current_target": "Unchanged global masked-metric closed-shell2/0 trueconditional-F Aufbau positive-gap qualified endpoint",
+  "decisions": [
+    "Reject the saved unqualified production endpoints under the original final gates; low commutator is not complete acceptance.",
+    "Preserve reference returned seed and best sample separately; do not rewrite raw output or backfill missing gate.",
+    "Do not use unprojectedG spectrum/energy derivative as a substitute for projectedF acceptance.",
+    "Budget-aware diagnostic engineering may be designed/tested with fake callbacks before any new scientific process.",
+    "A proposed near-degenerate occupation protocol or energy-gradient alternative is a new method candidate, not a silent solver adjustment."
+  ],
+  "internal_work_items": [
+    {
+      "id": "I01",
+      "topic": "Target and near-degenerate occupied boundary",
+      "confirmed": "Original positive-gap/raw-Aufbau scope remains. Exact represented-matrix inertia locates orbital8/9 in a narrow pi cluster and the saved occupied projector has rank1 there.",
+      "status": "SAVED_ENDPOINT_REJECTION_EXPLAINED; ALTERNATIVE_ROOTS_OR_NEW_OCCUPATION_PROTOCOL_NOT_ESTABLISHED"
+    },
+    {
+      "id": "I02",
+      "topic": "Electron metrics and energy interpretation",
+      "confirmed": "Masked16 vs physical16.474536 vs grid16.474537; frozen conditional energy uses maskedh/ERI plus originalAO/gridXC.",
+      "status": "METRIC_RELATION_DOCUMENTED; PHYSICAL_USES_AND_RESEARCH_DELTA_NOT_APPROVED"
+    },
+    {
+      "id": "I03",
+      "topic": "Conditional operator and energy derivative",
+      "confirmed": "Formal derivativeG differs from projectedF. Under stated fixed-grid XC derivative assumptions, actual saved production tangent mismatch is near roundoff.",
+      "status": "FORMAL_RELATION_AND_SAVED_ALGEBRA_ESTABLISHED; NUMERIC_ENERGY_DERIVATIVES_AND_STABILITY_NOT_EXECUTED"
+    }
+  ],
+  "next_engineering_candidate": "../../residual-diagnostic/budget-recording-candidate-v1.json",
+  "new_scientific_budget": null,
+  "new_scientific_execution": "NOT_EXECUTED_READONLY_ROUND",
+  "compute_blocked_basis": "Actual projectedF mapped-occupation/positive-gap failures; reference final gates not completed; interpretation and general service scope incomplete.",
+  "unknown": [
+    "Existence/uniqueness of other self-consistent roots",
+    "A new rank-one state-selection protocol",
+    "Numeric XC energy-directional derivative accuracy",
+    "Stability/local minimum",
+    "Physical electron-number interpretation and approved research uses"
+  ]
+}
