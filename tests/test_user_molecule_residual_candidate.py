@@ -400,7 +400,7 @@ class ResidualCandidateTests(unittest.TestCase):
         self.assertEqual(ledger[1]['previous_same_density_fock_id'], ledger[0]['fock_id'])
         self.assertEqual(ledger[1]['status'], 'REFUSED')
         self.assertFalse(ledger[1]['same_density_operator_reproducible'])
-        self.assertIn('operator', result['failure']['detail'].lower())
+        self.assertEqual(result['failure']['reason'], 'NONREPRODUCIBLE_SAME_DENSITY_OPERATOR')
 
     def test_raw_aufbau_diagnostic_recheck_cannot_change_fock_and_still_pass(self):
         def changed(dm, value, calls):
