@@ -1,5 +1,5 @@
 {
-  "revision": "RESIDUAL-PREPARED-BRIDGE-ENGINEERING-20261006",
+  "revision": "PREPARATION-INDEPENDENT-REFERENCE-DURABLE-BUDGET-ENGINEERING-20261006",
   "date": "2026-10-06",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -31,7 +31,7 @@
       "ready_to_execute_scf": false,
       "status_record": "validation/user-molecule/solver-v2/review.json",
       "solver_v2_numerical_acceptance": "EXECUTED_FAILED_CANDIDATE_V2",
-      "latest_residual_engineering_record": "validation/user-molecule/residual-bridge-20261006.json"
+      "latest_residual_engineering_record": "validation/user-molecule/preparation-reference-20261006.json"
     },
     "W06": {
       "implementation": "ARRAY_REFERENCE_AND_READONLY_ASSESSMENT_IMPLEMENTED",
@@ -49,7 +49,7 @@
       "latest_complete_local_ci_record": "validation/user-molecule/ci-local-w01-w07-20261006.json",
       "solver_v2_historical_engineering_test_commit": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
       "historical_w01_w06_engineering_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json",
-      "latest_residual_engineering_record": "validation/user-molecule/residual-bridge-20261006.json"
+      "latest_residual_engineering_record": "validation/user-molecule/preparation-reference-20261006.json"
     },
     "W07": {
       "implementation": "LOCAL_ENGINEERING_SOURCE_EVIDENCE_HANDOFF_AND_AGENT_SELFTEST_COMPLETE; research acceptance pending",
@@ -76,7 +76,7 @@
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Prepare a fresh exact minimal molecular diagnostic contract: checked request/geometry-to-engine mapping, frozen preparation arrays/grid, explicit engineering initialization, genuinely independent residual reference and durable evaluation/process/time/memory budget; do not reuse v2 allowance or claim method approval. Actual molecular execution is not authorized by the fake-backend test record.",
+  "next_bounded_task": "Bind actual future candidate code/image/cache identity and check live resource admission before a fresh one-process conditional diagnostic reservation under the recorded900s/1GiB/603slot proposal. Preparation mapping, independent reference and persistent accounting are implemented; scientific interpretation and production activation remain unapproved. Do not reuse v2 budgets or promote fake/cached-metadata acceptance to research qualification.",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -162,7 +162,7 @@
   },
   "new_scientific_runs_this_w01_w07_ci": 0,
   "historical_guarded_test_commit_before_w01_w07_ci": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
-  "latest_residual_engineering_record": "validation/user-molecule/residual-bridge-20261006.json",
+  "latest_residual_engineering_record": "validation/user-molecule/preparation-reference-20261006.json",
   "residual_engineering_prototype": {
     "implementation": "PURE_ARRAY_CALLBACK_ENGINE_IMPLEMENTED_NOT_PRODUCTION_INTEGRATED",
     "validation": "67_TARGETED_UNIQUE_TESTS_PASS;28_NEW",
@@ -185,11 +185,11 @@
     "initialization": "EXPLICIT_ENGINEERING_V1_PRESERVE_OR_FIRST_RAW_GLOBAL_AUFBAU; NOT_APPROVED_SCIENTIFIC_PROTOCOL",
     "first_raw_initial_gap_guard_hartree": 1e-6,
     "object_global_callback_limit": 201,
-    "new_scientific_process_budget": "NOT_FROZEN_NOT_AUTHORIZED_NOT_EXECUTED",
-    "real_molecular_preparation": "NOT_EXECUTED",
+    "new_scientific_process_budget": "VERSIONED_MINIMAL_PROCESS_PROPOSAL_RECORDED; REAL_SCIENTIFIC_RESERVATION_NOT_CREATED",
+    "real_molecular_preparation": "EXISTING_ORDINARY_CACHE_AND_ACTUAL_PINNED_ENGINE_METADATA_MAPPING_EXECUTED_PASS; NO_NEW_ORDINARY_SCF_GRID_INTEGRALS",
     "molecular_acceptance": "NOT_EXECUTED_FOR_NEW_BRIDGE",
-    "independent_new_residual_molecular_reference": "NOT_IMPLEMENTED_NOT_EXECUTED; existing v2 reference remains EXECUTED_FAILED",
-    "request_to_engine_mapping": "NOT_FULLY_VERIFIED_BY_BRIDGE; upstream Check and new preparation contract required",
+    "independent_new_residual_molecular_reference": "IMPLEMENTED_FAKE_ENGINE_TESTED; REAL_CONDITIONAL_MOLECULAR_EXECUTION_NOT_EXECUTED; existing v2 reference remains EXECUTED_FAILED",
+    "request_to_engine_mapping": "FIXED_PILOT_REQUEST_COMPLETE_ORDINARY_SOURCE_ARRAYS_AND_ACTUAL_CACHED_ENGINE_MAPPING_EXECUTED_PASS; NOT_GENERAL_USER_SCOPE",
     "inplace_mode": "OWNED_WORK_COPY_NOT_TRUE_SINGLE_TOTAL_TENSOR_RESOURCE_IMPLEMENTATION",
     "production_activation": false,
     "comparison_available": false,
@@ -199,5 +199,31 @@
     "all_test_containers_removed": true,
     "old_scientific_failures_and_budgets": "PRESERVED_NOT_RESET"
   },
-  "new_scientific_runs_this_residual_bridge": 0
+  "new_scientific_runs_this_residual_bridge": 0,
+  "latest_preparation_reference_record": "validation/user-molecule/preparation-reference-20261006.json",
+  "preparation_reference_accounting": {
+    "implementation": "FIXED_PREPARATION_INDEPENDENT_REFERENCE_AND_DURABLE_BUDGETS_IMPLEMENTED",
+    "version_mapped_unit_coverage": 97,
+    "new_unit_cases": 72,
+    "unchanged_resource_regressions": 25,
+    "coverage_is_single_full_ci_run": false,
+    "final_code_commit": "82436e4b0070799dacb6822bcd1d5c382a4a4907",
+    "actual_pinned_engine_cached_mapping": "EXECUTED_PASS_NO_NEW_SCIENTIFIC_CALCULATION",
+    "common_density_source": "FULL_OLD_ORDINARY_REFERENCE_RECORD_NPZ;9dc813178f17be82f7c231c7b9d0a0494e8d4bcd2acea05ac2605bf3bf268f8a",
+    "legacy_basis_compatibility": "EXACT_FIXED_CH_REPR_HASH_RESTORATION; BASIS_VALUES_NATIVE_ARRAYS_COORDINATES_AOS_UNCHANGED",
+    "independent_residual_reference": "IMPLEMENTED_ARRAY_FAKE_ENGINE_TESTED; REAL_MOLECULAR_NOT_EXECUTED",
+    "reference_solver_known_limit": "NONROOT_STATIONARY_RESIDUAL_MERIT_CAN_STOP_TRF; ORIGINAL_GATE_STILL_REFUSES",
+    "callback_accounting": "DURABLE_PRECHARGED_SLOTS; FAILED_CRASHED_CLOSED_CHARGES_NOT_REFUNDED; DISTINCT_FROM_REAL_F_CALLS",
+    "one_process_policy": "ATOMIC_RESERVATION_IMPLEMENTED_AND_TESTED_NO_AUTOMATIC_RETRY",
+    "scientific_process_proposal": "ONE_SERIAL900S_1GIB_1CPU_NO_SWAP_PROCESS;3PATHS201_EACH603TOTAL;REUSE_ORDINARY_CACHE",
+    "real_scientific_reservation_this_round": "NOT_CREATED",
+    "new_real_scientific_calls": 0,
+    "test_containers": 4,
+    "all_containers_removed": true,
+    "all_engineering_wall_ledgers_settled": true,
+    "initial_failures": "PRESERVED; expectation, duplicate discovery and uncaptured metadata refusal are distinguished",
+    "production_activation": false,
+    "old_scientific_failures_and_budgets": "PRESERVED_NOT_RESET"
+  },
+  "new_scientific_runs_this_preparation_reference_round": 0
 }

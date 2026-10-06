@@ -1,0 +1,897 @@
+{
+  "id": "PREPARATION-INDEPENDENT-REFERENCE-DURABLE-BUDGET-ENGINEERING-20261006",
+  "date": "2026-10-06",
+  "status": "PASS_SCOPED_ENGINEERING_VERSION_MAPPED_COVERAGE_AND_ACTUAL_CACHED_MAPPING",
+  "base_runtime_commit": "971e7567d91fa0d7999aefe03d6466e5a893ebe2",
+  "initial_implementation_commit": "b02139c43683b2768c8083bdbfd7977cb1a6bc7d",
+  "final_code_commit": "82436e4b0070799dacb6822bcd1d5c382a4a4907",
+  "documentation_commit": "EXTERNAL_FINAL_DELIVERY_AFTER_COMMIT",
+  "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+  "image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+  "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "science_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "unique_final_unit_coverage": 97,
+  "new_unit_cases": 72,
+  "unchanged_resource_regressions": 25,
+  "coverage_basis": "89 unchanged units at eba5b17 +4 corrected integration at faabf22 +4 new legacy compatibility at82436e4; source/test blobs and unchanged old preparation AST checked.",
+  "selected_unit_groups": [
+    {
+      "pattern": "test_user_molecule_residual_preparation.py",
+      "tests": 26,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_ids": [
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_basis_expansion_hash_cannot_be_replaced_by_basis_name",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_cached_angstrom_query_returning_bohr_is_refused",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_cached_ao_group_is_checked_independently_of_labels",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_cached_ao_labels_and_group_identity_are_checked",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_cached_atom_reordering_is_refused",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_cached_coordinate_rotation_is_refused",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_cached_coordinate_translation_is_refused",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_cached_element_and_order_mismatch_is_refused",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_cached_geometry_conversion_guard_is_fixed",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_cached_molecular_configuration_mismatches_are_refused",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_creating_bridge_contract_binds_raw_provenance_and_does_not_run",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_existing_record_energy_closure_is_checked_without_evaluation",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_grid_algorithm_and_array_identity_are_checked",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_incomplete_ordinary_record_is_refused",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_loader_accepts_same_bytes_in_chinese_spaced_directory",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_loader_reuses_duplicate_json_key_refusal",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_loader_reuses_path_escape_refusal",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_matching_cached_mapping_binds_each_array_and_no_scientific_query",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_npz_source_cannot_supply_common_density_from_a_different_run",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_ordinary_density_cannot_be_mixed_with_another_record",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_ordinary_settings_and_xc_are_checked",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_other_request_scope_is_refused",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_raw_ordinary_record_source_cannot_be_mixed_with_another_json",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_real_molecular_execution_is_not_opened_by_preparation",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_recorded_failure_or_missing_nuclear_cache_is_refused",
+        "test_user_molecule_residual_preparation.ResidualPreparationTests.test_stale_bundle_numbering_is_refused"
+      ],
+      "tested_runtime_commit": "eba5b1798b944abb811900a388d8c1ad547035cc",
+      "selection": "UNCHANGED_GROUP_FROM_ATTEMPT2",
+      "test_git_blob": "57ef342f47a130e12d93ac4b65d363f633ea5a43"
+    },
+    {
+      "pattern": "test_reference_residual_candidate.py",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_ids": [
+        "test_reference_residual_candidate.IndependentResidualTests.test_callback_error_mutation_identity_and_scalar_types_refuse",
+        "test_reference_residual_candidate.IndependentResidualTests.test_commuting_excited_and_no_qualified_root_are_rejected",
+        "test_reference_residual_candidate.IndependentResidualTests.test_dense_spd_metric_and_analytical_projector",
+        "test_reference_residual_candidate.IndependentResidualTests.test_exact_ground_projector_three_calls_without_optimization",
+        "test_reference_residual_candidate.IndependentResidualTests.test_far_root_requires_reanchoring_beyond_initial_chart",
+        "test_reference_residual_candidate.IndependentResidualTests.test_first_nonprojector_init_is_distinct_counted_and_preserves_d0",
+        "test_reference_residual_candidate.IndependentResidualTests.test_initialization_policy_is_required_before_any_callback",
+        "test_reference_residual_candidate.IndependentResidualTests.test_invalid_initial_or_configuration_has_zero_callback",
+        "test_reference_residual_candidate.IndependentResidualTests.test_low_budget_counts_finite_differences_and_never_qualifies",
+        "test_reference_residual_candidate.IndependentResidualTests.test_near_degenerate_first_initialization_refuses_one_call",
+        "test_reference_residual_candidate.IndependentResidualTests.test_nonroot_stationary_merit_is_rejected_despite_existing_true_root",
+        "test_reference_residual_candidate.IndependentResidualTests.test_picard_unstable_known_ground_root",
+        "test_reference_residual_candidate.IndependentResidualTests.test_reference_implementation_has_no_production_import",
+        "test_reference_residual_candidate.IndependentResidualTests.test_same_density_operator_repeat_is_independent_exact_contract"
+      ],
+      "tested_runtime_commit": "eba5b1798b944abb811900a388d8c1ad547035cc",
+      "selection": "UNCHANGED_GROUP_FROM_ATTEMPT2",
+      "test_git_blob": "cdf3b704210131fe3bea9f49ddb975be6f834bec"
+    },
+    {
+      "pattern": "test_reference_residual_molecule.py",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_ids": [
+        "test_reference_residual_molecule.IndependentPreparedTests.test_array_or_rule_identity_mismatch_before_raw_xc",
+        "test_reference_residual_molecule.IndependentPreparedTests.test_changed_cached_molecular_fields_refuse_before_raw_xc",
+        "test_reference_residual_molecule.IndependentPreparedTests.test_changed_grid_rejects_before_call_and_inside_call_is_counted",
+        "test_reference_residual_molecule.IndependentPreparedTests.test_fifteen_rule_masks_jk_and_five_component_operator_by_scalar_oracle",
+        "test_reference_residual_molecule.IndependentPreparedTests.test_first_nonprojector_initialization_uses_same_original_d0_and_four_calls",
+        "test_reference_residual_molecule.IndependentPreparedTests.test_missing_policy_and_invalid_first_configuration_have_zero_xc",
+        "test_reference_residual_molecule.IndependentPreparedTests.test_mutable_true_f_same_energy_and_single_use_budget",
+        "test_reference_residual_molecule.IndependentPreparedTests.test_no_production_import_and_no_molecular_construction",
+        "test_reference_residual_molecule.IndependentPreparedTests.test_prepared_root_has_three_calls_and_never_claims_molecular_acceptance",
+        "test_reference_residual_molecule.IndependentPreparedTests.test_raw_xc_boolean_complex_mutation_and_failure_are_refused",
+        "test_reference_residual_molecule.IndependentPreparedTests.test_raw_xc_cached_geometry_mutation_is_refused_and_counted",
+        "test_reference_residual_molecule.IndependentPreparedTests.test_settled_run_rejects_direct_callback_without_extra_xc"
+      ],
+      "tested_runtime_commit": "eba5b1798b944abb811900a388d8c1ad547035cc",
+      "selection": "UNCHANGED_GROUP_FROM_ATTEMPT2",
+      "test_git_blob": "2df5b8cc5c6408f9aa5076a00bd5ea34da33affb"
+    },
+    {
+      "pattern": "test_user_molecule_residual_budget.py",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_ids": [
+        "test_user_molecule_residual_budget.CallbackBudgetTests.test_accounted_callback_exhaustion_never_enters_evaluator",
+        "test_user_molecule_residual_budget.CallbackBudgetTests.test_callback_density_mutation_and_wrong_identity_are_refused",
+        "test_user_molecule_residual_budget.CallbackBudgetTests.test_callback_failure_and_keyboard_interrupt_are_charged",
+        "test_user_molecule_residual_budget.CallbackBudgetTests.test_closed_paths_and_finished_slots_are_single_use",
+        "test_user_molecule_residual_budget.CallbackBudgetTests.test_identity_batch_or_limits_cannot_reset_existing_journal",
+        "test_user_molecule_residual_budget.CallbackBudgetTests.test_invalid_limits_and_ids_are_rejected_without_charging",
+        "test_user_molecule_residual_budget.CallbackBudgetTests.test_nonblocking_lock_refuses_concurrent_writer",
+        "test_user_molecule_residual_budget.CallbackBudgetTests.test_one_process_policy_survives_zero_wall_settlement_and_reopen",
+        "test_user_molecule_residual_budget.CallbackBudgetTests.test_pending_and_failed_slots_survive_reopen_without_refund",
+        "test_user_molecule_residual_budget.CallbackBudgetTests.test_pending_slots_remain_charged_when_path_closes_after_crash",
+        "test_user_molecule_residual_budget.CallbackBudgetTests.test_tampered_file_is_refused_and_not_overwritten",
+        "test_user_molecule_residual_budget.CallbackBudgetTests.test_total_limit_is_shared_across_paths"
+      ],
+      "tested_runtime_commit": "eba5b1798b944abb811900a388d8c1ad547035cc",
+      "selection": "UNCHANGED_GROUP_FROM_ATTEMPT2",
+      "test_git_blob": "e9be63894c53e3e6639611873bace9023b9f55a4"
+    },
+    {
+      "pattern": "test_user_molecule_acceptance_resources.py",
+      "tests": 25,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_ids": [
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_cgroup_peak_is_read_without_reset_and_limits_are_observed",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_corrupt_existing_ledger_is_preserved_and_refused",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_existing_batch_limits_cannot_be_reset_or_increased",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_failures_and_termination_overhead_charge_actual_wall",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_hard_ceilings_and_identity_are_checked_before_reservation",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_missing_peak_unbounded_limits_and_bad_events_stay_unknown",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_mutating_caller_identity_does_not_mutate_reservation",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_negative_nonfinite_boolean_and_missing_reason_are_rejected",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_observed_oom_peak_overrun_and_swap_refuse_resource_candidate",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_os_lock_refuses_second_holder_without_reset",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_overrun_is_not_clamped_to_reservation",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_reservation_survives_reopen_and_insufficient_budget_blocks",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_resource_envelope_binds_exact_fixture_and_never_extrapolates",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_same_run_cannot_be_rereserved_or_resettled",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_combined_memsw_limit_is_converted_to_swap_allowance",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_discovery_never_falls_back_to_unrelated_parent_mount",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_limit_failure_current_oom_or_kill_refuses_candidate",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_membership_resolves_relative_to_controller_mount_root",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_missing_oom_kill_count_requires_bound_completed_inspect",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_namespace_root_and_mountinfo_escaped_paths_are_preserved",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_native_definitions_and_hard_limits_are_preserved",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_observes_actual_paths_and_does_not_reset_peak",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_oom_false_alone_and_wrong_identity_cannot_substitute_history",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_unbounded_kernel_sentinel_and_cpu_quota_are_unknown_limits",
+        "test_user_molecule_acceptance_resources.AcceptanceResourceTests.test_v1_unknown_memsw_support_refuses_no_swap_claim"
+      ],
+      "tested_runtime_commit": "eba5b1798b944abb811900a388d8c1ad547035cc",
+      "selection": "UNCHANGED_GROUP_FROM_ATTEMPT2",
+      "test_git_blob": "9b600e73fee5c50bd97af14d63edf3f097425211"
+    },
+    {
+      "pattern": "test_user_molecule_residual_integration.py",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_ids": [
+        "test_user_molecule_residual_integration.ResidualIntegrationTests.test_all_three_paths_use_same_d0_and_qualify_toy_without_research_promotion",
+        "test_user_molecule_residual_integration.ResidualIntegrationTests.test_lost_callback_charge_cannot_be_retried_after_reopening",
+        "test_user_molecule_residual_integration.ResidualIntegrationTests.test_same_density_full_operator_and_components_match_independent_reference",
+        "test_user_molecule_residual_integration.ResidualIntegrationTests.test_shared_journal_exhaustion_prevents_any_further_operator_entry"
+      ],
+      "tested_runtime_commit": "faabf22cc965dfd00d7d76c19dda434a96fb43b2",
+      "selection": "CHANGED_INTEGRATION_RETEST",
+      "test_git_blob": "789749ca1ae200a1696cadbc32e11f4e5c432066"
+    },
+    {
+      "pattern": "test_user_molecule_basis_representation.py",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_ids": [
+        "test_user_molecule_basis_representation.LegacyBasisRepresentationTests.test_changed_numeric_or_typed_basis_values_cannot_be_repaired_by_reordering",
+        "test_user_molecule_basis_representation.LegacyBasisRepresentationTests.test_exact_other_key_order_restores_hash_without_basis_or_atom_changes",
+        "test_user_molecule_basis_representation.LegacyBasisRepresentationTests.test_original_order_is_explicitly_verified_without_change",
+        "test_user_molecule_basis_representation.LegacyBasisRepresentationTests.test_other_metadata_difference_is_never_overwritten"
+      ],
+      "tested_runtime_commit": "82436e4b0070799dacb6822bcd1d5c382a4a4907",
+      "selection": "NEW_LEGACY_COMPATIBILITY_TESTS",
+      "test_git_blob": "d7caebfe4779a34860d4ef4bc98c6ad68bb043e2"
+    }
+  ],
+  "failures_errors_skips_in_selected_coverage": 0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "FAIL_TEST_EXPECTATION",
+      "executed_units": 39,
+      "failures": 1,
+      "remaining_groups": "NOT_EXECUTED",
+      "reason": "Expected TRF to solve from a non-root stationary merit point; no algorithm/rule/tolerance change. Original initial point retained as refusal counterexample."
+    },
+    {
+      "attempt": 2,
+      "status": "FAIL_AGGREGATION_DUPLICATE_DISCOVERY",
+      "unit_executions": 119,
+      "unique_units": 93,
+      "unit_failures_errors_skips": 0,
+      "duplicate_cases": 26,
+      "post_unit_mapping_demo": "NOT_EXECUTED"
+    },
+    {
+      "attempt": 3,
+      "status": "UNIT_INTEGRATION_PASS_CACHED_MAPPING_REFUSED",
+      "units": 4,
+      "fake_callback_demo": 12,
+      "reason": "Context/record metadata differed; differing field not saved, cannot assert retrospectively which field caused it."
+    },
+    {
+      "attempt": 4,
+      "status": "PASS_COMPATIBILITY_AND_CACHED_METADATA",
+      "units": 4,
+      "actual_metadata_difference": "Only legacy repr-based basis hash differed; exact old representation recovered without changing typed values or native caches."
+    }
+  ],
+  "dependencies": {
+    "pyscf": "2.14.0",
+    "numpy": "2.5.1",
+    "scipy": "1.18.0"
+  },
+  "preparation": {
+    "implementation": "FIXED_PILOT_REQUEST_ENGINE_AND_COMPLETE_ORDINARY_SOURCE_MAPPING_IMPLEMENTED",
+    "actual_pinned_engine_cached_mapping": "EXECUTED_PASS_NO_NEW_SCIENTIFIC_EVALUATION",
+    "fixture_only": "ethene-planar-technical-v1;14AO16electrons; no general user scope approval",
+    "ordinary_origin": "Old full ordinary-reference JSON/NPZ density9dc813…; no scalar-only ordinary-tested/common-D0 mixture",
+    "cached_members_read": [
+      "density",
+      "hcore",
+      "overlap",
+      "eri",
+      "grid_coords",
+      "grid_weights"
+    ],
+    "saved_ERI_read": true,
+    "coordinate_conversion_guard_angstrom": 1e-12,
+    "source_receipt": {
+      "schema_version": 1,
+      "status": "PASS_CACHED_MAPPING_ONLY",
+      "fixture_id": "ethene-planar-technical-v1",
+      "request_sha256": "a348a5a63631c5d394d034e6b3538f5fc4229b3d50c79d9134a3726c842f07f9",
+      "normalized_request_sha256": "46a9f72bcf346e3be353d98291d8873a957675329f907ffd8271ca72df61bbab",
+      "geometry_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+      "profile_canonical_sha256": "5c78ef8e741b255421a465895524cdb7aa208ef90751a1524eff9c7f88e5d537",
+      "atom_mapping": [
+        {
+          "index_1based": 1,
+          "index_0based": 0,
+          "element": "C",
+          "coordinates_angstrom": [
+            -0.67,
+            0.0,
+            0.0
+          ],
+          "pi_group": "A"
+        },
+        {
+          "index_1based": 2,
+          "index_0based": 1,
+          "element": "C",
+          "coordinates_angstrom": [
+            0.67,
+            0.0,
+            0.0
+          ],
+          "pi_group": "B"
+        },
+        {
+          "index_1based": 3,
+          "index_0based": 2,
+          "element": "H",
+          "coordinates_angstrom": [
+            -1.215,
+            0.9439676901250381,
+            0.0
+          ],
+          "pi_group": null
+        },
+        {
+          "index_1based": 4,
+          "index_0based": 3,
+          "element": "H",
+          "coordinates_angstrom": [
+            -1.215,
+            -0.9439676901250381,
+            0.0
+          ],
+          "pi_group": null
+        },
+        {
+          "index_1based": 5,
+          "index_0based": 4,
+          "element": "H",
+          "coordinates_angstrom": [
+            1.215,
+            0.9439676901250381,
+            0.0
+          ],
+          "pi_group": null
+        },
+        {
+          "index_1based": 6,
+          "index_0based": 5,
+          "element": "H",
+          "coordinates_angstrom": [
+            1.215,
+            -0.9439676901250381,
+            0.0
+          ],
+          "pi_group": null
+        }
+      ],
+      "ao_labels": [
+        [
+          0,
+          "C",
+          "1s",
+          ""
+        ],
+        [
+          0,
+          "C",
+          "2s",
+          ""
+        ],
+        [
+          0,
+          "C",
+          "2p",
+          "x"
+        ],
+        [
+          0,
+          "C",
+          "2p",
+          "y"
+        ],
+        [
+          0,
+          "C",
+          "2p",
+          "z"
+        ],
+        [
+          1,
+          "C",
+          "1s",
+          ""
+        ],
+        [
+          1,
+          "C",
+          "2s",
+          ""
+        ],
+        [
+          1,
+          "C",
+          "2p",
+          "x"
+        ],
+        [
+          1,
+          "C",
+          "2p",
+          "y"
+        ],
+        [
+          1,
+          "C",
+          "2p",
+          "z"
+        ],
+        [
+          2,
+          "H",
+          "1s",
+          ""
+        ],
+        [
+          3,
+          "H",
+          "1s",
+          ""
+        ],
+        [
+          4,
+          "H",
+          "1s",
+          ""
+        ],
+        [
+          5,
+          "H",
+          "1s",
+          ""
+        ]
+      ],
+      "ao_descriptors": [
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "pi",
+          "fragment": "A"
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "pi",
+          "fragment": "B"
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        }
+      ],
+      "array_identities": {
+        "density": {
+          "shape": [
+            14,
+            14
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "sha256": "9dc813178f17be82f7c231c7b9d0a0494e8d4bcd2acea05ac2605bf3bf268f8a"
+        },
+        "hcore": {
+          "shape": [
+            14,
+            14
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "sha256": "b626383143be0295b58aee4d7f553398f0df0cb54af8541e0795056525faaa1a"
+        },
+        "overlap": {
+          "shape": [
+            14,
+            14
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "sha256": "957372152a6fab1b90f084598f010f73aa8c09ce5ec3a1c383c6195a23732d78"
+        },
+        "eri": {
+          "shape": [
+            14,
+            14,
+            14,
+            14
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "sha256": "793d3d8ad2a02c43186c6e038229a4219507058486c1d433dae3a0bb97301ca6"
+        },
+        "grid_coords": {
+          "shape": [
+            43904,
+            3
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "sha256": "ec697731d0429ecf2bd11defd2fd75414286ba950e8b0afc6aea012890e9aad7"
+        },
+        "grid_weights": {
+          "shape": [
+            43904
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "sha256": "2b97965e448ea3d57aabfff3b51c2d2f1aa2c27c026444bc21bb608ef6452d68"
+        }
+      },
+      "ordinary_record_canonical_sha256": "a8b0082fa5b30e1c49e05061645b1d017cdf98513805861c2d065eb2a48af10d",
+      "metadata_canonical_sha256": "aeb3bc2e30742ee7ee1935598c9e130cfb4d2480a28893b248618609159e4ee9",
+      "basis_expansion_sha256": "beb6928d928f3bee89562d64ddd61a95bb2c1a89be025f5c6c480678dacf2be5",
+      "nuclear_repulsion_hartree": 33.23272494899829,
+      "nuclear_repulsion_source": "ordinary_record.components_hartree.nuclear_repulsion",
+      "coordinate_conversion_guard_angstrom": 1e-12,
+      "engine_coordinate_reorientation": false,
+      "engine_atom_reordering": false,
+      "ordinary_qualification": "EXISTING_RECORDED_STATUS_NOT_REEXECUTED_OR_AUTHENTICATED",
+      "identity_evidence_kind": "LOCAL_CACHED_MAPPING_NOT_ENGINE_AUTHENTICATION",
+      "scientific_execution": "NOT_EXECUTED",
+      "production_activation": false,
+      "molecular_acceptance": "NOT_EXECUTED",
+      "research_acceptance": "NOT_ACCEPTED",
+      "comparison_available": false,
+      "deltas": null
+    },
+    "legacy_basis_compatibility": "Exact two-key C/H legacy representation only; not numerical basis validation/authentication; original record preserved",
+    "old_legacy_basis_hash": "beb6928d928f3bee89562d64ddd61a95bb2c1a89be025f5c6c480678dacf2be5",
+    "typed_basis_value_sha256": "a5a794521646f472483aa9e861c4d7b7484a3fa2326df8900d4771299151e33f"
+  },
+  "independent_reference": {
+    "implementation": "INDEPENDENT_RESIDUAL_AND_FULL_PREPARED_OPERATOR_ADAPTER_IMPLEMENTED",
+    "engineering_validation": "26 cases (14array+12prepared) plus cross implementation4 cases; synthetic/fake only",
+    "algorithm": "SciPy TRF3point local orbital charts with reanchoring; actual callback journal includes numerical Jacobian calls excluded from nfev",
+    "production_helpers_imported": false,
+    "shared_dependencies": [
+      "RAW_PYSCF_INTEGRALS",
+      "ORIGINAL_GRID_XC",
+      "NUMPY",
+      "SCIPY"
+    ],
+    "real_molecular_conditional_execution": "NOT_EXECUTED",
+    "old_v2_reference": "IMPLEMENTED_EXECUTED_FAILED_PRESERVED",
+    "known_limit": "Non-root stationary residual merit can stop TRF; original gate rejects. No global root guarantee."
+  },
+  "resource_accounting": {
+    "callback_persistence": "IMPLEMENTED_TESTED; precharged slots survive failure/crash/close; no refund/reset",
+    "one_process_reservation": "IMPLEMENTED_TESTED; atomic no second attempt even after zero observed wall",
+    "fake_persistent_demo": "12 fake calls/12 charged slots/0 pending/3 closed paths; raw journal preserved",
+    "future_process_proposal": "1 serial process,900s,1GiB,1CPU,no swap;3 paths201 each/603 total; no repeat ordinary SCF/grid/ERI",
+    "real_scientific_wall_reservation_this_round": "NOT_CREATED",
+    "actual_source_attempts_vs_precharged_slots": "DISTINCT_COUNTERS",
+    "actual_engineering_runs": 4,
+    "seconds_max_each": 120,
+    "memory_mib_each": 512,
+    "cpu_each": 1,
+    "all_removed": true,
+    "all_wall_ledgers_settled": true,
+    "total_observed_wall_through_collection_and_removal_seconds": 58.391999999963446,
+    "resource_generalization": "NOT_ACCEPTED"
+  },
+  "merit_counterexample": {
+    "record": "attempt-4/output/MERIT_STATIONARITY_COUNTEREXAMPLE.json",
+    "scipy_nfev": 1,
+    "scipy_njev": 1,
+    "actual_evaluator_calls": 5,
+    "engine_qualified": false,
+    "original_AO_commutator": 2.8284271247461903,
+    "raw_map_relative": 1.0000000000000002
+  },
+  "new_real_SCF_grid_integral_XC_or_nuclear_calls": 0,
+  "new_real_conditional_molecular_acceptance": "NOT_EXECUTED",
+  "production_activation": false,
+  "compute_enabled": false,
+  "research_w07": "BLOCKED",
+  "comparison_available": false,
+  "delta_hartree": null,
+  "delta_kcal_mol": null,
+  "scientific_method_approval": "NOT_GRANTED; consultation DEFERRED_BY_USER",
+  "real_user_feedback": "DEFERRED_BY_USER_NOT_CURRENT_ENGINEERING_BLOCKER",
+  "wslc": "BLOCKED_PAUSED_NOT_EXECUTED",
+  "github_actions": "NOT_EXECUTED",
+  "full_w01_w07_ci_rerun": false,
+  "image_builds": 0,
+  "public_push_tag_release": "NOT_AUTHORIZED_NOT_EXECUTED",
+  "image_distribution": "BLOCKED",
+  "colab": "DEFERRED",
+  "legacy_L4_resume": "UNSUPPORTED; checkpoint save supported",
+  "preservation": {
+    "status": "PASS_SCOPED_EXISTING_CODE_SCIENCE_OLD_FAILED_RUN_AND_PRIOR_DELIVERIES",
+    "protected_existing_product_files": 41,
+    "science_files": 591,
+    "old_failed_run_files": 32,
+    "prior_registered_files": {
+      "20261006-user-molecule-ci-w01-w07": 537,
+      "20261006-user-molecule-residual-prototype": 560,
+      "20261006-user-molecule-residual-bridge": 288
+    },
+    "source_exports": [
+      {
+        "runtime_test_commit": "b02139c43683b2768c8083bdbfd7977cb1a6bc7d",
+        "total_files": 271,
+        "exact_git_blobs": 254,
+        "verified_ps1_crlf": 17
+      },
+      {
+        "runtime_test_commit": "eba5b1798b944abb811900a388d8c1ad547035cc",
+        "total_files": 271,
+        "exact_git_blobs": 254,
+        "verified_ps1_crlf": 17
+      },
+      {
+        "runtime_test_commit": "faabf22cc965dfd00d7d76c19dda434a96fb43b2",
+        "total_files": 271,
+        "exact_git_blobs": 254,
+        "verified_ps1_crlf": 17
+      },
+      {
+        "runtime_test_commit": "82436e4b0070799dacb6822bcd1d5c382a4a4907",
+        "total_files": 272,
+        "exact_git_blobs": 255,
+        "verified_ps1_crlf": 17
+      }
+    ],
+    "old_scientific_budget_reset": false,
+    "scientific_source_profile_original_threshold_changes": false,
+    "unregistered_historical_material": "UNVERIFIED"
+  },
+  "next_step": "Fresh exact identity/resource-admission record for a bounded candidate conditional diagnostic; keep method interpretation unapproved and production disabled.",
+  "evidence_root": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-preparation-reference",
+  "evidence_files": {
+    "ENGINEERING_CONTRACT.json": {
+      "size_bytes": 8025,
+      "sha256": "ffff55310602e3ab42460bb289a7bec8f10eb2dc55aa56e5aae372844ce7d3e5"
+    },
+    "BASELINE_PRESERVATION.json": {
+      "size_bytes": 12588,
+      "sha256": "bd235a76f1d95986cb7f7dfce7790f9326a5ab11c03cec69b174b0a01770be2b"
+    },
+    "ATTEMPT2_RUNNER_BINDING.json": {
+      "size_bytes": 991,
+      "sha256": "18dfe4f603162c7af91ade58a14765503ae206ee1eb3599dd27df2b23c88d344"
+    },
+    "ENGINEERING_CORRECTION_ADDENDUM_V2.json": {
+      "size_bytes": 1783,
+      "sha256": "1501a81ca66c20b47c1cb8880d12c1c25d20e607cd3e0bf1bacdacab9fb6b99f"
+    },
+    "ENGINEERING_CORRECTION_ADDENDUM_V3.json": {
+      "size_bytes": 1463,
+      "sha256": "8f5af8b415a95bcd9e6796196772e0c4e199edea593d3340b7b7c71c09411b1c"
+    },
+    "PRESERVATION_AFTER_COMPLETION.json": {
+      "size_bytes": 1240,
+      "sha256": "1a8b72d45fcee16e0de50398bc0639d13701d2b6c91ba2d720973b629d2a7adf"
+    },
+    "VERSION_MAPPED_UNIT_COVERAGE.json": {
+      "size_bytes": 15713,
+      "sha256": "bb97ee19ce6a7d54b6026526034158135e4ab47b53df8cb30e153c4c174a5010"
+    },
+    "attempt-1/EXECUTION.json": {
+      "size_bytes": 2385,
+      "sha256": "d7d139184554fbcdab96ef37cfc4e4f390b6b7fafc39e46c51291e8084a030bd"
+    },
+    "attempt-1/SOURCE_IDENTITY.json": {
+      "size_bytes": 745,
+      "sha256": "0e7a5c1065bf75fa7baae556f068fcb7c394286d82f122131c45ee8b3ad4e37c"
+    },
+    "attempt-1/SOURCE_EXPORT_VERIFIED.json": {
+      "size_bytes": 67155,
+      "sha256": "0fa5831ed7d788b8c05a211a3f58ddbdda075078f8121b631e4455752e09553d"
+    },
+    "attempt-1/WALL_RESERVATION.json": {
+      "size_bytes": 1043,
+      "sha256": "825350d1357f0ed7d54c5d1f6c50bfab71546b3df8dc2ad7bd24efa2529e267d"
+    },
+    "attempt-1/WALL_SETTLEMENT.json": {
+      "size_bytes": 2062,
+      "sha256": "7413105d011bcecb10e810975b45fc646fe5917a1989fb0ff8551f44e84d0e04"
+    },
+    "attempt-1/ENGINEERING_WALL_BUDGET.json": {
+      "size_bytes": 1974,
+      "sha256": "5a4cf747e6f5f7e110611961ef28f15ab5c12ebb77d716063cb302cea4438040"
+    },
+    "attempt-1/stdout.log": {
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "attempt-1/stderr.log": {
+      "size_bytes": 7827,
+      "sha256": "5d62a10f460f385c8d798fa32021caf5d311b272bb7d7e82a21f291f6a6ec041"
+    },
+    "attempt-1/output/CI_CLASSIFICATION_STATIC.json": {
+      "size_bytes": 1040,
+      "sha256": "b5f541346b84881ffd8c261e02ed0ee16f94dec59878d26fe46c20bc44712b6f"
+    },
+    "attempt-1/output/SOURCE_READONLY_PROBE.json": {
+      "size_bytes": 914,
+      "sha256": "06ce2749fb12dba536f71d81ac2211df5a9560d62dc91b971482157aa762f515"
+    },
+    "attempt-1/output/UNIT_TEST_PROGRESS.json": {
+      "size_bytes": 5416,
+      "sha256": "fd727400965f54c6282fab6b08b72702364bf43a028da631c17d2054e096d2ab"
+    },
+    "attempt-1/output/UNIT_TEST_RESULTS.json": {
+      "size_bytes": 5459,
+      "sha256": "fe662ab1b296e449c9babef3bd95644a149e63c908ab379e20aff12ebaa10454"
+    },
+    "attempt-2/EXECUTION.json": {
+      "size_bytes": 2386,
+      "sha256": "d0697099368739fbf9c0d450fc57afadc598bfb0e69fb930fce8654331c028a1"
+    },
+    "attempt-2/SOURCE_IDENTITY.json": {
+      "size_bytes": 745,
+      "sha256": "d7d858cc507effeaf8ae59841fa5cbb999668d466168fbb337d426e7670f7a8f"
+    },
+    "attempt-2/SOURCE_EXPORT_VERIFIED.json": {
+      "size_bytes": 67156,
+      "sha256": "d662fe7052c329b7204b52f712a406f5dd2366cbcf97e34653f5bc7ab0359bbe"
+    },
+    "attempt-2/WALL_RESERVATION.json": {
+      "size_bytes": 1043,
+      "sha256": "a85409a5e59e1d0af2f9e5adb312274798d28de32a417f477edbfe6ff8cc6783"
+    },
+    "attempt-2/WALL_SETTLEMENT.json": {
+      "size_bytes": 2061,
+      "sha256": "95136fc8938e634e5a9854a258566fe2a7f181619b98c3daf8d8b8c739a707d8"
+    },
+    "attempt-2/ENGINEERING_WALL_BUDGET.json": {
+      "size_bytes": 1974,
+      "sha256": "d33327076ac0810c435905c307baaa8ab9e8aba0e8ba77a3f3c0f2f8884da270"
+    },
+    "attempt-2/stdout.log": {
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "attempt-2/stderr.log": {
+      "size_bytes": 22789,
+      "sha256": "510cf5b56c6d0ccf6f37b006ed72bda8d5638a1132a3b3e44390ac2e29e3d68b"
+    },
+    "attempt-2/output/CI_CLASSIFICATION_STATIC.json": {
+      "size_bytes": 1040,
+      "sha256": "b5f541346b84881ffd8c261e02ed0ee16f94dec59878d26fe46c20bc44712b6f"
+    },
+    "attempt-2/output/SOURCE_READONLY_PROBE.json": {
+      "size_bytes": 914,
+      "sha256": "06ce2749fb12dba536f71d81ac2211df5a9560d62dc91b971482157aa762f515"
+    },
+    "attempt-2/output/UNIT_TEST_PROGRESS.json": {
+      "size_bytes": 16603,
+      "sha256": "02dedf2a7e4c4456bc7c03b0ae35a756f8ee8ce19bf174212e37bd48e62d7ad4"
+    },
+    "attempt-3/EXECUTION.json": {
+      "size_bytes": 2385,
+      "sha256": "b6aa217e728fb9e77971422fc6bcc0edd1fdb9a205155f0f3cf1233c88a4aa2f"
+    },
+    "attempt-3/SOURCE_IDENTITY.json": {
+      "size_bytes": 745,
+      "sha256": "ded180957f4921af3361d64bfb1d489eb07c2364d8e2348e14441af134e2bed8"
+    },
+    "attempt-3/SOURCE_EXPORT_VERIFIED.json": {
+      "size_bytes": 67156,
+      "sha256": "e6e713bd7d11152ed8a40b9824bdb605cd033c9da51b367baedf018be5b08e41"
+    },
+    "attempt-3/WALL_RESERVATION.json": {
+      "size_bytes": 1043,
+      "sha256": "7280c9f584555e6dd7b40f80f52d249b1b20c63291e9f2fd2f58d344ada46a5e"
+    },
+    "attempt-3/WALL_SETTLEMENT.json": {
+      "size_bytes": 2062,
+      "sha256": "e81493ef243f3ca282df32b012f84c4fa2fa10110cbfa0a6b804d8bc0a26eb04"
+    },
+    "attempt-3/ENGINEERING_WALL_BUDGET.json": {
+      "size_bytes": 1974,
+      "sha256": "8dd8e53596258892c62211b83d9b3285f795c5640ed4c74d0512caa01b4c53d3"
+    },
+    "attempt-3/stdout.log": {
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "attempt-3/stderr.log": {
+      "size_bytes": 1962,
+      "sha256": "24445f0a0d1d626a00da76827c0f632f9c8e86f3025a61b0e5106771cf548805"
+    },
+    "attempt-3/output/CI_CLASSIFICATION_STATIC.json": {
+      "size_bytes": 1040,
+      "sha256": "b5f541346b84881ffd8c261e02ed0ee16f94dec59878d26fe46c20bc44712b6f"
+    },
+    "attempt-3/output/INTEGRATED_CALLBACK_DEMONSTRATION.json": {
+      "size_bytes": 7629,
+      "sha256": "431fdc8d5f9ac716f9e7a62269f36f33ac562d5e01d6885bd26ffa17750ee83a"
+    },
+    "attempt-3/output/INTEGRATED_CALLBACK_JOURNAL.json": {
+      "size_bytes": 6768,
+      "sha256": "bc3b98802404aa27f57989d833f85775bb2a8ff5b7181dcafdd75e1c5ea9a093"
+    },
+    "attempt-3/output/SOURCE_READONLY_PROBE.json": {
+      "size_bytes": 914,
+      "sha256": "06ce2749fb12dba536f71d81ac2211df5a9560d62dc91b971482157aa762f515"
+    },
+    "attempt-3/output/UNIT_TEST_PROGRESS.json": {
+      "size_bytes": 820,
+      "sha256": "25cdf2487ca398400dd8231f96d06105fb9a7d7cbb38c53ca9f2063867f776dd"
+    },
+    "attempt-3/output/UNIT_TEST_RESULTS.json": {
+      "size_bytes": 1122,
+      "sha256": "74ee1ce4595ca0c8e012ee128bbda8a5ca496caaf5f52509192c65a6dd70ba3f"
+    },
+    "attempt-4/EXECUTION.json": {
+      "size_bytes": 2407,
+      "sha256": "9b42d3a549d979515968ec94c39a5e8c2051f7f852941571bbd0ca6033abf9e9"
+    },
+    "attempt-4/SOURCE_IDENTITY.json": {
+      "size_bytes": 746,
+      "sha256": "40931adebc5a9e560f06455782a735f1698bfed0c3d927024e14f5c0d6645b19"
+    },
+    "attempt-4/SOURCE_EXPORT_VERIFIED.json": {
+      "size_bytes": 67410,
+      "sha256": "95fbfbdc325d7a59ff0bb826d4cf5410e25f1b0ceb4d0d0f5571519b87067e1a"
+    },
+    "attempt-4/WALL_RESERVATION.json": {
+      "size_bytes": 1043,
+      "sha256": "7dfb678a7659c5dc2cf2273feedf0d6a047a3bd768fed7e42377269ef8d0dee1"
+    },
+    "attempt-4/WALL_SETTLEMENT.json": {
+      "size_bytes": 2076,
+      "sha256": "632662a83a5fc1539e90b4bb45b4a92ff0d4e4c2cf504fda5175b7b474954940"
+    },
+    "attempt-4/ENGINEERING_WALL_BUDGET.json": {
+      "size_bytes": 2011,
+      "sha256": "371bc2df7a88d8b13070e10f95393708567eff1c064994b4a17703d2ee7fe7b1"
+    },
+    "attempt-4/stdout.log": {
+      "size_bytes": 116,
+      "sha256": "f3dc2e5ceecbaa0efd52bc71c3058fa43ec307cf830149ef08afd3ee3a35332d"
+    },
+    "attempt-4/stderr.log": {
+      "size_bytes": 932,
+      "sha256": "8d3c8f5ea24e33d93a27e25622af0023ab6d819fbfcb1f11d431b9e93e3ed2af"
+    },
+    "attempt-4/output/ACTUAL_PINNED_ENGINE_CACHED_MAPPING.json": {
+      "size_bytes": 11099,
+      "sha256": "f68e392317d51e525ba382964697199dc10a7000f056b7a17760114f24a0d42a"
+    },
+    "attempt-4/output/CACHED_METADATA_BEFORE_BINDING.json": {
+      "size_bytes": 9677,
+      "sha256": "c39dc80cafaf87fa5c1dc7d0754d8773f2a2bfc4162019279f09f6b92ca2be25"
+    },
+    "attempt-4/output/CI_CLASSIFICATION_STATIC.json": {
+      "size_bytes": 1092,
+      "sha256": "0b3430dfd9056bd4cdb01a87e2ad9c4c094c25cb8bec69d184c1c596ff90ce23"
+    },
+    "attempt-4/output/LEGACY_BASIS_OTHER_ORDER_PROBE.json": {
+      "size_bytes": 4163,
+      "sha256": "a5b762a6d4cf685a979cc2a1ce4da6f99fb8878f347843de88e0038e005f824d"
+    },
+    "attempt-4/output/LEGACY_BASIS_REPRESENTATION_COMPATIBILITY.json": {
+      "size_bytes": 4082,
+      "sha256": "4599d900630575fc1caeacf2d1f13d01ba222a7abc238d0afaea743016244527"
+    },
+    "attempt-4/output/MERIT_STATIONARITY_COUNTEREXAMPLE.json": {
+      "size_bytes": 7686,
+      "sha256": "5010a0e0419d7d1fdfad805121a573772d8eba2df82d4b3e6320a14f94316d85"
+    },
+    "attempt-4/output/SOURCE_READONLY_PROBE.json": {
+      "size_bytes": 914,
+      "sha256": "06ce2749fb12dba536f71d81ac2211df5a9560d62dc91b971482157aa762f515"
+    },
+    "attempt-4/output/UNIT_TEST_PROGRESS.json": {
+      "size_bytes": 823,
+      "sha256": "f3a70575db0b983b195d43c593faab17cb8b74c5e345d2d16b2eba03557127aa"
+    },
+    "attempt-4/output/UNIT_TEST_RESULTS.json": {
+      "size_bytes": 1125,
+      "sha256": "c46657ee9e0ea7dec3d945a43637ef306e7dec0192810c8fc2f090bd234c1c36"
+    }
+  }
+}
