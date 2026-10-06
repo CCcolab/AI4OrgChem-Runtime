@@ -4,7 +4,9 @@
 
 操作从 [用户指南](USER_MOLECULE_RUN_zh-CN.md) 开始；最新身份、范围与缺口见 [求解器 v2 实测](USER_MOLECULE_SOLVER_V2_zh-CN.md)，其 122 项工程测试通过、单例条件数值失败。此前 [数值审查](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md)、[W05 准备](USER_MOLECULE_W05_PREPARATION_zh-CN.md) 与 [W01—W04 交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md) 为历史批次，不冒充当前状态。
 
-2026-10-06 [W07 三步工程试用](USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 已提供自有输入准备、Check、报告导出与反馈路径；现有乙烯夹具的工程演示通过，真实用户反馈待填写。四问咨询按用户指示延后，待扩展齐备后集中征询；方法状态保持未审，正式 W07/Compute 仍 BLOCKED。
+2026-10-06 [W07 三步工程试用](USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 已提供自有输入准备、Check、报告导出与反馈路径；既有乙烯夹具的工程演示保留；真人反馈按用户要求 DEFERRED_BY_USER，未来可选，不阻塞当前工程验收。四问咨询按用户指示延后，待扩展齐备后集中征询；方法状态保持未审，正式 W07/Compute 仍 BLOCKED。
+
+最新 [W07 模拟自测](USER_MOLECULE_W07_SELFTEST_zh-CN.md) 已实际通过9个启动器、6个保护/历史失败判读和12个宿主 parser 场景；8个新容器均删除，输出保留，0新科学计算。模拟自测仅完成已列工程范围，科研 W07/Compute 门禁不变。
 
 W07 源码与存量证据候选已补齐新服务支持/来源/备份范围；两类样例搬移及 Git 源码重建后的只读报告通过，591 个科学源码文件匹配来源锁。实际条目见 [交付登记](../validation/user-molecule/w07-delivery-20261006.json)；包不含镜像或依赖，不代表完整环境恢复或 r3 许可分发审查闭合。
 
@@ -32,7 +34,8 @@ W07 源码与存量证据候选已补齐新服务支持/来源/备份范围；�
 | [MDR-001 方法决定记录](USER_MOLECULE_METHOD_DECISIONS_001_zh-CN.md) | 入口四问：方法责任人定义、外部一致性核查及分歧；DRAFT/PENDING，不自动批准或重审P01—P14 |
 | [主机 Report 与导出](USER_MOLECULE_REPORT_20261006_zh-CN.md) | 等待方法决定期间的只读工程增补：完整性、历史失败/宿主终态、身份、仅新目录导出；不启动计算 |
 | [W07 三步工程试用](USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) | 自有输入准备、Check、报告导出与反馈；现有夹具工程演示通过，正式科研验收仍 BLOCKED |
-| [W07 工程反馈模板](templates/USER_MOLECULE_W07_FEEDBACK_zh-CN.md) | 由实际使用者填写操作事实和反馈；不代填用户意见或科学批准 |
+| [W07 代理模拟自测](USER_MOLECULE_W07_SELFTEST_zh-CN.md) | 实际场景、错误码、原状态、身份、未知及工程验收范围；不冒充真人反馈 |
+| [W07 工程反馈模板](templates/USER_MOLECULE_W07_FEEDBACK_zh-CN.md) | 未来真人试用可选填写；当前 DEFERRED_BY_USER，不代填用户意见或科学批准 |
 | [设计与验收合同](USER_MOLECULE_ENTRY_DESIGN_zh-CN.md) | 输入与资格合同，A01—A18 最低要求 |
 | [本地服务实施细则](USER_MOLECULE_IMPLEMENTATION_DETAILS_zh-CN.md) | D0—D3 阶段出口、职责与科学待办 |
 | [专业实施方案](../ai4orgchem-runtime-implementation-plan-professional-revised.md) | 项目定位、现有服务、用户分子主线与 C06 |

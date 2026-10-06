@@ -8,7 +8,9 @@ W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 是此前的元�
 
 此前 [主机只读 Report 与导出](docs/USER_MOLECULE_REPORT_20261006_zh-CN.md) 增补保护旧运行目录、核对记录字节/身份、区分未执行与数值失败，并保留宿主/容器退出码。其48项标准库测试和11项主机报告集成通过。基础模式核对登记字节并读取历史快照；高级模式检查关键证据并导出派生报告。该增补轮次没有重算、启动新容器或重建镜像。
 
-最新 [W07 工程试用指南](docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 提供输入、Check、报告/导出三步流程及反馈模板。已用现有乙烯夹具完成一次真实容器 Check 和三项主机报告操作；无 SCF、网格、完整 ERI 或 Compute。这是工程人员演示，真实专业用户试用仍待完成。方法责任人定义与外部一致性咨询按用户要求延后，待扩展内容齐备后集中征询；方法仍未审，正式 W07 和生产 Compute 保持 **BLOCKED**。
+最新 [W07 工程试用指南](docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 提供输入、Check、报告/导出三步流程及反馈模板。已用现有乙烯夹具完成一次真实容器 Check 和三项主机报告操作；无 SCF、网格、完整 ERI 或 Compute。这是历史工程人员演示；真人试用与反馈现按用户要求 DEFERRED_BY_USER，作为未来可选事项，不阻塞当前工程验收。方法责任人定义与外部一致性咨询按用户要求延后，待扩展内容齐备后集中征询；方法仍未审，正式 W07 和生产 Compute 保持 **BLOCKED**。
+
+本轮 [W07 代理模拟自测](docs/USER_MOLECULE_W07_SELFTEST_zh-CN.md) 已通过9个启动器场景（8个容器）、6个宿主保护/历史失败判读场景及12个宿主 parser 用例。覆盖已有乙烯/丁二烯两 profile 的 Check、输入/身份拒绝、只读报告与导出；两次 Compute CLI 仅执行拒绝探针，新科学计算为0。本地工程交付可收尾，科研 W07/生产 Compute 仍 BLOCKED；模拟不冒充真人体验或数值合格。
 
 W07 本地源码/证据候选另含可搬移 Check 和失败样例、源码备份及新服务专属支持/来源矩阵。两类样例搬移后和从重建的 runtime Git 源码读取均通过，科学源码解包匹配591个锁定文件。候选包不含 Docker 镜像或依赖，不宣称完整环境恢复；r3 实际安装组件的完整许可审计仍 NOT_EXECUTED。[交付范围](docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md#交付范围按需查阅) 明确这些边界，不移用旧镜像验收结论。
 

@@ -1,5 +1,5 @@
 {
-  "revision": "W07-SOURCE-EVIDENCE-DELIVERY-20261006",
+  "revision": "W07-AGENT-SIMULATED-SELFTEST-20261006",
   "date": "2026-10-06",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -47,11 +47,12 @@
       "method_static_review": "COMPLETE; scope responsibility remains PENDING_REAL_REVIEW"
     },
     "W07": {
-      "implementation": "LOCAL_ENGINEERING_SOURCE_EVIDENCE_HANDOFF_READY; real user and research acceptance pending",
-      "validation": "BLOCKED_FOR_RESEARCH; engineering source/sample/backup checks PASS in their stated scope",
-      "engineering_trial": "CHECK_REPORT_EXPORT_DEMONSTRATION_PASS_GUIDE_AND_FEEDBACK_PREPARED",
-      "real_user_feedback": "PENDING_NOT_EXECUTED",
-      "engineering_delivery": "READY_LOCAL_ENGINEERING_SOURCE_AND_EVIDENCE; NOT_RESEARCH_W07_COMPLETE"
+      "implementation": "LOCAL_ENGINEERING_SOURCE_EVIDENCE_HANDOFF_AND_AGENT_SELFTEST_COMPLETE; research acceptance pending",
+      "validation": "PASS_SCOPED_AGENT_ENGINEERING_SELFTEST; BLOCKED_FOR_RESEARCH",
+      "engineering_trial": "CHECK_REFUSAL_REPORT_EXPORT_PROTECTION_AND_PARSER_AGENT_SELFTEST_PASS",
+      "real_user_feedback": "DEFERRED_BY_USER_NOT_CURRENT_ENGINEERING_BLOCKER",
+      "engineering_delivery": "READY_LOCAL_ENGINEERING_SOURCE_AND_EVIDENCE; NOT_RESEARCH_W07_COMPLETE",
+      "simulated_selftest_record": "validation/user-molecule/w07-simulated-selftest-20261006.json"
     }
   },
   "git_workspaces": {
@@ -68,14 +69,13 @@
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Engineering source/evidence materials are ready. Collect actual user operation records and feature additions; deferred method definitions/consistency review and existing numerical/resource/scope gates still required for research Compute. No automatic further documents, solver changes, science batch or publication.",
+  "next_bounded_task": "Scoped W07 engineering handoff and agent-simulated selftest complete. Human trial/feedback is optional future work, deferred by user. Existing scientific definition/numerical/reference/resource/scope gates remain for research Compute; consultation stays deferred until additions are collected. No automatic solver changes, scientific runs, rebuilds or publication.",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
     "separated nonoptimized same-D witness for other molecule/profile identities; pilot ethene now covered",
     "per-mode peaks and general-user resource qualification",
     "real method scope responsibility and two qualified research systems",
-    "professional-user interpretation trial",
     "variational status NOT_ESTABLISHED; stability NOT_EXECUTED"
   ],
   "history": "Previous setup/preparation/engineering states retained in Git and immutable earlier deliveries",
@@ -116,5 +116,29 @@
   "new_scf_executions_this_w07_round": 0,
   "new_check_containers_this_w07_round": 1,
   "latest_w07_engineering_delivery_record": "validation/user-molecule/w07-delivery-20261006.json",
-  "new_scientific_and_container_operations_this_w07_delivery_round": 0
+  "new_scientific_and_container_operations_this_w07_delivery_round": 0,
+  "optional_future_user_validation": {
+    "status": "DEFERRED_BY_USER",
+    "scope": "Human UX/independent professional-user interpretation trial and feedback",
+    "current_engineering_blocker": false,
+    "agent_simulation_is_human_feedback": false
+  },
+  "latest_w07_simulated_selftest_record": "validation/user-molecule/w07-simulated-selftest-20261006.json",
+  "w07_simulated_selftest": {
+    "status": "PASS_SCOPED_AGENT_SIMULATED_ENGINEERING_SELFTEST",
+    "test_host_runtime_commit": "a9f7b3baaf92637d77a88cd983cff94b5b934b87",
+    "new_containers": 8,
+    "launcher_scenarios": 9,
+    "host_protection_scenarios": 6,
+    "host_parser_cases": 12,
+    "compute_qualification_probes": 2,
+    "new_scf_grid_full_eri_or_scientific_compute": 0,
+    "human_feedback_required_this_stage": false
+  },
+  "new_scientific_runs_this_simulated_selftest_round": 0,
+  "historical_w07_round_counter_scope": {
+    "new_check_containers_this_w07_round": "Earlier engineering trial record: 1 Check container; not the later simulated selftest",
+    "new_scientific_and_container_operations_this_w07_delivery_round": "Earlier source/evidence delivery record: 0 new operations; not the later simulated selftest",
+    "current_simulated_round": "w07_simulated_selftest: 8 containers; 0 new scientific execution"
+  }
 }
