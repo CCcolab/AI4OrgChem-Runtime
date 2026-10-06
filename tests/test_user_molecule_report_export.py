@@ -113,6 +113,16 @@ class ReportExportTests(unittest.TestCase):
         text=result.stdout.decode('utf-8')
         self.assertIn('中文问题',text);self.assertIn('Å',text)
 
+    def test_readonly_host_wrapper_rejects_compute_before_creating_run(self):
+        dest=self.root/'must not become a compute run'
+        before=self.snapshot(self.source)
+        result=subprocess.run([sys.executable,'-B',str(ROOT/'scripts/report-user-molecule.py'),
+            'compute','--request',str(self.source/'missing.json'),'--output-dir',str(dest),
+            '--check-run',str(self.source)],cwd=ROOT,capture_output=True,timeout=30)
+        self.assertEqual(result.returncode,40)
+        self.assertIn(b'report only',result.stderr)
+        self.assertFalse(dest.exists());self.assertEqual(self.snapshot(self.source),before)
+
 
 if __name__=='__main__':
     unittest.main()
