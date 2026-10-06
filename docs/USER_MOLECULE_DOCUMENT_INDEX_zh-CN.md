@@ -6,6 +6,8 @@
 
 2026-10-06 [W07 三步工程试用](USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 已提供自有输入准备、Check、报告导出与反馈路径；现有乙烯夹具的工程演示通过，真实用户反馈待填写。四问咨询按用户指示延后，待扩展齐备后集中征询；方法状态保持未审，正式 W07/Compute 仍 BLOCKED。
 
+W07 源码与存量证据候选已补齐新服务支持/来源/备份范围；两类样例搬移及 Git 源码重建后的只读报告通过，591 个科学源码文件匹配来源锁。实际条目见 [交付登记](../validation/user-molecule/w07-delivery-20261006.json)；包不含镜像或依赖，不代表完整环境恢复或 r3 许可分发审查闭合。
+
 2026-10-06 最新增补为 [存量方法审阅](USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)与 [下一版求解设计](USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)：只读定位保存初始谱的8/9占据边界、占据跳变与能量—算子判据；新增科学进程为0。方法责任审阅未签署，新策略 DESIGN_ONLY，Compute/W07仍BLOCKED。
 
 [W01—W05 本地 CI](USER_MOLECULE_CI_20261005_zh-CN.md) 已通过历史工程/合同检查；GitHub Actions 仍 NOT_EXECUTED，新分子数值验收已执行但失败。本页和 implementation-state 的 ci_execution 指远端 Actions，本地执行另行登记。

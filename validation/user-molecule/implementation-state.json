@@ -1,5 +1,5 @@
 {
-  "revision": "W07-ENGINEERING-TRIAL-20261006",
+  "revision": "W07-SOURCE-EVIDENCE-DELIVERY-20261006",
   "date": "2026-10-06",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -47,10 +47,11 @@
       "method_static_review": "COMPLETE; scope responsibility remains PENDING_REAL_REVIEW"
     },
     "W07": {
-      "implementation": "ENGINEERING_GUIDE_FEEDBACK_AND_CHECK_REPORT_EXPORT_DEMONSTRATION_READY; full research delivery not accepted",
-      "validation": "BLOCKED_FOR_RESEARCH; W05/W06 numerical/resource/scope/user gates unresolved",
+      "implementation": "LOCAL_ENGINEERING_SOURCE_EVIDENCE_HANDOFF_READY; real user and research acceptance pending",
+      "validation": "BLOCKED_FOR_RESEARCH; engineering source/sample/backup checks PASS in their stated scope",
       "engineering_trial": "CHECK_REPORT_EXPORT_DEMONSTRATION_PASS_GUIDE_AND_FEEDBACK_PREPARED",
-      "real_user_feedback": "PENDING_NOT_EXECUTED"
+      "real_user_feedback": "PENDING_NOT_EXECUTED",
+      "engineering_delivery": "READY_LOCAL_ENGINEERING_SOURCE_AND_EVIDENCE; NOT_RESEARCH_W07_COMPLETE"
     }
   },
   "git_workspaces": {
@@ -67,7 +68,7 @@
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Collect real user engineering feedback and potential feature additions; method-owner definitions and external consistency consultation deferred until consolidated. No solver activation, new scientific batch, gate relaxation or research W07 exit.",
+  "next_bounded_task": "Engineering source/evidence materials are ready. Collect actual user operation records and feature additions; deferred method definitions/consistency review and existing numerical/resource/scope gates still required for research Compute. No automatic further documents, solver changes, science batch or publication.",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -113,5 +114,7 @@
     "scientific_definition_or_method_approval": false
   },
   "new_scf_executions_this_w07_round": 0,
-  "new_check_containers_this_w07_round": 1
+  "new_check_containers_this_w07_round": 1,
+  "latest_w07_engineering_delivery_record": "validation/user-molecule/w07-delivery-20261006.json",
+  "new_scientific_and_container_operations_this_w07_delivery_round": 0
 }

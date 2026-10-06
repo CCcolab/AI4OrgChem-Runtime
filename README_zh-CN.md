@@ -10,6 +10,8 @@ W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 是此前的元�
 
 最新 [W07 工程试用指南](docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 提供输入、Check、报告/导出三步流程及反馈模板。已用现有乙烯夹具完成一次真实容器 Check 和三项主机报告操作；无 SCF、网格、完整 ERI 或 Compute。这是工程人员演示，真实专业用户试用仍待完成。方法责任人定义与外部一致性咨询按用户要求延后，待扩展内容齐备后集中征询；方法仍未审，正式 W07 和生产 Compute 保持 **BLOCKED**。
 
+W07 本地源码/证据候选另含可搬移 Check 和失败样例、源码备份及新服务专属支持/来源矩阵。两类样例搬移后和从重建的 runtime Git 源码读取均通过，科学源码解包匹配591个锁定文件。候选包不含 Docker 镜像或依赖，不宣称完整环境恢复；r3 实际安装组件的完整许可审计仍 NOT_EXECUTED。[交付范围](docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md#交付范围按需查阅) 明确这些边界，不移用旧镜像验收结论。
+
 [W01—W05 本地工程/合同 CI](docs/USER_MOLECULE_CI_20261005_zh-CN.md) 已通过38项单元测试、10个集成用例和4项平台探针；GitHub Actions 未执行，该结论不代表 W05 数值验收通过。
 
 此前完整 [W01—W06 本地工程 CI](docs/USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md) 的63项独立单元用例（102次执行）及集成/平台记录保留，与本轮数值失败分别登记。GitHub Actions 仍 NOT_EXECUTED，WSLc 仍 BLOCKED/暂停。

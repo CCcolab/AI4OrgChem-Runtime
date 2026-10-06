@@ -77,15 +77,49 @@ $completedExport = Join-Path $trial 'exported-report'
 
 完整说明见 [Report 指南](USER_MOLECULE_REPORT_20261006_zh-CN.md) 与 [Run 指南](USER_MOLECULE_RUN_zh-CN.md)。反馈由实际使用者填写；本指南和准备材料不代填真实用户意见，不自动发送或上传。
 
-## 本轮结果与保留边界
+## 交付范围（按需查阅）
 
-| 本轮项目 | 当前记录 |
+本轮工程交付目录为 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261006-user-molecule-w07-delivery`。两个已有样例搬移后的只读 Report、旧 `9e1c1b9` Git 源码重建及两例 Report 已有通过回执；见 [W07 交付登记](../validation/user-molecule/w07-delivery-20261006.json) 和目录中的 `PORTABLE_SAMPLE_VERIFICATION.json`、`RUNTIME_SOURCE_RESTORE_PROBE.json`。最终新增文档候选的 Git bundle、源码归档身份及校验以该目录外部 `FINAL_DELIVERY.json` 为准；旧提交恢复检查未包含本轮新版 NOTICE，不构成完整环境恢复或正式 W07 科研验收。
+
+| 新服务操作 / 平台 | 当前范围与证据 |
 |---|---|
-| Check / 基础 Report / 高级 Report / fresh 外部导出 | 工程人员演示 PASS；四步原进程退出码均为 0，1 个 Check 容器已删除，输出保留 |
-| 本轮高级报告 | `record_integrity=MATCHED`；科学与数值状态均为 `NOT_EXECUTED`，方法与研究状态均为 `NOT_REVIEWED` |
-| 本轮比较与身份 | `comparison_available=false`，`delta_hartree=null`、`delta_kcal_mol=null`；未登记 `runtime_test_commit`，显示 UNKNOWN |
+| Check：Windows PowerShell 5.1 引导至已有 7.3+，本地 Docker Linux/amd64 r3 | 已有乙烯 Check 工程演示；输入 VALID、Compute 资格 false，无 SCF/网格/完整 ERI。限于原回执的输入、镜像与限额，不证明任意自有分子可算 |
+| 基础 Report：已有 PowerShell 7.3+ | 宿主清单字节核对和缓存读取；无需 Docker 或宿主 Python，返回 0 不补证关键快照完整性 |
+| 高级 Report / fresh 导出：已有 Python 3.12+ | 宿主标准库只读工具；本轮两个已有样例搬移后读取/导出均退出 0，旧 `9e1c1b9` Git 重建源码读取两例也均退出 0。仅证明已登记记录可读，不启动科学计算 |
+| Compute：pilot / research 两个生产 profile | BLOCKED；开关仍禁用，W05/W06 实际数值失败、资源和范围门禁未关闭 |
+| WSLc / Colab / GitHub Actions | BLOCKED 且暂停 / DEFERRED / NOT_EXECUTED；本地工程 CI 与宿主 Report 不补写这些平台通过 |
+| 原七任务 L0—L4、等价性与分类 | 属于 legacy 镜像及固定协议历史证据，见 [原平台矩阵](WSLC_COMPATIBILITY_zh-CN.md)；其 PASS 不转移给新服务或 r3，原 L4 仍不可 resume |
+
+| 来源与许可对象 | 登记与限制 |
+|---|---|
+| 当前宿主 runtime 源码、LICENSE / NOTICE | 自有代码 Apache-2.0；交付提交、工作字节与 Git 身份逐项登记。宿主通知的范围修订须随源码保存；未重建的 r3 不因此携带新版通知 |
+| 科学适配源码 | [来源锁](../locks/source.user-molecule.lock.json) 登记 `cc7437901119e71ef7945a12813c021c383e7648`，基于 `28511f3d84fa65707a107cde1e8121a7b4334ecb`；588 个基线文件未变，新增适配器、测试、说明 3 文件，非已发布 v0.3.2 身份。保留上游 LICENSE / NOTICE / AUTHORS |
+| r3 镜像与宿主源码 | [候选身份](../validation/user-molecule/candidate-image.json) 为镜像 `24f46f…`、runtime 构建 `5098775…`、science `cc743…`；宿主当前提交和数值测试提交分列，缺失身份仍 UNKNOWN |
+| 基础镜像与依赖 | r3 复用登记的固定基础摘要和依赖锁；同基础、同锁不能证明与 legacy 镜像逐组件相同。以 [base-image.lock.json](../locks/base-image.lock.json)、[wheels.lock.json](../locks/wheels.lock.json) 和构建回执核对来源，不新增或浮动升级依赖 |
+| 第三方许可审查与分发 | [原许可审查](LICENSE_REVIEW_zh-CN.md) 对象为旧 `ddc45b1…`；其材料只作来源关联。r3 完整逐组件 audit 为 NOT_EXECUTED，精确原生来源、通知和源码交付未闭合，镜像分发继续 BLOCKED；自有 Apache-2.0 不覆盖全部镜像组件 |
+
+| 候选备份范围 | 包含 / 排除与可验证边界 |
+|---|---|
+| 当前 runtime | 保存范围为完整已跟踪源码快照与完整可用 Git 历史 bundle，含当前文档、Report 工具、来源锁、profile、LICENSE / 新版 NOTICE；最终新增文档候选的身份和归档校验由外部 `FINAL_DELIVERY.json` 登记 |
+| 已有科学源码 | 已复用既存 `science.tar` 完整源码和 `science-adapter-w01-w04.bundle`；归档提取到新目录并匹配锁中 591 文件。科学增量 bundle 必须先具备 `28511f3…` 基线，不能单独声称包含完整 Git 历史 |
+| 两个真实样例 | 已原样复制上一轮完整单次 Check 和既有 `numerical-a1/pilot-ethene` v2 失败目录至 `local-candidate/samples`；源字节未变，搬移后只读 Report 读取/导出均通过。失败样例仍 NOT_QUALIFIED，两例 delta 均 null、比较 false，无新科学样例 |
+| 静态与 Git 恢复检查 | 已从旧 `9e1c1b9` runtime bundle 重建源码并读取两例，原默认 HEAD 未检出的错误保留，显式 checkout 后通过；该测试恢复旧 NOTICE。新候选 bundle/归档字节检验单独登记，不能移用旧恢复回执 |
+| 镜像、依赖与环境 | 排除镜像导出、私有输入、全部历史运行及新增依赖归档。新增镜像导出与完整 Docker / Python / WSL 环境恢复 NOT_EXECUTED；候选 ZIP 供本地源码和证据审阅，不是独立安装器 |
+| 存储与发布 | 本地同盘候选快照；独立介质容灾复制未执行。打包不授权镜像分发、源码公开、推送、正式标签或 Release |
+
+恢复 runtime bundle 时显式指定分支：`git clone --branch implementation/user-molecule-w01-w04 <完整runtime-bundle路径> <全新恢复目录>`；默认 HEAD 不能作为可检出保证。克隆后核对交付清单登记的完整提交及文件身份，再只读 Report；新候选的源码/NOTICE 身份以新清单为准。
+
+自有 XYZ 与 A/B 确认、真实专业用户独立操作及反馈继续 PENDING；工程人员记录事实不代填使用者意见。方法四问咨询按用户要求 DEFERRED，MDR-001 尚未批准；正式 W07 科研交付、两个合格研究体系和生产 Compute 继续 BLOCKED。
+
+## 既有工程演示回执与保留边界
+
+| 既有工程演示项目 | 原回执与当前边界 |
+|---|---|
+| Check / 基础 Report / 高级 Report / fresh 外部导出 | 前轮工程人员演示 PASS，四步原进程退出码均为 0，1 个 Check 容器已删除、输出保留；本轮新增容器为 0 |
+| 前轮 Check 高级报告 | `record_integrity=MATCHED`；科学与数值状态均为 `NOT_EXECUTED`，方法与研究状态均为 `NOT_REVIEWED` |
+| 前轮 Check 比较与身份 | `comparison_available=false`，`delta_hartree=null`、`delta_kcal_mol=null`；未登记 `runtime_test_commit`，显示 UNKNOWN |
 | 自有 XYZ 与 A/B 确认、真实用户独立操作反馈 | PENDING；默认乙烯演示不满足自有输入或真实用户验收 |
 | 方法四问咨询 | DEFERRED；材料齐全后再征询，MDR-001 尚未真实审阅批准 |
 | 正式 W07 与 Compute | BLOCKED；本轮不执行 Compute/SCF/完整 ERI，不改变 profile 开关 |
 
-机器证据见 [本轮工程试用记录](../validation/user-molecule/w07-engineering-trial-20261006.json)，原始四步命令、退出码与源文件字节留存在上列 `TRIAL_EXECUTION.json`。本轮宿主 Report 使用当前源码；既有 r3 镜像未重建，镜像构建身份与宿主/数值测试身份分别记录。旧 r3 缓存中的 `W05_NUMERICAL_ACCEPTANCE_NOT_EXECUTED` 等原因与 UNKNOWN 仅描述该记录登记的信息；当前 W05/W06 真数值失败按最新验收记录保留，不能由旧缓存改写。当前 WSLc BLOCKED/暂停、远端 CI NOT_EXECUTED、Colab DEFERRED、镜像分发 BLOCKED、公开/推送/正式发布继续暂停，均为项目边界，不能从旧缓存原因推断或更新。原 L4 可保存检查点，但不可 resume。工程操作记录齐全也不能关闭这些边界或完整科研用户验收。
+机器证据见 [既有工程试用记录](../validation/user-molecule/w07-engineering-trial-20261006.json)，原始四步命令、退出码与源文件字节留存在上列 `TRIAL_EXECUTION.json`；本轮样例搬移和源码恢复证据另见上节交付登记。既有 r3 镜像未重建，镜像构建身份与宿主/数值测试身份分别记录。旧 r3 缓存中的 `W05_NUMERICAL_ACCEPTANCE_NOT_EXECUTED` 等原因与 UNKNOWN 仅描述该记录登记的信息；当前 W05/W06 真数值失败按最新验收记录保留，不能由旧缓存改写。当前 WSLc BLOCKED/暂停、远端 CI NOT_EXECUTED、Colab DEFERRED、镜像分发 BLOCKED、公开/推送/正式发布继续暂停，均为项目边界，不能从旧缓存原因推断或更新。原 L4 可保存检查点，但不可 resume。工程操作记录齐全也不能关闭这些边界或完整科研用户验收。

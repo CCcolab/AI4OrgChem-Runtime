@@ -2,11 +2,20 @@ AI4OrgChem Reproducible Runtime
 Copyright 2026 Xiao Chen.
 
 Runtime wrappers and documentation are licensed under Apache-2.0.
-Scientific software and evidence are obtained unchanged from:
+The frozen scientific baseline for the original seven-task runtime is from:
 AI4OrgChem, Copyright 2026 Xiao Chen, Apache-2.0
 https://github.com/CCcolab/AI4OrgChem
 commit 28511f3d84fa65707a107cde1e8121a7b4334ecb (v0.3.2).
-The image retains upstream LICENSE, NOTICE and AUTHORS.md in /opt/ai4orgchem.
+The original runtime retains this unchanged baseline. The user-molecule
+engineering candidate uses unpublished local adapter commit
+cc7437901119e71ef7945a12813c021c383e7648, derived from that baseline.
+It adds an adapter, its tests and engineering notes; the 588 frozen baseline
+files remain unchanged. This adapter commit is not tagged v0.3.2.
+The candidate source identity is recorded in locks/source.user-molecule.lock.json.
+Both built candidates retain upstream LICENSE, NOTICE and AUTHORS.md in
+/opt/ai4orgchem. Current host wrappers and documentation have separate identities.
+This source NOTICE clarification is not installed in the existing r3 image,
+which was built from runtime commit 5098775c9cf40468ab92712447a3e5c7b1361a63.
 Dependencies and base-image components retain their own licenses.
 No monograph full text, original historical program, private result or credential
 is distributed. References to the monograph do not relicense runtime software.

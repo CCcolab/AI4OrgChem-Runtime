@@ -1,0 +1,245 @@
+{
+  "id": "W07-SOURCE-EVIDENCE-DELIVERY-20261006",
+  "date": "2026-10-06",
+  "status": "READY_LOCAL_ENGINEERING_SOURCE_AND_EVIDENCE; NOT_RESEARCH_W07_COMPLETE",
+  "base_runtime_commit": "9e1c1b939defa94de686ca31ce653fadbb688351",
+  "tested_report_code_commit": "9e1c1b939defa94de686ca31ce653fadbb688351",
+  "prior_engineering_trial_source_commit": "e03e3371709df917b718bf50cbe62d5363efecdb",
+  "scope": "W07 minimum engineering handoff, existing examples and source backup; no new solver or compliance platform",
+  "work_package_delivery_items": {
+    "short_user_guide": "AVAILABLE",
+    "existing_real_check_example": "AVAILABLE_AND_RELOCATED_READ_PASS",
+    "existing_failure_example": "AVAILABLE_AND_RELOCATED_READ_PASS_DIAGNOSTIC_ONLY",
+    "service_specific_support_matrix": "RECORDED",
+    "source_and_notice_mapping": "RECORDED_WITH_OPEN_IMAGE_ITEMS",
+    "runtime_source_backup": "FINAL_CANDIDATE_BUNDLE_AND_ARCHIVE_IN_EXTERNAL_FINAL_MANIFEST",
+    "science_source_backup": "591_FILES_LOCK_MATCH_AND_EXTRACTION_PASS; incremental Git bundle requires baseline",
+    "real_professional_user_operation": "PENDING_NOT_EXECUTED",
+    "qualified_self_molecule_research_example": "NOT_AVAILABLE"
+  },
+  "support_matrix": [
+    {
+      "capability": "local Docker r3 Check",
+      "status": "PASS_SCOPED_EXISTING_ETHENE_ENGINEERING_TRIAL",
+      "execution_record": "validation/user-molecule/w07-engineering-trial-20261006.json",
+      "claim": "input/AO metadata only; not scientific or user acceptance"
+    },
+    {
+      "capability": "host basic Report",
+      "status": "PASS_SCOPED_REGISTERED_BYTES_AND_CACHE",
+      "claim": "no Docker/Python; does not prove required snapshot completeness"
+    },
+    {
+      "capability": "host stdlib Report and fresh export",
+      "status": "PASS_ORIGINAL_RELOCATED_AND_GIT_RECONSTRUCTED_RECORDS",
+      "claim": "reading success may coexist with saved scientific failure"
+    },
+    {
+      "capability": "pilot/research production Compute",
+      "status": "BLOCKED",
+      "claim": "both switches remain false"
+    },
+    {
+      "capability": "new user scientific/research result",
+      "status": "BLOCKED",
+      "claim": "conditional/reference/path/resource/scope gates unresolved"
+    },
+    {
+      "capability": "WSLc",
+      "status": "BLOCKED_NOT_EXECUTED_PAUSED"
+    },
+    {
+      "capability": "Colab",
+      "status": "DEFERRED"
+    },
+    {
+      "capability": "GitHub Actions",
+      "status": "NOT_EXECUTED",
+      "claim": "earlier local CI and scoped reports are separate"
+    },
+    {
+      "capability": "legacy seven tasks",
+      "status": "HISTORICAL_SEPARATE_IMAGE_AND_PROTOCOL",
+      "claim": "no transfer of L0-L4 PASS to this service"
+    }
+  ],
+  "examples": {
+    "check": {
+      "role": "EXISTING_CHECK_ENGINEERING_ONLY",
+      "source_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-w07-engineering-trial\\attempt-2\\check-runs\\check-20261006T064214Z-9ade4bb9a87c4917aa5f964f23a9dfdf",
+      "relative_package_path": "samples/check",
+      "source_manifest": {
+        "size_bytes": 6068,
+        "sha256": "c740f9dc5b003ffd8f098bca0597002088a7719d1f7b42e0a3af055d11d0518f"
+      },
+      "source_file_count": 11,
+      "report_exit_code": 0,
+      "state": {
+        "record_integrity": "MATCHED",
+        "execution_status": "COMPLETED",
+        "scientific_execution_status": "NOT_EXECUTED",
+        "numerical_status": "NOT_EXECUTED",
+        "method_status": "NOT_REVIEWED",
+        "research_status": "NOT_REVIEWED",
+        "comparison_available": false,
+        "delta_hartree": null,
+        "delta_kcal_mol": null
+      },
+      "original_identities": {
+        "request_sha256": "a348a5a63631c5d394d034e6b3538f5fc4229b3d50c79d9134a3726c842f07f9",
+        "normalized_sha256": "46a9f72bcf346e3be353d98291d8873a957675329f907ffd8271ca72df61bbab",
+        "geometry_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+        "profile_sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9",
+        "request_schema_sha256": "4600556280be12a8b7ab61c85393d1143d5b2d98132fa19208604d5e1a600a38",
+        "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+        "science_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "source_manifest_sha256": "7849c43d4c31127f67f73970284d175daa3b0e7e5e09585d5d25fe13c6655c49",
+        "runtime_build_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+        "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+        "condition_rules_sha256": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2"
+      },
+      "source_bytes_unchanged": true
+    },
+    "failed-conditional-v2": {
+      "role": "EXISTING_FAILED_SCIENTIFIC_DIAGNOSTIC_ONLY",
+      "source_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-solver-v2\\numerical-a1\\pilot-ethene",
+      "relative_package_path": "samples/failed-conditional-v2",
+      "source_manifest": {
+        "size_bytes": 4696,
+        "sha256": "8de38d0a280ff0c33c48c1a76888135ab4df1e21fc0159439b54015406bad3c9"
+      },
+      "source_file_count": 32,
+      "report_exit_code": 0,
+      "state": {
+        "record_integrity": "MATCHED",
+        "execution_status": "FAILED",
+        "scientific_execution_status": "EXECUTED",
+        "numerical_status": "NOT_QUALIFIED",
+        "method_status": "NOT_REVIEWED",
+        "research_status": "NOT_QUALIFIED",
+        "comparison_available": false,
+        "delta_hartree": null,
+        "delta_kcal_mol": null
+      },
+      "original_identities": {
+        "geometry_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+        "source_request_sha256": "a348a5a63631c5d394d034e6b3538f5fc4229b3d50c79d9134a3726c842f07f9",
+        "acceptance_request_sha256": "3463f17a893c50a938cf180b4bdb37bd4cd0cbc5c53c3c6787b7f429db5c60d8",
+        "profile_sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9",
+        "rules_sha256": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+        "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+        "runtime_test_commit": "c8a580f70d7dba721758b77c0c534c31b50953b8",
+        "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+        "contract_sha256": "00e1cb3cb2241e0bb549b8e220e099951e5dc5d54e7aa8c146b1eb5df82559bd",
+        "dependencies": {
+          "pyscf": "2.14.0",
+          "numpy": "2.5.1",
+          "scipy": "1.18.0"
+        },
+        "mode": "SEQUENTIAL_SOLVER_V2_DIAGNOSTIC",
+        "dependencies_sha256": "cc7a2f4540c75b0b336c14dbccc89cccbaa5a9d205c14cf83187df526a91f537"
+      },
+      "source_bytes_unchanged": true
+    }
+  },
+  "backup": {
+    "included": [
+      "current tracked runtime source snapshot and complete available runtime Git history",
+      "existing full scientific source archive for cc743 and original incremental adapter Git bundle",
+      "one existing complete Check and one complete failed conditional-v2 single-run directory",
+      "read-only derived reports, source locks, profiles, LICENSE, corrected current NOTICE and attributed source-tree materials"
+    ],
+    "excluded": [
+      "Docker image archive",
+      "installed dependency environment and newly downloaded dependency source archives",
+      "user private inputs",
+      "all historical runs",
+      "original modified workspaces and ignored/untracked files"
+    ],
+    "same_disk_backup_only": true,
+    "independent_off_device_backup": "NOT_EXECUTED",
+    "science_archive_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+    "science_bundle_requires_baseline": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+    "runtime_restore": {
+      "status": "PASS_LOCAL_GIT_SOURCE_RECONSTRUCTION_AND_REPORT",
+      "tested_source_commit": "9e1c1b939defa94de686ca31ce653fadbb688351",
+      "explicit_branch_or_commit_selection_required": true,
+      "scope": "source reconstruction and Report only"
+    },
+    "science_restore": "PASS_LOCKED_SOURCE_FILES_ONLY",
+    "full_python_docker_wsl_environment_restore": "NOT_EXECUTED",
+    "package_is_standalone_installer": false
+  },
+  "source_and_license": {
+    "current_self_owned_source_terms": "Apache-2.0; third-party terms remain separate",
+    "legacy_image": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+    "user_molecule_image": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+    "image_runtime_build_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+    "image_science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+    "frozen_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+    "same_base_and_dependency_inputs": "VERIFIED_INPUT_MATCH_NOT_SAME_FINAL_IMAGE",
+    "notice": {
+      "current_source": {
+        "size_bytes": 1456,
+        "sha256": "f266b0c3cd8d670f6384feb0a787da73c84590ac5391cb81b6979c3bc0bdbaf5"
+      },
+      "clarification_not_baked_into_existing_r3": true
+    },
+    "r3_complete_installed_component_audit": "NOT_EXECUTED",
+    "r3_distribution_review_closed": false,
+    "legacy_license_inventory_is_not_r3_PASS": true,
+    "retained_image_open_items": [
+      "native GCC runtime exact corresponding source/build",
+      "BLAS build correspondence",
+      "HDF5/libaec/libsz actual build source",
+      "PySCF/XCFun actual patch/build record",
+      "exact-r3 installed notices/component check and actual recipient source/notice delivery"
+    ]
+  },
+  "new_check_containers": 0,
+  "new_compute_scf_grid_full_eri_executions": 0,
+  "new_image_build": false,
+  "new_dependency_installation_or_platform_configuration": false,
+  "scientific_rules_profiles_thresholds_and_MDR_unchanged": true,
+  "real_user_feedback": "PENDING_NOT_EXECUTED",
+  "self_molecule_trial": "NOT_EXECUTED_NO_USER_RECORD",
+  "consultation": "DEFERRED_BY_USER; no method definition or external opinion invented",
+  "W07_research": "BLOCKED",
+  "compute_enabled": false,
+  "wslc": "BLOCKED_NOT_EXECUTED_PAUSED",
+  "github_actions": "NOT_EXECUTED",
+  "image_distribution": "BLOCKED",
+  "source_publication": "NEW_SCOPE_REVIEW_REQUIRED_NOT_AUTHORIZED",
+  "public_push_release": false,
+  "P01_P14": "NOT_RERUN_OR_RECERTIFIED",
+  "L4": "CHECKPOINT_SAVE_ONLY_NO_RESUME",
+  "delivery_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-w07-delivery",
+  "candidate_relative_directory": "local-candidate",
+  "final_package_identity_record": "FINAL_DELIVERY.json; package sizes/SHA and final commit are external to avoid circular hashes",
+  "receipts": {
+    "PREPARATION_BASELINE.json": {
+      "size_bytes": 9874,
+      "sha256": "e571cdcac55e3c9c72367ccf71224195ba9042a7ecdabdf271f593721cae9777"
+    },
+    "PORTABLE_SAMPLE_VERIFICATION.json": {
+      "size_bytes": 805187,
+      "sha256": "52b7ed27e6e308771ff37d0fb4d7968e21a936a84ec781d53709ec61db6f2fdf"
+    },
+    "RUNTIME_SOURCE_RESTORE_PROBE.json": {
+      "size_bytes": 3142,
+      "sha256": "86231e3991505868973ac66f5d7a58d30c14a1d77676add557428e56401c1d8e"
+    },
+    "SOURCE_MATERIAL_MAPPING.json": {
+      "size_bytes": 96265,
+      "sha256": "c3b682c3653d62cc0c6b1df0a212e4cba5bfacf49cbd5af6440314ec77e98471"
+    },
+    "INITIAL_ARCHIVE_PREFIX_EXPECTATION.json": {
+      "size_bytes": 543,
+      "sha256": "c4f904182848bebdf6c2a881f829071f0fd8daed0966644de5aa2d0fb697705c"
+    },
+    "INITIAL_GIT_RESTORE_EXPECTATION.json": {
+      "size_bytes": 554,
+      "sha256": "99690c6a707055969f61fed13d92508570973a7bd229b4d220ff7b5168549cd6"
+    }
+  }
+}
