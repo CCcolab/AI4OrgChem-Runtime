@@ -1,8 +1,10 @@
 # AI4OrgChem 可复算运行环境
 
+最新 [原规则服务范围与占据方向诊断](docs/USER_MOLECULE_OCCUPATION_SCOPE_20261007_zh-CN.md)已完成：两生产保存算子的精确谱窗口与六个冻结占据见证均已核验；仅改变冻结F下的占据方向不能通过原正能隙门槛。内部操作性范围已明确，新增F/SCF/容器为0，Compute仍BLOCKED。下一候选为单次算子响应探针，尚未实现、分配预算或执行。
+
 最新 [预算感知与匹配诊断记录工程](docs/USER_MOLECULE_BUDGET_RECORDING_20261007_zh-CN.md)已实现，122项专项模拟测试和三个导出示例通过。新分子F/SCF为0，未接入科学worker、未改门槛，Compute仍BLOCKED。
 
-最新 [V2存量矩阵内部分析](docs/USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md)已确认窄π谱空间中的秩一占据和参考预算返回语义，并澄清能量导数关系。新增F/SCF/容器为0，原门槛及Compute BLOCKED保留；下一工程候选仅为预算感知诊断设计，未实现/执行。
+最新 [V2存量矩阵内部分析](docs/USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md)已确认窄π谱空间中的秩一占据和参考预算返回语义，并澄清能量导数关系。新增F/SCF/容器为0，原门槛及Compute BLOCKED保留；该轮提出的预算记录候选现已另行实现并通过模拟工程验证，真实分子路径未切换。
 
 最新 [V2种子实施与诊断](docs/USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)：239项专项工程测试及零F种子准入通过；一次591F/约4.82分钟诊断完成，生产最终占据/能隙门禁失败，参考最终门禁未完成。原算子与门槛保留，Compute仍BLOCKED；完整CI及旧结果不重跑。
 

@@ -1,14 +1,16 @@
 # 用户分子服务：当前实施文档入口
 
+最新 [原规则服务范围与占据方向诊断](USER_MOLECULE_OCCUPATION_SCOPE_20261007_zh-CN.md)已完成：两生产保存算子的精确谱窗口与六个冻结占据见证均已核验；仅改变冻结F下的占据方向不能通过原正能隙门槛。内部操作性范围已明确，新增F/SCF/容器为0，Compute仍BLOCKED。下一候选为单次算子响应探针，尚未实现、分配预算或执行。
+
 最新 [预算感知与匹配诊断记录工程](USER_MOLECULE_BUDGET_RECORDING_20261007_zh-CN.md)已实现，122项专项模拟测试和三个导出示例通过。新分子F/SCF为0，未接入科学worker、未改门槛，Compute仍BLOCKED。
 
-最新 [V2存量矩阵内部分析](USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md)已确认窄π谱空间中的秩一占据和参考预算返回语义，并澄清能量导数关系。新增F/SCF/容器为0，原门槛及Compute BLOCKED保留；下一工程候选仅为预算感知诊断设计，未实现/执行。
+最新 [V2存量矩阵内部分析](USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md)已确认窄π谱空间中的秩一占据和参考预算返回语义，并澄清能量导数关系。新增F/SCF/容器为0，原门槛及Compute BLOCKED保留；该轮提出的预算记录候选现已另行实现并通过模拟工程验证，真实分子路径未切换。
 
 最新 [V2种子实施与一次诊断](USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)已完成：专项239项PASS、零F种子PASS、数值不合格；Compute关闭。下述以前轮次的未实现/未执行状态属于当时记录。
 
 当前流程：[内部定义与验证](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md)。用户已明确取消外部专家流程，不再延期或等待集中征询；历史外审包和反馈保留。V2内部工程可继续，实际数值/资源门槛和科研解释证据仍须完成，Compute关闭。
 
-[近简并规则与验收候选V2](USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md) 和 [内部核查入口](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 给出仅变初值的明确提案；旧最终门槛保留，修订0.2已采纳材料/静态反馈、补齐求解器准入和UM编号；尚未实现/实测，内部科学证据待完成，不覆盖下方已完成诊断。
+[近简并规则与验收候选V2](USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md) 和 [内部核查入口](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 给出仅变初值的明确提案；旧最终门槛保留，修订0.2已采纳材料/静态反馈、补齐求解器准入和UM编号；后续已实现并执行V2诊断，数值未合格；本段修订0.2是历史材料，不覆盖其后执行记录。
 
 最新 [实时准入与条件初始化诊断](USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.md) 已完成一次实际受限进程：三路径各真实F(D0)一次，初始能隙约1e-14低于原1e-6门槛而拒绝，迭代0。同D0算子/能量/已准备mask子范围PASS；完整T05及合格P12/P13/T06未执行。峰值118.5MiB只覆盖本次准备和初始化，不代表完整迭代容量；生产Compute/科研W07继续BLOCKED。
 
@@ -18,7 +20,7 @@
 
 日期：2026-10-05；W05-W06-NUMERICAL-EVIDENCE-1。独立普通态、完整条件参考桥接、验收及原生资源记账已实现并实测；普通态/同 D 对照通过所列门禁，条件资格/路径等价性/完整参考失败，资源仅覆盖精确夹具流程。Compute 和正式 W07 仍 BLOCKED，研究范围待真实审阅。此前工程/准备记录保留为历史。
 
-操作从 [用户指南](USER_MOLECULE_RUN_zh-CN.md) 开始；最新身份、范围与缺口见 [实时条件诊断](USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.md)。此前 [求解器 v2 实测](USER_MOLECULE_SOLVER_V2_zh-CN.md) 的122项工程测试和单例条件数值失败保留；它与 [数值审查](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md)、[W05 准备](USER_MOLECULE_W05_PREPARATION_zh-CN.md) 和 [W01—W04 交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md) 均为历史批次。
+操作从 [用户指南](USER_MOLECULE_RUN_zh-CN.md) 开始；最新真实计算身份见 [V2诊断](USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)，当前范围与缺口见 [占据范围诊断](USER_MOLECULE_OCCUPATION_SCOPE_20261007_zh-CN.md)。此前 [求解器 v2 实测](USER_MOLECULE_SOLVER_V2_zh-CN.md) 的122项工程测试和单例条件数值失败保留；它与 [数值审查](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md)、[W05 准备](USER_MOLECULE_W05_PREPARATION_zh-CN.md) 和 [W01—W04 交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md) 均为历史批次。
 
 2026-10-06 [W07 三步工程试用](USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 已提供自有输入准备、Check、报告导出与反馈路径；既有乙烯夹具的工程演示保留；真人反馈按用户要求 DEFERRED_BY_USER，未来可选，不阻塞当前工程验收。外部四问咨询已取消，三个问题转为内部工作项；内部方法状态保持未完成，正式 W07/Compute 仍 BLOCKED。
 

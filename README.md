@@ -1,5 +1,7 @@
 # AI4OrgChem Reproducible Runtime
 
+Latest [strict-scope occupation diagnosis](docs/USER_MOLECULE_OCCUPATION_SCOPE_20261007_zh-CN.md) verifies two saved production operators and six frozen occupation witnesses. Changing occupation with the same frozen F cannot satisfy the original positive-gap gate. The existing operational scope is clarified; no new F/SCF/container ran and Compute remains BLOCKED. A single-evaluation response probe is proposed, not implemented, reserved or executed.
+
 Latest [budget-aware recording engineering](docs/USER_MOLECULE_BUDGET_RECORDING_20261007_zh-CN.md): 122 targeted fake-array cases and three persisted synthetic examples passed. No real molecular F/SCF ran. The explicit engineering candidate preserves original gates and is not registered in the scientific worker; Compute remains BLOCKED.
 
 Latest [stored-matrix internal analysis](docs/USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md): the saved boundary contains a two-dimensional narrow π cluster with rank-one occupation; the reference returned its initial seed after a budget guard. Formal energy-derivative relations and recorded sample roles are clarified. No new F/SCF or container run occurred; Compute remains BLOCKED.

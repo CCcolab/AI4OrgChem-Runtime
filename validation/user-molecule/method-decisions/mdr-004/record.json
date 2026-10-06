@@ -1,0 +1,109 @@
+{
+  "id": "MDR-004",
+  "revision": "0.1",
+  "date": "2026-10-07",
+  "status": "EXISTING_STRICT_SCOPE_CLARIFIED_SAVED_ARRAY_DIAGNOSTIC_COMPLETED",
+  "request_source": "DIRECT_USER_MESSAGE",
+  "user_request": "请继续",
+  "author_role": "Codex internal source and saved-array analysis; no external expert process",
+  "parent_decision": {
+    "id": "MDR-003",
+    "revision": "0.1",
+    "path": "../mdr-003/record.json",
+    "sha256": "a9c6b9d5516cb0501523564dcefedc7b4d85cdfb1a250195c57481078c7bce38",
+    "preserved_bytes": true
+  },
+  "source_runtime_commit": "16a85a9e63417955e2ac02c39b9694129dc8e16b",
+  "scope_id": "EXISTING_GLOBAL_CLOSED_SHELL_POSITIVE_GAP_FIXED_POINT",
+  "scope_version": "CLARIFICATION_V1_NO_PROTOCOL_CHANGE",
+  "analysis_record": "../../occupation-scope-20261007.json",
+  "report": "../../../../docs/USER_MOLECULE_OCCUPATION_SCOPE_20261007_zh-CN.md",
+  "analysis_evidence": {
+    "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupation-scope\\frozen-occupation-review.json",
+    "size_bytes": 108510,
+    "sha256": "def1c3618a437fe192888906297379483377906ebb06289565540fb149ca537a"
+  },
+  "scientific_definition_changed": false,
+  "acceptance_thresholds_changed": false,
+  "scientific_protocol_approved": false,
+  "production_activation": false,
+  "external_review_status": "CANCELLED_BY_USER",
+  "external_review_required": false,
+  "current_target": {
+    "state": "Global symmetric PSD rank-N/2 closed-shell 2/0 density in the masked metric",
+    "electron_definition": "Tr(S_tilde D)=N; D S_tilde D=2D",
+    "operator": "True unextrapolated projected conditional F_tilde(D)",
+    "occupation": "Global lowest N/2 generalized eigenvectors of F_tilde with S_tilde; no fragment quotas",
+    "acceptance": {
+      "operator": "True unextrapolated projected conditional F(D_returned)",
+      "commutator_frobenius_max": 1e-05,
+      "electron_count_abs_max": 1e-07,
+      "idempotency_relative_max": 1e-07,
+      "energy_closure_hartree_max": 1e-09,
+      "overlap_and_fock_mask_max_abs": 1e-12,
+      "raw_aufbau_map_relative_max": 2e-08,
+      "raw_aufbau_map_absolute_max": 2e-08,
+      "final_gap_min_hartree": 1e-06,
+      "returned_and_mapped_energy_recheck_hartree_max": 1e-09,
+      "final_near_degenerate_action": "REFUSE_NO_RESEARCH_DELTA",
+      "state_comparison": "Same rank-N/2 occupied projector/density; whole partially-filled cluster agreement insufficient",
+      "comparisons": {
+        "T05_same_density": {
+          "mask_max_abs": 0.0,
+          "matrix_max_abs": 1e-10,
+          "matrix_frobenius": 1e-09,
+          "component_hartree": 1e-09,
+          "total_energy_hartree": 1e-09,
+          "grid_electron_count_abs": 1e-09
+        },
+        "P12_energy_difference_hartree": 1e-10,
+        "P13_density_difference_frobenius": 1e-09,
+        "T06_total_energy_hartree": 1e-08,
+        "T06_component_hartree": 1e-06,
+        "T06_density_frobenius": 1e-06,
+        "T06_fock_frobenius": 1e-06,
+        "acceptance": "All endpoints must individually pass unchanged original AO commutator/count/idempotency/mask/closure/raw-Aufbau/final-gap gates before same-state comparison; trajectories or close energy alone are insufficient.",
+        "raw_integrals_and_XC": "Shared PySCF dependencies; not independently validated by this reference"
+      },
+      "changes_to_final_gate_thresholds": false,
+      "mapped_density_recheck_all_original_endpoint_gates_required": true,
+      "mapped_density_recheck_raw_map_absolute_max": 2e-08
+    },
+    "degenerate_boundary_action": "REFUSE; preserve diagnostics; no research delta",
+    "same_state": "Individually qualified same rank-N/2 occupied projector/density; entire partly filled cluster equality is insufficient"
+  },
+  "internal_scope_decisions": [
+    {
+      "id": "I01",
+      "status": "EXISTING_STRICT_TARGET_AND_REFUSAL_DOMAIN_CLARIFIED",
+      "decision": "The present first service retains the original positive-gap global-Aufbau endpoint target. A near-degenerate boundary remains outside numerical acceptance. No new tie rule, MOM, fractional occupation, fragment charge quota or G solver is adopted.",
+      "empirical_status": "TWO_SAVED_PRODUCTION_ENDPOINTS_UNQUALIFIED; REFERENCE_FINAL_GATE_NOT_EXECUTED",
+      "unknown": "Existence/uniqueness of other roots and their attainable gap"
+    },
+    {
+      "id": "I02",
+      "status": "TECHNICAL_REPORTING_SCOPE_CLARIFIED_PHYSICAL_USES_UNESTABLISHED",
+      "decision": "Report masked, physical-AO and grid electron counts separately. The conditional ledger is masked h/ERI plus original-AO/grid XC, with nuclear energy. A future individually qualified comparison is an operational protocol-defined energy difference; no bond dissociation energy, experimental micro-measurement or physical ground-state claim is granted.",
+      "current_comparison": "UNAVAILABLE; delta_hartree=null; unqualified probes have no energy here"
+    },
+    {
+      "id": "I03",
+      "status": "FIXED_POINT_VERSUS_VARIATIONAL_CLAIMS_SEPARATED",
+      "decision": "F_tilde=Pmask(G). Under the stated fixed-grid XC derivative contract, dE=Tr(G dD). The allowed global occupied-virtual rotations are not constrained by dD=Pmask(dD); small F_tilde commutator alone is not a stationarity or stability proof.",
+      "unknown": "Numerical energy derivatives and stability; no minimum certificate"
+    }
+  ],
+  "symmetry_scope": {
+    "strict_code_guarantee": "Cross-fragment pi-pi entries of h/S/F are zeroed; sigma-pi entries and equality of pi diagonals are not enforced for arbitrary D",
+    "conditional_theorem": "If pi is invariant, the two pi generalized levels are exactly equal, and exactly seven sigma levels lie below them, the occupied/virtual boundary has gap zero on that branch",
+    "saved_array_status": "NUMERICAL_REFLECTION_FINGERPRINTS_AND_EXACT_REPRESENTED_MATRIX_INERTIA; NOT_EXACT_PHYSICAL_SYMMETRY",
+    "all_roots_excluded": false
+  },
+  "frozen_probe_role": "Three AO-anchored rank-one witnesses per production source; not executable seeds, self-consistent roots, energies or qualified endpoints",
+  "next_candidate": "../../occupation-response/proposal-v1.json",
+  "new_scientific_budget": null,
+  "new_scientific_execution": "NOT_EXECUTED",
+  "new_true_F_calls": 0,
+  "scientific_delta": null,
+  "compute_blocked_basis": "Actual old map/gap failures and missing independent final gates; no qualified full-reference endpoint or research/resource service scope. External opinion is not a prerequisite."
+}
