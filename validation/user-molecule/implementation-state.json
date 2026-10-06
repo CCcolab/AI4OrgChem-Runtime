@@ -1,5 +1,5 @@
 {
-  "revision": "LOCAL-CI-W01-W07-20261006",
+  "revision": "RESIDUAL-ARRAY-ENGINEERING-PROTOTYPE-20261006",
   "date": "2026-10-06",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -30,7 +30,8 @@
       "numerical_acceptance": "EXECUTED_FAILED_FROZEN_GATES",
       "ready_to_execute_scf": false,
       "status_record": "validation/user-molecule/solver-v2/review.json",
-      "solver_v2_numerical_acceptance": "EXECUTED_FAILED_CANDIDATE_V2"
+      "solver_v2_numerical_acceptance": "EXECUTED_FAILED_CANDIDATE_V2",
+      "latest_residual_engineering_record": "validation/user-molecule/residual-prototype-20261006.json"
     },
     "W06": {
       "implementation": "ARRAY_REFERENCE_AND_READONLY_ASSESSMENT_IMPLEMENTED",
@@ -47,7 +48,8 @@
       "method_static_review": "COMPLETE; scope responsibility remains PENDING_REAL_REVIEW",
       "latest_complete_local_ci_record": "validation/user-molecule/ci-local-w01-w07-20261006.json",
       "solver_v2_historical_engineering_test_commit": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
-      "historical_w01_w06_engineering_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json"
+      "historical_w01_w06_engineering_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json",
+      "latest_residual_engineering_record": "validation/user-molecule/residual-prototype-20261006.json"
     },
     "W07": {
       "implementation": "LOCAL_ENGINEERING_SOURCE_EVIDENCE_HANDOFF_AND_AGENT_SELFTEST_COMPLETE; research acceptance pending",
@@ -74,7 +76,7 @@
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Scoped W07 engineering handoff and agent-simulated selftest complete. Human trial/feedback is optional future work, deferred by user. Existing scientific definition/numerical/reference/resource/scope gates remain for research Compute; consultation stays deferred until additions are collected. No automatic solver changes, scientific runs, rebuilds or publication.",
+  "next_bounded_task": "Freeze explicit ordinary-D0-to-manifold initialization and independent original-operator callback bridge; then a fresh source/fixture/evaluation/process budget for molecular diagnostic, without resetting v2 or approving research scope.",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -159,5 +161,20 @@
     "new_molecular_scf_grid_full_eri": 0
   },
   "new_scientific_runs_this_w01_w07_ci": 0,
-  "historical_guarded_test_commit_before_w01_w07_ci": "8d05ecf89329f0738a61d0955576bfb430ba11d6"
+  "historical_guarded_test_commit_before_w01_w07_ci": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
+  "latest_residual_engineering_record": "validation/user-molecule/residual-prototype-20261006.json",
+  "residual_engineering_prototype": {
+    "implementation": "PURE_ARRAY_CALLBACK_ENGINE_IMPLEMENTED_NOT_PRODUCTION_INTEGRATED",
+    "validation": "67_TARGETED_UNIQUE_TESTS_PASS;28_NEW",
+    "tested_runtime_commit": "1dbf672bd0f894fbe45a4163acd15fa1f1a9fd74",
+    "molecular_bridge": "NOT_IMPLEMENTED",
+    "ordinary_D0_initialization": "NOT_FROZEN",
+    "molecular_acceptance": "NOT_EXECUTED_FOR_THIS_PROTOTYPE",
+    "production_activation": false,
+    "new_scientific_calls": 0,
+    "old_scientific_failure_status": "UNCHANGED",
+    "array_containers": 2,
+    "supplementary_isolation_probes": 1
+  },
+  "new_scientific_runs_this_residual_prototype": 0
 }

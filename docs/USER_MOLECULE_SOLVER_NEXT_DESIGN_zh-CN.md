@@ -1,5 +1,7 @@
 # 下一版条件求解：设计与验收前置
 
+后续进展（2026-10-06）：用户再次要求继续解决后，[原方程纯数组残差原型](USER_MOLECULE_RESIDUAL_PROTOTYPE_20261006_zh-CN.md) 已隔离实现，28新用例与39必要回归通过。仅工程回调，不连接分子算子或生产CLI；MDR目标/范围与分子策略未获批准。下面DESIGN_ONLY/0预算及旧机器设计是此前批次的冻结说明，不应误读为本轮工程原型未实现；新记录分列，旧科学预算未复用。真人反馈按用户要求延期，不作为本轮工程前置。
+
 2026-10-06。DESIGN_ONLY / NOT_IMPLEMENTED / NOT_EXECUTED。本页将 [存量方法审阅](USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)转成具体实施前置，不启用新求解器或生产 Compute。机器设计见 [solver-next-design.json](../validation/user-molecule/method-review-20261006/solver-next-design.json)。本轮科学执行预算为 0，旧单进程合同已用完，未建立新的科学运行授权。
 
 收到包完整性与推进顺序的审阅反馈后，已建立 [MDR-001 方法决定记录](USER_MOLECULE_METHOD_DECISIONS_001_zh-CN.md)：方法责任人定义用户入口的目标条件态与能量含义，外部计算化学审阅者核对其与实现/验收的相容性，两方意见分别保存。任务限定本项目实际方法、拟新增入口及求解候选，不自动重审原P01—P14。下述求解方案是候选，不预设四问答案；材料完整性通过不等于独立矩阵诊断复现或方法批准。
