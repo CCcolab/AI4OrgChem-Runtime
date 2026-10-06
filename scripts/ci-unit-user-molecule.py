@@ -22,6 +22,7 @@ MINIMAL_PATTERNS = (
     'test_user_molecule_report_export.py',
     'test_user_molecule_residual_budget.py',
     'test_user_molecule_residual_execution_contract.py',
+    'test_user_molecule_residual_seed_execution_contract.py',
 )
 ARRAY_PATTERNS = (
     'test_user_molecule_acceptance_metrics.py',
@@ -32,6 +33,8 @@ ARRAY_PATTERNS = (
     'test_user_molecule_residual_preparation.py',
     'test_user_molecule_residual_integration.py',
     'test_user_molecule_basis_representation.py',
+    'test_user_molecule_seed_v2.py',
+    'test_user_molecule_residual_seed_v2.py',
 )
 
 
