@@ -1,0 +1,199 @@
+{
+  "version": "RESIDUAL-MINIMAL-PREPARATION-DIAGNOSTIC-CANDIDATE-V1",
+  "created_utc": "2026-10-06T11:10:57.964658+00:00",
+  "status": "ENGINEERING_CANDIDATE_SCIENTIFIC_EXECUTION_NOT_EXECUTED",
+  "authorization_basis": "User continuation to complete preparation/mapping, independent reference and accounting engineering; no scientific-method approval or production activation.",
+  "runtime_base_commit": "971e7567d91fa0d7999aefe03d6466e5a893ebe2",
+  "tested_source_commit": "RECORDED_PER_CLEAN_TEST_ATTEMPT",
+  "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "science_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+  "image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+  "fixture": {
+    "id": "ethene-planar-technical-v1",
+    "request_path": "examples/user-molecule/w05-candidates/ethene-planar-technical-v1/request-pilot.json",
+    "normalized_request_sha256": "46a9f72bcf346e3be353d98291d8873a957675329f907ffd8271ca72df61bbab",
+    "xyz_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+    "profile_id": "pilot-b3lypg-sto3g-grid2-v1",
+    "coordinate_unit": "angstrom",
+    "orientation": "fixed xy; no reorientation/reordering",
+    "mapping_coordinate_conversion_guard_angstrom": 1e-12,
+    "nao": 14,
+    "electron_count": 16,
+    "rotation_variables": 48
+  },
+  "ordinary_origin": {
+    "kind": "REUSE_PRIOR_FULL_INDEPENDENT_ORDINARY_REFERENCE",
+    "source_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-solver-v2\\numerical-a1\\pilot-ethene",
+    "record_file": "ordinary-reference.json",
+    "record": {
+      "size_bytes": 11741,
+      "sha256": "b0a9fd8a2487d725668823b75966176e98eb25551f40b9f177b485141ecb9663"
+    },
+    "arrays_file": "ordinary-reference.npz",
+    "arrays": {
+      "size_bytes": 1728678,
+      "sha256": "2a0318c42ee47001e2774ea6b4fec8317b1887c744a2720e71033a75b18f6051"
+    },
+    "common_density_identity": {
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "order": "C",
+      "sha256": "9dc813178f17be82f7c231c7b9d0a0494e8d4bcd2acea05ac2605bf3bf268f8a"
+    },
+    "array_identities": {
+      "density": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "9dc813178f17be82f7c231c7b9d0a0494e8d4bcd2acea05ac2605bf3bf268f8a"
+      },
+      "hcore": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "b626383143be0295b58aee4d7f553398f0df0cb54af8541e0795056525faaa1a"
+      },
+      "overlap": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "957372152a6fab1b90f084598f010f73aa8c09ce5ec3a1c383c6195a23732d78"
+      },
+      "eri": {
+        "shape": [
+          14,
+          14,
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "793d3d8ad2a02c43186c6e038229a4219507058486c1d433dae3a0bb97301ca6"
+      },
+      "grid_coords": {
+        "shape": [
+          43904,
+          3
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "ec697731d0429ecf2bd11defd2fd75414286ba950e8b0afc6aea012890e9aad7"
+      },
+      "grid_weights": {
+        "shape": [
+          43904
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "2b97965e448ea3d57aabfff3b51c2d2f1aa2c27c026444bc21bb608ef6452d68"
+      }
+    },
+    "nuclear_repulsion_hartree": 33.23272494899829,
+    "forbidden_mix": "Do not substitute production common-D0.npy or scalar-only ordinary-tested.json for this complete record/array identity."
+  },
+  "initialization": {
+    "policy": "FIRST_RAW_GLOBAL_AUFBAU_AT_ORDINARY_D0",
+    "initial_gap_minimum_hartree": 1e-06,
+    "near_gap": "ROOT_AMBIGUOUS_INITIALIZATION; no automatic alternate state or retry",
+    "scope": "Versioned engineering candidate admission, not approved scientific state selection; initial gap does not prove final gap."
+  },
+  "paths": [
+    {
+      "id": "production_copy",
+      "eri_mode": "COPY_MASK",
+      "optimize_eri_contractions": true,
+      "callback_slots": 201
+    },
+    {
+      "id": "production_owned",
+      "eri_mode": "INPLACE_OWNED",
+      "optimize_eri_contractions": false,
+      "callback_slots": 201,
+      "resource_scope": "Own work copy plus retained physical copy; not true single-total-tensor mode"
+    },
+    {
+      "id": "independent_reference",
+      "operator": "reference.user_molecule masks/J-K/energy plus original_grid_xc",
+      "solver": "Independent SciPy residual TRF charts; never imports runtime/ai4orgchem solver or gate",
+      "callback_slots": 201
+    }
+  ],
+  "scientific_process_contract_proposal": {
+    "memory_limit_mib": 1024,
+    "threads": 1,
+    "swap_allowed": false,
+    "maximum_scientific_processes": 1,
+    "batch_wall_seconds": 900,
+    "process_wall_seconds": 900,
+    "serial_paths": true,
+    "automatic_retry": false,
+    "candidate_callbacks_per_path": 201,
+    "conditional_callback_slots_total": 603,
+    "conditional_paths": [
+      "production_copy",
+      "production_owned",
+      "independent_reference"
+    ],
+    "ordinary_scf_grid_integrals": "Reuse already-computed full ordinary reference record/NPZ; no repeat preparation calculation. Live cached-engine reconstruction and metadata check inside the same bounded process.",
+    "real_execution_authorization": "NOT_GRANTED_BY_THIS_ENGINEERING_CONTRACT"
+  },
+  "persistent_accounting": {
+    "wall": "Reuse acceptance_resources.Budget; fresh exact batch/path identity; reservation before launch, settlement through stop/output collection/removal; crash keeps full reserved time.",
+    "callback": "New durable ConditionalCallbackBudget; slots charged before evaluator entry, failures/crash charges not refunded; no identity/config reset.",
+    "distinction": "Conservative precharged slots are not actual source-F/XC executions; each bridge/reference separately reports actual attempted evaluations.",
+    "real_scientific_reservation_this_round": "NOT_CREATED"
+  },
+  "comparisons": {
+    "T05_same_density": {
+      "mask_max_abs": 0.0,
+      "matrix_max_abs": 1e-10,
+      "matrix_frobenius": 1e-9,
+      "component_hartree": 1e-9,
+      "total_energy_hartree": 1e-9,
+      "grid_electron_count_abs": 1e-9
+    },
+    "P12_energy_difference_hartree": 1e-10,
+    "P13_density_difference_frobenius": 1e-09,
+    "T06_total_energy_hartree": 1e-08,
+    "T06_component_hartree": 1e-06,
+    "T06_density_frobenius": 1e-06,
+    "T06_fock_frobenius": 1e-06,
+    "acceptance": "All endpoints must individually pass unchanged original AO commutator/count/idempotency/mask/closure/raw-Aufbau/final-gap gates before same-state comparison; trajectories or close energy alone are insufficient.",
+    "raw_integrals_and_XC": "Shared PySCF dependencies; not independently validated by this reference"
+  },
+  "scope_limits": {
+    "production_compute_enabled": false,
+    "research_w07": "BLOCKED",
+    "method_review": "DEFERRED_BY_USER_NOT_APPROVED",
+    "old_v2_failed_results_and_budgets": "PRESERVED_NOT_RESET",
+    "real_user_feedback": "DEFERRED_BY_USER_NOT_CURRENT_ENGINEERING_BLOCKER",
+    "github_actions": "NOT_EXECUTED",
+    "wslc": "BLOCKED_PAUSED_NOT_EXECUTED",
+    "public_push_tag_release": "NOT_AUTHORIZED_NOT_EXECUTED",
+    "image_distribution": "BLOCKED",
+    "legacy_L4_resume": "UNSUPPORTED; checkpoint save supported"
+  },
+  "engineering_execution_this_round": {
+    "kind": "ENGINEERING_FAKE_AND_EXISTING_CACHED_RECORD_METADATA",
+    "new_real_SCF_grid_integrals_XC": 0,
+    "cpu": 1,
+    "memory_limit_mib": 512,
+    "seconds_per_container": 120,
+    "maximum_initial_test_containers": 2,
+    "fresh_engineering_wall_ledger": true,
+    "actual_pinned_engine_cached_metadata_build": "Allowed; source SCF/intor/grid/NR-XC functions forbidden; not a new ordinary calculation"
+  }
+}

@@ -39,7 +39,7 @@ def main():
     # trusting the test names. Imports/metadata remain available; all molecular
     # SCF, grid construction and integral calls below are forbidden.
     from pyscf import gto, scf
-    from pyscf.dft import gen_grid
+    from pyscf.dft import gen_grid, numint
     def forbidden(*_args, **_kwargs):
         raise AssertionError('Molecular SCF/grid/integrals forbidden in W06 engineering tests')
     scf.hf.SCF.kernel = forbidden
@@ -47,9 +47,12 @@ def main():
     gen_grid.Grids.build = forbidden
     gto.Mole.intor = forbidden
     gto.Mole.intor_by_shell = forbidden
+    numint.NumInt.nr_rks = forbidden
+    numint.nr_rks = forbidden
     rows = []
     for pattern in ('test_user_molecule_*.py', 'test_reference_user_molecule.py',
-                    'test_reference_user_molecule_v2.py', 'test_runtime.py'):
+                    'test_reference_user_molecule_v2.py', 'test_reference_residual_candidate.py',
+                    'test_reference_residual_molecule.py', 'test_runtime.py'):
         suite = unittest.defaultTestLoader.discover(str(ROOT/'tests'), pattern=pattern)
         identities = test_ids(suite)
         result = unittest.TextTestRunner(verbosity=2).run(suite)
@@ -92,7 +95,8 @@ def main():
         'unit_test_total':sum(row['tests'] for row in rows),'metadata_check':'PASS; nAO=14',
         'unit_test_ids':[identity for row in rows for identity in row['test_ids']],
         'blocked_compute':'PASS; exit=20; no energies','readonly_report':'PASS; bytes unchanged',
-        'guarded_operations':['SCF.kernel','hf.kernel','Grids.build','Mole.intor','Mole.intor_by_shell'],
+        'guarded_operations':['SCF.kernel','hf.kernel','Grids.build','Mole.intor','Mole.intor_by_shell',
+                              'NumInt.nr_rks','numint.nr_rks'],
         'molecular_scf':'NOT_EXECUTED','molecular_reference':'NOT_EXECUTED',
         'toy_models':'analytical 2/3 AO arrays; not molecules or PySCF integrals',
         'production_compute_enabled':False,'research_scope_approval':'NOT_REVIEWED'})
