@@ -2,6 +2,8 @@
 
 2026-10-06。DESIGN_ONLY / NOT_IMPLEMENTED / NOT_EXECUTED。本页将 [存量方法审阅](USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)转成具体实施前置，不启用新求解器或生产 Compute。机器设计见 [solver-next-design.json](../validation/user-molecule/method-review-20261006/solver-next-design.json)。本轮科学执行预算为 0，旧单进程合同已用完，未建立新的科学运行授权。
 
+收到包完整性与推进顺序的审阅反馈后，已建立 [MDR-001 方法决定记录](USER_MOLECULE_METHOD_DECISIONS_001_zh-CN.md)：方法责任人定义用户入口的目标条件态与能量含义，外部计算化学审阅者核对其与实现/验收的相容性，两方意见分别保存。任务限定本项目实际方法、拟新增入口及求解候选，不自动重审原P01—P14。下述求解方案是候选，不预设四问答案；材料完整性通过不等于独立矩阵诊断复现或方法批准。
+
 ## 1. 推荐推进顺序
 
 1. **先定条件态与解释范围。** 方法责任人回答全局/分块允许变化、预期占据、最终 gap 与可比根的要求，登记身份/职责/日期/理由。原 E/h/S/F/ERI/XC/全局 2/0 与门槛保留；需要改变则另立科学协议。当前签署字段为空。

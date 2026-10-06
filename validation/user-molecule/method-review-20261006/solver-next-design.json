@@ -68,5 +68,7 @@
     "image_distribution": "BLOCKED",
     "public_push": "NOT_AUTHORIZED"
   },
-  "checkpoint_limit": "Legacy L4 saves checkpoints but does not support resume."
+  "checkpoint_limit": "Legacy L4 saves checkpoints but does not support resume.",
+  "method_decision_record": "validation/user-molecule/method-decisions/mdr-001/record.json",
+  "method_role_policy": "Method owner defines target; external reviewer checks consistency; separate findings and disagreements in MDR-001. Legacy blank responsibility object is not a joint approval."
 }

@@ -1,5 +1,5 @@
 {
-  "revision": "METHOD-REVIEW-20261006-1",
+  "revision": "METHOD-DECISION-DRAFT-001",
   "date": "2026-10-06",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -65,7 +65,7 @@
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Real method decisions on global/block occupancy, allowable variations, near-degenerate root policy and interpretation; then separately freeze an unchanged-equation residual-solver implementation/acceptance contract. No new numerical batch activated.",
+  "next_bounded_task": "For the user-molecule conditional SCF protocol only: receive owner target/energy definitions and sourced external consistency findings, preserve differences, resolve goal/gate compatibility, then freeze a compatible solver/contract. No automatic P01-P14 re-review or new numerical batch.",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -91,5 +91,7 @@
   "latest_method_review_record": "validation/user-molecule/method-review-20261006/review.json",
   "latest_solver_design": "validation/user-molecule/method-review-20261006/solver-next-design.json",
   "method_readonly_review": "COMPLETE_STORED_EVIDENCE_AND_ALGEBRA; NOT_REAL_METHOD_APPROVAL",
-  "new_scientific_runs_this_method_review": 0
+  "new_scientific_runs_this_method_review": 0,
+  "latest_method_decision_record": "validation/user-molecule/method-decisions/mdr-001/record.json",
+  "method_decision_status": "PENDING_DEFINITION_AND_CONSISTENCY_REVIEW; separate owner/external roles"
 }

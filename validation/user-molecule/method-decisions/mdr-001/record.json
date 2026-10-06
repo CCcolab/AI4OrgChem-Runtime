@@ -1,0 +1,218 @@
+{
+  "id": "MDR-001",
+  "revision": "0.1",
+  "date": "2026-10-06",
+  "parent_revision": null,
+  "base_runtime_commit": "edd683b07389bb389028f2cb4f67fb688cb8e173",
+  "status": "DRAFT_PENDING_DEFINITION_AND_CONSISTENCY_REVIEW",
+  "scope": {
+    "included": [
+      "Actual inherited conditional SCF protocol as a basis for the new user-molecule entrance",
+      "Applicability to the proposed supported molecules, fragments and geometries",
+      "New solver target, state selection and acceptance consistency"
+    ],
+    "excluded": [
+      "Review of the entire computational chemistry field",
+      "Automatic re-review, rerun or re-certification of all original P01-P14 calculations"
+    ],
+    "scope_basis": "Latest direct user clarification; role opinions need not be identical; preserve disagreements."
+  },
+  "feedback_receipts": [
+    {
+      "path": "review-feedback.md",
+      "sha256": "779e418b08934be52554b63622bcb379c2c90359ee6c3f8e7b2678c4a63eabc3",
+      "source": "USER_PROVIDED_CHAT_REVIEW_TRANSCRIPTION",
+      "reviewer_identity_supplied": false,
+      "reported_package_commit": "edd683b",
+      "reported_package_files": 283,
+      "reported_hashed_payloads": 282,
+      "material_integrity": "USER_REPORTED_PASS",
+      "full_independent_matrix_reproduction": "NOT_COMPLETED_AS_REPORTED",
+      "method_approval": false
+    },
+    {
+      "path": "scope-clarification.md",
+      "sha256": "a837b68c633a2479a2e6a388237cd0bfa28844442e8a0d6fa1eba142b50a879c",
+      "source": "DIRECT_USER_SCOPE_AND_ROLE_CLARIFICATION",
+      "defines_the_four_scientific_answers": false
+    }
+  ],
+  "questions": [
+    {
+      "id": "D01",
+      "question": "条件态定义",
+      "legacy_design_question_ids": [
+        "M01"
+      ],
+      "required_definition_fields": [
+        "density_or_orbital_space",
+        "global_or_fragment_occupations",
+        "electron_count",
+        "fragment_and_geometry_domain",
+        "scientific_constraints"
+      ],
+      "method_owner_definition": null,
+      "method_owner_reasons_and_evidence": null,
+      "external_consistency_assessment": null,
+      "external_reasons_and_evidence": null,
+      "recorded_disagreements": null,
+      "unknowns": null,
+      "implementation_impact": null,
+      "protocol_changes_and_new_version": null,
+      "status": "PENDING_DEFINITION_AND_CONSISTENCY_REVIEW"
+    },
+    {
+      "id": "D02",
+      "question": "近简并选态",
+      "legacy_design_question_ids": [
+        "M03"
+      ],
+      "required_definition_fields": [
+        "sorting_and_tie_rule",
+        "tracking_or_refusal_policy",
+        "accepted_multiple_states",
+        "cross_implementation_projector_comparison"
+      ],
+      "method_owner_definition": null,
+      "method_owner_reasons_and_evidence": null,
+      "external_consistency_assessment": null,
+      "external_reasons_and_evidence": null,
+      "recorded_disagreements": null,
+      "unknowns": null,
+      "implementation_impact": null,
+      "protocol_changes_and_new_version": null,
+      "status": "PENDING_DEFINITION_AND_CONSISTENCY_REVIEW"
+    },
+    {
+      "id": "D03",
+      "question": "允许变化与能量解释",
+      "legacy_design_question_ids": [
+        "M02",
+        "M04"
+      ],
+      "required_definition_fields": [
+        "allowed_variations",
+        "stationarity_or_operational_energy_comparison",
+        "research_interpretation",
+        "unsupported_claims"
+      ],
+      "method_owner_definition": null,
+      "method_owner_reasons_and_evidence": null,
+      "external_consistency_assessment": null,
+      "external_reasons_and_evidence": null,
+      "recorded_disagreements": null,
+      "unknowns": null,
+      "implementation_impact": null,
+      "protocol_changes_and_new_version": null,
+      "status": "PENDING_DEFINITION_AND_CONSISTENCY_REVIEW"
+    },
+    {
+      "id": "D04",
+      "question": "合格目标与门槛相容性",
+      "legacy_design_question_ids": [
+        "M03",
+        "original_gate_contract"
+      ],
+      "required_definition_fields": [
+        "fixed_point_and_occupation_map",
+        "final_projected_non_diis_gap",
+        "necessary_gates_vs_diagnostics",
+        "compatibility_with_D01_D02_D03",
+        "independent_reference_and_T_P_gates"
+      ],
+      "method_owner_definition": null,
+      "method_owner_reasons_and_evidence": null,
+      "external_consistency_assessment": null,
+      "external_reasons_and_evidence": null,
+      "recorded_disagreements": null,
+      "unknowns": null,
+      "implementation_impact": null,
+      "protocol_changes_and_new_version": null,
+      "status": "PENDING_DEFINITION_AND_CONSISTENCY_REVIEW"
+    }
+  ],
+  "roles": {
+    "method_owner": {
+      "responsibility": "Define the desired state, occupancy, allowable variations and meaning of its energy.",
+      "actual_identity_or_stable_reference": null,
+      "date": null,
+      "statement_source": null,
+      "statement": null,
+      "status": "NOT_RECEIVED"
+    },
+    "external_computational_chemistry_reviewer": {
+      "responsibility": "Check compatibility among the defined protocol, implementation, solver target and acceptance.",
+      "actual_identity_or_stable_reference": null,
+      "date": null,
+      "opinion_source": null,
+      "findings": null,
+      "status": "NOT_RECEIVED"
+    }
+  },
+  "disagreement_policy": "Store separate definitions and external findings; do not require identical answers or synthesize agreement; identify which unresolved compatibility issues block which implementation/research exit.",
+  "gap_compatibility": {
+    "status": "UNRESOLVED",
+    "required_assumptions": [
+      {
+        "id": "G01",
+        "condition": "At final self-consistent D*, not merely at initial D0",
+        "established": null
+      },
+      {
+        "id": "G02",
+        "condition": "At final D*, sigma/pi decoupling, zero piA/piB cross blocks in BOTH projected F and masked S, and equal relevant pi operator/metric diagonal blocks.",
+        "established": null,
+        "known_from_original_protocol": "The frozen projection zeroes the cross-pi F/S blocks; terminal sigma/pi decoupling and equal blocks are not established."
+      },
+      {
+        "id": "G03",
+        "condition": "One occupied and one unoccupied level in that pair span the global occupancy boundary",
+        "established": null
+      }
+    ],
+    "conditional_implication": "If G01-G03 hold, this terminal pair has gap=0 and conflicts with the current positive-gap gate.",
+    "initial_window_does_not_prove_terminal_zero_gap": true,
+    "current_observed_final_gap_gate": "PASS_FOR_ALL_THREE_FAILED_V2_ENDPOINTS",
+    "current_observed_failure": "True commutator and raw Aufbau map fail; terminal gap is not the failed gate.",
+    "new_compatibility_decision": null,
+    "new_thresholds": null
+  },
+  "unchanged_baseline": {
+    "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+    "numerical_runtime_commit": "c8a580f70d7dba721758b77c0c534c31b50953b8",
+    "contract_path": "validation/user-molecule/solver-v2/acceptance-contract-v2.json",
+    "contract_sha256": "00e1cb3cb2241e0bb549b8e220e099951e5dc5d54e7aa8c146b1eb5df82559bd",
+    "occupations": "Global restricted closed-shell 2/0",
+    "commutator_max": 1e-05,
+    "raw_aufbau_map_relative_max": 2e-08,
+    "final_projected_non_diis_gap_minimum_hartree": 1e-06,
+    "old_numerical_result": "FAIL_NUMERICAL_GATES",
+    "formal_delta_hartree": null,
+    "changes_to_science_or_thresholds": false
+  },
+  "evidence": {
+    "method_review": "validation/user-molecule/method-review-20261006/review.json",
+    "proposed_solver_design": "validation/user-molecule/method-review-20261006/solver-next-design.json",
+    "prior_review_package_sha256": "b6013f05df06d3988484b2d5b76075ef6888b9fa67af5d7c54bf638a065e8186"
+  },
+  "legacy_P01_P14": {
+    "automatic_re_review": false,
+    "original_records_changed": false,
+    "current_scientific_effect_assessment": "NOT_ASSESSED; no direct invalidation or new general certification",
+    "targeted_impact_trigger": "Specific related issue with code/version/claim and run-level evidence; then separately scope impact analysis, with any rerun requiring a new authorized budget."
+  },
+  "exit_requirements": [
+    "Record actual definitions and sourced external compatibility findings for D01-D04.",
+    "Resolve conflicting target/acceptance criteria before selecting a compatible strategy. Explicitly deferred items retain their affected BLOCKED exits; deferral does not authorize implementation or computation of the unresolved scope.",
+    "Version scientific/protocol/acceptance changes separately; preserve every old failure and budget.",
+    "Freeze new implementation and independent reference only after target definition; existing proposal does not dictate answers.",
+    "Separately complete engineering, numerical, resource and real-user acceptance; method record does not activate production."
+  ],
+  "solver_strategy_selected": false,
+  "new_protocol_id": null,
+  "new_scientific_budget": null,
+  "scientific_process_allowance_this_record": 0,
+  "production_activation": false,
+  "W07": "BLOCKED",
+  "public_push": "NOT_AUTHORIZED"
+}
