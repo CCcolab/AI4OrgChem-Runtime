@@ -1,6 +1,6 @@
 # AI4OrgChem 可复算运行环境
 
-[条件残差工程原型](docs/USER_MOLECULE_RESIDUAL_PROTOTYPE_20261006_zh-CN.md) 已实现，28项新数组用例与39项针对性回归通过；旧分子端点仍失败，新原型未做分子验收、未接入生产Compute。该原型保留原方程与门槛，咨询及真人反馈继续延期；旧完整CI记录不自动包含此增补。
+[条件算子桥与显式初始化](docs/USER_MOLECULE_RESIDUAL_BRIDGE_20261006_zh-CN.md) 已实现，21项新假后端测试与67项相关回归通过，共88项。复用冻结算子与规则，初始化计入共同预算；新真实分子验收未执行，生产Compute仍BLOCKED。此前 [纯数组残差原型](docs/USER_MOLECULE_RESIDUAL_PROTOTYPE_20261006_zh-CN.md) 和旧失败保留，旧完整CI不自动包含这些增补。
 
 本轮 [W01—W07 本地工程 CI](docs/USER_MOLECULE_CI_W01_W07_20261006_zh-CN.md) 已通过176个独立单元用例（284次执行）、启动器10项、平台4项及W07宿主报告9项；18个测试容器按成功删除回执移除，输出保留。新增科学计算为0，科研Compute仍BLOCKED，真人反馈不阻塞当前工程交付。GitHub Actions仍NOT_EXECUTED，来源和平台边界保持分列。
 
@@ -8,7 +8,7 @@
 
 W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 是此前的元数据批次。先前验收驱动84项工程测试和四组完整流程峰值保留；最新 [求解器 v2](docs/USER_MOLECULE_SOLVER_V2_zh-CN.md) 的122项工程测试通过，乙烯 pilot 两条同密度对照通过，但三条条件路径仍失败。实际限额1 GiB、1 CPU、零 swap，资源结论限定精确流程，不构成通用用户计算规模或研究范围批准。
 
-2026-10-06 的既有 [存量方法审阅](docs/USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)定位了初始占据边界的窄谱区间和历史占据跳变，并给出能量—算子关系判据；没有新增分子计算或方法批准。[旧下一版分子求解设计](docs/USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)保留为历史候选；新纯数组工程原型另列，分子桥接和初始化仍未完成/冻结。科研 W07/Compute 保持 BLOCKED。
+2026-10-06 的既有 [存量方法审阅](docs/USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)定位了初始占据边界的窄谱区间和历史占据跳变，并给出能量—算子关系判据；没有新增分子计算或方法批准。[旧下一版分子求解设计](docs/USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)保留为历史候选；残差原型及prepared-data桥分别登记。候选初始化工程规则已明确，科学协议未获批准，真实分子准备、独立参考及新科学预算仍缺。科研 W07/Compute 保持 BLOCKED。
 
 此前 [主机只读 Report 与导出](docs/USER_MOLECULE_REPORT_20261006_zh-CN.md) 增补保护旧运行目录、核对记录字节/身份、区分未执行与数值失败，并保留宿主/容器退出码。其48项标准库测试和11项主机报告集成通过。基础模式核对登记字节并读取历史快照；高级模式检查关键证据并导出派生报告。该增补轮次没有重算、启动新容器或重建镜像。
 

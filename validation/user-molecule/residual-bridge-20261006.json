@@ -1,0 +1,308 @@
+{
+  "id": "RESIDUAL-PREPARED-BRIDGE-ENGINEERING-20261006",
+  "date": "2026-10-06",
+  "status": "PASS_SCOPED_FAKE_BACKEND_BRIDGE_AND_TARGETED_REGRESSIONS",
+  "base_runtime_commit": "19692dff25dc886a6e1c792f62762b5ef9173af4",
+  "tested_runtime_commit": "f95987802edab11c90a659f1b6a4ec32942d4edc",
+  "documentation_commit": "EXTERNAL_FINAL_DELIVERY_AFTER_COMMIT",
+  "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+  "image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+  "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "science_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "module": "runtime/user_molecule/residual_bridge.py",
+  "bridge_implementation": "PREPARED_DATA_BRIDGE_IMPLEMENTED_NOT_PRODUCTION_INTEGRATED",
+  "test_backend": "ENGINEERING_FAKE_NR_RKS; genuine frozen source masks/J-K/F/energy assembly with tiny supplied arrays",
+  "new_bridge_unit_cases": 21,
+  "targeted_regression_cases": 67,
+  "final_unique_unit_cases": 88,
+  "final_failures_errors_skipped": 0,
+  "unit_groups": [
+    {
+      "pattern": "test_user_molecule_residual_bridge.py",
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_ids": [
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_actual_nuclear_mismatch_is_counted_frozen_energy_closure_failure",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_array_identity_mismatch_refuses_before_xc",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_bad_inputs_never_cast_complex_or_bool_to_real",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_bridge_run_cannot_reuse_a_settled_budget",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_contract_identity_mismatches_refuse_before_xc",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_direct_evaluations_cannot_overrun_or_reset_global_budget",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_fifteen_rules_and_scalar_jk_five_energy_in_both_storage_modes",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_first_initialization_does_not_hide_its_budget_cost",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_first_raw_exact_and_near_degenerate_boundaries_refuse",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_first_raw_initialization_is_separately_counted",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_first_raw_initialization_uses_dense_masked_metric",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_grid_changed_before_evaluation_consumes_no_xc_attempt",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_grid_mutation_is_rejected_and_counted",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_huge_finite_initial_density_refuses_before_xc",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_invalid_solver_settings_reject_first_policy_before_xc",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_nuclear_cache_mismatch_refuses_before_xc",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_preserve_policy_rejects_nonprojector_without_xc",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_preserved_projector_uses_three_frozen_evaluations",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_production_profiles_remain_disabled",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_same_density_changed_fock_with_same_energy_is_refused",
+        "test_user_molecule_residual_bridge.PreparedBridgeTests.test_xc_failure_is_counted_once_and_never_retried"
+      ]
+    },
+    {
+      "pattern": "test_user_molecule_residual_candidate.py",
+      "tests": 28,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_ids": [
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_all_actual_callbacks_and_final_rechecks_are_counted",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_analytical_no_qualified_root_is_not_repaired_by_altering_occupations",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_callback_exception_is_recorded_and_counted_without_retry",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_candidate_has_no_molecular_adapter_import_or_compute_activation",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_commuting_excited_projector_fails_true_aufbau_gate",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_constant_nondiagonal_operator_has_closed_form_ground_projector",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_declared_zero_matrix_mask_passes_but_nonzero_fock_mask_refuses",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_density_id_or_operator_provenance_mismatch_is_refused",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_density_identity_is_canonical_and_sensitive_to_actual_bytes",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_energy_ledger_closure_is_required_even_for_exact_aufbau_density",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_evaluator_cannot_mutate_requested_density",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_hard_evaluation_ceiling_never_invokes_callback_after_exhaustion",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_invalid_configuration_is_rejected_before_any_callback",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_iteration_budget_cannot_grant_unqualified_endpoint",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_malformed_true_fock_is_refused_before_qualification",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_nonfinite_boolean_and_missing_energy_fields_are_refused",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_nonmanifold_initial_density_and_bad_metric_are_not_repaired",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_nonzero_masked_overlap_entry_refuses_original_gate",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_original_positive_gap_boundary_is_not_relaxed",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_raw_aufbau_diagnostic_recheck_cannot_change_fock_and_still_pass",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_rejected_backtracks_are_retained_and_counted_before_final_return",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_residual_improvement_does_not_require_reported_energy_descent",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_residual_solves_known_root_with_locally_unstable_picard_map",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_rotation_dimension_limit_is_engineering_only_and_enforced_before_callback",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_same_density_changed_true_operator_is_refused_even_with_constant_energy",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_same_returned_density_energy_must_be_reproducible",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_same_root_in_dense_nonorthogonal_masked_metric",
+        "test_user_molecule_residual_candidate.ResidualCandidateTests.test_zero_gap_stationary_projector_is_refused"
+      ]
+    },
+    {
+      "pattern": "test_user_molecule_solver_candidate.py",
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_ids": [
+        "test_user_molecule_solver_candidate.EndpointTests.test_commuting_excited_determinant_must_fail_raw_aufbau",
+        "test_user_molecule_solver_candidate.EndpointTests.test_gap_ambiguity_and_no_virtual_orbital_are_explicit",
+        "test_user_molecule_solver_candidate.EndpointTests.test_mapped_density_is_relative_and_mo_sign_independent",
+        "test_user_molecule_solver_candidate.EndpointTests.test_metric_positive_and_mask_electron_idempotency_are_required",
+        "test_user_molecule_solver_candidate.EndpointTests.test_nonfinite_or_nonsymmetric_endpoint_never_passes",
+        "test_user_molecule_solver_candidate.EndpointTests.test_small_diis_step_is_not_a_true_endpoint",
+        "test_user_molecule_solver_candidate.EndpointTests.test_thresholds_cannot_be_mutated",
+        "test_user_molecule_solver_candidate.EndpointTests.test_true_stationary_aufbau_endpoint_passes",
+        "test_user_molecule_solver_candidate.IterationTests.test_candidate_energy_change_prevents_lagged_energy_false_stop",
+        "test_user_molecule_solver_candidate.IterationTests.test_cycle_and_evaluation_limits_do_not_fake_convergence",
+        "test_user_molecule_solver_candidate.IterationTests.test_diis_arithmetic_failure_uses_raw_current_and_next_two_cycles",
+        "test_user_molecule_solver_candidate.IterationTests.test_false_plateau_clears_diis_and_next_two_cycles_use_raw_f",
+        "test_user_molecule_solver_candidate.IterationTests.test_final_energy_recheck_rejects_stateful_evaluator",
+        "test_user_molecule_solver_candidate.IterationTests.test_invalid_or_relaxed_settings_are_rejected",
+        "test_user_molecule_solver_candidate.IterationTests.test_nonfinite_evaluation_is_explicit_and_unqualified",
+        "test_user_molecule_solver_candidate.IterationTests.test_progress_and_occupied_subspace_changes_are_recorded",
+        "test_user_molecule_solver_candidate.IterationTests.test_true_endpoint_needs_energy_history_and_final_recheck"
+      ]
+    },
+    {
+      "pattern": "test_reference_user_molecule_v2.py",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_ids": [
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_analytical_qualified_endpoint_and_v1_compatible_arrays",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_api_rejects_more_cycles_or_relaxed_scientific_thresholds",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_arithmetically_unusable_diis_is_rejected_then_two_raw_cycles",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_current_to_candidate_energy_change_uses_existing_tolerance",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_degenerate_and_no_virtual_spectra_are_not_comparable",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_false_diis_plateau_cannot_claim_convergence",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_final_recheck_rejects_nonreproducible_energy_callback",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_invalid_settings_and_progress_callback_rejected",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_linear_algebra_failure_does_not_itself_qualify_or_hide_errors",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_maximum_cycles_does_not_override_qualification_or_legacy_step",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_non_aufbau_stationary_density_is_not_a_qualified_endpoint",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_nonfinite_and_bad_metric_are_rejected_without_repair",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_nonorthogonal_returned_state_uses_masked_metric",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_reference_v2_has_no_production_import_and_keeps_v1_untouched",
+        "test_reference_user_molecule_v2.ReferenceV2Tests.test_unqualified_plateau_schedules_two_raw_cycles"
+      ]
+    },
+    {
+      "pattern": "test_user_molecule_contracts.py",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_ids": [
+        "test_user_molecule_contracts.W05PreparationContractTests.test_frozen_source_materials_and_rule_identity_match",
+        "test_user_molecule_contracts.W05PreparationContractTests.test_geometry_and_request_bytes_match_review_receipts",
+        "test_user_molecule_contracts.W05PreparationContractTests.test_groups_cover_carbon_exactly_and_electron_count_is_consistent",
+        "test_user_molecule_contracts.W05PreparationContractTests.test_missing_acceptance_decisions_do_not_become_compute_permission",
+        "test_user_molecule_contracts.W05PreparationContractTests.test_no_process_peak_or_compute_size_is_inferred_from_eri_lower_bounds",
+        "test_user_molecule_contracts.W05PreparationContractTests.test_proposed_batch_fits_registered_cumulative_ceiling",
+        "test_user_molecule_contracts.W05PreparationContractTests.test_raw_snapshots_and_actual_image_profile_identity_remain_distinct"
+      ]
+    }
+  ],
+  "dependencies": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "pyscf": "2.14.0"
+  },
+  "first_attempt_passed": true,
+  "full_w01_w07_ci_rerun": false,
+  "previous_complete_ci_record": "validation/user-molecule/ci-local-w01-w07-20261006.json",
+  "initialization_contract": {
+    "version": "ENGINEERING_BRIDGE_V1_NOT_APPROVED_SCIENTIFIC_PROTOCOL",
+    "policy_must_be_explicit": true,
+    "preserve": "Require existing masked-metric 2/0 projector; reject before F, no projection",
+    "first_raw": "One F(D0) at ordinary D0, generalized global Aufbau in exact masked S; derive D1, save D0/D1/spectrum identities and metrics",
+    "first_raw_admission_gap_minimum_hartree": 1e-06,
+    "near_degeneracy_action": "ROOT_AMBIGUOUS_INITIALIZATION; no MOM/fractions/fragment occupations/shifts/regularization/random perturbation",
+    "initial_gap_proves_final_gap_or_root_compatibility": false
+  },
+  "evaluation_budget": {
+    "global_maximum": 201,
+    "initialization_included": true,
+    "solver_receives_remaining": true,
+    "failed_source_attempts_count": true,
+    "before_source_identity_failure_has_no_source_attempt": true,
+    "run_and_post_settlement_evaluate_reuse_refused": true,
+    "scientific_process_budget": "NOT_FROZEN_NOT_AUTHORIZED_NOT_EXECUTED; this object ledger is not a durable wall/memory reservation"
+  },
+  "eri_modes": [
+    "COPY_MASK",
+    "INPLACE_OWNED"
+  ],
+  "inplace_memory_limitation": "Own masked work-copy; retains physical tensor copy, not true single-total-tensor resource implementation or calibration",
+  "operator": "Frozen P09 _evaluate_density; no automatic integral/grid/ordinary-SCF preparation; raw total energy preserved, cached nuclear scalar checked, existing closure retained",
+  "identity_limit": "Local byte/hash and environment binding, not authenticity/method approval; Check/schema and request-coordinate-to-mean_field mapping remain caller obligations",
+  "real_prepared_molecular_branch": "STATIC_REVIEW_ONLY_NOT_EXECUTED_OR_MOLECULARLY_ACCEPTED",
+  "independent_new_residual_molecular_reference": "NOT_IMPLEMENTED_NOT_EXECUTED; existing v2 reference is implemented and executed failed",
+  "real_molecular_scf_grid_integrals_XC_calls": 0,
+  "molecular_acceptance": "NOT_EXECUTED_FOR_NEW_BRIDGE",
+  "prior_molecular_acceptance": "OLD_EXECUTED_FAILED_FROZEN_GATES_PRESERVED",
+  "production_activation": false,
+  "compute_enabled": false,
+  "research_w07": "BLOCKED",
+  "method_review": "DEFERRED_BY_USER_NOT_APPROVED",
+  "real_user_feedback": "DEFERRED_BY_USER_NOT_CURRENT_ENGINEERING_BLOCKER",
+  "comparison_available": false,
+  "delta_hartree": null,
+  "delta_kcal_mol": null,
+  "resource_generalization": "NOT_ACCEPTED; toy elapsed time is not a molecular performance estimate",
+  "containers": {
+    "total": 1,
+    "all_removed": true,
+    "uid": 10001,
+    "cpu_limit": 1,
+    "memory_limit_mib": 512,
+    "swap_limit_mib": 512,
+    "wall_limit_seconds": 120,
+    "observed_elapsed_seconds": 53.953000000008615,
+    "exit_code": 0,
+    "network": "none",
+    "rootfs_readonly": true,
+    "source_mounts_readonly_actual_probe_pass": true,
+    "writable_output_independent_leaf": true,
+    "outputs_retained_after_removal": true
+  },
+  "image_builds": 0,
+  "github_actions": "NOT_EXECUTED",
+  "wslc": "BLOCKED_PAUSED_NOT_EXECUTED",
+  "image_distribution": "BLOCKED",
+  "public_push_tag_release": "NOT_AUTHORIZED_NOT_EXECUTED",
+  "colab": "DEFERRED",
+  "legacy_L4_resume": "UNSUPPORTED; checkpoint save supported",
+  "preservation": {
+    "status": "PASS_SCOPED_EXISTING_PRODUCT_SCIENCE_OLD_FAILURE_AND_PRIOR_DELIVERIES",
+    "protected_existing_product_files": 40,
+    "science_source_files": 591,
+    "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+    "old_failed_run_files": 32,
+    "prior_registered_delivery_files": {
+      "20261006-user-molecule-ci-w01-w07": 537,
+      "20261006-user-molecule-residual-prototype": 560
+    },
+    "source_export": {
+      "status": "PASS_EVERY_SOURCE_EXPORT_MEMBER",
+      "runtime_test_commit": "f95987802edab11c90a659f1b6a4ec32942d4edc",
+      "total": 259,
+      "exact_git_blob": 242,
+      "verified_ps1_lf_crlf": 17
+    },
+    "scientific_source_rule_profile_threshold_changes": false,
+    "old_contracts_or_budgets_reset": false,
+    "unregistered_historical_bytes": "UNVERIFIED_NOT_NEWLY_CERTIFIED"
+  },
+  "evidence_root": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-residual-bridge",
+  "evidence_files": {
+    "BRIDGE_ENGINEERING_CONTRACT.json": {
+      "size_bytes": 14046,
+      "sha256": "ea056954c4328d631a74d07f1e68c4c635fae854a32d798c1360ec0bf429254e"
+    },
+    "bridge-worker-v1.py": {
+      "size_bytes": 4989,
+      "sha256": "2254d6553c970118fe74d2bb07faa6b4b4cdf83226180a27abbab63ebeffd6e5"
+    },
+    "run-bridge-engineering-v1.py": {
+      "size_bytes": 6389,
+      "sha256": "7087fe7a7ca5bbd7a080679a9d98d1b4b15b4241a3f11ba7a46b9b16ceeec4bc"
+    },
+    "attempt-1/EXECUTION.json": {
+      "size_bytes": 2276,
+      "sha256": "46570bd56c18aad745379e48594db5e8c2ac1aded52847ddca165d0975fcb98b"
+    },
+    "attempt-1/SOURCE_IDENTITY.json": {
+      "size_bytes": 744,
+      "sha256": "1dd6b4650ddabcf51ef0b60bb8e04207f675993649d03ce63c1b1b2a06b56308"
+    },
+    "attempt-1/SOURCE_EXPORT_VERIFIED.json": {
+      "size_bytes": 80410,
+      "sha256": "b9eb6cfb47f85dc29c21039b07960d0333d72daf6592e3df3fbc596ed00f6f2c"
+    },
+    "attempt-1/image-inspect.json": {
+      "size_bytes": 3626,
+      "sha256": "df284b98b03357cdecf5532a02f499cf3f529d90824fb535d47a5de409b73008"
+    },
+    "attempt-1/docker-server.json": {
+      "size_bytes": 1280,
+      "sha256": "239516d679311963484fd23e3e84cd84d4c672b63069b6dafc2c863a3bbd47de"
+    },
+    "attempt-1/container-inspect.json": {
+      "size_bytes": 8614,
+      "sha256": "2513fa1d1aacd0b118071df50c1c92aec9929a24cbdcfba2a06326cef389f2e3"
+    },
+    "attempt-1/output/UNIT_TEST_RESULTS.json": {
+      "size_bytes": 12515,
+      "sha256": "e500e9a261eca535813e322585e12d8f3a15bc19537121796fdca06ac0ffd039"
+    },
+    "attempt-1/output/SOURCE_READONLY_PROBE.json": {
+      "size_bytes": 756,
+      "sha256": "64f399266bf7a0c7ae037b843669b78404cea3352b4645dc1984b33361088d4d"
+    },
+    "attempt-1/output/CI_CLASSIFICATION_STATIC.json": {
+      "size_bytes": 836,
+      "sha256": "8f77a23ce0c57f607d8cfa7d03999ee278e1bf725db1f3192faff1aaf16192b1"
+    },
+    "attempt-1/stdout.log": {
+      "size_bytes": 98,
+      "sha256": "ca60d0deb7c424ed6bef89b0b8744ac97987aae164537d138d7dc0be8a1ddd09"
+    },
+    "attempt-1/stderr.log": {
+      "size_bytes": 16405,
+      "sha256": "1feb72dd5e9bcd2a9c7a08b92d51808bd7932770c50ada53434c2ca0cc466161"
+    },
+    "PRESERVATION_AFTER_BRIDGE_TESTS.json": {
+      "size_bytes": 793,
+      "sha256": "ebbbc23a12225a8ea3075c4902cbc35688a5a381c3f150d32691ab908b0a8064"
+    }
+  }
+}

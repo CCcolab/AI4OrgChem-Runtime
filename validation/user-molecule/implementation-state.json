@@ -1,5 +1,5 @@
 {
-  "revision": "RESIDUAL-ARRAY-ENGINEERING-PROTOTYPE-20261006",
+  "revision": "RESIDUAL-PREPARED-BRIDGE-ENGINEERING-20261006",
   "date": "2026-10-06",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -31,7 +31,7 @@
       "ready_to_execute_scf": false,
       "status_record": "validation/user-molecule/solver-v2/review.json",
       "solver_v2_numerical_acceptance": "EXECUTED_FAILED_CANDIDATE_V2",
-      "latest_residual_engineering_record": "validation/user-molecule/residual-prototype-20261006.json"
+      "latest_residual_engineering_record": "validation/user-molecule/residual-bridge-20261006.json"
     },
     "W06": {
       "implementation": "ARRAY_REFERENCE_AND_READONLY_ASSESSMENT_IMPLEMENTED",
@@ -49,7 +49,7 @@
       "latest_complete_local_ci_record": "validation/user-molecule/ci-local-w01-w07-20261006.json",
       "solver_v2_historical_engineering_test_commit": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
       "historical_w01_w06_engineering_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json",
-      "latest_residual_engineering_record": "validation/user-molecule/residual-prototype-20261006.json"
+      "latest_residual_engineering_record": "validation/user-molecule/residual-bridge-20261006.json"
     },
     "W07": {
       "implementation": "LOCAL_ENGINEERING_SOURCE_EVIDENCE_HANDOFF_AND_AGENT_SELFTEST_COMPLETE; research acceptance pending",
@@ -76,7 +76,7 @@
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Freeze explicit ordinary-D0-to-manifold initialization and independent original-operator callback bridge; then a fresh source/fixture/evaluation/process budget for molecular diagnostic, without resetting v2 or approving research scope.",
+  "next_bounded_task": "Prepare a fresh exact minimal molecular diagnostic contract: checked request/geometry-to-engine mapping, frozen preparation arrays/grid, explicit engineering initialization, genuinely independent residual reference and durable evaluation/process/time/memory budget; do not reuse v2 allowance or claim method approval. Actual molecular execution is not authorized by the fake-backend test record.",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -162,13 +162,13 @@
   },
   "new_scientific_runs_this_w01_w07_ci": 0,
   "historical_guarded_test_commit_before_w01_w07_ci": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
-  "latest_residual_engineering_record": "validation/user-molecule/residual-prototype-20261006.json",
+  "latest_residual_engineering_record": "validation/user-molecule/residual-bridge-20261006.json",
   "residual_engineering_prototype": {
     "implementation": "PURE_ARRAY_CALLBACK_ENGINE_IMPLEMENTED_NOT_PRODUCTION_INTEGRATED",
     "validation": "67_TARGETED_UNIQUE_TESTS_PASS;28_NEW",
     "tested_runtime_commit": "1dbf672bd0f894fbe45a4163acd15fa1f1a9fd74",
-    "molecular_bridge": "NOT_IMPLEMENTED",
-    "ordinary_D0_initialization": "NOT_FROZEN",
+    "molecular_bridge": "SUBSEQUENT_PREPARED_DATA_BRIDGE_IMPLEMENTED_FAKE_TESTED; see latest_residual_engineering_record",
+    "ordinary_D0_initialization": "SUBSEQUENT_ENGINEERING_POLICIES_IMPLEMENTED_NOT_SCIENTIFICALLY_APPROVED",
     "molecular_acceptance": "NOT_EXECUTED_FOR_THIS_PROTOTYPE",
     "production_activation": false,
     "new_scientific_calls": 0,
@@ -176,5 +176,28 @@
     "array_containers": 2,
     "supplementary_isolation_probes": 1
   },
-  "new_scientific_runs_this_residual_prototype": 0
+  "new_scientific_runs_this_residual_prototype": 0,
+  "residual_prepared_bridge": {
+    "implementation": "PREPARED_DATA_BRIDGE_IMPLEMENTED_NOT_PRODUCTION_INTEGRATED",
+    "validation": "88_UNIQUE_TARGETED_TESTS_PASS;21_NEW_FAKE_BACKEND",
+    "tested_runtime_commit": "f95987802edab11c90a659f1b6a4ec32942d4edc",
+    "record": "validation/user-molecule/residual-bridge-20261006.json",
+    "initialization": "EXPLICIT_ENGINEERING_V1_PRESERVE_OR_FIRST_RAW_GLOBAL_AUFBAU; NOT_APPROVED_SCIENTIFIC_PROTOCOL",
+    "first_raw_initial_gap_guard_hartree": 1e-6,
+    "object_global_callback_limit": 201,
+    "new_scientific_process_budget": "NOT_FROZEN_NOT_AUTHORIZED_NOT_EXECUTED",
+    "real_molecular_preparation": "NOT_EXECUTED",
+    "molecular_acceptance": "NOT_EXECUTED_FOR_NEW_BRIDGE",
+    "independent_new_residual_molecular_reference": "NOT_IMPLEMENTED_NOT_EXECUTED; existing v2 reference remains EXECUTED_FAILED",
+    "request_to_engine_mapping": "NOT_FULLY_VERIFIED_BY_BRIDGE; upstream Check and new preparation contract required",
+    "inplace_mode": "OWNED_WORK_COPY_NOT_TRUE_SINGLE_TOTAL_TENSOR_RESOURCE_IMPLEMENTATION",
+    "production_activation": false,
+    "comparison_available": false,
+    "delta_hartree": null,
+    "new_real_scientific_calls": 0,
+    "new_test_containers": 1,
+    "all_test_containers_removed": true,
+    "old_scientific_failures_and_budgets": "PRESERVED_NOT_RESET"
+  },
+  "new_scientific_runs_this_residual_bridge": 0
 }

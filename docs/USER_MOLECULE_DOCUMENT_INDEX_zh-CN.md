@@ -1,6 +1,6 @@
 # 用户分子服务：当前实施文档入口
 
-最新 [残差工程原型](USER_MOLECULE_RESIDUAL_PROTOTYPE_20261006_zh-CN.md) 已实现并通过28新数组用例+39针对回归；没有新分子计算/科学批准，分子桥接与初始化仍待完成，生产Compute保持BLOCKED。旧完整CI及v2失败原记录保留。
+最新 [条件算子桥与显式初始化](USER_MOLECULE_RESIDUAL_BRIDGE_20261006_zh-CN.md) 已实现并通过21项假后端测试+67项相关回归，共88项；没有新分子计算/科学批准。候选工程初始化已登记，真实分子准备、独立参考和新科学预算仍待完成，生产Compute保持BLOCKED。此前 [残差工程原型](USER_MOLECULE_RESIDUAL_PROTOTYPE_20261006_zh-CN.md)、旧完整CI及v2失败原记录保留。
 
 最新 [W01—W07 本地CI](USER_MOLECULE_CI_W01_W07_20261006_zh-CN.md) 已执行并通过工程范围：176个独立用例/284执行、10启动器、4平台、9宿主报告；0新分子计算。远端CI仍NOT_EXECUTED，科研Compute仍BLOCKED，真人反馈延期不阻塞当前工程。旧批次记录保留。
 
@@ -14,7 +14,7 @@
 
 W07 源码与存量证据候选已补齐新服务支持/来源/备份范围；两类样例搬移及 Git 源码重建后的只读报告通过，591 个科学源码文件匹配来源锁。实际条目见 [交付登记](../validation/user-molecule/w07-delivery-20261006.json)；包不含镜像或依赖，不代表完整环境恢复或 r3 许可分发审查闭合。
 
-2026-10-06 的既有增补为 [存量方法审阅](USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)与 [旧下一版分子求解设计](USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)：只读定位保存初始谱的8/9占据边界、占据跳变与能量—算子判据；新增科学进程为0。旧设计保留为历史候选，新纯数组工程原型另列；方法责任审阅未签署，分子桥接/初始化未完成或冻结，科研 Compute/W07 仍BLOCKED。
+2026-10-06 的既有增补为 [存量方法审阅](USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)与 [旧下一版分子求解设计](USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)：只读定位保存初始谱的8/9占据边界、占据跳变与能量—算子判据；新增科学进程为0。旧设计保留为历史候选，残差原型与prepared-data桥另列；方法责任审阅未签署，候选工程规则不构成科学协议冻结或分子资格，科研 Compute/W07 仍BLOCKED。
 
 [W01—W05 本地 CI](USER_MOLECULE_CI_20261005_zh-CN.md) 已通过历史工程/合同检查；GitHub Actions 仍 NOT_EXECUTED，新分子数值验收已执行但失败。本页和 implementation-state 的 ci_execution 指远端 Actions，本地执行另行登记。
 
@@ -34,7 +34,8 @@ W07 源码与存量证据候选已补齐新服务支持/来源/备份范围；�
 | [求解器 v2 实测及前置条件](USER_MOLECULE_SOLVER_V2_zh-CN.md) | 严格真实端态停止、两个同 D 收缩路径、122 项工程 PASS 和唯一分子 FAIL；当前记录 |
 | [SCF/研究范围审阅入口](USER_MOLECULE_SCF_REVIEW_REQUEST_zh-CN.md) | 依据原始失败提出具体科学审阅问题，不代签批准 |
 | [存量方法审阅（2026-10-06）](USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md) | 精确保存谱定位、100周期历史、允许变化/导数判据；0新增科学计算 |
-| [下一版求解与验收前置](USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md) | 旧分子策略为历史设计候选；已实现的纯数组原型与尚缺分子桥接/初始化分别登记 |
+| [下一版求解与验收前置](USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md) | 旧分子策略为历史设计候选；后续残差原型和prepared-data桥另列 |
+| [条件算子桥与显式初始化](USER_MOLECULE_RESIDUAL_BRIDGE_20261006_zh-CN.md) | 21项假后端+67项回归，工程初始化/预算/身份；真实分子验收未执行 |
 | [MDR-001 方法决定记录](USER_MOLECULE_METHOD_DECISIONS_001_zh-CN.md) | 入口四问：方法责任人定义、外部一致性核查及分歧；DRAFT/PENDING，不自动批准或重审P01—P14 |
 | [主机 Report 与导出](USER_MOLECULE_REPORT_20261006_zh-CN.md) | 等待方法决定期间的只读工程增补：完整性、历史失败/宿主终态、身份、仅新目录导出；不启动计算 |
 | [W07 三步工程试用](USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) | 自有输入准备、Check、报告导出与反馈；现有夹具工程演示通过，正式科研验收仍 BLOCKED |
