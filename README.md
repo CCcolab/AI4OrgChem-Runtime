@@ -6,6 +6,8 @@ Isolated branch update (2026-10-05): Check and Report work; production Compute r
 
 The 2026-10-06 [stored-evidence method review](docs/USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md) locates a narrow initial occupied-boundary spectrum, documents occupied-projector jumps and states the energy/operator stationarity criterion. No new molecular calculation or method approval is claimed. The [next solver design](docs/USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md) is DESIGN_ONLY; W07/Compute remains BLOCKED.
 
+While method decisions are pending, [host-only reporting and export](docs/USER_MOLECULE_REPORT_20261006_zh-CN.md) preserve existing runs, verify saved bytes/identities and distinguish numerical failure from non-execution and host failure. The scoped 48 standard-library tests and eleven host report integrations passed. Basic mode verifies registered bytes and reads saved snapshots; advanced mode checks required evidence and exports derived reports. No molecular calculation, container or image build was started; Compute/W07 remains blocked.
+
 [Local W01–W05 engineering/contract CI](docs/USER_MOLECULE_CI_20261005_zh-CN.md) passed 38 unit tests, 10 integration actions and four platform probes. GitHub Actions remains **NOT_EXECUTED**; W05 numerical acceptance remains blocked.
 
 The earlier [full local W01–W06 engineering CI](docs/USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md) passed 63 unique unit cases (102 executions), 10 Windows integration actions, three W06 service actions, four platform probes and seven PowerShell checks. It remains separate from the new numerical failures. GitHub Actions is NOT_EXECUTED; WSLc is BLOCKED/paused.

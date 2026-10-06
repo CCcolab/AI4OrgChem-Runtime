@@ -1,0 +1,186 @@
+{
+  "id": "HOST-REPORT-ENGINEERING-20261006",
+  "date": "2026-10-06",
+  "status": "PASS_SCOPED_HOST_REPORT_ENGINEERING_ONLY",
+  "authorization": "Direct user authorization to continue independent work while scientific definitions and external consistency opinions are pending.",
+  "runtime_code_commit": "ed4a7718e814aaef1f7329555897f0cf0c0455a6",
+  "base_commit": "822a09d0d49dd21180a7e4e22dd5a56c8171088d",
+  "code_files": {
+    "runtime/user_molecule/__main__.py": {
+      "sha256": "e5ba2835a1354a8d999d2b94f0e6f9c16292334d73d88d7eafd1ff5cd15c7583",
+      "git_blob": "e27d78a9198f9efa087089a1c54373010670740f",
+      "git_blob_sha256": "e5ba2835a1354a8d999d2b94f0e6f9c16292334d73d88d7eafd1ff5cd15c7583"
+    },
+    "runtime/user_molecule/records.py": {
+      "sha256": "de5e1a364b80e666e2526322fab895d5622919f97987baf956f103e701276c7f",
+      "git_blob": "ac4701fdbd5d0dee19993df69668ab56e399bc00",
+      "git_blob_sha256": "de5e1a364b80e666e2526322fab895d5622919f97987baf956f103e701276c7f"
+    },
+    "runtime/user_molecule/evidence.py": {
+      "sha256": "5ca01a72e14bf5dc4bd2febe89d9ca0545dd7fb99f3dba554158fce69d9e0dfe",
+      "git_blob": "fd9c2951c19d9bf797b38e70f3ff33dedf7168de",
+      "git_blob_sha256": "5ca01a72e14bf5dc4bd2febe89d9ca0545dd7fb99f3dba554158fce69d9e0dfe"
+    },
+    "scripts/run-user-molecule.ps1": {
+      "sha256": "472d48d969c58aa2d6451a0ce3d3c3722e82714f9ac5255c7ff42b21c8944371",
+      "git_blob": "407f4a3f7a925e2dcb1801debb33d1be8c0c468d",
+      "git_blob_sha256": "472d48d969c58aa2d6451a0ce3d3c3722e82714f9ac5255c7ff42b21c8944371"
+    },
+    "scripts/start-user-molecule.ps1": {
+      "sha256": "2d91690ae4e39c80888bfd4df6dc7794bb8879288457e3034f3bc499339deba7",
+      "git_blob": "3911cc54ac13727e36ef34b998f174c92592b918",
+      "git_blob_sha256": "112b048eba4fef854a846f4b169cfccab8f6ebf6f4fc9b228a3d2503605df059"
+    },
+    "scripts/read-user-molecule-report.ps1": {
+      "sha256": "4bcb2228fd9c3e92434d73e3c335c4ef04112675c5b0a506b4dc67b1b950d706",
+      "git_blob": "29b33f1fc6b141e288618a38ec2230e887917a2e",
+      "git_blob_sha256": "4bcb2228fd9c3e92434d73e3c335c4ef04112675c5b0a506b4dc67b1b950d706"
+    },
+    "scripts/report-user-molecule.py": {
+      "sha256": "5a6b75f36689178f7aa39ff1fd5bc0c215a42c773563b1142934bee4ad8f21ec",
+      "git_blob": "8087b027b758348167261963641eed2ce2b75f91",
+      "git_blob_sha256": "5a6b75f36689178f7aa39ff1fd5bc0c215a42c773563b1142934bee4ad8f21ec"
+    },
+    "scripts/test-user-molecule-host-failure.ps1": {
+      "sha256": "20f783c9c6420d3834171ef3a4379cc19eba6ecb77ef7943295566e83a4d8966",
+      "git_blob": "88fab52442235615ddb32fedf856b4e1453fb475",
+      "git_blob_sha256": "b9ce441ef7750fcf61fd25fa510ba28537d2187a838b2372057d56e0002f589f"
+    },
+    "scripts/test-user-molecule-launcher.ps1": {
+      "sha256": "a2131cdfe9294658920e9ef97727c999aa46069410bf1191b9e001f367465617",
+      "git_blob": "16de467e5a4b5c4cd78e21eaf226a32e0f57f492",
+      "git_blob_sha256": "8938241e7b0604e1fefeda0ef6561fce376cad533796ac3e71c16a7266bc8d68"
+    },
+    "tests/test_user_molecule_evidence.py": {
+      "sha256": "3c9a57774528b34390e4e511ac513db98c25f79b40b1675664151b3031a99e51",
+      "git_blob": "9685b05fb8029fe1b9a854384d8da07ffa079db3",
+      "git_blob_sha256": "3c9a57774528b34390e4e511ac513db98c25f79b40b1675664151b3031a99e51"
+    },
+    "tests/test_user_molecule_report_export.py": {
+      "sha256": "1793a8acc7cf867de9c051d7148cc16ead4e683dd950b12da9d26c05e7bba86b",
+      "git_blob": "0804a4fa3a1e87aaa4b02be8260f4b474a0245d8",
+      "git_blob_sha256": "1793a8acc7cf867de9c051d7148cc16ead4e683dd950b12da9d26c05e7bba86b"
+    },
+    "tests/test_user_molecule_run_preservation.py": {
+      "sha256": "6fb62d2747d75dc362fa8947419728874eab4ca827e4ee85bea7b6a138d3c850",
+      "git_blob": "fe61c4e163beed549d3bd7ac426833946ee72801",
+      "git_blob_sha256": "6fb62d2747d75dc362fa8947419728874eab4ca827e4ee85bea7b6a138d3c850"
+    },
+    "runtime/user_molecule/research.py": {
+      "sha256": "3651215f0e5cee9079f0a08e06e61f22178c1c8bae60bdf2bc9a50804334be92",
+      "git_blob": "67f99d392ecff227c2c5ecccae0269b1b0be9697",
+      "git_blob_sha256": "3651215f0e5cee9079f0a08e06e61f22178c1c8bae60bdf2bc9a50804334be92"
+    },
+    "runtime/user_molecule/input.py": {
+      "sha256": "17621c47db2c949eca88720deec7959e9e6c5657ffba70d8ceafa092ae63580e",
+      "git_blob": "268cf4f44d77f75231c2a02f788e0c14037ee098",
+      "git_blob_sha256": "17621c47db2c949eca88720deec7959e9e6c5657ffba70d8ceafa092ae63580e"
+    }
+  },
+  "previous_test_commit": "472714a08c8e9d807e57e78db1471294d376bee2",
+  "previous_unit_tests": 47,
+  "previous_host_integrations": 9,
+  "earlier_receipts_and_failed_attempts_preserved": true,
+  "unit_tests": {
+    "status": "PASS",
+    "tests": 48,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "science_import_guard": true,
+    "new_scientific_processes": 0,
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "runtime_code_commit": "ed4a7718e814aaef1f7329555897f0cf0c0455a6"
+  },
+  "host_report_integrations": 11,
+  "launcher_cases": {
+    "initial_stub_cases": 16,
+    "final_new_parameter_stub_cases": 2,
+    "platforms": [
+      "Windows PowerShell 5.1",
+      "PowerShell 7"
+    ],
+    "scope": "CONTROLLED_CHILD_PROCESS_STUBS_ONLY"
+  },
+  "host_collection_failure": "SIMULATED_ENGINE_BOUNDARY_ONLY; records retained and service/container codes distinguished",
+  "peer_review_finding": {
+    "problem": "A BLOCKED host could previously retain a cached qualified comparison.",
+    "disposition": "FIXED_AND_REGRESSION_TESTED",
+    "change": "Comparison availability requires final COMPLETED execution, NUMERICALLY_QUALIFIED numeric state and eligible technical report status.",
+    "science_rule_change": false
+  },
+  "initial_oracle_failure": "Initial incomplete simulated fixture was correctly rejected with Report 40/UNVERIFIED; wrong expected code 0 corrected in a new receipt, old receipt retained.",
+  "capabilities": [
+    "read registered records without Docker or scientific dependencies",
+    "preserve old run directories and reject reuse",
+    "verify registered file sizes/SHA-256 and detect conflicting known identities",
+    "export a derived report only to a fresh directory outside the source",
+    "preserve unknowns, stored diagnostic labels, original exit codes and failure states"
+  ],
+  "limits": {
+    "basic_report_0": "Registered bytes/cache reading only; does not establish required snapshot completeness.",
+    "advanced_report_0": "Local manifested evidence reading; may correctly report failed science or blocked execution.",
+    "local_manifest_scope": "Local byte consistency only, not authority, authenticity, method approval or scientific correctness.",
+    "image_update": "Host source only; existing r3 image was not rebuilt and keeps its original entry.",
+    "method_approval": false,
+    "scientific_acceptance": "NOT_CHANGED_EXISTING_FAILURES_RETAINED",
+    "L4": "Checkpoint saving supported; resuming computation not supported"
+  },
+  "historical_identities": {
+    "numerical_failure_runtime_test_commit": "c8a580f70d7dba721758b77c0c534c31b50953b8",
+    "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+    "image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+    "frozen_science_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+    "missing_identity_policy": "UNKNOWN; historical image identity is not injected into records missing build receipts"
+  },
+  "new_scientific_processes": 0,
+  "new_containers": 0,
+  "new_image_build": false,
+  "scientific_profiles_rules_occupations_tolerances_MDR_unchanged": true,
+  "compute_enabled": false,
+  "W07": "BLOCKED",
+  "method_decision": "MDR-001_PENDING_OWNER_DEFINITION_AND_EXTERNAL_CONSISTENCY_REVIEW",
+  "wslc": "BLOCKED / NOT_EXECUTED; paused",
+  "wsl_upgrade": "PAUSED",
+  "github_actions": "NOT_EXECUTED",
+  "local_CI": "Earlier scoped W01-W06 engineering receipt retained; this is a narrower host Report test suite.",
+  "image_distribution": "BLOCKED",
+  "public_push_release": "NOT_AUTHORIZED",
+  "P01_P14": "NO_AUTOMATIC_REVIEW_RERUN_OR_RECERTIFICATION",
+  "delivery_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-report-engineering",
+  "receipts": {
+    "CODE_BASELINE_REVIEWED.json": {
+      "size_bytes": 4459,
+      "sha256": "5564574b70ae0f685d70ac6b43331543d2c6c926dc23957696181851de3c4ae6"
+    },
+    "final-reviewed/HOST_CHECKS_REVIEWED.json": {
+      "size_bytes": 11637,
+      "sha256": "5343746640d0d77010dc399da71e3fd4fe7fbedcf14e11eb540d8536361f3080"
+    },
+    "final-reviewed/stdlib-tests.json": {
+      "size_bytes": 301,
+      "sha256": "2406c54037296f0eccb2207cd27413fc627de8340d6c81479e69df066ac006c2"
+    },
+    "final-reviewed/SOURCE_PRESERVATION.json": {
+      "size_bytes": 11763,
+      "sha256": "2ebbdd6a3ed8afb67d4e65afe19c4194f6f08d44dac8274eed40bf4f1c651c58"
+    },
+    "launcher-tests/summary.json": {
+      "size_bytes": 52183,
+      "sha256": "1e4d616cef8b18967d13d94ba4384b3a90058a03b27c5c4983c178bf21a729df"
+    },
+    "launcher-new-flags-tests/summary.json": {
+      "size_bytes": 8763,
+      "sha256": "ead0e57e92e53ccb14f1fe53eb3ce402a64d3b95d0d4fd690b01aa69c90b74e8"
+    },
+    "host-failure-tests/summary.json": {
+      "size_bytes": 5919,
+      "sha256": "bce48bd069c226ff832c14ddf30077cd5b1056c4279795d33d9481cdae4ca11e"
+    },
+    "INCOMPLETE_FIXTURE_EXPECTATION_NOTE.json": {
+      "size_bytes": 1610,
+      "sha256": "86041109177b82ae30d65fd9b6118632be7ffeb24b6b84510db378cacd8810a0"
+    }
+  },
+  "next_scientific_work": "After real method definitions and consistency findings arrive, resolve disagreement and goal/gate compatibility, version any protocol change, then freeze a compatible solver and bounded acceptance budget."
+}

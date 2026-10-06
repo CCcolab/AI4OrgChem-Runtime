@@ -6,6 +6,8 @@ W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 是此前的元�
 
 2026-10-06 [存量方法审阅](docs/USER_MOLECULE_METHOD_REVIEW_20261006_zh-CN.md)定位了初始占据边界的窄谱区间和历史占据跳变，并给出能量—算子关系判据；没有新增分子计算或方法批准。[下一版求解设计](docs/USER_MOLECULE_SOLVER_NEXT_DESIGN_zh-CN.md)仍为 DESIGN_ONLY，W07/Compute 保持 BLOCKED。
 
+等待方法决定期间，已补齐 [主机只读 Report 与导出](docs/USER_MOLECULE_REPORT_20261006_zh-CN.md)：保护旧运行目录、核对记录字节/身份、区分未执行与数值失败，并保留宿主/容器退出码。48项标准库测试和11项主机报告集成通过。基础模式核对登记字节并读取历史快照；高级模式检查关键证据并导出派生报告。不重算、不启动新容器、不重建镜像，Compute/W07仍关闭。
+
 [W01—W05 本地工程/合同 CI](docs/USER_MOLECULE_CI_20261005_zh-CN.md) 已通过38项单元测试、10个集成用例和4项平台探针；GitHub Actions 未执行，该结论不代表 W05 数值验收通过。
 
 此前完整 [W01—W06 本地工程 CI](docs/USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md) 的63项独立单元用例（102次执行）及集成/平台记录保留，与本轮数值失败分别登记。GitHub Actions 仍 NOT_EXECUTED，WSLc 仍 BLOCKED/暂停。

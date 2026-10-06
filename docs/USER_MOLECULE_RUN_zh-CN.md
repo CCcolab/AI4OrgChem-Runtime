@@ -32,6 +32,8 @@ examples/user-molecule/templates 中的四碳输入仅用于 AO/解析工程检�
 
 ## 4. 阅读结果或核对阻塞
 
+2026-10-06 已新增 [主机只读 Report 与导出](USER_MOLECULE_REPORT_20261006_zh-CN.md)：基础模式不用宿主 Python 或 Docker，校验清单后读历史缓存/终态；高级模式用已有标准 Python 读取门禁、失败、身份与缺失，并只导出到新的目录。读取退出0不代表科学通过。容器 r3 没有重建，科学 Compute 仍关闭。
+
 ```powershell
 # 替换为检查实际生成的目录。
 $checkRun = 'D:\AI4Science\user-molecule-runs\这里替换为实际的check目录名'
