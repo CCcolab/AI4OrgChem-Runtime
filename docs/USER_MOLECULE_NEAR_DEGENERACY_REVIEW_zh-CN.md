@@ -1,5 +1,7 @@
 # 原近简并外部评审入口：流程已取消
 
+2026-10-07状态补充：[V2实施与诊断](USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)已记录种子实现、239项专项测试、一次真实数值未合格及资源范围。下文设计/取消轮次中的“未实现/未执行”是其当时状态，不是当前状态；原科学定义和门槛保持。外部专家流程已取消。
+
 2026-10-06。用户明确要求取消外部专家咨询、意见征询与签署，状态 **CANCELLED_BY_USER**。不再将专家身份、外部回复或外部批准作为V2实现、受控测试或Compute的前置条件；没有计划联系或发送材料。
 
 当前执行入口为 [内部定义与验证](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md)，直接取消依据见 [决定记录](../validation/user-molecule/method-decisions/mdr-002/external-review-cancellation.json)。三个科学问题保留为内部工作项，由项目与Codex通过定义、推导、源码核查、独立参考和实际验收处理。成熟方法与第三方库复用继续，不依赖外部人员。

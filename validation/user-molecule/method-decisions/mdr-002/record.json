@@ -1,8 +1,8 @@
 {
   "id": "MDR-002",
-  "revision": "0.3",
-  "date": "2026-10-06",
-  "status": "DRAFT_INTERNAL_DEFINITION_AND_VALIDATION",
+  "revision": "0.4",
+  "date": "2026-10-07",
+  "status": "IMPLEMENTED_EXECUTED_UNQUALIFIED_INTERNAL_VALIDATION",
   "proposal_author": "Codex; not a method-owner or external reviewer signature",
   "request_source": "DIRECT_USER_MESSAGE",
   "request_text": "请明确近简并占据规则与验收目标，然后需要进行外部评审？",
@@ -16,9 +16,18 @@
   },
   "policy_id": "MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2",
   "scientific_protocol_approved": false,
-  "implementation": "NOT_IMPLEMENTED",
-  "new_real_scientific_execution": "NOT_EXECUTED",
-  "new_scientific_budget": null,
+  "implementation": "IMPLEMENTED_ENGINEERING_CANDIDATE",
+  "new_real_scientific_execution": "EXECUTED_DIAGNOSTIC_UNQUALIFIED",
+  "new_scientific_budget": {
+    "execution_contract_sha256": "6e2341303481093dca053c273a5a529c1e200643ecd488748ed67e126dc3307b",
+    "processes": 1,
+    "wall_limit_seconds": 900,
+    "observed_wall_seconds": 289.1720000000205,
+    "callback_limit": 603,
+    "charged_slots": 591,
+    "pending_slots": 0,
+    "automatic_retry": false
+  },
   "production_activation": false,
   "external_review_status": "CANCELLED_BY_USER",
   "scope": {
@@ -208,7 +217,7 @@
     ],
     "seed_electron_count_abs_max": 1e-07,
     "solver_admission_checks": {
-      "status": "SPECIFIED_NOT_EXECUTED_FOR_V2",
+      "status": "EXECUTED_SEED_DEFINITION_AND_ENTRY_PASS; FINAL_ACCEPTANCE_UNQUALIFIED",
       "conjunction": "Definition-layer seed checks AND each existing path solver admission; no combined PASS",
       "metric": "Masked overlap S_tilde",
       "H": "S_tilde^(1/2)",
@@ -328,7 +337,7 @@
     "A11",
     "A12"
   ],
-  "engineering_execution_this_round": "NOT_EXECUTED_DESIGN_STATIC_REVIEW_ONLY",
+  "engineering_execution_this_round": "PASS_239_UNIQUE_TARGETED_ENGINEERING_TESTS_AND_GUARDED_CACHED_SEED; NOT_FULL_CI",
   "roles": {
     "method_owner": {
       "identity": null,
@@ -448,7 +457,7 @@
     }
   ],
   "engineering_acceptance_detail": {
-    "A02": "Definition-layer seed metrics plus per-path existing absolute whitened trace/idempotency and production reconstruction entry checks; all remain NOT_EXECUTED for V2"
+    "A02": "Definition-layer seed metrics plus per-path existing absolute whitened trace/idempotency and production reconstruction entry checks; seed and per-path entry checks passed; final endpoint qualification remains unaccepted"
   },
   "acceptance_identifier_mapping": {
     "namespace": "USER_MOLECULE_ACCEPTANCE_NOT_ORIGINAL_P01_P14_PROPOSITIONS",
@@ -476,7 +485,7 @@
     "threshold_source": "Unchanged final_acceptance.comparisons frozen from the existing contract"
   },
   "external_review_required": false,
-  "internal_method_status": "CANDIDATE_DEFINITION_AVAILABLE_INTERNAL_VALIDATION_PENDING",
+  "internal_method_status": "IMPLEMENTED_DIAGNOSED_UNQUALIFIED; THREE_INTERNAL_INTERPRETATION_WORK_ITEMS_PENDING",
   "cancellation_record": {
     "path": "external-review-cancellation.json",
     "sha256": "2821fdc2c487f76277cfe3a2348729b65303ef4f15f4d74b35e5b368d501a342",
@@ -486,7 +495,8 @@
     "external_opinion_required": false,
     "external_signature_required": false,
     "internal_engineering_can_proceed": true,
-    "scientific_budget_or_production_activation_granted": false
+    "scientific_budget_or_production_activation_granted": false,
+    "meaning": "The definition record itself grants neither a scientific budget nor production activation; one separately identity-bound user-authorized diagnostic was executed and its closed budget cannot be reopened."
   },
   "internal_work_items": [
     {
@@ -505,5 +515,16 @@
       "status": "PENDING_INTERNAL_ANALYSIS"
     }
   ],
-  "external_questions_scope": "Historical R01-R08 retained as technical questions; current work is internal, no external response required"
+  "external_questions_scope": "Historical R01-R08 retained as technical questions; current work is internal, no external response required",
+  "execution_record": "../../seed-v2-20261007.json",
+  "implementation_request": {
+    "source": "DIRECT_USER_MESSAGE",
+    "message": "请继续，可以进入新计算吗"
+  },
+  "execution_bound_definition_revision": {
+    "revision": "0.3",
+    "path": "revisions/0.3-record.json",
+    "sha256": "11e528ccc43eea7f8af9665621bb8c9afea08d241abc18b7f6a1dbb7aba9a248",
+    "same_as_execution_contract": true
+  }
 }

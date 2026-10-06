@@ -1,5 +1,7 @@
 # 用户分子服务：当前实施文档入口
 
+最新 [V2种子实施与一次诊断](USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)已完成：专项239项PASS、零F种子PASS、数值不合格；Compute关闭。下述以前轮次的未实现/未执行状态属于当时记录。
+
 当前流程：[内部定义与验证](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md)。用户已明确取消外部专家流程，不再延期或等待集中征询；历史外审包和反馈保留。V2内部工程可继续，实际数值/资源门槛和科研解释证据仍须完成，Compute关闭。
 
 [近简并规则与验收候选V2](USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md) 和 [内部核查入口](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 给出仅变初值的明确提案；旧最终门槛保留，修订0.2已采纳材料/静态反馈、补齐求解器准入和UM编号；尚未实现/实测，内部科学证据待完成，不覆盖下方已完成诊断。

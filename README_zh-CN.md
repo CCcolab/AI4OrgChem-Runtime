@@ -1,10 +1,12 @@
 # AI4OrgChem 可复算运行环境
 
-用户已明确取消外部专家咨询、意见征询及签署流程（CANCELLED_BY_USER）。后续按 [内部定义与验证](docs/USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 推进，不等待外部回复；三个科学问题保留为内部工作项。现有数值失败和资源门槛保留，V2仍未实现/实测，Compute关闭。
+最新 [V2种子实施与诊断](docs/USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)：239项专项工程测试及零F种子准入通过；一次591F/约4.82分钟诊断完成，生产最终占据/能隙门禁失败，参考最终门禁未完成。原算子与门槛保留，Compute仍BLOCKED；完整CI及旧结果不重跑。
 
-[近简并规则与验收候选V2](docs/USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md) 已明确为“普通态占据子空间按屏蔽度量重正交的初值”；原最终2/0、Aufbau映射和正能隙门槛保留。已收到材料/静态反馈并补齐A02准入与UM编号；候选尚未实现，内部科学相容性与实际验收待完成，不重复诊断、不启用Compute。原专项外审材料保留为历史，其咨询流程已取消。
+用户已明确取消外部专家咨询、意见征询及签署流程（CANCELLED_BY_USER）。后续按 [内部定义与验证](docs/USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 推进，不等待外部回复；三个科学问题保留为内部工作项。现有数值失败和资源门槛保留，V2已实现并完成一次受限诊断，最终资格未通过，Compute关闭。
 
-最新 [实时准入与条件初始化诊断](docs/USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.md) 已执行：单个1 GiB/1 CPU/零swap进程复用旧普通态，三路径各求值一次，均因约1e-14 Hartree的初始能隙未满足原1e-6门槛而拒绝；轨道迭代未启动。同D0算子/能量/已准备mask子范围通过，完整T05及合格P12/P13/T06未执行。实时资源范围仅覆盖本次准备与初始化，科研W07/生产Compute仍BLOCKED。原始记录保留，后续仅修正独立参考拒绝标签并通过数组回归；没有重复真实诊断或重建镜像。
+[近简并规则与验收候选V2](docs/USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md) 已明确为“普通态占据子空间按屏蔽度量重正交的初值”；原最终2/0、Aufbau映射和正能隙门槛保留。已收到材料/静态反馈并补齐A02准入与UM编号；V2种子与独立参考已实现；一次受限诊断已执行但数值未合格，内部解释待完成，不追加计算或启用Compute。原专项外审材料保留为历史，其咨询流程已取消。
+
+此前 [实时准入与条件初始化诊断](docs/USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.md) 已执行：单个1 GiB/1 CPU/零swap进程复用旧普通态，三路径各求值一次，均因约1e-14 Hartree的初始能隙未满足原1e-6门槛而拒绝；轨道迭代未启动。同D0算子/能量/已准备mask子范围通过，完整T05及合格P12/P13/T06未执行。实时资源范围仅覆盖本次准备与初始化，科研W07/生产Compute仍BLOCKED。原始记录保留，后续仅修正独立参考拒绝标签并通过数组回归；没有重复真实诊断或重建镜像。
 
 [最小准备、独立参考与持久化预算](docs/USER_MOLECULE_PREPARATION_REFERENCE_20261006_zh-CN.md) 已补齐，97个唯一用例形成按版本核对的通过覆盖（72新项＋25资源回归），并完成真实PySCF旧缓存映射；这不是一次97项完整CI。该准备轮没有新真实条件计算；后续实时诊断另见上方，生产Compute仍BLOCKED。此前 [条件算子桥](docs/USER_MOLECULE_RESIDUAL_BRIDGE_20261006_zh-CN.md)、[纯数组残差原型](docs/USER_MOLECULE_RESIDUAL_PROTOTYPE_20261006_zh-CN.md) 和旧失败保留，旧完整CI不自动包含这些增补。
 

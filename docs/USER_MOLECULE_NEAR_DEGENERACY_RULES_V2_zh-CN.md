@@ -1,5 +1,7 @@
 # 近简并占据规则与验收目标：窄范围候选 V2
 
+2026-10-07状态补充：[V2实施与诊断](USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)已记录种子实现、239项专项测试、一次真实数值未合格及资源范围。下文设计/取消轮次中的“未实现/未执行”是其当时状态，不是当前状态；原科学定义和门槛保持。外部专家流程已取消。
+
 2026-10-06；MDR-002 修订0.3 / DRAFT_INTERNAL_DEFINITION_AND_VALIDATION。已收到用户转交的材料核验与静态反馈；用户现已明确取消外部专家流程，内部方法定义、推导与实际验证继续。候选标识：`MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2`。**只提议改变初始化，保留原最终占据和资格门槛**；代码未实现，新计算未执行，预算未创建，生产 Compute 关闭。反馈与原修订见 [登记记录](../validation/user-molecule/method-decisions/mdr-002/record.json)。
 
 机器记录：[record.json](../validation/user-molecule/method-decisions/mdr-002/record.json)。当前入口：[内部定义与验证](USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md)。旧外审页保留为已取消流程的历史导航。[MDR-001 修订0.1](USER_MOLECULE_METHOD_DECISIONS_001_zh-CN.md)作为历史四问原样保留；本文不补造责任人、身份或批准意见。

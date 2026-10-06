@@ -1,6 +1,6 @@
 {
-  "revision": "LIVE-RESIDUAL-INITIALIZATION-DIAGNOSTIC-20261006",
-  "date": "2026-10-06",
+  "revision": "SEED-V2-DIAGNOSTIC-20261007",
+  "date": "2026-10-07",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
   "service_implementation": "ENGINEERING_CANDIDATE_COMPUTE_GATED",
@@ -31,9 +31,10 @@
       "ready_to_execute_scf": false,
       "status_record": "validation/user-molecule/solver-v2/review.json",
       "solver_v2_numerical_acceptance": "EXECUTED_FAILED_CANDIDATE_V2",
-      "latest_residual_engineering_record": "validation/user-molecule/preparation-reference-20261006.json",
-      "latest_numerical_record": "validation/user-molecule/residual-live-20261006.json",
-      "latest_residual_validation": "EXECUTED_INITIALIZATION_REFUSED_UNCHANGED_GAP; solver iterations NOT_EXECUTED"
+      "latest_residual_engineering_record": "validation/user-molecule/seed-v2-20261007.json",
+      "latest_numerical_record": "validation/user-molecule/seed-v2-20261007.json",
+      "latest_residual_validation": "SEED_V2_EXECUTED_UNQUALIFIED; production map/gap failed; reference final gate NOT_EXECUTED_BUDGET_STOP",
+      "latest_seed_v2_validation": "EXECUTED_UNQUALIFIED; original final gates preserved"
     },
     "W06": {
       "implementation": "ARRAY_REFERENCE_AND_READONLY_ASSESSMENT_IMPLEMENTED",
@@ -44,15 +45,18 @@
       "production_activation": false,
       "record": "validation/user-molecule/w06/engineering-review.json",
       "latest_engineering_ci_record": "validation/user-molecule/ci-local-w01-w07-20261006.json",
-      "latest_numerical_record": "validation/user-molecule/residual-live-20261006.json",
+      "latest_numerical_record": "validation/user-molecule/seed-v2-20261007.json",
       "historical_engineering_test_commit": "43e80de31140d8685b5087ac5ac56654c7e68e28",
-      "latest_engineering_test_commit": "44ad90e0e3b293879ec67b7a10475825cde05d3a",
+      "latest_engineering_test_commit": "60d76deeb468fdd2dc2c444b7cf60d95a9dd9290",
       "method_static_review": "COMPLETE; INTERNAL_SCOPE_DEFINITION_AND_EVIDENCE_PENDING; external expert process CANCELLED_BY_USER",
       "latest_complete_local_ci_record": "validation/user-molecule/ci-local-w01-w07-20261006.json",
       "solver_v2_historical_engineering_test_commit": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
       "historical_w01_w06_engineering_ci_record": "validation/user-molecule/ci-local-w01-w06-20261005.json",
-      "latest_residual_engineering_record": "validation/user-molecule/preparation-reference-20261006.json",
-      "latest_residual_reference": "EXECUTED_INITIALIZATION_REFUSED; same-D operator-energy subset PASS"
+      "latest_residual_engineering_record": "validation/user-molecule/seed-v2-20261007.json",
+      "latest_residual_reference": "SEED_V2_INITIALIZED_AND_ITERATED; FINAL_GATE_NOT_COMPLETED_UNDER_BUDGET; same-Dseed subset PASS",
+      "latest_seed_v2_validation": "EXECUTED_UNQUALIFIED; original final gates preserved",
+      "latest_complete_local_ci_test_commit": "44ad90e0e3b293879ec67b7a10475825cde05d3a",
+      "latest_engineering_test_scope": "TARGETED_239_UNIQUE_SEED_AND_RELATED_REGRESSIONS_NOT_FULL_W01_W07_CI"
     },
     "W07": {
       "implementation": "LOCAL_ENGINEERING_SOURCE_EVIDENCE_HANDOFF_AND_AGENT_SELFTEST_COMPLETE; research acceptance pending",
@@ -71,15 +75,15 @@
     "branch": "implementation/user-molecule-w01-w04"
   },
   "new_build": "EXECUTED; r3 PASS",
-  "new_scientific_runs": "EXECUTED_ACCEPTANCE_ONLY_UNQUALIFIED; latest residual initialization refused; old v2 failures preserved",
+  "new_scientific_runs": "ONE_SEED_V2_DIAGNOSTIC_EXECUTED_UNQUALIFIED; old failures and budgets preserved",
   "compute_enabled": false,
-  "new_service_tests": "Latest local W01-W07 CI:176 unique engineering unit tests /284 executions; scientific numerical failures unchanged",
+  "new_service_tests": "Targeted V2:239 unique engineering tests PASS; historical full W01-W07 CI remains at44ad90e",
   "wslc": "BLOCKED / NOT_EXECUTED; paused",
   "colab": "DEFERRED",
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Implement and test the V2 seed and independent seed reference under unchanged A02/final gates. Internal method work proceeds without external expert responses. Any real scientific process needs its own frozen identity, resource admission and fresh budget; this cancellation creates none.",
+  "next_bounded_task": "Read-only internal analysis of saved occupation/near-degeneracy and reference budget records; no automatic new calculation, rule relaxation or service activation.",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -235,7 +239,7 @@
     "record_scope": "HISTORICAL_ENGINEERING_ROUND; new scientific_execution is recorded separately in residual_live_diagnostic"
   },
   "new_scientific_runs_this_preparation_reference_round": 0,
-  "latest_residual_execution_record": "validation/user-molecule/residual-live-20261006.json",
+  "latest_residual_execution_record": "validation/user-molecule/seed-v2-20261007.json",
   "residual_live_diagnostic": {
     "status": "ADMISSION_COMPLETED_DIAGNOSTIC_EXECUTED_UNQUALIFIED",
     "identity": {
@@ -273,18 +277,18 @@
   "latest_method_candidate_record": "validation/user-molecule/method-decisions/mdr-002/record.json",
   "near_degeneracy_candidate": {
     "id": "MDR-002",
-    "revision": "0.3",
-    "status": "DRAFT_INTERNAL_DEFINITION_AND_VALIDATION",
+    "revision": "0.4",
+    "status": "IMPLEMENTED_EXECUTED_UNQUALIFIED_INTERNAL_VALIDATION",
     "policy_id": "MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2",
-    "implementation": "NOT_IMPLEMENTED",
-    "new_real_scientific_execution": "NOT_EXECUTED",
+    "implementation": "IMPLEMENTED_ENGINEERING_CANDIDATE",
+    "new_real_scientific_execution": "EXECUTED_DIAGNOSTIC_UNQUALIFIED",
     "scientific_protocol_approved": false,
     "external_review_status": "CANCELLED_BY_USER",
     "production_activation": false,
     "final_gate_thresholds_changed": false,
     "existing_diagnostic_unchanged": true,
     "static_feedback_receipt": "validation/user-molecule/method-decisions/mdr-002/review-feedback-0.1_zh-CN.md",
-    "A02_existing_solver_entry_checks": "SPECIFIED_PER_PATH_OLD_THRESHOLDS_NOT_EXECUTED",
+    "A02_existing_solver_entry_checks": "EXECUTED_PASS; DEFINITION_AND_ABSOLUTE_ENTRY_CHECKS_RECORDED_SEPARATELY",
     "acceptance_display_names": [
       "UM-P12",
       "UM-P13"
@@ -292,7 +296,8 @@
     "historical_machine_keys_renamed": false,
     "external_review_required": false,
     "internal_method_status": "CANDIDATE_DEFINITION_AVAILABLE_INTERNAL_VALIDATION_PENDING",
-    "implementation_requires_external_opinion": false
+    "implementation_requires_external_opinion": false,
+    "execution_record": "validation/user-molecule/seed-v2-20261007.json"
   },
   "historical_method_decision_record_before_cancellation": "validation/user-molecule/method-decisions/mdr-001/record.json",
   "internal_method_work_items": [
@@ -312,5 +317,89 @@
       "status": "PENDING_INTERNAL_ANALYSIS"
     }
   ],
-  "compute_blocked_basis": "Actual conditional endpoint numerical acceptance not passed; V2 not implemented/executed and internal scope/resource evidence incomplete. External expert opinion is not a prerequisite."
+  "compute_blocked_basis": "Production final mapped density and positive gap failed; reference final gate not completed under frozen budget. Internal scientific interpretation remains incomplete; external expert opinion is not required.",
+  "seed_v2_diagnostic": {
+    "status": "IMPLEMENTED_EXECUTED_DIAGNOSTIC_UNQUALIFIED",
+    "identity": {
+      "geometry_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+      "profile_sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9",
+      "dependencies_sha256": "5c355f34ff1199b82da60da9d49d1e7e138af86db18b356a49ffceb71980743b",
+      "mode": "LIVE_CONDITIONAL_SEED_V2_DIAGNOSTIC",
+      "execution_contract_sha256": "6e2341303481093dca053c273a5a529c1e200643ecd488748ed67e126dc3307b",
+      "runtime_test_commit": "60d76deeb468fdd2dc2c444b7cf60d95a9dd9290",
+      "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+      "image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+      "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+      "science_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+      "ordinary_record_sha256": "b0a9fd8a2487d725668823b75966176e98eb25551f40b9f177b485141ecb9663",
+      "ordinary_arrays_sha256": "2a0318c42ee47001e2774ea6b4fec8317b1887c744a2720e71033a75b18f6051",
+      "initialization_policy": "MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2",
+      "seed_parent_ordinary_record_sha256": "b0a9fd8a2487d725668823b75966176e98eb25551f40b9f177b485141ecb9663",
+      "seed_parent_ordinary_arrays_sha256": "2a0318c42ee47001e2774ea6b4fec8317b1887c744a2720e71033a75b18f6051",
+      "shared_seed_archive_sha256": "da6bb4f367ff0f0c4a787a909908bdf961cf9ccebe2145ef25f9ce4977d4dac8",
+      "seed_readiness_receipt_sha256": "dbdafa14aa5959bd9a8c3952e737cdd1f51aa9a2df2526ad92587f18b8d2eea4",
+      "seed_implementation_runtime_commit": "60d76deeb468fdd2dc2c444b7cf60d95a9dd9290",
+      "seed_source_files_sha256": "434268579e185bdaf4dd8ae79368ec17490fe95cdc112e540f2e201030d3c39d",
+      "seed_source_file_sha256": {
+        "runtime/user_molecule/seed_v2.py": "fe266fd7174c9d7be896d4eb5ee19f265bc3cfd1b0cb201eb042d07c42ccfaba",
+        "reference/seed_v2.py": "6ef546b7ac7500225e013f23211b20206d2578f17e129779323d1cb6b3ea2f6f",
+        "runtime/user_molecule/residual_seed_v2.py": "0e906e8b2b8eefb9c827747d0e213089d26267c10b4019b90e3503adb3d3303c",
+        "reference/residual_seed_v2.py": "5aa7fc773db6c425f9812467b07c979c6e95016bab68203437d66aae025a049e",
+        "runtime/user_molecule/residual_seed_preparation.py": "e2a6f8ca1486f67e9f1026b43cb321b01abd3812a2b8b9564967a8924a7341d4"
+      },
+      "ordinary_D0_identity": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "9dc813178f17be82f7c231c7b9d0a0494e8d4bcd2acea05ac2605bf3bf268f8a"
+      },
+      "ordinary_mo_coefficients_identity": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "c4ebf474d3dc13e14bd08bbaaff09797805da345877b220b6dc9a5ecea0ba42e"
+      },
+      "ordinary_mo_occupations_identity": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "425b2c4fbffb758896a2c8bb66fe2387cf784b2911147d2d48a195ee29a5bb9e"
+      },
+      "seed_density_identity": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "d04e9444bbe8b171476ed8324817781ff541ed6e178b5a736e83013c9e5e89e8"
+      },
+      "mdr002_record_sha256": "11e528ccc43eea7f8af9665621bb8c9afea08d241abc18b7f6a1dbb7aba9a248",
+      "expert_cancellation_receipt_sha256": "2821fdc2c487f76277cfe3a2348729b65303ef4f15f4d74b35e5b368d501a342",
+      "external_review_status": "CANCELLED",
+      "external_review_required": false,
+      "production_activation": false,
+      "method_approval": false
+    },
+    "unique_engineering_tests": 239,
+    "source_callbacks": 591,
+    "nr_rks_completed": 591,
+    "precharged_slots": 591,
+    "pending_slots": 0,
+    "wall_through_cleanup_seconds": 289.1720000000205,
+    "resource_status": "RESOURCE_CANDIDATE_EXACT_FIXTURE",
+    "resource_peak_bytes": 241770496,
+    "production_final_gate_status": "FAILED_MAPPED_DENSITY_AND_FINAL_POSITIVE_GAP",
+    "reference_final_gate_status": "NOT_EXECUTED_BUDGET_STOP; DO_NOT_INFER_PRODUCTION_GAP_FAILURE",
+    "compute_enabled": false,
+    "delta_hartree": null
+  }
 }
