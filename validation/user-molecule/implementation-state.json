@@ -269,15 +269,22 @@
   "latest_method_candidate_record": "validation/user-molecule/method-decisions/mdr-002/record.json",
   "near_degeneracy_candidate": {
     "id": "MDR-002",
-    "revision": "0.1",
+    "revision": "0.2",
     "status": "DRAFT_FOR_SCOPED_REVIEW_NOT_APPROVED",
     "policy_id": "MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2",
     "implementation": "NOT_IMPLEMENTED",
     "new_real_scientific_execution": "NOT_EXECUTED",
     "scientific_protocol_approved": false,
-    "external_review_status": "NOT_SUBMITTED_NO_EXTERNAL_OPINION_RECEIVED",
+    "external_review_status": "USER_PROVIDED_STATIC_FEEDBACK_RECEIVED_FORMAL_SCIENTIFIC_OPINIONS_PENDING",
     "production_activation": false,
     "final_gate_thresholds_changed": false,
-    "existing_diagnostic_unchanged": true
+    "existing_diagnostic_unchanged": true,
+    "static_feedback_receipt": "validation/user-molecule/method-decisions/mdr-002/review-feedback-0.1_zh-CN.md",
+    "A02_existing_solver_entry_checks": "SPECIFIED_PER_PATH_OLD_THRESHOLDS_NOT_EXECUTED",
+    "acceptance_display_names": [
+      "UM-P12",
+      "UM-P13"
+    ],
+    "historical_machine_keys_renamed": false
   }
 }

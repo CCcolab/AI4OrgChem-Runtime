@@ -1,6 +1,6 @@
 # AI4OrgChem 可复算运行环境
 
-[近简并规则与验收候选V2](docs/USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md) 已明确为“普通态占据子空间按屏蔽度量重正交的初值”；原最终2/0、Aufbau映射和正能隙门槛保留。候选尚未实现或外审，不重复诊断、不启用Compute。[外部评审入口](docs/USER_MOLECULE_NEAR_DEGENERACY_REVIEW_zh-CN.md) 已准备，未对外发送。
+[近简并规则与验收候选V2](docs/USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md) 已明确为“普通态占据子空间按屏蔽度量重正交的初值”；原最终2/0、Aufbau映射和正能隙门槛保留。已收到材料/静态反馈并补齐A02准入与UM编号；候选尚未实现或取得正式科学相容性意见，不重复诊断、不启用Compute。[外部评审入口](docs/USER_MOLECULE_NEAR_DEGENERACY_REVIEW_zh-CN.md) 已准备，未对外发送。
 
 最新 [实时准入与条件初始化诊断](docs/USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.md) 已执行：单个1 GiB/1 CPU/零swap进程复用旧普通态，三路径各求值一次，均因约1e-14 Hartree的初始能隙未满足原1e-6门槛而拒绝；轨道迭代未启动。同D0算子/能量/已准备mask子范围通过，完整T05及合格P12/P13/T06未执行。实时资源范围仅覆盖本次准备与初始化，科研W07/生产Compute仍BLOCKED。原始记录保留，后续仅修正独立参考拒绝标签并通过数组回归；没有重复真实诊断或重建镜像。
 
