@@ -19,7 +19,9 @@ from runtime.user_molecule.residual_bridge import PreparedResidualBridge, array_
 from runtime.user_molecule.residual_candidate import density_id
 from runtime.user_molecule.residual_budget import ConditionalCallbackBudget, CallbackBudgetError
 from runtime.user_molecule.residual_preparation import create_bridge_contract
-from test_user_molecule_residual_preparation import ResidualPreparationTests, ROOT, SCIENCE
+import test_user_molecule_residual_preparation as preparation_fixtures
+
+ROOT, SCIENCE = preparation_fixtures.ROOT, preparation_fixtures.SCIENCE
 
 
 class FakeXC:
@@ -50,7 +52,7 @@ class JournaledReference(PreparedResidualReference):
 
 class ResidualIntegrationTests(unittest.TestCase):
     def setUp(self):
-        fixture=ResidualPreparationTests()
+        fixture=preparation_fixtures.ResidualPreparationTests()
         fixture.setUp()
         self.fixture=fixture
         self.directory=tempfile.TemporaryDirectory()
