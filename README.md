@@ -1,5 +1,7 @@
 # AI4OrgChem Reproducible Runtime
 
+The [local W01–W07 engineering CI](docs/USER_MOLECULE_CI_W01_W07_20261006_zh-CN.md) passed 176 unique unit cases (284 executions), ten launcher actions, four platform probes and nine W07 host-report actions. Eighteen test containers were removed according to successful removal receipts; outputs remain. No new molecular calculation ran. Research Compute remains BLOCKED; human feedback is deferred by user, not a current engineering blocker. GitHub Actions remains NOT_EXECUTED.
+
 Isolated branch update (2026-10-05): Check and Report work; production Compute remains **BLOCKED**. [Bounded W05–W06 molecular acceptance](docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md) has now executed. Ordinary and same-density operator comparisons passed in their stated scope, but conditional stationarity, storage-path equivalence and full-reference gates failed. No qualified research result or formal W07 exit is claimed. The original workspaces and legacy L0–L4 evidence remain preserved.
 
 [W05 preparation](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) is a historical metadata-only batch. The earlier 84-test driver and four fixture bundles remain recorded. The latest [solver-v2 candidate](docs/USER_MOLECULE_SOLVER_V2_zh-CN.md) passed 122 guarded engineering tests and both same-density paths for pilot ethene, but all three conditional solves failed. Exact 1-GiB/one-CPU/no-swap bundle observations do not calibrate a general user resource model or grant method scope.

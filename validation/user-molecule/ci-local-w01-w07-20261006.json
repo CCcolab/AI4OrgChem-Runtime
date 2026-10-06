@@ -1,0 +1,520 @@
+{
+  "id": "LOCAL-CI-W01-W07-20261006",
+  "date": "2026-10-06",
+  "status": "PASS_SCOPED_LOCAL_W01_W07_ENGINEERING_CI",
+  "runtime_test_commit": "44ad90e0e3b293879ec67b7a10475825cde05d3a",
+  "previous_candidate_commit": "5f2288cad43b261e6a0e058387f941d067a29e2b",
+  "report_documentation_commit": "EXTERNAL_FINAL_CI_DELIVERY_RECORD_AFTER_COMMIT",
+  "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+  "runtime_image_build_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+  "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "science_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "scope": "Current clean Windows host/Git-export Linux-amd64 engineering CI over old r3; no rebuild or molecular rerun.",
+  "unit_test_executions": 284,
+  "unit_test_unique": 176,
+  "duplicate_executions": 108,
+  "unit_failures_errors_skips": 0,
+  "unit_group_counts": {
+    "minimal": 101,
+    "guarded-full": 167,
+    "scientific-adapter-engineering": 4,
+    "legacy-test_runtime": 7,
+    "legacy-test_process": 3,
+    "legacy-test_classifier_adapter": 2
+  },
+  "powershell_integration_actions": 10,
+  "powershell_ast_path_checks": 7,
+  "guarded_python_service_actions": 3,
+  "research_metadata_guard": "PASS_METADATA_ONLY",
+  "platform_probes": [
+    {
+      "status": "PASS",
+      "directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\platform\\platform-probes\\isolation",
+      "name": "isolation"
+    },
+    {
+      "status": "PASS",
+      "directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\platform\\platform-probes\\timeout",
+      "name": "timeout"
+    },
+    {
+      "status": "PASS",
+      "directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\platform\\platform-probes\\cancel",
+      "name": "cancel"
+    },
+    {
+      "status": "PASS",
+      "directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\platform\\platform-probes\\oom",
+      "name": "oom"
+    }
+  ],
+  "w07_host_integration_cases": 9,
+  "w07_export_results": "THREE_FRESH_EXPORTS_VERIFIED; CHECK_AND_HISTORICAL_FAIL_EXIT0; INCOMPLETE_EXIT40",
+  "w07_source_byte_preservation": true,
+  "container_count": 18,
+  "containers": {
+    "20c3b1865592098281b20e773e88de534827df574dcfe51eea9bb21387d3315d": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\input-resource-w05-contracts\\execution.json",
+      "kind": "UNIT_OR_METADATA_GUARD",
+      "container_exit_code": 0,
+      "container_removed": true
+    },
+    "65389871ef00e758268703efb6a9ef7214c2837864eba3047f0aaa78308b78cb": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\legacy-test_classifier_adapter\\execution.json",
+      "kind": "UNIT_OR_METADATA_GUARD",
+      "container_exit_code": 0,
+      "container_removed": true
+    },
+    "37829ded602a34113d793411d6f2f70b04b81e8101b4be63b998eae8d8b28cd2": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\legacy-test_process\\execution.json",
+      "kind": "UNIT_OR_METADATA_GUARD",
+      "container_exit_code": 0,
+      "container_removed": true
+    },
+    "4ddae6e1d2c32cf531dd0c0678973efd42fbfcf13a449e7bcc95bd7556d8511f": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\legacy-test_runtime\\execution.json",
+      "kind": "UNIT_OR_METADATA_GUARD",
+      "container_exit_code": 0,
+      "container_removed": true
+    },
+    "29055cb7499d2b90767d8cfb1d8758a5e18886bc23349a1c86adcb178242362f": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\research-metadata-guard\\execution.json",
+      "kind": "UNIT_OR_METADATA_GUARD",
+      "container_exit_code": 0,
+      "container_removed": true
+    },
+    "eefbd0f9a51d3993baa58e54317373de0ad4de643b87518cc9ad24acdebf4cc5": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\scientific-adapter-engineering\\execution.json",
+      "kind": "UNIT_OR_METADATA_GUARD",
+      "container_exit_code": 0,
+      "container_removed": true
+    },
+    "6467040e81d9e20a479706be661621e7a7970b00a53182190549ab82fc43f042": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\w01-w07-guarded-engineering\\execution.json",
+      "kind": "UNIT_OR_METADATA_GUARD",
+      "container_exit_code": 0,
+      "container_removed": true
+    },
+    "cf9a3f552d414108de443f63e1df7196d54de68be141939dbe0442cbba1a3685": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\check-20261006T093019Z-c28ae7d2c09a4149827eb8bbb8009581\\host-execution.json",
+      "kind": "LAUNCHER",
+      "container_exit_code": 0,
+      "service_exit_code": 0,
+      "termination_reason": null,
+      "oom_killed": false,
+      "limits": {
+        "memory_swap_bytes": 536870912,
+        "memory_bytes": 536870912,
+        "user": "10001:10001",
+        "network": "none",
+        "nano_cpus": 1000000000,
+        "readonly_rootfs": true
+      },
+      "container_removed": true
+    },
+    "cb5d43e6a3bd433ddc33df4b276599be9537139fcccf0869f24210616dddee37": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\check-20261006T093026Z-61a677000cfa4c19928dd4a1799b1753\\host-execution.json",
+      "kind": "LAUNCHER",
+      "container_exit_code": 0,
+      "service_exit_code": 0,
+      "termination_reason": null,
+      "oom_killed": false,
+      "limits": {
+        "readonly_rootfs": true,
+        "memory_swap_bytes": 536870912,
+        "nano_cpus": 1000000000,
+        "memory_bytes": 536870912,
+        "user": "10001:10001",
+        "network": "none"
+      },
+      "container_removed": true
+    },
+    "cb1546cc26e87c74c628746f22e1177151f530470e6db7e320e4d69354cfe03d": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\check-20261006T093033Z-69e9b5c5e0a74f4cadce92119cbc1ede\\host-execution.json",
+      "kind": "LAUNCHER",
+      "container_exit_code": 0,
+      "service_exit_code": 0,
+      "termination_reason": null,
+      "oom_killed": false,
+      "limits": {
+        "network": "none",
+        "readonly_rootfs": true,
+        "user": "10001:10001",
+        "nano_cpus": 1000000000,
+        "memory_swap_bytes": 536870912,
+        "memory_bytes": 536870912
+      },
+      "container_removed": true
+    },
+    "af5317a797c73e45a36b13b648317619100abb685a9cc5949c99ea566c983883": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\check-20261006T093046Z-42b9df7db9b84b2caeb52fa7d17d1866\\host-execution.json",
+      "kind": "LAUNCHER",
+      "container_exit_code": 0,
+      "service_exit_code": 0,
+      "termination_reason": null,
+      "oom_killed": false,
+      "limits": {
+        "user": "10001:10001",
+        "readonly_rootfs": true,
+        "nano_cpus": 1000000000,
+        "memory_swap_bytes": 536870912,
+        "memory_bytes": 536870912,
+        "network": "none"
+      },
+      "container_removed": true
+    },
+    "83ed1dae5e548a87a7d9fa478397bc495b2eba1ab196be776af9bad7b51c6879": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\check-20261006T093113Z-1f7c806d1e804776b6566674f3a53fe3\\host-execution.json",
+      "kind": "LAUNCHER",
+      "container_exit_code": 10,
+      "service_exit_code": 10,
+      "termination_reason": null,
+      "oom_killed": false,
+      "limits": {
+        "network": "none",
+        "user": "10001:10001",
+        "nano_cpus": 1000000000,
+        "memory_swap_bytes": 536870912,
+        "readonly_rootfs": true,
+        "memory_bytes": 536870912
+      },
+      "container_removed": true
+    },
+    "064eca3bf16d5c75e67f9bbf2c20343263480a21b5d8c0081d729d56f78e9319": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\compute-20261006T093057Z-a2ac6c1fe3864a08a3696604a98b23d8\\host-execution.json",
+      "kind": "LAUNCHER",
+      "container_exit_code": 20,
+      "service_exit_code": 20,
+      "termination_reason": null,
+      "oom_killed": false,
+      "limits": {
+        "network": "none",
+        "nano_cpus": 1000000000,
+        "readonly_rootfs": true,
+        "memory_bytes": 536870912,
+        "user": "10001:10001",
+        "memory_swap_bytes": 536870912
+      },
+      "container_removed": true
+    },
+    "faefd46ffe3a70a3c56c213370d3da4147b23f807f1af738bd1f58d7cf1c8930": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\compute-20261006T093122Z-dcb8f9fb736c4c7ba94199ce4c702d2d\\host-execution.json",
+      "kind": "LAUNCHER",
+      "container_exit_code": 20,
+      "service_exit_code": 20,
+      "termination_reason": null,
+      "oom_killed": false,
+      "limits": {
+        "user": "10001:10001",
+        "memory_swap_bytes": 536870912,
+        "memory_bytes": 536870912,
+        "readonly_rootfs": true,
+        "network": "none",
+        "nano_cpus": 1000000000
+      },
+      "container_removed": true
+    },
+    "82db93d997bed041b1cf161f73f2d2914f7619904cf66d3b8346f8c651185904": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\platform\\platform-probes\\cancel\\host-execution.json",
+      "kind": "PLATFORM",
+      "container_exit_code": 137,
+      "service_exit_code": null,
+      "termination_reason": "CANCELLED",
+      "oom_killed": false,
+      "limits": {
+        "readonly_rootfs": true,
+        "nano_cpus": 1000000000,
+        "network": "none",
+        "user": "10001:10001",
+        "memory_swap_bytes": 134217728,
+        "memory_bytes": 134217728
+      },
+      "container_removed": true
+    },
+    "7e43c479ed0a866dad5abd4ff3f55c626f58e7bc8db3f47bc4953842146d603c": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\platform\\platform-probes\\isolation\\host-execution.json",
+      "kind": "PLATFORM",
+      "container_exit_code": 0,
+      "service_exit_code": null,
+      "termination_reason": null,
+      "oom_killed": false,
+      "limits": {
+        "readonly_rootfs": true,
+        "nano_cpus": 1000000000,
+        "network": "none",
+        "user": "10001:10001",
+        "memory_swap_bytes": 134217728,
+        "memory_bytes": 134217728
+      },
+      "container_removed": true
+    },
+    "8be03f8296b825df1f724d7c6b3875378c78595b2d60c5502d0a274ed245393a": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\platform\\platform-probes\\oom\\host-execution.json",
+      "kind": "PLATFORM",
+      "container_exit_code": 137,
+      "service_exit_code": null,
+      "termination_reason": null,
+      "oom_killed": true,
+      "limits": {
+        "readonly_rootfs": true,
+        "nano_cpus": 1000000000,
+        "network": "none",
+        "user": "10001:10001",
+        "memory_swap_bytes": 134217728,
+        "memory_bytes": 134217728
+      },
+      "container_removed": true
+    },
+    "f3f6182e15e97f9004706c61621e6e8b6634e7f8ce6241902f1c716c87c80b8b": {
+      "evidence": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\platform\\platform-probes\\timeout\\host-execution.json",
+      "kind": "PLATFORM",
+      "container_exit_code": 137,
+      "service_exit_code": null,
+      "termination_reason": "TIMEOUT",
+      "oom_killed": false,
+      "limits": {
+        "readonly_rootfs": true,
+        "nano_cpus": 1000000000,
+        "network": "none",
+        "user": "10001:10001",
+        "memory_swap_bytes": 134217728,
+        "memory_bytes": 134217728
+      },
+      "container_removed": true
+    }
+  },
+  "all_created_containers_removed": true,
+  "removal_basis": "Actual successful rm return and post-rm records, plus retained manifest bytes; no extra after-deletion Docker query.",
+  "fresh_launcher_manifests": [
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\check-20261006T093019Z-c28ae7d2c09a4149827eb8bbb8009581\\run-manifest.json",
+      "registered_files": 10,
+      "size_bytes": 5969,
+      "sha256": "02b224b160018529ee7af2c47e9021015e2caa6bb2882ec5a9e6bc2efdb018e1"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\check-20261006T093026Z-61a677000cfa4c19928dd4a1799b1753\\run-manifest.json",
+      "registered_files": 10,
+      "size_bytes": 5969,
+      "sha256": "3e40c678473924791641d8a9c209e1555b9043fc8f3122fc8a207ad87e6685cb"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\check-20261006T093033Z-69e9b5c5e0a74f4cadce92119cbc1ede\\run-manifest.json",
+      "registered_files": 10,
+      "size_bytes": 5969,
+      "sha256": "f66838bc6f56f0a64bcb0e5547a0d6f3f5749c0cc4e181d0333545efc405983c"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\check-20261006T093046Z-42b9df7db9b84b2caeb52fa7d17d1866\\run-manifest.json",
+      "registered_files": 10,
+      "size_bytes": 5970,
+      "sha256": "94cf4f5c82c11211943ed4bce3d231168a5ac302a5ebe908daf77708ae487cc7"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\check-20261006T093113Z-1f7c806d1e804776b6566674f3a53fe3\\run-manifest.json",
+      "registered_files": 6,
+      "size_bytes": 5367,
+      "sha256": "7bd0ae56a9acf2872554434e9f1c775dc74f28960114bd9f41727af807fa4bd2"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\check-20261006T093117Z-bdd4e5b87e674a8e80e5e1b5d8404638\\run-manifest.json",
+      "registered_files": 1,
+      "size_bytes": 902,
+      "sha256": "48a6ce2448c226fdd712c45fba745a7cd3457a53b3d74deb2c47c111abc52cf8"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\check-20261006T093120Z-896b4553e5154edeadc64ab058ed4669\\run-manifest.json",
+      "registered_files": 1,
+      "size_bytes": 882,
+      "sha256": "14579b3858ffdc19fc69e98da9803e3728d940ea23d96915b3b4350dde0f55fd"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\compute-20261006T093057Z-a2ac6c1fe3864a08a3696604a98b23d8\\run-manifest.json",
+      "registered_files": 11,
+      "size_bytes": 6837,
+      "sha256": "db1d7c19bc3325230f7235309604a0207605a3ca182b174d44296f87bc4a18e3"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\integration-runs\\compute-20261006T093122Z-dcb8f9fb736c4c7ba94199ce4c702d2d\\run-manifest.json",
+      "registered_files": 10,
+      "size_bytes": 6700,
+      "sha256": "bcd364e3450356d2719c4ee02a6ae8a7b72cef0b152d33e2951cddccace3dc51"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\platform\\platform-probes\\cancel\\run-manifest.json",
+      "registered_files": 6,
+      "size_bytes": 3585,
+      "sha256": "a80d04edb741550dcad145f5db357569061ffa7fefafd08e0a05b2b48ca6b4dc"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\platform\\platform-probes\\isolation\\run-manifest.json",
+      "registered_files": 5,
+      "size_bytes": 4244,
+      "sha256": "ffc19bf5d8f1a3e94c3ae2a13fa80dff477bb5be3b05e6169b357aec202678e3"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\platform\\platform-probes\\oom\\run-manifest.json",
+      "registered_files": 5,
+      "size_bytes": 3482,
+      "sha256": "ed682023c818c5138c5387fd1d3ba3c23609750cb406a50097f19ab105a5f5d0"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\platform\\platform-probes\\timeout\\run-manifest.json",
+      "registered_files": 5,
+      "size_bytes": 3447,
+      "sha256": "ad847e6f6a09682c1fdb84fcc7db0c76f87f131dd15e53100d24e308b399bcd9"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\w01-w07-guarded-engineering\\blocked-compute\\run-manifest.json",
+      "registered_files": 7,
+      "size_bytes": 2220,
+      "sha256": "6ec7725deb0153f0665770dcf4911a94b1ca62873853ffd3f3ecada3de367feb"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07\\engineering-suite\\w01-w07-guarded-engineering\\metadata-check\\run-manifest.json",
+      "registered_files": 6,
+      "size_bytes": 2045,
+      "sha256": "015cc99ce31638ced6598c3ef2b17948fdc33872c2dd12b8277f10a74bf14abd"
+    }
+  ],
+  "compute_cli_qualification_probes": 2,
+  "guarded_inprocess_compute_refusal_probe": 1,
+  "new_molecular_scf_grid_or_full_eri": 0,
+  "toy_array_calculations": "ANALYTICAL_SMALL_ARRAYS_ONLY; no molecular integrals",
+  "workflow_changes": "Minimal dependency selection covers all user files via explicit minimal/array classification; latest W07 status assertion and isolated test output fixed; v2 reference guard added.",
+  "workflow_permission_and_publication_review": "CONTENTS_READ_ONLY; FIXED_ACTION_SHAS; NO_IMAGE_PUSH_TAG_RELEASE_STEPS",
+  "work_package_coverage": [
+    {
+      "work_package": "W01",
+      "engineering": "PASS",
+      "evidence": "clean committed Git export, identified existing r3, 35 legacy source hashes and 591 source lock files",
+      "scientific": "NO_NEW_ACCEPTANCE"
+    },
+    {
+      "work_package": "W02",
+      "engineering": "PASS",
+      "evidence": "strict parser/schema/fragments/paths/resources/preflight and four valid Check receipts",
+      "scientific": "INPUT_VALIDITY_IS_NOT_METHOD_APPLICABILITY"
+    },
+    {
+      "work_package": "W03",
+      "engineering": "PASS",
+      "evidence": "4 adapter tests, research metadata guard, Check/refusal and protected in-process service probes",
+      "scientific": "PRODUCTION_COMPUTE_BLOCKED"
+    },
+    {
+      "work_package": "W04",
+      "engineering": "PASS",
+      "evidence": "12 legacy tests, 7 PowerShell AST/path checks, real isolation/timeout/cancel/128MiB OOM and output persistence",
+      "scientific": "NO_SCIENTIFIC_CALCULATION"
+    },
+    {
+      "work_package": "W05",
+      "engineering": "PASS",
+      "evidence": "frozen fixture/resource contracts, finite-metric and fake-engine/array/solver tests",
+      "scientific": "EXISTING_MOLECULAR_ACCEPTANCE_EXECUTED_FAILED_FROZEN_GATES"
+    },
+    {
+      "work_package": "W06",
+      "engineering": "PASS",
+      "evidence": "guarded v1/v2 analytical references (15 each), research/qualification/failed-state tests",
+      "scientific": "EXISTING_MOLECULAR_REFERENCE_FAILED; METHOD_SCOPE_NOT_REVIEWED"
+    },
+    {
+      "work_package": "W07",
+      "engineering": "PASS_SCOPED_HOST_REPORT_INTEGRATION",
+      "evidence": "20 evidence +8 export +10 preservation tests and 9 real host report scenarios",
+      "scientific": "RESEARCH_W07_BLOCKED; HUMAN_FEEDBACK_DEFERRED_BY_USER"
+    }
+  ],
+  "W05_prior_numerical_acceptance": "EXECUTED_FAILED_FROZEN_GATES",
+  "W06_prior_molecular_reference": "EXECUTED_FAILED_FROZEN_GATES",
+  "numerical_acceptance_this_ci_run": "NOT_EXECUTED",
+  "production_compute_enabled": false,
+  "research_w07": "BLOCKED_UNCHANGED",
+  "method_scope": "NOT_REVIEWED; consultation DEFERRED_BY_USER",
+  "human_feedback": "DEFERRED_BY_USER_NOT_CURRENT_ENGINEERING_BLOCKER",
+  "github_actions": "NOT_EXECUTED",
+  "wslc": "BLOCKED_NOT_EXECUTED_PAUSED",
+  "colab": "DEFERRED",
+  "image_build": "NOT_EXECUTED",
+  "image_distribution": "BLOCKED",
+  "public_push_tag_release": "NOT_AUTHORIZED_NOT_EXECUTED",
+  "r3_complete_installed_component_license_audit": "NOT_EXECUTED",
+  "legacy_L4_resume": "UNSUPPORTED; checkpoints can be saved",
+  "evidence_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261006-user-molecule-ci-w01-w07",
+  "evidence_files": {
+    "PIPELINE_EXECUTION.json": {
+      "size_bytes": 758,
+      "sha256": "106dd4a6da7c250452eefe4721124824a2e52fb3185cf92a19f1af158e367c24"
+    },
+    "CI_CONTRACT_BASELINE.json": {
+      "size_bytes": 8260,
+      "sha256": "d5a0a809712c70ebb6da5b5fbe8174157bb32e700771fd89931e6aa62adce83f"
+    },
+    "UNIT_TEST_IDENTITIES.json": {
+      "size_bytes": 54347,
+      "sha256": "9484e9fff94e96b7646cb0ebbcbaa3ad2560b7017f5ad69511377f76a4e696a9"
+    },
+    "PRESERVATION_AFTER_CI.json": {
+      "size_bytes": 824,
+      "sha256": "1eb6940a1dfd5ca714fd86eecab9ae74bb3f078efd0b3f7358a0ca5d4ce71621"
+    },
+    "engineering-suite/summary.json": {
+      "size_bytes": 29776,
+      "sha256": "98bd1382a4374e5daf89eecf97a189004526906b6f79919086f66d47a23cd63f"
+    },
+    "engineering-suite/test-source.json": {
+      "size_bytes": 392,
+      "sha256": "e7591a8164eb3d8d732944e0913b1989c1b52b38b8803b1f8544c0bd7bc0e343"
+    },
+    "engineering-suite/image-inspect.json": {
+      "size_bytes": 3626,
+      "sha256": "df284b98b03357cdecf5532a02f499cf3f529d90824fb535d47a5de409b73008"
+    },
+    "engineering-suite/docker-version.json": {
+      "size_bytes": 1280,
+      "sha256": "239516d679311963484fd23e3e84cd84d4c672b63069b6dafc2c863a3bbd47de"
+    },
+    "engineering-suite/input-resource-w05-contracts/minimal-units/summary.json": {
+      "size_bytes": 26194,
+      "sha256": "4ed75b0978776644cde16e78d99d5fe616fd3170d82560f22f479c9f43d3dc9d"
+    },
+    "engineering-suite/w01-w07-guarded-engineering/w06-engineering-tests.json": {
+      "size_bytes": 39918,
+      "sha256": "be5c531e5c9d8868fee3de2d37fc4a2dd6c142b2ff0231543a8eab4a4b9ce7ec"
+    },
+    "engineering-suite/platform/platform-probe-summary.json": {
+      "size_bytes": 1097,
+      "sha256": "3f31cc5c4484dc34c193126646c6c998eca28e8158e2f42977031a147e529443"
+    },
+    "w07-host-suite/summary.json": {
+      "size_bytes": 871942,
+      "sha256": "9a970766898fac319159857d80879409e510d61d09963ca5d8af1521641b2dfc"
+    },
+    "w01-w06-engineering-plus-w07-units.execution.json": {
+      "size_bytes": 1145,
+      "sha256": "bc541e4a2fb4b7d088a5e61d2808c94f817efa48d4f65ead89302cf43e9d3610"
+    },
+    "w07-host-report-integration.execution.json": {
+      "size_bytes": 1378,
+      "sha256": "40ede142978f09a56b587ec61b881722973611746cb17ede098d58a8355c2c77"
+    }
+  },
+  "independent_review": "EXTERNAL_CI_INDEPENDENT_REVIEW_JSON",
+  "preservation": {
+    "source_product_files": 39,
+    "science_files": 591,
+    "prior_w07_files": 614
+  },
+  "excluded_claims": [
+    "remote GitHub runner/build/upload executed",
+    "new molecular numerical qualification or full independent molecular reference",
+    "method approval",
+    "user research supported",
+    "human usability feedback",
+    "WSLc/Colab acceptance",
+    "image distribution/license closure",
+    "resume support"
+  ]
+}

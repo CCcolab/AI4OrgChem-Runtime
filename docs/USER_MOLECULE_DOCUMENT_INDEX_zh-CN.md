@@ -1,5 +1,7 @@
 # 用户分子服务：当前实施文档入口
 
+最新 [W01—W07 本地CI](USER_MOLECULE_CI_W01_W07_20261006_zh-CN.md) 已执行并通过工程范围：176个独立用例/284执行、10启动器、4平台、9宿主报告；0新分子计算。远端CI仍NOT_EXECUTED，科研Compute仍BLOCKED，真人反馈延期不阻塞当前工程。旧批次记录保留。
+
 日期：2026-10-05；W05-W06-NUMERICAL-EVIDENCE-1。独立普通态、完整条件参考桥接、验收及原生资源记账已实现并实测；普通态/同 D 对照通过所列门禁，条件资格/路径等价性/完整参考失败，资源仅覆盖精确夹具流程。Compute 和正式 W07 仍 BLOCKED，研究范围待真实审阅。此前工程/准备记录保留为历史。
 
 操作从 [用户指南](USER_MOLECULE_RUN_zh-CN.md) 开始；最新身份、范围与缺口见 [求解器 v2 实测](USER_MOLECULE_SOLVER_V2_zh-CN.md)，其 122 项工程测试通过、单例条件数值失败。此前 [数值审查](USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md)、[W05 准备](USER_MOLECULE_W05_PREPARATION_zh-CN.md) 与 [W01—W04 交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md) 为历史批次，不冒充当前状态。

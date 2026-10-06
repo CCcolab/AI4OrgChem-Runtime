@@ -1,5 +1,7 @@
 # AI4OrgChem 可复算运行环境
 
+本轮 [W01—W07 本地工程 CI](docs/USER_MOLECULE_CI_W01_W07_20261006_zh-CN.md) 已通过176个独立单元用例（284次执行）、启动器10项、平台4项及W07宿主报告9项；18个测试容器按成功删除回执移除，输出保留。新增科学计算为0，科研Compute仍BLOCKED，真人反馈不阻塞当前工程交付。GitHub Actions仍NOT_EXECUTED，来源和平台边界保持分列。
+
 2026-10-05 隔离分支现状：Check 和 Report 可用，生产 Compute 保持 **BLOCKED**。[W05—W06 受限分子验收](docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md) 已执行，普通态及同密度算子对照在所列范围内通过，但条件态驻定、两存储路径等价性和完整参考门禁失败，不能进入正式 W07。下文 L0—L4 属于原七任务候选，不转移为新服务科学资格；原工作区与既有交付保留。
 
 W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 是此前的元数据批次。先前验收驱动84项工程测试和四组完整流程峰值保留；最新 [求解器 v2](docs/USER_MOLECULE_SOLVER_V2_zh-CN.md) 的122项工程测试通过，乙烯 pilot 两条同密度对照通过，但三条条件路径仍失败。实际限额1 GiB、1 CPU、零 swap，资源结论限定精确流程，不构成通用用户计算规模或研究范围批准。
