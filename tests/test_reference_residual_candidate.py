@@ -143,9 +143,14 @@ class IndependentResidualTests(unittest.TestCase):
                 self.assertFalse(result['engine_qualified'])
 
     def test_near_degenerate_first_initialization_refuses_one_call(self):
-        result,_ = self.solve(Evaluator('degenerate'),initialization_policy='FIRST_RAW_GLOBAL_AUFBAU_AT_ORDINARY_D0')
+        result,evaluator = self.solve(Evaluator('degenerate'),initialization_policy='FIRST_RAW_GLOBAL_AUFBAU_AT_ORDINARY_D0')
         self.assertFalse(result['engine_qualified']); self.assertEqual(result['evaluation_count'],1)
         self.assertEqual(result['stop_reason'],'ROOT_AMBIGUOUS_INITIALIZATION')
+        self.assertEqual(result['initialization']['status'],'REFUSED')
+        self.assertEqual(result['initialization']['reason'],'ROOT_AMBIGUOUS_INITIALIZATION')
+        self.assertEqual(len(evaluator.calls),1)
+        self.assertEqual(result['evaluation_ledger'][0]['phase'],'INITIALIZE_AT_ORDINARY_D0')
+        self.assertEqual(result['history'],[])
 
     def test_first_nonprojector_init_is_distinct_counted_and_preserves_d0(self):
         result,_ = self.solve(density=np.eye(2),initialization_policy='FIRST_RAW_GLOBAL_AUFBAU_AT_ORDINARY_D0')

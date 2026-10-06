@@ -217,6 +217,7 @@ def solve(*, density, overlap, electrons, evaluate,
             if not np.isfinite(spectrum).all() or not np.isfinite(orbitals).all() or not math.isfinite(gap):
                 raise ReferenceRefusal('NONFINITE_INITIALIZATION','Initial raw generalized eigensystem is not finite')
             if gap < 1e-6:
+                initialized.update(status='REFUSED',reason='ROOT_AMBIGUOUS_INITIALIZATION')
                 raise ReferenceRefusal('ROOT_AMBIGUOUS_INITIALIZATION','Unchanged initial gap admission failed')
             d = 2*orbitals[:,:occupied]@orbitals[:,:occupied].T; d = (d+d.T)/2
             initial_frame = frame(d)
