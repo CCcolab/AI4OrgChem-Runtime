@@ -25,6 +25,7 @@ ARRAY_PATTERNS = (
     'test_user_molecule_acceptance_metrics.py',
     'test_user_molecule_ordinary_reference.py',
     'test_user_molecule_solver_candidate.py',
+    'test_user_molecule_residual_candidate.py',
 )
 
 
