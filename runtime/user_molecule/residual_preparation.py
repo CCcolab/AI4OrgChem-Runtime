@@ -55,6 +55,81 @@ def _scalar(value, name):
     return float(value)
 
 
+def restore_legacy_basis_representation(*, context, ordinary_record):
+    """Explicit fixed-C/H dict-order compatibility, never a basis-value repair.
+
+    The historical identity used repr(mol._basis), which includes dictionary
+    insertion order. Restore that order only if one of the two exact typed-value
+    representations hashes to the old identity and all other metadata agrees.
+    Keep old records untouched; freeze atom/AO/native engine arrays before/after.
+    """
+    mol = context.mol
+    recorded = ordinary_record["metadata"]
+    actual = context.metadata
+    basis = mol._basis
+    if not isinstance(basis, dict) or set(basis) != {"C", "H"}:
+        _fail("LEGACY_BASIS_SCOPE_REFUSED", "Only the fixed two-element C/H cache is supported")
+    before_repr = repr(basis)
+    before_sha = _hash(before_repr.encode("utf-8"))
+    expected_sha = recorded.get("basis_expansion_sha256")
+    if actual.get("basis_expansion_sha256") != before_sha:
+        _fail("LEGACY_BASIS_CACHE_METADATA_REFUSED", "Builder metadata must describe the actual cached representation")
+    other = {key: value for key, value in actual.items() if key != "basis_expansion_sha256"}
+    expected_other = {key: value for key, value in recorded.items() if key != "basis_expansion_sha256"}
+    if other != expected_other:
+        _fail("LEGACY_BASIS_OTHER_METADATA_REFUSED", "Only a basis representation hash difference may be restored")
+    representations = []
+    for order in (("C", "H"), ("H", "C")):
+        reordered = {key: basis[key] for key in order}
+        text = repr(reordered)
+        representations.append({"order": list(order), "repr": text,
+                                "sha256": _hash(text.encode("utf-8"))})
+    matching = [row for row in representations if row["sha256"] == expected_sha]
+    if len(matching) != 1:
+        _fail("LEGACY_BASIS_IDENTITY_NOT_REPRODUCED", "Neither exact C/H key order reproduces the historical hash")
+    def typed(value):
+        if isinstance(value, np.ndarray):
+            _fail("LEGACY_BASIS_VALUE_REFUSED", "Legacy repr may truncate arrays; basis values must have a complete scalar/list/tuple representation")
+        if isinstance(value, dict):
+            return ["dict", [[key, typed(value[key])] for key in sorted(value)]]
+        if isinstance(value, (list, tuple)):
+            return [type(value).__name__, [typed(child) for child in value]]
+        if isinstance(value, (str, bool, int, float, np.integer, np.floating)) or value is None:
+            if isinstance(value, (float, np.floating)) and not np.isfinite(value):
+                _fail("LEGACY_BASIS_VALUE_REFUSED", "Basis scalar values must be finite")
+            return [type(value).__module__+"."+type(value).__qualname__, repr(value)]
+        _fail("LEGACY_BASIS_VALUE_REFUSED", "Unsupported cached value type")
+    fingerprint = _hash(_canonical(typed(basis)))
+    def cache_snapshot():
+        native = {}
+        for name in ("_atm", "_bas", "_env"):
+            if hasattr(mol, name):
+                array = np.asarray(getattr(mol, name))
+                native[name] = {"dtype": array.dtype.str, "shape": list(array.shape),
+                                "sha256": _hash(array.tobytes(order="C"))}
+        return {"native_arrays": native,
+                "coordinates_angstrom": array_identity(mol.atom_coords(unit="Angstrom")),
+                "ao_labels": [list(label) for label in mol.ao_labels(fmt=False)]}
+    caches = cache_snapshot()
+    selected = matching[0]
+    restored = {key: basis[key] for key in selected["order"]}
+    if _hash(_canonical(typed(restored))) != fingerprint or any(restored[key] is not basis[key] for key in basis):
+        _fail("LEGACY_BASIS_VALUE_CHANGED", "Reordering must preserve exact typed values and child objects")
+    mol._basis = restored
+    context.metadata = copy.deepcopy(actual)
+    context.metadata["basis_expansion_sha256"] = _hash(repr(mol._basis).encode("utf-8"))
+    if cache_snapshot() != caches or context.metadata != recorded:
+        _fail("LEGACY_BASIS_NATIVE_CACHE_CHANGED", "Native engine arrays/AOs/atoms or restored metadata differ")
+    return {"status": "PASS_EXACT_LEGACY_BASIS_REPRESENTATION",
+            "representation_changed": before_sha != expected_sha,
+            "before_repr": before_repr, "before_sha256": before_sha,
+            "matched_repr": selected["repr"], "matched_sha256": selected["sha256"],
+            "tested_representations": representations, "typed_value_sha256": fingerprint,
+            "native_cache_before_and_after": caches, "basis_values_changed": False,
+            "old_record_changed": False, "new_scientific_calls": 0,
+            "scope": "EXACT_FIXED_CH_DICTIONARY_ORDER_ONLY_NOT_BASIS_REPAIR_OR_AUTHENTICATION"}
+
+
 def _verify_input_bundle(bundle, profile):
     try:
         request = strict_json(bundle["request_bytes"])

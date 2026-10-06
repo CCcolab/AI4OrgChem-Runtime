@@ -30,6 +30,7 @@ ARRAY_PATTERNS = (
     'test_user_molecule_residual_bridge.py',
     'test_user_molecule_residual_preparation.py',
     'test_user_molecule_residual_integration.py',
+    'test_user_molecule_basis_representation.py',
 )
 
 
