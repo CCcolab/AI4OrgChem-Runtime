@@ -1,7 +1,8 @@
 # Compatible with Windows PowerShell 5.1; no host scientific Python required.
 [CmdletBinding()]
 param([ValidateSet('Check','Compute','Report')][string]$Action='Check',[string]$Image,[string]$Request,
- [string]$CheckRun,[string]$RunDirectory,[string]$OutputRoot,[string]$LockRoot,[string]$CancelFile,[string]$PowerShell7,[switch]$KeepContainer)
+ [string]$CheckRun,[string]$RunDirectory,[string]$OutputRoot,[string]$LockRoot,[string]$CancelFile,
+ [string]$PythonExecutable,[string]$ReportExportDirectory,[string]$PowerShell7,[switch]$KeepContainer)
 $ErrorActionPreference='Stop'
 $candidates=@()
 if($PowerShell7){$candidates=@($PowerShell7)}else{
@@ -19,11 +20,13 @@ foreach($candidate in $candidates){
 }
 if(-not $selected){throw 'PowerShell 7.3+ not found; provide its existing executable using -PowerShell7.'}
 $args=@('-NoProfile','-File',(Join-Path $PSScriptRoot 'run-user-molecule.ps1'),'-Action',$Action)
-foreach($name in @('Image','Request','CheckRun','RunDirectory','OutputRoot','LockRoot','CancelFile')){
+foreach($name in @('Image','Request','CheckRun','RunDirectory','OutputRoot','LockRoot','CancelFile','PythonExecutable','ReportExportDirectory')){
     $value=Get-Variable -Name $name -ValueOnly
     if($value){$args+=@("-$name",$value)}
 }
 if($KeepContainer){$args+='-KeepContainer'}
 & $selected @args
-$global:LASTEXITCODE=$LASTEXITCODE
-if($LASTEXITCODE -ne 0){Write-Error "User molecule action exited $LASTEXITCODE; records retained." -ErrorAction Continue}
+$actionExitCode=$LASTEXITCODE
+$global:LASTEXITCODE=$actionExitCode
+if($actionExitCode -ne 0){Write-Error "User molecule action exited $actionExitCode; records retained." -ErrorAction Continue}
+exit $actionExitCode

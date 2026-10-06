@@ -17,12 +17,20 @@ def validate(value, schema_name):
 
 
 def execute(args):
+    args._run_started = False
     output = Path(args.output_dir)
     output.mkdir(parents=True, exist_ok=True)
-    for name in ('preflight.json', 'result.json', 'runtime-progress.json'):
+    for name in ('preflight.json', 'result.json', 'runtime-progress.json',
+                 'error.json', 'report.md', 'input', 'run-manifest.json', 'manifest.json'):
         if (output/name).exists():
             raise InputError('output contains prior service records; use a new run', 40)
-    save(output/'runtime-progress.json', {'stage': 'INPUT_CHECK'})
+    host_path = output/'host-execution.json'
+    if host_path.exists():
+        host = load(host_path)
+        if not isinstance(host, dict) or host.get('finished_utc') or host.get('status') in ('COMPLETED', 'BLOCKED', 'FAILED'):
+            raise InputError('output contains a settled host run; use a new run', 40)
+    save(output/'runtime-progress.json', {'stage': 'INPUT_CHECK', 'scf_executed': False})
+    args._run_started = True
     bundle = read_request(args.request, load(ROOT/'schemas/user-molecule-request-v1.json'))
     profile_path = ROOT/'profiles/user-molecule'/(bundle['request']['calculation_profile']+'.json')
     profile = load(profile_path)
@@ -109,26 +117,52 @@ def main():
             child.add_argument('--lock-root', default='/locks')
     child = sub.add_parser('report')
     child.add_argument('--run-directory', required=True)
+    child.add_argument('--export-directory', help='New directory outside the source run; original evidence is never changed')
     args = parser.parse_args()
     if args.action == 'report':
-        path = Path(args.run_directory)
-        record = load(path/('result.json' if (path/'result.json').exists() else 'preflight.json'))
-        request_path = path/'input/request.normalized.json'
-        print(report(record, load(request_path) if request_path.exists() else None))
-        return 0
+        # Windows console defaults must not make a Chinese/Angstrom brief fail.
+        for stream in (sys.stdout, sys.stderr):
+            if hasattr(stream, 'reconfigure'):
+                stream.reconfigure(encoding='utf-8')
+        try:
+            from .evidence import read_run_report
+            context = read_run_report(args.run_directory)
+            if args.export_directory:
+                export_report(args.run_directory, args.export_directory, context)
+            print(context['markdown'])
+            return context['summary']['report_exit_code']
+        except Exception as exc:
+            print('Report failed; original records unchanged: ' + str(exc), file=sys.stderr)
+            return 40
     try:
         return execute(args)
     except Exception as exc:
         code = exc.code if isinstance(exc, InputError) else 40
         output = Path(args.output_dir)
         # Never replace an existing result with a generic error after a retry.
-        if not (output/'result.json').exists():
+        if getattr(args, '_run_started', False) and not (output/'result.json').exists():
             save(output/'error.json', {'error_type': type(exc).__name__, 'message': str(exc), 'exit_code': code})
             manifest(output, action=args.action, execution_status='FAILED', numerical_status='NOT_EXECUTED', exit_code=code)
         print(str(exc), file=sys.stderr)
         if code == 40:
             traceback.print_exc()
         return code
+
+
+def export_report(run_directory, export_directory, context):
+    """Export derived briefs into one fresh directory, never inside old evidence."""
+    source, target = Path(run_directory).resolve(), Path(export_directory).resolve()
+    if target == source or target.is_relative_to(source) or target.exists():
+        raise InputError('Report export needs a new directory outside the source run', 40)
+    target.mkdir(parents=True, exist_ok=False)
+    (target/'report.md').write_text(context['markdown'], encoding='utf-8', newline='\n')
+    save(target/'report-summary.json', context['summary'])
+    from . import evidence
+    manifest(target, action='READONLY_REPORT_EXPORT',
+             source_directory=str(source), source_files=context['source_files'],
+             record_kind=context['record_kind'], report_exit_code=context['summary']['report_exit_code'],
+             report_adapter_sha256=file_hash(Path(evidence.__file__)),
+             report_cli_sha256=file_hash(Path(__file__)), scientific_processes_started=0)
 
 
 if __name__ == '__main__':

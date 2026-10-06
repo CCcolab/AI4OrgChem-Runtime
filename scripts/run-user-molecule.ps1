@@ -5,14 +5,14 @@ param(
  [string]$Image,[string]$Request,[string]$CheckRun,[string]$RunDirectory,
  [string]$OutputRoot='D:\AI4Science\user-molecule-runs',
  [string]$LockRoot='D:\AI4Science\ai4orgchem-runtime-runs\.host-locks',
- [string]$CancelFile,[switch]$KeepContainer
+ [string]$CancelFile,[string]$PythonExecutable,[string]$ReportExportDirectory,[switch]$KeepContainer
 )
 . (Join-Path $PSScriptRoot 'UserMolecule.Common.ps1')
 $PSNativeCommandArgumentPassing='Standard'
 if($Action -eq 'Report'){
-    if(-not $RunDirectory){throw 'Report requires -RunDirectory'}
-    Get-Content -LiteralPath (Join-Path $RunDirectory 'report.md') -Encoding utf8
-    exit 0
+    & (Join-Path $PSScriptRoot 'read-user-molecule-report.ps1') -RunDirectory $RunDirectory `
+        -PythonExecutable $PythonExecutable -ReportExportDirectory $ReportExportDirectory
+    exit $LASTEXITCODE
 }
 if(-not $Image -or -not $Request){throw 'Check/Compute requires -Image and -Request'}
 $runId=$Action.ToLowerInvariant()+'-'+[DateTime]::UtcNow.ToString('yyyyMMddTHHmmssZ')+'-'+[Guid]::NewGuid().ToString('N')
@@ -118,7 +118,7 @@ try{
             $hostRecord.container_exit_code=$row.State.ExitCode;$hostRecord.oom_killed=$row.State.OOMKilled
             Invoke-UserMoleculeDocker $engine @('logs',$containerId) $errorLog|Out-Null
             if(-not $KeepContainer){Invoke-UserMoleculeDocker $engine @('rm',$containerId) $errorLog|Out-Null;$removed=$true}
-        }catch{$hostRecord['collection_error']=$_.Exception.Message;$hostRecord.termination_reason='UNKNOWN';$code=40}
+        }catch{$hostRecord['collection_error']=$_.Exception.Message;$hostRecord.status='FAILED';$hostRecord.termination_reason='UNKNOWN';$code=40}
     }
     if($lock){$lock.Dispose()}
     $hostRecord['container_removed']=$removed;$hostRecord.service_exit_code=$code
