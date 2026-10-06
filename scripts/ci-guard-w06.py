@@ -53,7 +53,9 @@ def main():
     for pattern in ('test_user_molecule_*.py', 'test_reference_user_molecule.py',
                     'test_reference_user_molecule_v2.py', 'test_reference_residual_candidate.py',
                     'test_reference_residual_molecule.py', 'test_reference_seed_v2.py',
-                    'test_reference_residual_seed_v2.py', 'test_runtime.py'):
+                    'test_reference_residual_seed_v2.py',
+                    'test_reference_residual_budgeted_candidate.py',
+                    'test_reference_budgeted_seed.py', 'test_runtime.py'):
         suite = unittest.defaultTestLoader.discover(str(ROOT/'tests'), pattern=pattern)
         identities = test_ids(suite)
         result = unittest.TextTestRunner(verbosity=2).run(suite)
