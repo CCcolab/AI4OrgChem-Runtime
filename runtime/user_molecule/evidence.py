@@ -348,9 +348,10 @@ def read_run_report(run_directory):
         execution_status, numerical_status, research_status, scientific_execution = 'UNKNOWN', 'UNKNOWN', 'NOT_QUALIFIED', 'UNKNOWN'
         issues.append('HOST_NONTERMINAL_OR_UNKNOWN')
     integrity = 'UNVERIFIED' if issues else 'MATCHED'
-    available = (integrity == 'MATCHED' and not acceptance and not error and not terminal_host and
+    available = (integrity == 'MATCHED' and not acceptance and
+                 execution_status == 'COMPLETED' and numerical_status == 'NUMERICALLY_QUALIFIED' and
                  record.get('comparison_available') is True and
-                 qualification['research_status'] in ('TECHNICAL_ONLY', 'NOT_REVIEWED'))
+                 research_status in ('TECHNICAL_ONLY', 'NOT_REVIEWED'))
     if integrity != 'MATCHED' and not checked_only:
         research_status = 'NOT_QUALIFIED'
         if raw_statuses['numerical_status'] == 'NUMERICALLY_QUALIFIED':

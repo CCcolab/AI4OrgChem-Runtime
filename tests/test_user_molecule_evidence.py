@@ -278,6 +278,27 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(summary['original_exit_code'], 20)
         self.assertEqual(summary['report_exit_code'], 0)
 
+    def test_host_blocked_cannot_export_a_cached_qualified_comparison(self):
+        self.qualified()
+        self.manifest()
+        self.assertTrue(read_run_report(self.root)['summary']['comparison_available'])
+        self.write('host-execution.json', {'status': 'BLOCKED', 'service_exit_code': 20,
+                   'container_exit_code': 20})
+        self.manifest()
+        before = self.snapshot()
+        summary = read_run_report(self.root)['summary']
+        self.assertEqual(summary['record_integrity'], 'MATCHED')
+        self.assertEqual(summary['execution_status'], 'BLOCKED')
+        self.assertEqual(summary['research_status'], 'NOT_QUALIFIED')
+        self.assertEqual(summary['raw_statuses']['numerical_status'], 'NUMERICALLY_QUALIFIED')
+        self.assertFalse(summary['comparison_available'])
+        self.assertFalse(summary['compute_eligible'])
+        self.assertIsNone(summary['delta_hartree'])
+        self.assertIsNone(summary['delta_kcal_mol'])
+        self.assertEqual(summary['original_exit_code'], 20)
+        self.assertEqual(summary['report_exit_code'], 0)
+        self.assertEqual(self.snapshot(), before)
+
     def test_completed_host_check_survives_manifest_host_only_envelope(self):
         self.preflight()
         host = {'status': 'COMPLETED', 'service_exit_code': 0, 'container_exit_code': 0}
