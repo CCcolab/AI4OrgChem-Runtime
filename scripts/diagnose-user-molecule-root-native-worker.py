@@ -61,7 +61,49 @@ def close_active_initialization(output,*,journal,accounting,reference,reason):
     return book
 
 
-def run_worker(args,contract,parent_bytes,grant,output):
+def publish_shutdown_receipt(output,controller,*,journal=None,accounting=None,reference=None,cleanup_error=None):
+    """Report actual fresh handles after closing; never open a prior ledger."""
+    state=None;counts=None;guard=None;errors=[]
+    if cleanup_error is not None:errors.append(type(cleanup_error).__name__+': '+str(cleanup_error))
+    if journal is not None:
+        try:state=journal.snapshot()
+        except BaseException as error:errors.append(type(error).__name__+': '+str(error))
+    if accounting is not None:
+        try:counts=accounting.snapshot()
+        except BaseException as error:errors.append(type(error).__name__+': '+str(error))
+    guard_path=output/'guard-status.json'
+    if guard_path.exists():
+        try:
+            from runtime.user_molecule.input import strict_json
+            guard=strict_json(guard_path.read_bytes())
+        except BaseException as error:errors.append(type(error).__name__+': '+str(error))
+    closed=(state is None and journal is None) or (state is not None and state['pending_slots']==0
+        and all(row['state']=='CLOSED' for row in state['paths'].values()))
+    reference_settled=None if reference is None else reference._settled is True
+    accounting_closed=None if counts is None else counts.get('closed')
+    persistence=None if counts is None else counts.get('persistence_intact')
+    guards_held=(guard is not None and type(guard.get('forbidden_attempts')) is list and not guard['forbidden_attempts']
+        and type(guard.get('changed_bindings')) is list and not guard['changed_bindings'])
+    visible_closed=(closed and (reference is None or reference_settled is True)
+        and (accounting is None or (accounting_closed is True and persistence is True)))
+    receipt={'schema':'root-native-worker-shutdown-v1','status':'COOPERATIVE_STOP_VISIBLE_HANDLES_CLOSED' if visible_closed and guards_held and not errors else 'SHUTDOWN_UNKNOWN_NOT_QUALIFIED',
+        'stop':controller.snapshot(),'journal_created':journal is not None,'accounting_created':accounting is not None,
+        'reference_created':reference is not None,'reference_settled':reference_settled,
+        'accounting_present':accounting is not None,'accounting_closed':accounting_closed,'accounting_persistence_intact':persistence,
+        'guard_receipt_present':guard is not None,'guard_receipt':guard,'guards_held':guards_held,
+        'closure_scope':'VISIBLE_FRESH_HANDLES_ONLY_NOT_INDEPENDENT_CERTIFICATION_OF_ALL_SCIENTIFIC_ACTIVITY',
+        'journal_snapshot':state,'accounting_snapshot':counts,'source_native_counts':None if counts is None else counts['source_native_dispatch_counts'],
+        'native_count_evidence':'UNKNOWN_WHEN_ACCOUNTING_UNAVAILABLE_NOT_REPLACED_BY_ZERO',
+        'errors':errors,'automatic_retry':False,'resume':False,'Compute':False,'method_approval':False}
+    save(output/'worker-shutdown-receipt.json',receipt)
+    return receipt
+
+
+def run_worker(args,contract,parent_bytes,grant,output,*,stop_controller=None):
+    from runtime.user_molecule.root_native_lifecycle import StopController
+    controller=stop_controller if stop_controller is not None else StopController(deadline_epoch=args.stop_deadline_epoch if args.execute else None)
+    args._shutdown_handles=None
+    controller.checkpoint('BEFORE_SCIENTIFIC_IMPORTS')
     import numpy as np
     from pyscf import dft,gto,scf
     from pyscf.dft import numint
@@ -118,6 +160,7 @@ def run_worker(args,contract,parent_bytes,grant,output):
     def changed():return [label for owner,name,guard,label in guards if getattr(owner,name)is not guard]
     started=time.monotonic()
     def observe(phase):
+        controller.checkpoint('BEFORE_OBSERVE_'+phase)
         value={'phase':phase,'elapsed_worker_seconds':time.monotonic()-started,
             'cgroup':collect_cgroup(phase=phase),'vm_memory':resource_helpers.vm_memory()}
         with (output/'resources.jsonl').open('a',encoding='utf-8',newline='\n') as stream:
@@ -125,7 +168,7 @@ def run_worker(args,contract,parent_bytes,grant,output):
         if resource_helpers.resource_reasons(value['cgroup']) or value['vm_memory']['available_bytes'] is None or value['vm_memory']['available_bytes']<2147483648:
             raise RuntimeError('Actual single-process resource admission refused')
         if forbidden or changed():raise RuntimeError('Forbidden operation or changed held guard')
-        if args.execute and time.time()>=args.stop_deadline_epoch:raise RuntimeError('Host stop deadline reached; no callback or tail extension')
+        controller.checkpoint('AFTER_OBSERVE_'+phase)
         return value
     parent=contract['parent_preparation_contract']
     versions={name:importlib.metadata.version(name) for name in parent['expected_dependencies']}
@@ -172,6 +215,7 @@ def run_worker(args,contract,parent_bytes,grant,output):
     try:
         # No science allowance exists before complete identity/platform admission.
         if args.execute:
+            controller.checkpoint('BEFORE_SCIENTIFIC_ALLOWANCE')
             from runtime.user_molecule.residual_budget import ConditionalCallbackBudget
             from runtime.user_molecule.root_native_accounting import RootNativeAccounting
             from runtime.user_molecule.root_native_binding import NativeReferenceNRBinding
@@ -182,7 +226,8 @@ def run_worker(args,contract,parent_bytes,grant,output):
             accounting=RootNativeAccounting(output/'accounting',journal,execution_kind='SOURCE_NATIVE_DIAGNOSTIC',scientific_execution_authorized=True)
             active_stage='NR_BINDING_CONSTRUCTION'
             nr_binding=NativeReferenceNRBinding(context=context,accounting=accounting,contract=contract,runtime_root=args.runtime_root,
-                original_nr=types.MethodType(original_nr,context.mean_field._numint),contract_sha256=sha(args.contract.read_bytes()),**opts)
+                original_nr=types.MethodType(original_nr,context.mean_field._numint),contract_sha256=sha(args.contract.read_bytes()),
+                before_dispatch_check=lambda:controller.checkpoint('BEFORE_NATIVE_NR_DISPATCH'),**opts)
             active_stage='NR_BINDING_INSTALL'
             nr_binding.install()
         active_stage='PREPARED_REFERENCE_CONSTRUCTION'
@@ -232,14 +277,29 @@ def run_worker(args,contract,parent_bytes,grant,output):
                 'reference_created':reference is not None,'Compute':False,'automatic_retry':False})
         raise
     finally:
+        cleanup_error=None
         if args.execute:
             try:
                 book=close_active_initialization(output,journal=journal,accounting=accounting,reference=reference,
                     reason='NORMAL_RETURN' if active_error is None else 'ACTIVE_INITIALIZATION_OR_SOLVE_FAILURE_NO_RETRY')
+            except BaseException as error:
+                cleanup_error=error
+                raise
             finally:
+                args._shutdown_handles={'journal':journal,'accounting':accounting,'reference':reference,'cleanup_error':cleanup_error}
                 save(output/'guard-status.json',{'guarded_operations':[row[3] for row in guards],
                     'forbidden_attempts':forbidden,'changed_bindings':changed(),
                     'new_ordinary_SCF_grid_full_integrals':0,'nuclear_repulsion_calls':0})
+                if controller.snapshot()['stop_requested']:
+                    publish_shutdown_receipt(output,controller,**args._shutdown_handles)
+        else:
+            if reference is not None and controller.snapshot()['stop_requested']:reference._used=reference._settled=True
+            args._shutdown_handles={'journal':None,'accounting':None,'reference':reference,'cleanup_error':None}
+            if controller.snapshot()['stop_requested']:
+                save(output/'guard-status.json',{'guarded_operations':[row[3] for row in guards],
+                    'forbidden_attempts':forbidden,'changed_bindings':changed(),
+                    'new_ordinary_SCF_grid_full_integrals':0,'nuclear_repulsion_calls':0})
+                publish_shutdown_receipt(output,controller,**args._shutdown_handles)
     save(output/'native-summary.json',{'status':'EXECUTED_SINGLE_PATH_ROOT_DIAGNOSTIC_ONLY',
         'endpoint_qualified':bool(result['engine_qualified']),'stop_reason':result['stop_reason'],
         'source_NR_counts':book['source_native_dispatch_counts'],'callback_slots':book['callback_slots'],
@@ -264,13 +324,15 @@ def argument_parser():
     return parser
 
 
-def main():
+def _main_with_controller(controller):
     args=argument_parser().parse_args()
     args.runtime_root=args.runtime_root.resolve();sys.path[:0]=[str(args.runtime_root),str(args.science_root/'software/src')]
     from runtime.user_molecule.input import strict_json
     from runtime.user_molecule.occupied_space_root_native_contract import load_execution_contract
     if args.execute and (args.grant_file is None or args.stop_deadline_epoch is None):raise ValueError('Explicit grant and host stop deadline required')
     if args.prepare_only and args.grant_file is not None:raise ValueError('Gated preparation cannot receive an execution grant')
+    if args.execute:controller.arm_deadline(args.stop_deadline_epoch)
+    args._shutdown_handles=None
     parent_bytes=args.parent_contract.read_bytes();grant=strict_json(args.grant_file.read_bytes()) if args.grant_file else None
     contract=load_execution_contract(args.contract,parent_preparation_contract_bytes=parent_bytes,
         explicit_grant=grant,local_cli_execute_requested=args.execute)
@@ -283,18 +345,33 @@ def main():
     save(output/'WORKER_STARTED.json',{'runtime_test_commit':contract['runtime_test_commit'],
         'contract_sha256':sha(args.contract.read_bytes()),'execute':args.execute,'grant_supplied':grant is not None})
     try:
+        controller.checkpoint('BEFORE_PLATFORM_PREFLIGHT')
         helpers=load_module(args.runtime_root,'scripts/diagnose-user-molecule-occupied-space-response-worker.py','native_platform')
         roots={'root_filesystem':'/','runtime_source':args.runtime_root,'science_source':args.science_root,
             'ordinary_cache':args.ordinary_dir,'seed_input':args.seed_input_dir,'execution_contract':args.contract,
             'parent_contract':args.parent_contract}
         if args.grant_file:roots['execution_grant']=args.grant_file
         platform=helpers.platform_preflight(roots=roots);save(output/'platform-preflight.json',platform)
+        controller.checkpoint('AFTER_PLATFORM_PREFLIGHT')
         if platform['status']!='PASS_ACTUAL_PLATFORM_PREFLIGHT':return 20
-        return run_worker(args,contract,parent_bytes,grant,output)
+        result=run_worker(args,contract,parent_bytes,grant,output,stop_controller=controller)
+        controller.checkpoint('BEFORE_WORKER_RETURN')
+        return result
     except BaseException as error:
+        if controller.snapshot()['stop_requested'] and not (output/'worker-shutdown-receipt.json').exists():
+            handles=args._shutdown_handles or {'journal':None,'accounting':None,'reference':None,'cleanup_error':None}
+            publish_shutdown_receipt(output,controller,**handles)
         save(output/'worker-fatal-error.json',{'status':'NOT_QUALIFIED','type':type(error).__name__,
             'message':str(error),'traceback':traceback.format_exc(),'Compute':False,'automatic_retry':False})
         traceback.print_exc();return 2
+
+
+def main():
+    sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+    from runtime.user_molecule.root_native_lifecycle import StopController
+    controller=StopController()
+    with controller.installed():
+        return _main_with_controller(controller)
 
 
 if __name__=='__main__':raise SystemExit(main())

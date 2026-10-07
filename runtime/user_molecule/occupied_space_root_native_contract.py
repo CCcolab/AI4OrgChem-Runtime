@@ -47,6 +47,7 @@ REQUIRED_SOURCE_FILES = parent_contract.REQUIRED_SOURCE_FILES | frozenset((
     'runtime/user_molecule/occupied_space_root_native_contract.py',
     'runtime/user_molecule/root_native_accounting.py',
     'runtime/user_molecule/root_native_binding.py',
+    'runtime/user_molecule/root_native_lifecycle.py',
     'reference/occupied_space_root_native_candidate.py',
     'scripts/ci-guard-budget-recording.py',
     'scripts/ci-guard-root-native.py',

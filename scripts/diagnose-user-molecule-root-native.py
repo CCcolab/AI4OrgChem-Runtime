@@ -37,6 +37,9 @@ GUARDS = frozenset(('SCF.kernel','SCF.scf','hf.kernel','RHF.kernel','UHF.kernel'
     'old production SCF driver','old reference solve','old budgeted solve','old fake-only root',
     'source SCF driver','source direct F shortcut','public SciPy shortcut','public Jacobian shortcut'))
 PREPARE_GUARDS = GUARDS | frozenset(('new native root solve','new native TRF alias','new native Jacobian alias','prepared reference evaluate'))
+STOP_GRACE_SECONDS = 18
+STOP_COMMAND_TIMEOUT_SECONDS = 20
+STOP_EVIDENCE_RESERVE_SECONDS = 5
 
 
 def sha(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -266,6 +269,25 @@ class DockerCommands:
             row.update(error_type=type(error).__name__,error=str(error)); raise
 
 
+def stop_owned_container(docker, container_id, *, started, duration):
+    """Cooperative grace within the existing hard budget; caller checks ownership.
+
+    The 18-second daemon grace has a 20-second CLI window, so nominal remaining
+    evidence time is five seconds at275, not a guaranteed seven-second reserve.
+    All requests remain clamped to actual time. Late/unknown cleanup is failure.
+    """
+    remaining=started+duration-time.monotonic()
+    usable=remaining-STOP_EVIDENCE_RESERVE_SECONDS
+    if usable<=0:
+        raise TimeoutError('No safe stop/evidence window remains; cleanup unknown')
+    grace=min(STOP_GRACE_SECONDS,max(0,int(usable)-2))
+    timeout=min(STOP_COMMAND_TIMEOUT_SECONDS,usable)
+    docker('stop','--time',str(grace),container_id,timeout=timeout)
+    return {'requested_grace_seconds':grace,'command_timeout_seconds':timeout,
+        'remaining_before_stop_seconds':remaining,'nominal_evidence_reserve_seconds':STOP_EVIDENCE_RESERVE_SECONDS,
+        'scope':'OWNED_PROCESS_TERMINATION_NOT_SUCCESS_OR_SCIENCE_QUALIFICATION'}
+
+
 def argument_parser():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output-root',type=Path,required=True)
@@ -341,13 +363,21 @@ def run_supervisor(args):
         cid=docker(*command,timeout=15).decode().strip()
         if re.fullmatch('[0-9a-f]{64}',cid) is None: raise ValueError('Complete owned container ID required')
         execution.update(container_id=cid,status='RUNNING'); docker('start',cid)
+        last_owned_inspection=None
         while True:
-            inspected=json.loads(docker('inspect',cid))[0]
+            soft_remaining=started+stop_at-time.monotonic()
+            if soft_remaining<=0:
+                # CID/image/label were established by an earlier inspection.
+                # If start/inspect never completed, finally verifies ownership.
+                if last_owned_inspection is None:raise TimeoutError('No owned inspection before soft stop')
+                execution['wall_stop_requested']=True
+                execution['stop_request']=stop_owned_container(docker,cid,started=started,duration=duration)
+                break
+            inspected=json.loads(docker('inspect',cid,timeout=min(5,soft_remaining)))[0]
             verify_container_security(inspected,parent['image_id'],token,execute=execute)
+            last_owned_inspection=inspected
             if inspected['State']['Running'] is not True: break
-            if time.monotonic()-started >= stop_at:
-                docker('stop','--time','2',cid,timeout=8); execution['wall_stop_requested']=True; break
-            time.sleep(.25)
+            time.sleep(min(.25,max(0,started+stop_at-time.monotonic())))
         completed=json.loads(docker('inspect',cid))[0]
         verify_container_security(completed,parent['image_id'],token,execute=execute)
         execution.update(container_exit_code=completed['State']['ExitCode'],oom_killed=completed['State']['OOMKilled'])
@@ -368,11 +398,12 @@ def run_supervisor(args):
     finally:
         try:
             if cid:
-                inspected=json.loads(docker('inspect',cid))[0]
+                inspected=json.loads(docker('inspect',cid,timeout=2))[0]
                 # Always validate ownership before stopping or deleting.
                 if inspected['Config']['Labels'].get(LABEL) != token or inspected['Image'] != identity['image_id']:
                     raise ValueError('Cleanup ownership/image differs')
-                if inspected['State']['Running']: docker('stop','--time','2',cid,timeout=8)
+                if inspected['State']['Running']:
+                    execution['cleanup_stop_request']=stop_owned_container(docker,cid,started=started,duration=duration)
                 completed=json.loads(docker('inspect',cid))[0]; save(output/'container-inspect.json',completed)
                 remaining=started+duration-time.monotonic()
                 if remaining<=0: raise TimeoutError('No cleanup time remains for log preservation')

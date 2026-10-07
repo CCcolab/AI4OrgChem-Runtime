@@ -167,7 +167,7 @@ class RootNativeSupervisorTests(unittest.TestCase):
         wall=json.loads((self.args.output_root/'WALL_SETTLEMENT.json').read_bytes())
         self.assertEqual(wall['unresolved_reserved_seconds'],120)
     def test_cleanup_time_is_included_and_resource_unknown_cannot_pass(self):
-        result,_=self.execute_mock(clock=[0,1,121])
+        result,_=self.execute_mock(clock=[0,1,1,121])
         self.assertEqual(result,1)
         value=json.loads((self.args.output_root/'EXECUTION.json').read_bytes())
         self.assertEqual(value['status'],'FAILED_WALL_BUDGET_NO_RETRY')

@@ -35,6 +35,7 @@ class RootNativeBindingTests(unittest.TestCase):
         obj.assert_held=lambda:None
         obj.mol,obj.grid,obj.xc=object(),object(),'B3LYPG'
         obj.active_token=object()
+        obj._before_dispatch_check=None
         obj.active_context={'slot_id':1,'density_id':'a'*64,'path_id':'independent_reference','phase':'CURRENT_INITIAL'}
         obj.calls=[]
         obj.original_nr=lambda *args,**kwargs:obj.calls.append((args,kwargs)) or ('test-only',)

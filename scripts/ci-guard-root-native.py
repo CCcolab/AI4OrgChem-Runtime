@@ -10,7 +10,9 @@ import unittest
 
 ROOT=Path(__file__).resolve().parents[1]
 PATTERNS=('test_root_native_contract.py','test_root_native_accounting.py','test_root_native_candidate.py',
-    'test_root_native_binding.py','test_root_native_supervisor.py','test_reference_occupied_space_root_candidate.py')
+    'test_root_native_binding.py','test_root_native_supervisor.py','test_reference_occupied_space_root_candidate.py',
+    'test_root_native_lifecycle.py','test_native_pre_dispatch_stop.py','test_native_stop_supervision.py',
+    'test_native_overhead_probe.py','test_native_shutdown_probe.py')
 
 
 def main():

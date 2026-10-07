@@ -249,7 +249,7 @@ class RootNativeAccounting:
             self._persist()
             return token
 
-    def native_nr(self, token, callback, *, context_binding):
+    def native_nr(self, token, callback, *, context_binding, pre_dispatch_check=None):
         with self._lock:
             row = self._token_row(token)
             if self._failed or self._poisoned or row["nr_entered"] or row["native_failure"] is not None:
@@ -257,6 +257,8 @@ class RootNativeAccounting:
             try:
                 if not callable(callback):
                     raise NativeAccountingError("Native delegate must be callable")
+                if pre_dispatch_check is not None and not callable(pre_dispatch_check):
+                    raise NativeAccountingError("Optional pre-dispatch check must be callable")
                 binding = self._binding(token, context_binding)
             except BaseException as error:
                 row["native_failure"] = type(error).__name__ + ": " + str(error)
@@ -267,6 +269,19 @@ class RootNativeAccounting:
             # increment only immediately before the delegate invocation.
             self._event("NR_ENTERED", token, context_binding=binding,
                 evidence_role="PERSISTED_PRE_INVOKE_DISPATCH_INTENT_NOT_CRASH_PROOF_OF_ENTRY")
+            # Signal/deadline requests can arrive while the intent is fsynced.
+            # Check after that write and before counting or invoking a delegate.
+            # The persisted intent is not promoted to an actual native entry.
+            if pre_dispatch_check is not None:
+                try:
+                    pre_dispatch_check()
+                except BaseException as error:
+                    row["native_failure"]=(type(error).__name__+": "+str(error))[:2048]
+                    self._failed=True
+                    self._event("NR_REFUSED_BEFORE_DISPATCH",token,detail=row["native_failure"],
+                        observed_dispatch_entered=False)
+                    self._persist()
+                    raise
             row["nr_entered"] = 1
             try:
                 value = callback()

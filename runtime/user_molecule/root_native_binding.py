@@ -50,7 +50,8 @@ class NativeReferenceNRBinding:
     """One original mol/grid/XC/D NR dispatch per explicit charged callback."""
 
     def __init__(self, *, context, accounting, contract, runtime_root,
-            explicit_grant=None, local_cli_execute_requested=False, original_nr=None, contract_sha256=None):
+            explicit_grant=None, local_cli_execute_requested=False, original_nr=None, contract_sha256=None,
+            before_dispatch_check=None):
         _active_contract(contract,explicit_grant=explicit_grant,
             local_cli_execute_requested=local_cli_execute_requested)
         from pyscf.dft.numint import NumInt
@@ -79,6 +80,9 @@ class NativeReferenceNRBinding:
         self.active_token=None
         self.active_context=None
         self.installed=False
+        if before_dispatch_check is not None and not callable(before_dispatch_check):
+            raise NativeBindingError('Optional safe pre-dispatch check must be callable')
+        self._before_dispatch_check=before_dispatch_check
         # A stable function identity is frozen by PreparedResidualReference.
         def wrapper(*values,**settings):return self._dispatch(*values,**settings)
         self.wrapper=wrapper
@@ -126,8 +130,11 @@ class NativeReferenceNRBinding:
             raise NativeBindingError('Actual NR molecule/grid/XC differs from the frozen source')
         if _did(dm)!=binding['density_id']:
             raise NativeBindingError('Actual native D differs from the charged callback')
-        return self.accounting.native_nr(token,lambda:self.original_nr(*values,**settings),
-            context_binding=binding)
+        options={'context_binding':binding}
+        # Preserve existing callers without a hook; the worker supplies the
+        # cooperative controller so requests during the intent write are caught.
+        if self._before_dispatch_check is not None:options['pre_dispatch_check']=self._before_dispatch_check
+        return self.accounting.native_nr(token,lambda:self.original_nr(*values,**settings),**options)
 
 
 class SourceBoundRootEvaluator:
