@@ -1,0 +1,38 @@
+{
+  "id": "MDR-009",
+  "revision": "0.1",
+  "date": "2026-10-07",
+  "status": "GATED_NATIVE_BACKEND_ENGINEERING_PASS_ZERO_F_PASS_REAL_ROOT_NOT_EXECUTED",
+  "request_source": "DIRECT_USER_MESSAGE",
+  "user_request": "请继续",
+  "scope": "NATIVE_BACKEND_IMPLEMENTATION_AND_ZERO_F_PREPARATION_ONLY",
+  "parent": {
+    "id": "MDR-008",
+    "sha256": "2bf7ff27a9d0b0e0096f71ba2f47fd0b444fc3b92f5714534309466766fc5a56",
+    "preserved_bytes": true
+  },
+  "runtime_code_commit": "aad7c5b51168a2364cc6c88081c981afea50a200",
+  "execution_record": "validation/user-molecule/root-native-engineering-20261007.json",
+  "scientific_target_changed": false,
+  "scientific_operators_changed": false,
+  "final_thresholds_changed": false,
+  "decisions": [
+    "Add a separate typed source-native backend; preserve old fake-only candidate and inactive parent bytes.",
+    "Only fixed seed2 theta=-0.10, one independent path, one chart/max_nfev2; complete96 Jacobian plus2 tail reservation under201.",
+    "Capture complete same-call F/G/energy/three electron counts, require a charged single NR, preserve actual failures.",
+    "Every callback checks resources/deadline before charge; all created active handles close on initialization failure.",
+    "Current generic continuation authorizes engineering and zero-F preparation; no native scientific grant is created.",
+    "A future explicitly granted diagnostic does not activate Compute or approve the method; independent numeric endpoint acceptance remains separate.",
+    "External consultation remains cancelled; no reintroduction of expert/user-trial prerequisites."
+  ],
+  "engineering_cases": 108,
+  "actual_zero_F_preparation": "PASS",
+  "new_true_F_NR_calls": 0,
+  "native_runner": "IMPLEMENTED_GATED_CANDIDATE",
+  "root_search": "NOT_EXECUTED",
+  "scientific_budget": null,
+  "Compute": false,
+  "method_approval": false,
+  "research_delta_hartree": null,
+  "external_review_required": false
+}

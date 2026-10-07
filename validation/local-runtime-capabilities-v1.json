@@ -61,7 +61,7 @@
       "id": "root-preparation",
       "name": "条件根候选工程",
       "status": "FAKE_AND_ZERO_F_PREPARATION_PASS",
-      "scope": "150 targeted historical engineering tests; true live root runner NOT_IMPLEMENTED, root search NOT_EXECUTED, no scientific budget",
+      "scope": "Historical150-case fake and zero-F preparation; this record remains unchanged. Subsequent gated native backend is registered separately below.",
       "record": "validation/user-molecule/occupied-space-root-preparation-20261007.json",
       "tested_runtime_commit": "7530595c71c0395c37f2e0e8669db14de5e14342"
     },
@@ -118,10 +118,19 @@
       "name": "外部专家咨询",
       "status": "CANCELLED_BY_USER",
       "scope": "No consultation or signature required; missing internal scientific evidence remains"
+    },
+    {
+      "id": "root-native-diagnostic",
+      "name": "原生根诊断候选",
+      "status": "IMPLEMENTED_GATED_ENGINEERING_AND_ZERO_F_PASS_ROOT_NOT_EXECUTED",
+      "scope": "Fixed ethene seed2, independent path only;108 scoped cases and actual zero-F preparation. No science grant/budget, no Compute; not general user molecule calculation or independent root numerical acceptance.",
+      "record": "validation/user-molecule/root-native-engineering-20261007.json",
+      "tested_runtime_commit": "aad7c5b51168a2364cc6c88081c981afea50a200"
     }
   ],
   "new_image_build_this_increment": "NOT_EXECUTED",
   "new_scientific_execution_this_increment": 0,
-  "verification_record": "validation/local-runtime-framework-20261007.json",
-  "local_engineering_verification": "231 unique tests;22 host processes; no new science or image build"
+  "verification_record": "validation/user-molecule/root-native-engineering-20261007.json",
+  "local_engineering_verification": "Latest108 scoped native engineering cases and actual zero-F preparation; previous231 framework/22 host processes remain historical; no new science or image build",
+  "previous_verification_record_before_native": "validation/local-runtime-framework-20261007.json"
 }

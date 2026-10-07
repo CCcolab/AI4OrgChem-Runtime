@@ -4,7 +4,9 @@ Start with the [local Runtime entry guide](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md): i
 
 [Framework acceptance](docs/LOCAL_RUNTIME_FRAMEWORK_20261007_zh-CN.md):231 unique engineering tests,22 PowerShell processes and12 source/preflight checks passed. Existing images ran read-only host source; no new scientific budget. GitHub CI execution remains NOT_EXECUTED.
 
-Latest [single-start candidate and zero-F preparation](docs/USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md) passed 150 scoped engineering tests (40 new,110 regressions) and actual cached zero-F preparation, with zero new native F/NR/SCF. This version cannot authorize live root solving or reserve science callbacks; the live runner remains NOT_IMPLEMENTED / NOT_EXECUTED and Compute BLOCKED. Original rules,gates and numerical records remain.
+[Latest native root candidate engineering](docs/USER_MOLECULE_ROOT_NATIVE_ENGINEERING_20261007_zh-CN.md): gated native backend implemented;108 scoped engineering cases and actual29-guard cached zero-F preparation passed. Root solving NOT_EXECUTED, no scientific budget, Compute BLOCKED; no image rebuild.
+
+Previous `7530595` [single-start candidate and zero-F preparation](docs/USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md) passed 150 scoped engineering tests (40 new,110 regressions) and actual cached zero-F preparation, with zero new native F/NR/SCF. That historical version could not authorize live root solving and its live runner was NOT_IMPLEMENTED / NOT_EXECUTED; the latest gated backend is described above. Current science budget remains empty and Compute BLOCKED. Original rules,gates and numerical records remain.
 
 Previous [twelve-point occupied-space response](docs/USER_MOLECULE_OCCUPIED_SPACE_RESPONSE_20261007_zh-CN.md): 129 scoped engineering tests and actual zero-F preparation passed; one new process completed 12 true F/NR evaluations and 8 same-D operator/energy subsets. Every point passes initial gap but fails commutator/raw-map checks; no qualified root, SCF or tail rechecks. Compute remains BLOCKED; the new twelve-slot budget is closed.
 

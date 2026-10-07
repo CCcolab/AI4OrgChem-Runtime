@@ -4,7 +4,9 @@
 
 [本轮框架验收](docs/LOCAL_RUNTIME_FRAMEWORK_20261007_zh-CN.md)：231个独立工程测试、22项PowerShell进程及12项来源/预检通过；既有镜像上运行宿主只读源码，未新建科学预算。GitHub CI运行仍NOT_EXECUTED。
 
-最新 [单起点候选与零计算准备](docs/USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md)已完成：150项专项工程测试（40新增、110回归）及实际缓存零F准备通过；新增真实F/NR/SCF为0。本版不允许真实根搜索、不创建科学预算，实际root runner未实现/未执行，Compute仍BLOCKED。原规则、门槛和旧数值记录保留。
+[最新原生根候选工程](docs/USER_MOLECULE_ROOT_NATIVE_ENGINEERING_20261007_zh-CN.md)：实现受控原生后端，108项专项工程测试及29护栏真实缓存零F准备通过。根搜索NOT_EXECUTED、科学预算为空，Compute仍BLOCKED；未重建镜像。
+
+此前 `7530595` 的 [单起点候选与零计算准备](docs/USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md)已完成：150项专项工程测试（40新增、110回归）及实际缓存零F准备通过；新增真实F/NR/SCF为0。该历史版本不允许真实根搜索，实际root runner未实现/未执行；最新受控后端见上段，当前科学预算仍为空、Compute仍BLOCKED。原规则、门槛和旧数值记录保留。
 
 此前 [十二点真实条件算子响应](docs/USER_MOLECULE_OCCUPIED_SPACE_RESPONSE_20261007_zh-CN.md)已完成：129项专项工程测试、实际零F准备与12次真F/NR通过，8组同D子集通过；所有点gap通过但comm/map失败，无合格自洽根，Compute保持BLOCKED。SCF/根搜索/尾检未执行，新12槽预算关闭。
 

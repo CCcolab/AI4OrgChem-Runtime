@@ -1,0 +1,510 @@
+{
+  "schema_version": "source-native-root-engineering-v1",
+  "date": "2026-10-07",
+  "status": "PASS_SCOPED_ENGINEERING_AND_ZERO_F_PREPARATION_REAL_ROOT_NOT_EXECUTED",
+  "tested_runtime_code_commit": "aad7c5b51168a2364cc6c88081c981afea50a200",
+  "base_commit": "fcad3465d54e3d63453eba110d3ce6174c9acde5",
+  "source_native_runner": "IMPLEMENTED_GATED_CANDIDATE_NOT_MOLECULARLY_EXECUTED",
+  "unique_engineering_cases": 108,
+  "engineering_groups": [
+    {
+      "pattern": "test_root_native_contract.py",
+      "status": "PASS",
+      "tests": 20,
+      "planned_ids": [
+        "test_root_native_contract.RootNativeContractTests.test_actual_parent_tamper_or_embedded_content_mismatch_is_refused",
+        "test_root_native_contract.RootNativeContractTests.test_all_six_input_bytes_are_mandatory_before_old_validation_delegation",
+        "test_root_native_contract.RootNativeContractTests.test_bare_true_flip_or_cli_flag_cannot_promote_inactive_template",
+        "test_root_native_contract.RootNativeContractTests.test_exact_booleans_and_no_reservation_or_approval_claim_are_enforced",
+        "test_root_native_contract.RootNativeContractTests.test_false_identity_cannot_open_native_journal_even_with_a_native_mode_label",
+        "test_root_native_contract.RootNativeContractTests.test_family_does_not_change_with_batch_output_or_grant_but_binds_new_code",
+        "test_root_native_contract.RootNativeContractTests.test_future_declaration_requires_independently_passed_matching_grant_and_cli_true",
+        "test_root_native_contract.RootNativeContractTests.test_future_journal_identity_requires_captured_contract_grant_and_complete_matching_fields",
+        "test_root_native_contract.RootNativeContractTests.test_general_continue_wrong_authority_family_budget_or_scope_is_not_a_grant",
+        "test_root_native_contract.RootNativeContractTests.test_input_delegation_preserves_original_false_parent_and_the_six_requested_byte_arguments",
+        "test_root_native_contract.RootNativeContractTests.test_new_and_retained_code_digests_are_complete_strict_relative_and_distinct_from_parent",
+        "test_root_native_contract.RootNativeContractTests.test_old_contract_old_schema_and_old_parent_true_flip_are_refused",
+        "test_root_native_contract.RootNativeContractTests.test_old_science_cache_threshold_and_raw_canonical_profile_bindings_stay_frozen",
+        "test_root_native_contract.RootNativeContractTests.test_raw_parent_bytes_are_separate_from_canonical_content_and_old_parent_is_not_relabelled",
+        "test_root_native_contract.RootNativeContractTests.test_simulated_journal_never_admits_true_auth_grant_or_old_execution_kinds",
+        "test_root_native_contract.RootNativeContractTests.test_single_initial_path_solver_quota_wall_memory_and_tail_policies_are_exact",
+        "test_root_native_contract.RootNativeContractTests.test_source_dependency_paths_share_relative_identity_and_cannot_traverse_outside_root",
+        "test_root_native_contract.RootNativeContractTests.test_source_lock_contains_candidate_local_import_and_dynamic_helper_closure",
+        "test_root_native_contract.RootNativeContractTests.test_template_keeps_original_false_parent_and_no_grant_no_reservation_no_compute",
+        "test_root_native_contract.RootNativeContractTests.test_unresolved_code_placeholders_cannot_receive_future_execute_context"
+      ],
+      "actual_ids": [
+        "test_root_native_contract.RootNativeContractTests.test_actual_parent_tamper_or_embedded_content_mismatch_is_refused",
+        "test_root_native_contract.RootNativeContractTests.test_all_six_input_bytes_are_mandatory_before_old_validation_delegation",
+        "test_root_native_contract.RootNativeContractTests.test_bare_true_flip_or_cli_flag_cannot_promote_inactive_template",
+        "test_root_native_contract.RootNativeContractTests.test_exact_booleans_and_no_reservation_or_approval_claim_are_enforced",
+        "test_root_native_contract.RootNativeContractTests.test_false_identity_cannot_open_native_journal_even_with_a_native_mode_label",
+        "test_root_native_contract.RootNativeContractTests.test_family_does_not_change_with_batch_output_or_grant_but_binds_new_code",
+        "test_root_native_contract.RootNativeContractTests.test_future_declaration_requires_independently_passed_matching_grant_and_cli_true",
+        "test_root_native_contract.RootNativeContractTests.test_future_journal_identity_requires_captured_contract_grant_and_complete_matching_fields",
+        "test_root_native_contract.RootNativeContractTests.test_general_continue_wrong_authority_family_budget_or_scope_is_not_a_grant",
+        "test_root_native_contract.RootNativeContractTests.test_input_delegation_preserves_original_false_parent_and_the_six_requested_byte_arguments",
+        "test_root_native_contract.RootNativeContractTests.test_new_and_retained_code_digests_are_complete_strict_relative_and_distinct_from_parent",
+        "test_root_native_contract.RootNativeContractTests.test_old_contract_old_schema_and_old_parent_true_flip_are_refused",
+        "test_root_native_contract.RootNativeContractTests.test_old_science_cache_threshold_and_raw_canonical_profile_bindings_stay_frozen",
+        "test_root_native_contract.RootNativeContractTests.test_raw_parent_bytes_are_separate_from_canonical_content_and_old_parent_is_not_relabelled",
+        "test_root_native_contract.RootNativeContractTests.test_simulated_journal_never_admits_true_auth_grant_or_old_execution_kinds",
+        "test_root_native_contract.RootNativeContractTests.test_single_initial_path_solver_quota_wall_memory_and_tail_policies_are_exact",
+        "test_root_native_contract.RootNativeContractTests.test_source_dependency_paths_share_relative_identity_and_cannot_traverse_outside_root",
+        "test_root_native_contract.RootNativeContractTests.test_source_lock_contains_candidate_local_import_and_dynamic_helper_closure",
+        "test_root_native_contract.RootNativeContractTests.test_template_keeps_original_false_parent_and_no_grant_no_reservation_no_compute",
+        "test_root_native_contract.RootNativeContractTests.test_unresolved_code_placeholders_cannot_receive_future_execute_context"
+      ],
+      "skips": 0,
+      "failures": 0,
+      "errors": 0,
+      "changed_guards": []
+    },
+    {
+      "pattern": "test_root_native_accounting.py",
+      "status": "PASS",
+      "tests": 19,
+      "planned_ids": [
+        "test_root_native_accounting.RootNativeAccountingTests.test_admission_declared_base_budget_counts_and_transitions_must_match",
+        "test_root_native_accounting.RootNativeAccountingTests.test_baseexception_charged_failed_no_refund_retry_or_success",
+        "test_root_native_accounting.RootNativeAccountingTests.test_completion_event_failure_preserves_observed_attempt_without_success",
+        "test_root_native_accounting.RootNativeAccountingTests.test_duplicate_native_call_forged_token_and_reused_finished_token_refused",
+        "test_root_native_accounting.RootNativeAccountingTests.test_entry_event_write_failure_never_dispatches_and_cannot_succeed",
+        "test_root_native_accounting.RootNativeAccountingTests.test_exact_jacobian_and_one_callback_tail_groups_are_explicit_not_inferred",
+        "test_root_native_accounting.RootNativeAccountingTests.test_external_charge_or_settlement_cannot_be_reported_as_owned_success",
+        "test_root_native_accounting.RootNativeAccountingTests.test_fd_without_group_wrong_group_or_sample_refused_before_charge",
+        "test_root_native_accounting.RootNativeAccountingTests.test_finish_state_failure_occurs_before_callback_budget_success",
+        "test_root_native_accounting.RootNativeAccountingTests.test_journal_path_or_batch_cannot_be_repointed_to_refill_the_same_accountant",
+        "test_root_native_accounting.RootNativeAccountingTests.test_missing_nr_cannot_finish_and_close_charges_unresolved_slot",
+        "test_root_native_accounting.RootNativeAccountingTests.test_partial_failed_group_cannot_be_relabelled_complete_or_enter_tail",
+        "test_root_native_accounting.RootNativeAccountingTests.test_pending_crash_output_and_journal_cannot_be_reopened",
+        "test_root_native_accounting.RootNativeAccountingTests.test_real_mode_missing_authorization_old_mode_and_bool_integer_refused_before_charge",
+        "test_root_native_accounting.RootNativeAccountingTests.test_success_separates_slots_delegate_counts_and_unobserved_scientific_counts",
+        "test_root_native_accounting.RootNativeAccountingTests.test_terminal_partial_group_evidence_retains_exact_unexecuted_count",
+        "test_root_native_accounting.RootNativeAccountingTests.test_whole_jacobian_affordability_reserves_both_tail_slots_before_any_fd",
+        "test_root_native_accounting.RootNativeAccountingTests.test_wrong_limits_and_changed_identity_refused",
+        "test_root_native_accounting.RootNativeAccountingTests.test_wrong_native_context_never_enters_delegate_and_cannot_be_retried"
+      ],
+      "actual_ids": [
+        "test_root_native_accounting.RootNativeAccountingTests.test_admission_declared_base_budget_counts_and_transitions_must_match",
+        "test_root_native_accounting.RootNativeAccountingTests.test_baseexception_charged_failed_no_refund_retry_or_success",
+        "test_root_native_accounting.RootNativeAccountingTests.test_completion_event_failure_preserves_observed_attempt_without_success",
+        "test_root_native_accounting.RootNativeAccountingTests.test_duplicate_native_call_forged_token_and_reused_finished_token_refused",
+        "test_root_native_accounting.RootNativeAccountingTests.test_entry_event_write_failure_never_dispatches_and_cannot_succeed",
+        "test_root_native_accounting.RootNativeAccountingTests.test_exact_jacobian_and_one_callback_tail_groups_are_explicit_not_inferred",
+        "test_root_native_accounting.RootNativeAccountingTests.test_external_charge_or_settlement_cannot_be_reported_as_owned_success",
+        "test_root_native_accounting.RootNativeAccountingTests.test_fd_without_group_wrong_group_or_sample_refused_before_charge",
+        "test_root_native_accounting.RootNativeAccountingTests.test_finish_state_failure_occurs_before_callback_budget_success",
+        "test_root_native_accounting.RootNativeAccountingTests.test_journal_path_or_batch_cannot_be_repointed_to_refill_the_same_accountant",
+        "test_root_native_accounting.RootNativeAccountingTests.test_missing_nr_cannot_finish_and_close_charges_unresolved_slot",
+        "test_root_native_accounting.RootNativeAccountingTests.test_partial_failed_group_cannot_be_relabelled_complete_or_enter_tail",
+        "test_root_native_accounting.RootNativeAccountingTests.test_pending_crash_output_and_journal_cannot_be_reopened",
+        "test_root_native_accounting.RootNativeAccountingTests.test_real_mode_missing_authorization_old_mode_and_bool_integer_refused_before_charge",
+        "test_root_native_accounting.RootNativeAccountingTests.test_success_separates_slots_delegate_counts_and_unobserved_scientific_counts",
+        "test_root_native_accounting.RootNativeAccountingTests.test_terminal_partial_group_evidence_retains_exact_unexecuted_count",
+        "test_root_native_accounting.RootNativeAccountingTests.test_whole_jacobian_affordability_reserves_both_tail_slots_before_any_fd",
+        "test_root_native_accounting.RootNativeAccountingTests.test_wrong_limits_and_changed_identity_refused",
+        "test_root_native_accounting.RootNativeAccountingTests.test_wrong_native_context_never_enters_delegate_and_cannot_be_retried"
+      ],
+      "skips": 0,
+      "failures": 0,
+      "errors": 0,
+      "changed_guards": []
+    },
+    {
+      "pattern": "test_root_native_candidate.py",
+      "status": "PASS",
+      "tests": 23,
+      "planned_ids": [
+        "test_root_native_candidate.RootNativeCandidateTests.test_admission_hook_cannot_mutate_normal_or_base_dict_bypass_rows",
+        "test_root_native_candidate.RootNativeCandidateTests.test_durable_97_remaining_slots_refuse_whole_96_plus_two_group_before_fd",
+        "test_root_native_candidate.RootNativeCandidateTests.test_durable_engineering_book_matches_qualified_two_tails_without_source_nr_claim",
+        "test_root_native_candidate.RootNativeCandidateTests.test_durable_gap_failure_has_only_one_returned_tail_and_stays_unqualified",
+        "test_root_native_candidate.RootNativeCandidateTests.test_durable_partial_failure_keeps_failed_simulated_nr_and_no_tail",
+        "test_root_native_candidate.RootNativeCandidateTests.test_exact_closed_evaluator_types_and_explicit_false_are_required",
+        "test_root_native_candidate.RootNativeCandidateTests.test_fixed_configuration_and_14_16_48_dimensions_refuse_without_callbacks",
+        "test_root_native_candidate.RootNativeCandidateTests.test_hook_refusal_at_started_group_closes_it_without_fd_or_tail",
+        "test_root_native_candidate.RootNativeCandidateTests.test_immutable_snapshots_bind_full_operator_and_do_not_infer_native_counts",
+        "test_root_native_candidate.RootNativeCandidateTests.test_low_gap_and_failed_returned_gate_do_not_run_mapped_tail",
+        "test_root_native_candidate.RootNativeCandidateTests.test_mapped_original_gate_and_energy_tolerance_are_kept",
+        "test_root_native_candidate.RootNativeCandidateTests.test_matching_fake_identity_labels_cannot_hide_invalid_wire_fields",
+        "test_root_native_candidate.RootNativeCandidateTests.test_missing_completed_base_has_no_uncharged_replacement_evaluation",
+        "test_root_native_candidate.RootNativeCandidateTests.test_nonprojector_wrong_initial_identity_and_nonpinned_scipy_are_zero_callback_refusals",
+        "test_root_native_candidate.RootNativeCandidateTests.test_original_qualify_and_derivative_functions_are_reused_no_science_imports",
+        "test_root_native_candidate.RootNativeCandidateTests.test_partial_jacobian_failure_is_charged_stops_and_retains_formal_density",
+        "test_root_native_candidate.RootNativeCandidateTests.test_qualified_synthetic_endpoint_still_has_two_separate_original_tail_calls",
+        "test_root_native_candidate.RootNativeCandidateTests.test_real_pinned_scipy_two_objectives_never_exceeds_197_simulated_callbacks",
+        "test_root_native_candidate.RootNativeCandidateTests.test_same_density_complete_ledger_changes_refuse_even_with_same_f_and_total",
+        "test_root_native_candidate.RootNativeCandidateTests.test_source_mode_true_cannot_accept_matching_synthetic_metadata",
+        "test_root_native_candidate.RootNativeCandidateTests.test_source_mode_without_authorization_refuses_before_import_charge_or_callback",
+        "test_root_native_candidate.RootNativeCandidateTests.test_whole_dense_96_group_and_explicit_fd_contexts_are_persisted",
+        "test_root_native_candidate.RootNativeCandidateTests.test_whole_group_exact_boundary_passes_and_one_short_makes_zero_fd_calls"
+      ],
+      "actual_ids": [
+        "test_root_native_candidate.RootNativeCandidateTests.test_admission_hook_cannot_mutate_normal_or_base_dict_bypass_rows",
+        "test_root_native_candidate.RootNativeCandidateTests.test_durable_97_remaining_slots_refuse_whole_96_plus_two_group_before_fd",
+        "test_root_native_candidate.RootNativeCandidateTests.test_durable_engineering_book_matches_qualified_two_tails_without_source_nr_claim",
+        "test_root_native_candidate.RootNativeCandidateTests.test_durable_gap_failure_has_only_one_returned_tail_and_stays_unqualified",
+        "test_root_native_candidate.RootNativeCandidateTests.test_durable_partial_failure_keeps_failed_simulated_nr_and_no_tail",
+        "test_root_native_candidate.RootNativeCandidateTests.test_exact_closed_evaluator_types_and_explicit_false_are_required",
+        "test_root_native_candidate.RootNativeCandidateTests.test_fixed_configuration_and_14_16_48_dimensions_refuse_without_callbacks",
+        "test_root_native_candidate.RootNativeCandidateTests.test_hook_refusal_at_started_group_closes_it_without_fd_or_tail",
+        "test_root_native_candidate.RootNativeCandidateTests.test_immutable_snapshots_bind_full_operator_and_do_not_infer_native_counts",
+        "test_root_native_candidate.RootNativeCandidateTests.test_low_gap_and_failed_returned_gate_do_not_run_mapped_tail",
+        "test_root_native_candidate.RootNativeCandidateTests.test_mapped_original_gate_and_energy_tolerance_are_kept",
+        "test_root_native_candidate.RootNativeCandidateTests.test_matching_fake_identity_labels_cannot_hide_invalid_wire_fields",
+        "test_root_native_candidate.RootNativeCandidateTests.test_missing_completed_base_has_no_uncharged_replacement_evaluation",
+        "test_root_native_candidate.RootNativeCandidateTests.test_nonprojector_wrong_initial_identity_and_nonpinned_scipy_are_zero_callback_refusals",
+        "test_root_native_candidate.RootNativeCandidateTests.test_original_qualify_and_derivative_functions_are_reused_no_science_imports",
+        "test_root_native_candidate.RootNativeCandidateTests.test_partial_jacobian_failure_is_charged_stops_and_retains_formal_density",
+        "test_root_native_candidate.RootNativeCandidateTests.test_qualified_synthetic_endpoint_still_has_two_separate_original_tail_calls",
+        "test_root_native_candidate.RootNativeCandidateTests.test_real_pinned_scipy_two_objectives_never_exceeds_197_simulated_callbacks",
+        "test_root_native_candidate.RootNativeCandidateTests.test_same_density_complete_ledger_changes_refuse_even_with_same_f_and_total",
+        "test_root_native_candidate.RootNativeCandidateTests.test_source_mode_true_cannot_accept_matching_synthetic_metadata",
+        "test_root_native_candidate.RootNativeCandidateTests.test_source_mode_without_authorization_refuses_before_import_charge_or_callback",
+        "test_root_native_candidate.RootNativeCandidateTests.test_whole_dense_96_group_and_explicit_fd_contexts_are_persisted",
+        "test_root_native_candidate.RootNativeCandidateTests.test_whole_group_exact_boundary_passes_and_one_short_makes_zero_fd_calls"
+      ],
+      "skips": 0,
+      "failures": 0,
+      "errors": 0,
+      "changed_guards": []
+    },
+    {
+      "pattern": "test_root_native_binding.py",
+      "status": "PASS",
+      "tests": 15,
+      "planned_ids": [
+        "test_root_native_binding.RootNativeBindingTests.test_captured_original_nr_can_be_installed_over_the_held_class_guard_once",
+        "test_root_native_binding.RootNativeBindingTests.test_changed_preinstall_nr_refused_even_if_original_function_is_retained",
+        "test_root_native_binding.RootNativeBindingTests.test_declared_true_contract_without_independent_grant_cannot_bind",
+        "test_root_native_binding.RootNativeBindingTests.test_frozen_candidate_context_can_be_consumed_without_deepcopy_mutation",
+        "test_root_native_binding.RootNativeBindingTests.test_inactive_valid_contract_rejects_before_source_or_accounting_access",
+        "test_root_native_binding.RootNativeBindingTests.test_native_boundary_passes_exact_owned_arguments_only_to_counted_test_delegate",
+        "test_root_native_binding.RootNativeBindingTests.test_native_boundary_refuses_unowned_molecule_grid_xc_and_density_without_delegate",
+        "test_root_native_binding.RootNativeBindingTests.test_native_boundary_without_active_token_refuses_before_delegate",
+        "test_root_native_binding.RootNativeBindingTests.test_pre_callback_resource_or_deadline_refusal_has_no_slot_or_native_entry",
+        "test_root_native_binding.RootNativeBindingTests.test_source_contract_is_not_promoted_by_a_caller_execute_flag",
+        "test_root_native_binding.RootNativeBindingTests.test_worker_cli_needs_explicit_mode_and_cannot_mix_prepare_execute",
+        "test_root_native_binding.RootNativeWorkerCleanupTests.test_accounting_close_failure_still_settles_pending_journal_and_reference_then_fails",
+        "test_root_native_binding.RootNativeWorkerCleanupTests.test_accounting_constructor_failure_closes_created_journal_without_counter_fabrication",
+        "test_root_native_binding.RootNativeWorkerCleanupTests.test_binding_reference_recipe_and_evaluator_initialization_faults_close_empty_owned_accounting",
+        "test_root_native_binding.RootNativeWorkerCleanupTests.test_worker_finally_spans_all_active_constructors_and_prepare_remains_outside_closure"
+      ],
+      "actual_ids": [
+        "test_root_native_binding.RootNativeBindingTests.test_captured_original_nr_can_be_installed_over_the_held_class_guard_once",
+        "test_root_native_binding.RootNativeBindingTests.test_changed_preinstall_nr_refused_even_if_original_function_is_retained",
+        "test_root_native_binding.RootNativeBindingTests.test_declared_true_contract_without_independent_grant_cannot_bind",
+        "test_root_native_binding.RootNativeBindingTests.test_frozen_candidate_context_can_be_consumed_without_deepcopy_mutation",
+        "test_root_native_binding.RootNativeBindingTests.test_inactive_valid_contract_rejects_before_source_or_accounting_access",
+        "test_root_native_binding.RootNativeBindingTests.test_native_boundary_passes_exact_owned_arguments_only_to_counted_test_delegate",
+        "test_root_native_binding.RootNativeBindingTests.test_native_boundary_refuses_unowned_molecule_grid_xc_and_density_without_delegate",
+        "test_root_native_binding.RootNativeBindingTests.test_native_boundary_without_active_token_refuses_before_delegate",
+        "test_root_native_binding.RootNativeBindingTests.test_pre_callback_resource_or_deadline_refusal_has_no_slot_or_native_entry",
+        "test_root_native_binding.RootNativeBindingTests.test_source_contract_is_not_promoted_by_a_caller_execute_flag",
+        "test_root_native_binding.RootNativeBindingTests.test_worker_cli_needs_explicit_mode_and_cannot_mix_prepare_execute",
+        "test_root_native_binding.RootNativeWorkerCleanupTests.test_accounting_close_failure_still_settles_pending_journal_and_reference_then_fails",
+        "test_root_native_binding.RootNativeWorkerCleanupTests.test_accounting_constructor_failure_closes_created_journal_without_counter_fabrication",
+        "test_root_native_binding.RootNativeWorkerCleanupTests.test_binding_reference_recipe_and_evaluator_initialization_faults_close_empty_owned_accounting",
+        "test_root_native_binding.RootNativeWorkerCleanupTests.test_worker_finally_spans_all_active_constructors_and_prepare_remains_outside_closure"
+      ],
+      "skips": 0,
+      "failures": 0,
+      "errors": 0,
+      "changed_guards": []
+    },
+    {
+      "pattern": "test_root_native_supervisor.py",
+      "status": "PASS",
+      "tests": 16,
+      "planned_ids": [
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_cleanup_failure_is_unknown_and_keeps_wall_reservation",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_cleanup_time_is_included_and_resource_unknown_cannot_pass",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_container_security_rejects_writable_mount_swapping_root_network_and_cpu",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_default_cli_is_prepare_only_and_execute_missing_grant_refuses_before_tools",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_endpoint_true_requires_two_original_gates_energy_rechecks_and_bound_tail_snapshots",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_exit_zero_with_forged_readiness_does_not_pass",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_export_uses_local_no_hardlink_clone_before_strict_preparation",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_false_contract_never_creates_attempt_registry",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_fixed_registry_prevents_second_batch_or_output_attempt_without_real_tools",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_mocked_prepare_preserves_false_contract_logs_output_and_deletes_owned_container",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_mutually_exclusive_modes_and_grant_on_prepare_are_refused",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_readiness_rejects_label_only_bool_zero_source_mismatch_and_guard_change",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_resource_receipt_blocked_turns_worker_success_into_failure",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_tail_completed_label_or_one_tail_cannot_certify_endpoint_true",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_unqualified_summary_requires_matching_source_result_and_stop_reason",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_wrong_cleanup_label_cannot_stop_or_delete_another_container"
+      ],
+      "actual_ids": [
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_cleanup_failure_is_unknown_and_keeps_wall_reservation",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_cleanup_time_is_included_and_resource_unknown_cannot_pass",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_container_security_rejects_writable_mount_swapping_root_network_and_cpu",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_default_cli_is_prepare_only_and_execute_missing_grant_refuses_before_tools",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_endpoint_true_requires_two_original_gates_energy_rechecks_and_bound_tail_snapshots",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_exit_zero_with_forged_readiness_does_not_pass",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_export_uses_local_no_hardlink_clone_before_strict_preparation",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_false_contract_never_creates_attempt_registry",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_fixed_registry_prevents_second_batch_or_output_attempt_without_real_tools",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_mocked_prepare_preserves_false_contract_logs_output_and_deletes_owned_container",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_mutually_exclusive_modes_and_grant_on_prepare_are_refused",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_readiness_rejects_label_only_bool_zero_source_mismatch_and_guard_change",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_resource_receipt_blocked_turns_worker_success_into_failure",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_tail_completed_label_or_one_tail_cannot_certify_endpoint_true",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_unqualified_summary_requires_matching_source_result_and_stop_reason",
+        "test_root_native_supervisor.RootNativeSupervisorTests.test_wrong_cleanup_label_cannot_stop_or_delete_another_container"
+      ],
+      "skips": 0,
+      "failures": 0,
+      "errors": 0,
+      "changed_guards": []
+    },
+    {
+      "pattern": "test_reference_occupied_space_root_candidate.py",
+      "status": "PASS",
+      "tests": 15,
+      "planned_ids": [
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_budget_refusal_preserves_last_normal_chart_not_best_sample_or_last_objective",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_f_failure_inside_admitted_jacobian_is_charged_partial_and_never_retried",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_insufficient_tail_refuses_before_any_tail_callback_and_old_gap_stays_required",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_invalid_configuration_nonmanifold_and_nonpinned_version_have_zero_callbacks",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_invalid_raw_g_scalar_counts_density_mutation_and_provenance_are_charged_refusals",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_large_whole_jacobian_requires_all_96_callbacks_and_two_separate_tail_slots",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_live_interface_and_truthy_fake_authorization_refuse_before_first_callback",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_missing_completed_jacobian_base_has_no_hidden_or_free_callback",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_original_qualified_pure_array_endpoint_requires_both_separately_charged_tail_evaluations",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_pinned_real_scipy_one_chart_two_objectives_completes_at_most_two_large_jacobians_and_197_calls",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_pinned_three_point_zero_nonzero_and_bound_steps_keep_old_library_rules",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_raw_g_is_only_recorded_and_original_projected_f_controls_residual_and_final_gates",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_returned_energy_recheck_and_mapped_full_old_gates_are_not_relaxed",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_snapshots_bind_actual_d_f_g_all_energy_and_count_fields_and_are_immutable",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_source_initialization_bytes_are_frozen_and_explicit_initial_id_never_uses_v2"
+      ],
+      "actual_ids": [
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_budget_refusal_preserves_last_normal_chart_not_best_sample_or_last_objective",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_f_failure_inside_admitted_jacobian_is_charged_partial_and_never_retried",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_insufficient_tail_refuses_before_any_tail_callback_and_old_gap_stays_required",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_invalid_configuration_nonmanifold_and_nonpinned_version_have_zero_callbacks",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_invalid_raw_g_scalar_counts_density_mutation_and_provenance_are_charged_refusals",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_large_whole_jacobian_requires_all_96_callbacks_and_two_separate_tail_slots",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_live_interface_and_truthy_fake_authorization_refuse_before_first_callback",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_missing_completed_jacobian_base_has_no_hidden_or_free_callback",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_original_qualified_pure_array_endpoint_requires_both_separately_charged_tail_evaluations",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_pinned_real_scipy_one_chart_two_objectives_completes_at_most_two_large_jacobians_and_197_calls",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_pinned_three_point_zero_nonzero_and_bound_steps_keep_old_library_rules",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_raw_g_is_only_recorded_and_original_projected_f_controls_residual_and_final_gates",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_returned_energy_recheck_and_mapped_full_old_gates_are_not_relaxed",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_snapshots_bind_actual_d_f_g_all_energy_and_count_fields_and_are_immutable",
+        "test_reference_occupied_space_root_candidate.OccupiedSpaceRootCandidateTests.test_source_initialization_bytes_are_frozen_and_explicit_initial_id_never_uses_v2"
+      ],
+      "skips": 0,
+      "failures": 0,
+      "errors": 0,
+      "changed_guards": []
+    }
+  ],
+  "guard_operations": 14,
+  "forbidden_native_attempts": [],
+  "actual_preparation": {
+    "status": "EXECUTED_ZERO_F_NATIVE_PREPARATION_ONLY",
+    "execute_requested": false,
+    "scientific_budget_reserved": false,
+    "scientific_budget_declaration_is_not_reservation": true,
+    "automatic_retry": false,
+    "container_removed": true,
+    "Compute": false,
+    "new_source_native_NR_calls": 0,
+    "container_id": "30cd123c2e208be39fbdb4a242b9e813bf2b10eccf396fd0e92cb5dd45ac80eb",
+    "container_exit_code": 0,
+    "oom_killed": false,
+    "worker_receipts_verified": true,
+    "wall_through_cleanup_seconds": 8.09399999998277,
+    "resource_observation_status": "RESOURCE_CANDIDATE_EXACT_FIXTURE"
+  },
+  "preparation_guard_operations": 29,
+  "preparation_observed_peak_bytes": 204746752,
+  "resource_scope": "ZERO_F_PREPARATION_ONLY_NOT_ROOT_CAPACITY_APPROVAL",
+  "saved_array_members_verified": [
+    {
+      "file": "all-family-admissions.npz",
+      "member": "array_0",
+      "sha256": "b8b3f020e5ee76c663283aa3dc105d4e0b1e37edad07787515f5712fe85f68dd",
+      "shape": [
+        14,
+        14
+      ]
+    },
+    {
+      "file": "all-family-admissions.npz",
+      "member": "array_1",
+      "sha256": "2321aaac100093272651fe9a8092086c879819199793f5a22a2a1bd23f6a94ca",
+      "shape": [
+        14,
+        14
+      ]
+    },
+    {
+      "file": "all-family-admissions.npz",
+      "member": "array_2",
+      "sha256": "033d31fb863bc8e38882b1b272ff3042ec456dbbfee318fda9ef1f2705c67948",
+      "shape": [
+        14,
+        14
+      ]
+    },
+    {
+      "file": "all-family-admissions.npz",
+      "member": "array_3",
+      "sha256": "d1a6206219fcbbb8863ccc95d5cc0644f817f3b234fedd662689fde0c5c8828c",
+      "shape": [
+        14,
+        14
+      ]
+    },
+    {
+      "file": "all-family-admissions.npz",
+      "member": "array_4",
+      "sha256": "574f07352a33b63da496b743bb8016c3e770b3d33f8e61d6d9a9fc88fce26b49",
+      "shape": [
+        14,
+        14
+      ]
+    },
+    {
+      "file": "all-family-admissions.npz",
+      "member": "array_5",
+      "sha256": "32c51caf3ca3b58029d256008153fe487e4d34a20bd5f7477bfca940120ca8b6",
+      "shape": [
+        14,
+        14
+      ]
+    },
+    {
+      "file": "selected-initial.npz",
+      "member": "array_0",
+      "sha256": "d1a6206219fcbbb8863ccc95d5cc0644f817f3b234fedd662689fde0c5c8828c",
+      "shape": [
+        14,
+        14
+      ]
+    }
+  ],
+  "native_contract_sha256": "b6a0da5187337b9dd3e8023cf5e89c25228c76463b08b5515e08dda48c74e0bc",
+  "contract_family_sha256": "99e6877ff57413c8b4e018d679ee814a77dd923b5db28b90c8670b16dd84d230",
+  "critical_source_files": 52,
+  "parent_preparation_contract_sha256": "9cb736eeda4aa2bde34e2fd80e750bc94a467741876d93472fb2065c6288c9fb",
+  "parent_bytes_preserved": true,
+  "scientific_execution_authorized": false,
+  "scientific_budget": null,
+  "new_scientific_processes": 0,
+  "new_source_NR_calls": 0,
+  "root_search": "NOT_EXECUTED",
+  "future_candidate_limits": {
+    "maximum_processes": 1,
+    "single_path": "independent_reference",
+    "seed_index": 2,
+    "angle_rad": -0.1,
+    "n_ao": 14,
+    "electrons": 16,
+    "maximum_true_F_NR_callbacks": 201,
+    "whole_jacobian_callbacks": 96,
+    "tail_reserved_callbacks": 2,
+    "maximum_charts": 1,
+    "max_nfev": 2,
+    "wall_seconds_through_cleanup": 300,
+    "stop_seconds": 275,
+    "memory_mib": 1024,
+    "cpus": 1,
+    "swap": false
+  },
+  "future_admission": "Separate explicit one-run grant and CLI execute; family claim before reservation/create; no automatic retry",
+  "candidate_attempts_durable_slots_NR_dispatch": "Separate counters; precharge refusal can yield 1/0/0 and must not certify successful native execution",
+  "scientific_equations_and_thresholds_changed": false,
+  "independent_saved_root_numeric_acceptance": "NOT_EXECUTED",
+  "production_equivalence": "NOT_EXECUTED_FOR_ROOT_ENDPOINT",
+  "variational_status": "NOT_ESTABLISHED",
+  "stability": "NOT_EXECUTED",
+  "method_approval": false,
+  "Compute": false,
+  "research_delta_hartree": null,
+  "runtime_image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+  "image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+  "science_adapter_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "frozen_science_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "retained_failures": {
+    "a1": "Supervisor test file was not ready;68 cases passed, staging incomplete",
+    "a2": "New AST closure test compared absolute Linux path with relative source lock;19 run,1 failure; guards PASS",
+    "a3": "108 unique cases PASS after portability fix; actual IDs recorded"
+  },
+  "previous_records_preserved": {
+    "status": "PASS_REGISTERED_PAYLOAD_AND_EXISTING_SOURCE_PRESERVATION",
+    "sealed_deliveries": [
+      {
+        "directory": "20261007-user-molecule-budget-recording",
+        "manifest_sha256": "7c00bd9650d6946a20b82e2adeceaa894a723de0dd0d4bbfc8871f19bf06a245",
+        "registered_payloads": 675
+      },
+      {
+        "directory": "20261007-user-molecule-occupation-response",
+        "manifest_sha256": "00bde5f55716d3bcdb084773483175b419e5c8f184226edb415b2c52348667d4",
+        "registered_payloads": 1471
+      },
+      {
+        "directory": "20261007-user-molecule-occupation-scope",
+        "manifest_sha256": "f244245cdfd86c3f14f71c9a1d1a8c74d596253b2d5504adbb9af504fe6d1254",
+        "registered_payloads": 20
+      },
+      {
+        "directory": "20261007-user-molecule-occupied-space-admission",
+        "manifest_sha256": "512df8fd7d31fb56564777dd5511f62296bc256127f28270b3115ef720c8d007",
+        "registered_payloads": 760
+      },
+      {
+        "directory": "20261007-user-molecule-occupied-space-response",
+        "manifest_sha256": "2ee8eee5fc9ee1a977b3ea621af2ee48f91d0d1c1e52da2a039306802674f652",
+        "registered_payloads": 1216
+      },
+      {
+        "directory": "20261007-user-molecule-occupied-space-root",
+        "manifest_sha256": "7b42fb3dc51e07490014a4a0721a740859ab27cf17ad0d3b1ea697febb8ea86a",
+        "registered_payloads": 1203
+      },
+      {
+        "directory": "20261007-user-molecule-seed-v2",
+        "manifest_sha256": "548e3ba94177eaa6e894623519b6c3abe9fa860686049242221bbf0174ebd797",
+        "registered_payloads": 1010
+      },
+      {
+        "directory": "20261007-user-molecule-seed-v2-readonly-analysis",
+        "manifest_sha256": "94f762d81e7132fc19caca21076338fbcb48fb1d1150ed1274a384306f715fae",
+        "registered_payloads": 24
+      },
+      {
+        "directory": "20261007-local-runtime-framework",
+        "manifest_sha256": "f752b2434a61a4fc8ee4e3987433596ed9cdff43b7478ef3b95ad3e223255d64",
+        "registered_payloads": 2702
+      }
+    ],
+    "registered_payload_total": 9081,
+    "existing_protected_paths": 174,
+    "existing_protected_changes": [],
+    "original_workspaces": [
+      {
+        "path": "D:\\AI4Science\\ai4orgchem-runtime",
+        "head": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
+        "porcelain_sha256": "0debcba62884bdb35a4d89d030ac19538d39cbe5cde67478868cac2e998bb741"
+      },
+      {
+        "path": "D:\\AI4Science\\AI4OrgChem",
+        "head": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+        "porcelain_sha256": "a036b2da95b70789f2875f4de9c779fbb101a6623698b5e8f1a74dec36cad90c"
+      }
+    ]
+  },
+  "GitHub_Actions": "NOT_EXECUTED",
+  "WSLc": "BLOCKED / NOT_EXECUTED; paused",
+  "new_image_build": "NOT_EXECUTED",
+  "image_distribution": "BLOCKED",
+  "public_push_release": "NOT_EXECUTED / NOT_AUTHORIZED",
+  "external_expert_process": "CANCELLED_BY_USER_NOT_A_PREREQUISITE",
+  "evidence_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-root-native-engineering"
+}
