@@ -2,6 +2,8 @@
 
 本地使用从 [本地Runtime入口](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md) 开始：查看能力 → 选择P01—P14既有证据 → 输出只读报告，或准备自己的请求并执行受限Check/Report。`start-local-runtime.ps1` 是宿主源码入口；命题目录不等于P01—P13重算适配，生产用户分子Compute仍BLOCKED。Git/项目ZIP仅提供来源可核对的源码，不包含完整安装环境；新镜像未构建，WSLc/公开发布仍保持原边界。
 
+[最新合作停止工程](docs/USER_MOLECULE_NATIVE_SHUTDOWN_ENGINEERING_20261007_zh-CN.md)：154项专项工程回归通过；两种零原生停止场景保存关闭回执，强杀反例的最终回执保持未知。四段开销各测3次，不外推真实求解容量。本轮无新增科学计算/预算，旧139次OPEN账本保留，不重试；Compute仍BLOCKED。
+
 [此前框架验收](docs/LOCAL_RUNTIME_FRAMEWORK_20261007_zh-CN.md)：231个独立工程测试、22项PowerShell进程及12项来源/预检通过；该轮未新建科学预算。GitHub CI运行仍NOT_EXECUTED。
 
 [最新唯一原生根诊断](docs/USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.md)：139次NR完成、138成功回调/1截止失败；含清理279.031秒，第一96差分完成、第二部分未完成。无正式根/尾检，原OPEN账本保留，Compute仍BLOCKED；未自动重试。

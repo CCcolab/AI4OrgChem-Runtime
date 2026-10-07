@@ -2,6 +2,8 @@
 
 Start with the [local Runtime entry guide](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md): inspect capabilities, choose existing P01–P14 evidence and export a read-only review, or prepare a restricted user-molecule Check/Report request. `start-local-runtime.ps1` runs from host source. Catalogue entries do not implement P01–P13 recomputation; production user Compute remains BLOCKED. Git/project ZIP snapshots supply verifiable source, not a complete installed environment. No new image build, WSLc acceptance or public release is implied.
 
+[Latest cooperative-stop engineering](docs/USER_MOLECULE_NATIVE_SHUTDOWN_ENGINEERING_20261007_zh-CN.md):154 scoped engineering regressions passed; two zero-native stop cases saved closed receipts, while a forced-kill negative case retains unknown final evidence. Three timings per segment do not qualify real solver capacity. No new science/budget; old139-call OPEN records preserved without retry. Compute remains BLOCKED.
+
 [Previous framework acceptance](docs/LOCAL_RUNTIME_FRAMEWORK_20261007_zh-CN.md):231 unique engineering tests,22 PowerShell processes and12 source/preflight checks passed; no science budget at that increment. GitHub CI execution remains NOT_EXECUTED.
 
 [Latest one native root diagnosis](docs/USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.md):139NR completions,138successful callbacks and1deadline failure;279.031s through cleanup. First96-sample Jacobian completed, second partial; no normal root/tails, raw OPEN journal preserved, no retry, Compute BLOCKED.

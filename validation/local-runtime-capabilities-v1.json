@@ -127,12 +127,22 @@
       "record": "validation/user-molecule/root-native-diagnostic-20261007.json",
       "tested_runtime_commit": "aad7c5b51168a2364cc6c88081c981afea50a200",
       "actual_runtime_execution_commit": "73e8dfd8aef4881dec6b8cd30b21b2228f8b51ab"
+    },
+    {
+      "id": "native-shutdown-engineering",
+      "name": "合作停止与零原生开销工程",
+      "status": "PASS_SCOPED_COOPERATIVE_STOP_AND_ZERO_NATIVE_ENGINEERING_ONLY",
+      "scope": "154 scoped regression cases; two closed zero-native toy-stop cases; strong-kill final receipt unknown; three timings per segment cannot certify scientific capacity. Compute BLOCKED.",
+      "record": "validation/user-molecule/native-shutdown-engineering-20261007.json",
+      "tested_runtime_commit": "6eb356a0ebaa647bdf4aa6ea4b0f90cf69fc07f6"
     }
   ],
   "new_image_build_this_increment": "NOT_EXECUTED",
-  "new_scientific_execution_this_increment": 1,
-  "verification_record": "validation/user-molecule/root-native-engineering-20261007.json",
-  "local_engineering_verification": "Previous engineering-only increment:108 scoped native cases and zero-F preparation, no science at that increment;231 framework/22 host processes remain historical. The subsequent one native science attempt is recorded separately in scientific_observation_record.",
+  "new_scientific_execution_this_increment": 0,
+  "verification_record": "validation/user-molecule/native-shutdown-engineering-20261007.json",
+  "local_engineering_verification": "154 scoped native/stop cases PASS and four fixed zero-native engineering probe cases; full W01-W07 and prior139-native science not rerun. Forced-kill final receipt unknown.",
   "previous_verification_record_before_native": "validation/local-runtime-framework-20261007.json",
-  "scientific_observation_record": "validation/user-molecule/root-native-diagnostic-20261007.json"
+  "scientific_observation_record": "validation/user-molecule/root-native-diagnostic-20261007.json",
+  "previous_verification_record_before_shutdown": "validation/user-molecule/root-native-engineering-20261007.json",
+  "previous_new_scientific_execution_increment": 1
 }

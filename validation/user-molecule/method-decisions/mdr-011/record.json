@@ -1,0 +1,34 @@
+{
+  "id": "MDR-011",
+  "revision": "0.1",
+  "date": "2026-10-07",
+  "scope": "COOPERATIVE_STOP_AND_ZERO_NATIVE_ENGINEERING_ONLY",
+  "status": "PASS_SCOPED_COOPERATIVE_STOP_AND_ZERO_NATIVE_ENGINEERING_ONLY",
+  "parent": {
+    "id": "MDR-010",
+    "sha256": "67b468b3f7d8a8953554c0ba1cc380b08528d3e8ebe2a9f70be58ff31552372c",
+    "preserved_bytes": true,
+    "byte_scope": "EXACT_CANONICAL_GIT_BLOB_FROM137BCB; worktree CRLF retained without rewriting",
+    "worktree_sha256": "5be5b1606470a41a5d0aace8034ad60d602a8211a448ef832a0d0eaed1fff502",
+    "exact_CRLF_to_LF_match": true
+  },
+  "runtime_code_commit": "6eb356a0ebaa647bdf4aa6ea4b0f90cf69fc07f6",
+  "engineering_record": "validation/user-molecule/native-shutdown-engineering-20261007.json",
+  "new_scientific_processes": 0,
+  "scientific_grant": null,
+  "scientific_budget": null,
+  "Compute": false,
+  "scientific_equations_changed": false,
+  "thresholds_changed": false,
+  "decisions": [
+    "Preserve original139-point OPEN book and immutable evidence; no retry, resume, refund or new registry claim.",
+    "Use memory-only signal flags and synchronous checkpoints with bounded host stop; receipt is not guaranteed for native C calls.",
+    "Persist pre-dispatch refusal separately from actual native entry; already charged slots are not refunded.",
+    "Report154 guarded engineering cases, two closed toy-stop receipts and one expected missing-receipt strong-kill case separately.",
+    "Retain exact source checks and scientific gates; use three measured operations per segment only, with no scientific wall prediction.",
+    "Close this engineering delivery; future scientific execution needs separate concrete scope and budget. Compute remains BLOCKED."
+  ],
+  "external_review_required": false,
+  "external_expert_process": "CANCELLED_BY_USER",
+  "research_delta_hartree": null
+}
