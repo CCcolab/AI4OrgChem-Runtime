@@ -83,6 +83,7 @@ class NativeReferenceNRBinding:
         if before_dispatch_check is not None and not callable(before_dispatch_check):
             raise NativeBindingError('Optional safe pre-dispatch check must be callable')
         self._before_dispatch_check=before_dispatch_check
+        self._held_dispatch_check=before_dispatch_check
         # A stable function identity is frozen by PreparedResidualReference.
         def wrapper(*values,**settings):return self._dispatch(*values,**settings)
         self.wrapper=wrapper
@@ -110,6 +111,8 @@ class NativeReferenceNRBinding:
 
     def assert_held(self):
         self._assert_accounting()
+        if self._before_dispatch_check is not self._held_dispatch_check:
+            raise NativeBindingError('Safe pre-dispatch checkpoint identity changed')
         if (not self.installed or self.ni.nr_rks is not self.wrapper
                 or self.context.mean_field._numint is not self.ni
                 or self.context.mol is not self.mol or self.context.mean_field.mol is not self.mol

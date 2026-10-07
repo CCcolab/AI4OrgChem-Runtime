@@ -60,6 +60,14 @@ class RootNativeBindingTests(unittest.TestCase):
         with self.assertRaises(binding.NativeBindingError):obj._dispatch(obj.mol,obj.grid,obj.xc,object())
         self.assertEqual(obj.calls,[])
 
+    def test_changed_pre_dispatch_check_is_refused_before_source_or_native_call(self):
+        obj=object.__new__(binding.NativeReferenceNRBinding)
+        obj._assert_accounting=lambda:None
+        obj._held_dispatch_check=lambda:None;obj._before_dispatch_check=lambda:None
+        with patch.object(binding,'_source_bytes') as verify,self.assertRaisesRegex(binding.NativeBindingError,'checkpoint identity'):
+            obj.assert_held()
+        verify.assert_not_called()
+
     def test_captured_original_nr_can_be_installed_over_the_held_class_guard_once(self):
         obj=object.__new__(binding.NativeReferenceNRBinding)
         guard=lambda:None;original=lambda:None;wrapper=lambda:None
@@ -194,8 +202,9 @@ class RootNativeWorkerCleanupTests(unittest.TestCase):
                 if isinstance(node,ast.Call) and isinstance(node.func,ast.Name)}
         boundary=next(node for node in function.body if isinstance(node,ast.Try) and needed<=calls(node.body))
         self.assertIn('close_active_initialization',calls(boundary.finalbody))
-        gate=boundary.finalbody[0]
-        self.assertIsInstance(gate,ast.If);self.assertEqual(ast.unparse(gate.test),'args.execute')
+        gate=next(node for node in boundary.finalbody if isinstance(node,ast.If)
+            and ast.unparse(node.test)=='args.execute')
+        self.assertIn('close_active_initialization',calls(gate.body))
         inactive=next(node for node in boundary.body if isinstance(node,ast.If) and ast.unparse(node.test)=='not args.execute')
         self.assertNotIn('ConditionalCallbackBudget',calls(inactive.body))
         self.assertNotIn('RootNativeAccounting',calls(inactive.body))
