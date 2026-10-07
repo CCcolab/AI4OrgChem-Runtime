@@ -1,6 +1,8 @@
 # AI4OrgChem Reproducible Runtime
 
-Latest [single-F response diagnostic](docs/USER_MOLECULE_OCCUPATION_RESPONSE_20261007_zh-CN.md): 101 targeted engineering tests and actual zero-F preparation passed. One new process completed three densities × three paths, nine true F/NR calls and zero SCF iterations. Six same-D operator subsets passed; every point failed the single-point predicate, with no qualified endpoint or Compute activation. The new nine-slot budget is closed without retry.
+Latest [deterministic occupied-space seeds and fake admission](docs/USER_MOLECULE_OCCUPIED_SPACE_ADMISSION_20261007_zh-CN.md) prepares four array seeds and passes 97 scoped tests plus 12 synthetic callbacks. This increment adds 0 real F/SCF; the new real-response and root-search workers are not implemented/executed. Original gates and Compute BLOCKED remain.
+
+Previous [single-F response diagnostic](docs/USER_MOLECULE_OCCUPATION_RESPONSE_20261007_zh-CN.md): 101 targeted engineering tests and actual zero-F preparation passed. One new process completed three densities × three paths, nine true F/NR calls and zero SCF iterations. Six same-D operator subsets passed; every point failed the single-point predicate, with no qualified endpoint or Compute activation. The new nine-slot budget is closed without retry.
 
 Earlier [strict-scope occupation diagnosis](docs/USER_MOLECULE_OCCUPATION_SCOPE_20261007_zh-CN.md) verifies two saved production operators and six frozen occupation witnesses. Changing occupation with the same frozen F cannot satisfy the original positive-gap gate. The existing operational scope is clarified; no new F/SCF/container ran and Compute remains BLOCKED. Its response proposal was subsequently implemented and executed in the separately recorded increment above.
 

@@ -1,0 +1,44 @@
+{
+  "id": "MDR-006",
+  "revision": "0.1",
+  "date": "2026-10-07",
+  "status": "DETERMINISTIC_OCCUPIED_SPACE_INITIALIZATION_PREPARED_FAKE_ADMISSION_VERIFIED",
+  "request_source": "DIRECT_USER_MESSAGE",
+  "user_request": "请继续",
+  "parent_decision": {
+    "id": "MDR-005",
+    "path": "../mdr-005/record.json",
+    "sha256": "b855d0bdbf57055c863414fa9f1404ccecf58d7578d6779ec51dbaa40c5b2fb7",
+    "preserved_bytes": true
+  },
+  "runtime_source_commit": "029cd557f2a858051a4f98d34cadc981b932346c",
+  "scientific_target_changed": false,
+  "scientific_operators_changed": false,
+  "final_thresholds_changed": false,
+  "initialization": "NEW_GLOBAL_OCCUPIED_VIRTUAL_ANCHOR_ROTATION_DIAGNOSTIC_NOT_V2",
+  "decisions": [
+    "The existing full global closed-shell masked projector manifold permits sigma-pi occupied-virtual rotations; fixed xy geometry does not impose electronic reflection symmetry.",
+    "Use frozen symmetric-sum unqualified D as an explicit ancestor, pi occupied AO anchor4+9 and sigma virtual AO anchor2+7; lock four nonrandom angles. No F-based selection or fallback.",
+    "Each rotated projector remains rank8 with2/0 MO occupations; local pi weights are not fractional MO occupations. Do not mask D.",
+    "This initialization changes base occupied space; do not call it V2 ordinary occupied-space preservation or pass it through the V2 wrapper.",
+    "Verify actual local source bytes and regeneration of every angle-labelled D; self-declared hashes alone cannot establish recipe provenance.",
+    "Current adapter is fake only, requires real native guard observation to claim zero calls, and authorizes no molecular mode.",
+    "Any later real twelve-point response or root search needs a separate implementation/identity/budget. Closed old journals stay unchanged."
+  ],
+  "unknown": [
+    "Existence or convergence of other strict target roots",
+    "True F and molecular energies at the new rotated D",
+    "Grid electron counts at new D",
+    "Variational stationarity and stability",
+    "Qualified same-root implementation equivalence and research interpretation"
+  ],
+  "scientific_approval": false,
+  "production_activation": false,
+  "Compute": false,
+  "research_delta_hartree": null,
+  "execution_record": "../../occupied-space-admission-20261007.json",
+  "next_response_proposal": "../../occupied-space/response-proposal-v1.json",
+  "external_expert_process": "CANCELLED_BY_USER",
+  "external_role_required": false,
+  "compute_blocked_basis": "No qualified fixed-point endpoint/full endpoint comparison or research/resource scope; real occupied-space response/root worker not implemented. Not the cancelled expert process."
+}
