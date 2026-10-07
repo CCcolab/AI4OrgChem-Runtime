@@ -80,13 +80,13 @@
   "new_build": "EXECUTED; r3 PASS",
   "new_scientific_runs": "This increment0; latest actual science remains prior12F occupied-space response with no qualified endpoint",
   "compute_enabled": false,
-  "new_service_tests": "62 scoped source/catalogue/classification tests PASS; minimal Linux CI and PS/source integration pending",
+  "new_service_tests": "231 unique scoped local engineering cases PASS (157 minimal CI plus74 framework);22 PS processes;12 prior source/preflight cases; not full W01-W07/scientific CI",
   "wslc": "BLOCKED / NOT_EXECUTED; paused",
   "colab": "DEFERRED",
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Complete local source/metadata engineering acceptance; future true-root diagnosis requires a fresh versioned implementation and budget; no automatic science",
+  "next_bounded_task": "Independent implementation/admission for a future true-root diagnostic with a new version and fresh scientific budget; current contract authorizationFalse; no automatic science. P01-P13 adapters and website follow after their prerequisites.",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -519,9 +519,16 @@
     "new_scientific_calls": 0,
     "new_image_build": "NOT_EXECUTED",
     "compute_enabled": false,
-    "local_minimal_ci": "PENDING; host missing-jsonschema failure preserved",
-    "source_preparation": "IMPLEMENTED; real repository roundtrip pending",
+    "local_minimal_ci": "PASS157_SCOPED_IMPORT_GUARDED_ENGINEERING",
+    "source_preparation": "PASS_PRIOR_C49213C_GIT_ZIP_BYTE_ROUNDTRIP_AND_NO_ENGINE_PREFLIGHT; final candidate recorded externally",
     "new_live_root_runner": "NOT_IMPLEMENTED",
-    "scientific_budget": null
+    "scientific_budget": null,
+    "validation": "PASS_SCOPED_LOCAL_SOURCE_FRAMEWORK_ENGINEERING_ONLY",
+    "tested_runtime_code_commit": "636a54ce294eba42acec492cac54a1af06d1389b",
+    "unique_engineering_tests": 231,
+    "launcher_process_cases": 22,
+    "github_workflow": "STATIC_UPDATED; NOT_EXECUTED",
+    "new_containers": 3,
+    "record": "validation/local-runtime-framework-20261007.json"
   }
 }
