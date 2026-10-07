@@ -122,15 +122,17 @@
     {
       "id": "root-native-diagnostic",
       "name": "原生根诊断候选",
-      "status": "IMPLEMENTED_GATED_ENGINEERING_AND_ZERO_F_PASS_ROOT_NOT_EXECUTED",
-      "scope": "Fixed ethene seed2, independent path only;108 scoped cases and actual zero-F preparation. No science grant/budget, no Compute; not general user molecule calculation or independent root numerical acceptance.",
-      "record": "validation/user-molecule/root-native-engineering-20261007.json",
-      "tested_runtime_commit": "aad7c5b51168a2364cc6c88081c981afea50a200"
+      "status": "EXECUTED_INCOMPLETE_WALL_STOP_NO_FORMAL_ENDPOINT",
+      "scope": "One fixed ethene diagnosis:139NR completed/138callback success+1deadline failure; no normal returned root, no tails/formal close. No retry, Compute BLOCKED.",
+      "record": "validation/user-molecule/root-native-diagnostic-20261007.json",
+      "tested_runtime_commit": "aad7c5b51168a2364cc6c88081c981afea50a200",
+      "actual_runtime_execution_commit": "73e8dfd8aef4881dec6b8cd30b21b2228f8b51ab"
     }
   ],
   "new_image_build_this_increment": "NOT_EXECUTED",
-  "new_scientific_execution_this_increment": 0,
+  "new_scientific_execution_this_increment": 1,
   "verification_record": "validation/user-molecule/root-native-engineering-20261007.json",
-  "local_engineering_verification": "Latest108 scoped native engineering cases and actual zero-F preparation; previous231 framework/22 host processes remain historical; no new science or image build",
-  "previous_verification_record_before_native": "validation/local-runtime-framework-20261007.json"
+  "local_engineering_verification": "Previous engineering-only increment:108 scoped native cases and zero-F preparation, no science at that increment;231 framework/22 host processes remain historical. The subsequent one native science attempt is recorded separately in scientific_observation_record.",
+  "previous_verification_record_before_native": "validation/local-runtime-framework-20261007.json",
+  "scientific_observation_record": "validation/user-molecule/root-native-diagnostic-20261007.json"
 }

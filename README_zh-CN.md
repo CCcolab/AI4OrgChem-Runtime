@@ -2,11 +2,13 @@
 
 本地使用从 [本地Runtime入口](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md) 开始：查看能力 → 选择P01—P14既有证据 → 输出只读报告，或准备自己的请求并执行受限Check/Report。`start-local-runtime.ps1` 是宿主源码入口；命题目录不等于P01—P13重算适配，生产用户分子Compute仍BLOCKED。Git/项目ZIP仅提供来源可核对的源码，不包含完整安装环境；新镜像未构建，WSLc/公开发布仍保持原边界。
 
-[本轮框架验收](docs/LOCAL_RUNTIME_FRAMEWORK_20261007_zh-CN.md)：231个独立工程测试、22项PowerShell进程及12项来源/预检通过；既有镜像上运行宿主只读源码，未新建科学预算。GitHub CI运行仍NOT_EXECUTED。
+[此前框架验收](docs/LOCAL_RUNTIME_FRAMEWORK_20261007_zh-CN.md)：231个独立工程测试、22项PowerShell进程及12项来源/预检通过；该轮未新建科学预算。GitHub CI运行仍NOT_EXECUTED。
 
-[最新原生根候选工程](docs/USER_MOLECULE_ROOT_NATIVE_ENGINEERING_20261007_zh-CN.md)：实现受控原生后端，108项专项工程测试及29护栏真实缓存零F准备通过。根搜索NOT_EXECUTED、科学预算为空，Compute仍BLOCKED；未重建镜像。
+[最新唯一原生根诊断](docs/USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.md)：139次NR完成、138成功回调/1截止失败；含清理279.031秒，第一96差分完成、第二部分未完成。无正式根/尾检，原OPEN账本保留，Compute仍BLOCKED；未自动重试。
 
-此前 `7530595` 的 [单起点候选与零计算准备](docs/USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md)已完成：150项专项工程测试（40新增、110回归）及实际缓存零F准备通过；新增真实F/NR/SCF为0。该历史版本不允许真实根搜索，实际root runner未实现/未执行；最新受控后端见上段，当前科学预算仍为空、Compute仍BLOCKED。原规则、门槛和旧数值记录保留。
+[此前原生根候选工程](docs/USER_MOLECULE_ROOT_NATIVE_ENGINEERING_20261007_zh-CN.md)：108项专项工程测试及29护栏真实缓存零F准备通过；该轮根搜索NOT_EXECUTED、科学预算为空。后续唯一真实尝试见上段，当前Compute仍BLOCKED；未重建镜像。
+
+此前 `7530595` 的 [单起点候选与零计算准备](docs/USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md)已完成：150项专项工程测试（40新增、110回归）及实际缓存零F准备通过；新增真实F/NR/SCF为0。该历史版本不允许真实根搜索或预约科学预算，实际runner未实现/未执行。后续唯一真实尝试见上段；当前没有可追加或复用的重试预算，Compute仍BLOCKED。原规则、门槛和旧数值记录保留。
 
 此前 [十二点真实条件算子响应](docs/USER_MOLECULE_OCCUPIED_SPACE_RESPONSE_20261007_zh-CN.md)已完成：129项专项工程测试、实际零F准备与12次真F/NR通过，8组同D子集通过；所有点gap通过但comm/map失败，无合格自洽根，Compute保持BLOCKED。SCF/根搜索/尾检未执行，新12槽预算关闭。
 

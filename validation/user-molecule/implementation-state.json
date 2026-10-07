@@ -1,5 +1,5 @@
 {
-  "revision": "SOURCE-NATIVE-ROOT-ENGINEERING-20261007",
+  "revision": "SOURCE-NATIVE-ONE-RUN-WALL-STOP-20261007",
   "date": "2026-10-07",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -32,9 +32,10 @@
       "status_record": "validation/user-molecule/solver-v2/review.json",
       "solver_v2_numerical_acceptance": "EXECUTED_FAILED_CANDIDATE_V2",
       "latest_residual_engineering_record": "validation/user-molecule/seed-v2-20261007.json",
-      "latest_numerical_record": "validation/user-molecule/seed-v2-20261007.json",
+      "latest_numerical_record": "validation/user-molecule/root-native-diagnostic-20261007.json",
       "latest_residual_validation": "SEED_V2_EXECUTED_UNQUALIFIED; production map/gap failed; reference final gate NOT_EXECUTED_BUDGET_STOP",
-      "latest_seed_v2_validation": "EXECUTED_UNQUALIFIED; original final gates preserved"
+      "latest_seed_v2_validation": "EXECUTED_UNQUALIFIED; original final gates preserved",
+      "latest_native_diagnostic_validation": "EXECUTED_INCOMPLETE_WALL_STOP_NO_FORMAL_ROOT_ENDPOINT"
     },
     "W06": {
       "implementation": "ARRAY_REFERENCE_AND_READONLY_ASSESSMENT_IMPLEMENTED",
@@ -45,7 +46,7 @@
       "production_activation": false,
       "record": "validation/user-molecule/w06/engineering-review.json",
       "latest_engineering_ci_record": "validation/user-molecule/ci-local-w01-w07-20261006.json",
-      "latest_numerical_record": "validation/user-molecule/seed-v2-20261007.json",
+      "latest_numerical_record": "validation/user-molecule/root-native-diagnostic-20261007.json",
       "historical_engineering_test_commit": "43e80de31140d8685b5087ac5ac56654c7e68e28",
       "latest_engineering_test_commit": "aad7c5b51168a2364cc6c88081c981afea50a200",
       "method_static_review": "EXISTING_STRICT_SCOPE_CLARIFIED; NUMERICAL_AND_RESEARCH_EVIDENCE_BLOCKED; external expert process CANCELLED_BY_USER",
@@ -59,7 +60,8 @@
       "latest_engineering_test_scope": "108_SCOPED_NATIVE_BACKEND_ENGINEERING_NOT_FULL_W01_W07_CI",
       "previous_engineering_test_commit_before_budget_recording": "60d76deeb468fdd2dc2c444b7cf60d95a9dd9290",
       "latest_single_point_response_record": "validation/user-molecule/occupied-space-response-20261007.json",
-      "latest_engineering_increment_record": "validation/user-molecule/root-native-engineering-20261007.json"
+      "latest_engineering_increment_record": "validation/user-molecule/root-native-engineering-20261007.json",
+      "latest_native_diagnostic_validation": "EXECUTED_INCOMPLETE_WALL_STOP_NO_FORMAL_ROOT_ENDPOINT"
     },
     "W07": {
       "implementation": "LOCAL_ENGINEERING_SOURCE_EVIDENCE_HANDOFF_AND_AGENT_SELFTEST_COMPLETE; research acceptance pending",
@@ -78,7 +80,7 @@
     "branch": "implementation/user-molecule-w01-w04"
   },
   "new_build": "EXECUTED; r3 PASS",
-  "new_scientific_runs": "This increment0; latest actual science remains prior12F response, no qualified endpoint",
+  "new_scientific_runs": "One scoped process;139actual NR completed,138successful callbacks plus1deadline failure; formal root/tails not completed",
   "compute_enabled": false,
   "new_service_tests": "108 unique scoped native/backend engineering cases PASS;14 native guards and actual29-guard zero-F preparation; prior231 framework cases remain historical, not rerun",
   "wslc": "BLOCKED / NOT_EXECUTED; paused",
@@ -86,7 +88,7 @@
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Review implemented fixed native candidate; only separately granted single201-call/300-second diagnosis may execute. Independently verify actual saved root arrays and original gates afterwards. Compute/production remain disabled.",
+  "next_bounded_task": "Engineering only: graceful stop/final journal publication and separate timing probes without native F; retain original201/300 and scientific gates; no new molecular retry",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -103,7 +105,7 @@
   "ci_local_test_commit": "44ad90e0e3b293879ec67b7a10475825cde05d3a",
   "latest_w06_record": "validation/user-molecule/w06/engineering-review.json",
   "previous_ci_record": "validation/user-molecule/ci-local-20261005.json",
-  "latest_numerical_record": "validation/user-molecule/occupied-space-response-20261007.json",
+  "latest_numerical_record": "validation/user-molecule/root-native-diagnostic-20261007.json",
   "scientific_test_commit": "c8a580f70d7dba721758b77c0c534c31b50953b8",
   "previous_numerical_preparation_record": "validation/user-molecule/w05/preparation-status.json",
   "latest_guarded_engineering_test_commit": "aad7c5b51168a2364cc6c88081c981afea50a200",
@@ -112,8 +114,8 @@
   "latest_solver_design": "validation/user-molecule/method-review-20261006/solver-next-design.json",
   "method_readonly_review": "COMPLETE_STORED_EVIDENCE_AND_ALGEBRA; NOT_REAL_METHOD_APPROVAL",
   "new_scientific_runs_this_method_review": 0,
-  "latest_method_decision_record": "validation/user-molecule/method-decisions/mdr-009/record.json",
-  "method_decision_status": "GATED_NATIVE_BACKEND_ENGINEERING_PASS_ZERO_F_PASS_REAL_ROOT_NOT_EXECUTED",
+  "latest_method_decision_record": "validation/user-molecule/method-decisions/mdr-010/record.json",
+  "method_decision_status": "EXECUTED_INCOMPLETE_WALL_STOP_NO_FORMAL_ROOT_ENDPOINT",
   "latest_host_report_engineering_record": "validation/user-molecule/report-engineering-20261006.json",
   "host_report_engineering": {
     "status": "PASS_SCOPED_HOST_REPORT_ENGINEERING_ONLY",
@@ -445,8 +447,8 @@
   "previous_latest_method_decision_record_before_response": "validation/user-molecule/method-decisions/mdr-004/record.json",
   "previous_latest_guarded_engineering_test_commit_before_response": "1a1c0c261141f02058669f710ef402d906695c1c",
   "previous_latest_engineering_increment_record_before_response": "validation/user-molecule/budget-recording-20261007.json",
-  "latest_numerical_scope": "FOUR_DENSITY_TWELVE_SINGLE_F_RESPONSES_NOT_SCF_OR_FIXED_POINT_ENDPOINT",
-  "latest_fixed_point_diagnostic_record": "validation/user-molecule/seed-v2-20261007.json",
+  "latest_numerical_scope": "ONE_SOURCE_NATIVE139_NR_INTERRUPTED_ROOT_DIAGNOSIS_NO_NORMAL_ENDPOINT_OR_TAIL_ACCEPTANCE",
+  "latest_fixed_point_diagnostic_record": "validation/user-molecule/root-native-diagnostic-20261007.json",
   "latest_occupation_response_record": "validation/user-molecule/occupation-response-20261007.json",
   "new_scientific_runs_this_occupation_response": 1,
   "new_true_F_calls_this_occupation_response": 9,
@@ -534,6 +536,22 @@
   "previous_latest_method_decision_record_before_native": "validation/user-molecule/method-decisions/mdr-008/record.json",
   "latest_native_engineering_record": "validation/user-molecule/root-native-engineering-20261007.json",
   "root_native": {
+    "implementation": "IMPLEMENTED_MOLECULAR_ATTEMPT_INCOMPLETE",
+    "actual_runtime_execution_commit": "73e8dfd8aef4881dec6b8cd30b21b2228f8b51ab",
+    "latest_record": "validation/user-molecule/root-native-diagnostic-20261007.json",
+    "root_search": "EXECUTED_INCOMPLETE_WALL_STOP",
+    "native_NR_completed": 139,
+    "wall_seconds": 279.03100000001723,
+    "callback_formal_close": "NOT_COMPLETED_RAW_OPEN_PRESERVED",
+    "retry_authorization": false,
+    "Compute": false
+  },
+  "previous_latest_guarded_engineering_test_commit_before_native": "7530595c71c0395c37f2e0e8669db14de5e14342",
+  "previous_latest_engineering_increment_record_before_native": "validation/user-molecule/occupied-space-root-preparation-20261007.json",
+  "previous_latest_guarded_engineering_test_scope_before_native": "150_TARGETED_FAKE_ROOT_AND_RELATED_REGRESSION_TESTS_NOT_FULL_W01_W07_CI",
+  "previous_latest_numerical_record_before_native_diagnostic": "validation/user-molecule/occupied-space-response-20261007.json",
+  "latest_native_diagnostic_record": "validation/user-molecule/root-native-diagnostic-20261007.json",
+  "root_native_previous_engineering": {
     "implementation": "IMPLEMENTED_GATED_CANDIDATE_NOT_MOLECULARLY_EXECUTED",
     "tested_runtime_code_commit": "aad7c5b51168a2364cc6c88081c981afea50a200",
     "validation": "PASS_SCOPED_ENGINEERING_AND_ZERO_F_PREPARATION_REAL_ROOT_NOT_EXECUTED",
@@ -542,7 +560,8 @@
     "Compute": false,
     "record": "validation/user-molecule/root-native-engineering-20261007.json"
   },
-  "previous_latest_guarded_engineering_test_commit_before_native": "7530595c71c0395c37f2e0e8669db14de5e14342",
-  "previous_latest_engineering_increment_record_before_native": "validation/user-molecule/occupied-space-root-preparation-20261007.json",
-  "previous_latest_guarded_engineering_test_scope_before_native": "150_TARGETED_FAKE_ROOT_AND_RELATED_REGRESSION_TESTS_NOT_FULL_W01_W07_CI"
+  "previous_latest_numerical_scope_before_native_diagnostic": "FOUR_DENSITY_TWELVE_SINGLE_F_RESPONSES_NOT_SCF_OR_FIXED_POINT_ENDPOINT",
+  "previous_latest_fixed_point_diagnostic_record_before_native": "validation/user-molecule/seed-v2-20261007.json",
+  "scientific_test_commit_scope": "Historical solver-v2 numerical-failure acceptance in validation/user-molecule/solver-v2/review.json; not this native execution or engineering test commit",
+  "latest_native_execution_commit": "73e8dfd8aef4881dec6b8cd30b21b2228f8b51ab"
 }
