@@ -4,7 +4,7 @@
     "container/Dockerfile.registered-cases": "99133bbe25d8c7ea0bbbffa754c2284b628e1e1eef193b92eef09ce7d20a6dda",
     "container/Dockerfile.registered-cases.dockerignore": "4b861b312205ec5423dff2528ee4f5bc3aed772056411a1550c80a2bedd925d6",
     "locks/registered-cases-dependencies.json": "511711d709508ff77fa995b120d5aeed3a9058984868a3a17f1d0604b788d393",
-    "locks/requirements-registered-cases.txt": "0935ce2ff0c1c124c179c496a4fa7552922380f96b52a668b0487e044b361f02",
+    "locks/requirements-registered-cases.txt": "fab87c44d6e5b146689dab6633c440e162265f5de445a2df24c9571ebbf23056",
     "reference/registered_cases/p01/.gitattributes": "efbd1d0041d518fa2997d760f476497267c7e997f3f96cdbb07707660cfed1d7",
     "reference/registered_cases/p01/LICENSE": "4135cedb444c19860a53c85dc984b9c0a9644cba632c8ef44c45cbb1f88699b2",
     "reference/registered_cases/p01/NOTICE": "7be8afa9664607513c7e0b07f17ba44c576fd094dfb30d25e2240d16c3835e06",
