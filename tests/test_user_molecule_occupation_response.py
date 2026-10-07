@@ -26,7 +26,11 @@ class OccupationResponseTests(unittest.TestCase):
     def book(self, **changes):
         self.sequence += 1
         arguments = dict(path=Path(self.directory.name)/('journal-'+str(self.sequence)+'.json'),
-            batch_id='response-fake-'+str(self.sequence), identity={'mode': 'TEST_DOUBLE'},
+            batch_id='response-fake-'+str(self.sequence), identity={
+                'mode': 'ENGINEERING_FAKE_SINGLE_F_RESPONSE',
+                'geometry_sha256': hashlib.sha256(b'SYNTHETIC_ARRAY_FIXTURE_NOT_MOLECULE').hexdigest(),
+                'profile_sha256': hashlib.sha256(b'SYNTHETIC_FAKE_PROFILE').hexdigest(),
+                'dependencies_sha256': hashlib.sha256(b'SYNTHETIC_FAKE_DEPENDENCIES').hexdigest()},
             path_limits={name: 3 for name in response.PATH_NAMES}, total_limit=9)
         arguments.update(changes)
         return ConditionalCallbackBudget(**arguments)
