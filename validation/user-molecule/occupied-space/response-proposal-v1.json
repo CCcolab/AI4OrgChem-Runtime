@@ -1,7 +1,7 @@
 {
   "schema_version": "occupied-space-single-response-design-v1",
-  "revision": "0.1",
-  "status": "DESIGN_ONLY_REAL_WORKER_NOT_IMPLEMENTED_NOT_EXECUTED",
+  "revision": "0.2",
+  "status": "IMPLEMENTED_EXECUTED_TWELVE_SINGLE_POINT_DIAGNOSTIC_NO_QUALIFIED_ROOT",
   "date": "2026-10-07",
   "parent_delivery_commit": "34f115723d8537759259bee7279a7cfb61ea54d2",
   "preparation_and_fake_adapter_commit": "029cd557f2a858051a4f98d34cadc981b932346c",
@@ -75,8 +75,8 @@
     "Fresh bound contract/journal; preserve closed9 and603 budgets",
     "One-point matched D/F/G/components records and scoped comparisons; no endpoint qualification claim"
   ],
-  "real_worker_commit": null,
-  "real_execution_contract_sha256": null,
+  "real_worker_commit": "63dc6f64a683682fbdcbfc0debcece4f6c40d3c6",
+  "real_execution_contract_sha256": "151b2839a199384f34da3fa7d8ebc9f0666506c832a2401598c079a1c8792dc1",
   "scientific_budget_reserved": false,
   "root_search_followup": {
     "implementation": "NOT_IMPLEMENTED",
@@ -84,12 +84,34 @@
     "scope": "Explicit initial-D wrapper plus budget-aware residual solver needed; existing V2 wrapper preserves ordinary occupied space and old bridge starts ordinary D0",
     "budget_analysis": "4 seeds times 201 =804F for one path; 4 seeds times3paths times201=2412F. Do not copy old201-per-path/603-total allowance or automatically enable all roots.",
     "requirements": "Select a deterministic bounded search after real single-point evidence; whole-Jacobian and returned/mapped recheck reservations; keep true-F gap>=1e-6 and all original gates",
-    "budget": null
+    "budget": null,
+    "next_design": "validation/user-molecule/occupied-space/root-search-proposal-v1.json"
   },
   "external_expert_process": "CANCELLED_BY_USER",
   "external_approval_required": false,
   "scientific_execution_authorized_by_this_design": false,
   "scientific_method_approval": false,
   "Compute": false,
-  "research_delta_hartree": null
+  "research_delta_hartree": null,
+  "original_design": {
+    "path": "revisions/response-proposal-v1-design.json",
+    "sha256": "6c32f91f43caf8226e5a34d051b59e13d2469fc9949e07eb9ad3288cba0fad09",
+    "preserved_bytes": true
+  },
+  "execution_record": "validation/user-molecule/occupied-space-response-20261007.json",
+  "new_true_F_calls": 12,
+  "new_SCF_iterations": 0,
+  "new_scientific_budget": {
+    "status": "CLOSED_NOT_REOPENABLE",
+    "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-response\\response-a1\\output\\callbacks.json",
+    "total_limit": 12,
+    "charged": 12,
+    "succeeded": 12,
+    "failed": 0,
+    "pending": 0,
+    "paths_closed": true,
+    "refills": 0
+  },
+  "next_scientific_budget": null,
+  "scientific_budget_reserved_scope": "NO_OPEN_RESERVATION; HISTORICAL_FRESH_BATCH_EXECUTED_AND_CLOSED"
 }

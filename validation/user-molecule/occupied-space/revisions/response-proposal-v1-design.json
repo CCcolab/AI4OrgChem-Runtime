@@ -1,0 +1,95 @@
+{
+  "schema_version": "occupied-space-single-response-design-v1",
+  "revision": "0.1",
+  "status": "DESIGN_ONLY_REAL_WORKER_NOT_IMPLEMENTED_NOT_EXECUTED",
+  "date": "2026-10-07",
+  "parent_delivery_commit": "34f115723d8537759259bee7279a7cfb61ea54d2",
+  "preparation_and_fake_adapter_commit": "029cd557f2a858051a4f98d34cadc981b932346c",
+  "initialization_policy": "MASKED_GLOBAL_OCCUPIED_VIRTUAL_ANCHOR_ROTATION_DIAGNOSTIC_V1",
+  "scientific_target": "UNCHANGED_GLOBAL_CLOSED_SHELL_MASKED_METRIC_TRUE_F_AUFBAU_POSITIVE_GAP_FIXED_POINT",
+  "mode": "PROPOSED_OCCUPIED_SPACE_FOUR_DENSITY_SINGLE_RESPONSE_NOT_SCF",
+  "fixed_source_input": {
+    "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\seed-input\\SOURCE.json",
+    "size_bytes": 7852,
+    "sha256": "f3e9be814ee844606bdb6bd13980007ba11d9965d70cd167e2521e980483646b"
+  },
+  "profile_canonical_sha256": "5c78ef8e741b255421a465895524cdb7aa208ef90751a1524eff9c7f88e5d537",
+  "executed_profile_raw_sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9",
+  "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+  "image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+  "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "geometry_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+  "prepared_seed_json": {
+    "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a2\\output\\prepared-seed-family.json",
+    "size_bytes": 13624,
+    "sha256": "a165633039bb3f3b250e872595e39510749a9003a412247cb1e9e315c003a961"
+  },
+  "prepared_seed_arrays": {
+    "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a2\\output\\prepared-seed-family.npz",
+    "size_bytes": 12398,
+    "sha256": "f5da3ad1de1e1cea561408fe43ef93099c0ffbdcd8faba11eef8142d39b450fa"
+  },
+  "fixed_angles_rad": [
+    -0.25,
+    -0.1,
+    0.1,
+    0.25
+  ],
+  "ordered_seed_density_ids": [
+    "987b007d2d30c295efcdacffcdfb17ef47d89617c8db80cb30f23455a5dfe521",
+    "6b0d501aba96ac5c53ca633491e105d7c5dab13836350bd6d7350437f91bd7c0",
+    "d8be75fe06f0827aaa1214c8b83156bf596cf80a12407fc489e43dfbe9d94218",
+    "cfc94a243ea486db1e49b142c407529f9389919ddb5fae2282c489a214fb90e3"
+  ],
+  "callback_order": "Seed outer; production_copy, production_owned, independent_reference inner",
+  "proposed_callback_limits": {
+    "production_copy": 4,
+    "production_owned": 4,
+    "independent_reference": 4,
+    "total": 12
+  },
+  "proposed_process_limits": {
+    "scientific_processes": 1,
+    "wall_seconds_through_cleanup": 120,
+    "memory_mib": 1024,
+    "CPU": 1,
+    "swap_mib": 0,
+    "scope": "PROPOSED_12_SINGLE_EVALUATIONS_ONLY_NOT_GENERAL_RESOURCE_APPROVAL"
+  },
+  "allowed_if_separately_implemented": "Only F/G/energy at the twelve exact requested D/path combinations, reuse fully bound old ordinary/grid/integral data; no solver iteration",
+  "forbidden": [
+    "New ordinary SCF/grid/integral construction",
+    "F(mapped D)",
+    "Jacobian",
+    "Tail recheck",
+    "Automatic retry/refund/refill",
+    "Root-search activation",
+    "Seed-V2 relabeling",
+    "Threshold or scientific operator change"
+  ],
+  "failure_policy": "Precharge each slot; one observed native NR per admitted evaluator; any exception or invalid observation stops whole batch, charges failure, closes all paths, no retry",
+  "required_before_real_launch": [
+    "Separate real mode and worker/schema with full identity and recipe preflight",
+    "Scientific-source guards/native entry-completion-failure counters distinct from conservative slots",
+    "Current host/cgroup capacity and hard enforcement through cleanup",
+    "Fresh bound contract/journal; preserve closed9 and603 budgets",
+    "One-point matched D/F/G/components records and scoped comparisons; no endpoint qualification claim"
+  ],
+  "real_worker_commit": null,
+  "real_execution_contract_sha256": null,
+  "scientific_budget_reserved": false,
+  "root_search_followup": {
+    "implementation": "NOT_IMPLEMENTED",
+    "execution": "NOT_EXECUTED",
+    "scope": "Explicit initial-D wrapper plus budget-aware residual solver needed; existing V2 wrapper preserves ordinary occupied space and old bridge starts ordinary D0",
+    "budget_analysis": "4 seeds times 201 =804F for one path; 4 seeds times3paths times201=2412F. Do not copy old201-per-path/603-total allowance or automatically enable all roots.",
+    "requirements": "Select a deterministic bounded search after real single-point evidence; whole-Jacobian and returned/mapped recheck reservations; keep true-F gap>=1e-6 and all original gates",
+    "budget": null
+  },
+  "external_expert_process": "CANCELLED_BY_USER",
+  "external_approval_required": false,
+  "scientific_execution_authorized_by_this_design": false,
+  "scientific_method_approval": false,
+  "Compute": false,
+  "research_delta_hartree": null
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "occupied-space-root-search-admission-design-v1",
+  "revision": "0.1",
+  "date": "2026-10-07",
+  "status": "DESIGN_ONLY_NO_SOLVER_WORKER_OR_NEW_SCIENTIFIC_RESERVATION",
+  "parent_response_record": "validation/user-molecule/occupied-space-response-20261007.json",
+  "source_code_commit": "63dc6f64a683682fbdcbfc0debcece4f6c40d3c6",
+  "target": "UNCHANGED_GLOBAL_MASKED_2_0_TRUE_F_AUFBAU_POSITIVE_GAP_FIXED_POINT",
+  "technical_initial_candidate": {
+    "seed_index": 2,
+    "angle_rad": -0.1,
+    "density_id": "6b0d501aba96ac5c53ca633491e105d7c5dab13836350bd6d7350437f91bd7c0",
+    "selection_scope": "TECHNICAL_SOLVER_START_NOT_SCIENTIFIC_STATE_OR_ENERGY_SELECTION",
+    "selection_basis": "Among tested |theta| groups,0.10 has smaller true-F commutator/raw-map residual than0.25 and passes the unchanged initial gap. Choose negative sign by fixed index order; opposite sign remains numerical reflection partner, not proven same root.",
+    "seed_record": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-response\\seed-input\\prepared-seed-family.json",
+      "size_bytes": 13624,
+      "sha256": "a165633039bb3f3b250e872595e39510749a9003a412247cb1e9e315c003a961"
+    },
+    "seed_arrays": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-response\\seed-input\\prepared-seed-family.npz",
+      "size_bytes": 12398,
+      "sha256": "f5da3ad1de1e1cea561408fe43ef93099c0ffbdcd8faba11eef8142d39b450fa"
+    },
+    "initial_gap_status": "PASS_AT_THIS_D_ONLY_NOT_FINAL_ROOT_GAP_APPROVAL"
+  },
+  "implementation_tasks": [
+    "Explicit initial-D preparation wrapper; do not route changed occupied space through V2 ordinary-column-space wrapper or old bridge.run ordinaryD0 startup",
+    "Bind existing budget-aware residual candidate to source-native counted evaluator; keep real mode distinct from fake-only candidate",
+    "Whole-Jacobian admission and separate returned/mapped D true-F/energy tail reservations; save matching D/F/G/energy and residuals even on failure",
+    "Preserve48 global occupied-virtual variables, all original operator/occupancy/gap/map thresholds, and report single-point, returned endpoint and raw-mapped endpoint separately",
+    "First choose one bounded primary path/initial start; only independently qualified matched-root endpoints allow later path/root equivalence comparisons"
+  ],
+  "budget_constraints": {
+    "full_three_point_Jacobian_variables": 48,
+    "F_calls_per_full_Jacobian": 96,
+    "must_reserve_true_F_tail_calls": 2,
+    "old_per_path_limit": 201,
+    "old_batch_limit": 603,
+    "scope_note": "These are legacy bounds/arithmetic, not a new allowance. A201 slot path permits at most2full Jacobians before other base/initial/tail calls. Freeze exact target/algorithm/evaluator counts and wall/CPU/memory separately before any real root process.",
+    "multi_start_warning": "4starts x201=804F for one path;4x3x201=2412F. Neither exists in an old603slot allowance.",
+    "new_root_budget": null,
+    "scientific_processes_authorized_by_this_design": 0
+  },
+  "science_unknown": [
+    "Existence or convergence of another qualified strict root",
+    "Final gap after updates or at root",
+    "Uniqueness, stationarity, stability and scientific energy interpretation",
+    "Research scope and general-user resource qualification"
+  ],
+  "fixed_point_search_execution": "NOT_EXECUTED",
+  "new_solver_production_activation": false,
+  "external_expert_process": "CANCELLED_BY_USER",
+  "external_opinion_required": false,
+  "Compute": false,
+  "scientific_method_approval": false,
+  "research_delta_hartree": null
+}

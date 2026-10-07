@@ -1,6 +1,8 @@
 # AI4OrgChem Reproducible Runtime
 
-Latest [deterministic occupied-space seeds and fake admission](docs/USER_MOLECULE_OCCUPIED_SPACE_ADMISSION_20261007_zh-CN.md) prepares four array seeds and passes 97 scoped tests plus 12 synthetic callbacks. This increment adds 0 real F/SCF; the new real-response and root-search workers are not implemented/executed. Original gates and Compute BLOCKED remain.
+Latest [twelve-point occupied-space response](docs/USER_MOLECULE_OCCUPIED_SPACE_RESPONSE_20261007_zh-CN.md): 129 scoped engineering tests and actual zero-F preparation passed; one new process completed 12 true F/NR evaluations and 8 same-D operator/energy subsets. Every point passes initial gap but fails commutator/raw-map checks; no qualified root, SCF or tail rechecks. Compute remains BLOCKED; the new twelve-slot budget is closed.
+
+Previous [deterministic occupied-space seeds and fake admission](docs/USER_MOLECULE_OCCUPIED_SPACE_ADMISSION_20261007_zh-CN.md) prepared four array seeds and passed 97 scoped tests plus 12 synthetic callbacks, with 0 real F/SCF. At that increment the real-response and root-search workers were not implemented/executed; the real-response worker was subsequently executed in the separately recorded increment above. Original gates and Compute BLOCKED remain.
 
 Previous [single-F response diagnostic](docs/USER_MOLECULE_OCCUPATION_RESPONSE_20261007_zh-CN.md): 101 targeted engineering tests and actual zero-F preparation passed. One new process completed three densities × three paths, nine true F/NR calls and zero SCF iterations. Six same-D operator subsets passed; every point failed the single-point predicate, with no qualified endpoint or Compute activation. The new nine-slot budget is closed without retry.
 
