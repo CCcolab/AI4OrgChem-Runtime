@@ -1,6 +1,8 @@
 # 用户分子入口：内部定义与验证流程
 
-最新 [十二点真实条件算子响应](USER_MOLECULE_OCCUPIED_SPACE_RESPONSE_20261007_zh-CN.md)已完成：129项专项工程测试、实际零F准备与12次真F/NR通过，8组同D子集通过；所有点gap通过但comm/map失败，无合格自洽根，Compute保持BLOCKED。SCF/根搜索/尾检未执行，新12槽预算关闭。
+最新 [单起点候选与零计算准备](USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md)已完成：150项专项工程测试（40新增、110回归）及实际缓存零F准备通过；新增真实F/NR/SCF为0。本版不允许真实根搜索、不创建科学预算，实际root runner未实现/未执行，Compute仍BLOCKED。原规则、门槛和旧数值记录保留。
+
+此前 [十二点真实条件算子响应](USER_MOLECULE_OCCUPIED_SPACE_RESPONSE_20261007_zh-CN.md)已完成：129项专项工程测试、实际零F准备与12次真F/NR通过，8组同D子集通过；所有点gap通过但comm/map失败，无合格自洽根，Compute保持BLOCKED。SCF/根搜索/尾检未执行，新12槽预算关闭。
 
 此前 [确定性占据空间初值与模拟准入](USER_MOLECULE_OCCUPIED_SPACE_ADMISSION_20261007_zh-CN.md)已形成：四个纯数组初值、97项专项测试和12次模拟回调通过，新增真实F/SCF为0。当轮真实响应及根搜索未实现/未执行；真实响应后续已执行，见上方新记录，原门槛和Compute BLOCKED保留。
 

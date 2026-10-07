@@ -1,0 +1,42 @@
+{
+  "id": "MDR-008",
+  "revision": "0.1",
+  "date": "2026-10-07",
+  "status": "SINGLE_START_ROOT_IMPLEMENTATION_ONLY_FAKE_AND_ZERO_F_PASS_REAL_ROOT_NOT_EXECUTED",
+  "request_source": "DIRECT_USER_MESSAGE",
+  "user_request": "请继续下一步",
+  "user_steering": "请注意项目的边界",
+  "current_scope": "FAKE_ENGINEERING_AND_CACHED_ZERO_F_PREPARATION_ONLY",
+  "parent_decision": {
+    "id": "MDR-007",
+    "path": "../mdr-007/record.json",
+    "sha256": "63a799f3c105bdec16a01c5e01d80d47c3984648e3de3211af6a334846f6813a",
+    "preserved_bytes": true
+  },
+  "runtime_source_commit": "7530595c71c0395c37f2e0e8669db14de5e14342",
+  "execution_record": "../../occupied-space-root-preparation-20261007.json",
+  "scientific_target_changed": false,
+  "scientific_operators_changed": false,
+  "final_thresholds_changed": false,
+  "decisions": [
+    "Keep one technical seed2 theta=-0.10 and one independent reference path; no multi-start, new molecule, new method or research interpretation.",
+    "Freeze one TRF chart and max_nfev2 for fake engineering; whole dense Jacobian96 plus2tail slots under201. Existing old max_nfev8 is preserved as historical code.",
+    "Only normally returned strictly improving charts update formalD; no SciPy callback-return strategy, best/base or unreturned iterate substitution.",
+    "Require original final gates and fresh separately charged returned/mapped evaluations in any future version; no old historicalF used as CURRENT_INITIAL.",
+    "This contract hard-locks scientific authorizationFalse; no actual root runner or native callback journal exists. No automatic calculation follows preparation.",
+    "External expert consultation remains cancelled; concrete scientific/resource evidence is still missing."
+  ],
+  "engineering_unique_tests": 150,
+  "new_tests": 40,
+  "regressions": 110,
+  "actual_zero_F_preparation": "PASS",
+  "new_true_F_NR_calls": 0,
+  "new_root_scientific_budget": null,
+  "actual_live_root_runner": "NOT_IMPLEMENTED",
+  "root_search": "NOT_EXECUTED",
+  "Compute": false,
+  "scientific_method_approval": false,
+  "research_delta_hartree": null,
+  "external_expert_process": "CANCELLED_BY_USER",
+  "external_role_required": false
+}
