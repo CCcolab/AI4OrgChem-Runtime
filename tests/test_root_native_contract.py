@@ -11,6 +11,17 @@ from unittest.mock import patch
 from runtime.user_molecule import occupied_space_root_native_contract as native
 
 
+def local_source_dependency(root, name):
+    """Map an existing in-root source to one portable relative identity."""
+    root = Path(root).resolve()
+    path = (root/Path(name)).resolve()
+    try:
+        relative = path.relative_to(root)
+    except ValueError:
+        return None
+    return relative.as_posix() if path.is_file() else None
+
+
 def parent_fixture():
     old = native.parent_contract
     arrays = {name: {'shape': shape, 'dtype': '<f8', 'order': 'C', 'sha256': digest}
@@ -138,8 +149,9 @@ class RootNativeContractTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         seen, pending = set(), list(native.REQUIRED_SOURCE_FILES)
         def include(name):
-            if (root/name).is_file() and name not in seen:
-                pending.append(name)
+            local = local_source_dependency(root, name)
+            if local is not None and local not in seen:
+                pending.append(local)
         def module(name):
             path = name.replace('.', '/')+'.py'
             if not (root/path).is_file():
@@ -169,6 +181,16 @@ class RootNativeContractTests(unittest.TestCase):
                     include(node.value)
         self.assertEqual(seen-native.REQUIRED_SOURCE_FILES, set(),
                          'Unbound candidate local import or dynamic script dependency')
+
+    def test_source_dependency_paths_share_relative_identity_and_cannot_traverse_outside_root(self):
+        with tempfile.TemporaryDirectory() as directory:
+            parent = Path(directory); root = parent/'runtime'; helper = root/'scripts/helper.py'
+            helper.parent.mkdir(parents=True); helper.write_bytes(b'# No executable fixture.\n')
+            outside = parent/'outside.py'; outside.write_bytes(b'# Must not be inspected.\n')
+            for path in ('scripts/helper.py', helper, helper.resolve(), 'scripts/../scripts/helper.py'):
+                self.assertEqual(local_source_dependency(root, path), 'scripts/helper.py')
+            for path in ('../outside.py', outside, parent, 'scripts/missing.py'):
+                self.assertIsNone(local_source_dependency(root, path))
 
     def test_family_does_not_change_with_batch_output_or_grant_but_binds_new_code(self):
         changed = copy.deepcopy(self.value); changed['batch_id'] = 'another-output-does-not-authorize-retry'
