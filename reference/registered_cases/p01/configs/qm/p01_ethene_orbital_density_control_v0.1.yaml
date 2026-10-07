@@ -1,0 +1,62 @@
+protocol_id: P01_ETHENE_OCCUPIED_GAUGE_CONTROL_V0.1
+proposition_id: P01
+date: 2026-08-20
+
+system:
+  name: ethene
+  charge: 0
+  spin: 0
+  unit: Angstrom
+  geometry:
+    - [C, -0.6695, 0.0000, 0.0000]
+    - [C,  0.6695, 0.0000, 0.0000]
+    - [H, -1.2321, 0.9289, 0.0000]
+    - [H, -1.2321, -0.9289, 0.0000]
+    - [H,  1.2321, 0.9289, 0.0000]
+    - [H,  1.2321, -0.9289, 0.0000]
+  fragments:
+    left_ch2_atoms: [0, 2, 3]
+    right_ch2_atoms: [1, 4, 5]
+
+quantum_chemistry:
+  method: RHF
+  basis: 6-31G(d)
+  symmetry: false
+  scf_conv_tol: 1.0e-12
+  scf_max_cycle: 100
+  localization_conv_tol: 1.0e-10
+  localization_max_cycle: 200
+  threads: 4
+  orbital_representations:
+    - canonical
+    - boys
+    - pipek_mezey
+
+diagnostics:
+  fragment_support: symmetric_lowdin_ao_group_population
+  orbital_support_entropy: binary_shannon_entropy_base_2
+  density_definition: closed_shell_ao_density_2_Cocc_Cocc_transpose
+  energy_definition: RHF_energy_functional_evaluated_on_reconstructed_density
+
+tolerances:
+  density_relative_frobenius: 1.0e-9
+  electron_number: 1.0e-8
+  total_energy_hartree: 1.0e-9
+  occupied_unitarity_frobenius: 1.0e-8
+  minimum_entropy_change: 1.0e-4
+
+inputs:
+  p01_protocol: docs/theory/p01_delocalization_concept_protocol_v0.1.md
+  method_mapping: docs/theory/lfmo_source_method_mapping_v0.1.md
+  mathematical_control: data/processed/p01_delocalization_distinction_evidence_v0.1.json
+
+outputs:
+  evidence: artifacts/raw/p01_ethene_orbital_density_control_2026-08-20.json
+  report: docs/reports/p01_ethene_orbital_density_control_2026-08-20.md
+
+boundaries:
+  - P01 only; P02, P03, and P08 remain unstarted.
+  - One fixed ethene geometry and one RHF/6-31G(d) calculation only.
+  - Boys and Pipek-Mezey are occupied-space representation changes, not new electronic states.
+  - No NBO, BLW, new software installation, geometry scan, production label, or AI training.
+  - No stabilization or destabilization sign is assigned by this control.

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "proposition_id": "P13",
+  "upstream_repository": "D:\\AI4Science\\AI4OrgChem",
+  "captured_repository_head": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+  "public_science_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "driver_is_public_baseline_driver": false,
+  "source_state": "ORIGINAL_DEVELOPMENT_WORKING_TREE_UNTRACKED",
+  "files": [
+    {
+      "original_relative_path": "scripts/run_p13_polycyclic_benzenoid.py",
+      "copied_filename": "run_p13_polycyclic_benzenoid.py",
+      "size_bytes": 14962,
+      "sha256": "a731fcbd2f3415f81edc2060625067596b5b4365b16c11f3623c98aeb241173c",
+      "tracked_at_capture": false,
+      "git_blob_at_head": null,
+      "capture_kind": "WORKING_TREE_BYTES_UNTRACKED_AT_CAPTURED_HEAD"
+    },
+    {
+      "original_relative_path": "configs/data/p13_polycyclic_benzenoid_source_freeze_v0.1.yaml",
+      "copied_filename": "p13_polycyclic_benzenoid_source_freeze_v0.1.yaml",
+      "size_bytes": 7268,
+      "sha256": "b3a657137ec42bed5163287426f35a1f1b50da446e9593444a07a237d4e97a13",
+      "tracked_at_capture": false,
+      "git_blob_at_head": null,
+      "capture_kind": "WORKING_TREE_BYTES_UNTRACKED_AT_CAPTURED_HEAD"
+    }
+  ],
+  "primary_pdf": {
+    "status": "NOT_REAUTHENTICATED",
+    "actual_sha256": null,
+    "reference": "DOI 10.6084/m9.figshare.27261243; protocol source metadata only",
+    "copied": false
+  },
+  "copyright_attribution": "Original project-authored P13 driver: AI4OrgChem project; scientific table attribution as in frozen YAML: Zhongheng Yu, 2024, Questioning Fundamental Principles of Organic Chemistry, CC-BY-4.0."
+}

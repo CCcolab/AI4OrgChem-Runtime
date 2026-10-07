@@ -1,6 +1,6 @@
 {
   "schema_version": "local-runtime-capabilities-v1",
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "status": "LOCAL_ENGINEERING_CANDIDATE",
   "compute_enabled": false,
   "declaration_grants_execution_authorization": false,
@@ -14,7 +14,7 @@
       "id": "local-selector",
       "name": "本地选择入口",
       "status": "PASS_HOST_PS51_PS7_ENTRY_AND_TOY_SERVICE_ROUTING",
-      "scope": "Capabilities/List/Show/Review and thin Check/Report routing; no automatic calculation"
+      "scope": "Capabilities/List/Show/Review, thin Check/Report and explicit fixed Run routing; no automatic or arbitrary-molecule calculation"
     },
     {
       "id": "p01-p14-catalog",
@@ -35,7 +35,7 @@
       "id": "p01-p13-recompute",
       "name": "P01—P13重算适配",
       "status": "NOT_IMPLEMENTED_AS_GENERAL_RUNTIME_TASKS",
-      "scope": "Catalogue entries do not grant a runnable task; no blanket P01—P14 recomputation selector"
+      "scope": "Only three fixed P02/P13/ethene P01 controls have dedicated adapters; no blanket P01-P13 or arbitrary-molecule recomputation selector"
     },
     {
       "id": "user-check",
@@ -135,14 +135,36 @@
       "scope": "154 scoped regression cases; two closed zero-native toy-stop cases; strong-kill final receipt unknown; three timings per segment cannot certify scientific capacity. Compute BLOCKED.",
       "record": "validation/user-molecule/native-shutdown-engineering-20261007.json",
       "tested_runtime_commit": "6eb356a0ebaa647bdf4aa6ea4b0f90cf69fc07f6"
+    },
+    {
+      "id": "p02-statistics",
+      "name": "P02固定表统计",
+      "status": "IMPLEMENTED_ACCEPTANCE_NOT_EXECUTED",
+      "scope": "Published frozen table-value recalculation; original PDF/CIF verification NOT_EXECUTED; no QM",
+      "record": "validation/registered-cases/deployment-20261008.json"
+    },
+    {
+      "id": "p13-graph-ledger",
+      "name": "P13固定图规则与账本",
+      "status": "IMPLEMENTED_ACCEPTANCE_NOT_EXECUTED",
+      "scope": "Original graph/RDKit formula rules and frozen energy ledger arithmetic; no new QM or PDF authentication",
+      "record": "validation/registered-cases/deployment-20261008.json"
+    },
+    {
+      "id": "p01-orbital-density",
+      "name": "P01小体系占据表示控制",
+      "status": "IMPLEMENTED_ACCEPTANCE_NOT_EXECUTED",
+      "scope": "One fixed ethene RHF/6-31G(d), Boys and PM occupied rotations; density/energy invariance only; no conditional SCF/general Compute",
+      "record": "validation/registered-cases/deployment-20261008.json"
     }
   ],
-  "new_image_build_this_increment": "NOT_EXECUTED",
+  "new_image_build_this_increment": "PENDING",
   "new_scientific_execution_this_increment": 0,
-  "verification_record": "validation/user-molecule/native-shutdown-engineering-20261007.json",
+  "verification_record": "validation/registered-cases/deployment-20261008.json",
   "local_engineering_verification": "154 scoped native/stop cases PASS and four fixed zero-native engineering probe cases; full W01-W07 and prior139-native science not rerun. Forced-kill final receipt unknown.",
   "previous_verification_record_before_native": "validation/local-runtime-framework-20261007.json",
   "scientific_observation_record": "validation/user-molecule/root-native-diagnostic-20261007.json",
   "previous_verification_record_before_shutdown": "validation/user-molecule/root-native-engineering-20261007.json",
-  "previous_new_scientific_execution_increment": 1
+  "previous_new_scientific_execution_increment": 1,
+  "previous_verification_record_before_registered_cases": "validation/user-molecule/native-shutdown-engineering-20261007.json"
 }

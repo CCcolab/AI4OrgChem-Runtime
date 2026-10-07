@@ -1,2 +1,5 @@
 * text=auto eol=lf
 *.ps1 text eol=crlf
+# Critical registered launchers preserve the bytes bound by the source lock.
+scripts/start-local-runtime.ps1 -text
+scripts/start-registered-case.ps1 -text

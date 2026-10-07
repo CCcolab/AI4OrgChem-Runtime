@@ -1,0 +1,3 @@
+# Preserve captured untracked development inputs exactly across checkouts.
+run_p13_polycyclic_benzenoid.py -text
+p13_polycyclic_benzenoid_source_freeze_v0.1.yaml -text

@@ -1,0 +1,14 @@
+{
+  "schema": "registered-cases-deployment-v1",
+  "date": "2026-10-08",
+  "status": "IMPLEMENTED_ACCEPTANCE_NOT_EXECUTED",
+  "tasks": {
+    "p02-statistics": "NOT_EXECUTED",
+    "p13-graph-ledger": "NOT_EXECUTED",
+    "p01-orbital-density": "NOT_EXECUTED"
+  },
+  "general_user_compute": "BLOCKED",
+  "WSLc": "BLOCKED / NOT_EXECUTED",
+  "GitHub_CI": "NOT_EXECUTED",
+  "image_distribution": "BLOCKED"
+}

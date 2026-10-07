@@ -38,7 +38,8 @@ def main():
         print('该声明只介绍能力；来源与科学资格由实际运行记录分别核验。')
         for row in record['capabilities']:
             print(f"{row['name']}: {row['status']} — {row['scope']}")
-        print('入口 / Entry: start-local-runtime.ps1 -Action List|Show|Review|Check|Report')
+        print('入口 / Entry: start-local-runtime.ps1 -Action List|Show|Review|Check|Report|Run')
+        print('固定P02/P13/P01复算 / Fixed controls: Run -Proposition P02|P13|P01 -OutputRoot <external-directory>')
         print('登记P14计算 / Registered P14: start-runtime.ps1; fixed protocol only')
     return 0
 

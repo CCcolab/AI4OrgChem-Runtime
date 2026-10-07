@@ -1,13 +1,25 @@
 # Windows PowerShell 5.1 compatible local navigation and thin service routing.
 [CmdletBinding()]
 param(
- [ValidateSet('Capabilities','List','Show','Review','Check','Report')][string]$Action='Capabilities',
+ [ValidateSet('Capabilities','List','Show','Review','Check','Report','Run')][string]$Action='Capabilities',
  [string]$Proposition,[string]$SourceDirectory,[string]$OutputDirectory,
  [string]$PythonExecutable,[string]$Image,[string]$Request,[string]$RunDirectory,
- [string]$OutputRoot,[string]$ReportExportDirectory,[string]$PowerShell7,[switch]$Json
+ [string]$OutputRoot,[string]$ReportExportDirectory,[string]$PowerShell7,[string]$DockerExecutable='docker',[string]$LockRoot,[switch]$Json
 )
 $ErrorActionPreference='Stop'
 $localRoot=Split-Path -Parent $PSScriptRoot
+if($Action -eq 'Run'){
+ if($Proposition -notin @('P02','P13','P01')){throw 'Run supports only the three fixed registered P02/P13/P01 cases'}
+ if(-not $OutputRoot){throw 'Run requires a separate -OutputRoot'}
+ if($SourceDirectory -or $OutputDirectory -or $Request -or $RunDirectory -or $ReportExportDirectory -or $PowerShell7 -or $Json){throw 'Run accepts no molecule, protocol, source or report overrides'}
+ $registeredTasks=@{P02='p02-statistics';P13='p13-graph-ledger';P01='p01-orbital-density'}
+ $registeredArgs=@{Task=$registeredTasks[$Proposition];OutputRoot=$OutputRoot;DockerExecutable=$DockerExecutable}
+ foreach($name in @('Image','PythonExecutable','LockRoot')){$value=Get-Variable -Name $name -ValueOnly;if($value){$registeredArgs[$name]=$value}}
+ & (Join-Path $PSScriptRoot 'start-registered-case.ps1') @registeredArgs
+ $global:LASTEXITCODE=$LASTEXITCODE
+ exit $LASTEXITCODE
+}
+if($LockRoot -or $DockerExecutable -ne 'docker'){throw '-LockRoot/-DockerExecutable require Run'}
 if($Action -notin @('Show','Review') -and ($Proposition -or $SourceDirectory)){throw '-Proposition/-SourceDirectory require Show or Review'}
 if($Action -ne 'Review' -and $OutputDirectory){throw '-OutputDirectory requires Review'}
 if($Action -notin @('Check','Report') -and ($Image -or $Request -or $RunDirectory -or $OutputRoot -or $ReportExportDirectory -or $PowerShell7)){throw 'Service parameters require Check or Report'}

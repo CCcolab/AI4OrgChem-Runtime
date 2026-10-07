@@ -1,0 +1,44 @@
+{
+  "adaptation_map": {
+    "collect": "Table-value calculation body copied; original PDF read/hash gate is not executed or represented as PASS. All seven original table-value gates and original numeric thresholds retained.",
+    "expected_group": "Copied without changes.",
+    "main_and_renderers": "Not reused: no default development-tree reads/writes or stale global P03/P08 status; new parent-selected output directory only.",
+    "raw_cif_independent_refinement_completed": "Reported as NOT_EXECUTED, never accepted as an executed check.",
+    "regression": "Copied without mathematical changes; positive finite input and rank checks added outside formulas.",
+    "source_hash_matches": "Omitted from acceptance_checks; original PDF hash retained solely as declared historical source identity, never verified_sha256."
+  },
+  "case_id": "P02",
+  "collected_date": "2026-10-08",
+  "execution_mode": "FROZEN_PUBLISHED_TABLE_VALUE_REANALYSIS",
+  "frozen_public_evidence_reference_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "original_files_are_part_of_frozen_public_release": false,
+  "original_output_paths_used": false,
+  "original_pdf_copied": false,
+  "primary_source_verification": "NOT_EXECUTED",
+  "public_distribution_authorization": "NOT_GRANTED_BY_THIS_METADATA",
+  "raw_cif_copied": false,
+  "schema_version": "registered-p02-source-materials-v1",
+  "source_files": [
+    {
+      "git_tracking": "UNTRACKED",
+      "original_repository_relative_path": "scripts/generate_p02_structure_uv_evidence.py",
+      "retained_filename": "generate_p02_structure_uv_evidence.py",
+      "sha256": "c4b5a672b5b022fa228f3a7b346ac9b333109bc5dcfe063df64742c22b035c53",
+      "size_bytes": 15746,
+      "source_commit_binding": "NOT_A_TRACKED_BLOB_AT_CONTEXT_HEAD",
+      "source_repository_head_context": "ffde7b5a53800010f2bc326b812b3e5b4526d56c"
+    },
+    {
+      "git_tracking": "UNTRACKED",
+      "original_repository_relative_path": "configs/data/p02_structure_uv_source_freeze_v0.1.yaml",
+      "retained_filename": "p02_structure_uv_source_freeze_v0.1.yaml",
+      "sha256": "0f7ccd27f4c0a41e6ede1f214aa8b0c9c4232b2b8b5e1e4f452653879a57c0bf",
+      "size_bytes": 5401,
+      "source_commit_binding": "NOT_A_TRACKED_BLOB_AT_CONTEXT_HEAD",
+      "source_repository_head_context": "ffde7b5a53800010f2bc326b812b3e5b4526d56c"
+    }
+  ],
+  "source_repository_head_context": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+  "source_repository_head_is_source_file_commit": false,
+  "third_party_source_file_license": "NOT_ASSESSED_UNTRACKED_DEVELOPMENT_FILES"
+}

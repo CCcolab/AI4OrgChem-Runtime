@@ -1,0 +1,108 @@
+{
+  "implementation_kind": "NEW_RUNTIME_ADAPTER_OF_FROZEN_PROJECT_DRIVER",
+  "origin_head_does_not_identify_untracked_files": true,
+  "origin_repository_head": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+  "original_program_code_used": false,
+  "protocol_id": "P01_ETHENE_OCCUPIED_GAUGE_CONTROL_V0.1",
+  "reference_driver_available": true,
+  "resource_override": {
+    "frozen_protocol_threads": 4,
+    "new_execution_threads": 1,
+    "reason": "Explicit single serial process execution contract; numerical protocol unchanged"
+  },
+  "schema": "registered-p01-frozen-source-v1",
+  "scope": "Only fixed ethene ordinary RHF plus occupied canonical/Boys/PM representation control; not the complete historical P01 conclusion or LFMO comparison",
+  "source_capture_date": "2026-10-08",
+  "source_tree_modified": false,
+  "sources": [
+    {
+      "origin_head_blob_sha256": null,
+      "origin_head_git_blob": null,
+      "origin_repository_head": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+      "origin_tracked": false,
+      "path": "configs/qm/p01_ethene_orbital_density_control_v0.1.yaml",
+      "sha256": "d137c04a22fd221129f7a1e62fcafa6928e7ddee1493082ca40158a3c230ac47",
+      "size_bytes": 1954,
+      "source_identity_kind": "WORKTREE_UNTRACKED_BYTES",
+      "working_bytes_equal_head_blob": null
+    },
+    {
+      "origin_head_blob_sha256": "44e584e46bf6b8a2acc3d3923fad18a0577afad7c6f227300059ca3b6ddda725",
+      "origin_head_git_blob": "d247c176c933ca0974aff4e7d0d2b9703984c9a5",
+      "origin_repository_head": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+      "origin_tracked": true,
+      "path": "docs/theory/p01_delocalization_concept_protocol_v0.1.md",
+      "sha256": "44e584e46bf6b8a2acc3d3923fad18a0577afad7c6f227300059ca3b6ddda725",
+      "size_bytes": 4240,
+      "source_identity_kind": "WORKTREE_TRACKED_BYTES",
+      "working_bytes_equal_head_blob": true
+    },
+    {
+      "origin_head_blob_sha256": "573fd98e5402376704247461a502dd0f3174f0410bc3f05631b9642411b99a4e",
+      "origin_head_git_blob": "8e29b7e4764bec3d4442a3100b938067865cffd6",
+      "origin_repository_head": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+      "origin_tracked": true,
+      "path": "docs/theory/lfmo_source_method_mapping_v0.1.md",
+      "sha256": "573fd98e5402376704247461a502dd0f3174f0410bc3f05631b9642411b99a4e",
+      "size_bytes": 6910,
+      "source_identity_kind": "WORKTREE_TRACKED_BYTES",
+      "working_bytes_equal_head_blob": true
+    },
+    {
+      "origin_head_blob_sha256": "af08ef2fae6b94597c3a052baa6a8bcd22426e2abe3d9f435b92c55bdf31ee07",
+      "origin_head_git_blob": "ef434b0b0ce9df871a4202de4ca9a8f61e53c19c",
+      "origin_repository_head": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+      "origin_tracked": true,
+      "path": "data/processed/p01_delocalization_distinction_evidence_v0.1.json",
+      "sha256": "af08ef2fae6b94597c3a052baa6a8bcd22426e2abe3d9f435b92c55bdf31ee07",
+      "size_bytes": 8316,
+      "source_identity_kind": "WORKTREE_TRACKED_BYTES",
+      "working_bytes_equal_head_blob": true
+    },
+    {
+      "origin_head_blob_sha256": null,
+      "origin_head_git_blob": null,
+      "origin_repository_head": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+      "origin_tracked": false,
+      "path": "experiments/validation/p01_ethene_orbital_density_control.py",
+      "sha256": "36b8d860974f3e99bfbf1b8ab70d9099cf861746dd98b755112a063839c8db0b",
+      "size_bytes": 13169,
+      "source_identity_kind": "WORKTREE_UNTRACKED_BYTES",
+      "working_bytes_equal_head_blob": null
+    },
+    {
+      "origin_head_blob_sha256": null,
+      "origin_head_git_blob": null,
+      "origin_repository_head": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+      "origin_tracked": false,
+      "path": "scripts/validate_p01_ethene_orbital_density_control.py",
+      "sha256": "9dbc6f2e744b809f914c73110616283ad4caa7dc4190edb33327e3e39ad7d232",
+      "size_bytes": 2413,
+      "source_identity_kind": "WORKTREE_UNTRACKED_BYTES",
+      "working_bytes_equal_head_blob": null
+    },
+    {
+      "origin_head_blob_sha256": "4135cedb444c19860a53c85dc984b9c0a9644cba632c8ef44c45cbb1f88699b2",
+      "origin_head_git_blob": "df76941fcc67981551fbd1446a23437b10b60b93",
+      "origin_repository_head": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+      "origin_tracked": true,
+      "path": "LICENSE",
+      "sha256": "4135cedb444c19860a53c85dc984b9c0a9644cba632c8ef44c45cbb1f88699b2",
+      "size_bytes": 11357,
+      "source_identity_kind": "WORKTREE_TRACKED_BYTES",
+      "working_bytes_equal_head_blob": true
+    },
+    {
+      "origin_head_blob_sha256": "7be8afa9664607513c7e0b07f17ba44c576fd094dfb30d25e2240d16c3835e06",
+      "origin_head_git_blob": "3075a8c96fdf783a74c9e8febae68c7d9bc03d1a",
+      "origin_repository_head": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+      "origin_tracked": true,
+      "path": "NOTICE",
+      "sha256": "7be8afa9664607513c7e0b07f17ba44c576fd094dfb30d25e2240d16c3835e06",
+      "size_bytes": 575,
+      "source_identity_kind": "WORKTREE_TRACKED_BYTES",
+      "working_bytes_equal_head_blob": true
+    }
+  ],
+  "sources_executed_during_capture": false
+}

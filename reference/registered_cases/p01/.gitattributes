@@ -1,0 +1,9 @@
+# Preserve captured original P01 files byte-for-byte across checkouts.
+configs/qm/p01_ethene_orbital_density_control_v0.1.yaml -text
+docs/theory/p01_delocalization_concept_protocol_v0.1.md -text
+docs/theory/lfmo_source_method_mapping_v0.1.md -text
+data/processed/p01_delocalization_distinction_evidence_v0.1.json -text
+experiments/validation/p01_ethene_orbital_density_control.py -text
+scripts/validate_p01_ethene_orbital_density_control.py -text
+LICENSE -text
+NOTICE -text

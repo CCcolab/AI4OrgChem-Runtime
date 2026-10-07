@@ -1,0 +1,240 @@
+{
+  "boundaries": {
+    "correlated_pair_density_claim": false,
+    "cross_method_systematic_validation_complete": false,
+    "original_program_code_used": false,
+    "p01_final_scientific_conclusion": false,
+    "p02_started": false,
+    "p03_started": false,
+    "p08_started": false,
+    "phase_01_modified": false,
+    "production_label": false,
+    "training_eligible": false,
+    "universal_chemical_law": false
+  },
+  "config": {
+    "path": "configs/data/p01_delocalization_distinction_v0.1.yaml",
+    "sha256": "99c541a586dc44a10690c6c12c0b67ee79e260a66607643b7eb37931337e21cf"
+  },
+  "date": "2026-08-20",
+  "definitions": {
+    "density_delocalization": {
+      "density": "D_equals_2_Cocc_Cocc_transpose_in_orthonormal_basis",
+      "interpretation": "fixed_partition_one_particle_density_coherence_diagnostic",
+      "metric": "frobenius_norm_of_P_A_D_P_B",
+      "occupied_gauge_invariant": true
+    },
+    "energetic_delocalization": {
+      "gauge_invariant_within_each_named_state": true,
+      "interpretation": "protocol_dependent_state_quantity_not_orbital_entropy",
+      "metric": "directed_energy_difference_between_explicitly_named_constrained_states"
+    },
+    "orbital_representation_delocalization": {
+      "gauge_invariant": false,
+      "interpretation": "property_of_individual_orbital_representation",
+      "metric": "normalized_group_support_entropy_per_orbital"
+    }
+  },
+  "findings": {
+    "cross_method_systematic_validation_complete": false,
+    "density_unchanged_under_occupied_gauge_rotation": true,
+    "electron_number_unchanged_under_occupied_gauge_rotation": true,
+    "energetic_delocalization_requires_explicit_named_state_protocol": true,
+    "fixed_operator_expectation_unchanged_under_occupied_gauge_rotation": true,
+    "named_state_change_changes_density": true,
+    "named_state_change_changes_density_coherence": true,
+    "orbital_representation_changed_under_occupied_gauge_rotation": true,
+    "orbital_representation_is_not_an_electron_delocalization_observable": true,
+    "p01_final_scientific_conclusion": false,
+    "supports_original_conceptual_distinction": true
+  },
+  "method_mapping": [
+    {
+      "changes_individual_orbital_representation": true,
+      "equivalence_to_source_lfmo": false,
+      "method_id": "canonical_mo",
+      "named_localized_state_energy_difference": false,
+      "preserves_density_under_occupied_unitary_rotation": true,
+      "project_status": "conceptual_reference"
+    },
+    {
+      "changes_individual_orbital_representation": true,
+      "equivalence_to_source_lfmo": false,
+      "method_id": "boys_pipek_mezey_occupied_localization",
+      "named_localized_state_energy_difference": false,
+      "preserves_density_under_occupied_unitary_rotation": true,
+      "project_status": "available_representation_localizers"
+    },
+    {
+      "changes_individual_orbital_representation": true,
+      "equivalence_to_source_lfmo": false,
+      "method_id": "nbo",
+      "named_localized_state_energy_difference": "method_specific_perturbative_or_deletion_quantities_only",
+      "preserves_density_under_pure_occupied_rotation": true,
+      "project_status": "conceptual_mapping_not_executed"
+    },
+    {
+      "changes_individual_orbital_representation": true,
+      "equivalence_to_source_lfmo": false,
+      "method_id": "blw",
+      "named_localized_state_energy_difference": true,
+      "preserves_density_under_occupied_unitary_rotation": "false_when_wavefunction_is_reoptimized_under_block_constraint",
+      "project_status": "conceptual_mapping_not_executed"
+    },
+    {
+      "changes_individual_orbital_representation": true,
+      "equivalence_to_source_lfmo": true,
+      "method_id": "source_lfmo_dsi_fud",
+      "named_localized_state_energy_difference": true,
+      "preserves_density_under_occupied_unitary_rotation": "named_states_have_state_specific_densities",
+      "project_status": "phase_01_source_defined_reconstruction_available"
+    }
+  ],
+  "named_state_change": {
+    "chemical_energy_label": false,
+    "coherence_change": 0.9999999999999998,
+    "delocalized_state": {
+      "density_matrix": [
+        [
+          0.9999999999999998,
+          0.9999999999999998
+        ],
+        [
+          0.9999999999999998,
+          0.9999999999999998
+        ]
+      ],
+      "electron_number": 1.9999999999999996,
+      "group_populations": [
+        0.9999999999999998,
+        0.9999999999999998
+      ],
+      "intergroup_density_coherence": 0.9999999999999998,
+      "orbital_support_entropy": 1.0,
+      "toy_energy": -0.3999999999999999
+    },
+    "density_difference_frobenius": 1.9999999999999998,
+    "local_state": {
+      "density_matrix": [
+        [
+          2.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "electron_number": 2.0,
+      "group_populations": [
+        2.0,
+        0.0
+      ],
+      "intergroup_density_coherence": 0.0,
+      "orbital_support_entropy": -0.0,
+      "toy_energy": 0.0
+    },
+    "toy_directed_energy_difference": -0.3999999999999999,
+    "toy_energy_unit": "arbitrary_model_unit"
+  },
+  "proposition_id": "P01",
+  "protocol_id": "phase-02/p01-delocalization-distinction/0.1",
+  "same_state_gauge_rotation": {
+    "maximum_density_residual": 6.395250856282128e-16,
+    "maximum_fixed_operator_expectation_residual": 1.1102230246251565e-16,
+    "points": [
+      {
+        "average_orbital_support_entropy": 0.0,
+        "density_matrix": [
+          [
+            2.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.0
+          ]
+        ],
+        "density_residual_from_zero_degree": 0.0,
+        "electron_number": 4.0,
+        "fixed_operator_expectation": 0.9999999999999999,
+        "fixed_operator_expectation_residual": 0.0,
+        "intergroup_density_coherence": 0.0,
+        "rotation_degrees": 0.0
+      },
+      {
+        "average_orbital_support_entropy": 0.3545789026652697,
+        "density_matrix": [
+          [
+            2.0,
+            -2.4506005565898252e-17
+          ],
+          [
+            -2.4506005565898252e-17,
+            2.0
+          ]
+        ],
+        "density_residual_from_zero_degree": 3.465672543088386e-17,
+        "electron_number": 4.0,
+        "fixed_operator_expectation": 0.9999999999999999,
+        "fixed_operator_expectation_residual": 0.0,
+        "intergroup_density_coherence": 2.4506005565898252e-17,
+        "rotation_degrees": 15.0
+      },
+      {
+        "average_orbital_support_entropy": 0.8112781244591328,
+        "density_matrix": [
+          [
+            2.0,
+            -1.487416814333745e-17
+          ],
+          [
+            -1.487416814333745e-17,
+            2.0
+          ]
+        ],
+        "density_residual_from_zero_degree": 2.103525031732566e-17,
+        "electron_number": 4.0,
+        "fixed_operator_expectation": 0.9999999999999999,
+        "fixed_operator_expectation_residual": 0.0,
+        "intergroup_density_coherence": 1.487416814333745e-17,
+        "rotation_degrees": 30.0
+      },
+      {
+        "average_orbital_support_entropy": 1.0,
+        "density_matrix": [
+          [
+            2.0000000000000004,
+            8.532843177179284e-17
+          ],
+          [
+            8.532843177179284e-17,
+            2.0000000000000004
+          ]
+        ],
+        "density_residual_from_zero_degree": 6.395250856282128e-16,
+        "electron_number": 4.000000000000001,
+        "fixed_operator_expectation": 1.0,
+        "fixed_operator_expectation_residual": 1.1102230246251565e-16,
+        "intergroup_density_coherence": 8.532843177179284e-17,
+        "rotation_degrees": 45.0
+      }
+    ]
+  },
+  "schema_version": 1,
+  "source_files": {
+    "scoped_lfmo_protocol": {
+      "path": "docs/theory/lfmo_protocol_v0.5.md",
+      "sha256": "c6caf8e99f533a2aae004f80e0dcc7b192dc047b8e1575abcdc2f8a2259b12d0"
+    },
+    "source_evidence_manifest": {
+      "path": "docs/theory/source_evidence_manifest_v0.1.md",
+      "sha256": "0ca2a6f7df4af904ed3cca1556eb516adf2adbcb3e177f8b20fa3ec71393a2d2"
+    },
+    "source_method_mapping": {
+      "path": "docs/theory/lfmo_source_method_mapping_v0.1.md",
+      "sha256": "573fd98e5402376704247461a502dd0f3174f0410bc3f05631b9642411b99a4e"
+    }
+  },
+  "verdict": "P01_OPERATIONAL_DISTINCTION_ESTABLISHED_CROSS_METHOD_VALIDATION_PENDING"
+}

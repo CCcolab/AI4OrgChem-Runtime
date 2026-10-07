@@ -1,0 +1,124 @@
+schema_version: 1
+protocol_id: p13-polycyclic-benzenoid/0.1
+effective_date: 2026-08-22
+status: frozen_bounded_execution_authorized
+decision: docs/adr/0041-freeze-p13-polycyclic-benzenoid-protocol.md
+proposition_id: P13
+original_program_code_used: false
+historical_quantum_program_reproduced: false
+production_labels_allowed: false
+ai_training_allowed: false
+
+source:
+  title: Questioning Fundamental Principles of Organic Chemistry
+  author: Zhongheng Yu
+  year: 2024
+  doi: 10.6084/m9.figshare.27261243
+  license: CC-BY-4.0
+  local_reference: artifacts/reference_sources/Questioning_Fundamental_Principles_of_Organic_Chemistry_2024.pdf
+  chapter: 7
+  printed_pages: [208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243]
+  pdf_pages: [114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131]
+  source_items: [Table_7-1, Table_7-2, Table_7-3-1, Table_7-3-2, Figure_7-10, Conclusions]
+  method_label: source_2007_restricted_geometry_optimization
+  electronic_structure_label: B3LYP/6-31G_star
+  sign_convention:
+    positive: destabilizing
+    negative: stabilizing
+
+formulas:
+  ESE: delta_EA_minus_sum_delta_EAm
+  CESE: ESE_minus_sum_delta_EnAm
+  normalized_CESE: CESE_divided_by_number_of_pi_electrons
+  GL_sextet_rule: N_GL_equals_N_db_plus_1
+
+acene_candidate_panel:
+  - molecule: naphthalene
+    source_id: 7-1-1
+    ring_count: 2
+    formula: C10H8
+    generalized_N_db: 1
+    candidates:
+      - {label: 'GL2:3', N_GL: 1, E_GL_hartree: -385.87829, delta_EA: -9.1, ESE: -52.6, CESE: -49.2, sum_delta_EAm: 43.5, sum_delta_EnAm: -3.4, selected: false}
+      - {label: 'GL5:6', N_GL: 2, E_GL_hartree: -385.87779, delta_EA: -9.4, ESE: -65.2, CESE: -62.0, sum_delta_EAm: 55.8, sum_delta_EnAm: -3.2, selected: true}
+  - molecule: anthracene
+    source_id: 7-1-2
+    ring_count: 3
+    formula: C14H10
+    generalized_N_db: 1
+    candidates:
+      - {label: 'GL2:3', N_GL: 1, E_GL_hartree: -539.52490, delta_EA: -3.5, ESE: -62.4, CESE: -56.1, sum_delta_EAm: 58.9, sum_delta_EnAm: -6.3, selected: false}
+      - {label: 'GL5:6', N_GL: 2, E_GL_hartree: -539.52404, delta_EA: -4.1, ESE: -75.1, CESE: -68.2, sum_delta_EAm: 71.0, sum_delta_EnAm: -6.8, selected: true}
+  - molecule: tetracene
+    source_id: 7-1-3
+    ring_count: 4
+    formula: C18H12
+    generalized_N_db: 1
+    candidates:
+      - {label: 'GL2:3', N_GL: 1, E_GL_hartree: -693.17150, delta_EA: 3.6, ESE: -70.8, CESE: -61.7, sum_delta_EAm: 74.4, sum_delta_EnAm: -9.1, selected: false}
+      - {label: 'GL5:6', N_GL: 2, E_GL_hartree: -693.17049, delta_EA: 2.9, ESE: -83.4, CESE: -73.7, sum_delta_EAm: 86.3, sum_delta_EnAm: -9.7, selected: false}
+      - {label: 'GL8:9', N_GL: 2, E_GL_hartree: -693.16998, delta_EA: 2.6, ESE: -83.2, CESE: -72.7, sum_delta_EAm: 85.8, sum_delta_EnAm: -10.5, selected: true}
+  - molecule: pentacene
+    source_id: 7-1-4
+    ring_count: 5
+    formula: C22H14
+    generalized_N_db: 1
+    candidates:
+      - {label: 'GL2:3', N_GL: 1, E_GL_hartree: -846.81813, delta_EA: 11.4, ESE: -78.5, CESE: -66.7, sum_delta_EAm: 89.9, sum_delta_EnAm: -11.8, selected: false}
+      - {label: 'GL5:6', N_GL: 2, E_GL_hartree: -846.81704, delta_EA: 10.7, ESE: -91.1, CESE: -78.6, sum_delta_EAm: 101.8, sum_delta_EnAm: -12.5, selected: false}
+      - {label: 'GL8:9', N_GL: 2, E_GL_hartree: -846.81629, delta_EA: 10.3, ESE: -90.8, CESE: -77.3, sum_delta_EAm: 101.0, sum_delta_EnAm: -13.4, selected: true}
+  - molecule: hexacene
+    source_id: 7-1-5
+    ring_count: 6
+    formula: C26H16
+    generalized_N_db: 1
+    candidates:
+      - {label: 'GL2:3', N_GL: 1, E_GL_hartree: -1000.46477, delta_EA: 19.6, ESE: -85.9, CESE: -71.4, sum_delta_EAm: 105.5, sum_delta_EnAm: -14.5, selected: false}
+      - {label: 'GL5:6', N_GL: 2, E_GL_hartree: -1000.46364, delta_EA: 18.9, ESE: -98.4, CESE: -83.2, sum_delta_EAm: 117.4, sum_delta_EnAm: -15.2, selected: false}
+      - {label: 'GL8:9', N_GL: 2, E_GL_hartree: -1000.46277, delta_EA: 18.4, ESE: -98.1, CESE: -81.8, sum_delta_EAm: 116.4, sum_delta_EnAm: -16.3, selected: false}
+      - {label: 'GL12:13', N_GL: 2, E_GL_hartree: -1000.46254, delta_EA: 18.2, ESE: -97.9, CESE: -81.5, sum_delta_EAm: 116.2, sum_delta_EnAm: -16.4, selected: true}
+
+acene_trend_panel:
+  - {molecule: naphthalene, ring_count: 2, pi_electrons: 10, ESE_per_pi: -6.5, CESE: -62.0, CESE_per_pi: -6.2}
+  - {molecule: anthracene, ring_count: 3, pi_electrons: 14, ESE_per_pi: -5.4, CESE: -68.2, CESE_per_pi: -4.9}
+  - {molecule: tetracene, ring_count: 4, pi_electrons: 18, ESE_per_pi: -4.6, CESE: -72.7, CESE_per_pi: -4.0}
+  - {molecule: pentacene, ring_count: 5, pi_electrons: 22, ESE_per_pi: -4.1, CESE: -77.3, CESE_per_pi: -3.5}
+  - {molecule: hexacene, ring_count: 6, pi_electrons: 26, ESE_per_pi: -3.8, CESE: -81.5, CESE_per_pi: -3.1}
+  - {molecule: heptacene, ring_count: 7, pi_electrons: 30, ESE_per_pi: -2.5, CESE: -85.8, CESE_per_pi: -2.9}
+
+cross_topology_anchors:
+  - {molecule: phenanthrene, source_id: 7-2-1, pi_electrons: 14, delta_EA: -11.8, ESE: -94.8, CESE: -88.4, CESE_per_pi: -6.32, sum_delta_EAm: 83.0, sum_delta_EnAm: -6.4}
+  - {molecule: triphenylene, source_id: 7-3-1, pi_electrons: 18, delta_EA: -15.8, ESE: -125.7, CESE: -115.9, CESE_per_pi: -6.44, sum_delta_EAm: 109.9, sum_delta_EnAm: -9.8}
+  - {molecule: chrysene, source_id: 7-4-1, pi_electrons: 18, delta_EA: -13.0, ESE: -123.3, CESE: -110.6, CESE_per_pi: -6.14, sum_delta_EAm: 110.2, sum_delta_EnAm: -12.7}
+
+holdout_rule_conflict:
+  molecule: dibenzo_de_yz_hexacene
+  source_id: '7-6-(4:0)'
+  formula: C32H18
+  N_db: 3
+  candidates:
+    - {label: 'GL11:12,22:23', N_GL: 5, E_GL_hartree: -1230.33519, delta_EA: 3.0, ESE: -182.9, CESE: -165.9, sum_delta_EAm: 185.9, sum_delta_EnAm: -17.0, source_selected: false}
+    - {label: 'GL12:13,22:23', N_GL: 4, E_GL_hartree: -1230.33546, delta_EA: 3.2, ESE: -161.1, CESE: -141.2, sum_delta_EAm: 164.3, sum_delta_EnAm: -19.9, source_selected: true}
+    - {label: 'GL11:12,6:7', N_GL: 4, E_GL_hartree: -1230.33571, delta_EA: 3.3, ESE: -161.2, CESE: -142.6, sum_delta_EAm: 164.6, sum_delta_EnAm: -18.7, source_selected: false}
+    - {label: 'GL12:13,26:27', N_GL: 4, E_GL_hartree: -1230.33633, delta_EA: 3.7, ESE: -161.3, CESE: -142.4, sum_delta_EAm: 165.0, sum_delta_EnAm: -18.9, source_selected: false}
+
+independent_graph_lane:
+  implementation: project_authored_polyhex_perfect_matching_enumerator_plus_RDKit_formula_check
+  ring_counts: [2, 3, 4, 5, 6, 7]
+  expected_kekule_count_formula: ring_count_plus_1
+  expected_qualified_count_formula: ring_count_minus_1
+  generalized_fusion_bond_definition: vertical_cross_chain_bonds_in_linear_acene_polyhex
+
+acceptance:
+  rounded_energy_identity_tolerance_kcal_mol: 0.15
+  rounded_per_pi_tolerance_kcal_mol_electron: 0.06
+  benzene_CESE_per_pi_absolute_reference: 6.5
+  require_energy_rule_after_GL_filter: true
+  require_holdout_energy_only_failure_detected: true
+
+final_verdict_contract:
+  verdict: P13_CONSISTENT_IN_TESTED_RULE_HIERARCHY_AND_PUBLISHED_LEDGER_SCOPE
+  relation_to_monograph: consistent_in_tested_rule_hierarchy_and_published_energy_ledger_scope
+  completion_class: scoped_proposition_consistent
+  production_label: false
+  training_eligible: false

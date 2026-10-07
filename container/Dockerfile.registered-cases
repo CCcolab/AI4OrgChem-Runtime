@@ -1,0 +1,35 @@
+ARG BASE_IMAGE=ai4orgchem-runtime:registered-base-20261008
+FROM ${BASE_IMAGE}
+USER root
+ARG RUNTIME_COMMIT
+ARG SOURCE_SNAPSHOT_SHA256
+ARG DEPENDENCY_LOCK_SHA256
+ARG BASE_IMAGE_ID
+LABEL org.opencontainers.image.title="AI4OrgChem fixed P02 P13 P01 local candidate" \
+      org.opencontainers.image.revision=$RUNTIME_COMMIT \
+      ai4orgchem.registered.schema="fixed-registered-cases-v1" \
+      ai4orgchem.registered.runtime-commit=$RUNTIME_COMMIT \
+      ai4orgchem.registered.source-sha256=$SOURCE_SNAPSHOT_SHA256 \
+      ai4orgchem.registered.dependency-sha256=$DEPENDENCY_LOCK_SHA256 \
+      ai4orgchem.registered.base-image-id=$BASE_IMAGE_ID \
+      ai4orgchem.registered.distribution-status="BLOCKED-local-only"
+ENV AI4ORGCHEM_RUNTIME_COMMIT=$RUNTIME_COMMIT \
+    AI4ORGCHEM_REGISTERED_SOURCE_SHA256=$SOURCE_SNAPSHOT_SHA256 \
+    AI4ORGCHEM_REGISTERED_DEPENDENCY_SHA256=$DEPENDENCY_LOCK_SHA256 \
+    OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
+COPY build-inputs/wheels /registered-wheels
+COPY locks/requirements-registered-cases.txt /registered-wheels/requirements.txt
+RUN /opt/venv/bin/python -m pip install --no-index --no-deps --find-links /registered-wheels --require-hashes -r /registered-wheels/requirements.txt \
+ && /opt/venv/bin/python -m pip check
+COPY runtime /opt/runtime/runtime
+COPY reference/registered_cases /opt/runtime/reference/registered_cases
+COPY configs/registered-cases-v1.json /opt/runtime/configs/registered-cases-v1.json
+COPY locks/registered-cases-source.json locks/registered-cases-dependencies.json /opt/runtime/locks/
+COPY locks/requirements-registered-cases.txt /opt/runtime/locks/requirements-registered-cases.txt
+COPY scripts/run-registered-case.py scripts/start-registered-case.ps1 scripts/start-local-runtime.ps1 /opt/runtime/scripts/
+COPY tests /opt/runtime/tests
+COPY container/Dockerfile.registered-cases container/Dockerfile.registered-cases.dockerignore /opt/runtime/container/
+RUN chmod -R a-w /opt/runtime /opt/venv /registered-wheels
+USER 10001:10001
+ENTRYPOINT ["/opt/venv/bin/python", "-B", "-m", "runtime.registered_cases"]
+CMD ["--help"]

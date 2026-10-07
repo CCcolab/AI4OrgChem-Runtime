@@ -1,0 +1,23 @@
+{
+  "schema": "registered-fixed-cases-v1",
+  "general_user_compute": "BLOCKED",
+  "arbitrary_inputs": false,
+  "tasks": {
+    "p02-statistics": {
+      "module": "p02",
+      "protocol_id": "P02_STRUCTURE_UV_SOURCE_FREEZE_V0.1",
+      "scope": "Frozen published table value recalculation; no PDF/CIF reauthentication, no quantum calculation"
+    },
+    "p13-graph-ledger": {
+      "module": "p13",
+      "protocol_id": "p13-polycyclic-benzenoid/0.1",
+      "scope": "Original graph/RDKit formula rules and frozen energy ledger arithmetic; no quantum calculation"
+    },
+    "p01-orbital-density": {
+      "module": "p01",
+      "protocol_id": "P01_ETHENE_OCCUPIED_GAUGE_CONTROL_V0.1",
+      "protocol_sha256": "d137c04a22fd221129f7a1e62fcafa6928e7ddee1493082ca40158a3c230ac47",
+      "scope": "One fixed ethene ordinary RHF/6-31G(d), one Boys and one Pipek-Mezey occupied rotation; density/energy invariance only"
+    }
+  }
+}
