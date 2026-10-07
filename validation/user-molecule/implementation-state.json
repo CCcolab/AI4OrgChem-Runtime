@@ -1,5 +1,5 @@
 {
-  "revision": "OCCUPIED-SPACE-ROOT-PREPARATION-20261007",
+  "revision": "LOCAL-RUNTIME-FRAMEWORK-20261007",
   "date": "2026-10-07",
   "runtime_baseline_commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
   "engineering_entry": "APPROVED_FOR_IMPLEMENTATION",
@@ -80,13 +80,13 @@
   "new_build": "EXECUTED; r3 PASS",
   "new_scientific_runs": "This increment0; latest actual science remains prior12F occupied-space response with no qualified endpoint",
   "compute_enabled": false,
-  "new_service_tests": "Latest150 scoped fake root engineering tests PASS; historical complete176 W01-W07 CI stays44ad90e",
+  "new_service_tests": "62 scoped source/catalogue/classification tests PASS; minimal Linux CI and PS/source integration pending",
   "wslc": "BLOCKED / NOT_EXECUTED; paused",
   "colab": "DEFERRED",
   "ci_execution": "NOT_EXECUTED",
   "image_distribution": "BLOCKED",
   "public_push_release": "NOT_AUTHORIZED",
-  "next_bounded_task": "Review implementation-only preparation evidence; any live single-start root runner requires a separately authorized version and fresh budget, with no automatic calculation",
+  "next_bounded_task": "Complete local source/metadata engineering acceptance; future true-root diagnosis requires a fresh versioned implementation and budget; no automatic science",
   "scientific_pending": [
     "conditional stationarity, raw Aufbau consistency and state-selection/fixed-point existence",
     "two storage path equivalence and independent full reference acceptance",
@@ -113,7 +113,7 @@
   "method_readonly_review": "COMPLETE_STORED_EVIDENCE_AND_ALGEBRA; NOT_REAL_METHOD_APPROVAL",
   "new_scientific_runs_this_method_review": 0,
   "latest_method_decision_record": "validation/user-molecule/method-decisions/mdr-008/record.json",
-  "method_decision_status": "TWELVE_SINGLE_POINT_RESPONSE_INITIAL_GAP_PASS_COMM_MAP_FAIL_NO_QUALIFIED_ROOT",
+  "method_decision_status": "SINGLE_START_ROOT_IMPLEMENTATION_ONLY_FAKE_AND_ZERO_F_PASS_REAL_ROOT_NOT_EXECUTED",
   "latest_host_report_engineering_record": "validation/user-molecule/report-engineering-20261006.json",
   "host_report_engineering": {
     "status": "PASS_SCOPED_HOST_REPORT_ENGINEERING_ONLY",
@@ -510,5 +510,18 @@
     "actual_live_root_runner": "NOT_IMPLEMENTED",
     "root_search": "NOT_EXECUTED",
     "Compute": false
+  },
+  "previous_method_decision_status_before_local_framework": "TWELVE_SINGLE_POINT_RESPONSE_INITIAL_GAP_PASS_COMM_MAP_FAIL_NO_QUALIFIED_ROOT",
+  "previous_new_service_tests_before_local_framework": "Latest150 scoped fake root engineering tests PASS; historical complete176 W01-W07 CI stays44ad90e",
+  "latest_local_framework_record": "validation/local-runtime-framework-20261007.json",
+  "local_framework": {
+    "implementation": "SOURCE_HOST_ENTRY_AND_READONLY_CATALOGUE_IMPLEMENTED",
+    "new_scientific_calls": 0,
+    "new_image_build": "NOT_EXECUTED",
+    "compute_enabled": false,
+    "local_minimal_ci": "PENDING; host missing-jsonschema failure preserved",
+    "source_preparation": "IMPLEMENTED; real repository roundtrip pending",
+    "new_live_root_runner": "NOT_IMPLEMENTED",
+    "scientific_budget": null
   }
 }

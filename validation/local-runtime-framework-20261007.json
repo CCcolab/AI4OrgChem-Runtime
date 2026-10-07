@@ -1,0 +1,81 @@
+{
+  "schema_version": "local-runtime-framework-verification-v1",
+  "date": "2026-10-07",
+  "status": "ENGINEERING_ACCEPTANCE_IN_PROGRESS",
+  "base_commit": "ab0348a87f4d75aa981a5250a488b7241bc1f3e3",
+  "engineering_unit_tests": {
+    "propositions": 26,
+    "distribution": 24,
+    "ci_classification": 12,
+    "total_unique": 62,
+    "status": "PASS_SCOPED_HOST_TESTS"
+  },
+  "host_minimal_ci": "FAIL_MISSING_JSONSCHEMA_AND_SYMLINK_SKIP; preserved",
+  "linux_minimal_ci": "NOT_EXECUTED_YET",
+  "launcher_integration": "NOT_EXECUTED_YET",
+  "real_source_roundtrip": "NOT_EXECUTED_YET",
+  "new_scientific_calls": 0,
+  "new_image_build": "NOT_EXECUTED",
+  "true_root_runner": "NOT_IMPLEMENTED",
+  "root_search": "NOT_EXECUTED",
+  "Compute": false,
+  "GitHub_Actions": "NOT_EXECUTED",
+  "WSLc": "BLOCKED / NOT_EXECUTED; paused",
+  "image_distribution": "BLOCKED",
+  "public_push_release": "NOT_AUTHORIZED",
+  "evidence_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-local-runtime-framework",
+  "old_deliveries_and_scientific_core": {
+    "status": "PASS_SELECTED_PRESERVATION",
+    "sealed_deliveries": [
+      {
+        "directory": "20261007-user-molecule-budget-recording",
+        "manifest_sha256": "7c00bd9650d6946a20b82e2adeceaa894a723de0dd0d4bbfc8871f19bf06a245",
+        "payloads": 675
+      },
+      {
+        "directory": "20261007-user-molecule-occupation-response",
+        "manifest_sha256": "00bde5f55716d3bcdb084773483175b419e5c8f184226edb415b2c52348667d4",
+        "payloads": 1471
+      },
+      {
+        "directory": "20261007-user-molecule-occupation-scope",
+        "manifest_sha256": "f244245cdfd86c3f14f71c9a1d1a8c74d596253b2d5504adbb9af504fe6d1254",
+        "payloads": 20
+      },
+      {
+        "directory": "20261007-user-molecule-occupied-space-admission",
+        "manifest_sha256": "512df8fd7d31fb56564777dd5511f62296bc256127f28270b3115ef720c8d007",
+        "payloads": 760
+      },
+      {
+        "directory": "20261007-user-molecule-occupied-space-response",
+        "manifest_sha256": "2ee8eee5fc9ee1a977b3ea621af2ee48f91d0d1c1e52da2a039306802674f652",
+        "payloads": 1216
+      },
+      {
+        "directory": "20261007-user-molecule-occupied-space-root",
+        "manifest_sha256": "7b42fb3dc51e07490014a4a0721a740859ab27cf17ad0d3b1ea697febb8ea86a",
+        "payloads": 1203
+      },
+      {
+        "directory": "20261007-user-molecule-seed-v2",
+        "manifest_sha256": "548e3ba94177eaa6e894623519b6c3abe9fa860686049242221bbf0174ebd797",
+        "payloads": 1010
+      },
+      {
+        "directory": "20261007-user-molecule-seed-v2-readonly-analysis",
+        "manifest_sha256": "94f762d81e7132fc19caca21076338fbcb48fb1d1150ed1274a384306f715fae",
+        "payloads": 24
+      }
+    ],
+    "sealed_payload_total": 6379,
+    "unchanged_tracked_scientific_and_contract_prefixes": [
+      "locks/",
+      "profiles/",
+      "runtime/user_molecule/",
+      "reference/"
+    ],
+    "old_user_test_files_changed": false,
+    "scope": "Prior sealed files and base-to-current diff; not scientific revalidation"
+  }
+}

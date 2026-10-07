@@ -1,5 +1,7 @@
 # AI4OrgChem 可复算运行环境
 
+本地使用从 [本地Runtime入口](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md) 开始：查看能力 → 选择P01—P14既有证据 → 输出只读报告，或准备自己的请求并执行受限Check/Report。`start-local-runtime.ps1` 是宿主源码入口；命题目录不等于P01—P13重算适配，生产用户分子Compute仍BLOCKED。Git/项目ZIP仅提供来源可核对的源码，不包含完整安装环境；新镜像未构建，WSLc/公开发布仍保持原边界。
+
 最新 [单起点候选与零计算准备](docs/USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md)已完成：150项专项工程测试（40新增、110回归）及实际缓存零F准备通过；新增真实F/NR/SCF为0。本版不允许真实根搜索、不创建科学预算，实际root runner未实现/未执行，Compute仍BLOCKED。原规则、门槛和旧数值记录保留。
 
 此前 [十二点真实条件算子响应](docs/USER_MOLECULE_OCCUPIED_SPACE_RESPONSE_20261007_zh-CN.md)已完成：129项专项工程测试、实际零F准备与12次真F/NR通过，8组同D子集通过；所有点gap通过但comm/map失败，无合格自洽根，Compute保持BLOCKED。SCF/根搜索/尾检未执行，新12槽预算关闭。

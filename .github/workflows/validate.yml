@@ -84,6 +84,15 @@ jobs:
           "$PYTHON" scripts/ci-unit-user-molecule.py \
             --output-root "$RUNNER_TEMP/user-molecule-contracts/minimal-units" \
             2>&1 | tee "$RUNNER_TEMP/user-molecule-contracts/tests.log"
+      - name: Local evidence and source snapshot engineering (no molecular computation)
+        shell: bash
+        run: |
+          set -euo pipefail
+          PYTHON="$RUNNER_TEMP/user-molecule-ci-venv/bin/python"
+          for pattern in test_ci_user_molecule_classification.py test_propositions.py test_distribution.py; do
+            "$PYTHON" -B -m unittest discover -s tests -p "$pattern" -v \
+              2>&1 | tee "$RUNNER_TEMP/user-molecule-contracts/framework-$pattern.log"
+          done
       - name: Preserve contract evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2

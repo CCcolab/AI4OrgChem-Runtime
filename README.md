@@ -1,5 +1,7 @@
 # AI4OrgChem Reproducible Runtime
 
+Start with the [local Runtime entry guide](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md): inspect capabilities, choose existing P01–P14 evidence and export a read-only review, or prepare a restricted user-molecule Check/Report request. `start-local-runtime.ps1` runs from host source. Catalogue entries do not implement P01–P13 recomputation; production user Compute remains BLOCKED. Git/project ZIP snapshots supply verifiable source, not a complete installed environment. No new image build, WSLc acceptance or public release is implied.
+
 Latest [single-start candidate and zero-F preparation](docs/USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md) passed 150 scoped engineering tests (40 new,110 regressions) and actual cached zero-F preparation, with zero new native F/NR/SCF. This version cannot authorize live root solving or reserve science callbacks; the live runner remains NOT_IMPLEMENTED / NOT_EXECUTED and Compute BLOCKED. Original rules,gates and numerical records remain.
 
 Previous [twelve-point occupied-space response](docs/USER_MOLECULE_OCCUPIED_SPACE_RESPONSE_20261007_zh-CN.md): 129 scoped engineering tests and actual zero-F preparation passed; one new process completed 12 true F/NR evaluations and 8 same-D operator/energy subsets. Every point passes initial gap but fails commutator/raw-map checks; no qualified root, SCF or tail rechecks. Compute remains BLOCKED; the new twelve-slot budget is closed.

@@ -1,0 +1,1107 @@
+{
+  "schema_version": "proposition-catalog-v1",
+  "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "source_lock_canonical_sha256": "d40413b83446f33d51b95f3c3f392193e9a728cee611c45e87bfb28daedc5fa5",
+  "source_file_lock_canonical_sha256": "352c23adc331e6228abf77fdab1e5c2fac09c9b20b91ad8fb60a4aea38f2a2cc",
+  "source_file_lock_count": 588,
+  "scope": "LOCAL_READ_ONLY_SELECTED_LOCKED_EVIDENCE_BYTES_NOT_SCIENTIFIC_REVALIDATION",
+  "online_required": false,
+  "default_source_directory": null,
+  "common_assets": [
+    {
+      "path": "evidence/P01-P14/README_zh-CN.md",
+      "role": "context",
+      "item": "main",
+      "relation": "FROZEN_CONTEXT",
+      "sha256": "ae18cd1cbb8a564e7bd507ca85c2f302aef818def1fb512e7f9f582873d2fe7e"
+    },
+    {
+      "path": "project/P01-P14_MASTER_TABLE_zh-CN.md",
+      "role": "context",
+      "item": "main",
+      "relation": "FROZEN_CONTEXT",
+      "sha256": "99334c3f4512b49764ab2b3d13c97f356b04c2108b6e4494ecff6e7d1eaaf16a"
+    },
+    {
+      "path": "manuscripts/P01-P14_evidence_matrix_zh-CN.md",
+      "role": "context",
+      "item": "main",
+      "relation": "FROZEN_CONTEXT",
+      "sha256": "1d0dafb0309b9e684768c15174fe84e7c001e4aa98f1cd54d67387f5677714ba"
+    }
+  ],
+  "cases": [
+    {
+      "id": "P01",
+      "title": "P01｜CAT01 必须区分“分子轨道离域”和“电子离域”，传统理论及部分局域化方法可能混淆二者",
+      "evidence_identity": "INDEPENDENT_QM_IDENTITY_CONTROL",
+      "frozen_scope_statement": "完成",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "P01",
+          "label": "P01｜CAT01 必须区分“分子轨道离域”和“电子离域”，传统理论及部分局域化方法可能混淆二者"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P01/data-card.md",
+          "role": "data-card",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "04013950752b0246026329854e28919d59986352597bb4521ceab3e3dd3a7224"
+        },
+        {
+          "path": "evidence/P01-P14/P01/protocol.md",
+          "role": "protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "006f72c60d5522ef48129e5b4b6128416fdd24db9cc9160df7c626b939618dd7"
+        },
+        {
+          "path": "evidence/P01-P14/P01/report.md",
+          "role": "report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "ae2aeabdf0903514050e9fb00e4381a1b880a2abc48e0150dc1d4bfe1d551eca"
+        },
+        {
+          "path": "evidence/P01-P14/P01/result.json",
+          "role": "result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "e76a8f10d4775e11e45cc7ca240f12d15d1a1378fc33785a0c3b3701c291556e"
+        }
+      ],
+      "runtime_task_references": []
+    },
+    {
+      "id": "P02",
+      "title": "P02｜CAT02 共轭作用不一定使分子趋于平面和稳定，也可能伴随结构扭曲",
+      "evidence_identity": "PUBLISHED_VALUE_REANALYSIS",
+      "frozen_scope_statement": "完成",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "P02",
+          "label": "P02｜CAT02 共轭作用不一定使分子趋于平面和稳定，也可能伴随结构扭曲"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P02/data-card.md",
+          "role": "data-card",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "45b6b9ea18f0cba6e6634de821bf1d4f0d46ac07d31c2407fc1728398d9d4797"
+        },
+        {
+          "path": "evidence/P01-P14/P02/protocol.md",
+          "role": "protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "be7d749948891faca0a890d9e45650d1f233577307a977510b2e849d172a5a3e"
+        },
+        {
+          "path": "evidence/P01-P14/P02/report.md",
+          "role": "report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "c97f8a26d28d6304c3b179c99ce0d6d43327ca29b298be9c9044dc554e1e033c"
+        },
+        {
+          "path": "evidence/P01-P14/P02/result.json",
+          "role": "result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "ea7611aa54c0103cb3622ab4968bbe4dd6f1e2d7f0ad5de0ba532e412d23d74b"
+        }
+      ],
+      "runtime_task_references": []
+    },
+    {
+      "id": "P03",
+      "title": "P03｜CAT02 在受测路径上电子能与核排斥能可反向变化，近平面构象不一定能量最低",
+      "evidence_identity": "FROZEN_COORDINATE_QM_LEDGER",
+      "frozen_scope_statement": "完成",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "P03",
+          "label": "P03｜CAT02 在受测路径上电子能与核排斥能可反向变化，近平面构象不一定能量最低"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P03/data-card.md",
+          "role": "data-card",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "d32d7925057feba8a6e7f2e5caa005c13cb1e273f80d8b5fccaf2ab82e0fa37f"
+        },
+        {
+          "path": "evidence/P01-P14/P03/protocol.md",
+          "role": "protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "608115444918eaf2b3011dc3b68d1ccc467d104a587e25a56cef9bf039fc0865"
+        },
+        {
+          "path": "evidence/P01-P14/P03/report.md",
+          "role": "report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "d06b8de077005cec5c48b092b55544b83182a25588cd73069e7ba0dab3f3e037"
+        },
+        {
+          "path": "evidence/P01-P14/P03/result.json",
+          "role": "result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "0498f24cc0a82b79dad29e91c0821a1b051189f18c5b154ebfb65c78ba993f55"
+        }
+      ],
+      "runtime_task_references": []
+    },
+    {
+      "id": "P04",
+      "title": "P04｜CAT03 在原著LFMO定义下，π–π离域总端点可表现为去稳定化",
+      "evidence_identity": "SOURCE_DEFINED_CONDITIONAL_ENDPOINT",
+      "frozen_scope_statement": "完成",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "P04",
+          "label": "P04｜CAT03 在原著LFMO定义下，π–π离域总端点可表现为去稳定化"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P04/data-card.md",
+          "role": "data-card",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "f8641032148a2f304c382c17cf5971a88b928a3fefdc87240434558527147179"
+        },
+        {
+          "path": "evidence/P01-P14/P04/protocol.md",
+          "role": "protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "8a4082c2ec9169eed1ba80e686616caa538414a301a3e4be7774a87fb06ac9df"
+        },
+        {
+          "path": "evidence/P01-P14/P04/report.md",
+          "role": "report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "b60247cc8f38a0ef745669c4db3692189f7e72231da62ab2788d99259f3eb769"
+        },
+        {
+          "path": "evidence/P01-P14/P04/result.jsonl",
+          "role": "result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "37fed066c8d27225d00bce526451142a21eebd382241e8ea8ae37ba6745b17a1"
+        }
+      ],
+      "runtime_task_references": []
+    },
+    {
+      "id": "P05",
+      "title": "P05｜CAT03 π–σ轨道相互作用可表现为去稳定化，不能先验地归入普通“成键稳定化”",
+      "evidence_identity": "SOURCE_DEFINED_CONDITIONAL_ENDPOINT",
+      "frozen_scope_statement": "完成",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "P05",
+          "label": "P05｜CAT03 π–σ轨道相互作用可表现为去稳定化，不能先验地归入普通“成键稳定化”"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P05/data-card.md",
+          "role": "data-card",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "318f5bd33d93962ce808ac32e005a0720db34747089a2f8bdcca68119cc70cee"
+        },
+        {
+          "path": "evidence/P01-P14/P05/protocol.md",
+          "role": "protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "2f64488a9a8682257ef432305b82985b45793739ffc73e015ae98a99fe3eb6f9"
+        },
+        {
+          "path": "evidence/P01-P14/P05/report.md",
+          "role": "report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "3346886d91ff9396654e7eac0611ae669ec1357f02f7904e0d649f5a00ad8a46"
+        },
+        {
+          "path": "evidence/P01-P14/P05/result.jsonl",
+          "role": "historical-result",
+          "item": "main",
+          "relation": "HISTORICAL_ANCHOR",
+          "sha256": "638e8b94e000262a0fbd7378d2bc32b2487a7fc694b8ba40bc1b32a0ba9fcb54"
+        },
+        {
+          "path": "evidence/P01-P14/P05/seven-angle-protocol.yaml",
+          "role": "current-protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "15ccd83e52ebab71350c4679e11cad6da2ed0e4c4052df2f01183297bef05546"
+        },
+        {
+          "path": "evidence/P01-P14/P05/seven-angle-result.json",
+          "role": "current-result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "6b1977dc6b092971dc1bc0aba6f080aa07eee30756823db25376de64b07b64d9"
+        }
+      ],
+      "runtime_task_references": []
+    },
+    {
+      "id": "P06",
+      "title": "P06｜CAT03 非键σ–σ条件态能量差应独立分析，不能未经计算就等同于传统位阻排斥叙事",
+      "evidence_identity": "SOURCE_DEFINED_CONDITIONAL_ENDPOINT",
+      "frozen_scope_statement": "完成",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "P06",
+          "label": "P06｜CAT03 非键σ–σ条件态能量差应独立分析，不能未经计算就等同于传统位阻排斥叙事"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P06/data-card.md",
+          "role": "data-card",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "43c7697b7c74a93546a8e290cabae71fa94b45c20aff47548795107d3245fdb9"
+        },
+        {
+          "path": "evidence/P01-P14/P06/protocol.md",
+          "role": "protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "b22829cfce4cfd4fa9bb5537d4474b355466f7993d7ab4d3a11d8a00cc2132f8"
+        },
+        {
+          "path": "evidence/P01-P14/P06/report.md",
+          "role": "report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "56bb23cb3027dc20f0822cff8b886a1bebe4d579cd222b2abc58976296b1d6d3"
+        },
+        {
+          "path": "evidence/P01-P14/P06/result.jsonl",
+          "role": "result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "8934755936f3ea109cfb776922d69dcd5dab2384dc05fcc11aa9cabbdebee293"
+        }
+      ],
+      "runtime_task_references": []
+    },
+    {
+      "id": "P07",
+      "title": "P07｜CAT03 分子扭曲不能只用“共轭稳定化—位阻去稳定化”二项竞争解释，应检查π–π、π–σ、σ–σ及轨道响应的共同作用",
+      "evidence_identity": "INDEPENDENT_COMPUTATIONAL_AUDIT_PLUS_DERIVED_SYNTHESIS",
+      "frozen_scope_statement": "完成；2026-09-08增强",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "P07",
+          "label": "P07｜CAT03 分子扭曲不能只用“共轭稳定化—位阻去稳定化”二项竞争解释，应检查π–π、π–σ、σ–σ及轨道响应的共同作用"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P07/data-card.md",
+          "role": "data-card",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "75a623d7473bc00ae3ce64e1390063e432a7b6eb2790f5df264aec6e8592dfee"
+        },
+        {
+          "path": "evidence/P01-P14/P07/protocol.md",
+          "role": "protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "ca24bff3a9612a5c8b1196bae27a678eba83bf3b74c826c6c55d1bb92293aea2"
+        },
+        {
+          "path": "evidence/P01-P14/P07/report.md",
+          "role": "report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "29ba3184ebb6056a2a8aa344a74259db62cb34fdcc25587ef4640abec1bf98cb"
+        },
+        {
+          "path": "evidence/P01-P14/P07/result.json",
+          "role": "result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "b0e24635c8d1e7394ffa09510b5ae8e330f2edf543a385196b35ba06eab296b4"
+        },
+        {
+          "path": "evidence/P01-P14/P07/same-hamiltonian-audit-protocol.yaml",
+          "role": "audit-protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "6ae4adfbdb287705d2f8f6a36f63b6d3552fcdeef3a092b99c493eafa58053d3"
+        },
+        {
+          "path": "evidence/P01-P14/P07/same-hamiltonian-audit-report.md",
+          "role": "audit-report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "7ce2a39146d4dda26b4ace3f9b5573bec19856b40a725d2d562ec5638f8accbb"
+        },
+        {
+          "path": "evidence/P01-P14/P07/same-hamiltonian-audit-result.json",
+          "role": "audit-result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "ca7fe9125c74b738d9cd2fb678edf61ee927a41e4b6fa9c054899ab2def19789"
+        }
+      ],
+      "runtime_task_references": []
+    },
+    {
+      "id": "P08",
+      "title": "P08｜CAT04 丁二烯的共轭能不一定是稳定化能；选择性氢化热不能直接作为共轭稳定化的唯一证据，中央单键缩短也需要独立结构解释",
+      "evidence_identity": "SOURCE_DEFINED_COUNTERFACTUAL_ENDPOINT",
+      "frozen_scope_statement": "完成",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "P08",
+          "label": "P08｜CAT04 丁二烯的共轭能不一定是稳定化能；选择性氢化热不能直接作为共轭稳定化的唯一证据，中央单键缩短也需要独立结构解释"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P08/data-card.md",
+          "role": "data-card",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "77a8e93d6284c2454f64fe851aad3e12efe97d2feadf296611ce379b8743f81b"
+        },
+        {
+          "path": "evidence/P01-P14/P08/protocol.md",
+          "role": "protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "babd5653f16c1925546661965df805d4c6161301ffb3e023b61239ac70715b40"
+        },
+        {
+          "path": "evidence/P01-P14/P08/report.md",
+          "role": "report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "2ee189b5662edabae9940924273546da939376cb6c77b9d90ec7db36e0245258"
+        },
+        {
+          "path": "evidence/P01-P14/P08/result.json",
+          "role": "result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "a707a595ef7eeb5669fd704a1967a8f4f92f5405912af7641e91975daff9e420"
+        }
+      ],
+      "runtime_task_references": []
+    },
+    {
+      "id": "P09",
+      "title": "P09｜CAT05 苯和环丁二烯的芳香/反芳香能可通过无经验参数的局域几何或虚拟参考体系进行纯理论计算",
+      "evidence_identity": "SOURCE_ALIGNED_VIRTUAL_REFERENCE",
+      "frozen_scope_statement": "完成",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "P09",
+          "label": "P09｜CAT05 苯和环丁二烯的芳香/反芳香能可通过无经验参数的局域几何或虚拟参考体系进行纯理论计算"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P09/data-card.md",
+          "role": "data-card",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "5abd1d361c360e9f83e50550120fb9a12712e08e8204c6833b06c26377be5d7e"
+        },
+        {
+          "path": "evidence/P01-P14/P09/protocol.md",
+          "role": "protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "cc55d026487c9260b6ea342c9ea7bec6a15df0a79be9d296a67deaacb68c2313"
+        },
+        {
+          "path": "evidence/P01-P14/P09/report.md",
+          "role": "report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "8f96709bdad1646238d5b3ed4fbafb92deb7507545ac04b5eb1c95cc6a6b20ed"
+        },
+        {
+          "path": "evidence/P01-P14/P09/result.json",
+          "role": "result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "578bb7c5f84f468b4eaf41869c5770597d8b8f9db9267d6e583ee673991f636b"
+        }
+      ],
+      "runtime_task_references": []
+    },
+    {
+      "id": "P10",
+      "title": "P10｜CAT05 苯的键长均一化和高对称性不能简单归因于π电子离域；沿冻结坐标，核排斥能变化与电子能变化反向且绝对幅度更大",
+      "evidence_identity": "FROZEN_COORDINATE_QM_LEDGER",
+      "frozen_scope_statement": "完成",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "P10",
+          "label": "P10｜CAT05 苯的键长均一化和高对称性不能简单归因于π电子离域；沿冻结坐标，核排斥能变化与电子能变化反向且绝对幅度更大"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P10/data-card.md",
+          "role": "data-card",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "d5c50749b4b8ee10e5df46dcdf4d1ce6625b46e4d30ec11485c749df2eab426e"
+        },
+        {
+          "path": "evidence/P01-P14/P10/protocol.md",
+          "role": "protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "b4f29a2109594658e6a80423e21d3f6d6db07e7c62a5aa28ef4b001bda141d47"
+        },
+        {
+          "path": "evidence/P01-P14/P10/report.md",
+          "role": "report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "7ec4e21eac802e593e27a029cce3d533c2e84505b7814481e8097990f97d43c9"
+        },
+        {
+          "path": "evidence/P01-P14/P10/result.json",
+          "role": "result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "77b94c66aec10efa139814f955c311ba7c3588780b62faf229aee3f462dcf159"
+        }
+      ],
+      "runtime_task_references": []
+    },
+    {
+      "id": "P11",
+      "title": "P11｜CAT05 呋喃类不能沿用苯型ESE判据：`ΔEA>0`且小于正的局域增量总和，负差值应定义为LDE；取代苯效应需区分纯共轭与纯诱导贡献",
+      "evidence_identity": "SOURCE_ALIGNED_STATE_SPECIFIC_RESTRICTED_OPTIMIZATION",
+      "frozen_scope_statement": "完成",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "P11-A",
+          "label": "Furan LDE"
+        },
+        {
+          "id": "P11-B",
+          "label": "State-specific planar substituted-benzene CE/IE"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P11/furan-data-card.md",
+          "role": "data-card",
+          "item": "P11-A",
+          "relation": "CURRENT",
+          "sha256": "ad72147d61c6ae9bf395c077b599492e7af663ae0c983db0f569550932570edd"
+        },
+        {
+          "path": "evidence/P01-P14/P11/furan-protocol.md",
+          "role": "protocol",
+          "item": "P11-A",
+          "relation": "CURRENT",
+          "sha256": "44b96fe1220985e053ef639d229abaecd02a8bf7107be5c1dd277a6f5c62e0f4"
+        },
+        {
+          "path": "evidence/P01-P14/P11/furan-report.md",
+          "role": "report",
+          "item": "P11-A",
+          "relation": "CURRENT",
+          "sha256": "7c7e2feb04df4148c3bbbe01069ff32ef4628152778e825e82851be274dd6ecd"
+        },
+        {
+          "path": "evidence/P01-P14/P11/furan-result.json",
+          "role": "result",
+          "item": "P11-A",
+          "relation": "CURRENT",
+          "sha256": "6f9dac189f0a2325d51fc9d6be3554a333f44d0c1307852819eadd8378558292"
+        },
+        {
+          "path": "evidence/P01-P14/P11/substituent-data-card.md",
+          "role": "data-card",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "34c4c4dae739b1b132805cf93196bd14d39ab66a0de574dce33dfbf049c659b2"
+        },
+        {
+          "path": "evidence/P01-P14/P11/substituent-protocol.md",
+          "role": "protocol",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "a6cef10ac0d9a828d22b529333f83ced2c27c8b89b2957823c188c53bab6951a"
+        },
+        {
+          "path": "evidence/P01-P14/P11/substituent-report.md",
+          "role": "report",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "3e197fdad65db2ab46986dc87162b650bf67fd39cc22ab9c7cb8848feb59b4a2"
+        },
+        {
+          "path": "evidence/P01-P14/P11/substituent-result.json",
+          "role": "result",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "52a5e6bd3cfb642cf3e7c4708e5441b37e613272cd13358466032fcd335876e9"
+        },
+        {
+          "path": "evidence/P01-P14/P11/substituent-fixed-geometry-audit-result.json",
+          "role": "historical-result",
+          "item": "P11-B",
+          "relation": "HISTORICAL_SUPERSEDED_DIAGNOSTIC",
+          "sha256": "7a87b7f56adc4fe6dd0e3088778763aba546c063fe85c1fcac10cfe1f433ade9"
+        },
+        {
+          "path": "evidence/P01-P14/P11/optimized-states/benzene_G.json",
+          "role": "state-record",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "2c98149d7f1bfac5e556edac906b85c8f7c1cbf1a287be3a884a45dd37d95601"
+        },
+        {
+          "path": "evidence/P01-P14/P11/optimized-states/benzene_GE1.json",
+          "role": "state-record",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "6b175a875cee0ca145d7c7908ae860cb2376af179c30ca2c4974a58ca007fe5a"
+        },
+        {
+          "path": "evidence/P01-P14/P11/optimized-states/benzene_GL.json",
+          "role": "state-record",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "d9f8511a2b2b954c0c3f0483416beae1b53f485c6c41573d1dc2b394ab28ab80"
+        },
+        {
+          "path": "evidence/P01-P14/P11/optimized-states/cyanobenzene_G.json",
+          "role": "state-record",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "d0b8fcf5ef1dfd50426adcec9d2cfa939c3b9adb61b198617abac315acaa0ad4"
+        },
+        {
+          "path": "evidence/P01-P14/P11/optimized-states/cyanobenzene_GE1.json",
+          "role": "state-record",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "2809837c9a5473da7a79d6179610be644242e4c764c5eafd795f98137aef187f"
+        },
+        {
+          "path": "evidence/P01-P14/P11/optimized-states/cyanobenzene_GE2.json",
+          "role": "state-record",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "3935e165a35291dafbf72deb062407fc53a53055bced3dc505fb7616b621479b"
+        },
+        {
+          "path": "evidence/P01-P14/P11/optimized-states/cyanobenzene_GE3.json",
+          "role": "state-record",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "0a4645adcbf1c436c5d22225b98911b7591262296b0acd0c0d60e719df48d3ad"
+        },
+        {
+          "path": "evidence/P01-P14/P11/optimized-states/cyanobenzene_GE4.json",
+          "role": "state-record",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "aa9ec95550d1e2b7237fbbd624596a909df4e2026c6ab3627d193a945cf0ba92"
+        },
+        {
+          "path": "evidence/P01-P14/P11/optimized-states/cyanobenzene_GE5.json",
+          "role": "state-record",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "84e41fad3322f49eaa3d8779650242f332c002211c9763e746ca0d69c6706178"
+        },
+        {
+          "path": "evidence/P01-P14/P11/optimized-states/cyanobenzene_GE6.json",
+          "role": "state-record",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "bb803f6e35b34ab17865bce1bc2fac53aa2328ceea38e3d344ae96a51f42e15a"
+        },
+        {
+          "path": "evidence/P01-P14/P11/optimized-states/cyanobenzene_GE7.json",
+          "role": "state-record",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "4c0b99abc0417f7a9d65cd7f4d6411653aa62674ab08b272dac179e147e47657"
+        },
+        {
+          "path": "evidence/P01-P14/P11/optimized-states/cyanobenzene_GL_I.json",
+          "role": "state-record",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "ff127ad0e08a1603dbf7f16f91330599f97d80a5b91d1664377de34d8136ad1b"
+        },
+        {
+          "path": "evidence/P01-P14/P11/optimized-states/cyanobenzene_GL_II.json",
+          "role": "state-record",
+          "item": "P11-B",
+          "relation": "CURRENT",
+          "sha256": "12973729ea3225222f0df8d7ba66f92c7ae81d854254674bf452fc5ba503c45f"
+        }
+      ],
+      "runtime_task_references": []
+    },
+    {
+      "id": "P12",
+      "title": "P12｜CAT06 轮烯CESE在指定尺寸点呈现边界前/起点方向变化",
+      "evidence_identity": "INDEPENDENT_SAME_BASIS_PLANAR_CESE_RECALCULATION",
+      "frozen_scope_statement": "完成",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "N12",
+          "label": "N12 same-basis planar CESE ledger"
+        },
+        {
+          "id": "N14",
+          "label": "N14 same-basis planar CESE ledger"
+        },
+        {
+          "id": "N16",
+          "label": "N16 same-basis planar CESE ledger"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P12/data-card.md",
+          "role": "data-card",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "039787c68d23f62fb56cd7d6c8cadf1e9a7a26fb8fd27a1b9b3a957e3509bb77"
+        },
+        {
+          "path": "evidence/P01-P14/P12/protocol.md",
+          "role": "protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "90361d39e710cf2d9927f91e1c53b81a4310684bcac71706fbfb2e7946ae191b"
+        },
+        {
+          "path": "evidence/P01-P14/P12/report.md",
+          "role": "report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "820f5394859beb925b796e25826cee658a7e381957ee89e80f9fbd4ca5353e82"
+        },
+        {
+          "path": "evidence/P01-P14/P12/result.json",
+          "role": "result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "d941c65d38696cf0e22d8d2610d14fa7adf62bedff9baa72fd3752a2cbfd747b"
+        },
+        {
+          "path": "evidence/P01-P14/P12/n12-same-basis-ledger.json",
+          "role": "same-basis-ledger",
+          "item": "N12",
+          "relation": "CURRENT",
+          "sha256": "bba1bbeb15f7376a9446531c0238e694994b7f26cfdd497632b1936dbdefc2cc"
+        },
+        {
+          "path": "evidence/P01-P14/P12/n14-same-basis-ledger.json",
+          "role": "same-basis-ledger",
+          "item": "N14",
+          "relation": "CURRENT",
+          "sha256": "6409ad10cf47b7ecbdcc6248c156dec673cd8473d8b000b3f48d937910e022d6"
+        },
+        {
+          "path": "evidence/P01-P14/P12/n16-same-basis-ledger.json",
+          "role": "same-basis-ledger",
+          "item": "N16",
+          "relation": "CURRENT",
+          "sha256": "29bc336739475af39ef92bca1460f0ccbf127db411571a895e608c3c8d864200"
+        },
+        {
+          "path": "evidence/P01-P14/P12/result-v0.3.1-historical.json",
+          "role": "historical-result",
+          "item": "P12",
+          "relation": "HISTORICAL_NOT_CURRENT_CLASSIFICATION",
+          "sha256": "df9b94baf5adf27dc591dd838dd5325132a474c39b4ace4df644691a3829cebb"
+        }
+      ],
+      "runtime_task_references": []
+    },
+    {
+      "id": "P13",
+      "title": "P13｜CAT06 多环苯系烃和稠环芳烃可按GL规则优先、位置/能量规则随后并组装公开PBH能量账本",
+      "evidence_identity": "DERIVED_RULE_AND_GRAPH_EVIDENCE",
+      "frozen_scope_statement": "完成",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "P13",
+          "label": "P13｜CAT06 多环苯系烃和稠环芳烃可按GL规则优先、位置/能量规则随后并组装公开PBH能量账本"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P13/data-card.md",
+          "role": "data-card",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "7783a9f3d0b400d29a7e94c1ae20caf4c2c0ee042a3f9f6a7f4d9969d56c7db4"
+        },
+        {
+          "path": "evidence/P01-P14/P13/protocol.md",
+          "role": "protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "0eeaa5d932f8f3587e19aa34ad98a14c54085709ae9010de93d4624c786904e4"
+        },
+        {
+          "path": "evidence/P01-P14/P13/report.md",
+          "role": "report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "bf29ae1f7855cb7c4a8d259342e1078f134e3ab2d5c09ca7ac204556d4bac3af"
+        },
+        {
+          "path": "evidence/P01-P14/P13/result.json",
+          "role": "result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "cd18f4b777df8c1054cf9fe1aa741d4f0c9e012b89fc91ae4cc921174a9222e6"
+        }
+      ],
+      "runtime_task_references": []
+    },
+    {
+      "id": "P14",
+      "title": "P14｜CAT07 应变芳香体系的结构扭曲不能完全归因于角应变，π离域可能具有结构扭曲作用",
+      "evidence_identity": "SOURCE_PROXY_PRODUCTION_CONDITIONAL_QM",
+      "frozen_scope_statement": "完成",
+      "capability": "READ_FROZEN_EVIDENCE_ONLY",
+      "calculation": "NOT_EXECUTED",
+      "replay_program_inventory": "NOT_A_GENERAL_REPLAY_CATALOG",
+      "items": [
+        {
+          "id": "P14",
+          "label": "P14｜CAT07 应变芳香体系的结构扭曲不能完全归因于角应变，π离域可能具有结构扭曲作用"
+        }
+      ],
+      "constraints": {
+        "source": "FROZEN_REFERENCED_PROTOCOL_DATA_CARD_AND_CURRENT_MASTER_TABLE",
+        "arithmetic_validation": "NOT_EXECUTED",
+        "new_scientific_verdict": "NOT_GENERATED",
+        "frozen_results": "PRESERVED_WITHOUT_RECOMPUTATION"
+      },
+      "assets": [
+        {
+          "path": "evidence/P01-P14/P14/data-card.md",
+          "role": "data-card",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "7df1c3900aab073847b7fefeb15db05fc3b95bee927c299d5afd1226fd2e7bf7"
+        },
+        {
+          "path": "evidence/P01-P14/P14/protocol.md",
+          "role": "protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "efeba6a07cacba6b00eca5918dd4928cf4b3ebadf3133df6afc0c6eacc40d73a"
+        },
+        {
+          "path": "evidence/P01-P14/P14/report.md",
+          "role": "report",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "df7caa0c4b68b4c3e2eaea3e9149b202357a14a815c3816332186fb594285f24"
+        },
+        {
+          "path": "evidence/P01-P14/P14/result.json",
+          "role": "result",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "bfb71c2fe6a5ed627c9f9968ddb2e6f6e202a57129b2d65be9903b7227db144a"
+        },
+        {
+          "path": "configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml",
+          "role": "fixed-protocol",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "f64fed4aeb172deaf5c71e637af367656e24b867570061987a5311fdbe48e06b"
+        },
+        {
+          "path": "configs/qm/p09_exchange_integral_classes_v0.1.yaml",
+          "role": "conditional-rules",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2"
+        },
+        {
+          "path": "evidence/P01-P14/P14/processed/p14_C12H6_B3LYPG_6_31Gd_production_optimization_v0.1.json",
+          "role": "processed-record",
+          "item": "main",
+          "relation": "CURRENT_REGISTERED_RECORD",
+          "sha256": "b545ac26b0ad5ecd442e7dfaaf42b1146d739eb713c3c9175ab3dbca23655f07"
+        },
+        {
+          "path": "evidence/P01-P14/P14/processed/p14_C12H6_five_parameter_pilot_v0.1.json",
+          "role": "processed-record",
+          "item": "main",
+          "relation": "HISTORICAL_TECHNICAL_NOT_SCIENTIFIC_ENDPOINT",
+          "sha256": "af0ccf538452e91c449870a63002fc0a8c57c9219e9ba8da0e307816b5fd89c0"
+        },
+        {
+          "path": "evidence/P01-P14/P14/processed/p14_C12H6_source_level_fixed_geometry_v0.1.json",
+          "role": "processed-record",
+          "item": "main",
+          "relation": "CURRENT_REGISTERED_RECORD",
+          "sha256": "c515423789a2f813693d3845db1e97c463c6c8552d2dcef185227ca507d953ba"
+        },
+        {
+          "path": "evidence/P01-P14/P14/processed/p14_benzotricyclobutadiene_fixed_geometry_smoke_v0.1.json",
+          "role": "processed-record",
+          "item": "main",
+          "relation": "HISTORICAL_TECHNICAL_NOT_SCIENTIFIC_ENDPOINT",
+          "sha256": "ce98a4d3e4a297a7edfa14de636757dbd7ea98c36bb66de65d01a241034b3803"
+        },
+        {
+          "path": "evidence/P01-P14/P14/processed/p14_memory_controlled_eri_equivalence_v0.1.json",
+          "role": "processed-record",
+          "item": "main",
+          "relation": "CURRENT_REGISTERED_RECORD",
+          "sha256": "7b52849e48c7b451b9e2cb689c099c73684f2cf354ebed2b8a2b8685bb8f81bf"
+        },
+        {
+          "path": "evidence/P01-P14/P14/processed/p14_strained_aromatic_pi_distortivity_classification_v0.1.json",
+          "role": "processed-record",
+          "item": "main",
+          "relation": "CURRENT_REGISTERED_RECORD",
+          "sha256": "e9c23f15247259768a31d5b8926cee87d2faf248ac6bd69a0f0f73c57ae05b5d"
+        },
+        {
+          "path": "evidence/P01-P14/P14/inputs/README_zh-CN.md",
+          "role": "input-reference",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "0b79493b20b76cd23feb8a675004b7d180b86ec700f8863b8b350a1cc8190273"
+        },
+        {
+          "path": "evidence/P01-P14/P14/inputs/source_proxy_G.xyz",
+          "role": "input-reference",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "fa2b0a1c88d467bd51fec6e140a07a65f74a64ad7e63fbf550d611b3b60c571c"
+        },
+        {
+          "path": "evidence/P01-P14/P14/inputs/source_proxy_PLG.xyz",
+          "role": "input-reference",
+          "item": "main",
+          "relation": "CURRENT",
+          "sha256": "0fd8593ebdf93b59642abbb8b9a84336e30de74d5fc3f4a8721cb2412d3fbcc7"
+        },
+        {
+          "path": "software/scripts/run_p14_benzotricyclobutadiene_smoke.py",
+          "role": "program-reference",
+          "item": "main",
+          "relation": "REFERENCE_ONLY_NOT_EXECUTABLE_DISPATCH",
+          "sha256": "4a9ef67b13ce43d6fef1ff23d060c1675bc8e356766e5ecb8c449eaa644abf0b"
+        },
+        {
+          "path": "software/scripts/validate_p14_memory_controlled_conditional_scf.py",
+          "role": "program-reference",
+          "item": "main",
+          "relation": "REFERENCE_ONLY_NOT_EXECUTABLE_DISPATCH",
+          "sha256": "4ae13c258052395142c8c0f2b24271ee63d51535c2c4dff181d29f93fce8e655"
+        },
+        {
+          "path": "software/scripts/run_p14_benzotricyclobutadiene_source_level_fixed_geometry.py",
+          "role": "program-reference",
+          "item": "main",
+          "relation": "REFERENCE_ONLY_NOT_EXECUTABLE_DISPATCH",
+          "sha256": "7d5498efdd40c7f2d765414cf1c39f098b6c5ef67a1f6d6254aa939e8f04a7b9"
+        },
+        {
+          "path": "software/scripts/run_p14_benzotricyclobutadiene_production_optimization.py",
+          "role": "program-reference",
+          "item": "main",
+          "relation": "REFERENCE_ONLY_NOT_EXECUTABLE_DISPATCH",
+          "sha256": "5f0181b5ecb3df6c74e95dbd4c137529be5ea07e146b3f7bf86ddbf0f201bf65"
+        },
+        {
+          "path": "software/scripts/classify_p14_strained_aromatic_pi_distortivity.py",
+          "role": "program-reference",
+          "item": "main",
+          "relation": "REFERENCE_ONLY_NOT_EXECUTABLE_DISPATCH",
+          "sha256": "f620b7abd67f9b86d50bf63d2a58614ee8c1c74ba0c57e845838d8cdf6fbb2b1"
+        }
+      ],
+      "runtime_task_references": [
+        {
+          "task": "p14-smoke",
+          "script_path": "software/scripts/run_p14_benzotricyclobutadiene_smoke.py",
+          "scope": "Technical smoke; never alone qualifies P14",
+          "execution": "NOT_STARTED_BY_THIS_READER"
+        },
+        {
+          "task": "p14-equivalence",
+          "script_path": "software/scripts/validate_p14_memory_controlled_conditional_scf.py",
+          "scope": "Same-definition implementation equivalence",
+          "execution": "NOT_STARTED_BY_THIS_READER"
+        },
+        {
+          "task": "p14-fixed",
+          "script_path": "software/scripts/run_p14_benzotricyclobutadiene_source_level_fixed_geometry.py",
+          "scope": "Frozen source-level fixed geometry",
+          "execution": "NOT_STARTED_BY_THIS_READER"
+        },
+        {
+          "task": "p14-optimize",
+          "script_path": "software/scripts/run_p14_benzotricyclobutadiene_production_optimization.py",
+          "scope": "Frozen five-parameter production optimization; checkpoint saving without resume",
+          "execution": "NOT_STARTED_BY_THIS_READER"
+        },
+        {
+          "task": "p14-classify",
+          "script_path": "software/scripts/classify_p14_strained_aromatic_pi_distortivity.py",
+          "scope": "Joint evidence qualification/classification using required four record types",
+          "execution": "NOT_STARTED_BY_THIS_READER"
+        }
+      ]
+    }
+  ]
+}
