@@ -89,7 +89,7 @@ jobs:
         run: |
           set -euo pipefail
           PYTHON="$RUNNER_TEMP/user-molecule-ci-venv/bin/python"
-          for pattern in test_ci_user_molecule_classification.py test_propositions.py test_distribution.py; do
+          for pattern in test_ci_user_molecule_classification.py test_propositions.py test_distribution.py test_historical_source_materials.py; do
             "$PYTHON" -B -m unittest discover -s tests -p "$pattern" -v \
               2>&1 | tee "$RUNNER_TEMP/user-molecule-contracts/framework-$pattern.log"
           done

@@ -1,0 +1,42 @@
+{
+  "schema_version": "w05-historical-runtime-source-materials-v1",
+  "status": "HISTORICAL_SOURCE_SNAPSHOT_NOT_CURRENT_OPERATIONAL_GUIDANCE",
+  "scope": "W05_REVIEW_SOURCE_MATERIAL_INTEGRITY_ONLY",
+  "source_commit": "55726d4ee0f76dee5065f47fc5f55824b0083db3",
+  "source_index": {
+    "path": "validation/user-molecule/w05/source-index.json",
+    "record_commit": "a54f4222277df857d3fe3be993d687a88fa3a806",
+    "git_blob_id": "48cb8fc9a922498edbc9d6f853331e90d91b0f6a",
+    "canonical_sha256": "11ab9a3a1b789a662964cc03ae17ff57d7b61befa1454a9f4532b3f36ac9a327",
+    "byte_policy": "EXACT_INDEX_GIT_BLOB_OR_CRLF_TO_LF"
+  },
+  "later_process_update": {
+    "commit": "03acd478974d24766aa578fb173a2ffdc95a2cfe",
+    "status": "EXTERNAL_EXPERT_CONSULTATION_CANCELLED_BY_USER",
+    "current_guidance": "docs/USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md"
+  },
+  "scientific_execution_authorized": false,
+  "scientific_approval_granted": false,
+  "materials": [
+    {
+      "owner": "runtime",
+      "original_path": "docs/USER_MOLECULE_TECHNICAL_PLAN_zh-CN.md",
+      "source_commit": "55726d4ee0f76dee5065f47fc5f55824b0083db3",
+      "git_blob_id": "54fc8dbddf224f26ab8cca09b5ba56cc952e6c60",
+      "sha256": "6c0fa47cb0e8acac602ebb3c4c1a2268b5b3cb80ad0d443e5c39922d85b310a6",
+      "size_bytes": 27759,
+      "snapshot_path": "validation/user-molecule/w05/historical-source-materials/USER_MOLECULE_TECHNICAL_PLAN_55726d4_zh-CN.md",
+      "byte_policy": "EXACT_ORIGINAL_GIT_BLOB_BYTES_NO_TRANSFORMATION"
+    },
+    {
+      "owner": "runtime",
+      "original_path": "docs/USER_MOLECULE_ENTRY_DESIGN_zh-CN.md",
+      "source_commit": "55726d4ee0f76dee5065f47fc5f55824b0083db3",
+      "git_blob_id": "d83c59ebe87228f514032c810b07b4bbe44e61ba",
+      "sha256": "f531d6d08f0275ee2639f622b52243a7ba59bc878d4676ee01016d6fa5052bd6",
+      "size_bytes": 38058,
+      "snapshot_path": "validation/user-molecule/w05/historical-source-materials/USER_MOLECULE_ENTRY_DESIGN_55726d4_zh-CN.md",
+      "byte_policy": "EXACT_ORIGINAL_GIT_BLOB_BYTES_NO_TRANSFORMATION"
+    }
+  ]
+}

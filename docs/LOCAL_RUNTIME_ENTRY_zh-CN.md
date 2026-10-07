@@ -74,6 +74,8 @@ python -B 'D:\your-work\runtime-prepared\scripts\prepare-runtime-source.py' veri
 
 可另外指定独立确认的`--expected-manifest-sha256`。对象证明绑定提交、树与文件，**不认证发布者**。准备目录写`SOURCE_IDENTITY.json`，不会伪造`.git`。来源检查拒绝不干净Git、未知额外文件、路径穿越、重解析点及哈希差异；PS1仅允许明确的Git blob对应换行转换。
 
+若旧检出虽显示Git干净，但Markdown工作字节与Git blob仅因CRLF不同，工具仍会拒绝。使用全新本地克隆进行来源导出，保持旧工作区不变；不放宽正文哈希。W05历史来源另保留精确Git blob快照和映射，当前“取消外部咨询”的说明继续有效，历史快照不恢复旧流程。
+
 PowerShell 7.3+可先验证旧固定Runtime构建入口，不接触引擎：
 
 ```powershell
@@ -81,6 +83,8 @@ PowerShell 7.3+可先验证旧固定Runtime构建入口，不接触引擎：
 ```
 
 此检查可在干净Git或已验证准备目录使用；准备目录需要现有Python，必要时`-PythonExecutable`。它只准备`container/Dockerfile`的旧固定Runtime构建身份；**不准备新的用户分子镜像、其science.tar或依赖wheel**，也不代表实际构建成功。移除`-CheckOnly`会实际构建新镜像，需要用户自己的引擎/依赖条件，必须另行验收。准备目录的构建记录写入相邻新目录，保持来源字节不变。本轮未重建镜像。
+
+预检支持`-ExpectedRuntimeCommit`；准备目录另支持`-ExpectedManifestSha256`。预检不认证发布者，Git模式检查干净HEAD，准备目录模式另核验完整来源证明。没有引擎访问的预检不能标成OCI构建通过。
 
 ## 当前交付边界
 

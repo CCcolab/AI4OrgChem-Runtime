@@ -1,0 +1,3 @@
+# The two audited original blobs must keep exact bytes on every checkout.
+USER_MOLECULE_TECHNICAL_PLAN_55726d4_zh-CN.md -text
+USER_MOLECULE_ENTRY_DESIGN_55726d4_zh-CN.md -text

@@ -5,6 +5,7 @@ from pathlib import Path
 import unittest
 
 from runtime.user_molecule.input import read_request
+from runtime.historical_materials import load_historical_source_materials
 
 ROOT = Path(__file__).resolve().parents[1]
 RECORDS = ROOT / 'validation/user-molecule/w05'
@@ -104,12 +105,16 @@ class W05PreparationContractTests(unittest.TestCase):
         self.assertEqual(budget['status'], 'PROPOSED_FOR_REVIEW_NOT_SCF_AUTHORIZATION')
 
     def test_frozen_source_materials_and_rule_identity_match(self):
+        historical = load_historical_source_materials(ROOT)
         for source in load(RECORDS / 'source-index.json')['local_sources']:
             if source['owner'] == 'runtime':
                 # The index records the reviewed Windows working bytes. A Linux
                 # checkout may use LF. Verify this particular historical hash
                 # by an exact EOL transformation; any other change still fails.
-                raw = (ROOT / source['path']).read_bytes()
+                # Two original design sources are exact 55726d4 snapshots;
+                # current documents retain the later consultation cancellation.
+                raw = (historical[source['path']] if source['path'] in historical
+                       else (ROOT / source['path']).read_bytes())
                 lf = raw.replace(b'\r\n', b'\n')
                 with self.subTest(source=source['path']):
                     self.assertIn(source['sha256'],
