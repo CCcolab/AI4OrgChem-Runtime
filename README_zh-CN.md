@@ -1,12 +1,14 @@
 # AI4OrgChem 可复算运行环境
 
-最新 [原规则服务范围与占据方向诊断](docs/USER_MOLECULE_OCCUPATION_SCOPE_20261007_zh-CN.md)已完成：两生产保存算子的精确谱窗口与六个冻结占据见证均已核验；仅改变冻结F下的占据方向不能通过原正能隙门槛。内部操作性范围已明确，新增F/SCF/容器为0，Compute仍BLOCKED。下一候选为单次算子响应探针，尚未实现、分配预算或执行。
+最新 [单次条件算子响应诊断](docs/USER_MOLECULE_OCCUPATION_RESPONSE_20261007_zh-CN.md)已实现并完成：101项专项工程测试、实际零F准备通过；一个新进程完成三密度×三路径9次真F/NR，零SCF。六个同D算子子集对照通过，但九个单点均未合格，Compute保持BLOCKED。旧预算已保留，新9槽预算关闭，不自动追加计算。
 
-最新 [预算感知与匹配诊断记录工程](docs/USER_MOLECULE_BUDGET_RECORDING_20261007_zh-CN.md)已实现，122项专项模拟测试和三个导出示例通过。新分子F/SCF为0，未接入科学worker、未改门槛，Compute仍BLOCKED。
+此前 [原规则服务范围与占据方向诊断](docs/USER_MOLECULE_OCCUPATION_SCOPE_20261007_zh-CN.md)已完成：两生产保存算子的精确谱窗口与六个冻结占据见证均已核验；仅改变冻结F下的占据方向不能通过原正能隙门槛。内部操作性范围已明确，新增F/SCF/容器为0，Compute仍BLOCKED。该只读轮的响应提案已另行实现并执行，见上方新记录；原定义和门槛保持。
 
-最新 [V2存量矩阵内部分析](docs/USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md)已确认窄π谱空间中的秩一占据和参考预算返回语义，并澄清能量导数关系。新增F/SCF/容器为0，原门槛及Compute BLOCKED保留；该轮提出的预算记录候选现已另行实现并通过模拟工程验证，真实分子路径未切换。
+此前 [预算感知与匹配诊断记录工程](docs/USER_MOLECULE_BUDGET_RECORDING_20261007_zh-CN.md)已实现，122项专项模拟测试和三个导出示例通过。新分子F/SCF为0，未接入科学worker、未改门槛，Compute仍BLOCKED。
 
-最新 [V2种子实施与诊断](docs/USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)：239项专项工程测试及零F种子准入通过；一次591F/约4.82分钟诊断完成，生产最终占据/能隙门禁失败，参考最终门禁未完成。原算子与门槛保留，Compute仍BLOCKED；完整CI及旧结果不重跑。
+此前 [V2存量矩阵内部分析](docs/USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md)已确认窄π谱空间中的秩一占据和参考预算返回语义，并澄清能量导数关系。新增F/SCF/容器为0，原门槛及Compute BLOCKED保留；该轮提出的预算记录候选现已另行实现并通过模拟工程验证，真实分子路径未切换。
+
+此前 [V2种子实施与诊断](docs/USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)：239项专项工程测试及零F种子准入通过；一次591F/约4.82分钟诊断完成，生产最终占据/能隙门禁失败，参考最终门禁未完成。原算子与门槛保留，Compute仍BLOCKED；完整CI及旧结果不重跑。
 
 用户已明确取消外部专家咨询、意见征询及签署流程（CANCELLED_BY_USER）。后续按 [内部定义与验证](docs/USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) 推进，不等待外部回复；三个科学问题保留为内部工作项。现有数值失败和资源门槛保留，V2已实现并完成一次受限诊断，最终资格未通过，Compute关闭。
 
@@ -26,7 +28,7 @@ W05 [验收准备](docs/USER_MOLECULE_W05_PREPARATION_zh-CN.md) 是此前的元�
 
 此前 [主机只读 Report 与导出](docs/USER_MOLECULE_REPORT_20261006_zh-CN.md) 增补保护旧运行目录、核对记录字节/身份、区分未执行与数值失败，并保留宿主/容器退出码。其48项标准库测试和11项主机报告集成通过。基础模式核对登记字节并读取历史快照；高级模式检查关键证据并导出派生报告。该增补轮次没有重算、启动新容器或重建镜像。
 
-最新 [W07 工程试用指南](docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 提供输入、Check、报告/导出三步流程及反馈模板。已用现有乙烯夹具完成一次真实容器 Check 和三项主机报告操作；无 SCF、网格、完整 ERI 或 Compute。这是历史工程人员演示；真人试用与反馈现按用户要求 DEFERRED_BY_USER，作为未来可选事项，不阻塞当前工程验收。原外部一致性咨询已按用户最新指示取消；内部定义与验证尚未完成，正式 W07 和生产 Compute 保持 **BLOCKED**。
+此前 [W07 工程试用指南](docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md) 提供输入、Check、报告/导出三步流程及反馈模板。已用现有乙烯夹具完成一次真实容器 Check 和三项主机报告操作；无 SCF、网格、完整 ERI 或 Compute。这是历史工程人员演示；真人试用与反馈现按用户要求 DEFERRED_BY_USER，作为未来可选事项，不阻塞当前工程验收。原外部一致性咨询已按用户最新指示取消；内部定义与验证尚未完成，正式 W07 和生产 Compute 保持 **BLOCKED**。
 
 此前 [W07 代理模拟自测](docs/USER_MOLECULE_W07_SELFTEST_zh-CN.md) 已通过9个启动器场景（8个容器）、6个宿主保护/历史失败判读场景及12个宿主 parser 用例。覆盖已有乙烯/丁二烯两 profile 的 Check、输入/身份拒绝、只读报告与导出；两次 Compute CLI 仅执行拒绝探针，该轮新科学计算为0。本地工程交付已形成，科研 W07/生产 Compute 仍 BLOCKED；模拟不冒充真人体验或数值合格。
 

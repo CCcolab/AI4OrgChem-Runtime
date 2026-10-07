@@ -1,0 +1,46 @@
+{
+  "id": "MDR-005",
+  "revision": "0.1",
+  "date": "2026-10-07",
+  "status": "SINGLE_POINT_RESPONSE_DIAGNOSED_NO_QUALIFIED_FIXED_POINT",
+  "request_source": "DIRECT_USER_MESSAGE",
+  "user_request": "请继续",
+  "parent_decision": {
+    "id": "MDR-004",
+    "path": "../mdr-004/record.json",
+    "sha256": "38fff5c4cb587660cbacb4a75ec9acd8d1658b6e27f211453d3d094eae333428",
+    "preserved_bytes": true
+  },
+  "source_runtime_commit": "616be48fb841d4711da42b07793f4bfa90ba40c6",
+  "scientific_protocol_approved": false,
+  "scientific_operator_or_target_changed": false,
+  "final_thresholds_changed": false,
+  "external_review_status": "CANCELLED_BY_USER",
+  "external_review_required": false,
+  "production_activation": false,
+  "scientific_delta_hartree": null,
+  "execution_scope": "ONE_NEW_PROCESS_3_FIXED_DENSITIES_X_3_IMPLEMENTATIONS_9_TRUE_F_NR_CALLS_ZERO_SCF",
+  "execution_record": "../../occupation-response-20261007.json",
+  "observations": [
+    "All nine callback/native-NR pairs completed; six same-density F/G/energy/grid-count comparisons pass their existing subset tolerances.",
+    "The A and B localized probes have gap about0.3027484Eh but commutator about0.4715905 and raw-map relative about0.6417886; their one-point predicates fail.",
+    "Within the pi occupation projection, raw Aufbau maps A occupation to B and B occupation to A; the full mapped D was not re-evaluated. This is not an observed SCF two-cycle.",
+    "The symmetric probe has commutator about8.697e-10, gap around1e-15, and raw-map relative0.427..0.439; it remains unqualified.",
+    "Small F/G differences within tolerance do not control raw-map eigenvector directions at a near-degenerate boundary; these map differences do not prove operator disagreement.",
+    "Localized probes have masked/physical N about16 and grid N about16.00000285; symmetric probe masked16, physical16.47453646, grid16.47453734. Metrics remain separate."
+  ],
+  "decisions": [
+    "Do not select a localized direction merely because its gap is positive; every original acceptance predicate still matters.",
+    "Do not relabel a single-point response or frozen witness as a seed-V2 resumed endpoint, self-consistent root, complete T05/T06 or research result.",
+    "Retain the existing strict global-Aufbau positive-gap service domain and all historical failures.",
+    "Do not spend additional F or SCF from the closed nine-slot process. Any later root-search or changed state-selection proposal needs its own versioned identity and bounded contract."
+  ],
+  "unknown": [
+    "Existence/uniqueness of other roots",
+    "Convergence or stability from any probe",
+    "Whether a different allowed initial occupied space can produce a root that passes the unchanged target",
+    "Numerical energy derivatives, physical research use and general-user resource envelope"
+  ],
+  "next_work": "Internal deterministic occupied-space/root-search admission design from saved evidence; no automatic new science process and no method/threshold relaxation",
+  "current_compute_blocker": "No qualified fixed-point endpoint, full independent endpoint comparison or general research/resource scope; not the cancelled external-expert process"
+}

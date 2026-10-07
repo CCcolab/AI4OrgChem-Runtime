@@ -1,10 +1,12 @@
 # 用户分子入口：内部定义与验证流程
 
-最新 [原规则服务范围与占据方向诊断](USER_MOLECULE_OCCUPATION_SCOPE_20261007_zh-CN.md)已完成：两生产保存算子的精确谱窗口与六个冻结占据见证均已核验；仅改变冻结F下的占据方向不能通过原正能隙门槛。内部操作性范围已明确，新增F/SCF/容器为0，Compute仍BLOCKED。下一候选为单次算子响应探针，尚未实现、分配预算或执行。
+最新 [单次条件算子响应诊断](USER_MOLECULE_OCCUPATION_RESPONSE_20261007_zh-CN.md)已实现并完成：101项专项工程测试、实际零F准备通过；一个新进程完成三密度×三路径9次真F/NR，零SCF。六个同D算子子集对照通过，但九个单点均未合格，Compute保持BLOCKED。旧预算已保留，新9槽预算关闭，不自动追加计算。
 
-最新 [预算感知与匹配诊断记录工程](USER_MOLECULE_BUDGET_RECORDING_20261007_zh-CN.md)已实现，122项专项模拟测试和三个导出示例通过。新分子F/SCF为0，未接入科学worker、未改门槛，Compute仍BLOCKED。
+此前 [原规则服务范围与占据方向诊断](USER_MOLECULE_OCCUPATION_SCOPE_20261007_zh-CN.md)已完成：两生产保存算子的精确谱窗口与六个冻结占据见证均已核验；仅改变冻结F下的占据方向不能通过原正能隙门槛。内部操作性范围已明确，新增F/SCF/容器为0，Compute仍BLOCKED。该只读轮的响应提案已另行实现并执行，见上方新记录；原定义和门槛保持。
 
-最新 [V2存量矩阵内部分析](USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md)已确认窄π谱空间中的秩一占据和参考预算返回语义，并澄清能量导数关系。新增F/SCF/容器为0，原门槛及Compute BLOCKED保留；该轮提出的预算记录候选现已另行实现并通过模拟工程验证，真实分子路径未切换。
+此前 [预算感知与匹配诊断记录工程](USER_MOLECULE_BUDGET_RECORDING_20261007_zh-CN.md)已实现，122项专项模拟测试和三个导出示例通过。新分子F/SCF为0，未接入科学worker、未改门槛，Compute仍BLOCKED。
+
+此前 [V2存量矩阵内部分析](USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md)已确认窄π谱空间中的秩一占据和参考预算返回语义，并澄清能量导数关系。新增F/SCF/容器为0，原门槛及Compute BLOCKED保留；该轮提出的预算记录候选现已另行实现并通过模拟工程验证，真实分子路径未切换。
 
 2026-10-07状态补充：[V2实施与诊断](USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)已记录种子实现、239项专项测试、一次真实数值未合格及资源范围。下文设计/取消轮次中的“未实现/未执行”是其当时状态，不是当前状态；原科学定义和门槛保持。外部专家流程已取消。
 

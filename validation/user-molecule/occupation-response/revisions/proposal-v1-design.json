@@ -1,0 +1,78 @@
+{
+  "schema_version": "occupation-response-proposal-v1",
+  "status": "DESIGN_ONLY_NO_LIVE_ADAPTER_NO_SCIENTIFIC_RESERVATION",
+  "date": "2026-10-07",
+  "based_on": "../method-decisions/mdr-004/record.json",
+  "purpose": "Finite single-evaluation response of the unchanged true conditional operator to three explicitly constructed density probes",
+  "scientific_state_or_occupation_rule_changed": false,
+  "initialization_policy_changed_if_implemented": "A separate diagnostic ancestry; not the ordinary-occupied-space seed V2",
+  "input_origin": "Only production_copy frozen returned-F/S AO-anchored A, B and symmetric-sum witnesses; same exact stored D bytes supplied to every implementation",
+  "input_status": "PURE_ARRAY_WITNESSES_ONLY_NOT_LIVE_PREPARED_OR_APPROVED",
+  "paths": [
+    "production_copy",
+    "production_owned",
+    "independent_reference"
+  ],
+  "probe_names": [
+    "AO_ANCHOR_A",
+    "AO_ANCHOR_B",
+    "AO_ANCHOR_SYMMETRIC_SUM"
+  ],
+  "preflight_no_F": [
+    "Bind locked science/runtime source, existing image/dependency versions and unchanged operator/masks",
+    "Bind fixture/geometry/profile/basis/atom-AO mapping and old ordinary/grid/integral cache identities",
+    "Bind witness ancestry, exact exported density bytes and each density_id; reject regenerated/mismatched inputs",
+    "Separately check finite real symmetric PSD D, masked electron count, rank and strict old trace/idempotency/reconstruction entry criteria",
+    "Create a new identity-bound single-process charged budget; do not reuse old 603 slots or 900 seconds",
+    "Observe native limits and host resources, settle failure charges and preserve logs/outputs"
+  ],
+  "proposed_limits_not_reserved": {
+    "scientific_processes": 1,
+    "wall_seconds_through_cleanup": 120,
+    "hard_memory_bytes": 1073741824,
+    "maximum_cpus": 1,
+    "swap_bytes": 0,
+    "density_probes": 3,
+    "paths_per_probe": 3,
+    "total_true_F_or_NR_calls_maximum": 9,
+    "SCF_iterations": 0,
+    "new_ordinary_SCF_grid_full_integrals": 0,
+    "final_tail_calls": 0,
+    "automatic_retry": false,
+    "refund_failed_slots": false,
+    "budget_expansion_or_refill": false,
+    "non_root": true,
+    "offline": true,
+    "read_only_source_root_and_cache": true
+  },
+  "future_required_snapshot": [
+    "D identity",
+    "true F at that D",
+    "raw G",
+    "five energy components and total",
+    "masked/physical/grid electron counts",
+    "commutator",
+    "raw Aufbau map",
+    "gap",
+    "native NR counters",
+    "precharged slot identity",
+    "resource observations"
+  ],
+  "meaning": "Same-D operator/component consistency and one-point response only. No optimizer, returned endpoint, stability or guaranteed coverage of all roots.",
+  "success_does_not_grant": [
+    "V2 resumed execution",
+    "Full endpoint acceptance",
+    "UM-P12 or UM-P13",
+    "T06",
+    "Research delta",
+    "Production Compute"
+  ],
+  "future_adapter_requirement": "A separately registered prepared diagnostic callback route; never relabel ENGINEERING_FAKE or bypass the budget candidate real-type refusal",
+  "reuse": "Frozen raw integrals/grid and pinned PySCF XC across all three paths; same mathematical operator implementation check, not independent scientific method or library validation",
+  "current_implementation": "NOT_IMPLEMENTED",
+  "current_execution": "NOT_EXECUTED",
+  "new_scientific_budget": null,
+  "new_true_F_calls": 0,
+  "external_expert_required": false,
+  "compute_enabled": false
+}
