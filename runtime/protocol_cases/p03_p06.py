@@ -510,6 +510,9 @@ def prepare(case: str, root: Path) -> None:
         if key.startswith("experiments.validation.") and hasattr(helper, "ROOT"):
             if Path(helper.ROOT).resolve() != root:
                 raise RuntimeError("Scientific import escaped the immutable source tree")
+    if case in ('P04','P05'):
+        from .provenance_reporting import apply
+        module._runtime_reporting_metadata = apply(root)
     _PREPARED[(case, str(root))] = module
     _ACTIVE_ROOT = root
 
@@ -611,4 +614,6 @@ def live(case: str, root: Path) -> dict[str, Any]:
                       "No user conditional Compute, new production label or cross-protocol sum is enabled."])
     result["method"] = method
     result["basis"] = basis
+    if case in ('P04','P05'):
+        result['provenance_reporting_adapter'] = module._runtime_reporting_metadata
     return result

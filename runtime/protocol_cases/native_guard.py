@@ -100,6 +100,8 @@ class ProtocolGuard:
                        'gl' if 'run_gl2014_scf' in self.stack else
                        'stability' if 'stability' in self.stack else 'ordinary')
                 return self._invoke(label,original,args,kwargs,'nr_'+phase)
+            if kind=='git_commit':
+                return self._invoke(label,original,args,kwargs,None)
             return self._invoke(label,original,args,kwargs,kind,kind)
         return wrapped
 
@@ -129,7 +131,7 @@ class ProtocolGuard:
                 targets.append((gto.Mole,name,'Mole.'+name,'deny'))
         # Source custom iterators are outside SCF.kernel. All already loaded
         # aliases of these function objects are held, including driver aliases.
-        custom=set().union(*(set(v) for v in CUSTOM_CAPS.values()))
+        custom=set().union(*(set(v) for v in CUSTOM_CAPS.values())) | {'git_commit'}
         source_functions={}
         for module in list(sys.modules.values()):
             namespace=getattr(module,'__dict__',{})

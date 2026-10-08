@@ -512,13 +512,13 @@
     },
     {
       "path": "runtime/protocol_cases/native_guard.py",
-      "sha256": "6f770cd07032bdedbc3d075d393c51c42340d4f32de627188f1e1c3a7fbcc9b9",
-      "size": 10402
+      "sha256": "bb7f84df822907f97b95c50ef1e855703aa790ff7f6dfabf9d3e70e20745e5b4",
+      "size": 10523
     },
     {
       "path": "runtime/protocol_cases/p03_p06.py",
-      "sha256": "312eb8ad3656879693bdb097a3bc5732171a4c899db91ebc390141d1260b0127",
-      "size": 34957
+      "sha256": "0c468c7ae84c78f5747d13abbee765771b049bcac51dd564e55b861cd0daecae",
+      "size": 35206
     },
     {
       "path": "runtime/protocol_cases/p07_p08.py",
@@ -529,6 +529,11 @@
       "path": "runtime/protocol_cases/p09_p10.py",
       "sha256": "d17052847e1ec85566dc9858e6163424e7639a44eee9565f9b728ed282f689af",
       "size": 30888
+    },
+    {
+      "path": "runtime/protocol_cases/provenance_reporting.py",
+      "sha256": "e3a407a89843886c4bd69f737ada814abd609b5927ea4b5192ae2f9443ffeeea",
+      "size": 8681
     },
     {
       "path": "runtime/user_molecule/acceptance_resources.py",
@@ -579,6 +584,11 @@
       "path": "tests/test_protocol_cases_p09_p10.py",
       "sha256": "30dfb39838ba8980f35bea55f369c61e4d95aac100bef944989e8812ddd566ea",
       "size": 20273
+    },
+    {
+      "path": "tests/test_protocol_cases_reporting.py",
+      "sha256": "7e60d0b6935bd198cd5c63c6ff81c09f111e5ae2d50318f667e3da977a959557",
+      "size": 11064
     }
   ],
   "previous_profiles_and_locks_unchanged": true,
