@@ -1,0 +1,1966 @@
+{
+  "GitHub_Actions": "NOT_EXECUTED",
+  "L4_checkpoint_resume_supported": false,
+  "WSLc": "BLOCKED_PAUSED",
+  "all_native_attempts_including_failures": [
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "grids_build": 1,
+        "nr_ordinary": 15,
+        "scf_RKS": 1
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "baseline_energy_residual_hartree": -2.2737367544323206e-13,
+      "case": "P03",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "955258bd09e032135583b4597b5d95c0d2bb53b016366c0a65bc9ca898d70e20",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "0ee566397844d9885d50ca2a2d5ae5b974f19425",
+      "image_id": "sha256:6eeccf5ba4192f827986625fae238982ab162e6aadffe6ffc03e3ef642c34e12",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 1110310912,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T061418Z-P03-f5a3e466468c4c75bb777ec668924ec8",
+      "result_scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT",
+      "result_sha256": "80c5ce3ccd591cb30bd6bbc35e051aff400c50ede00ad0c2a6980f0429d101cc",
+      "runtime_protocol_id": "runtime-p03-bounded/0.1",
+      "source_lock_sha256": "556d09fee4868aa375054700cc1cf6cc4ad6d1ec9f4a8def1d47f8f67ab5aec7",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 613.8439999999828,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "newton_kernel": 3,
+        "run_projector_fixed_point_scf": 1,
+        "scf_RHF": 3,
+        "scf_UHF": 3,
+        "scf_UHF1e": 4
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P04",
+      "container_exit_code": 2,
+      "container_removed": true,
+      "contract_sha256": "df7801a55bdbdc0c917b55681c03f69c89eb5fefda915896480d0364dc678d43",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 20,
+      "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+      "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+      "independent_saved_evidence_review": "FAILED_ATTEMPT_RETAINED_NOT_UPGRADED_TO_PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 2701123584,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T065651Z-P04-fb47e2bc9b7d4e33bf3e7f7e1daeea0d",
+      "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "FAILED_WORKER_PROCESS",
+      "wall_seconds_through_cleanup": 136.0779999999795,
+      "worker_error": {
+        "message": "[Errno 2] No such file or directory: 'git'",
+        "type": "FileNotFoundError"
+      }
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "newton_kernel": 3,
+        "run_projector_fixed_point_scf": 1,
+        "scf_RHF": 3,
+        "scf_UHF": 3,
+        "scf_UHF1e": 4
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P05",
+      "container_exit_code": 2,
+      "container_removed": true,
+      "contract_sha256": "96d3efba8c2927569c8e15202c6bf3920229a5d4a4e5fcc2030e07cb07696545",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 20,
+      "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+      "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+      "independent_saved_evidence_review": "FAILED_ATTEMPT_RETAINED_NOT_UPGRADED_TO_PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 2585800704,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T065913Z-P05-8b25f365642d46a48c9e08d98ca6127d",
+      "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "FAILED_WORKER_PROCESS",
+      "wall_seconds_through_cleanup": 148.8279999999795,
+      "worker_error": {
+        "message": "[Errno 2] No such file or directory: 'git'",
+        "type": "FileNotFoundError"
+      }
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "newton_kernel": 1,
+        "run_projector_fixed_point_scf": 2,
+        "scf_RHF": 2,
+        "scf_UHF": 2,
+        "scf_UHF1e": 2
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P06",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "f36f5990f978eeb2448ba05f836585c88bb0339186bf2703cae7c4b5c3b35b65",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+      "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 140439552,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T070148Z-P06-f12658e44d4e4a98b0d89765c8f49c95",
+      "result_scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT",
+      "result_sha256": "4c33bca0c5ae5ba76233f67bc78bf351e17e6fd4016527142d912f00af2107b0",
+      "runtime_protocol_id": "runtime-p06-bounded/0.1",
+      "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 25.48399999999674,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "grids_build": 2,
+        "nr_gl": 25,
+        "nr_ordinary": 11,
+        "run_gl2014_scf": 1,
+        "scf_RKS": 1
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P08",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "14b44166d391f03a29ae3e1d9791b738d22bbdc4a2911ccbcad6d94371dfa4c1",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+      "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 359501824,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T070637Z-P08-762767c22da744d781278324b33b6a98",
+      "result_scope": {
+        "full_P08_replay": false,
+        "new_P08_scientific_verdict": false,
+        "new_optimization": false,
+        "ordinary_general_compute_or_old_conditional_compute_enablement": false,
+        "production_label": false,
+        "same_implementation_initial_density_check": true,
+        "second_program_replication": false,
+        "training_eligible": false
+      },
+      "result_sha256": "e3331a9e6568876c9424111bc9a3b4f45e9c524a6354a5036f3d885aded14595",
+      "runtime_protocol_id": "runtime-p08-bounded/0.1",
+      "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 31.54700000002049,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "grids_build": 1,
+        "nr_conditional": 11,
+        "nr_ordinary": 9,
+        "nr_stability": 1,
+        "run_p09_conditional_rks": 1,
+        "scf_RKS": 1,
+        "stability": 1
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P09",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "c1ed15848e79a78938a47a429d5325adc2268da9851f8f833eb535a07bab9468",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+      "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 450781184,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T070711Z-P09-9b7a82eb9c584a6da354b3ffa862b092",
+      "result_scope": "FIXED_GEOMETRY_CBD_G_LIKE_DSI_SMOKE_ONLY",
+      "result_sha256": "70f50dfc4f1f3202774d8f737703c1d426d8d42281769809df88d70680bef950",
+      "runtime_protocol_id": "runtime-p09-bounded/0.1",
+      "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 49.75,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "grids_build": 5,
+        "nr_ordinary": 48,
+        "scf_RKS": 5
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P10",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "25db1371668d3754a1435ecdf4a6f9c059671deae0e1766b1ea1a4b335250005",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+      "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 483254272,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T070804Z-P10-961b3aefb0884811b83fc88f36b31b73",
+      "result_scope": "FIVE_FROZEN_ORDINARY_RKS_BLA_POINTS_PLUS_REUSED_G_GL_LEDGER",
+      "result_sha256": "cccb100d1f5700a7766936805014edcffb44321c8056b7c42ad66cbd9f431bde",
+      "runtime_protocol_id": "runtime-p10-bounded/0.1",
+      "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 71.73499999998603,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "newton_kernel": 6,
+        "run_projector_fixed_point_scf": 2,
+        "scf_RHF": 6,
+        "scf_UHF": 6,
+        "scf_UHF1e": 8
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P04",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "64d2b0e3a3a5ecdbd47980e56f3a7a336c55e13ed08facb1bccdfab36f9bb948",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 2618384384,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T073727Z-P04-8992093ad3a44a4fbfdc570f82133b3f",
+      "result_scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT",
+      "result_sha256": "c1dc737bdac374b4ecf72351f1aad993c6d7f52776ebb452f83a21ea7cfb2fbb",
+      "runtime_protocol_id": "runtime-p04-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 476.0470000000205,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "newton_kernel": 3,
+        "run_projector_fixed_point_scf": 2,
+        "scf_RHF": 4,
+        "scf_UHF": 3,
+        "scf_UHF1e": 4
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P05",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "f8c027cc593af0675fffa7d2c25c4948c8633b98f44032218cde6636fbd71c0a",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 2499915776,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T074547Z-P05-2cd4a39240aa46409d9d96184b470f3d",
+      "result_scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT",
+      "result_sha256": "4ab5b911a02eecdb1066b7ac29bc183f170ad12cd6ee73e2f1e864a64367d5bf",
+      "runtime_protocol_id": "runtime-p05-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 303.030999999959,
+      "worker_error": null
+    }
+  ],
+  "charged_wall_seconds": 1856.3439999999246,
+  "controls": [
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P03",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "71397d11f24bb7a3a8f13c9f9fbe795a9cba81f04b54e1b7936ec25d83584c30",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 117325824,
+      "mode": "ledger",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073432Z-P03-9bcc2110345f4417a75da500baac3806",
+      "result_scope": "FROZEN_FOUR_POINT_LEDGER_REPLAY",
+      "result_sha256": "c8bd8685c052a33e4781b4de7c4cc86ce116c7f21218dc926c19b1ebd47cf945",
+      "runtime_protocol_id": "runtime-p03-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 11.71899999998277,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P04",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "4f859d063d30c255ed5a572be6309bf07d8ec10884dbdd816a508607b5276adf",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 55492608,
+      "mode": "ledger",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073448Z-P04-cd9ba51de3dd45509ad9985fd5620ac6",
+      "result_scope": "FROZEN_ELEVEN_POINT_THREE_COMPONENT_LEDGER_REPLAY",
+      "result_sha256": "a144325e258185983a965cb63fd98e7e9f0d382f879d1ad7934012d5340cdbbc",
+      "runtime_protocol_id": "runtime-p04-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 8.875,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P05",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "e3a07a0551d82b154fbf2c7401d4c155f826f0d4d3312778d8986a43649f0f5e",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 54927360,
+      "mode": "ledger",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073459Z-P05-70c4baf7e04b4217bc003a36ebbd1f57",
+      "result_scope": "FROZEN_SEVEN_ANGLE_LEDGER_REPLAY",
+      "result_sha256": "2e924cb5b63a4c45dd88dcb13f93b15ddd7e6a886a1c2de6cd6203ca213de557",
+      "runtime_protocol_id": "runtime-p05-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 7.202999999979511,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P06",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "cad737e356db187e5d2c0e3e7b5a0f3e7897c63afb4a0bf57c7ed97d2f501d6d",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 54976512,
+      "mode": "ledger",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073508Z-P06-750f427676614edc937371b84947c3f3",
+      "result_scope": "FROZEN_TWO_POINT_INDEPENDENT_ENERGY_LEDGER_REPLAY",
+      "result_sha256": "ef913743a7b9db0e64823674456a19dc877341cf69609a969e7debd5a9549e90",
+      "runtime_protocol_id": "runtime-p06-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 7.546999999962281,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P07",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "58100a30878ecca90ee5a11b01777fa84df054010319bef2fd9443b3600e96f6",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 56373248,
+      "mode": "ledger",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073517Z-P07-8b90daa1054d43c3b5ea371091c5414a",
+      "result_scope": {
+        "cross_protocol_energy_sum": false,
+        "new_optimization": false,
+        "new_qm_calculation": false,
+        "production_label": false,
+        "training_eligible": false,
+        "universal_mechanistic_law": false
+      },
+      "result_sha256": "820a8c0bb68c65267287f691453175eaff42e18dd549db0690f7af42d66bd533",
+      "runtime_protocol_id": "runtime-p07-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 7.577999999979511,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P08",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "af0e4dc89baeedc76f8d4d167b5fca5b96a18cf5adc00f7db2302fe47c7a9adc",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 56287232,
+      "mode": "ledger",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073525Z-P08-e7b10827f6044b35b68c10e851039e3a",
+      "result_scope": {
+        "cross_protocol_energy_sum": false,
+        "new_optimization": false,
+        "new_qm_calculation": false,
+        "production_label": false,
+        "training_eligible": false,
+        "universal_conjugation_law": false
+      },
+      "result_sha256": "d5318429d4961b037cae27537b60b4eb641479b3d5bcc9391ed126fa21ccccfa",
+      "runtime_protocol_id": "runtime-p08-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 6.078000000037719,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P09",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "9486bef3a8ce48b83905ac2edcd8d62fa7b89eac51d1a1227866d7750e06805c",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 56446976,
+      "mode": "ledger",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073533Z-P09-f38a8e048bcc493994ce6251e8067e76",
+      "result_scope": "HISTORICAL_FROZEN_ENERGY_LEDGER_ARITHMETIC_NO_QM",
+      "result_sha256": "f6d53dc2d776c5ef4fea2f952b752b83de9fdb5c21e2ce9a4033be4f992939d0",
+      "runtime_protocol_id": "runtime-p09-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 5.905999999959022,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P10",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "7bc661adb267c3c4ad045e03bb4fa578d316607001844ede6005da94bead5c52",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 59576320,
+      "mode": "ledger",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073540Z-P10-c4daca40d34c4ce09a7f9b923bf8ddd9",
+      "result_scope": "HISTORICAL_FROZEN_ENERGY_LEDGER_ARITHMETIC_NO_QM",
+      "result_sha256": "d1d85ef7f0afff7f8fcfc8e4e171fe4d26894e14ee147732164cc32976643884",
+      "runtime_protocol_id": "runtime-p10-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 5.85899999999674,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P03",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "2a38ffee6eba70af0bc30057ff4b034d58cac9dbff55b8f92f64046c92436279",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 56279040,
+      "mode": "preflight",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073547Z-P03-3b6e1d78a9fb44efb78e14a8fa5fa393",
+      "result_scope": "MOLECULE_BUILD_ONLY_PREFLIGHT",
+      "result_sha256": "68c0b9d2494408362cb68c5816b6874761dcbf69a6b5bcade310024a5f90a2b9",
+      "runtime_protocol_id": "runtime-p03-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 6.5,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P04",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "83314c48e8b7c3607ea4dfdac617adc17227bbacec6c7a3088256fba38fd58be",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 57171968,
+      "mode": "preflight",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073555Z-P04-a463a537a814481da1f49cfa10c47195",
+      "result_scope": "MOLECULE_BUILD_ONLY_PREFLIGHT",
+      "result_sha256": "0b3492ee8d3c7a8e8de22818d9a564fd23775c3630b486f3983da5ee95ec3fce",
+      "runtime_protocol_id": "runtime-p04-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 6.64100000000326,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P05",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "854fbaa3eae769286afa4481214666c810b3ceea7be1458dc3bebbbbc5b84cdc",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 56598528,
+      "mode": "preflight",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073603Z-P05-1d6881cef733402f83b80c27d9354245",
+      "result_scope": "MOLECULE_BUILD_ONLY_PREFLIGHT",
+      "result_sha256": "3ae3acf13e0d0f2a6b645c6171907d02f8caec9232966c299262dc7c2c9313ce",
+      "runtime_protocol_id": "runtime-p05-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 6.437000000034459,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P06",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "1ef2ef83a9560d8eea3a22da1b9c418434eee1bec7ff2a2f1c9d52409320ca8a",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 57032704,
+      "mode": "preflight",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073611Z-P06-50749c6ae21b49caab12bc884bd06031",
+      "result_scope": "MOLECULE_BUILD_ONLY_PREFLIGHT",
+      "result_sha256": "125fdab1e10fc1450193fc2daff8666aa0df4c2184991e181dc89bf7d07cca3e",
+      "runtime_protocol_id": "runtime-p06-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 7.625,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P07",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "d3d1acaf4c863296b953909e1132c5bcd95dea8aac25b44b693367ea84eb86bb",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 55029760,
+      "mode": "preflight",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073619Z-P07-f8f5dd3c881d48e19ba2ba58dc3e262a",
+      "result_scope": "FROZEN_TWO_ANGLE_LEDGER_ONLY_NO_AO_OR_QM",
+      "result_sha256": "061a89df611690ebd85701e3cba371585780c05226d78454418f940267451e48",
+      "runtime_protocol_id": "runtime-p07-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 5.938000000023749,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P08",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "c852364b61460ac4c29ec3e3dcfbfe74577da57105571254937da2fc32b76449",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 57122816,
+      "mode": "preflight",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073626Z-P08-6c8cdfcee8654fd4abd5acb471440f99",
+      "result_scope": "SAVED_GL_ENDPOINT_NOT_OPTIMIZATION_OR_FULL_P08_REPLAY",
+      "result_sha256": "5cee6f4bd6860c7562553933c0e4959f74250dd91075eb0caf0caead18d14169",
+      "runtime_protocol_id": "runtime-p08-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 5.842999999993481,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P09",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "3d52a15db3999931043dfc1ad8d28ffac82b073cdbd51fa1d268a075fc5f74db",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 57192448,
+      "mode": "preflight",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073633Z-P09-a0bb69fe7e504f55801be2b779a2aa72",
+      "result_scope": "ACTUAL_MOLECULE_BUILD_NO_SCF",
+      "result_sha256": "7a5a1af3fe80be941b36e25ebb99a795db2778fc539a59adaae0082e4f851de1",
+      "runtime_protocol_id": "runtime-p09-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 5.98499999998603,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 100000,
+      "actual_entry_counts": {},
+      "actual_memory_limit_bytes": 1073741824,
+      "case": "P10",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "c6e250ea95774f7891cad6e9973068ba8070763b15e15a92d45913167f49e285",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 56365056,
+      "mode": "preflight",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\controls-reporting\\20261008T073640Z-P10-4869696a4a5845399a994b735892c2b9",
+      "result_scope": "ACTUAL_MOLECULE_BUILD_NO_SCF",
+      "result_sha256": "af290948c2072f9655bb8d17b8b2964cd38cc814ab9ada1fff07ed833486512a",
+      "runtime_protocol_id": "runtime-p10-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 6.51500000001397,
+      "worker_error": null
+    }
+  ],
+  "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+  "general_user_conditional_compute": "BLOCKED",
+  "historical_P03_image": {
+    "base_image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
+    "base_rootfs_prefix_verified": true,
+    "build_logs": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\build-logs\\3aed77c1d53440339c1243d16e205191",
+    "clean_local_clone": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\build\\source-0ee56639",
+    "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+    "distribution": "BLOCKED_LOCAL_ONLY",
+    "image_build_runtime_commit": "0ee566397844d9885d50ca2a2d5ae5b974f19425",
+    "image_id": "sha256:6eeccf5ba4192f827986625fae238982ab162e6aadffe6ffc03e3ef642c34e12",
+    "schema": "protocol-cases-local-image-v1",
+    "scope": "P03 scientific PASS and 16 earlier zero-SCF controls; no P04-P10 science on this image",
+    "source_lock_sha256": "556d09fee4868aa375054700cc1cf6cc4ad6d1ec9f4a8def1d47f8f67ab5aec7",
+    "status": "ACCEPTED_P03_FIXED_POINT_ONLY",
+    "tag": "ai4orgchem-runtime:protocol-cases-batch2-20261008-local"
+  },
+  "historical_records": {
+    "engineering-ci-host.json": "EARLY_HOST_TEST_SOURCE_LOCK_DIFFERED_NOT_FINAL_CI",
+    "final_image_build_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+    "first_image_0ee5663": "ACCEPTED_P03_SCIENCE_PLUS_INITIAL_16_ZERO_KERNEL_CONTROLS",
+    "five_passed_scientific_cases_recomputed": false,
+    "hf1e_admission_pause": "Other six commands refused before reservation or Docker, then admitted once after engineering repair",
+    "historical-build-08d910d": "PRE_SCIENCE_BUILD_WITH_LAUNCHER_CHECKOUT_EOL_DIFFERENCE_NOT_USED",
+    "reporting_correction": "P04/P05 metadata-only engineering failure retained; two new bounded attempts charged alongside all previous science"
+  },
+  "image": {
+    "base_image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
+    "base_rootfs_prefix_verified": true,
+    "build_logs": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\build-logs\\ff98a617c2f6444b83d999b825e3ed22",
+    "clean_local_clone": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\build\\source-38cc11b0",
+    "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+    "distribution": "BLOCKED_LOCAL_ONLY",
+    "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+    "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+    "schema": "protocol-cases-local-image-v1",
+    "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+    "tag": "ai4orgchem-runtime:protocol-cases-batch2-20261008-local"
+  },
+  "image_distribution": "BLOCKED_LOCAL_ONLY",
+  "local_engineering_ci": {
+    "GitHub_Actions": "NOT_EXECUTED",
+    "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+    "duration_seconds": 4.606366817024536,
+    "errors": 0,
+    "failures": 0,
+    "fake_guard_or_mock_live_calls_are_not_scientific_results": true,
+    "schema": "protocol-cases-local-engineering-ci-v1",
+    "scientific_lane": "NOT_EXECUTED_BY_THIS_RUNNER",
+    "skipped": [],
+    "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+    "status": "PASS",
+    "tests_run": 115
+  },
+  "native_attempts": [
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "grids_build": 1,
+        "nr_ordinary": 15,
+        "scf_RKS": 1
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "baseline_energy_residual_hartree": -2.2737367544323206e-13,
+      "case": "P03",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "955258bd09e032135583b4597b5d95c0d2bb53b016366c0a65bc9ca898d70e20",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "0ee566397844d9885d50ca2a2d5ae5b974f19425",
+      "image_id": "sha256:6eeccf5ba4192f827986625fae238982ab162e6aadffe6ffc03e3ef642c34e12",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 1110310912,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T061418Z-P03-f5a3e466468c4c75bb777ec668924ec8",
+      "result_scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT",
+      "result_sha256": "80c5ce3ccd591cb30bd6bbc35e051aff400c50ede00ad0c2a6980f0429d101cc",
+      "runtime_protocol_id": "runtime-p03-bounded/0.1",
+      "source_lock_sha256": "556d09fee4868aa375054700cc1cf6cc4ad6d1ec9f4a8def1d47f8f67ab5aec7",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 613.8439999999828,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "newton_kernel": 6,
+        "run_projector_fixed_point_scf": 2,
+        "scf_RHF": 6,
+        "scf_UHF": 6,
+        "scf_UHF1e": 8
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P04",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "64d2b0e3a3a5ecdbd47980e56f3a7a336c55e13ed08facb1bccdfab36f9bb948",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 2618384384,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T073727Z-P04-8992093ad3a44a4fbfdc570f82133b3f",
+      "result_scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT",
+      "result_sha256": "c1dc737bdac374b4ecf72351f1aad993c6d7f52776ebb452f83a21ea7cfb2fbb",
+      "runtime_protocol_id": "runtime-p04-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 476.0470000000205,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "newton_kernel": 3,
+        "run_projector_fixed_point_scf": 2,
+        "scf_RHF": 4,
+        "scf_UHF": 3,
+        "scf_UHF1e": 4
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P05",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "f8c027cc593af0675fffa7d2c25c4948c8633b98f44032218cde6636fbd71c0a",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+      "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 2499915776,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T074547Z-P05-2cd4a39240aa46409d9d96184b470f3d",
+      "result_scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT",
+      "result_sha256": "4ab5b911a02eecdb1066b7ac29bc183f170ad12cd6ee73e2f1e864a64367d5bf",
+      "runtime_protocol_id": "runtime-p05-bounded/0.1",
+      "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 303.030999999959,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "newton_kernel": 1,
+        "run_projector_fixed_point_scf": 2,
+        "scf_RHF": 2,
+        "scf_UHF": 2,
+        "scf_UHF1e": 2
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P06",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "f36f5990f978eeb2448ba05f836585c88bb0339186bf2703cae7c4b5c3b35b65",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+      "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 140439552,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T070148Z-P06-f12658e44d4e4a98b0d89765c8f49c95",
+      "result_scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT",
+      "result_sha256": "4c33bca0c5ae5ba76233f67bc78bf351e17e6fd4016527142d912f00af2107b0",
+      "runtime_protocol_id": "runtime-p06-bounded/0.1",
+      "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 25.48399999999674,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "grids_build": 2,
+        "nr_gl": 25,
+        "nr_ordinary": 11,
+        "run_gl2014_scf": 1,
+        "scf_RKS": 1
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P08",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "14b44166d391f03a29ae3e1d9791b738d22bbdc4a2911ccbcad6d94371dfa4c1",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+      "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 359501824,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T070637Z-P08-762767c22da744d781278324b33b6a98",
+      "result_scope": {
+        "full_P08_replay": false,
+        "new_P08_scientific_verdict": false,
+        "new_optimization": false,
+        "ordinary_general_compute_or_old_conditional_compute_enablement": false,
+        "production_label": false,
+        "same_implementation_initial_density_check": true,
+        "second_program_replication": false,
+        "training_eligible": false
+      },
+      "result_sha256": "e3331a9e6568876c9424111bc9a3b4f45e9c524a6354a5036f3d885aded14595",
+      "runtime_protocol_id": "runtime-p08-bounded/0.1",
+      "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 31.54700000002049,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "grids_build": 1,
+        "nr_conditional": 11,
+        "nr_ordinary": 9,
+        "nr_stability": 1,
+        "run_p09_conditional_rks": 1,
+        "scf_RKS": 1,
+        "stability": 1
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P09",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "c1ed15848e79a78938a47a429d5325adc2268da9851f8f833eb535a07bab9468",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+      "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 450781184,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T070711Z-P09-9b7a82eb9c584a6da354b3ffa862b092",
+      "result_scope": "FIXED_GEOMETRY_CBD_G_LIKE_DSI_SMOKE_ONLY",
+      "result_sha256": "70f50dfc4f1f3202774d8f737703c1d426d8d42281769809df88d70680bef950",
+      "runtime_protocol_id": "runtime-p09-bounded/0.1",
+      "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 49.75,
+      "worker_error": null
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "grids_build": 5,
+        "nr_ordinary": 48,
+        "scf_RKS": 5
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P10",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "contract_sha256": "25db1371668d3754a1435ecdf4a6f9c059671deae0e1766b1ea1a4b335250005",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "failed_checks": [],
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 0,
+      "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+      "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+      "independent_saved_evidence_review": "PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 483254272,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "numerical_status": "PASS",
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T070804Z-P10-961b3aefb0884811b83fc88f36b31b73",
+      "result_scope": "FIVE_FROZEN_ORDINARY_RKS_BLA_POINTS_PLUS_REUSED_G_GL_LEDGER",
+      "result_sha256": "cccb100d1f5700a7766936805014edcffb44321c8056b7c42ad66cbd9f431bde",
+      "runtime_protocol_id": "runtime-p10-bounded/0.1",
+      "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_PROTOCOL_CASE",
+      "wall_seconds_through_cleanup": 71.73499999998603,
+      "worker_error": null
+    }
+  ],
+  "new_optimizations": "NOT_EXECUTED",
+  "not_measured_in_this_scope": [
+    "per-process peak RSS",
+    "scratch peak usage",
+    "new full geometry optimizations",
+    "all seven scientific cases on the final image",
+    "external clean-machine installation"
+  ],
+  "old_external_consultation_requirement": "CANCELLED_NOT_A_GATE",
+  "original_scientific_verdicts_changed": false,
+  "preservation": {
+    "all_95_captured_origin_bytes_unchanged": true,
+    "first_molecular_critical_source_verification": "PASS",
+    "first_molecular_source_lock_unchanged": true,
+    "old_native_a1_json_bytes_unchanged": true,
+    "repositories": [
+      {
+        "git_status_and_tracked_dirty_bytes_unchanged": true,
+        "head": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+        "root": "D:\\AI4Science\\AI4OrgChem",
+        "status": "PASS"
+      },
+      {
+        "git_status_and_tracked_dirty_bytes_unchanged": true,
+        "head": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
+        "root": "D:\\AI4Science\\ai4orgchem-runtime",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS",
+    "untracked_contents_scope": "PATH_LIST_UNCHANGED_NOT_ENTIRE_UNTRACKED_BYTE_INVENTORY"
+  },
+  "public_source_push": "NOT_EXECUTED",
+  "remaining_global_limits": {
+    "GitHub_Actions": "NOT_EXECUTED",
+    "WSLc": "BLOCKED_PAUSED",
+    "arbitrary_user_conditional_compute": "BLOCKED",
+    "image_distribution": "BLOCKED_LOCAL_ONLY",
+    "source_publication": "SEPARATE_CONFIRMATION_REQUIRED"
+  },
+  "reporting_probe": {
+    "guard": {
+      "caps": {},
+      "case": "P04",
+      "changed": [],
+      "closed": true,
+      "counts": {},
+      "denied": [],
+      "held_entries": [
+        "hf.kernel",
+        "HF1e.scf",
+        "uhf._hf1e_scf",
+        "numint.nr_rks",
+        "numint.nr_uks",
+        "NumInt.nr_uks",
+        "Grids.build",
+        "RKS.stability",
+        "UKS.kernel",
+        "ROKS.kernel",
+        "Boys.kernel",
+        "PM.kernel",
+        "newton_ah.kernel",
+        "NumInt.nr_rks",
+        "Mole.intor",
+        "Mole.intor_by_shell",
+        "Mole.energy_nuc",
+        "_protocol_cases_source_p04.git_commit",
+        "experiments.validation.one_cut_ch3_reference_h_gate0.git_commit",
+        "experiments.validation.kost_single_step_gate0.git_commit",
+        "experiments.validation.kost_vacant_loop_gate0.git_commit",
+        "experiments.validation.one_cut_conditional_scf_gate0.git_commit",
+        "experiments.validation.two_cut_ch2_uhf_gate0.git_commit",
+        "experiments.validation.two_cut_ch2_four_column_gate0.git_commit",
+        "experiments.validation.dsi2_divinyl_imine_source_shaped_gate0.git_commit",
+        "experiments.validation.dsi2_divinyl_imine_source_shaped_gate0.run_projector_fixed_point_scf",
+        "experiments.validation.dsi2_divinyl_imine_torsion_continuation_gate0.git_commit",
+        "experiments.validation.dsi_fud_initial_density_reproducibility_gate0.git_commit",
+        "experiments.validation.chapter5_pi_sigma_reconstruction_gate0.run_projector_fixed_point_scf",
+        "experiments.validation.chapter5_pi_sigma_reconstruction_gate0.git_commit",
+        "experiments.validation.chapter5_three_effect_reconstruction_gate0.run_projector_fixed_point_scf",
+        "experiments.validation.chapter5_three_effect_reconstruction_gate0.git_commit",
+        "experiments.validation.dsi_lfmo_n_state_specific_reconstruction_gate0.git_commit",
+        "experiments.validation.source_nonvariational_sigma_sigma_nba_gate0.git_commit",
+        "experiments.validation.source_optimized_three_effect_reconstruction_nba_gate0.git_commit",
+        "experiments.validation.source_optimized_dual_density_nba_gate0.git_commit",
+        "experiments.validation.source_optimized_physical_direct_response_nba_gate0.git_commit"
+      ],
+      "missing_count_is_observed_zero_only_when_guard_closed": true,
+      "mode": "preflight",
+      "outcomes": {},
+      "restoration_errors": [],
+      "restored_attributes_intact": true,
+      "schema": "protocol-case-native-audit-v1",
+      "scope": "OBSERVED_PYTHON_DISPATCH_NOT_ALL_C_NATIVE_OPERATIONS_OR_CONVERGENCE",
+      "status": "PASS"
+    },
+    "metadata": {
+      "fallback_events": [
+        {
+          "exception_type": "FileNotFoundError",
+          "filename": "git",
+          "reason": "MISSING_GIT_EXECUTABLE_IN_REPORTING_ONLY_PATH",
+          "reported_value": "unavailable",
+          "scientific_identity_substituted": false
+        }
+      ],
+      "git_sha_fabricated": false,
+      "original_reporter": {
+        "fallback_sentinel": "unavailable",
+        "module": "experiments.validation.one_cut_conditional_scf_gate0",
+        "name": "git_commit",
+        "registered_provenance": "ORIGINAL_READ_ONLY_WORKTREE_BYTES",
+        "registered_source_path": "experiments/validation/one_cut_conditional_scf_gate0.py",
+        "source_asset_path": "reference/protocol_cases/source_tree/experiments/validation/one_cut_conditional_scf_gate0.py",
+        "source_file_git_blob": "5334d934272039a67f91dd24f6629c7933a5cd49",
+        "source_file_sha256": "6ecdebe908a34a91f395d98a3e07f33776ee1386dbb4b7dafa99f0ba1783f0be",
+        "source_file_size": 34480
+      },
+      "reason": "ONLY_MISSING_GIT_EXECUTABLE_EXTENDS_ORIGINAL_UNAVAILABLE_SENTINEL",
+      "reporter_calls": 1,
+      "reporter_returns_without_fallback": 0,
+      "schema": "protocol-case-provenance-reporting-v1",
+      "scientific_sources_modified": false,
+      "scope": "REPORTING_ONLY_NO_SCIENTIFIC_PARAMETERS_OR_SUBPROCESS_PATCH",
+      "source_assets_lock_path": "locks/protocol-cases-scientific-assets.json",
+      "source_assets_lock_sha256": "46b6307760534fc9b4677bea7b984134f29ce969a071fbd06a64d65f8cfc9660",
+      "source_context_heads": [
+        "cc7437901119e71ef7945a12813c021c383e7648",
+        "ffde7b5a53800010f2bc326b812b3e5b4526d56c"
+      ],
+      "source_context_heads_role": "BACKGROUND_ONLY_NOT_A_GIT_SHA_REPLACEMENT_FOR_CAPTURED_FILES",
+      "source_tree_root": "/opt/runtime/reference/protocol_cases/source_tree",
+      "status": "APPLIED_REPORTING_ONLY",
+      "wrapped_aliases": [
+        {
+          "attribute": "git_commit",
+          "module": "_protocol_cases_source_p04",
+          "module_source_path": "scripts/run_target_c_source_native_reporting_basis_direct_response.py"
+        },
+        {
+          "attribute": "git_commit",
+          "module": "experiments.validation.chapter5_pi_sigma_reconstruction_gate0",
+          "module_source_path": "experiments/validation/chapter5_pi_sigma_reconstruction_gate0.py"
+        },
+        {
+          "attribute": "git_commit",
+          "module": "experiments.validation.chapter5_three_effect_reconstruction_gate0",
+          "module_source_path": "experiments/validation/chapter5_three_effect_reconstruction_gate0.py"
+        },
+        {
+          "attribute": "git_commit",
+          "module": "experiments.validation.dsi2_divinyl_imine_source_shaped_gate0",
+          "module_source_path": "experiments/validation/dsi2_divinyl_imine_source_shaped_gate0.py"
+        },
+        {
+          "attribute": "git_commit",
+          "module": "experiments.validation.dsi2_divinyl_imine_torsion_continuation_gate0",
+          "module_source_path": "experiments/validation/dsi2_divinyl_imine_torsion_continuation_gate0.py"
+        },
+        {
+          "attribute": "git_commit",
+          "module": "experiments.validation.dsi_fud_initial_density_reproducibility_gate0",
+          "module_source_path": "experiments/validation/dsi_fud_initial_density_reproducibility_gate0.py"
+        },
+        {
+          "attribute": "git_commit",
+          "module": "experiments.validation.dsi_lfmo_n_state_specific_reconstruction_gate0",
+          "module_source_path": "experiments/validation/dsi_lfmo_n_state_specific_reconstruction_gate0.py"
+        },
+        {
+          "attribute": "git_commit",
+          "module": "experiments.validation.one_cut_conditional_scf_gate0",
+          "module_source_path": "experiments/validation/one_cut_conditional_scf_gate0.py"
+        },
+        {
+          "attribute": "git_commit",
+          "module": "experiments.validation.source_nonvariational_sigma_sigma_nba_gate0",
+          "module_source_path": "experiments/validation/source_nonvariational_sigma_sigma_nba_gate0.py"
+        },
+        {
+          "attribute": "git_commit",
+          "module": "experiments.validation.source_optimized_dual_density_nba_gate0",
+          "module_source_path": "experiments/validation/source_optimized_dual_density_nba_gate0.py"
+        },
+        {
+          "attribute": "git_commit",
+          "module": "experiments.validation.source_optimized_physical_direct_response_nba_gate0",
+          "module_source_path": "experiments/validation/source_optimized_physical_direct_response_nba_gate0.py"
+        },
+        {
+          "attribute": "git_commit",
+          "module": "experiments.validation.source_optimized_three_effect_reconstruction_nba_gate0",
+          "module_source_path": "experiments/validation/source_optimized_three_effect_reconstruction_nba_gate0.py"
+        }
+      ]
+    },
+    "status": "PASS_REAL_REPORTING_PROBE_ZERO_SCF",
+    "value": "unavailable"
+  },
+  "reserved_wall_ceiling_seconds": 6300,
+  "schema": "protocol-cases-batch2-verification-v1",
+  "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+  "status": "PASS_SCOPED_BATCH2",
+  "superseded_reporting_failures": [
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "newton_kernel": 3,
+        "run_projector_fixed_point_scf": 1,
+        "scf_RHF": 3,
+        "scf_UHF": 3,
+        "scf_UHF1e": 4
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P04",
+      "container_exit_code": 2,
+      "container_removed": true,
+      "contract_sha256": "df7801a55bdbdc0c917b55681c03f69c89eb5fefda915896480d0364dc678d43",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 20,
+      "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+      "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+      "independent_saved_evidence_review": "FAILED_ATTEMPT_RETAINED_NOT_UPGRADED_TO_PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 2701123584,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T065651Z-P04-fb47e2bc9b7d4e33bf3e7f7e1daeea0d",
+      "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "FAILED_WORKER_PROCESS",
+      "wall_seconds_through_cleanup": 136.0779999999795,
+      "worker_error": {
+        "message": "[Errno 2] No such file or directory: 'git'",
+        "type": "FileNotFoundError"
+      }
+    },
+    {
+      "actual_cpu_quota_us": 200000,
+      "actual_entry_counts": {
+        "newton_kernel": 3,
+        "run_projector_fixed_point_scf": 1,
+        "scf_RHF": 3,
+        "scf_UHF": 3,
+        "scf_UHF1e": 4
+      },
+      "actual_memory_limit_bytes": 4294967296,
+      "case": "P05",
+      "container_exit_code": 2,
+      "container_removed": true,
+      "contract_sha256": "96d3efba8c2927569c8e15202c6bf3920229a5d4a4e5fcc2030e07cb07696545",
+      "cpu_period_us": 100000,
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "entry_audit_status": "PASS",
+      "guard_closed": true,
+      "guard_restored": true,
+      "host_exit_code": 20,
+      "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+      "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+      "independent_saved_evidence_review": "FAILED_ATTEMPT_RETAINED_NOT_UPGRADED_TO_PASS",
+      "memory_events": {
+        "limit_failures": 0,
+        "oom_kill": 0,
+        "oom_kill_disable": 0,
+        "under_oom": 0
+      },
+      "memory_peak_bytes": 2585800704,
+      "mode": "live",
+      "network_interfaces": [
+        "lo"
+      ],
+      "oom_killed": false,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\live\\20261008T065913Z-P05-8b25f365642d46a48c9e08d98ca6127d",
+      "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+      "source_readonly": {
+        "/opt/runtime": true,
+        "/opt/runtime/reference/protocol_cases/source_tree": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "FAILED_WORKER_PROCESS",
+      "wall_seconds_through_cleanup": 148.8279999999795,
+      "worker_error": {
+        "message": "[Errno 2] No such file or directory: 'git'",
+        "type": "FileNotFoundError"
+      }
+    }
+  ],
+  "unresolved": []
+}

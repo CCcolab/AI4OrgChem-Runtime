@@ -62,7 +62,7 @@ The earlier [full local W01–W06 engineering CI](docs/USER_MOLECULE_CI_W01_W06_
 
 [W06 engineering](docs/USER_MOLECULE_W06_ENGINEERING_zh-CN.md) and the new independent molecular bridge run from read-only committed-source mounts over the existing r3 image; they are not baked into it. [SCF/method review questions](docs/USER_MOLECULE_SCF_REVIEW_REQUEST_zh-CN.md) identify the remaining scientific decisions. No image was rebuilt or published.
 
-Delivery review (2026-10-03): local Docker L0–L4, equivalence and scoped joint classification are verified. WSLc is **BLOCKED / NOT_EXECUTED**. CI is **statically reviewed; execution NOT_EXECUTED**. **Image distribution is BLOCKED; source-only publication requires separate confirmation.** Apache-2.0 covers runtime-owned code, not every image component. See [final review](validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md) and [license review](docs/LICENSE_REVIEW_zh-CN.md).
+Delivery review (2026-10-03): local Docker L0–L4, equivalence and scoped joint classification are verified. WSLc is **BLOCKED / NOT_EXECUTED**. GitHub Actions is **statically reviewed; execution NOT_EXECUTED**; later local engineering CI runs have separate records. **Image distribution is BLOCKED; source-only publication requires separate confirmation.** Apache-2.0 covers runtime-owned code, not every image component. See [final review](validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md) and [license review](docs/LICENSE_REVIEW_zh-CN.md).
 
 [中文说明](README_zh-CN.md)
 
@@ -95,7 +95,9 @@ WSL upgrade and WSLc acceptance are paused on this host. These commands describe
 ./scripts/run-wslc.ps1 -Task evidence -Image ai4orgchem-runtime:candidate
 ```
 
-Pushing to an authorized repository will trigger the current CI workflow, which builds/tests and uploads execution evidence with seven-day retention. Those logs/artifacts belong in the publication review scope; the workflow does not push images, create formal tags or publish Releases. CI execution remains NOT_EXECUTED.
+Pushing to an authorized repository will trigger the current CI workflow, which builds/tests and uploads execution evidence with seven-day retention. Those logs/artifacts belong in the publication review scope; the workflow does not push images, create formal tags or publish Releases. GitHub Actions execution remains NOT_EXECUTED.
+
+The second local service batch provides fixed-protocol torsion ledgers, conditional-state response comparisons, independent energy assembly, same-Hamiltonian path closure, a butadiene GL endpoint, a cyclobutadiene conditional diagnostic, and a benzene nuclear-repulsion/ordinary-DFT scan. See the [bounded case guide](docs/PROTOCOL_CASES_BATCH2_zh-CN.md), [measured validation summary](docs/PROTOCOL_CASES_BATCH2_VALIDATION_zh-CN.md), and [support matrix](validation/protocol-cases/support-matrix.json). These are registered fixed inputs; the first ordinary RHF user-molecule service has its own limits, and general user conditional Compute remains BLOCKED. Numerical records belong to their recorded build/image identities, rather than implying that every case was recalculated on the final candidate image. No full geometry optimization or online calculation is introduced.
 
 Third-party notice materials and outstanding corresponding-source requirements: [source delivery plan](docs/CORRESPONDING_SOURCE_zh-CN.md), [material verification](validation/license-materials-review.json). Supplemental notices do not certify binary/source correspondence; **image distribution remains BLOCKED; source-only publication requires separate confirmation**.
 

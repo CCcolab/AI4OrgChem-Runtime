@@ -23,6 +23,22 @@
 4. 新计算须使用新建的独立批次预算文件，再以 `--mode live --budget <batch-budget.json>` 执行。P07 没有 live 模式。已保留的本次验收预算和记录不得清空或复用为新批次。
 5. 查看每次新目录里的 `host-execution.json`、`output/case-result.json`、`output/guard-receipt.json` 和资源记录。成功必须同时通过数值、来源、实际入口审计及容器删除后输出保留检查。
 
+初次运行 live，可在输出目录旁新建 UTF-8 **无 BOM** 的 `batch-budget.json`，填写以下最小合同；已有预算文件不得清空后重用。随后把该文件的绝对路径传给 `--budget`。
+
+```json
+{
+  "schema": "protocol-case-batch2-budget-v1",
+  "ceiling_seconds": 6300,
+  "one_attempt_per_case": true,
+  "scientific_cases": ["P03", "P04", "P05", "P06", "P08", "P09", "P10"],
+  "attempts": {},
+  "old_root_budget_reused": false,
+  "budget_is_accounting_not_method_approval": true
+}
+```
+
+示例：`python scripts/run-protocol-case.py --task P08 --mode live --output-root D:\AI4Science\protocol-case-runs --budget D:\AI4Science\batch-budget.json`。只有当前记录的本地候选镜像可启动；选择入口不会改变固定科学输入或算法。主机建议使用 Python 3.12；容器内部 Python 与依赖版本按锁核验。
+
 PowerShell 5.1 可使用 `scripts/start-protocol-case.ps1`，参数为 `-Task`、`-Mode`、`-OutputRoot`、可选 `-Budget`、`-PythonExe`、`-DockerExe`。Python 和 Docker 必须可访问；本机候选镜像身份登记于 `validation/protocol-cases/candidate-image.json`。安装路径与公开镜像分发是另外的工作，本文不宣称镜像已公开可下载。
 
 live 预算固定为每项最多 900 秒（840 秒开始停止），4 GiB、2 CPU、2 线程、无 swap，七项总预留上限 6300 秒，串行、每项一次。ledger/preflight 使用 1 GiB、1 CPU、1 线程、120 秒。预算是拒绝和记账边界，不是预计耗时或收敛保证。已占用的预算不得自动重置；失败保留实际原因，不调容差或科学参数后自动重跑。
