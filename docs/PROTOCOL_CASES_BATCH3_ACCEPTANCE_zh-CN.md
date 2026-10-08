@@ -1,6 +1,6 @@
 # 第三批 P11/P12 验收合同与待验证登记
 
-**登记状态：`LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_P11_PILOT_PASS_P12_RESOURCE_BLOCKED`。** 本文件记录冻结验收条件与当前实测范围：P11苯G单态源科学门禁通过，P11其余16态、P12全部61态及完整组装未执行。原先导宿主manifest缺陷保留并单独补核；修复后宿主只进行了零SCF真实账本验收。两次记录不能混称为修复后宿主已完成科学优化，也不重新认证原 P11/P12。
+**登记状态：`LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_P11_AND_P12_SINGLE_PILOTS_PASS_FULL_SCIENCE_INCOMPLETE`。** 当前P11为1/17（苯G）、P12为1/61（N12-G），其余76态及完整组装未执行。P11旧宿主manifest缺陷与补核仍保留；修复后的宿主已完成零SCF账本和本次真实P12-N12-G科学路径，其61项宿主载荷全部匹配。两次科学先导身份分别登记，不重算苯G，不重新认证原P11/P12全部科学结论。
 
 | 项目 | 当前登记 | 更新所需证据 |
 | --- | --- | --- |
@@ -10,9 +10,9 @@
 | P11 ledger / 17态 preflight | `PASS_ZERO_SCIENCE_METADATA` | 历史算术与真实AO/几何；量化入口计数0 |
 | P12 ledger / 61态 preflight | `PASS_ZERO_SCIENCE_METADATA` | 三尺寸恒等式/对称控制、真实Mole/AO预检 |
 | P11 本轮17态新优化 | `PARTIAL_1_OF_17_SCIENTIFIC_GATES_PASS` | 仅苯G；原宿主日志缺陷与50文件补核独立披露，完整集合NOT_EXECUTED |
-| P12 本轮8/23/30态新优化 | `NOT_EXECUTED_PENDING_RESOURCE_ADMISSION` | 每态新轨迹、构型/SCF/优化门禁及本轮前序证据 |
-| 宿主补丁身份、回归与最终manifest | `PASS_HOST_PATCH_ZERO_SCIENCE` | c10fb宿主锁、其他105项原字节、17项回归；真实账本42项宿主载荷全部匹配 |
-| 最新资源快照 | `P11_PASS_CAPACITY_ONLY_P12_BLOCKED` | 主机11.872GiB、guest14.440GiB；不是全部Unit准入或收敛证明 |
+| P12 本轮8/23/30态新优化 | `PARTIAL_1_OF_61_SCIENTIFIC_GATES_PASS` | N12-G通过；其余60态及完整新CESE未执行 |
+| 宿主补丁身份、回归与最终manifest | `PASS_HOST_PATCH_REAL_SCIENCE_SCOPED` | c10fb宿主锁、其他105项原字节；原17项回归/42项账本保留，本次科学路径61项载荷完全匹配 |
+| 本次P12启动资源准入 | `PASS_SINGLE_STATE_ADMISSION` | 用户授权WSL上限18GiB后，按原主机16GiB/guest15GiB门槛通过；不代表后续状态自动合格 |
 | 完整17/61态验收及新结果组装 | `NOT_EXECUTED_INCOMPLETE_STATE_SET` | 全部新状态与一致身份；不得以先导或fake组装替代 |
 | GitHub Actions | `NOT_EXECUTED` | 本轮无远端执行声明 |
 | WSLc / 镜像分发 | `BLOCKED_PAUSED` / `BLOCKED_LOCAL_ONLY` | 本轮不开放或发布 |
@@ -64,4 +64,4 @@ N12历史ledger复核包括15对覆盖、重数3、参考GL的C3残差，以及�
 
 失败/中断保留部分轨迹、checkpoint、异常、日志、资源和未闭合预算；不得删除失败后写成功记录。source capture以76份文件各自字节身份为准，dirty上下文HEAD不是全部文件的提交身份。geomeTRIC1.1.1仅进入新本地容器；原科研目录、旧runtime和第二批源锁字节保持。WSLc暂停、GitHub Actions未执行、公开镜像分发BLOCKED保持到另有真实授权与验收。
 
-本轮实际补验见 [第三批验证报告](PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md)：17/61真实零SCF预检、两类账本、冻结镜像工程CI及PS5.1已执行，另完成苯G单态源科学门禁与宿主封存修复。P11为1/17、P12为0/61，完整集合和组装仍NOT_EXECUTED，P12资源仍BLOCKED；本合同不将框架或先导验收升级为全部科学完成。
+本轮实际补验见 [第三批验证报告](PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md)：原预检、账本与工程记录保留；P11为1/17，P12为1/61。P12-N12-G的原科学门禁、资源、预算、两层manifest及删除后保留均通过。完整集合与组装仍NOT_EXECUTED，不将两个单态先导升级为全部科学完成。
