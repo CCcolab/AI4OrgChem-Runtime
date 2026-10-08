@@ -1,0 +1,13 @@
+{
+  "schema": "molecular-service-registry-v1",
+  "tasks": {
+    "single-point": {
+      "protocol_id": "ORDINARY_MOLECULAR_SINGLE_POINT_V0.1",
+      "profile_id": "rhf-631gd-small-v1",
+      "input": "User-provided XYZ within the explicit ordinary RHF profile",
+      "output": "Energy ledger, canonical orbitals, AO density and numerical diagnostics",
+      "conditions": "No monograph proposition, fragment or planar orientation required"
+    }
+  },
+  "conditional_user_compute": "BLOCKED"
+}

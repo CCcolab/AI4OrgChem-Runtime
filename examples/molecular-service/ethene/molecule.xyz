@@ -1,0 +1,8 @@
+6
+Technical fixed geometry; not optimized or authenticated experimental structure
+C -0.6695 0 0
+C 0.6695 0 0
+H -1.2321 0.9289 0
+H -1.2321 -0.9289 0
+H 1.2321 0.9289 0
+H 1.2321 -0.9289 0

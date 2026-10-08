@@ -1,0 +1,26 @@
+{
+  "files": {
+    "configs/molecular-service-v1.json": "bcc6689d346844c64c7c720bd68569e501e8d66425f327a4cc2b29a813edcb5f",
+    "container/Dockerfile.molecular-service": "56abdb82ad54e48035a9c761ae0b0c2afd51787e8e822c272c61c3b15226f1df",
+    "container/Dockerfile.molecular-service.dockerignore": "0af439893ff9db5ff4c733f086e225ab1e0c48fe3eadf990ee47669f53c33846",
+    "locks/molecular-service-dependencies.json": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+    "profiles/molecular-service/rhf-631gd-small-v1.json": "40d9c5c16f35b7c90fad86ea771a4379a27b31856bd21785b1f75e313f703dfb",
+    "runtime/__init__.py": "c55fc52a6d57b55df9a0159ed179906cee3fda48fa8aee103d8374139094b96b",
+    "runtime/molecular_service/__init__.py": "f9969ec55165b27c50c9b030487b77588e70f0e7cce6fffdc736079cc710d75e",
+    "runtime/molecular_service/__main__.py": "99bbef83b2a5623b5e45357eda2e106f648273690eec881e4b3726735c0c6bfc",
+    "runtime/molecular_service/engine.py": "9a55d1a037272807db570f6a77da79cf0f26c15819a048c7bcd3721ff56558e5",
+    "runtime/molecular_service/input.py": "8f542d1e8b34fd90e5978f9dfd4769a97a6936bfd1f4f54a2a3757929fe47bf2",
+    "runtime/molecular_service/native_guard.py": "c838ac68b9404bffafbb56cc97ad0d299fb6e476d83277e33da41576d2d9cd05",
+    "runtime/registered_cases/__init__.py": "043c1f69d08e14ac00d67fe8eeb40706ab28d519a4d6dce592c35dbb17b10205",
+    "runtime/registered_cases/__main__.py": "bd8f307e6d0ca8cdb472b07be58500c5194475e45166206d84c1e1687dcf298e",
+    "runtime/registered_cases/native_guard.py": "a93e67d4f777905c5622d00288db40881cc875695bcd5831ffdd0b0c88216918",
+    "runtime/user_molecule/__init__.py": "0507a24cd9dfdb250ed1373235f76c89e1ab7c004b91c693acc3b59f9ebc84ac",
+    "runtime/user_molecule/acceptance_resources.py": "29f0c6eb140a8f73e6f25310ad944b7d1380fe83911235c57dd04de0f3afe70f",
+    "runtime/user_molecule/root_native_lifecycle.py": "2f7da21c2f41a7b40048ed37d2cde6a425d4b9852d0bad23763740dacc6dfd70",
+    "schemas/molecular-single-point-v1.json": "0fbe7c5f54c1e6807a80db21df46af1d19f5de66309b7aeb23c6132dcfc14498",
+    "scripts/run-molecular-service.py": "65e32480170402618f31fef2730c7cd156fe393b2eb3c4766b7dc185a8509ad8",
+    "scripts/start-molecular-service.ps1": "763548132c80a751c41c56c550bfca964383887e4b576e341f8a3779236f2a9b"
+  },
+  "schema": "molecular-service-source-v1",
+  "scope": "ORDINARY_USER_MOLECULE_WORKER_HOST_PROFILE_AND_REUSED_OPERATION_RESOURCE_PRIMITIVES"
+}

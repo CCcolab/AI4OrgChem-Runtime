@@ -1,0 +1,33 @@
+ARG BASE_IMAGE=ai4orgchem-runtime:registered-cases-20261008-local
+FROM ${BASE_IMAGE}
+USER root
+ARG RUNTIME_COMMIT
+ARG SOURCE_SNAPSHOT_SHA256
+ARG DEPENDENCY_LOCK_SHA256
+ARG BASE_IMAGE_ID
+LABEL org.opencontainers.image.title="AI4OrgChem ordinary user molecule RHF candidate" \
+      org.opencontainers.image.revision=$RUNTIME_COMMIT \
+      ai4orgchem.molecular.schema="molecular-single-point-v1" \
+      ai4orgchem.molecular.runtime-commit=$RUNTIME_COMMIT \
+      ai4orgchem.molecular.source-sha256=$SOURCE_SNAPSHOT_SHA256 \
+      ai4orgchem.molecular.dependency-sha256=$DEPENDENCY_LOCK_SHA256 \
+      ai4orgchem.molecular.base-image-id=$BASE_IMAGE_ID \
+      ai4orgchem.molecular.distribution-status="BLOCKED-local-only"
+ENV AI4ORGCHEM_RUNTIME_COMMIT=$RUNTIME_COMMIT \
+    AI4ORGCHEM_MOLECULAR_SOURCE_SHA256=$SOURCE_SNAPSHOT_SHA256 \
+    AI4ORGCHEM_MOLECULAR_DEPENDENCY_SHA256=$DEPENDENCY_LOCK_SHA256 \
+    OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
+COPY runtime /opt/runtime/runtime
+COPY profiles/molecular-service /opt/runtime/profiles/molecular-service
+COPY schemas/molecular-single-point-v1.json /opt/runtime/schemas/molecular-single-point-v1.json
+COPY configs/molecular-service-v1.json /opt/runtime/configs/molecular-service-v1.json
+COPY locks/molecular-service-source.json locks/molecular-service-dependencies.json /opt/runtime/locks/
+COPY scripts/run-molecular-service.py scripts/start-molecular-service.ps1 /opt/runtime/scripts/
+COPY container/Dockerfile.molecular-service container/Dockerfile.molecular-service.dockerignore /opt/runtime/container/
+COPY tests /opt/runtime/tests
+COPY examples/molecular-service /opt/runtime/examples/molecular-service
+RUN /opt/venv/bin/python -m pip check \
+ && chmod -R a-w /opt/runtime
+USER 10001:10001
+ENTRYPOINT ["/opt/venv/bin/python", "-B", "-m", "runtime.molecular_service"]
+CMD ["--help"]

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ai4orgchem-runtime:molecular-single-point-v1",
+  "title": "User molecule ordinary single-point request, version 1",
+  "description": "The initial profile accepts user XYZ geometry in angstrom for neutral H/C/N/O closed-shell singlets. It does not require P proposition IDs, fragments or planar orientation. Duplicate JSON keys, non-finite values, file traversal, symlinks and reparse points are additionally rejected by the parser.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "task", "profile", "structure", "charge", "multiplicity", "method", "basis"],
+  "properties": {
+    "schema": {"const": "molecular-single-point-v1"},
+    "task": {"const": "single-point"},
+    "profile": {"const": "rhf-631gd-small-v1"},
+    "structure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file", "format", "unit"],
+      "properties": {
+        "file": {"type": "string", "minLength": 5, "maxLength": 180, "pattern": "^[^\\\\/:<>\"|?*\\u0000-\\u001f]+\\.[xX][yY][zZ]$"},
+        "format": {"const": "xyz"},
+        "unit": {"const": "angstrom"}
+      }
+    },
+    "charge": {"type": "integer", "const": 0},
+    "multiplicity": {"type": "integer", "const": 1},
+    "method": {"const": "RHF"},
+    "basis": {"const": "6-31G(d)"}
+  }
+}

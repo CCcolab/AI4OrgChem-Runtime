@@ -1,0 +1,57 @@
+{
+  "schema": "molecular-service-profile-v1",
+  "id": "rhf-631gd-small-v1",
+  "protocol_id": "ORDINARY_MOLECULAR_SINGLE_POINT_V0.1",
+  "task": "single-point",
+  "scope": {
+    "elements": ["H", "C", "N", "O"],
+    "charge": 0,
+    "multiplicity": 1,
+    "max_atoms": 20,
+    "coordinate_unit": "angstrom",
+    "max_abs_coordinate_angstrom": 10000,
+    "allow_three_dimensional_geometry": true,
+    "min_nuclear_distance_angstrom": 0.5
+  },
+  "engine": {
+    "program": "pyscf",
+    "method": "RHF",
+    "basis": "6-31G(d)",
+    "symmetry": false,
+    "conv_tol": 1e-12,
+    "conv_tol_grad": 1e-8,
+    "max_memory_mb": 768,
+    "max_cycle": 100,
+    "max_ao": 80,
+    "scf_kernel_call_limit": 1,
+    "automatic_retry": false
+  },
+  "tolerances": {
+    "commutator_whitened_frobenius_max": 1e-7,
+    "electron_count_abs_max": 1e-8,
+    "occupied_orthonormality_frobenius_max": 1e-8,
+    "projector_idempotency_frobenius_max": 1e-8,
+    "density_reconstruction_relative_frobenius_max": 1e-9,
+    "energy_closure_abs_hartree_max": 1e-9,
+    "overlap_eigenvalue_min": 1e-10,
+    "overlap_condition_number_max": 1e10,
+    "matrix_symmetry_abs_max": 1e-10
+  },
+  "resources": {
+    "cpus": 1,
+    "threads": 1,
+    "maximum_processes": 1,
+    "memory_limit_bytes": 1073741824,
+    "wall_time_limit_seconds": 120,
+    "stop_after_seconds": 100
+  },
+  "limitations": [
+    "Only neutral closed-shell singlets with H/C/N/O are admitted by this profile.",
+    "The engine must reject a molecule with more than 80 atomic orbitals before the SCF kernel call.",
+    "The minimum-distance check is an engineering refusal and does not validate or optimize chemical geometry.",
+    "Every coordinate must have absolute value at most 10000 angstrom; this is an engineering input bound, and coordinates are never recentered automatically.",
+    "No coordinates, atom order, hydrogen count, charge or spin are modified automatically.",
+    "RHF convergence does not establish wavefunction stability, experimental accuracy or a global energy minimum.",
+    "This profile does not run conditional-state calculations, geometry optimization or automatic method fallback."
+  ]
+}
