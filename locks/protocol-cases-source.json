@@ -502,8 +502,8 @@
     },
     {
       "path": "runtime/protocol_cases/__init__.py",
-      "sha256": "b86ed623d9a7828b85d4f9f19b6f15670123c30f2cd5876d52fa07750564cb21",
-      "size": 4422
+      "sha256": "678d4ef7ab4d122242de2f336303c333ba0fd7a4ab5b8d3980393e78127f16d9",
+      "size": 4451
     },
     {
       "path": "runtime/protocol_cases/__main__.py",
@@ -512,8 +512,8 @@
     },
     {
       "path": "runtime/protocol_cases/native_guard.py",
-      "sha256": "8fcc14b331559b5bcc0642271a423ca7a4560f07288d63c9e3606d13488c7a4a",
-      "size": 9856
+      "sha256": "6f770cd07032bdedbc3d075d393c51c42340d4f32de627188f1e1c3a7fbcc9b9",
+      "size": 10402
     },
     {
       "path": "runtime/protocol_cases/p03_p06.py",
@@ -552,8 +552,8 @@
     },
     {
       "path": "scripts/run-protocol-case.py",
-      "sha256": "7430ee13ee5dafdd6b77445c662c706cabcc0ad7e1c95aea78bd0a35fb4d28a2",
-      "size": 29769
+      "sha256": "bd38db248ae016bf4919e0eee4570363458ec0f7e540cd70c8577fed6a1247dd",
+      "size": 29974
     },
     {
       "path": "scripts/start-protocol-case.ps1",
@@ -562,8 +562,8 @@
     },
     {
       "path": "tests/test_protocol_cases_guard.py",
-      "sha256": "66868b877636f46dafbb09cf83612b9b3b7f8633d8d41047584d3958f81541bb",
-      "size": 12208
+      "sha256": "206830e307bcf55f250b6e9273c56fcfd5cf28298144b4bced816197db7c2a0d",
+      "size": 17669
     },
     {
       "path": "tests/test_protocol_cases_p03_p06.py",

@@ -79,11 +79,17 @@ class ProtocolGuard:
         def wrapped(*args,**kwargs):
             if kind=='deny':
                 self._held(); self._deny(label)
-            if kind=='hf':
+            if kind in ('hf','hf1e'):
                 instance=args[0]
                 from pyscf.dft.rks import KohnShamDFT
-                from pyscf.scf.uhf import UHF
+                from pyscf.scf.uhf import UHF,HF1e
                 from pyscf.scf.hf import RHF
+                if kind=='hf1e':
+                    if not isinstance(instance,HF1e):
+                        self._held(); return self._deny(label+': expected the one-electron HF1e terminal')
+                    return self._invoke(label,original,args,kwargs,'scf_UHF1e','ordinary')
+                if isinstance(instance,HF1e):
+                    self._held(); return self._deny(label+': HF1e must use its enumerated terminal')
                 if isinstance(instance,KohnShamDFT): category='RKS' if isinstance(instance,RHF) else 'UNSUPPORTED_DFT'
                 elif isinstance(instance,UHF): category='UHF'
                 elif isinstance(instance,RHF): category='RHF'
@@ -100,11 +106,12 @@ class ProtocolGuard:
     def __enter__(self):
         global _ACTIVE
         if _ACTIVE is not None or self.closed: raise GuardError('Nested or reused guard')
-        from pyscf.scf import hf
+        from pyscf.scf import hf,uhf
         from pyscf.dft import numint,gen_grid,rks,uks,roks
         from pyscf.lo import boys,pipek
         from pyscf import gto
-        targets=[(hf,'kernel','hf.kernel','hf'), (numint,'nr_rks','numint.nr_rks','nr'),
+        targets=[(hf,'kernel','hf.kernel','hf'),(uhf.HF1e,'scf','HF1e.scf','hf1e'),
+                 (uhf,'_hf1e_scf','uhf._hf1e_scf','hf1e'), (numint,'nr_rks','numint.nr_rks','nr'),
                  (numint,'nr_uks','numint.nr_uks','deny'),(numint.NumInt,'nr_uks','NumInt.nr_uks','deny'),
                  (gen_grid.Grids,'build','Grids.build','grids_build'),
                  (rks.RKS,'stability','RKS.stability','stability'),

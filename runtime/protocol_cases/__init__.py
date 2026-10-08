@@ -12,8 +12,8 @@ SOURCE_LOCK = ROOT / 'locks/protocol-cases-source.json'
 DEPENDENCY_LOCK = ROOT / 'locks/protocol-cases-dependencies.json'
 CASE_MODULES = {**dict.fromkeys(('P03','P04','P05','P06'),'p03_p06'),
                 **dict.fromkeys(('P07','P08'),'p07_p08'), **dict.fromkeys(('P09','P10'),'p09_p10')}
-SCF_CAPS = {'P03':{'RKS':1}, 'P04':{'UHF':14,'RHF':6}, 'P05':{'UHF':7,'RHF':4},
-            'P06':{'UHF':4,'RHF':2}, 'P07':{},'P08':{'RKS':1},'P09':{'RKS':1},'P10':{'RKS':5}}
+SCF_CAPS = {'P03':{'RKS':1}, 'P04':{'UHF':6,'UHF1e':8,'RHF':6}, 'P05':{'UHF':3,'UHF1e':4,'RHF':4},
+            'P06':{'UHF':2,'UHF1e':2,'RHF':2}, 'P07':{},'P08':{'RKS':1},'P09':{'RKS':1},'P10':{'RKS':5}}
 CUSTOM_CAPS = {'P04':{'run_projector_fixed_point_scf':2}, 'P05':{'run_projector_fixed_point_scf':2},
                'P06':{'run_projector_fixed_point_scf':2}, 'P08':{'run_gl2014_scf':1},
                'P09':{'run_p09_conditional_rks':1}}

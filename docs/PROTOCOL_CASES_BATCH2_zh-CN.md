@@ -27,6 +27,8 @@ PowerShell 5.1 可使用 `scripts/start-protocol-case.ps1`，参数为 `-Task`�
 
 live 预算固定为每项最多 900 秒（840 秒开始停止），4 GiB、2 CPU、2 线程、无 swap，七项总预留上限 6300 秒，串行、每项一次。ledger/preflight 使用 1 GiB、1 CPU、1 线程、120 秒。预算是拒绝和记账边界，不是预计耗时或收敛保证。已占用的预算不得自动重置；失败保留实际原因，不调容差或科学参数后自动重跑。
 
+参考氢采用 PySCF 的单电子 UHF1e 专用终端，单独观测并与普通 UHF/RHF 分账。P04 的 20 次入口为 6 UHF＋8 UHF1e＋6 masked RHF；P05 的 11 次为 3 UHF＋4 UHF1e＋4 RHF；P06 的 6 次为 2 UHF＋2 UHF1e＋2 masked RHF。自定义母体固定点、GL 和 P09 条件积分也分别审计，不能仅以 `hf.kernel` 计数推断全部调用。若存在 `validation/protocol-cases/native-admission-pause.json`，启动器在创建新预算预留或容器之前拒绝新计算；这不改变已经启动任务的科学协议。
+
 ## 来源和解释
 
 来源材料逐文件捕获，记录 SHA-256、Git blob、tracked/untracked 与上下文提交；原科研工作树没有作为可变依赖。部分驱动来自原科研工作树，不能把所有文件冒充为公开 science 的冻结提交。P09 条件核采用公开冻结的 h/S/F 默认路径；原工作树后续的 F/S-only 候选未启用。GL 核及 P09 受测 s/p/d 范围与各自来源逐项登记，不声称不同源码版本对所有体系等价。

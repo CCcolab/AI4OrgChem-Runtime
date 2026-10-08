@@ -9,7 +9,7 @@ from pathlib import Path
 import sys
 import tempfile
 import threading
-from types import ModuleType
+from types import ModuleType, SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -48,6 +48,13 @@ class SyntheticEngine:
             return function
         class RHF: pass
         class UHF: pass
+        class HF1e(UHF):
+            def __init__(self):
+                self.mol = SimpleNamespace(nelectron=1)
+            def kernel(self, *args, **kwargs):
+                # PySCF's one-electron factory uses self.scf as its terminal;
+                # the synthetic path does not enter the general hf.kernel.
+                return self.scf(*args, **kwargs)
         class KohnShamDFT: pass
         class RKS(RHF, KohnShamDFT): pass
         class BaseSCF:
@@ -66,6 +73,9 @@ class SyntheticEngine:
             build = entry("grid")
         RKS.stability = entry("stability")
         hf.RHF, uhf.UHF, rks.RKS, rks.KohnShamDFT = RHF, UHF, RKS, KohnShamDFT
+        uhf.HF1e = HF1e
+        uhf._hf1e_scf = entry("HF1e terminal")
+        HF1e.scf = uhf._hf1e_scf
         uks.UKS, roks.ROKS, boys.Boys, pipek.PipekMezey = UKS, ROKS, Boys, PipekMezey
         gto.Mole, grid.Grids = Mole, Grids
         hf.kernel, nr.nr_rks, nr.nr_uks = entry("hf kernel"), entry("RKS grid integral"), entry("UKS grid integral")
@@ -85,7 +95,7 @@ class SyntheticEngine:
         self.source.run_gl2014_scf = self.original_custom
         self.alias = module("synthetic_protocol_driver")
         self.alias.imported_gl = self.original_custom
-        self.hf, self.nr, self.rks, self.gto, self.uks = hf, nr, rks, gto, uks
+        self.hf, self.uhf, self.nr, self.rks, self.gto, self.uks = hf, uhf, nr, rks, gto, uks
 
 
 class ProtocolGuardTests(unittest.TestCase):
@@ -120,6 +130,101 @@ class ProtocolGuardTests(unittest.TestCase):
                 self.engine.hf.kernel(self.engine.rks.RKS())
         self.assertEqual(guard.snapshot()["counts"], {"scf_RKS": 1})
         self.assertEqual(self.engine.calls, ["hf kernel"])
+
+    def test_one_electron_dynamic_kernel_counts_terminal_once(self):
+        original_class = self.engine.uhf.HF1e.scf
+        original_helper = self.engine.uhf._hf1e_scf
+        self.assertIs(original_class, original_helper)
+        guard = native_guard.ProtocolGuard("P04", "live")
+        with guard:
+            self.engine.uhf.HF1e().kernel()
+        snapshot = guard.snapshot()
+        self.assertEqual(snapshot["counts"], {"scf_UHF1e": 1})
+        self.assertEqual(snapshot["outcomes"]["scf_UHF1e"], {"returned": 1, "failed": 0})
+        self.assertEqual(self.engine.calls, ["HF1e terminal"])
+        self.assertIs(self.engine.uhf.HF1e.scf, original_class)
+        self.assertIs(self.engine.uhf._hf1e_scf, original_helper)
+        self.assertTrue(snapshot["restored_attributes_intact"])
+
+    def test_one_electron_class_and_helper_share_one_fast_cap(self):
+        guard = native_guard.ProtocolGuard("P04", "live")
+        with guard:
+            for index in range(8):
+                if index % 2:
+                    self.engine.uhf._hf1e_scf(self.engine.uhf.HF1e())
+                else:
+                    self.engine.uhf.HF1e().kernel()
+            with self.assertRaises(native_guard.GuardError):
+                self.engine.uhf._hf1e_scf(self.engine.uhf.HF1e())
+        snapshot = guard.snapshot()
+        self.assertEqual(snapshot["counts"], {"scf_UHF1e": 8})
+        self.assertEqual(snapshot["outcomes"]["scf_UHF1e"], {"returned": 8, "failed": 0})
+        self.assertEqual(self.engine.calls, ["HF1e terminal"] * 8)
+        self.assertEqual(snapshot["status"], "FAIL")
+        self.assertTrue(snapshot["restored_attributes_intact"])
+
+    def test_normal_uhf_and_fast_uhf_caps_preserve_original_totals(self):
+        for case, ordinary, fast, rhf, total in (
+            ("P04", 6, 8, 6, 20), ("P05", 3, 4, 4, 11), ("P06", 2, 2, 2, 6)
+        ):
+            with self.subTest(case=case):
+                guard = native_guard.ProtocolGuard(case, "live")
+                with guard:
+                    for _ in range(ordinary):
+                        self.engine.hf.kernel(self.engine.uhf.UHF())
+                    for _ in range(fast):
+                        self.engine.uhf.HF1e().kernel()
+                    for _ in range(rhf):
+                        self.engine.hf.kernel(self.engine.hf.RHF())
+                snapshot = guard.snapshot()
+                self.assertEqual(snapshot["counts"], {"scf_UHF": ordinary, "scf_UHF1e": fast, "scf_RHF": rhf})
+                self.assertEqual(sum(snapshot["counts"].values()), total)
+                self.assertEqual(snapshot["status"], "PASS")
+                self.assertTrue(snapshot["restored_attributes_intact"])
+
+    def test_fast_one_electron_terminal_is_refused_in_metadata_modes(self):
+        for mode in ("ledger", "preflight"):
+            with self.subTest(mode=mode):
+                guard = native_guard.ProtocolGuard("P04", mode)
+                with guard:
+                    for call in (lambda: self.engine.uhf.HF1e().kernel(),
+                                 lambda: self.engine.uhf._hf1e_scf(self.engine.uhf.HF1e())):
+                        with self.assertRaises(native_guard.GuardError):
+                            call()
+                self.assertEqual(guard.snapshot()["counts"], {})
+                self.assertEqual(self.engine.calls, [])
+                self.assertTrue(guard.snapshot()["restored_attributes_intact"])
+
+    def test_fast_helper_rejects_non_one_electron_instance(self):
+        guard = native_guard.ProtocolGuard("P04", "live")
+        with guard:
+            with self.assertRaises(native_guard.GuardError):
+                self.engine.uhf._hf1e_scf(self.engine.uhf.UHF())
+        self.assertEqual(self.engine.calls, [])
+
+    def test_general_hf_kernel_cannot_impersonate_fast_terminal(self):
+        guard = native_guard.ProtocolGuard("P04", "live")
+        with guard:
+            with self.assertRaises(native_guard.GuardError):
+                self.engine.hf.kernel(self.engine.uhf.HF1e())
+        self.assertEqual(guard.snapshot()["counts"], {})
+        self.assertEqual(self.engine.calls, [])
+
+    def test_fast_helper_original_exception_charged_and_restored(self):
+        def fast_failure(*args, **kwargs):
+            raise RuntimeError("synthetic fast terminal failure")
+        self.engine.uhf._hf1e_scf = fast_failure
+        self.engine.uhf.HF1e.scf = fast_failure
+        guard = native_guard.ProtocolGuard("P04", "live")
+        with self.assertRaisesRegex(RuntimeError, "fast terminal failure"):
+            with guard:
+                self.engine.uhf.HF1e().kernel()
+        audit = guard.snapshot()
+        self.assertEqual(audit["counts"], {"scf_UHF1e": 1})
+        self.assertEqual(audit["outcomes"]["scf_UHF1e"], {"returned": 0, "failed": 1})
+        self.assertIs(self.engine.uhf.HF1e.scf, fast_failure)
+        self.assertIs(self.engine.uhf._hf1e_scf, fast_failure)
+        self.assertTrue(audit["restored_attributes_intact"])
 
     def test_ledger_refuses_all_synthetic_integral_and_scf_entries(self):
         guard = native_guard.ProtocolGuard("P07", "ledger")

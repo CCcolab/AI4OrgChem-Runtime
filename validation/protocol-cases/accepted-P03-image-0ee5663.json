@@ -1,0 +1,15 @@
+{
+  "schema": "protocol-cases-local-image-v1",
+  "image_id": "sha256:6eeccf5ba4192f827986625fae238982ab162e6aadffe6ffc03e3ef642c34e12",
+  "image_build_runtime_commit": "0ee566397844d9885d50ca2a2d5ae5b974f19425",
+  "source_lock_sha256": "556d09fee4868aa375054700cc1cf6cc4ad6d1ec9f4a8def1d47f8f67ab5aec7",
+  "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+  "base_image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
+  "tag": "ai4orgchem-runtime:protocol-cases-batch2-20261008-local",
+  "distribution": "BLOCKED_LOCAL_ONLY",
+  "base_rootfs_prefix_verified": true,
+  "clean_local_clone": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\build\\source-0ee56639",
+  "build_logs": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-protocol-cases-p03-p10\\build-logs\\3aed77c1d53440339c1243d16e205191",
+  "status": "ACCEPTED_P03_FIXED_POINT_ONLY",
+  "scope": "P03 scientific PASS and 16 earlier zero-SCF controls; no P04-P10 science on this image"
+}

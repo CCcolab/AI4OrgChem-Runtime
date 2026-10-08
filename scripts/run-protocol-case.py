@@ -451,6 +451,8 @@ def main(argv=None):
 
 MODE=None
 def reserve_batch(args):
+    if (ROOT/'validation/protocol-cases/native-admission-pause.json').exists():
+        raise ValueError('New native launch paused while enumerated backend-entry coverage is repaired; no new reservation')
     if args.budget is None: raise ValueError('A new durable batch2 budget is mandatory for live mode')
     path=validate_directory(args.budget.parent)/args.budget.name
     if not path.is_file(): raise ValueError('Frozen batch2 budget must already exist')
