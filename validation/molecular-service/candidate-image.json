@@ -1,0 +1,16 @@
+{
+  "schema": "molecular-service-local-image-v1",
+  "image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
+  "local_tag": "ai4orgchem-runtime:molecular-rhf-20261008-local",
+  "base_image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+  "image_build_runtime_commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
+  "source_snapshot_sha256": "0f1370a8ef1c5e1a8c7b58f310dc6ad2faa0c08e568e19b01cf8e02d7eff29ab",
+  "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+  "profile_sha256": "40d9c5c16f35b7c90fad86ea771a4379a27b31856bd21785b1f75e313f703dfb",
+  "build_network": "none",
+  "new_dependency_installations": 0,
+  "source_file_closure": 20,
+  "public_registry_manifest_digest": null,
+  "image_distribution": "BLOCKED",
+  "build_seconds": 9.659244775772095
+}
