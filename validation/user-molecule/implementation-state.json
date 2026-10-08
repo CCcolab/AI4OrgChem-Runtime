@@ -595,5 +595,15 @@
     "new_conditional_NR_calls": 0,
     "general_user_compute": false,
     "scope": "Separate fixed P02 table, P13 graph/ledger and ethene P01 occupied-representation controls; does not replace any historical conditional/root/shutdown record or reopen its budget"
+  },
+  "separate_ordinary_molecular_service_20261008": {
+    "status": "PASS_LOCAL_ORDINARY_USER_MOLECULE_SERVICE_RHF_PROFILE_ONLY",
+    "record": "validation/molecular-service/deployment-20261008.json",
+    "new_ordinary_RHF_kernels": 8,
+    "conditional_NR_calls": 0,
+    "localization_kernels": 0,
+    "old_compute_enabled": false,
+    "ordinary_single_point_enabled": true,
+    "scope": "Separate ordinary molecular_service namespace/profile; historical conditional/native records and budgets not replaced or reopened"
   }
 }

@@ -2,7 +2,7 @@
 
 本入口接受你自己的 XYZ 分子结构，计算普通闭壳层 RHF 单点能量，并导出轨道和 AO 电子密度矩阵。无需选择命题编号、阅读专著或指定项目特有的片段。
 
-2026-10-08，首版候选指南：本文编写时，本轮容器工程验收、真实分子计算及直接调用对照均为 **NOT_EXECUTED**。实现和宿主测试不替代实际验收；最终可用范围以随后保存的[本轮验收报告](MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)和[机器状态](../validation/molecular-service/deployment-20261008.json)为准。[首版验收合同](MOLECULAR_SINGLE_POINT_ACCEPTANCE_CONTRACT_zh-CN.md)列明准入、门槛和预算。
+2026-10-08，首版本地候选已完成验收：锁定镜像内114项工程测试通过，水、甲烷、氨及乙烯的四次正式运行和四次同版本PySCF直接调用对照通过。支持范围以[本轮验收报告](MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)和[机器状态](../validation/molecular-service/deployment-20261008.json)为准。[首版验收合同](MOLECULAR_SINGLE_POINT_ACCEPTANCE_CONTRACT_zh-CN.md)列明准入、门槛和预算。
 
 ## 四步运行
 
@@ -77,7 +77,7 @@ XYZ 第一行是原子数，第二行是注释，随后每行只有 `元素 x y 
 
 ```powershell
 $records = '<终端 records 的实际路径>'
-Get-Content -LiteralPath (Join-Path $records 'output\calculation\report.md')
+Get-Content -LiteralPath (Join-Path $records 'output\calculation\report.md') -Encoding UTF8
 ```
 
 要确认完整运行成功，还需看 `host-execution.json` 和 `output/worker-receipt.json`：最终主机状态、退出码、输入及镜像身份、资源与守卫检查、容器删除和输出保留都应闭合。数值合格状态是 `NUMERICALLY_QUALIFIED_ORDINARY_RHF`；完整 worker 验收状态是 `PASS_SCOPED_MOLECULAR_SINGLE_POINT`。单独看到能量或程序退出0，不能替代完整记录。
@@ -90,6 +90,6 @@ Get-Content -LiteralPath (Join-Path $records 'output\calculation\report.md')
 
 导出的密度是**自旋求和 AO 密度矩阵**，需要结合 AO 基函数和重叠矩阵解释。它不是已经采样的三维网格、密度等值面或实验电子密度图；本轮没有提供网格可视化和 Boys／Pipek–Mezey 局域化计算。轨道符号、顺序或简并空间表示的变化，不应单独解读为电子态变化。
 
-HOMO／LUMO 能隙作为观察值保存，不作为旧条件態能隙门槛。本轮波函数稳定性分析为 **NOT_EXECUTED**；普通 SCF 收敛不自动证明局部极小态、全局基态或实验精度。分子间比较需先核对结构、电荷、自旋、方法、基组及单位是否适合相应研究问题。
+HOMO／LUMO 能隙作为观察值保存，不作为旧条件态能隙门槛。本轮波函数稳定性分析为 **NOT_EXECUTED**；普通 SCF 收敛不自动证明局部极小态、全局基态或实验精度。分子间比较需先核对结构、电荷、自旋、方法、基组及单位是否适合相应研究问题。
 
 本入口是受支持 profile 内的用户自选分子普通计算。旧条件态比较的用户 Compute 继续 **BLOCKED**。WSLc 升级及实测暂停、GitHub CI **NOT_EXECUTED**、镜像分发 **BLOCKED**；本轮不进行在线计算或公开发布。

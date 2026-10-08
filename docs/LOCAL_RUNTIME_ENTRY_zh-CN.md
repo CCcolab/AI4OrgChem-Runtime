@@ -1,10 +1,20 @@
 # 本地 Runtime 使用入口
 
-产品入口将按用户计算目标组织：准备分子、输入与资源检查、单点能量、轨道/密度、几何优化与结果比较。P01—P14转入案例与验证详情，普通用户不需要读专著。当前通用服务的实施与验收范围见[用户分子入口设计](GENERAL_CHEMISTRY_ENTRY_DESIGN_zh-CN.md)；下面命令仍属于已有受限服务和固定示例，没有通过改名开放新计算。
+入口按用户计算目标组织，普通用户不需要读专著或选择P编号。首版用户XYZ普通RHF单点与canonical轨道/AO密度导出已部署并完成本地验收；详细范围见[用户分子入口设计](GENERAL_CHEMISTRY_ENTRY_DESIGN_zh-CN.md)。P01—P14继续保留在示例与验证详情。通用优化、扫描等功能仍未交付。
 
-2026-10-08。网页仅提供使用指南；操作在本机进行。生产用户分子 Compute 仍 BLOCKED。新增三个固定登记任务使用独立本地候选镜像，详见[固定P02/P13/P01使用指南](REGISTERED_CASES_zh-CN.md)；旧镜像中的能力保持其原身份。
+2026-10-08。网页仅提供使用指南；操作在本机进行。普通单点与旧条件态比较分开登记：前者在首版profile内可用，后者Compute仍BLOCKED。固定示例使用原独立候选镜像，详见[固定P02/P13/P01使用指南](REGISTERED_CASES_zh-CN.md)。
 
-## 从一个目标开始
+## 计算自己的分子
+
+按[普通分子四步指南](MOLECULAR_SINGLE_POINT_zh-CN.md)准备同目录的XYZ与请求，在本轮runtime仓库中运行：
+
+```powershell
+.\scripts\start-molecular-service.ps1 -Request .\examples\molecular-service\water\request.json -OutputRoot D:\AI4Science\ai4orgchem-runtime-runs\molecular
+```
+
+将 `-Request` 换成自己的请求。支持H/C/N/O、中性单重态、RHF/6-31G(d)、最多20原子/实际AO≤80，三维结构可用。返回记录中的 `output/calculation/report.md` 提供结果；完整成功还须闭合主机/worker回执、12项数值检查、资源与输出保留。新启动器兼容PowerShell5.1/7，使用现有Python3.12+和Docker，固定本地镜像身份，不自动安装。详见[实际验收](MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)。下面是可选的历史证据和受限服务操作。
+
+## 可选：阅读示例和旧受限Check/Report
 
 在 runtime 仓库根目录打开 PowerShell。以下入口兼容 Windows PowerShell 5.1，选定文件阅读使用已有 Python 3.12+；Check/Report 复用已有 PowerShell 7.3+ 服务启动器。找不到工具时给出现有可执行文件路径，不自动安装。
 
@@ -90,6 +100,6 @@ PowerShell 7.3+可先验证旧固定Runtime构建入口，不接触引擎：
 
 ## 当前交付边界
 
-新入口及目录为宿主源码工程能力；[能力登记](../validation/local-runtime-capabilities-v1.json)和[本轮验证记录](../validation/local-runtime-framework-20261007.json)分别说明状态和实测范围。GitHub CI仍NOT_EXECUTED，33份用户测试的分类不等于全部测试运行通过。WSLc BLOCKED/暂停；镜像分发BLOCKED；源码公开另行确认。外部专家咨询已取消，不是实施前置条件。生产Compute缺少合格端点、独立对照及研究/资源资格；内部证据不足仍需解决。
+普通单点实测见[最新机器状态](../validation/molecular-service/deployment-20261008.json)，[能力登记](../validation/local-runtime-capabilities-v1.json)将其与历史[宿主框架记录](../validation/local-runtime-framework-20261007.json)分开。GitHub CI仍NOT_EXECUTED，33份用户测试的分类不等于全部测试运行通过。WSLc BLOCKED/暂停；镜像分发BLOCKED；源码公开另行确认。外部专家咨询已取消，不是实施前置条件。旧条件态比较Compute缺少合格端点、独立对照及研究/资源资格；内部证据不足仍需解决。
 
 固定任务可使用 `start-local-runtime.ps1 -Action Run -Proposition P02`（或P13/P01）并指定独立 `-OutputRoot`。Run不接收XYZ或协议参数：P02复算冻结表统计，P13复算图规则和账本，小体系P01仅一次固定乙烯普通RHF及Boys/PM占据表示控制。条件根诊断仍没有正式合格端点，其旧预算不能复用；新P01合同与原NR诊断分别登记。原科学规则、占据定义和容差保持。

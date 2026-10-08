@@ -1,0 +1,442 @@
+{
+  "AO_density_export": "SPIN_SUMMED_AO_MATRIX_NOT_GRID_DENSITY_OR_EXPERIMENTAL_MEASUREMENT",
+  "DFT_or_open_shell_or_geometry_optimization": "NOT_IMPLEMENTED_IN_THIS_PROFILE",
+  "GitHub_CI": "NOT_EXECUTED",
+  "WSLc": "BLOCKED / NOT_EXECUTED",
+  "actual_ao_admission_rejection_processes": 1,
+  "actual_conditional_NR_calls": 0,
+  "actual_localization_kernels": 0,
+  "actual_scf_kernels": 8,
+  "ao_refusal": {
+    "directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\refusal-runs\\20261008T025637Z-single-point-cd79901b3a684d4280a344a0102d3ee3",
+    "error": "ValueError: Actual AO count is outside the fixed ordinary profile",
+    "guard_counts": {
+      "boys_kernel": 0,
+      "conditional_NR": 0,
+      "pipek_mezey_kernel": 0,
+      "scf_kernel": 0
+    },
+    "host_exit_code": 20,
+    "original_host_status": "FAILED_WORKER_PROCESS",
+    "original_worker_status": "NOT_QUALIFIED",
+    "status": "PASS_EXPECTED_AO_SCOPE_REFUSAL_ZERO_SCF"
+  },
+  "automatic_scientific_retry": false,
+  "cases": {
+    "ammonia": {
+      "checks": {
+        "closed_shell_occupations": true,
+        "density_reconstruction": true,
+        "electron_number": true,
+        "energy_ledger_closure": true,
+        "finite_arrays_and_energy": true,
+        "occupied_orthonormality": true,
+        "ordinary_fock_equals_hcore_plus_veff": true,
+        "package_energy_ledger_closure": true,
+        "scf_converged": true,
+        "symmetric_ao_matrices": true,
+        "whitened_fock_projector_commutator": true,
+        "whitened_projector_idempotency": true
+      },
+      "container_removed": true,
+      "electron_count": 10.000000000000007,
+      "execution_id": "aacb9865f7f54c74b5a6d79ca50fe254",
+      "guard_counts": {
+        "boys_kernel": 0,
+        "conditional_NR": 0,
+        "pipek_mezey_kernel": 0,
+        "scf_kernel": 1
+      },
+      "host_launcher_identity": {
+        "runtime_source_directory": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime",
+        "runtime_source_head": "a3f6ec7536c510f06b7d521bc09515eb451b9cff",
+        "source_scope": "CURRENT_CHECKED_CRITICAL_SOURCE_NOT_IMAGE_BUILD_COMMIT",
+        "status": "READ_ONLY_CURRENT_HEAD_NOT_IMAGE_BUILD_IDENTITY"
+      },
+      "host_manifest_sha256": "da52d443a26ae7e53aec7e6bb177279a6648ba5399afef254b484222c1491505",
+      "memory_peak_bytes": 158228480,
+      "nAO": 20,
+      "output_retention_after_removal": "PASS",
+      "production_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\production-runs\\20261008T023309Z-single-point-aacb9865f7f54c74b5a6d79ca50fe254",
+      "production_seconds": 9.125,
+      "reference_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\direct-references-completed\\ammonia",
+      "reference_seconds": 5.2189999999827705,
+      "residuals": {
+        "density_reconstruction_relative_frobenius": 0.0,
+        "electron_number_absolute": 7.105427357601002e-15,
+        "energy_ledger_closure_hartree": 0.0,
+        "generalized_mo_eigen_equation_frobenius_hartree": 1.2336787104321951e-09,
+        "matrix_symmetry_max_absolute": {
+          "density": 0.0,
+          "fock": 0.0,
+          "hcore": 0.0,
+          "veff": 0.0
+        },
+        "occupied_orthonormality_frobenius": 3.860240862214153e-15,
+        "ordinary_fock_closure_max_absolute_hartree": 2.220446049250313e-16,
+        "package_electronic_energy_closure_hartree": 0.0,
+        "package_two_electron_energy_closure_hartree": 0.0,
+        "whitened_fock_projector_commutator_frobenius_hartree": 8.946441459474032e-10,
+        "whitened_projector_idempotency_frobenius": 6.582999235512331e-15
+      },
+      "result_sha256": "0e62f7166705fc1567fa40fa9cbc6853060a8a4c14714c6eeb3d626f3a21f941",
+      "scf_cycles": 11,
+      "source_snapshot_sha256": "0f1370a8ef1c5e1a8c7b58f310dc6ad2faa0c08e568e19b01cf8e02d7eff29ab",
+      "stability_status": "NOT_EXECUTED",
+      "status": "PASS_SCOPED_MOLECULAR_SINGLE_POINT",
+      "total_energy_hartree": -56.18326529833526
+    },
+    "ethene": {
+      "checks": {
+        "closed_shell_occupations": true,
+        "density_reconstruction": true,
+        "electron_number": true,
+        "energy_ledger_closure": true,
+        "finite_arrays_and_energy": true,
+        "occupied_orthonormality": true,
+        "ordinary_fock_equals_hcore_plus_veff": true,
+        "package_energy_ledger_closure": true,
+        "scf_converged": true,
+        "symmetric_ao_matrices": true,
+        "whitened_fock_projector_commutator": true,
+        "whitened_projector_idempotency": true
+      },
+      "container_removed": true,
+      "electron_count": 16.000000000000004,
+      "execution_id": "e6f452e194724ecf83e011c2f83013ea",
+      "guard_counts": {
+        "boys_kernel": 0,
+        "conditional_NR": 0,
+        "pipek_mezey_kernel": 0,
+        "scf_kernel": 1
+      },
+      "host_launcher_identity": {
+        "runtime_source_directory": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime",
+        "runtime_source_head": "a3f6ec7536c510f06b7d521bc09515eb451b9cff",
+        "source_scope": "CURRENT_CHECKED_CRITICAL_SOURCE_NOT_IMAGE_BUILD_COMMIT",
+        "status": "READ_ONLY_CURRENT_HEAD_NOT_IMAGE_BUILD_IDENTITY"
+      },
+      "host_manifest_sha256": "b5a4b667cf583c4d490851a33ee4b67b0016d3649373fb97590875f96b6bf341",
+      "memory_peak_bytes": 166699008,
+      "nAO": 36,
+      "output_retention_after_removal": "PASS",
+      "production_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\production-runs\\20261008T024031Z-single-point-e6f452e194724ecf83e011c2f83013ea",
+      "production_seconds": 7.35899999999674,
+      "reference_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\direct-references-completed\\ethene",
+      "reference_seconds": 6.14100000000326,
+      "residuals": {
+        "density_reconstruction_relative_frobenius": 0.0,
+        "electron_number_absolute": 3.552713678800501e-15,
+        "energy_ledger_closure_hartree": 0.0,
+        "generalized_mo_eigen_equation_frobenius_hartree": 1.7682078684202003e-09,
+        "matrix_symmetry_max_absolute": {
+          "density": 0.0,
+          "fock": 0.0,
+          "hcore": 0.0,
+          "veff": 0.0
+        },
+        "occupied_orthonormality_frobenius": 9.760927157046195e-15,
+        "ordinary_fock_closure_max_absolute_hartree": 5.551115123125783e-17,
+        "package_electronic_energy_closure_hartree": 0.0,
+        "package_two_electron_energy_closure_hartree": 0.0,
+        "whitened_fock_projector_commutator_frobenius_hartree": 1.286258152970866e-09,
+        "whitened_projector_idempotency_frobenius": 1.1278984566808403e-14
+      },
+      "result_sha256": "dfdc2a20f40859ecd7f3c5c41893022d3264921ac1d467bb796540fb8686aef0",
+      "scf_cycles": 10,
+      "source_snapshot_sha256": "0f1370a8ef1c5e1a8c7b58f310dc6ad2faa0c08e568e19b01cf8e02d7eff29ab",
+      "stability_status": "NOT_EXECUTED",
+      "status": "PASS_SCOPED_MOLECULAR_SINGLE_POINT",
+      "total_energy_hartree": -78.03040520373332
+    },
+    "methane": {
+      "checks": {
+        "closed_shell_occupations": true,
+        "density_reconstruction": true,
+        "electron_number": true,
+        "energy_ledger_closure": true,
+        "finite_arrays_and_energy": true,
+        "occupied_orthonormality": true,
+        "ordinary_fock_equals_hcore_plus_veff": true,
+        "package_energy_ledger_closure": true,
+        "scf_converged": true,
+        "symmetric_ao_matrices": true,
+        "whitened_fock_projector_commutator": true,
+        "whitened_projector_idempotency": true
+      },
+      "container_removed": true,
+      "electron_count": 10.000000000000005,
+      "execution_id": "329b0e12808446099c2f4e6324c437fb",
+      "guard_counts": {
+        "boys_kernel": 0,
+        "conditional_NR": 0,
+        "pipek_mezey_kernel": 0,
+        "scf_kernel": 1
+      },
+      "host_launcher_identity": {
+        "runtime_source_directory": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime",
+        "runtime_source_head": "a3f6ec7536c510f06b7d521bc09515eb451b9cff",
+        "source_scope": "CURRENT_CHECKED_CRITICAL_SOURCE_NOT_IMAGE_BUILD_COMMIT",
+        "status": "READ_ONLY_CURRENT_HEAD_NOT_IMAGE_BUILD_IDENTITY"
+      },
+      "host_manifest_sha256": "bba43420af26c39f68e1cad493ce5c42754da83d973cce463af1369f9a161889",
+      "memory_peak_bytes": 162312192,
+      "nAO": 22,
+      "output_retention_after_removal": "PASS",
+      "production_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\production-runs\\20261008T022758Z-single-point-329b0e12808446099c2f4e6324c437fb",
+      "production_seconds": 6.795999999972992,
+      "reference_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\direct-references-completed\\methane",
+      "reference_seconds": 5.2189999999827705,
+      "residuals": {
+        "density_reconstruction_relative_frobenius": 0.0,
+        "electron_number_absolute": 5.329070518200751e-15,
+        "energy_ledger_closure_hartree": 0.0,
+        "generalized_mo_eigen_equation_frobenius_hartree": 1.37685510796157e-09,
+        "matrix_symmetry_max_absolute": {
+          "density": 0.0,
+          "fock": 0.0,
+          "hcore": 0.0,
+          "veff": 0.0
+        },
+        "occupied_orthonormality_frobenius": 1.5440089059902102e-15,
+        "ordinary_fock_closure_max_absolute_hartree": 1.1102230246251565e-16,
+        "package_electronic_energy_closure_hartree": 0.0,
+        "package_two_electron_energy_closure_hartree": 0.0,
+        "whitened_fock_projector_commutator_frobenius_hartree": 2.6765876218830015e-10,
+        "whitened_projector_idempotency_frobenius": 4.6756018769330336e-15
+      },
+      "result_sha256": "5a7dd1121f1e3d76ba8b1e552d8c3cf06b3e150eaaf5e1ad97aaeb71316d8b5d",
+      "scf_cycles": 9,
+      "source_snapshot_sha256": "0f1370a8ef1c5e1a8c7b58f310dc6ad2faa0c08e568e19b01cf8e02d7eff29ab",
+      "stability_status": "NOT_EXECUTED",
+      "status": "PASS_SCOPED_MOLECULAR_SINGLE_POINT",
+      "total_energy_hartree": -40.19473232455686
+    },
+    "water": {
+      "checks": {
+        "closed_shell_occupations": true,
+        "density_reconstruction": true,
+        "electron_number": true,
+        "energy_ledger_closure": true,
+        "finite_arrays_and_energy": true,
+        "occupied_orthonormality": true,
+        "ordinary_fock_equals_hcore_plus_veff": true,
+        "package_energy_ledger_closure": true,
+        "scf_converged": true,
+        "symmetric_ao_matrices": true,
+        "whitened_fock_projector_commutator": true,
+        "whitened_projector_idempotency": true
+      },
+      "container_removed": true,
+      "electron_count": 10.000000000000002,
+      "execution_id": "a95e7d0f4cb74b9585f1528b19162972",
+      "guard_counts": {
+        "boys_kernel": 0,
+        "conditional_NR": 0,
+        "pipek_mezey_kernel": 0,
+        "scf_kernel": 1
+      },
+      "host_launcher_identity": {
+        "runtime_source_directory": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime",
+        "runtime_source_head": "a3f6ec7536c510f06b7d521bc09515eb451b9cff",
+        "source_scope": "CURRENT_CHECKED_CRITICAL_SOURCE_NOT_IMAGE_BUILD_COMMIT",
+        "status": "READ_ONLY_CURRENT_HEAD_NOT_IMAGE_BUILD_IDENTITY"
+      },
+      "host_manifest_sha256": "b4db8f14261adf9f87ccde4b5ca9ef37ed79fe6c879a9e0508d8c8c813c2d4be",
+      "memory_peak_bytes": 164667392,
+      "nAO": 18,
+      "output_retention_after_removal": "PASS",
+      "production_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\production-runs\\20261008T022622Z-single-point-a95e7d0f4cb74b9585f1528b19162972",
+      "production_seconds": 7.5,
+      "reference_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\direct-references-completed\\water",
+      "reference_seconds": 6.389999999955762,
+      "residuals": {
+        "density_reconstruction_relative_frobenius": 0.0,
+        "electron_number_absolute": 1.7763568394002505e-15,
+        "energy_ledger_closure_hartree": 0.0,
+        "generalized_mo_eigen_equation_frobenius_hartree": 5.406036685047802e-09,
+        "matrix_symmetry_max_absolute": {
+          "density": 0.0,
+          "fock": 0.0,
+          "hcore": 0.0,
+          "veff": 0.0
+        },
+        "occupied_orthonormality_frobenius": 2.237568745241635e-15,
+        "ordinary_fock_closure_max_absolute_hartree": 2.220446049250313e-16,
+        "package_electronic_energy_closure_hartree": 0.0,
+        "package_two_electron_energy_closure_hartree": 0.0,
+        "whitened_fock_projector_commutator_frobenius_hartree": 1.7424202994401097e-09,
+        "whitened_projector_idempotency_frobenius": 5.477353514947777e-15
+      },
+      "result_sha256": "91e95a9dfb0dd942cec0ab5c71463062fc7688c15ddbcd89bd0ad423715f8db1",
+      "scf_cycles": 11,
+      "source_snapshot_sha256": "0f1370a8ef1c5e1a8c7b58f310dc6ad2faa0c08e568e19b01cf8e02d7eff29ab",
+      "stability_status": "NOT_EXECUTED",
+      "status": "PASS_SCOPED_MOLECULAR_SINGLE_POINT",
+      "total_energy_hartree": -76.00909910859735
+    }
+  },
+  "conditional_user_compute": "BLOCKED",
+  "date": "2026-10-08",
+  "engineering": {
+    "Linux_actual_symlink_case": "PASS",
+    "PS51_and_PS7_actual_positive_routes": "PASS",
+    "PS51_and_PS7_direct_child_exit20": "PASS_SYNTHETIC_ZERO_SCIENCE",
+    "host_core_pass": 90,
+    "host_core_symlink_not_executed": 1,
+    "host_worker_pass": 6,
+    "locked_image_unique_tests": 114,
+    "new_scientific_calls": 0,
+    "new_service_tests": 97,
+    "reused_limiter_regressions": 17,
+    "skips": 0
+  },
+  "exit_code_observation": {
+    "detail": "outer exec shell1 was incorrectly treated as child status; direct PS51/PS7 capture proved existing child20",
+    "record": "EXIT_PROPAGATION.json",
+    "source_code_changed": false
+  },
+  "image": {
+    "base_image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+    "build_network": "none",
+    "build_seconds": 9.659244775772095,
+    "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+    "image_build_runtime_commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
+    "image_distribution": "BLOCKED",
+    "image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
+    "local_tag": "ai4orgchem-runtime:molecular-rhf-20261008-local",
+    "new_dependency_installations": 0,
+    "profile_sha256": "40d9c5c16f35b7c90fad86ea771a4379a27b31856bd21785b1f75e313f703dfb",
+    "public_registry_manifest_digest": null,
+    "schema": "molecular-service-local-image-v1",
+    "source_file_closure": 20,
+    "source_snapshot_sha256": "0f1370a8ef1c5e1a8c7b58f310dc6ad2faa0c08e568e19b01cf8e02d7eff29ab"
+  },
+  "image_distribution": "BLOCKED",
+  "new_packages_installed": 0,
+  "old_scientific_budgets": "PRESERVED_NOT_REUSED",
+  "public_push_or_release": "NOT_EXECUTED",
+  "reference_startup_failure": {
+    "backend_dispatch": "NOT_REACHED: failed importing runtime before PySCF import",
+    "native_counts_observed": null,
+    "original_incomplete_host_status_preserved": true,
+    "production_rerun": false,
+    "record": "REFERENCE_STARTUP_FAILURE.json",
+    "startup_processes": 1
+  },
+  "reserved_total_wall_seconds": 1080,
+  "schema": "ordinary-molecular-single-point-delivery-v1",
+  "scientific_tolerance_changes": false,
+  "source_publication": "SEPARATE_CONFIRMATION_REQUIRED",
+  "status": "PASS_LOCAL_ORDINARY_USER_MOLECULE_SERVICE_RHF_PROFILE_ONLY",
+  "supported_profile": "rhf-631gd-small-v1",
+  "supported_scope": {
+    "basis": "6-31G(d)",
+    "charge": 0,
+    "elements": [
+      "H",
+      "C",
+      "N",
+      "O"
+    ],
+    "maximum_actual_AO": 80,
+    "maximum_atoms": 20,
+    "method": "RHF",
+    "monograph_or_P_identifier_required": false,
+    "multiplicity": 1,
+    "three_dimensional_geometry": true,
+    "user_submitted_XYZ": true
+  },
+  "through_cleanup_wall_sum_seconds_including_startup_failure_and_refusal": 64.71699999982957,
+  "wavefunction_stability": "NOT_EXECUTED",
+  "wrapper_comparison": {
+    "MO_column_sign_and_degenerate_rotations_compared": false,
+    "independent_scientific_engine_certification": false,
+    "new_scf_calls_by_comparison": 0,
+    "records": [
+      {
+        "checks": {
+          "ao_density_relative_frobenius": true,
+          "ao_overlap_max_absolute": true,
+          "electron_count_absolute": true,
+          "total_energy_absolute_hartree": true
+        },
+        "fixture": "water",
+        "production_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\production-runs\\20261008T022622Z-single-point-a95e7d0f4cb74b9585f1528b19162972",
+        "production_result_sha256": "91e95a9dfb0dd942cec0ab5c71463062fc7688c15ddbcd89bd0ad423715f8db1",
+        "reference_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\direct-references-completed\\water",
+        "reference_result_sha256": "53d6db74fd4167f96b2d14bede78fd5c95890b307011ae2edfa4e5b10aefda7d",
+        "residuals": {
+          "ao_density_relative_frobenius": 0.0,
+          "ao_overlap_max_absolute": 0.0,
+          "electron_count_absolute": 0.0,
+          "total_energy_absolute_hartree": 0.0
+        },
+        "status": "PASS"
+      },
+      {
+        "checks": {
+          "ao_density_relative_frobenius": true,
+          "ao_overlap_max_absolute": true,
+          "electron_count_absolute": true,
+          "total_energy_absolute_hartree": true
+        },
+        "fixture": "methane",
+        "production_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\production-runs\\20261008T022758Z-single-point-329b0e12808446099c2f4e6324c437fb",
+        "production_result_sha256": "5a7dd1121f1e3d76ba8b1e552d8c3cf06b3e150eaaf5e1ad97aaeb71316d8b5d",
+        "reference_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\direct-references-completed\\methane",
+        "reference_result_sha256": "f6055cf0fa60d198fa580a325fdfec692838eee07a7850f0d2b61a3419e88d7f",
+        "residuals": {
+          "ao_density_relative_frobenius": 0.0,
+          "ao_overlap_max_absolute": 0.0,
+          "electron_count_absolute": 0.0,
+          "total_energy_absolute_hartree": 0.0
+        },
+        "status": "PASS"
+      },
+      {
+        "checks": {
+          "ao_density_relative_frobenius": true,
+          "ao_overlap_max_absolute": true,
+          "electron_count_absolute": true,
+          "total_energy_absolute_hartree": true
+        },
+        "fixture": "ammonia",
+        "production_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\production-runs\\20261008T023309Z-single-point-aacb9865f7f54c74b5a6d79ca50fe254",
+        "production_result_sha256": "0e62f7166705fc1567fa40fa9cbc6853060a8a4c14714c6eeb3d626f3a21f941",
+        "reference_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\direct-references-completed\\ammonia",
+        "reference_result_sha256": "29109ecad899dc32fba3701e627e8e3d561fbb071505dd0750cbeaa2affcd5b8",
+        "residuals": {
+          "ao_density_relative_frobenius": 0.0,
+          "ao_overlap_max_absolute": 0.0,
+          "electron_count_absolute": 0.0,
+          "total_energy_absolute_hartree": 0.0
+        },
+        "status": "PASS"
+      },
+      {
+        "checks": {
+          "ao_density_relative_frobenius": true,
+          "ao_overlap_max_absolute": true,
+          "electron_count_absolute": true,
+          "total_energy_absolute_hartree": true
+        },
+        "fixture": "ethene",
+        "production_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\production-runs\\20261008T024031Z-single-point-e6f452e194724ecf83e011c2f83013ea",
+        "production_result_sha256": "dfdc2a20f40859ecd7f3c5c41893022d3264921ac1d467bb796540fb8686aef0",
+        "reference_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-general-molecular-single-point\\direct-references-completed\\ethene",
+        "reference_result_sha256": "76f39edf1ab8498b63834080b87c72c582a9cfc9e28731983fc2a2d6336ab86f",
+        "residuals": {
+          "ao_density_relative_frobenius": 0.0,
+          "ao_overlap_max_absolute": 0.0,
+          "electron_count_absolute": 0.0,
+          "total_energy_absolute_hartree": 0.0
+        },
+        "status": "PASS"
+      }
+    ],
+    "schema": "ordinary-molecular-wrapper-comparison-v1",
+    "scope": "same PySCF/method/input/basis/settings wrapper consistency",
+    "status": "PASS_FOUR_SAME_LIBRARY_COMPARISONS"
+  }
+}

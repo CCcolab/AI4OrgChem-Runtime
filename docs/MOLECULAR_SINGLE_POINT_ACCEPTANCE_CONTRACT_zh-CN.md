@@ -2,7 +2,7 @@
 
 2026-10-08，合同0.1。任务 `single-point`，profile `rhf-631gd-small-v1`，协议 `ORDINARY_MOLECULAR_SINGLE_POINT_V0.1`。本合同对应用户授权的“用户 XYZ → 普通单点 → 轨道／AO密度 → 本地报告与导出”，与旧条件态比较的科研规则及执行预算分开。
 
-本文建立时：候选代码和宿主测试已形成；容器工程验收、真实分子执行和同版本 PySCF 直接调用对照均 **NOT_EXECUTED**。本文冻结目标及门槛，不提供尚未发生的 PASS。实际完成状态、代码提交、镜像 ID、原始证据和失败须在[本轮验收报告](MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)及[机器状态](../validation/molecular-service/deployment-20261008.json)中登记。
+本文建立时：候选代码和宿主测试已形成；容器工程验收、真实分子执行和同版本 PySCF 直接调用对照均 **NOT_EXECUTED**。本文冻结目标及门槛，不提供尚未发生的 PASS。该建立时状态保留为执行前事实；2026-10-08实际验收已完成，未改变下列门槛与8次SCF总预算。实际完成状态、代码提交、镜像 ID、原始证据和失败在[本轮验收报告](MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)及[机器状态](../validation/molecular-service/deployment-20261008.json)中登记。
 
 ## 1. 输入与支持范围
 

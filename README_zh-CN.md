@@ -1,8 +1,12 @@
 # AI4OrgChem 本地分子计算 Runtime
 
-项目目标是面向用户分子的本地化学计算平台：按分子输入、单点能量、轨道/密度分析和结构优化等研究目标提供服务。用户无需先了解专著P01—P14；这些编号保留在“示例与验证”及来源详情。新增通用入口的拆分、实施顺序和验收要求见[面向用户分子的入口设计](docs/GENERAL_CHEMISTRY_ENTRY_DESIGN_zh-CN.md)。目前通用自选分子计算尚未开放，已通过的固定示例及受限Check/Report范围分别记录。
+项目目标是面向用户分子的本地化学计算平台：按分子输入、单点能量、轨道/密度分析和结构优化等研究目标提供服务。用户无需先了解专著P01—P14；这些编号保留在“示例与验证”及来源详情。新增通用入口的拆分、实施顺序和验收要求见[面向用户分子的入口设计](docs/GENERAL_CHEMISTRY_ENTRY_DESIGN_zh-CN.md)。已交付首版用户自选分子普通RHF单点、canonical轨道与AO密度矩阵导出；首版范围为H/C/N/O、中性单重态、RHF/6-31G(d)、最多20原子且实际AO数≤80。三维结构可用，无需P编号或专有片段。DFT、开壳层、通用优化、扫描和网格密度仍待独立实施。
 
-本地使用从 [本地Runtime入口](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md) 开始：查阅P01—P14既有证据、执行受限Check/Report，或选择三个新增[固定登记复算](docs/REGISTERED_CASES_zh-CN.md)：P02冻结表统计、P13图规则与账本、小体系P01乙烯占据表示控制。三个任务有独立来源锁、受控本地镜像和运行记录；实际部署状态见[部署边界](docs/REGISTERED_CASES_DEPLOYMENT_BOUNDARIES_zh-CN.md)。生产用户分子Compute仍BLOCKED。Git/项目ZIP提供来源可核对的源码，不包含完整安装环境；WSLc、镜像分发及源码公开保持分别记录。
+普通分子计算从[四步使用指南](docs/MOLECULAR_SINGLE_POINT_zh-CN.md)开始，使用 `scripts/start-molecular-service.ps1` 和自己的XYZ/请求。四个分子实测及同库直接调用对照通过，候选镜像内114项工程测试通过；非root、只读源与输入、断网、退出码和删除容器后输出保留分别核验。见[2026-10-08验收报告](docs/MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)及[机器状态](validation/molecular-service/deployment-20261008.json)。同库对照不是独立科学引擎认证，波函数稳定性未执行。
+
+示例与历史复核从 [本地Runtime入口](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md) 开始：查阅P01—P14既有证据、执行受限Check/Report，或选择三个新增[固定登记复算](docs/REGISTERED_CASES_zh-CN.md)：P02冻结表统计、P13图规则与账本、小体系P01乙烯占据表示控制。三个任务有独立来源锁、受控本地镜像和运行记录；实际部署状态见[部署边界](docs/REGISTERED_CASES_DEPLOYMENT_BOUNDARIES_zh-CN.md)。旧用户分子条件态比较Compute仍BLOCKED，与新普通单点分开。Git/项目ZIP提供来源可核对的源码，不包含完整安装环境；WSLc、镜像分发及源码公开保持分别记录。
+
+以下带日期的工程、条件态失败和原七任务记录保留各自历史范围；其中“Compute BLOCKED”指旧条件态比较服务，不撤销上方普通RHF入口的限定支持。
 
 [2026-10-07合作停止工程](docs/USER_MOLECULE_NATIVE_SHUTDOWN_ENGINEERING_20261007_zh-CN.md)：154项专项工程回归通过；两种零原生停止场景保存关闭回执，强杀反例的最终回执保持未知。四段开销各测3次，不外推真实求解容量。该2026-10-07增补无新增科学计算/预算，旧139次OPEN账本保留，不重试；Compute仍BLOCKED。
 
