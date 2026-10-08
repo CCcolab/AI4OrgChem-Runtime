@@ -1,4 +1,6 @@
-# AI4OrgChem Reproducible Runtime
+# AI4OrgChem Local Molecular Calculation Runtime
+
+The product goal is a local chemistry calculation platform for user-provided molecules, organized by input checks, single-point energies, orbital/density analysis and geometry tasks. Users need not understand the monograph's P01–P14 IDs; those remain in examples, validation and provenance details. See the [general molecular entry design](docs/GENERAL_CHEMISTRY_ENTRY_DESIGN_zh-CN.md). General user-selected molecule computation is not yet open; verified fixed examples and restricted Check/Report retain their recorded scope.
 
 Start with the [local entry guide](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md): read existing P01–P14 evidence, use restricted Check/Report, or run three new [fixed registered controls](docs/REGISTERED_CASES_zh-CN.md): P02 frozen-table statistics, P13 graph rules and energy-ledger arithmetic, and one small ethene P01 occupied-representation control. Their source lock, local image and actual acceptance records are separate from prior P14 images; see [deployment boundaries](docs/REGISTERED_CASES_DEPLOYMENT_BOUNDARIES_zh-CN.md). General user Compute remains BLOCKED. Git/project ZIP supply verifiable source, not an installed environment. WSLc, image distribution and source publication retain separate status records.
 

@@ -1,4 +1,6 @@
-# AI4OrgChem 可复算运行环境
+# AI4OrgChem 本地分子计算 Runtime
+
+项目目标是面向用户分子的本地化学计算平台：按分子输入、单点能量、轨道/密度分析和结构优化等研究目标提供服务。用户无需先了解专著P01—P14；这些编号保留在“示例与验证”及来源详情。新增通用入口的拆分、实施顺序和验收要求见[面向用户分子的入口设计](docs/GENERAL_CHEMISTRY_ENTRY_DESIGN_zh-CN.md)。目前通用自选分子计算尚未开放，已通过的固定示例及受限Check/Report范围分别记录。
 
 本地使用从 [本地Runtime入口](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md) 开始：查阅P01—P14既有证据、执行受限Check/Report，或选择三个新增[固定登记复算](docs/REGISTERED_CASES_zh-CN.md)：P02冻结表统计、P13图规则与账本、小体系P01乙烯占据表示控制。三个任务有独立来源锁、受控本地镜像和运行记录；实际部署状态见[部署边界](docs/REGISTERED_CASES_DEPLOYMENT_BOUNDARIES_zh-CN.md)。生产用户分子Compute仍BLOCKED。Git/项目ZIP提供来源可核对的源码，不包含完整安装环境；WSLc、镜像分发及源码公开保持分别记录。
 

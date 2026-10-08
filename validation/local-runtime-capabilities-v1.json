@@ -18,13 +18,13 @@
     },
     {
       "id": "p01-p14-catalog",
-      "name": "P01—P14证据目录",
+      "name": "示例与科学证据索引",
       "status": "PASS_SELECTED_LOCKED_BYTES_ONLY_SCIENCE_NOT_EXECUTED",
       "scope": "Explicit frozen source directory; selected locked bytes and historical record navigation only; scientific/arithmetic validation NOT_EXECUTED"
     },
     {
       "id": "p14-fixed-tasks",
-      "name": "登记P14计算任务",
+      "name": "固定条件态与结构响应示例",
       "status": "HISTORICAL_LOCAL_DOCKER_VERIFIED",
       "scope": "Existing seven-task runtime; five P14 calculation tasks use fixed protocol, not arbitrary XYZ. L4 saves checkpoints but cannot resume. L3/L4 strict offline NOT_EXECUTED",
       "record": "validation/oci-summary.json",
@@ -33,27 +33,27 @@
     },
     {
       "id": "p01-p13-recompute",
-      "name": "P01—P13重算适配",
+      "name": "其他固定案例重算适配",
       "status": "NOT_IMPLEMENTED_AS_GENERAL_RUNTIME_TASKS",
       "scope": "Only three fixed P02/P13/ethene P01 controls have dedicated adapters; no blanket P01-P13 or arbitrary-molecule recomputation selector"
     },
     {
       "id": "user-check",
-      "name": "用户分子Check",
+      "name": "分子输入检查（当前受限）",
       "status": "HISTORICAL_LOCAL_DOCKER_ENGINEERING_PASS",
       "scope": "Existing restricted input/AO metadata checks; no SCF/grid/full ERI; passed engineering Check does not qualify Compute",
       "record": "validation/user-molecule/w07-simulated-selftest-20261006.json"
     },
     {
       "id": "user-report",
-      "name": "用户分子Report与导出",
+      "name": "计算记录与报告（匹配服务格式）",
       "status": "HISTORICAL_HOST_ENGINEERING_PASS",
       "scope": "Existing service run schema and matching receipts; read-only with fresh derived export; not a universal legacy or root-diagnostic report reader",
       "record": "validation/user-molecule/report-engineering-20261006.json"
     },
     {
       "id": "user-compute",
-      "name": "用户分子Compute",
+      "name": "用户分子条件态比较（旧Compute）",
       "status": "BLOCKED",
       "scope": "No qualified conditional fixed-point endpoint and no full independent endpoint/research/resource acceptance; frozen final gates remain"
     },
@@ -138,7 +138,7 @@
     },
     {
       "id": "p02-statistics",
-      "name": "P02固定表统计",
+      "name": "冻结表值统计示例",
       "status": "PASS_SCOPED_FIXED_LOCAL_DOCKER_CASE",
       "scope": "Published frozen table-value recalculation; original PDF/CIF verification NOT_EXECUTED; no QM",
       "record": "validation/registered-cases/deployment-20261008.json",
@@ -147,7 +147,7 @@
     },
     {
       "id": "p13-graph-ledger",
-      "name": "P13固定图规则与账本",
+      "name": "分子图规则与能量账本示例",
       "status": "PASS_SCOPED_FIXED_LOCAL_DOCKER_CASE",
       "scope": "Original graph/RDKit formula rules and frozen energy ledger arithmetic; no new QM or PDF authentication",
       "record": "validation/registered-cases/deployment-20261008.json",
@@ -156,7 +156,7 @@
     },
     {
       "id": "p01-orbital-density",
-      "name": "P01小体系占据表示控制",
+      "name": "轨道局域化与密度不变性示例",
       "status": "PASS_SCOPED_FIXED_LOCAL_DOCKER_CASE",
       "scope": "One fixed ethene RHF/6-31G(d), Boys and PM occupied rotations; density/energy invariance only; no conditional SCF/general Compute",
       "record": "validation/registered-cases/deployment-20261008.json",
@@ -175,5 +175,12 @@
   "previous_verification_record_before_registered_cases": "validation/user-molecule/native-shutdown-engineering-20261007.json",
   "fixed_registered_tasks_enabled": true,
   "new_scientific_execution_scope": "ONE_FIXED_ETHENE_P01_RHF_AND_BOYS_PM_CONTROL; conditional NR=0; P02/P13 no QM",
-  "actual_acceptance_record": "validation/registered-cases/deployment-20261008.json"
+  "actual_acceptance_record": "validation/registered-cases/deployment-20261008.json",
+  "product_goal": "LOCAL_CHEMISTRY_CALCULATION_PLATFORM_FOR_USER_PROVIDED_MOLECULES",
+  "user_navigation": {
+    "primary": "Molecular input, task/method selection, resource admission, local execution and results",
+    "case_ids": "Optional examples/validation/provenance; not required knowledge for future ordinary user tasks",
+    "general_ordinary_single_point_service": "DESIGNED_NOT_IMPLEMENTED_OR_EXECUTED",
+    "design": "docs/GENERAL_CHEMISTRY_ENTRY_DESIGN_zh-CN.md"
+  }
 }
