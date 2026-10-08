@@ -586,5 +586,14 @@
   "new_scientific_runs_this_native_shutdown_round": 0,
   "previous_latest_engineering_increment_record_before_shutdown": "validation/user-molecule/root-native-engineering-20261007.json",
   "new_scientific_runs_scope": "Historical latest numerical increment at73e8dfd; this shutdown engineering round has0 new scientific processes",
-  "new_build_scope": "Historical r3 build; this shutdown engineering round has no image rebuild"
+  "new_build_scope": "Historical r3 build; this shutdown engineering round has no image rebuild",
+  "separate_fixed_registered_cases_20261008": {
+    "status": "PASS_THREE_FIXED_LOCAL_DOCKER_CASES_ONLY",
+    "record": "validation/registered-cases/deployment-20261008.json",
+    "image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
+    "new_ordinary_RHF_processes": 1,
+    "new_conditional_NR_calls": 0,
+    "general_user_compute": false,
+    "scope": "Separate fixed P02 table, P13 graph/ledger and ethene P01 occupied-representation controls; does not replace any historical conditional/root/shutdown record or reopen its budget"
+  }
 }

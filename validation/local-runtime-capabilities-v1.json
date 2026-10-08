@@ -13,7 +13,7 @@
     {
       "id": "local-selector",
       "name": "本地选择入口",
-      "status": "PASS_HOST_PS51_PS7_ENTRY_AND_TOY_SERVICE_ROUTING",
+      "status": "PASS_HOST_PS51_PS7_ENTRY_AND_FIXED_CASE_ROUTING",
       "scope": "Capabilities/List/Show/Review, thin Check/Report and explicit fixed Run routing; no automatic or arbitrary-molecule calculation"
     },
     {
@@ -139,32 +139,41 @@
     {
       "id": "p02-statistics",
       "name": "P02固定表统计",
-      "status": "IMPLEMENTED_ACCEPTANCE_NOT_EXECUTED",
+      "status": "PASS_SCOPED_FIXED_LOCAL_DOCKER_CASE",
       "scope": "Published frozen table-value recalculation; original PDF/CIF verification NOT_EXECUTED; no QM",
-      "record": "validation/registered-cases/deployment-20261008.json"
+      "record": "validation/registered-cases/deployment-20261008.json",
+      "image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+      "image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d"
     },
     {
       "id": "p13-graph-ledger",
       "name": "P13固定图规则与账本",
-      "status": "IMPLEMENTED_ACCEPTANCE_NOT_EXECUTED",
+      "status": "PASS_SCOPED_FIXED_LOCAL_DOCKER_CASE",
       "scope": "Original graph/RDKit formula rules and frozen energy ledger arithmetic; no new QM or PDF authentication",
-      "record": "validation/registered-cases/deployment-20261008.json"
+      "record": "validation/registered-cases/deployment-20261008.json",
+      "image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+      "image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d"
     },
     {
       "id": "p01-orbital-density",
       "name": "P01小体系占据表示控制",
-      "status": "IMPLEMENTED_ACCEPTANCE_NOT_EXECUTED",
+      "status": "PASS_SCOPED_FIXED_LOCAL_DOCKER_CASE",
       "scope": "One fixed ethene RHF/6-31G(d), Boys and PM occupied rotations; density/energy invariance only; no conditional SCF/general Compute",
-      "record": "validation/registered-cases/deployment-20261008.json"
+      "record": "validation/registered-cases/deployment-20261008.json",
+      "image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+      "image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d"
     }
   ],
-  "new_image_build_this_increment": "PENDING",
-  "new_scientific_execution_this_increment": 0,
+  "new_image_build_this_increment": "PASS_LOCAL_FIXED_CASE_CANDIDATE_ONLY",
+  "new_scientific_execution_this_increment": 1,
   "verification_record": "validation/registered-cases/deployment-20261008.json",
-  "local_engineering_verification": "154 scoped native/stop cases PASS and four fixed zero-native engineering probe cases; full W01-W07 and prior139-native science not rerun. Forced-kill final receipt unknown.",
+  "local_engineering_verification": "96 unique locked-image tests PASS/no skips under18 held native-denial bindings;95 host PASS+1host YAML case completed in image;50 source-reader regressions;8PS51/7 entry checks;3actual fixed cases PASS",
   "previous_verification_record_before_native": "validation/local-runtime-framework-20261007.json",
   "scientific_observation_record": "validation/user-molecule/root-native-diagnostic-20261007.json",
   "previous_verification_record_before_shutdown": "validation/user-molecule/root-native-engineering-20261007.json",
   "previous_new_scientific_execution_increment": 1,
-  "previous_verification_record_before_registered_cases": "validation/user-molecule/native-shutdown-engineering-20261007.json"
+  "previous_verification_record_before_registered_cases": "validation/user-molecule/native-shutdown-engineering-20261007.json",
+  "fixed_registered_tasks_enabled": true,
+  "new_scientific_execution_scope": "ONE_FIXED_ETHENE_P01_RHF_AND_BOYS_PM_CONTROL; conditional NR=0; P02/P13 no QM",
+  "actual_acceptance_record": "validation/registered-cases/deployment-20261008.json"
 }

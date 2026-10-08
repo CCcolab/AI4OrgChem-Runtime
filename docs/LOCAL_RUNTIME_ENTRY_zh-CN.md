@@ -82,7 +82,7 @@ PowerShell 7.3+可先验证旧固定Runtime构建入口，不接触引擎：
 ./scripts/build-wslc.ps1 -Engine docker -CheckOnly
 ```
 
-此检查可在干净Git或已验证准备目录使用；准备目录需要现有Python，必要时`-PythonExecutable`。它只准备`container/Dockerfile`的旧固定Runtime构建身份；**不准备新的用户分子镜像、其science.tar或依赖wheel**，也不代表实际构建成功。移除`-CheckOnly`会实际构建新镜像，需要用户自己的引擎/依赖条件，必须另行验收。准备目录的构建记录写入相邻新目录，保持来源字节不变。本轮未重建镜像。
+此检查可在干净Git或已验证准备目录使用；准备目录需要现有Python，必要时`-PythonExecutable`。它只准备`container/Dockerfile`的旧固定Runtime构建身份；**不准备新的用户分子镜像、其science.tar或依赖wheel**，也不代表实际构建成功。移除`-CheckOnly`会实际构建新镜像，需要用户自己的引擎/依赖条件，必须另行验收。准备目录的构建记录写入相邻新目录，保持来源字节不变。该旧来源准备轮未重建镜像；2026-10-08三个登记固定任务已另建候选并验收，不属于此旧构建命令。
 
 预检支持`-ExpectedRuntimeCommit`；准备目录另支持`-ExpectedManifestSha256`。预检不认证发布者，Git模式检查干净HEAD，准备目录模式另核验完整来源证明。没有引擎访问的预检不能标成OCI构建通过。
 

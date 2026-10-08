@@ -2,7 +2,7 @@
 
 本入口让用户在本地执行三个已登记的固定案例：重算发表表值统计、检查图规则与能量账本，或运行一次固定乙烯的占据表示控制。它不接收任意用户分子。
 
-本版是部署初版指南。三个入口的真实验收均为 **NOT_EXECUTED**；实现和文档不能代替实测。后续本地验收记录由本轮部署负责人补入，使用范围仍以对应记录为准。
+2026-10-08：三个固定任务已通过本地Docker候选的限定范围验收，镜像内96项工程测试全部通过。详见[实际验收报告](REGISTERED_CASES_ACCEPTANCE_20261008_zh-CN.md)。P02/P13不产生新量子计算；P01只验证固定乙烯同态占据表示控制。通用用户分子Compute仍BLOCKED。
 
 ## 1. 选择任务
 
@@ -18,14 +18,22 @@
 
 1. 在本轮隔离runtime工作区打开PowerShell，进入目录 `D:\AI4Science\ai4orgchem-runtime-workspaces\user-molecule\runtime`。
 2. 使用已有的Python 3.12+和可运行的本地Docker引擎。启动器兼容PowerShell 5.1，负责选择已有Python，不自动安装依赖。
-3. 使用本轮登记候选镜像及其本地身份记录 `validation/registered-cases/candidate-image.json`。启动器默认选取其中的不可变image ID；缺记录、来源不匹配或镜像不一致时应拒绝执行。初版指南不提供尚未发布的下载地址或镜像标签。
+3. 使用本轮登记候选镜像及其本地身份记录 `validation/registered-cases/candidate-image.json`。启动器默认选取其中的不可变image ID；缺记录、来源不匹配或镜像不一致时应拒绝执行。本机已具备登记镜像；没有公开下载地址。其他电脑仅取得Git/ZIP，不能据此假定同一镜像已安装。
 4. 输出放在独立运行根目录，例如 `D:\AI4Science\ai4orgchem-runtime-runs\registered`。不要选择原科研项目、runtime源码或science缓存目录作为输出。
 
-Git源码或ZIP包含程序和来源材料，不等于已准备好科学计算环境。新候选镜像的依赖来源和许可证材料仍在整理，当前只用于本地验收，镜像分发 **BLOCKED**。
+本机验收显式使用 `C:\Program Files\Docker\Docker\resources\bin\docker.exe`，以及现有 `C:\Users\chenx\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe`。若终端找不到工具，在下列命令末尾增加 `-DockerExecutable 'C:\Program Files\Docker\Docker\resources\bin\docker.exe'` 和 `-PythonExecutable '<现有Python完整路径>'`。启动器不会修改PATH或全局PowerShell执行策略。
+
+Git源码或ZIP包含程序和来源材料，不等于已准备好科学计算环境。构建依赖版本及wheel哈希已锁定；新增RDKit/Pillow及随包库的完整许可证/对应源码审查尚未闭合。候选用于本地固定任务，镜像分发 **BLOCKED**。构建配方复用本机既有r3基础镜像，不是任意电脑上可直接安装的完整软件包。
 
 ## 3. 执行一个固定任务
 
-按目的选择一条命令。每次只启动一个任务，启动器建立新运行目录并保留日志。
+按目的选择一条命令。每次只启动一个任务，启动器建立新运行目录并保留日志。也可通过统一本地入口选择命题：
+
+```powershell
+.\scripts\start-local-runtime.ps1 -Action Run -Proposition P02 -OutputRoot D:\AI4Science\ai4orgchem-runtime-runs\registered
+```
+
+将P02替换为P13或P01，范围仍是下列固定任务。P14沿用原运行指南；其余命题未增加计算入口。
 
 ```powershell
 .\scripts\start-registered-case.ps1 -Task p02-statistics -OutputRoot D:\AI4Science\ai4orgchem-runtime-runs\registered

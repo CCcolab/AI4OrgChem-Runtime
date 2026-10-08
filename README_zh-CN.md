@@ -2,7 +2,7 @@
 
 本地使用从 [本地Runtime入口](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md) 开始：查阅P01—P14既有证据、执行受限Check/Report，或选择三个新增[固定登记复算](docs/REGISTERED_CASES_zh-CN.md)：P02冻结表统计、P13图规则与账本、小体系P01乙烯占据表示控制。三个任务有独立来源锁、受控本地镜像和运行记录；实际部署状态见[部署边界](docs/REGISTERED_CASES_DEPLOYMENT_BOUNDARIES_zh-CN.md)。生产用户分子Compute仍BLOCKED。Git/项目ZIP提供来源可核对的源码，不包含完整安装环境；WSLc、镜像分发及源码公开保持分别记录。
 
-[最新合作停止工程](docs/USER_MOLECULE_NATIVE_SHUTDOWN_ENGINEERING_20261007_zh-CN.md)：154项专项工程回归通过；两种零原生停止场景保存关闭回执，强杀反例的最终回执保持未知。四段开销各测3次，不外推真实求解容量。本轮无新增科学计算/预算，旧139次OPEN账本保留，不重试；Compute仍BLOCKED。
+[2026-10-07合作停止工程](docs/USER_MOLECULE_NATIVE_SHUTDOWN_ENGINEERING_20261007_zh-CN.md)：154项专项工程回归通过；两种零原生停止场景保存关闭回执，强杀反例的最终回执保持未知。四段开销各测3次，不外推真实求解容量。该2026-10-07增补无新增科学计算/预算，旧139次OPEN账本保留，不重试；Compute仍BLOCKED。
 
 [此前框架验收](docs/LOCAL_RUNTIME_FRAMEWORK_20261007_zh-CN.md)：231个独立工程测试、22项PowerShell进程及12项来源/预检通过；该轮未新建科学预算。GitHub CI运行仍NOT_EXECUTED。
 
@@ -102,7 +102,7 @@ build-wslc.ps1 虽以 WSLc 命名，也支持显式 Docker 引擎。自行构建
 
 不纳入 GPU 训练、在线 Agent 服务、新命题、P09/P10 尚未开放入口或原著全文。运行任务不临时安装软件、更新源码或调用大模型 API。项目不新增科学判定，也不构成科学认证。
 
-专业复核阅读层见 [S1—S6 模块对应与服务卡片](docs/PROFESSIONAL_SERVICES_zh-CN.md)、[结果判读](docs/REVIEW_RESULTS_zh-CN.md)、[三类用户路径](docs/USER_PATHS_zh-CN.md)及[已有 Docker 记录示例](docs/examples/P14_REVIEW_20261002_zh-CN.md)。[复核报告](docs/templates/REVIEW_REPORT_zh-CN.md)与[反馈模板](docs/templates/FEEDBACK_zh-CN.md)供手工填写；自动汇总工具未实现，计算任务仍为七个。该文档增补与 `2460eef` 此前公开候选分开审阅，公开范围另行确认。
+专业复核阅读层见 [S1—S6 模块对应与服务卡片](docs/PROFESSIONAL_SERVICES_zh-CN.md)、[结果判读](docs/REVIEW_RESULTS_zh-CN.md)、[三类用户路径](docs/USER_PATHS_zh-CN.md)及[已有 Docker 记录示例](docs/examples/P14_REVIEW_20261002_zh-CN.md)。[复核报告](docs/templates/REVIEW_REPORT_zh-CN.md)与[反馈模板](docs/templates/FEEDBACK_zh-CN.md)供手工填写；自动汇总工具未实现，旧七任务入口保留；2026-10-08另增加三个固定P02/P13/P01入口，见上方指南。该文档增补与 `2460eef` 此前公开候选分开审阅，公开范围另行确认。
 
 首次向获授权仓库推送会触发现有 CI，执行构建/轻量测试并上传运行证据附件，保留七天；日志和附件须纳入公开范围审阅。CI 不推送镜像、不打正式标签、不发布 Release；当前实际运行仍为 NOT_EXECUTED。
 
