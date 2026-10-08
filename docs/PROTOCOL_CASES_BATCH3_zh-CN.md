@@ -106,3 +106,9 @@ P11 live 保存 `p11-state.json`、`optimized.xyz`、`density.npy` 和源进度�
 P12 的范围是 N12/N14/N16 受测三点，不是完整六点。旧同基组 CESE 分别为 `+2.887010、−15.947079、−0.339527 kcal/mol`，对应原著印刷值 `+2.59、−16.28、−0.65`；数值差异继续披露，不能声明逐数字复现。历史 N16 相对 CESE 为约2.103137%，原10%起点门槛保持；历史2011实现对齐仍 `NOT_ESTABLISHED`，电子态连续性不由现有 runner 证明。单态新优化不会自动组装完整新账本、改变分类、扩至N18/N20/N22或生成训练标签。
 
 本轮最终状态须由 root 按实际镜像、CI、metadata 与逐态记录填入 `PROTOCOL_CASES_BATCH3_ACCEPTANCE_zh-CN.md`。当前不宣称新的78态全部或任何一态已通过高成本科学验收。WSLc 继续 `BLOCKED_PAUSED`；GitHub Actions 为 `NOT_EXECUTED`；公开镜像分发为 `BLOCKED_LOCAL_ONLY`，没有公开推送、标签或 Release。
+
+## 本轮实际状态
+
+本地候选镜像已构建；第三批工程测试108项中107通过、1跳过；17＋61态真实AO/几何预检及两类账本通过，PS5.1账本启动器已验证。P11/P12新优化因资源不足BLOCKED，仍NOT_EXECUTED。详细记录见 [第三批验证报告](PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md)。
+
+完成同环境的新状态后，可运行 `scripts/assemble-high-cost-results.py --task P11或P12 --inputs <unit-ID到output目录映射.json> --output <全新外部目录>`，只读核验各态完成回执再组装；本轮只验证工程假数据，未执行新科学结果组装。

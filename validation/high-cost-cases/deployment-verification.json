@@ -1,0 +1,1917 @@
+{
+  "assembly_fake_engineering_tests": "PASS_ENGINEERING_ONLY",
+  "batch2_regression": {
+    "GitHub_Actions": "NOT_EXECUTED",
+    "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+    "duration_seconds": 3.4956317040196154,
+    "errors": 0,
+    "failures": 0,
+    "fake_guard_or_mock_live_calls_are_not_scientific_results": true,
+    "schema": "protocol-cases-local-engineering-ci-v1",
+    "scientific_lane": "NOT_EXECUTED_BY_THIS_RUNNER",
+    "skipped": [],
+    "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+    "status": "PASS",
+    "tests_run": 115
+  },
+  "candidate": {
+    "base_image_id": "sha256:0e0f2e3d4202a5ff30b762af8760d68d2be813da1313e2c8beeb6b44ed8fd999",
+    "base_rootfs_prefix_verified": true,
+    "build_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\build\\20261008T105501Z-27e4274f",
+    "clean_build_source": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\build\\20261008T105501Z-27e4274f\\source",
+    "dependencies_sha256": "ca5f5e8b6de0e95364383bb7481e091bb37595cc7e2668dd489eadb9e0b3bb3c",
+    "distribution": "BLOCKED_LOCAL_ONLY",
+    "full_high_cost_optimisation_validation": "NOT_EXECUTED",
+    "image_id": "sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc",
+    "profile_sha256": "0fa3a9205eaec088f704bfc4139c15a01ec5a3b684300f37015b7aa464282308",
+    "runtime_build_commit": "05308a1872d769aaa85e39adbafe7020e36358e6",
+    "schema": "high-cost-local-image-v1",
+    "source_sha256": "d8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322",
+    "tag": "ai4orgchem-runtime:high-cost-p11-p12-20261008-local"
+  },
+  "controls": [
+    {
+      "admission": {
+        "disk_free_bytes": 244976013312,
+        "does_not_modify_global_configuration": true,
+        "does_not_stop_other_processes": true,
+        "engine": {
+          "MemTotal": 16565334016,
+          "NCPU": 22
+        },
+        "guest": {
+          "available_bytes": 15351574528,
+          "total_bytes": 16565334016
+        },
+        "host": {
+          "available_bytes": 8568913920,
+          "source": "Windows GlobalMemoryStatusEx",
+          "total_bytes": 33945935872
+        },
+        "host_reserve_bytes": 536870912,
+        "reasons": [],
+        "resources": {
+          "cpus": 1,
+          "hard_wall_seconds": 180,
+          "memory_bytes": 1073741824,
+          "scratch_bytes_required": 1073741824,
+          "soft_wall_seconds": 120,
+          "threads": 1
+        },
+        "status": "PASS"
+      },
+      "case": "P11",
+      "container_removed": true,
+      "counts": {},
+      "engineering_counts": {},
+      "exit_code": 0,
+      "host_output": "{\"status\": \"PASS_SCOPED_HIGH_COST_LEDGER\", \"exit_code\": 0, \"records\": \"D:\\\\AI4Science\\\\ai4orgchem-runtime-deliveries\\\\20261008-high-cost-p11-p12\\\\controls\\\\20261008T105934Z-P11-9c00fd3263c94ae59c8a056abbb3d930\"}",
+      "mode": "ledger",
+      "preflight_unit_count": 0,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T105934Z-P11-9c00fd3263c94ae59c8a056abbb3d930",
+      "result_status": "PASS",
+      "status": "PASS_SCOPED_HIGH_COST_LEDGER",
+      "unit": null,
+      "worker_error": null,
+      "worker_started": true
+    },
+    {
+      "admission": {
+        "disk_free_bytes": 244975796224,
+        "does_not_modify_global_configuration": true,
+        "does_not_stop_other_processes": true,
+        "engine": {
+          "MemTotal": 16565334016,
+          "NCPU": 22
+        },
+        "guest": {
+          "available_bytes": 15340421120,
+          "total_bytes": 16565334016
+        },
+        "host": {
+          "available_bytes": 8756539392,
+          "source": "Windows GlobalMemoryStatusEx",
+          "total_bytes": 33945935872
+        },
+        "host_reserve_bytes": 536870912,
+        "reasons": [],
+        "resources": {
+          "cpus": 1,
+          "hard_wall_seconds": 180,
+          "memory_bytes": 1073741824,
+          "scratch_bytes_required": 1073741824,
+          "soft_wall_seconds": 120,
+          "threads": 1
+        },
+        "status": "PASS"
+      },
+      "case": "P12",
+      "container_removed": true,
+      "counts": {},
+      "engineering_counts": {},
+      "exit_code": 0,
+      "host_output": "{\"status\": \"PASS_SCOPED_HIGH_COST_LEDGER\", \"exit_code\": 0, \"records\": \"D:\\\\AI4Science\\\\ai4orgchem-runtime-deliveries\\\\20261008-high-cost-p11-p12\\\\controls\\\\20261008T105951Z-P12-17a0203addd14354a200f2dce2a30667\"}",
+      "mode": "ledger",
+      "preflight_unit_count": 0,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T105951Z-P12-17a0203addd14354a200f2dce2a30667",
+      "result_status": "PASS",
+      "status": "PASS_SCOPED_HIGH_COST_LEDGER",
+      "unit": null,
+      "worker_error": null,
+      "worker_started": true
+    },
+    {
+      "admission": {
+        "disk_free_bytes": 244975583232,
+        "does_not_modify_global_configuration": true,
+        "does_not_stop_other_processes": true,
+        "engine": {
+          "MemTotal": 16565334016,
+          "NCPU": 22
+        },
+        "guest": {
+          "available_bytes": 15338852352,
+          "total_bytes": 16565334016
+        },
+        "host": {
+          "available_bytes": 8847024128,
+          "source": "Windows GlobalMemoryStatusEx",
+          "total_bytes": 33945935872
+        },
+        "host_reserve_bytes": 536870912,
+        "reasons": [],
+        "resources": {
+          "cpus": 1,
+          "hard_wall_seconds": 180,
+          "memory_bytes": 1073741824,
+          "scratch_bytes_required": 1073741824,
+          "soft_wall_seconds": 120,
+          "threads": 1
+        },
+        "status": "PASS"
+      },
+      "case": "P11",
+      "container_removed": true,
+      "counts": {},
+      "engineering_counts": {
+        "coordinate_reconstruction": 10
+      },
+      "exit_code": 0,
+      "host_output": "{\"status\": \"PASS_SCOPED_HIGH_COST_PREFLIGHT\", \"exit_code\": 0, \"records\": \"D:\\\\AI4Science\\\\ai4orgchem-runtime-deliveries\\\\20261008-high-cost-p11-p12\\\\controls\\\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476\"}",
+      "mode": "preflight",
+      "preflight_unit_count": 17,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "result_status": "PASS",
+      "status": "PASS_SCOPED_HIGH_COST_PREFLIGHT",
+      "unit": null,
+      "worker_error": null,
+      "worker_started": true
+    },
+    {
+      "admission": {
+        "disk_free_bytes": 244974788608,
+        "does_not_modify_global_configuration": true,
+        "does_not_stop_other_processes": true,
+        "engine": {
+          "MemTotal": 16565334016,
+          "NCPU": 22
+        },
+        "guest": {
+          "available_bytes": 15341903872,
+          "total_bytes": 16565334016
+        },
+        "host": {
+          "available_bytes": 8819974144,
+          "source": "Windows GlobalMemoryStatusEx",
+          "total_bytes": 33945935872
+        },
+        "host_reserve_bytes": 536870912,
+        "reasons": [],
+        "resources": {
+          "cpus": 1,
+          "hard_wall_seconds": 180,
+          "memory_bytes": 1073741824,
+          "scratch_bytes_required": 1073741824,
+          "soft_wall_seconds": 120,
+          "threads": 1
+        },
+        "status": "PASS"
+      },
+      "case": "P12",
+      "container_removed": true,
+      "counts": {},
+      "engineering_counts": {},
+      "exit_code": 0,
+      "host_output": "{\"status\": \"PASS_SCOPED_HIGH_COST_PREFLIGHT\", \"exit_code\": 0, \"records\": \"D:\\\\AI4Science\\\\ai4orgchem-runtime-deliveries\\\\20261008-high-cost-p11-p12\\\\controls\\\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c\"}",
+      "mode": "preflight",
+      "preflight_unit_count": 61,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "result_status": "PASS",
+      "status": "PASS_SCOPED_HIGH_COST_PREFLIGHT",
+      "unit": null,
+      "worker_error": null,
+      "worker_started": true
+    },
+    {
+      "admission": {
+        "disk_free_bytes": 244974526464,
+        "does_not_modify_global_configuration": true,
+        "does_not_stop_other_processes": true,
+        "engine": {
+          "MemTotal": 16565334016,
+          "NCPU": 22
+        },
+        "guest": {
+          "available_bytes": 15337611264,
+          "total_bytes": 16565334016
+        },
+        "host": {
+          "available_bytes": 8929124352,
+          "source": "Windows GlobalMemoryStatusEx",
+          "total_bytes": 33945935872
+        },
+        "host_reserve_bytes": 2147483648,
+        "reasons": [
+          "HOST_AVAILABLE_MEMORY_PLUS_RESERVE_TOO_SMALL"
+        ],
+        "resources": {
+          "cpus": 8,
+          "hard_wall_seconds": 43200,
+          "memory_bytes": 8589934592,
+          "scratch_bytes_required": 21474836480,
+          "soft_wall_seconds": 43080,
+          "threads": 8
+        },
+        "status": "BLOCKED_RESOURCE_CAPACITY"
+      },
+      "case": "P11",
+      "container_removed": false,
+      "exit_code": 40,
+      "host_output": "{\"status\": \"BLOCKED_RESOURCE_CAPACITY\", \"exit_code\": 40, \"records\": \"D:\\\\AI4Science\\\\ai4orgchem-runtime-deliveries\\\\20261008-high-cost-p11-p12\\\\controls\\\\20261008T110041Z-P11B-benzene-G-34b9225dec8e49b8aa1a0de1792f306f\"}",
+      "mode": "live",
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110041Z-P11B-benzene-G-34b9225dec8e49b8aa1a0de1792f306f",
+      "status": "BLOCKED_RESOURCE_CAPACITY",
+      "unit": "P11B-benzene-G",
+      "worker_error": {
+        "message": "Resource admission refused: HOST_AVAILABLE_MEMORY_PLUS_RESERVE_TOO_SMALL",
+        "type": "ValueError"
+      },
+      "worker_started": false
+    },
+    {
+      "admission": {
+        "disk_free_bytes": 244974202880,
+        "does_not_modify_global_configuration": true,
+        "does_not_stop_other_processes": true,
+        "engine": {
+          "MemTotal": 16565334016,
+          "NCPU": 22
+        },
+        "guest": {
+          "available_bytes": 15337836544,
+          "total_bytes": 16565334016
+        },
+        "host": {
+          "available_bytes": 8823738368,
+          "source": "Windows GlobalMemoryStatusEx",
+          "total_bytes": 33945935872
+        },
+        "host_reserve_bytes": 2147483648,
+        "reasons": [
+          "GUEST_AVAILABLE_MEMORY_PLUS_RESERVE_TOO_SMALL",
+          "HOST_AVAILABLE_MEMORY_PLUS_RESERVE_TOO_SMALL"
+        ],
+        "resources": {
+          "cpus": 16,
+          "hard_wall_seconds": 43200,
+          "memory_bytes": 15032385536,
+          "scratch_bytes_required": 21474836480,
+          "soft_wall_seconds": 43080,
+          "threads": 16
+        },
+        "status": "BLOCKED_RESOURCE_CAPACITY"
+      },
+      "case": "P12",
+      "container_removed": false,
+      "exit_code": 40,
+      "host_output": "{\"status\": \"BLOCKED_RESOURCE_CAPACITY\", \"exit_code\": 40, \"records\": \"D:\\\\AI4Science\\\\ai4orgchem-runtime-deliveries\\\\20261008-high-cost-p11-p12\\\\controls\\\\20261008T110045Z-P12-N12-G-fdc64013cf8d419c8af0c477e01184ab\"}",
+      "mode": "live",
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110045Z-P12-N12-G-fdc64013cf8d419c8af0c477e01184ab",
+      "status": "BLOCKED_RESOURCE_CAPACITY",
+      "unit": "P12-N12-G",
+      "worker_error": {
+        "message": "Resource admission refused: GUEST_AVAILABLE_MEMORY_PLUS_RESERVE_TOO_SMALL,HOST_AVAILABLE_MEMORY_PLUS_RESERVE_TOO_SMALL",
+        "type": "ValueError"
+      },
+      "worker_started": false
+    }
+  ],
+  "full_P11_multistate_acceptance": "NOT_EXECUTED",
+  "full_P12_multisize_state_acceptance": "NOT_EXECUTED",
+  "limits": {
+    "GitHub_Actions": "NOT_EXECUTED",
+    "WSL_upgrade": "PAUSED",
+    "WSLc": "BLOCKED_PAUSED",
+    "checkpoint_resume_supported": false,
+    "general_user_conditional_compute": "BLOCKED",
+    "image_distribution": "BLOCKED_LOCAL_ONLY",
+    "original_P01_P14_recertified": false,
+    "scientific_rules_or_tolerances_changed": false,
+    "source_publication": "SEPARATE_CONFIRMATION_REQUIRED"
+  },
+  "local_engineering_ci": {
+    "GitHub_Actions": "NOT_EXECUTED",
+    "duration_seconds": 7.14901141700102,
+    "errors": 0,
+    "failures": 0,
+    "schema": "high-cost-local-engineering-ci-v1",
+    "scientific_lane": "NOT_EXECUTED_BY_THIS_RUNNER",
+    "skipped": [
+      "Actual P11 preflight runs only in the opted-in scientific container"
+    ],
+    "status": "PASS",
+    "tests_run": 108
+  },
+  "new_completed_state_assembly": "NOT_EXECUTED_NO_NEW_STATES",
+  "new_dependency_license_metadata": {
+    "geometric": {
+      "license": null,
+      "project_urls": null,
+      "source": "https://github.com/leeping/geomeTRIC"
+    },
+    "networkx": {
+      "license": null,
+      "project_urls": [
+        "Homepage, https://networkx.org/",
+        "Bug Tracker, https://github.com/networkx/networkx/issues",
+        "Documentation, https://networkx.org/documentation/stable/",
+        "Source Code, https://github.com/networkx/networkx"
+      ],
+      "source": null
+    },
+    "six": {
+      "license": "MIT",
+      "project_urls": null,
+      "source": "https://github.com/benjaminp/six"
+    }
+  },
+  "new_optimisations_started": 0,
+  "new_scientific_scf_calls": 0,
+  "not_measured": [
+    "New high-cost optimisation wall time/peak RSS/scratch peak",
+    "All 78 new endpoints/gradient stability/scientific classification",
+    "Cross-machine installation",
+    "Complete image redistribution license/source closure"
+  ],
+  "preservation": {
+    "all_76_original_captured_bytes_still_match": true,
+    "global_WSL_changes": false,
+    "high_cost_critical_files": 107,
+    "high_cost_source_sha256": "d8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322",
+    "old_science_computations_repeated": false,
+    "original_workspaces": [
+      {
+        "directory": "D:\\AI4Science\\AI4OrgChem",
+        "head": "ffde7b5a53800010f2bc326b812b3e5b4526d56c",
+        "modified_entries": 5,
+        "operations_in_this_turn": "READ_ONLY_GIT_AND_EXPLICIT_CAPTURE_NO_EXECUTION_OR_WRITES",
+        "status_sha256": "8b394ff9adafd57f22e44d57c523ff198b051881ad3c41616c559f3fcca449a0",
+        "untracked_entries": 411
+      },
+      {
+        "directory": "D:\\AI4Science\\ai4orgchem-runtime",
+        "head": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
+        "modified_entries": 0,
+        "operations_in_this_turn": "READ_ONLY_GIT_AND_EXPLICIT_CAPTURE_NO_EXECUTION_OR_WRITES",
+        "status_sha256": "b6df5f7efcd5608cbb584555061fe29d6755b22c561a372f5006bc86781683ca",
+        "untracked_entries": 34
+      }
+    ],
+    "recorded_at_utc": "2026-10-08T11:16:39.075114+00:00",
+    "second_batch_critical_lock_still_verifies": true,
+    "second_batch_source_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d"
+  },
+  "ps51_launcher": "PASS_SCOPED_LEDGER",
+  "recorded_at_utc": "2026-10-08T11:20:00.527880+00:00",
+  "schema": "high-cost-deployment-verification-v1",
+  "scope": "FIXED_P11A_4_P11B_13_AND_P12_N12_8_N14_23_N16_30",
+  "source_capture_count": 76,
+  "status": "LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED",
+  "units": [
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;ordinary-RKS",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "ordinary_rks",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "G",
+      "system": "furan",
+      "unit": "P11A-furan-G"
+    },
+    {
+      "case": "P11",
+      "dependencies": [
+        "P11A-furan-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-h/F/S-mask;no-ERI-deletion",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "furan_p09",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GL",
+      "system": "furan",
+      "unit": "P11A-furan-GL"
+    },
+    {
+      "case": "P11",
+      "dependencies": [
+        "P11A-furan-G",
+        "P11A-furan-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-h/F/S-mask;no-ERI-deletion",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "furan_p09",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GE1",
+      "system": "furan",
+      "unit": "P11A-furan-GE1"
+    },
+    {
+      "case": "P11",
+      "dependencies": [
+        "P11A-furan-G",
+        "P11A-furan-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-h/F/S-mask;no-ERI-deletion",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "furan_p09",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GE2",
+      "system": "furan",
+      "unit": "P11A-furan-GE2"
+    },
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;ordinary-RKS",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "ordinary_rks",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "G",
+      "system": "benzene",
+      "unit": "P11B-benzene-G"
+    },
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2007",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GL",
+      "system": "benzene",
+      "unit": "P11B-benzene-GL"
+    },
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2007",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GE1",
+      "system": "benzene",
+      "unit": "P11B-benzene-GE1"
+    },
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;ordinary-RKS",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "ordinary_rks",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "G",
+      "system": "cyanobenzene",
+      "unit": "P11B-cyanobenzene-G"
+    },
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2007",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GL_I",
+      "system": "cyanobenzene",
+      "unit": "P11B-cyanobenzene-GL_I"
+    },
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2007",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GE1",
+      "system": "cyanobenzene",
+      "unit": "P11B-cyanobenzene-GE1"
+    },
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2007",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GE2",
+      "system": "cyanobenzene",
+      "unit": "P11B-cyanobenzene-GE2"
+    },
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2007",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GE3",
+      "system": "cyanobenzene",
+      "unit": "P11B-cyanobenzene-GE3"
+    },
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2007",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GL_II",
+      "system": "cyanobenzene",
+      "unit": "P11B-cyanobenzene-GL_II"
+    },
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2007",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GE4",
+      "system": "cyanobenzene",
+      "unit": "P11B-cyanobenzene-GE4"
+    },
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2007",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GE5",
+      "system": "cyanobenzene",
+      "unit": "P11B-cyanobenzene-GE5"
+    },
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2007",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GE6",
+      "system": "cyanobenzene",
+      "unit": "P11B-cyanobenzene-GE6"
+    },
+    {
+      "case": "P11",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2007",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "state": "GE7",
+      "system": "cyanobenzene",
+      "unit": "P11B-cyanobenzene-GE7"
+    },
+    {
+      "case": "P12",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "ordinary_rks",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "G",
+      "system": "N12",
+      "unit": "P12-N12-G"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GL",
+      "system": "N12",
+      "unit": "P12-N12-GL"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        1
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N12",
+      "unit": "P12-N12-GE-g01-g02"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        2
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N12",
+      "unit": "P12-N12-GE-g01-g03"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        3
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N12",
+      "unit": "P12-N12-GE-g01-g04"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        5
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N12",
+      "unit": "P12-N12-GE-g01-g06"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        1,
+        3
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N12",
+      "unit": "P12-N12-GE-g02-g04"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        2,
+        3
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N12",
+      "unit": "P12-N12-GE-g03-g04-control"
+    },
+    {
+      "case": "P12",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "ordinary_rks",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "G",
+      "system": "N14",
+      "unit": "P12-N14-G"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GL",
+      "system": "N14",
+      "unit": "P12-N14-GL"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        1
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g01-g02"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        2
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g01-g03"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        3
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g01-g04"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        4
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g01-g05"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        5
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g01-g06"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        6
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g01-g07"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        1,
+        2
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g02-g03"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        1,
+        3
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g02-g04"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        1,
+        4
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g02-g05"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        1,
+        5
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g02-g06"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        1,
+        6
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g02-g07"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        2,
+        3
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g03-g04"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        2,
+        4
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g03-g05"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        2,
+        5
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g03-g06"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        2,
+        6
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g03-g07"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        3,
+        4
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g04-g05"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        3,
+        5
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g04-g06"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        3,
+        6
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g04-g07"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        4,
+        5
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g05-g06"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        4,
+        6
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g05-g07"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        5,
+        6
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N14",
+      "unit": "P12-N14-GE-g06-g07"
+    },
+    {
+      "case": "P12",
+      "dependencies": [],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "ordinary_rks",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "G",
+      "system": "N16",
+      "unit": "P12-N16-G"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": null,
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GL",
+      "system": "N16",
+      "unit": "P12-N16-GL"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        1
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g01-g02"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        2
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g01-g03"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        3
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g01-g04"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        4
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g01-g05"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        5
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g01-g06"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        6
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g01-g07"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        0,
+        7
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g01-g08"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        1,
+        2
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g02-g03"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        1,
+        3
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g02-g04"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        1,
+        4
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g02-g05"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        1,
+        5
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g02-g06"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        1,
+        6
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g02-g07"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        1,
+        7
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g02-g08"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        2,
+        3
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g03-g04"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        2,
+        4
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g03-g05"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        2,
+        5
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g03-g06"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        2,
+        6
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g03-g07"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        2,
+        7
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g03-g08"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        3,
+        4
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g04-g05"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        3,
+        5
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g04-g06"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        3,
+        6
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g04-g07"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        3,
+        7
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g04-g08"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        4,
+        5
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g05-g06"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        4,
+        6
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g05-g07"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        4,
+        7
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g05-g08"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        5,
+        6
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g06-g07"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        5,
+        7
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g06-g08"
+    },
+    {
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "new_optimisation": "NOT_EXECUTED",
+      "operator_id": "source2011",
+      "pair": [
+        6,
+        7
+      ],
+      "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
+      "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110017Z-P12-ff17f321d9ed40ba908ee524730d9b9c",
+      "state": "GE",
+      "system": "N16",
+      "unit": "P12-N16-GE-g07-g08"
+    }
+  ],
+  "unresolved": [
+    {
+      "host_available_bytes_observed": 8929124352,
+      "host_required_bytes": 10737418240,
+      "id": "HC-RESOURCE-P11",
+      "reasons": [
+        "HOST_AVAILABLE_MEMORY_PLUS_RESERVE_TOO_SMALL"
+      ],
+      "status": "BLOCKED"
+    },
+    {
+      "guest_available_bytes_observed": 15337836544,
+      "guest_required_bytes": 16106127360,
+      "host_available_bytes_observed": 8823738368,
+      "host_required_bytes": 17179869184,
+      "id": "HC-RESOURCE-P12",
+      "reasons": [
+        "GUEST_AVAILABLE_MEMORY_PLUS_RESERVE_TOO_SMALL",
+        "HOST_AVAILABLE_MEMORY_PLUS_RESERVE_TOO_SMALL"
+      ],
+      "status": "BLOCKED"
+    },
+    {
+      "id": "HC-LONG-RUN-SCOPE",
+      "scope": "No multi-day optimisation queue started; default phased validation after resources pass",
+      "status": "PENDING_USER_PREFERENCE"
+    }
+  ]
+}

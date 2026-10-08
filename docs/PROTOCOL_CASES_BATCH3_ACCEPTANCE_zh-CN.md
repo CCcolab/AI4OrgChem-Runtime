@@ -1,17 +1,17 @@
 # 第三批 P11/P12 验收合同与待验证登记
 
-**登记状态：`PENDING_ROOT_MEASURED_VERIFICATION`。** 本文件记录验收条件和当前待填实测项，不宣称新高成本科学计算通过，也不重新认证原 P11/P12。root 完成本轮实际验证后，应按原始日志、镜像ID和文件SHA更新下表；未执行项保持 `NOT_EXECUTED`，资源拒绝项保存实际原因。
+**登记状态：`LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED`。** 本文件记录验收条件和当前待填实测项，不宣称新高成本科学计算通过，也不重新认证原 P11/P12。root 完成本轮实际验证后，应按原始日志、镜像ID和文件SHA更新下表；未执行项保持 `NOT_EXECUTED`，资源拒绝项保存实际原因。
 
 | 项目 | 当前登记 | 更新所需证据 |
 | --- | --- | --- |
 | 固定优化接口 | `CANDIDATE_IMPLEMENTED_PENDING_MEASURED_VALIDATION` | 78态注册及源协议/参数核对 |
-| 76份科学来源捕获与源锁 | `PENDING_ROOT_MEASURED_VERIFICATION` | 实际捕获清单、逐文件SHA、tracked/blob/上下文记录 |
-| 新候选镜像身份与工程CI | `PENDING_ROOT_MEASURED_VERIFICATION` | 构建提交、精确镜像ID、锁SHA、真实CI输出 |
-| P11 ledger / 17态 preflight | `PENDING_ROOT_MEASURED_VERIFICATION` | 两种模式的资源、零kernel入口计数及清理闭合 |
-| P12 ledger / 61态 preflight | `PENDING_ROOT_MEASURED_VERIFICATION` | 三尺寸恒等式/对称控制、真实Mole/AO预检及清理闭合 |
+| 76份科学来源捕获与源锁 | `LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED` | 实际捕获清单、逐文件SHA、tracked/blob/上下文记录 |
+| 新候选镜像身份与工程CI | `LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED` | 构建提交、精确镜像ID、锁SHA、真实CI输出 |
+| P11 ledger / 17态 preflight | `LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED` | 两种模式的资源、零kernel入口计数及清理闭合 |
+| P12 ledger / 61态 preflight | `LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED` | 三尺寸恒等式/对称控制、真实Mole/AO预检及清理闭合 |
 | P11 本轮17态新优化 | `NOT_EXECUTED_PENDING_RESOURCE_ADMISSION` | 每态新轨迹、源数值资格和完整host/worker证据 |
 | P12 本轮8/23/30态新优化 | `NOT_EXECUTED_PENDING_RESOURCE_ADMISSION` | 每态新轨迹、构型/SCF/优化门禁及本轮前序证据 |
-| 最终资源阻塞及准入状态 | `PENDING_ROOT_MEASURED_VERIFICATION` | `admission.json` 的实际host/engine/guest/磁盘观察 |
+| 最终资源阻塞及准入状态 | `LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED` | `admission.json` 的实际host/engine/guest/磁盘观察 |
 | GitHub Actions | `NOT_EXECUTED` | 本轮无远端执行声明 |
 | WSLc / 镜像分发 | `BLOCKED_PAUSED` / `BLOCKED_LOCAL_ONLY` | 本轮不开放或发布 |
 
@@ -57,3 +57,5 @@ N12历史ledger复核包括15对覆盖、重数3、参考GL的C3残差，以及�
 - live前序的已完成host/worker receipts和只读输入快照：来源、依赖、profile、镜像一致，精确dependencies，原输出删除所属容器后仍保存；不能使用历史账本或仅通过预检的结果。
 
 失败/中断保留部分轨迹、checkpoint、异常、日志、资源和未闭合预算；不得删除失败后写成功记录。source capture以76份文件各自字节身份为准，dirty上下文HEAD不是全部文件的提交身份。geomeTRIC1.1.1仅进入新本地容器；原科研目录、旧runtime和第二批源锁字节保持。WSLc暂停、GitHub Actions未执行、公开镜像分发BLOCKED保持到另有真实授权与验收。
+
+本轮实际补验见 [第三批验证报告](PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md)：17/61真实零SCF预检、两类账本、最终镜像工程CI及PS5.1已执行。所有新优化仍NOT_EXECUTED，资源准入BLOCKED；本合同不将框架验收升级为科学完成。

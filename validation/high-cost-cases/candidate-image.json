@@ -1,0 +1,15 @@
+{
+  "schema": "high-cost-local-image-v1",
+  "image_id": "sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc",
+  "runtime_build_commit": "05308a1872d769aaa85e39adbafe7020e36358e6",
+  "source_sha256": "d8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322",
+  "dependencies_sha256": "ca5f5e8b6de0e95364383bb7481e091bb37595cc7e2668dd489eadb9e0b3bb3c",
+  "profile_sha256": "0fa3a9205eaec088f704bfc4139c15a01ec5a3b684300f37015b7aa464282308",
+  "base_image_id": "sha256:0e0f2e3d4202a5ff30b762af8760d68d2be813da1313e2c8beeb6b44ed8fd999",
+  "tag": "ai4orgchem-runtime:high-cost-p11-p12-20261008-local",
+  "clean_build_source": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\build\\20261008T105501Z-27e4274f\\source",
+  "build_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\build\\20261008T105501Z-27e4274f",
+  "base_rootfs_prefix_verified": true,
+  "distribution": "BLOCKED_LOCAL_ONLY",
+  "full_high_cost_optimisation_validation": "NOT_EXECUTED"
+}
