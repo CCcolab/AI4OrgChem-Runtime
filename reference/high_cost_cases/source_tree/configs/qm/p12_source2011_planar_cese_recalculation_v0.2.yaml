@@ -1,0 +1,135 @@
+schema_version: 2
+protocol_id: p12-source2011-planar-cese-recalculation/0.2
+effective_date: 2026-09-15
+status: n14_same_basis_execution_authorized
+proposition_id: P12
+lane_id: P12-R_SOURCE2011_SAME_BASIS_PLANAR_CESE
+relation_to_source_estimand: SAME_ESTIMAND_TARGET_UNDER_TEST
+original_program_code_used: false
+fit_to_published_values: false
+production_labels_allowed: false
+ai_training_allowed: false
+public_release_update_allowed: false
+
+authorization_scope:
+  authorized_systems: [12, 14]
+  authorized_states: [G, GL, GE]
+  stop_after: N14_ledger_and_quality_review
+  N16_or_larger_automatic_execution: false
+  classification_change_before_six_point_completion_forbidden: true
+
+N12_review:
+  author_acceptance_relayed_date: 2026-09-16
+  technical_integrity: PASS
+  source_direction_match: PASS
+  printed_numeric_match: FAIL
+  interpretation: direction_reproduced_numeric_difference_disclosed
+  CESE_kcal_mol: 2.887010155434692
+  source_CESE_kcal_mol: 2.59
+  CESE_per_pi_kcal_mol_electron: 0.24058417961955766
+  source_CESE_per_pi_kcal_mol_electron: 0.22
+  N14_execution_authorized: true
+  BLW_in_current_project_execution_scope: false
+
+author_clarification:
+  provenance: user_relayed_reply_from_monograph_author
+  received_date: 2026-09-15
+  statements:
+    - all_geometries_including_G_must_be_optimized_at_B3LYP_6_311G_2df_p
+    - all_CESE_geometries_must_remain_planar_for_pi_orbital_definition
+  archival_status: contextual_record_not_independently_authenticated_primary_artifact
+
+source:
+  monograph:
+    title: Questioning Fundamental Principles of Organic Chemistry
+    author: Zhong-Heng Yu
+    year: 2024
+    doi: 10.6084/m9.figshare.27261243
+    local_reference: artifacts/reference_sources/Questioning_Fundamental_Principles_of_Organic_Chemistry_2024.pdf
+    printed_pages: [295, 298, 299, 300, 301, 302, 303, 306, 307, 308, 309, 310]
+    figures: [9-4, 9-6, 9-7, 9-8, 9-9, 9-10, 9-13, 9-14]
+    tables: [9-5, 9-8]
+  method_article:
+    citation: Bao_P_Yu_ZH_J_Comput_Chem_2011_32_248_259
+    doi: 10.1002/jcc.21614
+
+estimand:
+  delta_EA: E_G_minus_E_GL
+  delta_EAm: E_GE_adjacent_pair_minus_E_GL
+  delta_EnAm: E_GE_nonadjacent_pair_minus_E_GL
+  ESE: delta_EA_minus_sum_delta_EAm
+  CESE: delta_EA_minus_sum_delta_EAm_minus_sum_delta_EnAm
+  expanded_CESE: E_G_minus_weighted_sum_E_GE_plus_total_pair_weight_minus_one_times_E_GL
+  sign_convention: positive_destabilizing_negative_stabilizing
+
+geometry_contract:
+  dimensionality: fully_planar
+  hard_constraint: all_atomic_z_coordinates_equal_zero_throughout_optimization
+  planar_constraint_does_not_impose_in_plane_bond_or_point_group_equality: true
+  configuration_identity_rule: preserve_each_source_bracket_label_and_inner_hydrogen_topology
+  seed_role: source_selected_planar_configuration_identity_only
+  optimization_engine: PySCF_geomeTRIC
+  method: B3LYPG
+  basis: 6-311g(2df,p)
+  phase: gas
+  charge: 0
+  multiplicity: 1
+  maximum_absolute_z_angstrom: 1.0e-8
+
+energy_contract:
+  engine: PySCF
+  pyscf_version: 2.14.0
+  method: B3LYPG
+  basis: 6-311g(2df,p)
+  grid_level: 3
+  density_fitting: false
+  spherical_basis: true
+  scf_tolerance_hartree: 1.0e-10
+  maximum_scf_cycles: 150
+  source_2011_operator:
+    matrix_rule: union_of_interfragment_pi_h_S_F_masks
+    exchange_rule: complete_permutation_closed_15_class_mask
+    class_ledger: configs/qm/p09_exchange_integral_classes_v0.1.yaml
+
+panel:
+  - {N: 12, series: 4n, role: before, configuration: "[12]-555", point_group_hint: D3h}
+  - {N: 14, series: 4n_plus_2, role: before, configuration: "[14]-665", point_group_hint: C2v}
+  - {N: 16, series: 4n, role: onset, configuration: "[16]-5555", point_group_hint: D4h}
+  - {N: 18, series: 4n_plus_2, role: onset, configuration: "[18]-444444", point_group_hint: D6h}
+  - {N: 20, series: 4n, role: after, configuration: "[20]-445445", point_group_hint: D2h}
+  - {N: 22, series: 4n_plus_2, role: after, configuration: "[22]-5444444", point_group_hint: C2v}
+
+pair_topology:
+  localized_pi_groups: alternating_CC_double_bonds_around_ring
+  GL: every_pi_group_separate
+  GE_pair: exactly_one_pair_merged_all_other_pi_groups_separate
+  adjacent_pair: cyclic_group_distance_equals_one
+  nonadjacent_pair: cyclic_group_distance_greater_than_one
+  verified_symmetry_multiplicity_only: true
+  failed_symmetry_control_action: compute_all_pairs_without_weighting
+
+output_contract:
+  seed_manifest: data/inputs/p12_source2011_planar_seeds_v0.1/manifest.json
+  ordinary_g_directory: data/processed/p12_source2011_same_basis_planar_g_v0.2
+  ordinary_g_report_directory: docs/reports/p12_source2011_same_basis_planar_g_v0.2
+  conditional_state_directory: data/processed/p12_source2011_same_basis_planar_states_v0.2
+  conditional_state_report_directory: docs/reports/p12_source2011_same_basis_planar_states_v0.2
+  N12_pair_orbit_manifest: data/processed/p12_source2011_same_basis_planar_states_v0.2/N12_GE_pair_orbits.json
+  N12_ledger: data/processed/p12_source2011_same_basis_n12_ledger_v0.2.json
+  N12_ledger_report: docs/reports/p12_source2011_same_basis_n12_ledger_v0.2.md
+  N12_pipeline_status: data/processed/p12_source2011_same_basis_planar_states_v0.2/N12_pipeline_status.json
+  N14_pair_orbit_manifest: data/processed/p12_source2011_same_basis_planar_states_v0.2/N14_GE_pair_orbits.json
+  N14_ledger: data/processed/p12_source2011_same_basis_n14_ledger_v0.2.json
+  N14_ledger_report: docs/reports/p12_source2011_same_basis_n14_ledger_v0.2.md
+  N14_pipeline_status: data/processed/p12_source2011_same_basis_planar_states_v0.2/N14_pipeline_status.json
+  run_log_directory: runs/p12_source2011_same_basis_v0.2
+
+stop_conditions:
+  - nonplanarity
+  - configuration_isomer_change
+  - ordinary_or_conditional_SCF_nonconvergence
+  - geometry_nonconvergence
+  - density_block_precondition_failure
+  - electron_count_failure
+  - energy_component_closure_failure
+  - estimand_identity_failure

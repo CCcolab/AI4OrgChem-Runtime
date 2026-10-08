@@ -1,0 +1,29 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+USER root
+ARG RUNTIME_COMMIT
+ARG SOURCE_SHA256
+ARG DEPENDENCY_SHA256
+ARG PROFILE_SHA256
+ARG BASE_IMAGE_ID
+LABEL ai4orgchem.high-cost.schema="high-cost-cases-v1" \
+ ai4orgchem.high-cost.runtime-commit=$RUNTIME_COMMIT \
+ ai4orgchem.high-cost.source-sha256=$SOURCE_SHA256 \
+ ai4orgchem.high-cost.dependency-sha256=$DEPENDENCY_SHA256 \
+ ai4orgchem.high-cost.profile-sha256=$PROFILE_SHA256 \
+ ai4orgchem.high-cost.base-image-id=$BASE_IMAGE_ID \
+ ai4orgchem.high-cost.distribution="BLOCKED_LOCAL_ONLY"
+ENV AI4ORGCHEM_HIGH_COST_COMMIT=$RUNTIME_COMMIT \
+ AI4ORGCHEM_HIGH_COST_SOURCE_SHA256=$SOURCE_SHA256 \
+ AI4ORGCHEM_HIGH_COST_DEPENDENCY_SHA256=$DEPENDENCY_SHA256
+COPY runtime/high_cost_cases /opt/runtime/runtime/high_cost_cases
+COPY reference/high_cost_cases /opt/runtime/reference/high_cost_cases
+COPY configs/high-cost-cases-v1.json /opt/runtime/configs/
+COPY locks/high-cost*.json /opt/runtime/locks/
+COPY scripts/*high-cost*.py scripts/start-high-cost-case.ps1 /opt/runtime/scripts/
+COPY tests/test_high_cost*.py /opt/runtime/tests/
+COPY container/Dockerfile.high-cost container/Dockerfile.high-cost.dockerignore container/Dockerfile.high-cost-dependencies /opt/runtime/container/
+RUN /opt/venv/bin/python -m pip check && chmod -R a-w /opt/runtime
+USER 10001:10001
+ENTRYPOINT ["/opt/venv/bin/python"]
+CMD ["-B","-m","runtime.high_cost_cases","--help"]

@@ -1,0 +1,22 @@
+name: ai4orgchem
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.13
+  - pip=26.1.2
+  - numpy=2.5.1
+  - scipy=1.18.0
+  - ase=3.29.0
+  - rdkit=2026.03.4
+  - cclib=1.8.1
+  - qcelemental=0.50.4
+  - qcengine=0.50.0
+  - xtb=6.7.1
+  - pip:
+      - pyscf==2.14.0
+      - h5py==3.16.0
+
+# Gate 0 reproducibility specification based on the locally cloned WSL2
+# environment. This is not yet a production lockfile and must not be used to
+# generate formal LFMO labels until Gate 0 and scientific regression tests pass.
+

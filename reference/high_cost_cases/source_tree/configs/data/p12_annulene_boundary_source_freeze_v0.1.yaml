@@ -1,0 +1,166 @@
+schema_version: 1
+protocol_id: p12-annulene-size-boundary/0.1
+effective_date: 2026-08-22
+status: frozen_bounded_execution_authorized
+decision: docs/adr/0040-freeze-p12-annulene-boundary-evidence-protocol.md
+proposition_id: P12
+original_program_code_used: false
+historical_quantum_program_reproduced: false
+production_labels_allowed: false
+ai_training_allowed: false
+
+source_native_lane:
+  monograph:
+    title: Questioning Fundamental Principles of Organic Chemistry
+    author: Zhongheng Yu
+    year: 2024
+    doi: 10.6084/m9.figshare.27261243
+    license: CC-BY-4.0
+    local_reference: artifacts/reference_sources/Questioning_Fundamental_Principles_of_Organic_Chemistry_2024.pdf
+    chapter: 9
+    printed_pages: [283, 303, 304, 305, 306, 308, 309, 310]
+    pdf_pages: [151, 161, 162, 163, 164, 165]
+    source_tables: [9-5, 9-8]
+  method_label: source_2011_published_numeric_ledger
+  electronic_structure_label: B3LYP/6-311G(2df,p)
+  geometry_label: respective_most_stable_planar_configuration_isomer
+  sign_convention:
+    positive: destabilizing
+    negative: stabilizing
+
+formulas:
+  ESE: delta_EA_minus_sum_delta_EAm
+  CESE: delta_EA_minus_sum_delta_EAm_minus_sum_delta_EnAm
+  normalized_CESE: CESE_divided_by_N_pi_electrons
+  local_increment_denominator: sum_delta_EAm_plus_sum_delta_EnAm
+  relative_CESE: absolute_CESE_divided_by_absolute_local_increment_denominator
+
+minimum_panel:
+  - N: 12
+    series: 4n
+    boundary_role: before
+    configuration: "[12]-555"
+    VDE_kcal_mol: 10.4
+    VDE_per_pi_kcal_mol_electron: 0.9
+    ESE_kcal_mol: 1.67
+    ESE_per_pi_kcal_mol_electron: 0.14
+    CESE_kcal_mol: 2.59
+    CESE_per_pi_kcal_mol_electron: 0.22
+    delta_EA_kcal_mol: 12.79
+    delta_EA_per_pi_kcal_mol_electron: 1.07
+    sum_delta_EAm_kcal_mol: 11.12
+    sum_delta_EnAm_kcal_mol: -0.92
+  - N: 14
+    series: 4n_plus_2
+    boundary_role: before
+    configuration: "[14]-665"
+    VDE_kcal_mol: -32.9
+    VDE_per_pi_kcal_mol_electron: -2.4
+    ESE_kcal_mol: -17.13
+    ESE_per_pi_kcal_mol_electron: -1.22
+    CESE_kcal_mol: -16.28
+    CESE_per_pi_kcal_mol_electron: -1.16
+    delta_EA_kcal_mol: -6.89
+    delta_EA_per_pi_kcal_mol_electron: -0.49
+    sum_delta_EAm_kcal_mol: 10.23
+    sum_delta_EnAm_kcal_mol: -0.85
+  - N: 16
+    series: 4n
+    boundary_role: onset
+    configuration: "[16]-5555"
+    VDE_kcal_mol: 10.1
+    VDE_per_pi_kcal_mol_electron: 0.6
+    ESE_kcal_mol: -1.84
+    ESE_per_pi_kcal_mol_electron: -0.12
+    CESE_kcal_mol: -0.65
+    CESE_per_pi_kcal_mol_electron: -0.04
+    delta_EA_kcal_mol: 15.16
+    delta_EA_per_pi_kcal_mol_electron: 0.95
+    sum_delta_EAm_kcal_mol: 17.00
+    sum_delta_EnAm_kcal_mol: -1.19
+  - N: 18
+    series: 4n_plus_2
+    boundary_role: onset
+    configuration: "[18]-444444"
+    VDE_kcal_mol: -17.8
+    VDE_per_pi_kcal_mol_electron: -1.0
+    ESE_kcal_mol: -11.89
+    ESE_per_pi_kcal_mol_electron: -0.66
+    CESE_kcal_mol: -11.17
+    CESE_per_pi_kcal_mol_electron: -0.62
+    delta_EA_kcal_mol: 16.66
+    delta_EA_per_pi_kcal_mol_electron: 0.93
+    sum_delta_EAm_kcal_mol: 28.55
+    sum_delta_EnAm_kcal_mol: -0.73
+  - N: 20
+    series: 4n
+    boundary_role: after
+    configuration: "[20]-445445"
+    VDE_kcal_mol: 13.7
+    VDE_per_pi_kcal_mol_electron: 0.7
+    ESE_kcal_mol: -3.10
+    ESE_per_pi_kcal_mol_electron: -0.16
+    CESE_kcal_mol: -1.51
+    CESE_per_pi_kcal_mol_electron: -0.07
+    delta_EA_kcal_mol: 22.11
+    delta_EA_per_pi_kcal_mol_electron: 1.11
+    sum_delta_EAm_kcal_mol: 25.21
+    sum_delta_EnAm_kcal_mol: -1.59
+  - N: 22
+    series: 4n_plus_2
+    boundary_role: after
+    configuration: "[22]-5444444"
+    VDE_kcal_mol: -23.4
+    VDE_per_pi_kcal_mol_electron: -1.1
+    ESE_kcal_mol: -11.19
+    ESE_per_pi_kcal_mol_electron: -0.51
+    CESE_kcal_mol: -9.40
+    CESE_per_pi_kcal_mol_electron: -0.42
+    delta_EA_kcal_mol: 17.78
+    delta_EA_per_pi_kcal_mol_electron: 0.81
+    sum_delta_EAm_kcal_mol: 28.97
+    sum_delta_EnAm_kcal_mol: -1.79
+
+source_claim_tests:
+  four_n:
+    before_N: 12
+    onset_N: 16
+    after_N: 20
+    before_requires_CESE_positive: true
+    onset_and_after_max_relative_CESE: 0.10
+  four_n_plus_2:
+    before_N: 14
+    onset_N: 18
+    after_N: 22
+    before_requires_delta_EA_negative: true
+    onset_and_after_require_delta_EA_positive: true
+    onset_and_after_require_CESE_negative: true
+    onset_and_after_relative_CESE_interval: [0.30, 0.45]
+  VDE_huckel_alternation_required: true
+
+independent_lane:
+  citation: Van_Nyvel_Alonso_Sola_ChemSci_2025_16_5613
+  doi: 10.1039/D4SC08225G
+  url: https://pubs.rsc.org/en/content/articlehtml/2025/sc/d4sc08225g
+  system_scope: neutral_and_charged_singlet_and_triplet_annulenes_N_12_to_66
+  comparison_scope: neutral_singlet_energetic_size_trend_only
+  independent_estimand: aromatic_stabilization_energy_hyperhomodesmotic_ISE_II
+  qualitative_claim: aromatic_and_antiaromatic_energetic_difference_decreases_with_size
+  stated_neutral_energetic_nonaromatic_boundary: N_greater_than_30
+  same_estimand_as_CESE: false
+
+acceptance:
+  rounded_energy_identity_tolerance_kcal_mol: 0.02
+  rounded_per_pi_tolerance_kcal_mol_electron: 0.01
+  source_panel_size: 6
+  exact_onset_must_not_be_declared_independently_reproduced: true
+
+final_verdict_contract:
+  verdict: P12_PARTIALLY_CONSISTENT_QUALITATIVE_BOUNDARY_CONSISTENT_EXACT_ONSET_NOT_DIRECTLY_COMPARABLE
+  relation_to_monograph: partially_consistent_qualitative_boundary_consistent_exact_onset_not_directly_comparable
+  legacy_verdict_v0_1: P12_PARTIALLY_CONSISTENT_QUALITATIVE_BOUNDARY_CONSISTENT_EXACT_ONSET_CROSS_ESTIMATOR_INCONSISTENT
+  cross_estimator_relation: not_directly_comparable
+  same_estimand_inconsistency_claimed: false
+  completion_class: scoped_proposition_partially_supported
+  production_label: false
+  training_eligible: false

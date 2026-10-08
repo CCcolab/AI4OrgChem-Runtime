@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+  "protocol_path": "configs/qm/p12_source2011_planar_cese_recalculation_v0.2.yaml",
+  "gate": "P12-R3 N12 source-state pilot",
+  "verdict": "PASS_N12_R3_DIRECTION_REPRODUCED_WITH_DISCLOSED_NUMERIC_DEVIATION",
+  "configuration": "[12]-555",
+  "state_count": 7,
+  "ordinary_state_count": 1,
+  "conditional_state_count": 6,
+  "GE_representative_count": 5,
+  "all_pair_count_after_multiplicity": 15,
+  "ledger": {
+    "delta_EA_kcal_mol": 13.237141505979704,
+    "sum_delta_EAm_kcal_mol": 11.383954975853449,
+    "ESE_kcal_mol": 1.853186530126255,
+    "sum_delta_EnAm_kcal_mol": -1.033823625308437,
+    "CESE_kcal_mol": 2.887010155434692,
+    "CESE_per_pi_kcal_mol_electron": 0.24058417961955766
+  },
+  "source_printed_values": {
+    "delta_EA_kcal_mol": 12.79,
+    "sum_delta_EAm_kcal_mol": 11.12,
+    "ESE_kcal_mol": 1.67,
+    "sum_delta_EnAm_kcal_mol": -0.92,
+    "CESE_kcal_mol": 2.59,
+    "CESE_per_pi_kcal_mol_electron": 0.22
+  },
+  "recalculation_minus_source": {
+    "delta_EA_kcal_mol": 0.4471415059797046,
+    "sum_delta_EAm_kcal_mol": 0.2639549758534496,
+    "ESE_kcal_mol": 0.18318653012625497,
+    "sum_delta_EnAm_kcal_mol": -0.11382362530843693,
+    "CESE_kcal_mol": 0.297010155434692,
+    "CESE_per_pi_kcal_mol_electron": 0.020584179619557663
+  },
+  "pair_rows": [
+    {
+      "state_id": "N12_GE_g01_g02",
+      "representative_zero_based": [
+        0,
+        1
+      ],
+      "pair_class": "adjacent",
+      "cyclic_group_distance": 1,
+      "multiplicity": 3,
+      "GE_energy_hartree": -464.4894188348112,
+      "delta_EA_pair_kcal_mol": 3.1551182288732376,
+      "weighted_delta_EA_pair_kcal_mol": 9.465354686619714
+    },
+    {
+      "state_id": "N12_GE_g01_g03",
+      "representative_zero_based": [
+        0,
+        2
+      ],
+      "pair_class": "nonadjacent",
+      "cyclic_group_distance": 2,
+      "multiplicity": 3,
+      "GE_energy_hartree": -464.4948133611541,
+      "delta_EA_pair_kcal_mol": -0.22999815938661863,
+      "weighted_delta_EA_pair_kcal_mol": -0.6899944781598559
+    },
+    {
+      "state_id": "N12_GE_g01_g04",
+      "representative_zero_based": [
+        0,
+        3
+      ],
+      "pair_class": "nonadjacent",
+      "cyclic_group_distance": 3,
+      "multiplicity": 3,
+      "GE_energy_hartree": -464.4944772232959,
+      "delta_EA_pair_kcal_mol": -0.019068468775764465,
+      "weighted_delta_EA_pair_kcal_mol": -0.057205406327293394
+    },
+    {
+      "state_id": "N12_GE_g01_g06",
+      "representative_zero_based": [
+        0,
+        5
+      ],
+      "pair_class": "adjacent",
+      "cyclic_group_distance": 1,
+      "multiplicity": 3,
+      "GE_energy_hartree": -464.4934276743636,
+      "delta_EA_pair_kcal_mol": 0.6395334297445789,
+      "weighted_delta_EA_pair_kcal_mol": 1.9186002892337368
+    },
+    {
+      "state_id": "N12_GE_g02_g04",
+      "representative_zero_based": [
+        1,
+        3
+      ],
+      "pair_class": "nonadjacent",
+      "cyclic_group_distance": 2,
+      "multiplicity": 3,
+      "GE_energy_hartree": -464.49459909042514,
+      "delta_EA_pair_kcal_mol": -0.09554124694042924,
+      "weighted_delta_EA_pair_kcal_mol": -0.2866237408212877
+    }
+  ],
+  "state_audits": {
+    "G": {
+      "xyz_sha256": "4404cad3f5e292f779dc6c72c7661027f634d885d4e1b587696f9806dd1e8f04",
+      "density_sha256": null,
+      "expected_electron_count": 84,
+      "physical_metric_electron_count": 83.99999999999999,
+      "closed_shell_idempotency_relative_residual": 3.9012444621509786e-14,
+      "recorded_energy_hartree": -464.4733521080225,
+      "recomputed_energy_hartree": -464.4733521080243,
+      "energy_closure_residual_hartree": 1.8189894035458565e-12
+    },
+    "GL": {
+      "result_path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N12_GL.json",
+      "result_sha256": "0eaa1cbf5731140bb37407c2d0bbc17e1cd18bf9fb0113de2af3d72acda3c02c",
+      "xyz_sha256": "070f14d243610897277ebd3b5aeb5788f26e9eebf5cc9f0d67f32e1e8e7f293e",
+      "density_sha256": "a868aef8b4743de96a0318876b6cc132e0b62f9960703403103c0faf08f8fe1c",
+      "expected_electron_count": 84,
+      "density_block_residual": 3.737250410653033e-13,
+      "masked_metric_electron_count": 84.00000000000068,
+      "closed_shell_idempotency_relative_residual": 3.667908349492241e-13,
+      "recorded_energy_hartree": -464.49444683575666,
+      "recomputed_energy_hartree": -464.49444683575257,
+      "energy_closure_residual_hartree": 4.092726157978177e-12
+    },
+    "N12_GE_g01_g02": {
+      "result_path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N12_GE_g01_g02.json",
+      "result_sha256": "fef681f6e8abe95ee2ac0a2a0e55e53de25db1c17e349f27870b2c1dd5a92ec5",
+      "xyz_sha256": "10f48c63ac42635fac423e0a479ead88eaecd2f2d1c8f49055096e1db64a4fdc",
+      "density_sha256": "12ace1895de84dae81fd23c798a9cadfafc1c83ffc3ea8792307da076f010ef4",
+      "expected_electron_count": 84,
+      "density_block_residual": 3.60730295959301e-13,
+      "masked_metric_electron_count": 83.9999999999984,
+      "closed_shell_idempotency_relative_residual": 3.383012032101178e-13,
+      "recorded_energy_hartree": -464.4894188348112,
+      "recomputed_energy_hartree": -464.48941883480916,
+      "energy_closure_residual_hartree": 2.0463630789890885e-12
+    },
+    "N12_GE_g01_g03": {
+      "result_path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N12_GE_g01_g03.json",
+      "result_sha256": "232b3c134871632b500151b1caa089137dfb2daca2b23f4db640b97438fd48db",
+      "xyz_sha256": "640c51ae025eaa98eda5f2558f677846462d1e90fc0ec2d7eb6efcb7ad9dda92",
+      "density_sha256": "2fca7ac2b1c84049502993d719a6063c76af4efc958538b1968bdf0528d2cedc",
+      "expected_electron_count": 84,
+      "density_block_residual": 3.227621993442854e-13,
+      "masked_metric_electron_count": 83.99999999999972,
+      "closed_shell_idempotency_relative_residual": 3.487481573455725e-13,
+      "recorded_energy_hartree": -464.4948133611541,
+      "recomputed_energy_hartree": -464.4948133611531,
+      "energy_closure_residual_hartree": 1.0231815394945443e-12
+    },
+    "N12_GE_g01_g04": {
+      "result_path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N12_GE_g01_g04.json",
+      "result_sha256": "0b452378e8511cfae3aaa8fadbce76739e3f68d10a9c24bf1fa43853ab927dc7",
+      "xyz_sha256": "8792b86b6fc59e7f9468131611688b6df4ed0ae5fbd53a97306a38f214d9e333",
+      "density_sha256": "d39d1afeee03a22bc5dcc0b69060c0c0cdd088ea83855292a9ac72b3a9e93f64",
+      "expected_electron_count": 84,
+      "density_block_residual": 3.894672539567883e-13,
+      "masked_metric_electron_count": 83.99999999999945,
+      "closed_shell_idempotency_relative_residual": 3.673095912708545e-13,
+      "recorded_energy_hartree": -464.4944772232959,
+      "recomputed_energy_hartree": -464.4944772232951,
+      "energy_closure_residual_hartree": 7.958078640513122e-13
+    },
+    "N12_GE_g01_g06": {
+      "result_path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N12_GE_g01_g06.json",
+      "result_sha256": "a6b95506c9d15448307b139469b2aa8a0f76ef2cae2a159a0d5849fe81f62c1f",
+      "xyz_sha256": "10ec27d1b88571fd43191c307559f4fb26f6437caabbce6b551d4c48d5de4853",
+      "density_sha256": "700eaa89c122923bf037c3eeed0fcabb50e4e3063c9ececb9f923494855b335b",
+      "expected_electron_count": 84,
+      "density_block_residual": 1.9949444495805647e-13,
+      "masked_metric_electron_count": 83.99999999999987,
+      "closed_shell_idempotency_relative_residual": 4.4511529554763956e-13,
+      "recorded_energy_hartree": -464.4934276743636,
+      "recomputed_energy_hartree": -464.49342767436553,
+      "energy_closure_residual_hartree": 1.9326762412674725e-12
+    },
+    "N12_GE_g02_g04": {
+      "result_path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N12_GE_g02_g04.json",
+      "result_sha256": "1a17f9618959a6bd1df78b1bed7a7ca33fa64f32fd81beb028628d129fcebf8d",
+      "xyz_sha256": "666ec43941d09598bf706d46b431629861bb36843d4b0ecca1738b72d4884494",
+      "density_sha256": "5ad7e7eca14d52f56f7bb18bd71e0af92d23aaa86773ba99479fa7f59c33f379",
+      "expected_electron_count": 84,
+      "density_block_residual": 3.285640785766243e-13,
+      "masked_metric_electron_count": 84.00000000000055,
+      "closed_shell_idempotency_relative_residual": 1.4221070198214757e-12,
+      "recorded_energy_hartree": -464.49459909042514,
+      "recomputed_energy_hartree": -464.4945990904257,
+      "energy_closure_residual_hartree": 5.684341886080801e-13
+    },
+    "N12_GE_g03_g04_symmetry_control": {
+      "result_path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N12_GE_g03_g04.json",
+      "result_sha256": "d025963170de78ec254bc75bfecc14160985cb7c9eca4f2d5d69458813999e8c",
+      "xyz_sha256": "803c1c577afeac3d53ae16ae97d416ab8a469c8497a614434c70024fe333a25b",
+      "density_sha256": "1a0ba7a117c1d57ed8af7496405c6e364419d83ecf3ca317c95dee583cbb61a0",
+      "expected_electron_count": 84,
+      "density_block_residual": 5.715500147876366e-13,
+      "masked_metric_electron_count": 84.00000000000048,
+      "closed_shell_idempotency_relative_residual": 2.9770473325206404e-13,
+      "recorded_energy_hartree": -464.4894169296065,
+      "recomputed_energy_hartree": -464.4894169296091,
+      "energy_closure_residual_hartree": 2.6147972675971687e-12
+    }
+  },
+  "checks": {
+    "pair_orbits_cover_all_15_pairs_once": true,
+    "pair_orbit_multiplicities_sum_to_15": true,
+    "adjacent_multiplicity_is_6": true,
+    "nonadjacent_multiplicity_is_9": true,
+    "GL_passed": true,
+    "N12_GE_g01_g02_passed": true,
+    "N12_GE_g01_g03_passed": true,
+    "N12_GE_g01_g04_passed": true,
+    "N12_GE_g01_g06_passed": true,
+    "N12_GE_g02_g04_passed": true,
+    "symmetry_control_state_passed": true,
+    "symmetry_control_energy_close": true,
+    "symmetry_control_geometry_close": true,
+    "all_conditional_density_blocks_close": true,
+    "all_conditional_electron_counts_close": true,
+    "all_conditional_idempotency_residuals_close": true,
+    "all_conditional_energy_closures_close": true,
+    "G_electron_count_closes": true,
+    "G_idempotency_residual_closes": true,
+    "G_energy_closure_closes": true,
+    "source_N12_CESE_sign_reproduced": true
+  },
+  "technical_gate_passed": true,
+  "source_direction_reproduced": true,
+  "printed_numeric_rounding_reproduced": false,
+  "same_estimand_target_under_test": true,
+  "exact_numeric_reproduction_claimed": false,
+  "public_P12_classification_before_R5": "partially_consistent",
+  "classification_change_allowed": false,
+  "N14_execution_automatically_started": false
+}

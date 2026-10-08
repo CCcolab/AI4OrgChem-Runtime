@@ -1,0 +1,122 @@
+schema_version: 1
+protocol_id: p11-substituted-benzene-effect/0.1
+effective_date: 2026-08-21
+status: frozen_execution_authorized
+specification: docs/theory/p11_substituted_benzene_effect_protocol_v0.1.md
+source_mapping: docs/theory/p11_source_claim_mapping_v0.1.md
+original_program_code_used: false
+proposition_id: P11
+subtarget: P11-B_substituent_effect_separation
+
+system:
+  identity: cyanobenzene
+  formula: C7H5N
+  charge: 0
+  multiplicity: 1
+  phase: gas
+  geometry_role: figure_7_heavy_bond_source_proxy_not_historical_cartesian_identity
+
+source_claim:
+  ESE_SB_formula: delta_EA_minus_delta_EA1_minus_delta_EA2_minus_delta_EA3
+  ESE_Ph_formula: delta_EA7_minus_delta_EA4_minus_delta_EA5_minus_delta_EA6
+  conjugative_effect_formula: ESE_SB_minus_ESE_Ph
+  inductive_effect_formula: ESE_Ph_minus_ESE_benzene
+  directions:
+    conjugative_effect: positive
+    inductive_effect: positive
+  published_values_kcal_mol:
+    benzene_ESE: -39.0
+    cyanobenzene_ESE_SB: -37.3
+    cyanobenzene_ESE_Ph: -38.5
+    conjugative_effect: 1.2
+    inductive_effect: 0.49
+  fit_targets: false
+
+electronic_structure:
+  engine: pyscf
+  method: B3LYP
+  pyscf_xc: B3LYPG
+  basis: 6-31g(d)
+  gaussian_style_functional_convention_required: true
+  grid_level: 3
+  scf_tolerance_hartree: 1.0e-10
+  maximum_scf_cycles: 120
+  maximum_memory_mb: 6000
+
+state_contract:
+  implementation_semantics: source_2007_Fock_one_electron_overlap_mask_without_ERI_deletion
+  atom_indices_zero_based:
+    ring: {C1: 0, C2: 1, C3: 2, C4: 3, C5: 4, C6: 5}
+    substituent: {C7: 6, N8: 7}
+  SB_branch:
+    fragments: {A: [C7, N8, C1, C2], B: [C3, C4], C: [C5, C6]}
+    G: ordinary_unmasked_ground_state
+    GL_I: A_B_C_mutually_localized
+    GE1: A_B_permitted_C_localized
+    GE2: A_C_permitted_B_localized
+    GE3: B_C_permitted_A_localized
+  Ph_branch:
+    fragments: {X: [C7, N8], A: [C1, C2], B: [C3, C4], C: [C5, C6]}
+    GL_II: X_A_B_C_mutually_localized
+    GE4: A_B_permitted_X_C_localized
+    GE5: A_C_permitted_X_B_localized
+    GE6: B_C_permitted_X_A_localized
+    GE7: complete_ring_permitted_X_localized
+
+geometry:
+  reconstruction: source_figure_7_heavy_bonds_with_minimum_angular_distortion
+  planar: true
+  target_ring_angle_degrees: 120.0
+  fixed_CH_angstrom: 1.0866
+  fixed_cyano_CN_angstrom: 1.1600
+  ring_bond_fit_tolerance_angstrom: 2.0e-5
+  states:
+    G:     {C1_X: 1.4346, ring: [1.4051, 1.3952, 1.3970, 1.3971, 1.3925, 1.4051]}
+    GL_I:  {C1_X: 1.4339, ring: [1.3420, 1.4500, 1.3327, 1.4500, 1.3324, 1.4519]}
+    GE1:   {C1_X: 1.4252, ring: [1.3503, 1.4652, 1.3403, 1.4548, 1.3376, 1.4557]}
+    GE2:   {C1_X: 1.4356, ring: [1.3464, 1.4536, 1.3380, 1.4540, 1.3363, 1.4826]}
+    GE3:   {C1_X: 1.4341, ring: [1.3479, 1.4542, 1.3383, 1.4727, 1.3381, 1.4561]}
+    GL_II: {C1_X: 1.4207, ring: [1.3364, 1.4543, 1.3327, 1.4503, 1.3325, 1.4447]}
+    GE4:   {C1_X: 1.4118, ring: [1.3444, 1.4697, 1.3385, 1.4567, 1.3378, 1.4470]}
+    GE5:   {C1_X: 1.4251, ring: [1.3407, 1.4580, 1.3383, 1.4545, 1.3373, 1.4763]}
+    GE6:   {C1_X: 1.4213, ring: [1.3423, 1.4586, 1.3384, 1.4731, 1.3380, 1.4488]}
+    GE7:   {C1_X: 1.4192, ring: [1.3994, 1.3941, 1.3965, 1.3964, 1.3941, 1.3995]}
+
+conditional_scf:
+  maximum_cycles: 120
+  density_tolerance: 2.0e-8
+  energy_tolerance_hartree: 1.0e-10
+  diis_start_cycle: 2
+  diis_space: 8
+  damping_cycles: 2
+  damping: 0.20
+
+acceptance:
+  electron_count: 54.0
+  electron_count_tolerance: 1.0e-7
+  matrix_zero_tolerance: 1.0e-12
+  energy_component_closure_hartree: 1.0e-10
+  commutator_frobenius_tolerance: 1.0e-6
+  idempotency_relative_tolerance: 1.0e-7
+  energy_identity_hartree: 1.0e-12
+  strict_direction_tolerance_hartree: 1.0e-8
+  ESE_quantitative_tolerance_kcal_mol: 5.0
+  effect_quantitative_tolerance_kcal_mol: 2.0
+
+execution:
+  p11_qm_allowed: true
+  scope: single_cyanobenzene_figure7_source_geometry_energy_reconstruction_only
+  p11a_allowed: false
+  p12_p13_allowed: false
+  production_labels_allowed: false
+  ai_training_allowed: false
+
+prohibited:
+  - original_program_code
+  - historical_cartesian_identity_claim
+  - p09_2011_ERI_deletion_benzene_anchor_substitution
+  - additional_substituted_benzenes
+  - geometry_optimization
+  - basis_or_functional_scan
+  - production_label_generation
+  - mace_nequip_pysr_training_or_search

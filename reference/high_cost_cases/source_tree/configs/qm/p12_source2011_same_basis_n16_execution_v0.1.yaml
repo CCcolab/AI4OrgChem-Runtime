@@ -1,0 +1,44 @@
+schema_version: 1
+protocol_id: p12-source2011-same-basis-n16-execution/0.1
+status: static_preflight_ready_manual_execution_only
+base_protocol: configs/qm/p12_source2011_planar_cese_recalculation_v0.2.yaml
+base_protocol_sha256: 734658d90f5d7ab4408f8b1b05732717ad241aaf3a60e8e264be59646c4a57a5
+scope:
+  system: 16
+  configuration: "[16]-5555"
+  states: [G, GL, GE]
+  geometry_and_energy_method: B3LYPG/6-311g(2df,p)
+  fully_planar: true
+  estimand_identity: independent_same_basis_source2011_candidate_not_historical_2011_replica
+  source_program_code_used: false
+  historical_2011_method_alignment: NOT_ESTABLISHED
+  classification_change_allowed: false
+  N18_or_larger_automatic_execution: false
+  electronic_state_continuity: NOT_PROVEN_BY_CURRENT_RUNNER
+  state_acceptance: planar_inner_h_topology_and_SCF_convergence_required
+pair_plan:
+  selection: exhaustive_all_28_no_symmetry_weighting
+  localized_pi_group_count: 8
+  total_pair_count: 28
+  adjacent_pair_count: 8
+  nonadjacent_pair_count: 20
+  pair_order: lexicographic_zero_based
+  pair_multiplicity: 1
+  failure_action: STOP_NO_WEIGHTED_LEDGER
+execution_controls:
+  explicit_execute_flag_required: true
+  default_new_optimizations_per_invocation: 1
+  maximum_new_optimizations_per_invocation: 1
+  ge_requires_separate_explicit_approval_after_g_gl: true
+  maximum_threads: 16
+  memory_limit_mib_per_state: 12000
+  maximum_hours_per_state: 12
+  maximum_geometry_steps_per_state: 80
+  checkpoint_resume: true
+  force_overwrite_allowed: false
+  duplicate_queue_allowed: false
+  failure_action: STOP_FAILED_CLOSED
+outputs:
+  status: data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_pipeline_status.json
+  lock: runs/p12_source2011_same_basis_v0.2/N16_execution.lock
+  no_automatic_ledger_or_classification: true

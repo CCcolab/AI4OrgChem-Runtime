@@ -1,0 +1,102 @@
+schema_version: 1
+protocol_id: p11-furan-lde/0.1
+effective_date: 2026-08-21
+status: frozen_execution_authorized
+specification: docs/theory/p11_furan_lde_protocol_v0.1.md
+source_mapping: docs/theory/p11_source_claim_mapping_v0.1.md
+original_program_code_used: false
+proposition_id: P11
+subtarget: P11-A_furan_LDE
+
+source_claim:
+  delta_EA: positive
+  local_increments: positive
+  additivity_relation: delta_EA_less_than_sum_delta_EAm
+  final_quantity: LDE_equals_delta_EA_minus_sum_delta_EAm_negative
+  aromatic_ESE_label_allowed: false
+  public_furan_LDE_kcal_mol: -39.3
+  quantitative_tolerance_kcal_mol: 5.0
+  source_value_is_fit_target: false
+
+electronic_structure:
+  engine: pyscf
+  method: B3LYP
+  pyscf_xc: B3LYPG
+  basis: 6-31g(d)
+  gaussian_style_functional_convention_required: true
+  grid_level: 3
+  charge: 0
+  multiplicity: 1
+  scf_tolerance_hartree: 1.0e-10
+  maximum_scf_cycles: 100
+  maximum_memory_mb: 6000
+
+state_contract:
+  implementation_semantics: source_2007_Fock_one_electron_overlap_mask_without_ERI_deletion
+  G: ordinary_unmasked_ground_state
+  GL: O_A_B_mutually_localized
+  GE1: A_B_permitted_O_localized
+  GE2: O_A_permitted_B_localized
+  GE3: symmetry_equivalent_to_GE2
+  pair_increment_multiplicity: {GE1: 1, GE2: 2}
+
+geometry:
+  symmetry: planar_C2v
+  parameterization: eight_independent_mirrored_xy_coordinates_with_O_at_origin
+  initial_parameters_angstrom: [1.08, -0.78, 0.68, -2.08, 2.05, -0.48, 1.10, -3.04]
+  initial_bounds_angstrom:
+    - [0.80, 1.30]
+    - [-1.10, -0.50]
+    - [0.45, 0.90]
+    - [-2.40, -1.70]
+    - [1.70, 2.30]
+    - [-0.85, -0.10]
+    - [0.80, 1.40]
+    - [-3.40, -2.70]
+  conditional_half_windows_angstrom: [0.25, 0.25, 0.25, 0.25, 0.30, 0.30, 0.30, 0.30]
+
+optimizer:
+  method: scipy_L_BFGS_B_three_point_central_finite_difference
+  finite_difference_scheme: 3-point
+  finite_difference_relative_step: 1.0e-4
+  maximum_iterations: 25
+  maximum_function_evaluations: 350
+  function_tolerance: 1.0e-11
+  gradient_tolerance_hartree_per_angstrom: 3.5e-4
+  maximum_line_search_steps: 15
+
+conditional_scf:
+  maximum_cycles: 100
+  density_tolerance: 2.0e-8
+  energy_tolerance_hartree: 1.0e-10
+  diis_start_cycle: 2
+  diis_space: 8
+  damping_cycles: 2
+  damping: 0.20
+
+acceptance:
+  electron_count: 36.0
+  electron_count_tolerance: 1.0e-7
+  matrix_zero_tolerance: 1.0e-12
+  energy_component_closure_hartree: 1.0e-10
+  commutator_frobenius_tolerance: 1.0e-6
+  idempotency_relative_tolerance: 1.0e-7
+  energy_identity_hartree: 1.0e-12
+  strict_direction_tolerance_hartree: 1.0e-8
+
+execution:
+  p11_qm_allowed: true
+  scope: single_furan_G_GL_GE1_GE2_2007_LDE_only
+  p11_substituent_effect_allowed: false
+  p12_p13_allowed: false
+  production_labels_allowed: false
+  ai_training_allowed: false
+
+prohibited:
+  - original_program_code
+  - p09_or_p10_reopening
+  - additional_furan_like_molecules
+  - substituted_benzene_calculation_before_separate_P11_B_freeze
+  - basis_functional_or_weight_scheme_scan
+  - production_label_generation
+  - mace_nequip_pysr_training_or_search

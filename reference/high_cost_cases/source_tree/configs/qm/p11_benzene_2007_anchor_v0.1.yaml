@@ -1,0 +1,80 @@
+schema_version: 1
+protocol_id: p11-benzene-2007-anchor/0.1
+effective_date: 2026-08-22
+status: frozen_execution_authorized
+proposition_id: P11
+subtarget: P11-B_same_engine_benzene_anchor
+original_program_code_used: false
+
+purpose:
+  primary: calculate_same_engine_same_2007_semantics_benzene_ESE_anchor_for_inductive_effect
+  formula: ESE_benzene_equals_delta_EA_minus_3_delta_EA1
+  p09_2011_anchor_reuse_allowed: false
+  published_minus_39_anchor_retained_as_secondary_diagnostic: true
+
+electronic_structure:
+  engine: pyscf
+  method: B3LYP
+  pyscf_xc: B3LYPG
+  basis: 6-31g(d)
+  grid_level: 3
+  charge: 0
+  multiplicity: 1
+  scf_tolerance_hartree: 1.0e-10
+  maximum_scf_cycles: 120
+  maximum_memory_mb: 6000
+
+state_contract:
+  implementation_semantics: source_2007_Fock_one_electron_overlap_mask_without_ERI_deletion
+  GL_fragments: {A: [C1, C2], B: [C3, C4], C: [C5, C6]}
+  GE1_permitted_pair: B_C
+  GE1_equivalence: symmetry_equivalent_to_any_one_of_three_adjacent_pairs
+  pair_multiplicity: 3
+
+geometry:
+  source: Bao_Yu_2007_main_Figure_3_and_official_Supporting_Information
+  disposition: published_zmatrix_reconstruction_not_historical_program_identity
+  G:
+    regular_CC_angstrom: 1.3966
+    common_CH_angstrom: 1.0870
+  GL:
+    chain_CC_angstrom: [1.3337108, 1.4489037, 1.3337032, 1.4489136, 1.3337298]
+    chain_angles_degrees: [120.0025849, 119.9992254, 119.9987615, 119.9994469]
+    CH_angstrom: [1.0866146, 1.0866876, 1.0866236, 1.0866259, 1.0866321, 1.0866423]
+  GE1:
+    chain_CC_angstrom: [1.3393953, 1.4531740, 1.3390570, 1.4737563, 1.3390810]
+    chain_angles_degrees: [121.2104074, 117.9862297, 120.8065858, 120.8057840]
+    CH_angstrom: [1.0870051, 1.0870546, 1.0849107, 1.0878903, 1.0878635, 1.0848868]
+
+conditional_scf:
+  maximum_cycles: 120
+  density_tolerance: 2.0e-8
+  energy_tolerance_hartree: 1.0e-10
+  diis_start_cycle: 2
+  diis_space: 8
+  damping_cycles: 2
+  damping: 0.20
+
+acceptance:
+  electron_count: 42.0
+  electron_count_tolerance: 1.0e-7
+  matrix_zero_tolerance: 1.0e-12
+  energy_component_closure_hartree: 1.0e-10
+  commutator_frobenius_tolerance: 1.0e-6
+  idempotency_relative_tolerance: 1.0e-7
+  strict_direction_tolerance_hartree: 1.0e-8
+
+execution:
+  allowed: true
+  scope: single_benzene_G_GL_GE1_source_2007_anchor_only
+  production_labels_allowed: false
+  ai_training_allowed: false
+
+prohibited:
+  - geometry_optimization
+  - ERI_deletion
+  - p09_2011_anchor_reuse
+  - basis_or_functional_scan
+  - additional_molecules
+  - production_label_generation
+  - ai_training

@@ -1,0 +1,171 @@
+schema_version: 1
+mapping_id: p09-2011-exchange-integral-classes/0.1
+status: source_mapping_closed_real_ao_and_energy_assembly_tested
+parent_protocol: configs/qm/p09_benzene_cyclobutadiene_v0.1.yaml
+source_mapping: docs/theory/p09_source_formula_mapping_v0.1.md
+original_program_code_used: false
+activation_allowed: true
+
+fock_overlap_mask:
+  source_pages:
+    - monograph_printed_page_261_section_8.2.1.1_i
+    - monograph_printed_page_261_section_8.2.1.2_i
+    - monograph_figure_8-3e_printed_page_260
+  exact_index_predicate:
+    ao_type_left: pi
+    ao_type_right: pi
+    fragment_relation: P_not_equal_Q
+    first_version_zero_matrices: [fock, overlap]
+    second_version_zero_matrices: [one_electron_h, overlap]
+    third_version: union_of_first_and_second_versions
+  status: mapped_real_ao_tested
+
+ao_classification:
+  primary_orientation: molecule_in_xy_plane
+  reflection: z_to_minus_z
+  sigma_parity: even
+  pi_parity: odd
+  spherical_6-31g(d)_pi_components: [pz, dxz, dyz]
+  fragment_assignment: AO_center_atom_to_localized_double_bond_or_group
+  benzene_fragment_atoms_zero_based:
+    A: [0, 1]
+    B: [2, 3]
+    C: [4, 5]
+  benzene_expected_counts:
+    total_ao: 96
+    sigma_ao: 72
+    pi_ao: 24
+    pi_ao_per_fragment: 8
+  status: frozen_real_ao_tested
+
+source_notation:
+  eri_notation: "<i j | k l>"
+  sigma: any_sigma_type_AO
+  pi_P: pi_type_AO_on_localized_double_bond_or_group_P
+  shared_constraints:
+    - P_not_equal_Q
+    - S_not_equal_T
+    - S_in_P_or_Q
+    - T_in_P_or_Q
+  source_counting_rule: >-
+    Preserve the 15 red source-declared ordered classes from Figure 8-4.
+    ERI permutation symmetry may merge source classes only in the implementation
+    mask, never in this source ledger.
+
+exchange_integral_classes:
+  - id: X01
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141
+    formula: "<sigma sigma | pi_P pi_Q> = 0"
+    index_predicate: {bra: [sigma, sigma], ket: [pi_P, pi_Q], constraints: [P_not_equal_Q]}
+    symmetry_partner: X11
+    status: mapped_symbolic_tested
+  - id: X02
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141
+    formula: "<sigma sigma | pi_S pi_T> = 0"
+    index_predicate: {bra: [sigma, sigma], ket: [pi_S, pi_T], constraints: [S_not_equal_T, S_in_P_or_Q, T_in_P_or_Q]}
+    status: mapped_symbolic_tested
+  - id: X03
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141
+    formula: "<pi_P pi_P | pi_P pi_Q> = 0"
+    index_predicate: {bra: [pi_P, pi_P], ket: [pi_P, pi_Q], constraints: [P_not_equal_Q]}
+    symmetry_partner: X12
+    status: mapped_symbolic_tested
+  - id: X04
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141
+    formula: "<pi_P pi_P | pi_S pi_T> = 0"
+    index_predicate: {bra: [pi_P, pi_P], ket: [pi_S, pi_T], constraints: [S_not_equal_T, S_in_P_or_Q, T_in_P_or_Q]}
+    status: mapped_symbolic_tested
+  - id: X05
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141_second_red_line
+    formula: "<pi_P pi_S | pi_P pi_T> = 0"
+    index_predicate: {bra: [pi_P, pi_S], ket: [pi_P, pi_T], constraints: [S_not_equal_T, S_in_P_or_Q, T_in_P_or_Q]}
+    status: mapped_symbolic_tested
+  - id: X06
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141
+    formula: "<pi_Q pi_Q | pi_P pi_Q> = 0"
+    index_predicate: {bra: [pi_Q, pi_Q], ket: [pi_P, pi_Q], constraints: [P_not_equal_Q]}
+    symmetry_partner: X13
+    status: mapped_symbolic_tested
+  - id: X07
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141
+    formula: "<pi_Q pi_Q | pi_S pi_T> = 0"
+    index_predicate: {bra: [pi_Q, pi_Q], ket: [pi_S, pi_T], constraints: [S_not_equal_T, S_in_P_or_Q, T_in_P_or_Q]}
+    status: mapped_symbolic_tested
+  - id: X08
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141_second_red_line
+    formula: "<pi_Q pi_S | pi_Q pi_T> = 0"
+    index_predicate: {bra: [pi_Q, pi_S], ket: [pi_Q, pi_T], constraints: [S_not_equal_T, S_in_P_or_Q, T_in_P_or_Q]}
+    status: mapped_symbolic_tested
+  - id: X09
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141
+    formula: "<sigma pi_P | sigma pi_Q> = 0"
+    index_predicate: {bra: [sigma, pi_P], ket: [sigma, pi_Q], constraints: [P_not_equal_Q]}
+    symmetry_partner: X10
+    status: mapped_symbolic_tested
+  - id: X10
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141
+    formula: "<sigma pi_Q | sigma pi_P> = 0"
+    index_predicate: {bra: [sigma, pi_Q], ket: [sigma, pi_P], constraints: [P_not_equal_Q]}
+    symmetry_partner: X09
+    status: mapped_symbolic_tested
+  - id: X11
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141
+    formula: "<pi_P pi_Q | sigma sigma> = 0"
+    index_predicate: {bra: [pi_P, pi_Q], ket: [sigma, sigma], constraints: [P_not_equal_Q]}
+    symmetry_partner: X01
+    status: mapped_symbolic_tested
+  - id: X12
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141
+    formula: "<pi_P pi_Q | pi_P pi_P> = 0"
+    index_predicate: {bra: [pi_P, pi_Q], ket: [pi_P, pi_P], constraints: [P_not_equal_Q]}
+    symmetry_partner: X03
+    status: mapped_symbolic_tested
+  - id: X13
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141
+    formula: "<pi_P pi_Q | pi_Q pi_Q> = 0"
+    index_predicate: {bra: [pi_P, pi_Q], ket: [pi_Q, pi_Q], constraints: [P_not_equal_Q]}
+    symmetry_partner: X06
+    status: mapped_symbolic_tested
+  - id: X14
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141
+    formula: "<pi_P pi_Q | pi_P pi_Q> = 0"
+    index_predicate: {bra: [pi_P, pi_Q], ket: [pi_P, pi_Q], constraints: [P_not_equal_Q]}
+    source_alias: particular_exchange_integral_family
+    status: mapped_symbolic_tested
+  - id: X15
+    source_location: monograph_figure_8-4_printed_page_262_outer_page_141
+    formula: "<pi_P pi_Q | pi_S pi_T> = 0"
+    index_predicate: {bra: [pi_P, pi_Q], ket: [pi_S, pi_T], constraints: [P_not_equal_Q, S_not_equal_T, S_in_P_or_Q, T_in_P_or_Q]}
+    status: mapped_symbolic_tested
+
+particular_exchange_rule:
+  source_location: monograph_printed_page_261_section_8.2.1.1_ii
+  formula: "<mu_P nu_Q | mu_P nu_Q> = 0 when P != Q"
+  represented_by_class: X14
+  status: mapped_real_ao_tested
+
+validation_evidence:
+  test_modules:
+    - tests/unit/test_p09_eri_mask.py
+    - tests/scientific/test_p09_pyscf_ao_mask.py
+  test_command: "PYTHONPATH=src python -m unittest tests.unit.test_p09_eri_mask tests.scientific.test_p09_pyscf_ao_mask -v"
+  executed_in: WSL_Ubuntu-24.04_ai4orgchem
+  source_class_count_preserved: true
+  ordered_forbidden_witness_for_each_class: true
+  eri_eightfold_permutation_closure_passed: true
+  explicit_allowed_integrals_preserved: true
+  explicit_forbidden_integrals_deleted: true
+  molecular_plane_ao_classification_tested: true
+  real_pyscf_overlap_matrix_mask_tested: true
+  all_fifteen_real_pyscf_ao_shell_block_witnesses_passed: true
+  real_pyscf_eri_tensor_mask_tested: true
+
+activation_requirements:
+  exact_class_count: 15
+  all_source_locations_non_null: true
+  all_index_predicates_non_null: true
+  eri_permutation_closure_tests_passed: true
+  allowed_integrals_preserved_tests_passed: true
+  forbidden_integrals_deleted_tests_passed: true
+  geometry_step_application_rule_frozen: true
+  numeric_fit_to_published_values_forbidden: true

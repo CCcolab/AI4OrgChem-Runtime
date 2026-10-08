@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "state": "cyanobenzene_GL_II",
+  "reference_energy_hartree": -324.471397674252,
+  "analytic_interface_energy_hartree": -324.47139767425017,
+  "energy_difference_hartree": 1.8189894035458565e-12,
+  "scf_converged": true,
+  "maximum_absolute_z_gradient_hartree_per_bohr": 2.5087041661049803e-15,
+  "gradient_rms_hartree_per_bohr": 0.0016614840707163015,
+  "gradient_max_hartree_per_bohr": 0.004924778484809995,
+  "finite_difference_coordinate": "atom_7_x_one_based",
+  "finite_difference_step_bohr": 0.001,
+  "analytic_gradient_hartree_per_bohr": 0.0008506004721087201,
+  "finite_difference_gradient_hartree_per_bohr": 0.000847081480515044,
+  "gradient_difference_hartree_per_bohr": 3.5189915936761906e-06,
+  "all_input_z_angstrom": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "pass": true
+}

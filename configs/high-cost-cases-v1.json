@@ -1,0 +1,2174 @@
+{
+  "WSLc": "BLOCKED_PAUSED",
+  "automatic_retry": false,
+  "distribution": "BLOCKED_LOCAL_ONLY",
+  "general_user_conditional_compute": "BLOCKED",
+  "resource_profiles": {
+    "P11": {
+      "ledger": {
+        "cpus": 1,
+        "hard_wall_seconds": 180,
+        "memory_bytes": 1073741824,
+        "scratch_bytes_required": 1073741824,
+        "soft_wall_seconds": 120,
+        "threads": 1
+      },
+      "live": {
+        "cpus": 8,
+        "hard_wall_seconds": 43200,
+        "memory_bytes": 8589934592,
+        "scratch_bytes_required": 21474836480,
+        "soft_wall_seconds": 43080,
+        "threads": 8
+      },
+      "preflight": {
+        "cpus": 1,
+        "hard_wall_seconds": 180,
+        "memory_bytes": 1073741824,
+        "scratch_bytes_required": 1073741824,
+        "soft_wall_seconds": 120,
+        "threads": 1
+      }
+    },
+    "P12": {
+      "ledger": {
+        "cpus": 1,
+        "hard_wall_seconds": 180,
+        "memory_bytes": 1073741824,
+        "scratch_bytes_required": 1073741824,
+        "soft_wall_seconds": 120,
+        "threads": 1
+      },
+      "live": {
+        "cpus": 16,
+        "hard_wall_seconds": 43200,
+        "memory_bytes": 15032385536,
+        "scratch_bytes_required": 21474836480,
+        "soft_wall_seconds": 43080,
+        "threads": 16
+      },
+      "preflight": {
+        "cpus": 1,
+        "hard_wall_seconds": 180,
+        "memory_bytes": 1073741824,
+        "scratch_bytes_required": 1073741824,
+        "soft_wall_seconds": 120,
+        "threads": 1
+      }
+    }
+  },
+  "resume": false,
+  "schema": "high-cost-cases-v1",
+  "scientific_thresholds_changed": false,
+  "units": [
+    {
+      "caps": {
+        "conditional": 550,
+        "gradient": 0,
+        "grids": 1100,
+        "numint": 250000,
+        "scf": 1100
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11A-furan-G",
+      "method_id": "B3LYPG/6-31g(d);grid=3;ordinary-RKS",
+      "operator_id": "ordinary_rks",
+      "optimizer": "scipy_minimize",
+      "pair": null,
+      "state": "G",
+      "subcase": "P11-A",
+      "system": "furan",
+      "unit_id": "P11A-furan-G"
+    },
+    {
+      "caps": {
+        "conditional": 550,
+        "gradient": 0,
+        "grids": 1100,
+        "numint": 250000,
+        "scf": 1100
+      },
+      "case": "P11",
+      "dependencies": [
+        "P11A-furan-G"
+      ],
+      "id": "P11A-furan-GL",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-h/F/S-mask;no-ERI-deletion",
+      "operator_id": "furan_p09",
+      "optimizer": "scipy_minimize",
+      "pair": null,
+      "state": "GL",
+      "subcase": "P11-A",
+      "system": "furan",
+      "unit_id": "P11A-furan-GL"
+    },
+    {
+      "caps": {
+        "conditional": 550,
+        "gradient": 0,
+        "grids": 1100,
+        "numint": 250000,
+        "scf": 1100
+      },
+      "case": "P11",
+      "dependencies": [
+        "P11A-furan-G",
+        "P11A-furan-GL"
+      ],
+      "id": "P11A-furan-GE1",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-h/F/S-mask;no-ERI-deletion",
+      "operator_id": "furan_p09",
+      "optimizer": "scipy_minimize",
+      "pair": null,
+      "state": "GE1",
+      "subcase": "P11-A",
+      "system": "furan",
+      "unit_id": "P11A-furan-GE1"
+    },
+    {
+      "caps": {
+        "conditional": 550,
+        "gradient": 0,
+        "grids": 1100,
+        "numint": 250000,
+        "scf": 1100
+      },
+      "case": "P11",
+      "dependencies": [
+        "P11A-furan-G",
+        "P11A-furan-GL"
+      ],
+      "id": "P11A-furan-GE2",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-h/F/S-mask;no-ERI-deletion",
+      "operator_id": "furan_p09",
+      "optimizer": "scipy_minimize",
+      "pair": null,
+      "state": "GE2",
+      "subcase": "P11-A",
+      "system": "furan",
+      "unit_id": "P11A-furan-GE2"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11B-benzene-G",
+      "method_id": "B3LYPG/6-31g(d);grid=3;ordinary-RKS",
+      "operator_id": "ordinary_rks",
+      "optimizer": "geometric",
+      "pair": null,
+      "state": "G",
+      "subcase": "P11-B",
+      "system": "benzene",
+      "unit_id": "P11B-benzene-G"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11B-benzene-GL",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "operator_id": "source2007",
+      "optimizer": "geometric",
+      "pair": null,
+      "state": "GL",
+      "subcase": "P11-B",
+      "system": "benzene",
+      "unit_id": "P11B-benzene-GL"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11B-benzene-GE1",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "operator_id": "source2007",
+      "optimizer": "geometric",
+      "pair": null,
+      "state": "GE1",
+      "subcase": "P11-B",
+      "system": "benzene",
+      "unit_id": "P11B-benzene-GE1"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11B-cyanobenzene-G",
+      "method_id": "B3LYPG/6-31g(d);grid=3;ordinary-RKS",
+      "operator_id": "ordinary_rks",
+      "optimizer": "geometric",
+      "pair": null,
+      "state": "G",
+      "subcase": "P11-B",
+      "system": "cyanobenzene",
+      "unit_id": "P11B-cyanobenzene-G"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11B-cyanobenzene-GL_I",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "operator_id": "source2007",
+      "optimizer": "geometric",
+      "pair": null,
+      "state": "GL_I",
+      "subcase": "P11-B",
+      "system": "cyanobenzene",
+      "unit_id": "P11B-cyanobenzene-GL_I"
+    },
+    {
+      "caps": {
+        "conditional": 1,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11B-cyanobenzene-GE1",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "operator_id": "source2007",
+      "optimizer": "geometric",
+      "pair": null,
+      "state": "GE1",
+      "subcase": "P11-B",
+      "system": "cyanobenzene",
+      "unit_id": "P11B-cyanobenzene-GE1"
+    },
+    {
+      "caps": {
+        "conditional": 1,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11B-cyanobenzene-GE2",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "operator_id": "source2007",
+      "optimizer": "geometric",
+      "pair": null,
+      "state": "GE2",
+      "subcase": "P11-B",
+      "system": "cyanobenzene",
+      "unit_id": "P11B-cyanobenzene-GE2"
+    },
+    {
+      "caps": {
+        "conditional": 1,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11B-cyanobenzene-GE3",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "operator_id": "source2007",
+      "optimizer": "geometric",
+      "pair": null,
+      "state": "GE3",
+      "subcase": "P11-B",
+      "system": "cyanobenzene",
+      "unit_id": "P11B-cyanobenzene-GE3"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11B-cyanobenzene-GL_II",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "operator_id": "source2007",
+      "optimizer": "geometric",
+      "pair": null,
+      "state": "GL_II",
+      "subcase": "P11-B",
+      "system": "cyanobenzene",
+      "unit_id": "P11B-cyanobenzene-GL_II"
+    },
+    {
+      "caps": {
+        "conditional": 1,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11B-cyanobenzene-GE4",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "operator_id": "source2007",
+      "optimizer": "geometric",
+      "pair": null,
+      "state": "GE4",
+      "subcase": "P11-B",
+      "system": "cyanobenzene",
+      "unit_id": "P11B-cyanobenzene-GE4"
+    },
+    {
+      "caps": {
+        "conditional": 1,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11B-cyanobenzene-GE5",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "operator_id": "source2007",
+      "optimizer": "geometric",
+      "pair": null,
+      "state": "GE5",
+      "subcase": "P11-B",
+      "system": "cyanobenzene",
+      "unit_id": "P11B-cyanobenzene-GE5"
+    },
+    {
+      "caps": {
+        "conditional": 1,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11B-cyanobenzene-GE6",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "operator_id": "source2007",
+      "optimizer": "geometric",
+      "pair": null,
+      "state": "GE6",
+      "subcase": "P11-B",
+      "system": "cyanobenzene",
+      "unit_id": "P11B-cyanobenzene-GE6"
+    },
+    {
+      "caps": {
+        "conditional": 1,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P11",
+      "dependencies": [],
+      "id": "P11B-cyanobenzene-GE7",
+      "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
+      "operator_id": "source2007",
+      "optimizer": "geometric",
+      "pair": null,
+      "state": "GE7",
+      "subcase": "P11-B",
+      "system": "cyanobenzene",
+      "unit_id": "P11B-cyanobenzene-GE7"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [],
+      "geometry_optimization": true,
+      "id": "P12-N12-G",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "operator_id": "ordinary_rks",
+      "optimizer": "geometric",
+      "pair": null,
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "G",
+      "system": "N12",
+      "unit_id": "P12-N12-G"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N12-GL",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": null,
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GL",
+      "system": "N12",
+      "unit_id": "P12-N12-GL"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N12-GE-g01-g02",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 3,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        1
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N12",
+      "unit_id": "P12-N12-GE-g01-g02"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N12-GE-g01-g03",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 3,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        2
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N12",
+      "unit_id": "P12-N12-GE-g01-g03"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N12-GE-g01-g04",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 3,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        3
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N12",
+      "unit_id": "P12-N12-GE-g01-g04"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N12-GE-g01-g06",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 3,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        5
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N12",
+      "unit_id": "P12-N12-GE-g01-g06"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N12-GE-g02-g04",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 3,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        1,
+        3
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N12",
+      "unit_id": "P12-N12-GE-g02-g04"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N12-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N12-GE-g03-g04-control",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 0,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        2,
+        3
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": true,
+      "system": "N12",
+      "unit_id": "P12-N12-GE-g03-g04-control"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [],
+      "geometry_optimization": true,
+      "id": "P12-N14-G",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "operator_id": "ordinary_rks",
+      "optimizer": "geometric",
+      "pair": null,
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "G",
+      "system": "N14",
+      "unit_id": "P12-N14-G"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GL",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": null,
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GL",
+      "system": "N14",
+      "unit_id": "P12-N14-GL"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g01-g02",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        1
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g01-g02"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g01-g03",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        2
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g01-g03"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g01-g04",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        3
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g01-g04"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g01-g05",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        4
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g01-g05"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g01-g06",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        5
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g01-g06"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g01-g07",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        6
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g01-g07"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g02-g03",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        1,
+        2
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g02-g03"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g02-g04",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        1,
+        3
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g02-g04"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g02-g05",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        1,
+        4
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g02-g05"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g02-g06",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        1,
+        5
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g02-g06"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g02-g07",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        1,
+        6
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g02-g07"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g03-g04",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        2,
+        3
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g03-g04"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g03-g05",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        2,
+        4
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g03-g05"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g03-g06",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        2,
+        5
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g03-g06"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g03-g07",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        2,
+        6
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g03-g07"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g04-g05",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        3,
+        4
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g04-g05"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g04-g06",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        3,
+        5
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g04-g06"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g04-g07",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        3,
+        6
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g04-g07"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g05-g06",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        4,
+        5
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g05-g06"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g05-g07",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        4,
+        6
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g05-g07"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N14-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N14-GE-g06-g07",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        5,
+        6
+      ],
+      "source_protocol_id": "p12-source2011-planar-cese-recalculation/0.2",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N14",
+      "unit_id": "P12-N14-GE-g06-g07"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [],
+      "geometry_optimization": true,
+      "id": "P12-N16-G",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "operator_id": "ordinary_rks",
+      "optimizer": "geometric",
+      "pair": null,
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "G",
+      "system": "N16",
+      "unit_id": "P12-N16-G"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GL",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": null,
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GL",
+      "system": "N16",
+      "unit_id": "P12-N16-GL"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g01-g02",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        1
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g01-g02"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g01-g03",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        2
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g01-g03"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g01-g04",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        3
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g01-g04"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g01-g05",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        4
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g01-g05"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g01-g06",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        5
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g01-g06"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g01-g07",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        6
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g01-g07"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g01-g08",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        0,
+        7
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g01-g08"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g02-g03",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        1,
+        2
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g02-g03"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g02-g04",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        1,
+        3
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g02-g04"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g02-g05",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        1,
+        4
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g02-g05"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g02-g06",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        1,
+        5
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g02-g06"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g02-g07",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        1,
+        6
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g02-g07"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g02-g08",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        1,
+        7
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g02-g08"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g03-g04",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        2,
+        3
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g03-g04"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g03-g05",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        2,
+        4
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g03-g05"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g03-g06",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        2,
+        5
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g03-g06"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g03-g07",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        2,
+        6
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g03-g07"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g03-g08",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        2,
+        7
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g03-g08"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g04-g05",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        3,
+        4
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g04-g05"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g04-g06",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        3,
+        5
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g04-g06"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g04-g07",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        3,
+        6
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g04-g07"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g04-g08",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        3,
+        7
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g04-g08"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g05-g06",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        4,
+        5
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g05-g06"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g05-g07",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        4,
+        6
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g05-g07"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g05-g08",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        4,
+        7
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g05-g08"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g06-g07",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        5,
+        6
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g06-g07"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g06-g08",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        5,
+        7
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g06-g08"
+    },
+    {
+      "caps": {
+        "conditional": 0,
+        "gradient": 200,
+        "grids": 1000,
+        "numint": 60000,
+        "scf": 200
+      },
+      "case": "P12",
+      "dependencies": [
+        "P12-N16-G",
+        "P12-N16-GL"
+      ],
+      "geometry_optimization": true,
+      "id": "P12-N16-GE-g07-g08",
+      "max_geometry_steps": 80,
+      "method_id": "B3LYPG/6-311g(2df,p)",
+      "multiplicity": 1,
+      "operator_id": "source2011",
+      "optimizer": "geometric",
+      "pair": [
+        6,
+        7
+      ],
+      "source_protocol_id": "p12-source2011-same-basis-n16-execution/0.1",
+      "state": "GE",
+      "symmetry_control": false,
+      "system": "N16",
+      "unit_id": "P12-N16-GE-g07-g08"
+    }
+  ]
+}

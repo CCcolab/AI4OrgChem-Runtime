@@ -1,0 +1,688 @@
+{
+  "schema_version": 2,
+  "ledger_id": "p12-source2011-same-basis-n16-ledger/0.1",
+  "assembled_at": "2026-09-29T16:00:21.442747+09:00",
+  "verdict": "PASS_N16_INDEPENDENT_SOURCE_DIRECTION_AND_4N_ONSET_BOUNDARY_SUPPORTED",
+  "scope": {
+    "N": 16,
+    "configuration": "[16]-5555",
+    "state_count": 30,
+    "G_count": 1,
+    "GL_count": 1,
+    "direct_GE_count": 28,
+    "adjacent_GE_count": 8,
+    "nonadjacent_GE_count": 20,
+    "pair_multiplicity": 1,
+    "symmetry_weighting_used": false
+  },
+  "estimand": "independent_same_basis_source2011_candidate_not_historical_2011_replica",
+  "method": "B3LYPG/6-311g(2df,p)",
+  "ledger_hartree": {
+    "E_G": -619.3981321183725,
+    "E_GL": -619.4233179108082,
+    "delta_EA": 0.025185792435763688,
+    "sum_delta_EAm": 0.027771156983021683,
+    "ESE": -0.0025853645472579956,
+    "sum_delta_EnAm": -0.0020442934899165266,
+    "CESE": -0.000541071057341469
+  },
+  "ledger": {
+    "delta_EA_kcal_mol": 15.804323365228473,
+    "sum_delta_EAm_kcal_mol": 17.426664112539722,
+    "ESE_kcal_mol": -1.6223407473112494,
+    "sum_delta_EnAm_kcal_mol": -1.282813532688139,
+    "CESE_kcal_mol": -0.33952721462311064,
+    "CESE_per_pi_kcal_mol_electron": -0.021220450913944415,
+    "relative_CESE": 0.021031365035480403
+  },
+  "expanded_CESE_identity_residual_hartree": 1.3642420526593924e-12,
+  "pair_rows": [
+    {
+      "stage": "N16_GE_g01_g02",
+      "pair_zero_based": [
+        0,
+        1
+      ],
+      "pair_one_based": [
+        1,
+        2
+      ],
+      "pair_class": "adjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4189341813201,
+      "delta_pair_hartree": 0.004383729488154131,
+      "delta_pair_kcal_mol": 2.7508317855465014,
+      "record_sha256": "e868ece1d3ccbdf9593dd7b14af19ae1a28b8e7b3305334e92959bf534076fc5"
+    },
+    {
+      "stage": "N16_GE_g01_g03",
+      "pair_zero_based": [
+        0,
+        2
+      ],
+      "pair_one_based": [
+        1,
+        3
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.42361297074,
+      "delta_pair_hartree": -0.000295059931772812,
+      "delta_pair_kcal_mol": -0.18515290260385142,
+      "record_sha256": "c9ba658383f3804467b5e3e6303f675112a67955e8d3f8b56975116ee6eb4915"
+    },
+    {
+      "stage": "N16_GE_g01_g04",
+      "pair_zero_based": [
+        0,
+        3
+      ],
+      "pair_one_based": [
+        1,
+        4
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4233178430181,
+      "delta_pair_hartree": 6.779009709134698e-08,
+      "delta_pair_kcal_mol": 4.253892817247763e-05,
+      "record_sha256": "0772f2b5fa00c4b6dd1e7b303704c84291934141c875b794938974f8b64510d5"
+    },
+    {
+      "stage": "N16_GE_g01_g05",
+      "pair_zero_based": [
+        0,
+        4
+      ],
+      "pair_one_based": [
+        1,
+        5
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4233228883463,
+      "delta_pair_hartree": -4.97753808303969e-06,
+      "delta_pair_kcal_mol": -0.0031234523046172868,
+      "record_sha256": "1235cc976a02e8daaf51def18145d43361819fdcc458b5ea581e9b2b64a5f018"
+    },
+    {
+      "stage": "N16_GE_g01_g06",
+      "pair_zero_based": [
+        0,
+        5
+      ],
+      "pair_one_based": [
+        1,
+        6
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4233249462909,
+      "delta_pair_hartree": -7.035482667561155e-06,
+      "delta_pair_kcal_mol": -0.004414832028501356,
+      "record_sha256": "1e0db08478ad418514cfbf0cb9b53ed1af084958f2074dd72cf9d6ff49eb016c"
+    },
+    {
+      "stage": "N16_GE_g01_g07",
+      "pair_zero_based": [
+        0,
+        6
+      ],
+      "pair_one_based": [
+        1,
+        7
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4236129710188,
+      "delta_pair_hartree": -0.00029506021053293807,
+      "delta_pair_kcal_mol": -0.18515307752847154,
+      "record_sha256": "73d731ea637b4453cc370fdc8572a30f016a765745962a8cac4f844e74073ba0"
+    },
+    {
+      "stage": "N16_GE_g01_g08",
+      "pair_zero_based": [
+        0,
+        7
+      ],
+      "pair_one_based": [
+        1,
+        8
+      ],
+      "pair_class": "adjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4207590468365,
+      "delta_pair_hartree": 0.0025588639717852857,
+      "delta_pair_kcal_mol": 1.605711385134,
+      "record_sha256": "8e24fd7de521ab76823352ceecf7139c49c89d2868ca9f2cb11cc50e9169cb5b"
+    },
+    {
+      "stage": "N16_GE_g02_g03",
+      "pair_zero_based": [
+        1,
+        2
+      ],
+      "pair_one_based": [
+        2,
+        3
+      ],
+      "pair_class": "adjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4207585907316,
+      "delta_pair_hartree": 0.0025593200766707014,
+      "delta_pair_kcal_mol": 1.6059975952707646,
+      "record_sha256": "82142d7421a0668fd2b27ee9044c100dfa9c8fa6309a1c672901a8a84144b552"
+    },
+    {
+      "stage": "N16_GE_g02_g04",
+      "pair_zero_based": [
+        1,
+        3
+      ],
+      "pair_one_based": [
+        2,
+        4
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4235237817927,
+      "delta_pair_hartree": -0.00020587098447322205,
+      "delta_pair_kcal_mol": -0.1291859931916442,
+      "record_sha256": "8259c22c735f764ebd97b5cbf44655faa86730bfae644a182ae9026f9750aec5"
+    },
+    {
+      "stage": "N16_GE_g02_g05",
+      "pair_zero_based": [
+        1,
+        4
+      ],
+      "pair_one_based": [
+        2,
+        5
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4233249462884,
+      "delta_pair_hartree": -7.035480166450725e-06,
+      "delta_pair_kcal_mol": -0.004414830459030866,
+      "record_sha256": "bec7de1176f35f36b9a5e91e6a85780eb8393673457b228f2bfcf3f532c3ebfa"
+    },
+    {
+      "stage": "N16_GE_g02_g06",
+      "pair_zero_based": [
+        1,
+        5
+      ],
+      "pair_one_based": [
+        2,
+        6
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4233183024196,
+      "delta_pair_hartree": -3.9161136555776466e-07,
+      "delta_pair_kcal_mol": -0.0002457398420382853,
+      "record_sha256": "7a2e6687fc7bf9ee852420477ed1a80a4ffedd535ed8f6e05c61bc70f518978b"
+    },
+    {
+      "stage": "N16_GE_g02_g07",
+      "pair_zero_based": [
+        1,
+        6
+      ],
+      "pair_one_based": [
+        2,
+        7
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4233191388957,
+      "delta_pair_hartree": -1.2280875125725288e-06,
+      "delta_pair_kcal_mol": -0.0007706365491178483,
+      "record_sha256": "7ecf17d28fe12f41b400229b344291f8a608d11a9f725bdafe2dd8900641cf86"
+    },
+    {
+      "stage": "N16_GE_g02_g08",
+      "pair_zero_based": [
+        1,
+        7
+      ],
+      "pair_one_based": [
+        2,
+        8
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4235237804508,
+      "delta_pair_hartree": -0.00020586964251378959,
+      "delta_pair_kcal_mol": -0.12918515109938652,
+      "record_sha256": "2646ced145d55b078da173985427192d33b825d05006ce733c7faec672779bee"
+    },
+    {
+      "stage": "N16_GE_g03_g04",
+      "pair_zero_based": [
+        2,
+        3
+      ],
+      "pair_one_based": [
+        3,
+        4
+      ],
+      "pair_class": "adjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4189338543214,
+      "delta_pair_hartree": 0.004384056486856025,
+      "delta_pair_kcal_mol": 2.751036980329946,
+      "record_sha256": "23922338a0b6c43f889b4c6401dc90a8eeb4a120605a16c6e6101c5a7cee1f47"
+    },
+    {
+      "stage": "N16_GE_g03_g05",
+      "pair_zero_based": [
+        2,
+        4
+      ],
+      "pair_one_based": [
+        3,
+        5
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4236129710243,
+      "delta_pair_hartree": -0.0002950602161035931,
+      "delta_pair_kcal_mol": -0.18515308102411035,
+      "record_sha256": "46c209694f8583e27fb113790ddea3c34edfbe32edb7c3d41ecb4face8753a2b"
+    },
+    {
+      "stage": "N16_GE_g03_g06",
+      "pair_zero_based": [
+        2,
+        5
+      ],
+      "pair_one_based": [
+        3,
+        6
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.423317935512,
+      "delta_pair_hartree": -2.4703808776394e-08,
+      "delta_pair_kcal_mol": -1.5501874052630392e-05,
+      "record_sha256": "45b898904c287baa940eed05019cac2f801d17546d220c2591e9fe1d2607b6b2"
+    },
+    {
+      "stage": "N16_GE_g03_g07",
+      "pair_zero_based": [
+        2,
+        6
+      ],
+      "pair_one_based": [
+        3,
+        7
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4233233494847,
+      "delta_pair_hartree": -5.438676453195512e-06,
+      "delta_pair_kcal_mol": -0.0034128210007440822,
+      "record_sha256": "d24dbdd1514dff225614b352473a2e4805f4121b3bc3076bfe6e1c31222f1edf"
+    },
+    {
+      "stage": "N16_GE_g03_g08",
+      "pair_zero_based": [
+        2,
+        7
+      ],
+      "pair_one_based": [
+        3,
+        8
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4233249466447,
+      "delta_pair_hartree": -7.0358364610001445e-06,
+      "delta_pair_kcal_mol": -0.004415054037236184,
+      "record_sha256": "71ca474930685bfb988ed88772c43da5e07479902731ee9d9b6f7a0a6ec547ca"
+    },
+    {
+      "stage": "N16_GE_g04_g05",
+      "pair_zero_based": [
+        3,
+        4
+      ],
+      "pair_one_based": [
+        4,
+        5
+      ],
+      "pair_class": "adjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4207590468329,
+      "delta_pair_hartree": 0.0025588639753095777,
+      "delta_pair_kcal_mol": 1.6057113873455264,
+      "record_sha256": "a2d546ad7859ef772ff63cb642048e3fc1f30a0bc9954ce59fd90b9ae4e3d7ef"
+    },
+    {
+      "stage": "N16_GE_g04_g06",
+      "pair_zero_based": [
+        3,
+        5
+      ],
+      "pair_one_based": [
+        4,
+        6
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4235237804543,
+      "delta_pair_hartree": -0.00020586964603808156,
+      "delta_pair_kcal_mol": -0.12918515331091313,
+      "record_sha256": "6d218a684f6dd8dafd0036da0e1d08b9b5067c5dc576a59ea3e577ecd8315055"
+    },
+    {
+      "stage": "N16_GE_g04_g07",
+      "pair_zero_based": [
+        3,
+        6
+      ],
+      "pair_one_based": [
+        4,
+        7
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.42332494664,
+      "delta_pair_hartree": -7.035831799839798e-06,
+      "delta_pair_kcal_mol": -0.004415051112313906,
+      "record_sha256": "7b9ba59a0bf41c41805d027e1745d0a8674c7b5714c6ea0bb9cd147731faea48"
+    },
+    {
+      "stage": "N16_GE_g04_g08",
+      "pair_zero_based": [
+        3,
+        7
+      ],
+      "pair_one_based": [
+        4,
+        8
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4233184150844,
+      "delta_pair_hartree": -5.042761586082634e-07,
+      "delta_pair_kcal_mol": -0.00031643806707083174,
+      "record_sha256": "888e01e436e584250149b502a6f79d9fd4571448773c03f3e847f0ac5f4c5a5a"
+    },
+    {
+      "stage": "N16_GE_g05_g06",
+      "pair_zero_based": [
+        4,
+        5
+      ],
+      "pair_one_based": [
+        5,
+        6
+      ],
+      "pair_class": "adjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4189341813205,
+      "delta_pair_hartree": 0.004383729487699384,
+      "delta_pair_kcal_mol": 2.750831785261143,
+      "record_sha256": "93446f98706fbe83e0ff2452dfabd91daffdb273fd73a99eddb265f0016a4dd1"
+    },
+    {
+      "stage": "N16_GE_g05_g07",
+      "pair_zero_based": [
+        4,
+        6
+      ],
+      "pair_one_based": [
+        5,
+        7
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4236129707407,
+      "delta_pair_hartree": -0.000295059932454933,
+      "delta_pair_kcal_mol": -0.18515290303188883,
+      "record_sha256": "1d46883581786cfe037b9599a70f27aad12f928379cd6dd8638e9ca03ae87d0f"
+    },
+    {
+      "stage": "N16_GE_g05_g08",
+      "pair_zero_based": [
+        4,
+        7
+      ],
+      "pair_one_based": [
+        5,
+        8
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4233178430173,
+      "delta_pair_hartree": 6.779089289921103e-08,
+      "delta_pair_kcal_mol": 4.253942754945186e-05,
+      "record_sha256": "a2fb7ebc912f36a886bdc6b12a95a9dbc56bbc19ca5d94147981d8064887cc97"
+    },
+    {
+      "stage": "N16_GE_g06_g07",
+      "pair_zero_based": [
+        5,
+        6
+      ],
+      "pair_one_based": [
+        6,
+        7
+      ],
+      "pair_class": "adjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4207590468286,
+      "delta_pair_hartree": 0.0025588639796296775,
+      "delta_pair_kcal_mol": 1.60571139005643,
+      "record_sha256": "756ee05eafd10d9fb5338719cd87a7202458692deb9728a40e6e3aaeed47ad31"
+    },
+    {
+      "stage": "N16_GE_g06_g08",
+      "pair_zero_based": [
+        5,
+        7
+      ],
+      "pair_one_based": [
+        6,
+        8
+      ],
+      "pair_class": "nonadjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4235237817908,
+      "delta_pair_hartree": -0.0002058709825405458,
+      "delta_pair_kcal_mol": -0.12918599197887154,
+      "record_sha256": "9ebafc3ddfd1a89022c652dde12624d1d105ec657cff5c0ee14ada56cfc6b50f"
+    },
+    {
+      "stage": "N16_GE_g07_g08",
+      "pair_zero_based": [
+        6,
+        7
+      ],
+      "pair_one_based": [
+        7,
+        8
+      ],
+      "pair_class": "adjacent",
+      "multiplicity": 1,
+      "GE_energy_hartree": -619.4189341812913,
+      "delta_pair_hartree": 0.004383729516916901,
+      "delta_pair_kcal_mol": 2.7508318035954122,
+      "record_sha256": "3d9a639a54de1419a2bc909989ed0e36a45947df1b97468a239b4b9818a477a3"
+    }
+  ],
+  "source_printed_values": {
+    "delta_EA_kcal_mol": 15.16,
+    "sum_delta_EAm_kcal_mol": 17.0,
+    "ESE_kcal_mol": -1.84,
+    "sum_delta_EnAm_kcal_mol": -1.19,
+    "CESE_kcal_mol": -0.65,
+    "CESE_per_pi_kcal_mol_electron": -0.04
+  },
+  "recalculation_minus_source": {
+    "delta_EA_kcal_mol": 0.6443233652284732,
+    "sum_delta_EAm_kcal_mol": 0.42666411253972214,
+    "ESE_kcal_mol": 0.21765925268875064,
+    "sum_delta_EnAm_kcal_mol": -0.09281353268813897,
+    "CESE_kcal_mol": 0.3104727853768894,
+    "CESE_per_pi_kcal_mol_electron": 0.018779549086055586
+  },
+  "source_direction_checks": {
+    "delta_EA_positive": true,
+    "ESE_negative": true,
+    "CESE_negative": true
+  },
+  "source_direction_reproduced": true,
+  "N16_relative_CESE_threshold": 0.1,
+  "N16_relative_CESE_boundary_supported": true,
+  "exact_numeric_reproduction_claimed": false,
+  "scientific_interpretation": "The independent same-basis planar candidate reproduces the negative CESE direction and the preregistered small-relative-CESE N16 onset criterion.",
+  "coverage_interpretation": "N16 closes the tested 4n onset point; it does not by itself constitute a complete six-point N12/N14/N16/N18/N20/N22 recalculation.",
+  "boundary_status": {
+    "quantum_chemistry_run": false,
+    "saved_density_re_evaluated": false,
+    "N18_or_larger_started": false,
+    "public_P12_classification_changed": false,
+    "historical_2011_exact_replication_claimed": false
+  },
+  "frozen_inputs": {
+    "ledger_contract": {
+      "path": "configs/qm/p12_source2011_same_basis_n16_ledger_v0.1.yaml",
+      "sha256": "414943087a518bebaf3d6020be73d5f79dc1fd50b6a62e6c86035777cb024609"
+    },
+    "execution_audit": {
+      "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_execution_ledger_audit_v0.1.json",
+      "sha256": "98c828ddedd81ea437e171106aa487fc999ae54f9ef94f3ee4770edd5254ec44"
+    },
+    "execution_contract": {
+      "path": "configs/qm/p12_source2011_same_basis_n16_execution_v0.1.yaml",
+      "sha256": "2baeb7813ea058c1412f86bc8f07600b3453cc6c9f0ad5fc7d41dca48d334a82"
+    },
+    "state_records": {
+      "G": {
+        "path": "data/processed/p12_source2011_same_basis_planar_g_v0.2/N16_G.json",
+        "sha256": "341e8ae225116e7737974459bf6de5a622f903d7a344d00fd25a0b92ef776c90"
+      },
+      "GL": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GL.json",
+        "sha256": "3d96f032d1d029afabc6c1c1c260b791c137988f782b9b22fc260383c977c7a4"
+      },
+      "N16_GE_g01_g02": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g01_g02.json",
+        "sha256": "e868ece1d3ccbdf9593dd7b14af19ae1a28b8e7b3305334e92959bf534076fc5"
+      },
+      "N16_GE_g01_g03": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g01_g03.json",
+        "sha256": "c9ba658383f3804467b5e3e6303f675112a67955e8d3f8b56975116ee6eb4915"
+      },
+      "N16_GE_g01_g04": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g01_g04.json",
+        "sha256": "0772f2b5fa00c4b6dd1e7b303704c84291934141c875b794938974f8b64510d5"
+      },
+      "N16_GE_g01_g05": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g01_g05.json",
+        "sha256": "1235cc976a02e8daaf51def18145d43361819fdcc458b5ea581e9b2b64a5f018"
+      },
+      "N16_GE_g01_g06": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g01_g06.json",
+        "sha256": "1e0db08478ad418514cfbf0cb9b53ed1af084958f2074dd72cf9d6ff49eb016c"
+      },
+      "N16_GE_g01_g07": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g01_g07.json",
+        "sha256": "73d731ea637b4453cc370fdc8572a30f016a765745962a8cac4f844e74073ba0"
+      },
+      "N16_GE_g01_g08": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g01_g08.json",
+        "sha256": "8e24fd7de521ab76823352ceecf7139c49c89d2868ca9f2cb11cc50e9169cb5b"
+      },
+      "N16_GE_g02_g03": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g02_g03.json",
+        "sha256": "82142d7421a0668fd2b27ee9044c100dfa9c8fa6309a1c672901a8a84144b552"
+      },
+      "N16_GE_g02_g04": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g02_g04.json",
+        "sha256": "8259c22c735f764ebd97b5cbf44655faa86730bfae644a182ae9026f9750aec5"
+      },
+      "N16_GE_g02_g05": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g02_g05.json",
+        "sha256": "bec7de1176f35f36b9a5e91e6a85780eb8393673457b228f2bfcf3f532c3ebfa"
+      },
+      "N16_GE_g02_g06": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g02_g06.json",
+        "sha256": "7a2e6687fc7bf9ee852420477ed1a80a4ffedd535ed8f6e05c61bc70f518978b"
+      },
+      "N16_GE_g02_g07": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g02_g07.json",
+        "sha256": "7ecf17d28fe12f41b400229b344291f8a608d11a9f725bdafe2dd8900641cf86"
+      },
+      "N16_GE_g02_g08": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g02_g08.json",
+        "sha256": "2646ced145d55b078da173985427192d33b825d05006ce733c7faec672779bee"
+      },
+      "N16_GE_g03_g04": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g03_g04.json",
+        "sha256": "23922338a0b6c43f889b4c6401dc90a8eeb4a120605a16c6e6101c5a7cee1f47"
+      },
+      "N16_GE_g03_g05": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g03_g05.json",
+        "sha256": "46c209694f8583e27fb113790ddea3c34edfbe32edb7c3d41ecb4face8753a2b"
+      },
+      "N16_GE_g03_g06": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g03_g06.json",
+        "sha256": "45b898904c287baa940eed05019cac2f801d17546d220c2591e9fe1d2607b6b2"
+      },
+      "N16_GE_g03_g07": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g03_g07.json",
+        "sha256": "d24dbdd1514dff225614b352473a2e4805f4121b3bc3076bfe6e1c31222f1edf"
+      },
+      "N16_GE_g03_g08": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g03_g08.json",
+        "sha256": "71ca474930685bfb988ed88772c43da5e07479902731ee9d9b6f7a0a6ec547ca"
+      },
+      "N16_GE_g04_g05": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g04_g05.json",
+        "sha256": "a2d546ad7859ef772ff63cb642048e3fc1f30a0bc9954ce59fd90b9ae4e3d7ef"
+      },
+      "N16_GE_g04_g06": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g04_g06.json",
+        "sha256": "6d218a684f6dd8dafd0036da0e1d08b9b5067c5dc576a59ea3e577ecd8315055"
+      },
+      "N16_GE_g04_g07": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g04_g07.json",
+        "sha256": "7b9ba59a0bf41c41805d027e1745d0a8674c7b5714c6ea0bb9cd147731faea48"
+      },
+      "N16_GE_g04_g08": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g04_g08.json",
+        "sha256": "888e01e436e584250149b502a6f79d9fd4571448773c03f3e847f0ac5f4c5a5a"
+      },
+      "N16_GE_g05_g06": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g05_g06.json",
+        "sha256": "93446f98706fbe83e0ff2452dfabd91daffdb273fd73a99eddb265f0016a4dd1"
+      },
+      "N16_GE_g05_g07": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g05_g07.json",
+        "sha256": "1d46883581786cfe037b9599a70f27aad12f928379cd6dd8638e9ca03ae87d0f"
+      },
+      "N16_GE_g05_g08": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g05_g08.json",
+        "sha256": "a2fb7ebc912f36a886bdc6b12a95a9dbc56bbc19ca5d94147981d8064887cc97"
+      },
+      "N16_GE_g06_g07": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g06_g07.json",
+        "sha256": "756ee05eafd10d9fb5338719cd87a7202458692deb9728a40e6e3aaeed47ad31"
+      },
+      "N16_GE_g06_g08": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g06_g08.json",
+        "sha256": "9ebafc3ddfd1a89022c652dde12624d1d105ec657cff5c0ee14ada56cfc6b50f"
+      },
+      "N16_GE_g07_g08": {
+        "path": "data/processed/p12_source2011_same_basis_planar_states_v0.2/N16_GE_g07_g08.json",
+        "sha256": "3d9a639a54de1419a2bc909989ed0e36a45947df1b97468a239b4b9818a477a3"
+      }
+    }
+  },
+  "git_head_metadata_only": "ffde7b5a53800010f2bc326b812b3e5b4526d56c"
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "high-cost-dependencies-v1",
+  "python_version": "3.12.13",
+  "packages": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "pyscf": "2.14.0",
+    "PyYAML": "6.0.3",
+    "rdkit": "2026.3.4",
+    "pillow": "11.3.0",
+    "geometric": "1.1.1",
+    "networkx": "3.6.1",
+    "six": "1.17.0"
+  },
+  "additional_licenses": {
+    "geometric": {
+      "license": null,
+      "source": "https://github.com/leeping/geomeTRIC",
+      "project_urls": null
+    },
+    "networkx": {
+      "license": null,
+      "source": null,
+      "project_urls": [
+        "Homepage, https://networkx.org/",
+        "Bug Tracker, https://github.com/networkx/networkx/issues",
+        "Documentation, https://networkx.org/documentation/stable/",
+        "Source Code, https://github.com/networkx/networkx"
+      ]
+    },
+    "six": {
+      "license": "MIT",
+      "source": "https://github.com/benjaminp/six",
+      "project_urls": null
+    }
+  },
+  "base_image_id": "sha256:0e0f2e3d4202a5ff30b762af8760d68d2be813da1313e2c8beeb6b44ed8fd999",
+  "inherited_base_image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+  "dockerfile_sha256": "8caa0d7580822a0816cf21d551a89ea897e84bce5a10d221c7f853aa7d75c920",
+  "scientific_library_versions_unchanged": true,
+  "geometric_installation_scope": "NEW_LOCAL_CONTAINER_ONLY",
+  "image_distribution": "BLOCKED_LOCAL_ONLY"
+}

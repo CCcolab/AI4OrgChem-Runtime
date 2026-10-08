@@ -1,0 +1,368 @@
+{
+  "schema_version": 1,
+  "protocol_id": "p11-source2007-planar-recalculation/0.2",
+  "proposition_id": "P11",
+  "subtarget": "P11-B_cyanobenzene_inductive_effect",
+  "method": "B3LYP/6-31G(d)",
+  "geometry_constraint": "all_atom_z_equals_zero_hard_cartesian_freeze",
+  "state_energies_hartree": {
+    "cyanobenzene_G": -324.48472950673937,
+    "cyanobenzene_GL_I": -324.46597033704336,
+    "cyanobenzene_GE1": -324.4549486297814,
+    "cyanobenzene_GE2": -324.45017496492136,
+    "cyanobenzene_GE3": -324.4520210620155,
+    "cyanobenzene_GL_II": -324.4716423187084,
+    "cyanobenzene_GE4": -324.460509056675,
+    "cyanobenzene_GE5": -324.4540455577409,
+    "cyanobenzene_GE6": -324.45764508129923,
+    "cyanobenzene_GE7": -324.49031007097904,
+    "benzene_G": -232.24382864669195,
+    "benzene_GL": -232.226538731657,
+    "benzene_GE1": -232.21157670216013
+  },
+  "cyanobenzene_delta_EA_hartree": -0.018759169696011213,
+  "cyanobenzene_SB_increments_hartree": {
+    "GE1": 0.011021707261932079,
+    "GE2": 0.015795372121999662,
+    "GE3": 0.013949275027869135
+  },
+  "benzene_delta_EA_hartree": -0.01728991503495081,
+  "benzene_delta_EA1_hartree": 0.01496202949687131,
+  "cyanobenzene_ph_increments_hartree": {
+    "GE4": 0.011133262033411029,
+    "GE5": 0.01759676096747853,
+    "GE6": 0.013997237409171248,
+    "GE7": -0.018667752270630444
+  },
+  "ESE_cyanobenzene_whole_system_hartree": -0.05952552410781209,
+  "ESE_benzene_hartree": -0.06217600352556474,
+  "ESE_cyanobenzene_isolated_phenyl_hartree": -0.06139501268069125,
+  "conjugative_effect_hartree": 0.0018694885728791633,
+  "inductive_effect_hartree": 0.0007809908448734859,
+  "ESE_cyanobenzene_whole_system_kcal_mol": -37.35283032622355,
+  "ESE_benzene_kcal_mol": -39.01603127167258,
+  "ESE_cyanobenzene_isolated_phenyl_kcal_mol": -38.525952117357924,
+  "conjugative_effect_kcal_mol": 1.1731217911343792,
+  "inductive_effect_kcal_mol": 0.49007915431465726,
+  "published_reference_kcal_mol": {
+    "ESE_cyanobenzene_whole_system_kcal_mol": -37.3,
+    "ESE_benzene_kcal_mol": -39.0,
+    "ESE_cyanobenzene_isolated_phenyl_kcal_mol": -38.5,
+    "conjugative_effect_kcal_mol": 1.2,
+    "inductive_effect_kcal_mol": 0.49
+  },
+  "deviation_from_published_kcal_mol": {
+    "ESE_cyanobenzene_whole_system_kcal_mol": -0.05283032622354966,
+    "ESE_benzene_kcal_mol": -0.016031271672581227,
+    "ESE_cyanobenzene_isolated_phenyl_kcal_mol": -0.025952117357924465,
+    "conjugative_effect_kcal_mol": -0.026878208865620756,
+    "inductive_effect_kcal_mol": 7.915431465727041e-05
+  },
+  "maximum_absolute_z_angstrom": 5.666260771479823e-17,
+  "maximum_ring_bond_change_from_source_start_angstrom": 0.0023281234391550054,
+  "geometry_checks": {
+    "cyanobenzene_G": {
+      "initial_ring_bonds_angstrom": [
+        1.4051,
+        1.3951999999823161,
+        1.3970000000737224,
+        1.39710000009162,
+        1.3925000000183183,
+        1.4050999999265574
+      ],
+      "optimized_ring_bonds_angstrom": [
+        1.4054535114010736,
+        1.3928718765431611,
+        1.397381585128621,
+        1.3973769996682934,
+        1.3928219785653784,
+        1.4054777993381138
+      ],
+      "maximum_ring_bond_change_angstrom": 0.0023281234391550054
+    },
+    "cyanobenzene_GL_I": {
+      "initial_ring_bonds_angstrom": [
+        1.342,
+        1.449999999972639,
+        1.3327000000441358,
+        1.4500000000715445,
+        1.3324000000276706,
+        1.4518999999560915
+      ],
+      "optimized_ring_bonds_angstrom": [
+        1.3422872468364866,
+        1.4502475807144588,
+        1.3330645630563938,
+        1.4503824797214184,
+        1.3327486728197724,
+        1.4525445752240234
+      ],
+      "maximum_ring_bond_change_angstrom": 0.000644575267931824
+    },
+    "cyanobenzene_GE1": {
+      "initial_ring_bonds_angstrom": [
+        1.3503,
+        1.465199999880052,
+        1.340299999996255,
+        1.4548000001158934,
+        1.337600000120237,
+        1.4557000000050415
+      ],
+      "optimized_ring_bonds_angstrom": [
+        1.3507225242192535,
+        1.465273498598772,
+        1.3405627534806217,
+        1.4551132183740538,
+        1.3378988236688787,
+        1.4560351309853614
+      ],
+      "maximum_ring_bond_change_angstrom": 0.00042252421925348393
+    },
+    "cyanobenzene_GE2": {
+      "initial_ring_bonds_angstrom": [
+        1.3464,
+        1.4536000000620795,
+        1.3380000002196646,
+        1.4540000001600835,
+        1.3362999999412595,
+        1.482599999780564
+      ],
+      "optimized_ring_bonds_angstrom": [
+        1.346723883496517,
+        1.4539718404149204,
+        1.3383384498817754,
+        1.454364755457497,
+        1.336584097576512,
+        1.4829719676888629
+      ],
+      "maximum_ring_bond_change_angstrom": 0.00037196790829896464
+    },
+    "cyanobenzene_GE3": {
+      "initial_ring_bonds_angstrom": [
+        1.3479,
+        1.4542000000354487,
+        1.338299999981854,
+        1.472699999946378,
+        1.3380999999646714,
+        1.456100000018331
+      ],
+      "optimized_ring_bonds_angstrom": [
+        1.3482406737456212,
+        1.4544948195808765,
+        1.3386368232148704,
+        1.4729700437658695,
+        1.3384014434989189,
+        1.456496975823196
+      ],
+      "maximum_ring_bond_change_angstrom": 0.0003969758048649741
+    },
+    "cyanobenzene_GL_II": {
+      "initial_ring_bonds_angstrom": [
+        1.3364,
+        1.4542999999390698,
+        1.332699999959922,
+        1.4503000000209003,
+        1.3325000000609393,
+        1.4447000000402326
+      ],
+      "optimized_ring_bonds_angstrom": [
+        1.3368070362016873,
+        1.4546589947083148,
+        1.3330275205380395,
+        1.4507094881582638,
+        1.3327351333991109,
+        1.4451924977240047
+      ],
+      "maximum_ring_bond_change_angstrom": 0.0004924976837721307
+    },
+    "cyanobenzene_GE4": {
+      "initial_ring_bonds_angstrom": [
+        1.3444,
+        1.4696999998531664,
+        1.3384999999081235,
+        1.4567000000551826,
+        1.3378000001468675,
+        1.4470000000928187
+      ],
+      "optimized_ring_bonds_angstrom": [
+        1.3448399732842418,
+        1.4698793716549154,
+        1.3387994916579329,
+        1.457033743440706,
+        1.3381538320172053,
+        1.4473215313553613
+      ],
+      "maximum_ring_bond_change_angstrom": 0.00043997328424172366
+    },
+    "cyanobenzene_GE5": {
+      "initial_ring_bonds_angstrom": [
+        1.3407,
+        1.4580000000365654,
+        1.338300000141642,
+        1.4545000001061135,
+        1.33729999996486,
+        1.476299999858472
+      ],
+      "optimized_ring_bonds_angstrom": [
+        1.340994621492039,
+        1.4583701116188637,
+        1.3386362328631032,
+        1.454965771084878,
+        1.3376037946975565,
+        1.4765658490253242
+      ],
+      "maximum_ring_bond_change_angstrom": 0.0004657709787645459
+    },
+    "cyanobenzene_GE6": {
+      "initial_ring_bonds_angstrom": [
+        1.3423,
+        1.4586000000012456,
+        1.338399999896338,
+        1.4730999998956047,
+        1.3379999999997663,
+        1.4488000001039194
+      ],
+      "optimized_ring_bonds_angstrom": [
+        1.34262215408263,
+        1.4589221126978373,
+        1.338711028477992,
+        1.4733270377979453,
+        1.3382409855561654,
+        1.4492373269466472
+      ],
+      "maximum_ring_bond_change_angstrom": 0.0004373268427277921
+    },
+    "cyanobenzene_GE7": {
+      "initial_ring_bonds_angstrom": [
+        1.3994,
+        1.3941000000000454,
+        1.3965000000308272,
+        1.3964000000308256,
+        1.3941000000000427,
+        1.3994999999691953
+      ],
+      "optimized_ring_bonds_angstrom": [
+        1.3997720625550871,
+        1.3944600115978556,
+        1.3967849712537765,
+        1.3967596864797813,
+        1.3944274740424898,
+        1.3997748443924698
+      ],
+      "maximum_ring_bond_change_angstrom": 0.00037206255508714925
+    },
+    "benzene_G": {
+      "initial_ring_bonds_angstrom": [
+        1.3966,
+        1.3965999999999998,
+        1.3966000000000003,
+        1.3965999999999996,
+        1.3966000000000007,
+        1.3966
+      ],
+      "optimized_ring_bonds_angstrom": [
+        1.3969949268144854,
+        1.3969924322049527,
+        1.3969949268126818,
+        1.3969949268124027,
+        1.3969924322040308,
+        1.3969949268138055
+      ],
+      "maximum_ring_bond_change_angstrom": 0.0003949268144853857
+    },
+    "benzene_GL": {
+      "initial_ring_bonds_angstrom": [
+        1.3337108,
+        1.4489037,
+        1.3337032,
+        1.4489136,
+        1.3337298,
+        1.448847839503695
+      ],
+      "optimized_ring_bonds_angstrom": [
+        1.3340306069841468,
+        1.449292945964602,
+        1.3340063901084525,
+        1.4493194137541314,
+        1.333996082019277,
+        1.4493083881443733
+      ],
+      "maximum_ring_bond_change_angstrom": 0.0004605486406783488
+    },
+    "benzene_GE1": {
+      "initial_ring_bonds_angstrom": [
+        1.3393953,
+        1.4531740000000002,
+        1.339057,
+        1.4737563,
+        1.339081,
+        1.4532396956208553
+      ],
+      "optimized_ring_bonds_angstrom": [
+        1.3397727449583328,
+        1.4535446387320239,
+        1.3393965317424619,
+        1.4740142218628212,
+        1.3393989711059195,
+        1.4535441602911663
+      ],
+      "maximum_ring_bond_change_angstrom": 0.00037744495833269553
+    }
+  },
+  "acceptance_checks": {
+    "all_thirteen_optimized_states_pass": true,
+    "all_atoms_remain_planar": true,
+    "cyanobenzene_whole_system_ESE_matches_source": true,
+    "benzene_ESE_matches_source": true,
+    "cyanobenzene_phenyl_ESE_matches_source": true,
+    "conjugative_effect_matches_source": true,
+    "inductive_effect_matches_source": true,
+    "cyanobenzene_whole_system_ESE_negative": true,
+    "conjugative_effect_positive": true,
+    "cyanobenzene_phenyl_less_stabilizing_than_benzene": true,
+    "inductive_effect_positive": true
+  },
+  "nonblocking_geometry_diagnostic": {
+    "registered_maximum_ring_bond_change_angstrom": 0.001,
+    "observed_maximum_ring_bond_change_angstrom": 0.0023281234391550054,
+    "within_registered_threshold": false,
+    "maximum_change_state": "cyanobenzene_G",
+    "disposition": "NONBLOCKING_SOURCE_START_DIAGNOSTIC",
+    "rationale": "Figure_7_supplies_rounded_heavy_atom_bond_lengths_not_full_Cartesian_coordinates_or_hydrogen_positions;_the_optimized_structure_and_source_energy_observables_are_the_scientific_estimands"
+  },
+  "protocol_deviation": {
+    "declared": true,
+    "type": "SOURCE_START_RING_BOND_DRIFT",
+    "effect_on_energy_classification": "none",
+    "post_execution_treatment": "reported_not_silently_relaxed"
+  },
+  "calculation_gate_verdict": "PASS_WITH_DECLARED_GEOMETRY_DIAGNOSTIC",
+  "verdict": "P11B_SOURCE2007_PLANAR_RECALCULATION_CONSISTENT",
+  "classification": "consistent",
+  "relation_to_monograph": "consistent_within_single_cyanobenzene_source2007_planar_restricted_domain",
+  "scientific_disposition": "CONSISTENT_WITH_SOURCE_2007",
+  "historical_fixed_geometry_proxy": {
+    "inductive_effect_kcal_mol": -0.3357141712815017,
+    "status": "preserved_for_audit_superseded_for_source2007_IE",
+    "cause": "Figure_7_heavy_bond_proxy_was_evaluated_without_state_specific_restricted_geometry_optimization"
+  },
+  "input_sha256": {
+    "data/processed/p11_source2007_planar_optimized_v0.2/cyanobenzene_G.json": "d0b8fcf5ef1dfd50426adcec9d2cfa939c3b9adb61b198617abac315acaa0ad4",
+    "data/processed/p11_source2007_planar_optimized_v0.2/cyanobenzene_GL_I.json": "ff127ad0e08a1603dbf7f16f91330599f97d80a5b91d1664377de34d8136ad1b",
+    "data/processed/p11_source2007_planar_optimized_v0.2/cyanobenzene_GE1.json": "2809837c9a5473da7a79d6179610be644242e4c764c5eafd795f98137aef187f",
+    "data/processed/p11_source2007_planar_optimized_v0.2/cyanobenzene_GE2.json": "3935e165a35291dafbf72deb062407fc53a53055bced3dc505fb7616b621479b",
+    "data/processed/p11_source2007_planar_optimized_v0.2/cyanobenzene_GE3.json": "0a4645adcbf1c436c5d22225b98911b7591262296b0acd0c0d60e719df48d3ad",
+    "data/processed/p11_source2007_planar_optimized_v0.2/cyanobenzene_GL_II.json": "12973729ea3225222f0df8d7ba66f92c7ae81d854254674bf452fc5ba503c45f",
+    "data/processed/p11_source2007_planar_optimized_v0.2/cyanobenzene_GE4.json": "aa9ec95550d1e2b7237fbbd624596a909df4e2026c6ab3627d193a945cf0ba92",
+    "data/processed/p11_source2007_planar_optimized_v0.2/cyanobenzene_GE5.json": "84e41fad3322f49eaa3d8779650242f332c002211c9763e746ca0d69c6706178",
+    "data/processed/p11_source2007_planar_optimized_v0.2/cyanobenzene_GE6.json": "bb803f6e35b34ab17865bce1bc2fac53aa2328ceea38e3d344ae96a51f42e15a",
+    "data/processed/p11_source2007_planar_optimized_v0.2/cyanobenzene_GE7.json": "4c0b99abc0417f7a9d65cd7f4d6411653aa62674ab08b272dac179e147e47657",
+    "data/processed/p11_source2007_planar_optimized_v0.2/benzene_G.json": "2c98149d7f1bfac5e556edac906b85c8f7c1cbf1a287be3a884a45dd37d95601",
+    "data/processed/p11_source2007_planar_optimized_v0.2/benzene_GL.json": "d9f8511a2b2b954c0c3f0483416beae1b53f485c6c41573d1dc2b394ab28ab80",
+    "data/processed/p11_source2007_planar_optimized_v0.2/benzene_GE1.json": "6b175a875cee0ca145d7c7908ae860cb2376af179c30ca2c4974a58ca007fe5a"
+  },
+  "changes_P11_A": false,
+  "changes_other_P01_P14": false,
+  "production_label": false,
+  "training_eligible": false
+}

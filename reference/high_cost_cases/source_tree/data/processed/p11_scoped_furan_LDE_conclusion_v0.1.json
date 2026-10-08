@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "protocol_id": "p11-furan-lde/0.1",
+  "proposition_id": "P11",
+  "subtarget": "P11-A_furan_LDE",
+  "verdict": "P11A_SCOPED_FURAN_LDE_SUPPORTED",
+  "relation_to_monograph": "consistent_with_monograph_furan_LDE_under_frozen_source_2007_semantics",
+  "implementation_class": "source_aligned_independent_reconstruction_from_public_2007_semantics",
+  "original_program_code_used": false,
+  "quantities_kcal_mol": {
+    "delta_EA": 33.50990360948913,
+    "delta_EA1": 28.500657700085362,
+    "delta_EA2_equals_delta_EA3": 22.930177892087034,
+    "sum_delta_EAm": 74.36101348425943,
+    "LDE": -40.8511098747703,
+    "source_LDE": -39.3,
+    "difference_from_source": -1.5511098747702982
+  },
+  "scientific_statement": "Under the frozen single-furan source-2007 semantics, all local delocalization increments are positive, but their sum exceeds the whole-system delocalization energy; the resulting negative difference is an LDE and agrees quantitatively with the monograph value within the preregistered tolerance.",
+  "aromatic_ESE_label": false,
+  "universal_furan_aromaticity_law": false,
+  "evidence": "data/processed/p11_furan_lde_v0.1.json",
+  "validator_verdict": "PASS_P11A_SCOPED_FURAN_LDE_RELEASE",
+  "production_label": false,
+  "training_eligible": false
+}

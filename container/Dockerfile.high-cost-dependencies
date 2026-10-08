@@ -1,0 +1,7 @@
+ARG BASE_IMAGE=ai4orgchem-runtime:protocol-cases-batch2-20261008-local
+FROM ${BASE_IMAGE}
+USER root
+RUN /opt/venv/bin/python -m pip install --no-cache-dir --no-deps geometric==1.1.1 networkx==3.6.1 six==1.17.0 && /opt/venv/bin/python -m pip check
+USER 10001:10001
+ENTRYPOINT ["/opt/venv/bin/python"]
+CMD ["-B","-c","from importlib import metadata; print(metadata.version('geometric'))"]

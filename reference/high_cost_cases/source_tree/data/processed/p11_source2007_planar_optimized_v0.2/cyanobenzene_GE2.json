@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "protocol_role": "P11-B_source_2007_restricted_geometry_recalculation",
+  "system": "cyanobenzene",
+  "state": "GE2",
+  "method": "B3LYP/6-31G(d)",
+  "conditional_semantics": "interfragment_pi_Fock_and_overlap_zeroed_each_SCF_iteration",
+  "one_electron_matrix_masked": false,
+  "geometry_constraint": {
+    "type": "hard_cartesian_freeze",
+    "expression": "z 1-13",
+    "plane": "xy"
+  },
+  "optimizer": "geomeTRIC_with_analytic_conditional_RKS_gradient",
+  "optimizer_converged": true,
+  "initial_energy_hartree": -324.44939630600527,
+  "final_energy_hartree": -324.45017496492136,
+  "energy_lowering_hartree": -0.0007786589160900803,
+  "final_scf_converged": true,
+  "final_gradient_rms_hartree_per_bohr": 1.2664257666502927e-05,
+  "final_gradient_max_hartree_per_bohr": 4.061957470298967e-05,
+  "final_maximum_absolute_z_gradient_hartree_per_bohr": 1.965793988661195e-15,
+  "initial_atoms_angstrom": [
+    [
+      "C",
+      -0.6738112336653962,
+      1.2349272815226129,
+      0.0
+    ],
+    [
+      "C",
+      0.6725887663346038,
+      1.2349272815226129,
+      0.0
+    ],
+    [
+      "C",
+      1.3966763028101568,
+      -0.02548939549385776,
+      0.0
+    ],
+    [
+      "C",
+      0.7318774786769883,
+      -1.186646802574818,
+      0.0
+    ],
+    [
+      "C",
+      -0.7220298522037678,
+      -1.2030624559799608,
+      0.0
+    ],
+    [
+      "C",
+      -1.4053014619525845,
+      -0.05465590899658923,
+      0.0
+    ],
+    [
+      "C",
+      -1.3963450200450138,
+      2.4754482557668744,
+      0.0
+    ],
+    [
+      "N",
+      -1.9801700355091798,
+      3.477819619742455,
+      0.0
+    ],
+    [
+      "H",
+      1.2169016371665453,
+      2.1753649767723777,
+      0.0
+    ],
+    [
+      "H",
+      2.4832760099102993,
+      -0.024691567264446268,
+      0.0
+    ],
+    [
+      "H",
+      1.2821786242241024,
+      -2.1235930172582087,
+      0.0
+    ],
+    [
+      "H",
+      -1.253805952219067,
+      -2.150645560225978,
+      0.0
+    ],
+    [
+      "H",
+      -2.4918430368062765,
+      -0.06592383313807061,
+      0.0
+    ]
+  ],
+  "optimized_atoms_angstrom": [
+    [
+      "C",
+      -0.647786650523144,
+      1.232055753930182,
+      -2.133365431666129e-19
+    ],
+    [
+      "C",
+      0.6988073481364173,
+      1.25075926039271,
+      -9.42925413211599e-18
+    ],
+    [
+      "C",
+      1.3951914067714224,
+      -0.025596236950639242,
+      1.7081254181739464e-17
+    ],
+    [
+      "C",
+      0.7245508922230248,
+      -1.183780637932717,
+      1.3916324125272675e-17
+    ],
+    [
+      "C",
+      -0.7295334640473681,
+      -1.2123380672053574,
+      -1.9953821953171942e-17
+    ],
+    [
+      "C",
+      -1.3912858906411274,
+      -0.05107118324125755,
+      1.0938075255816851e-17
+    ],
+    [
+      "C",
+      -1.4078053745783334,
+      2.4499587768769198,
+      -6.226760413893951e-19
+    ],
+    [
+      "N",
+      -2.049906840745855,
+      3.419572078241831,
+      -1.1632418658396927e-18
+    ],
+    [
+      "H",
+      1.250975751248669,
+      2.183097174232671,
+      1.2551361555415402e-17
+    ],
+    [
+      "H",
+      2.4811218342292785,
+      -0.020425853869319017,
+      -1.4430804009942245e-17
+    ],
+    [
+      "H",
+      1.2672701953750911,
+      -2.124722196173525,
+      -9.777812107227554e-18
+    ],
+    [
+      "H",
+      -1.2567033811459234,
+      -2.1600054994649356,
+      9.436872262740048e-18
+    ],
+    [
+      "H",
+      -2.476327100305275,
+      -0.0053106165017314565,
+      -2.89882082940567e-18
+    ]
+  ],
+  "geometry": {
+    "maximum_absolute_z_angstrom": 1.9953821953171942e-17,
+    "ring_bonds_angstrom": [
+      1.346723883496517,
+      1.4539718404149204,
+      1.3383384498817754,
+      1.454364755457497,
+      1.336584097576512,
+      1.4829719676888629
+    ],
+    "C1_C7_angstrom": 1.4355891592713006,
+    "C7_N8_angstrom": 1.1629463646438054,
+    "CH_angstrom": [
+      1.083579222290177,
+      1.0859427361237837,
+      1.0862390427702848,
+      1.0844268918000697,
+      1.086005734854913
+    ]
+  },
+  "trajectory": [
+    {
+      "cycle": 1,
+      "energy_hartree": -324.4493963060162,
+      "gradient_rms_hartree_per_bohr": 0.0030294250898100067,
+      "gradient_max_hartree_per_bohr": 0.01101042186942864,
+      "maximum_absolute_z_angstrom": 0.0
+    },
+    {
+      "cycle": 2,
+      "energy_hartree": -324.4482589128506,
+      "gradient_rms_hartree_per_bohr": 0.004483466997151464,
+      "gradient_max_hartree_per_bohr": 0.01733342152224168,
+      "maximum_absolute_z_angstrom": 1.2838424208633618e-16
+    },
+    {
+      "cycle": 3,
+      "energy_hartree": -324.4500980408827,
+      "gradient_rms_hartree_per_bohr": 0.001108706067215977,
+      "gradient_max_hartree_per_bohr": 0.004141840882438781,
+      "maximum_absolute_z_angstrom": 5.0337051571191136e-17
+    },
+    {
+      "cycle": 4,
+      "energy_hartree": -324.45014496938893,
+      "gradient_rms_hartree_per_bohr": 0.0005793702335265071,
+      "gradient_max_hartree_per_bohr": 0.0025056188304426567,
+      "maximum_absolute_z_angstrom": 4.495221401796691e-17
+    },
+    {
+      "cycle": 5,
+      "energy_hartree": -324.45015821136747,
+      "gradient_rms_hartree_per_bohr": 0.0004664974516642581,
+      "gradient_max_hartree_per_bohr": 0.001986042158952603,
+      "maximum_absolute_z_angstrom": 4.406239334835164e-17
+    },
+    {
+      "cycle": 6,
+      "energy_hartree": -324.4501721208128,
+      "gradient_rms_hartree_per_bohr": 0.00014286712918881026,
+      "gradient_max_hartree_per_bohr": 0.0005078305209199484,
+      "maximum_absolute_z_angstrom": 3.7515718893012776e-17
+    },
+    {
+      "cycle": 7,
+      "energy_hartree": -324.45017009045444,
+      "gradient_rms_hartree_per_bohr": 0.00024677943060879117,
+      "gradient_max_hartree_per_bohr": 0.0010019966537748403,
+      "maximum_absolute_z_angstrom": 3.188199788194017e-17
+    },
+    {
+      "cycle": 8,
+      "energy_hartree": -324.45017451647453,
+      "gradient_rms_hartree_per_bohr": 5.894754507957543e-05,
+      "gradient_max_hartree_per_bohr": 0.00019404598192171888,
+      "maximum_absolute_z_angstrom": 2.8210306365455926e-17
+    },
+    {
+      "cycle": 9,
+      "energy_hartree": -324.45017494100057,
+      "gradient_rms_hartree_per_bohr": 2.538396679341133e-05,
+      "gradient_max_hartree_per_bohr": 0.0001086282461831312,
+      "maximum_absolute_z_angstrom": 2.397531205234085e-17
+    },
+    {
+      "cycle": 10,
+      "energy_hartree": -324.4501749649018,
+      "gradient_rms_hartree_per_bohr": 1.2732113154102322e-05,
+      "gradient_max_hartree_per_bohr": 4.100967293005442e-05,
+      "maximum_absolute_z_angstrom": 1.9953821953171942e-17
+    }
+  ],
+  "scientific_classification_allowed": false,
+  "pass": true
+}

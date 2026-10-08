@@ -1,0 +1,365 @@
+schema_version: 1
+protocol_id: p12-source2011-planar-cese-recalculation/0.1
+effective_date: 2026-09-08
+status: r2_passed_r3_n12_source_state_execution_authorized
+decision: docs/adr/0045-open-p12-source2011-planar-cese-recalculation.md
+proposition_id: P12
+lane_id: P12-R_SOURCE2011_PLANAR_CESE
+relation_to_source_estimand: SAME_ESTIMAND_TARGET_NOT_YET_ESTABLISHED
+original_program_code_used: false
+fit_to_published_values: false
+production_labels_allowed: false
+ai_training_allowed: false
+public_release_update_allowed: false
+
+release_boundary:
+  immutable_releases: [v0.1.0, v0.2.0, v0.3.0, v0.3.1]
+  current_public_p12_classification: partially_consistent
+  classification_change_before_r5_forbidden: true
+
+source:
+  monograph:
+    title: Questioning Fundamental Principles of Organic Chemistry
+    author: Zhong-Heng Yu
+    year: 2024
+    doi: 10.6084/m9.figshare.27261243
+    local_reference: artifacts/reference_sources/Questioning_Fundamental_Principles_of_Organic_Chemistry_2024.pdf
+    printed_pages: [295, 298, 299, 300, 301, 302, 303, 306, 307, 308, 309, 310]
+    figures: [9-4, 9-6, 9-7, 9-8, 9-9, 9-10, 9-13, 9-14]
+    tables: [9-5, 9-8]
+  method_article:
+    citation: Bao_P_Yu_ZH_J_Comput_Chem_2011_32_248_259
+    doi: 10.1002/jcc.21614
+
+estimand:
+  id: P12A_SOURCE_CESE_BOUNDARY
+  sign_convention: positive_destabilizing_negative_stabilizing
+  delta_EA: E_G_minus_E_GL
+  delta_EAm: E_GE_adjacent_pair_minus_E_GL
+  delta_EnAm: E_GE_nonadjacent_pair_minus_E_GL
+  ESE: delta_EA_minus_sum_delta_EAm
+  CESE: delta_EA_minus_sum_delta_EAm_minus_sum_delta_EnAm
+  CESE_per_pi: CESE_divided_by_N
+
+geometry_contract:
+  dimensionality: fully_planar
+  all_cis_assumption: false
+  configuration_identity_rule: preserve_each_source_bracket_label_and_inner_hydrogen_topology
+  source_specific_note: N12_555_is_tri_trans_and_no_all_cis_or_single_stereochemical_label_may_replace_the_source_panel
+  hard_constraint: all_atomic_z_coordinates_equal_zero
+  seed_role: configuration_identity_only_not_evidence
+  optimization_engine: PySCF_geomeTRIC_or_independently_validated_reduced_coordinate_optimizer
+  method: B3LYPG
+  basis: 6-311g(d,p)
+  source_notation: B3LYP/6-311G_double_star
+  phase: gas
+  charge: 0
+  multiplicity: 1
+  maximum_absolute_z_angstrom: 1.0e-8
+
+energy_contract:
+  engine: PySCF
+  pyscf_version: 2.14.0
+  method: B3LYPG
+  basis: 6-311g(2df,p)
+  grid_level: 3
+  density_fitting: false
+  spherical_basis: true
+  scf_tolerance_hartree: 1.0e-10
+  maximum_scf_cycles: 150
+  source_2011_operator:
+    matrix_rule: union_of_interfragment_pi_h_S_F_masks
+    exchange_rule: complete_permutation_closed_15_class_mask
+    class_ledger: configs/qm/p09_exchange_integral_classes_v0.1.yaml
+
+panel:
+  - {N: 12, series: 4n, role: before, configuration: "[12]-555", point_group_hint: D3h}
+  - {N: 14, series: 4n_plus_2, role: before, configuration: "[14]-665", point_group_hint: C2v}
+  - {N: 16, series: 4n, role: onset, configuration: "[16]-5555", point_group_hint: D4h}
+  - {N: 18, series: 4n_plus_2, role: onset, configuration: "[18]-444444", point_group_hint: D6h}
+  - {N: 20, series: 4n, role: after, configuration: "[20]-445445", point_group_hint: D2h}
+  - {N: 22, series: 4n_plus_2, role: after, configuration: "[22]-5444444", point_group_hint: C2v}
+
+pair_topology:
+  localized_pi_groups: alternating_CC_double_bonds_around_ring
+  GL: every_pi_group_separate
+  GE_pair: exactly_one_pair_merged_all_other_pi_groups_separate
+  adjacent_pair: cyclic_group_distance_equals_one
+  nonadjacent_pair: cyclic_group_distance_greater_than_one
+  enumerate_all_inequivalent_pairs_then_apply_verified_symmetry_multiplicity: true
+
+ordered_gates:
+  R0: PASSED_PROTOCOL_FROZEN
+  R1: PASSED_DIRECT_JK_EQUIVALENCE
+  R2: PASSED_SIX_PLANAR_SEEDS_AND_G_OPTIMIZATIONS
+  R3: IN_PROGRESS_N16_G_SINGLE_POINT_AND_SAVED_DENSITY_LEDGER_AUDIT
+  R4: NOT_STARTED_N20_N22_AND_SIX_POINT_ASSEMBLY
+  R5: NOT_STARTED_INDEPENDENT_VALIDATION_AND_CLASSIFICATION_REVIEW
+
+R1_acceptance:
+  reference_implementation: full_four_index_permutation_closed_15_class_mask
+  candidate_implementation: direct_JK_category_decomposition_without_full_ERI_storage
+  required_test_systems: [benzene_STO-3G, benzene_6-31Gd]
+  maximum_J_retained_block_difference_hartree: 1.0e-10
+  maximum_K_retained_block_difference_hartree: 1.0e-10
+  maximum_energy_difference_hartree: 1.0e-10
+  block_diagonal_density_precondition_verified: true
+  result: PASS_P12_R1_DIRECT_JK_EQUIVALENCE
+  evidence_json: data/processed/p12_source2011_direct_jk_equivalence_v0.1.json
+  evidence_report: docs/reports/p12_source2011_direct_jk_equivalence_2026-09-08.md
+  observed_maximum_J_retained_block_difference_hartree: 1.7763568394002505e-14
+  observed_maximum_K_retained_block_difference_hartree: 2.6645352591003757e-14
+  observed_maximum_energy_difference_hartree: 1.7053025658242404e-13
+
+R1_source_scale_checkpoint:
+  system: "[12]-555"
+  geometry: independently_optimized_fully_planar_G
+  method: B3LYPG/6-311G(2df,p)
+  result: PASS_DIRECT_SOURCE2011_VDE
+  VDE_kcal_mol: 10.462025104069426
+  source_rounded_VDE_kcal_mol: 10.4
+  conditional_cycles: 15
+  carbon_spherical_f_parity_supported: true
+  hydrogen_pz_assigned_to_attached_carbon_pi_fragment: true
+  evidence: data/processed/p12_source2011_planar_vde_direct_v0.1/N12_VDE.json
+  role: implementation_and_scale_checkpoint_not_CESE_or_classification
+
+R2_acceptance:
+  required_N: [12, 14, 16, 18, 20, 22]
+  all_optimizer_converged: true
+  all_fully_planar: true
+  all_configuration_identities_preserved: true
+  result: PASS_P12_R2_SIX_PLANAR_G_OPTIMIZATIONS
+  evidence_directory: data/processed/p12_source2011_planar_g_optimized_v0.1
+  report_directory: docs/reports/p12_source2011_planar_g_optimized_v0.1
+  gate_json: data/processed/p12_source2011_r2_gate_v0.1.json
+  gate_report: docs/reports/p12_source2011_r2_gate_2026-09-09.md
+
+R3_gradient_gate:
+  implementation: source2011_variational_RKS_with_direct_X14_derivative_subtraction
+  energy_reference: validated_standalone_direct_source2011_engine
+  energy_tolerance_hartree: 2.0e-8
+  finite_difference_coordinate: benzene_atom_1_x_in_plane
+  finite_difference_tolerance_hartree_per_bohr: 3.0e-4
+  tests: tests/scientific/test_p12_source2011_gradient.py
+  result: PASS_ANALYTIC_GRADIENT_AND_ENERGY_EQUIVALENCE
+
+R3_N12_pair_orbit_freeze:
+  localized_pi_group_count: 6
+  all_pair_count: 15
+  inequivalent_representative_count: 5
+  multiplicity_per_orbit: 3
+  adjacent_representatives_zero_based: [[0, 1], [0, 5]]
+  nonadjacent_representatives_zero_based: [[0, 2], [1, 3], [0, 3]]
+  evidence: data/inputs/p12_source2011_planar_seeds_v0.1/N12_GE_pair_orbits.json
+  result: PASS_COMPLETE_PAIR_COVERAGE_WITHOUT_SCOPE_EXPANSION
+
+R3_N12_acceptance:
+  configuration: "[12]-555"
+  all_states_converged: true
+  ordinary_state_count: 1
+  conditional_state_count: 6
+  inequivalent_GE_representative_count: 5
+  all_pair_count_after_multiplicity: 15
+  expected_electron_count_derived_from_molecule: 84
+  all_density_and_energy_closure_checks_passed: true
+  delta_EA_kcal_mol: 12.605215210028378
+  sum_delta_EAm_kcal_mol: 10.885277629909655
+  ESE_kcal_mol: 1.719937580118723
+  sum_delta_EnAm_kcal_mol: -0.9650245043705533
+  CESE_kcal_mol: 2.6849620844892765
+  CESE_per_pi_kcal_mol_electron: 0.2237468403741064
+  source_CESE_kcal_mol: 2.59
+  source_CESE_per_pi_kcal_mol_electron: 0.22
+  exact_numeric_reproduction_claimed: false
+  result: PASS_N12_R3_PILOT_WITH_DISCLOSED_NUMERIC_DEVIATION
+  evidence_json: data/processed/p12_source2011_n12_ledger_v0.1.json
+  evidence_report: docs/reports/p12_source2011_n12_ledger_2026-09-09.md
+  public_classification_change_allowed: false
+  N14_automatically_started_at_N12_acceptance: false
+
+R3_N14_execution_boundary:
+  configuration: "[14]-665"
+  authorization: N14_ONLY
+  current_authorized_state: N14_LEDGER_COMPLETE_NO_FURTHER_SYSTEM_AUTHORIZED
+  GE_authorized_before_GL_acceptance: false
+  GE_pair_orbits_must_be_frozen_from_the_accepted_GL_geometry: true
+  unverified_symmetry_reduction_forbidden: true
+  maximum_pair_count_without_verified_symmetry: 21
+  N16_or_larger_automatic_execution: false
+  CESE_assembly_before_all_N14_states_pass: false
+  public_classification_change_allowed: false
+
+R3_N14_GL_acceptance:
+  configuration: "[14]-665"
+  optimizer_converged: true
+  geometry_scf_converged: true
+  energy_scf_converged: true
+  optimization_cycle_count: 14
+  final_energy_hartree: -541.9596685703482
+  maximum_absolute_z_angstrom: 1.7870338835278197e-16
+  configuration_identity_preserved: true
+  result: PASS_N14_GL
+  evidence_json: data/processed/p12_source2011_planar_source_states_v0.1/N14_GL.json
+  evidence_report: docs/reports/p12_source2011_planar_source_states_v0.1/N14_GL.md
+  GE_started: true
+  N16_or_larger_started: false
+
+R3_N14_pair_orbit_freeze:
+  localized_pi_group_count: 7
+  all_pair_count: 21
+  inequivalent_representative_count: 21
+  adjacent_pair_count: 7
+  nonadjacent_pair_count: 14
+  multiplicity_per_orbit: 1
+  nontrivial_symmetry_reduction_accepted: false
+  evidence: data/inputs/p12_source2011_planar_seeds_v0.1/N14_GE_pair_orbits.json
+  result: PASS_COMPLETE_21_PAIR_COVERAGE_WITHOUT_UNVERIFIED_SYMMETRY_REDUCTION
+  queue_status: data/processed/p12_source2011_planar_source_states_v0.1/N14_GE_queue_status.json
+  queue_entrypoint: scripts/run_p12_n14_ge_queue.py
+
+R3_N14_acceptance:
+  configuration: "[14]-665"
+  state_count: 23
+  ordinary_state_count: 1
+  conditional_state_count: 22
+  GE_representative_count: 21
+  all_pair_count_after_multiplicity: 21
+  expected_electron_count_derived_from_molecule: 98
+  all_density_and_energy_closure_checks_passed: true
+  delta_EA_kcal_mol: -7.132849463218796
+  sum_delta_EAm_kcal_mol: 9.965324094364998
+  ESE_kcal_mol: -17.098173557583795
+  sum_delta_EnAm_kcal_mol: -0.939666908733723
+  CESE_kcal_mol: -16.15850664885007
+  CESE_per_pi_kcal_mol_electron: -1.1541790463464336
+  source_delta_EA_kcal_mol: -6.89
+  source_ESE_kcal_mol: -17.13
+  source_CESE_kcal_mol: -16.28
+  source_CESE_per_pi_kcal_mol_electron: -1.16
+  source_direction_reproduced: true
+  exact_numeric_reproduction_claimed: false
+  result: PASS_N14_R3_SOURCE_DIRECTION_REPRODUCED_WITH_DISCLOSED_NUMERIC_DEVIATION
+  evidence_json: data/processed/p12_source2011_n14_ledger_v0.1.json
+  evidence_report: docs/reports/p12_source2011_n14_ledger_2026-09-10.md
+  public_classification_change_allowed: false
+  N16_started_at_N14_acceptance: false
+
+R3_N16_execution_boundary:
+  configuration: "[16]-5555"
+  authorization: N16_GL_GE_AND_SAME_BASIS_G_LEDGER_CLOSURE_ONLY
+  authorization_date: 2026-09-11
+  current_authorized_state: N16_G_SINGLE_POINT_AND_SAVED_DENSITY_LEDGER_AUDIT
+  GL_started: true
+  GL_started_at: 2026-09-11T06:55:05+08:00
+  GL_runner: scripts/run_p12_planar_source_state_optimization.py
+  GL_log: runs/p12_source2011/N16_GL_2026-09-11.log
+  GE_authorized_before_GL_acceptance: false
+  GE_pair_orbits_must_be_frozen_from_the_accepted_GL_geometry: true
+  unverified_symmetry_reduction_forbidden: true
+  maximum_pair_count_without_verified_symmetry: 28
+  N18_or_larger_automatic_execution: false
+  CESE_assembly_before_all_N16_states_pass: false
+  public_classification_change_allowed: false
+
+R3_N16_GL_acceptance:
+  configuration: "[16]-5555"
+  optimizer_converged: true
+  geometry_scf_converged: true
+  energy_scf_converged: true
+  optimization_cycle_count: 12
+  final_energy_hartree: -619.4216491848942
+  maximum_absolute_z_angstrom: 1.8954735805168616e-17
+  configuration_identity_preserved: true
+  observed_inner_hydrogen_carbon_indices_zero_based: [0, 4, 8, 12]
+  final_in_plane_gradient_rms_hartree_per_bohr: 8.594565206282738e-06
+  result: PASS_N16_GL
+  evidence_json: data/processed/p12_source2011_planar_source_states_v0.1/N16_GL.json
+  evidence_report: docs/reports/p12_source2011_planar_source_states_v0.1/N16_GL.md
+  GE_started: true
+  N18_or_larger_started: false
+
+R3_N16_pair_orbit_freeze:
+  status: SUPERSEDED_BEFORE_N16_LEDGER_INTERPRETATION
+  localized_pi_group_count: 8
+  all_pair_count: 28
+  explicit_representative_count: 28
+  adjacent_pair_count: 8
+  nonadjacent_pair_count: 20
+  multiplicity_per_pair: 1
+  nontrivial_symmetry_reduction_accepted: false
+  rationale: preserve_small_GL_asymmetry_and_avoid_multiplicity_amplification
+  strict_convergence_inherited_from_protocol: true
+  optimizer_maxsteps: 80
+  single_state_timeout_hours: 12
+  evidence: data/inputs/p12_source2011_planar_seeds_v0.1/N16_GE_pair_orbits.json
+  result: PASS_COMPLETE_28_PAIR_COVERAGE_WITHOUT_SYMMETRY_REDUCTION
+  queue_status: data/processed/p12_source2011_planar_source_states_v0.1/N16_GE_queue_status.json
+  queue_entrypoint: scripts/run_p12_n16_ge_queue.py
+  queue_started_at: 2026-09-11T09:23:34+08:00
+  N18_or_larger_started: false
+
+R3_N16_symmetry_amendment:
+  amendment_id: p12-n16-ge-symmetry-reduction/0.2
+  authorization_date: 2026-09-11
+  timing: after_one_representative_before_any_N16_ledger_or_interpretation
+  localized_pi_group_count: 8
+  weighted_pair_count: 28
+  representative_count: 8
+  independent_symmetry_control_count: 1
+  execution_state_count: 9
+  adjacent_orbit_count: 2
+  adjacent_weighted_pair_count: 8
+  nonbonded_orbit_count: 6
+  nonbonded_weighted_pair_count: 20
+  nonbonded_source_term: sum_delta_EnAm
+  accepted_group_actions: [0, 2, 4, 6]
+  orbit_multiplicities: [4, 4, 4, 4, 4, 4, 2, 2]
+  maximum_geometry_symmetry_residual_angstrom: 0.0015605152539492906
+  geometry_symmetry_tolerance_angstrom: 0.002
+  symmetry_control_energy_tolerance_kcal_mol: 0.02
+  symmetry_control_reference_pair_zero_based: [0, 7]
+  symmetry_control_pair_zero_based: [1, 2]
+  failure_action: STOP_NO_WEIGHTED_LEDGER_AND_REQUIRE_FULL_28_PAIR_FALLBACK
+  evidence: data/inputs/p12_source2011_planar_seeds_v0.1/N16_GE_symmetry_amendment_v0.2.json
+  transition_status: data/processed/p12_source2011_planar_source_states_v0.1/N16_GE_transition_status.json
+  queue_status: data/processed/p12_source2011_planar_source_states_v0.1/N16_GE_symmetry_queue_status.json
+  queue_entrypoint: scripts/run_p12_n16_ge_symmetry_queue.py
+  checkpoint_resume_enabled: true
+  host_reboot_interruption_date: 2026-09-12
+  completed_execution_states_preserved_before_resume: 6
+  interrupted_pair_zero_based: [0, 5]
+  remaining_execution_state_count_at_resume: 3
+  reboot_recovery_audit: data/processed/p12_source2011_planar_source_states_v0.1/N16_GE_reboot_recovery_2026-09-12.json
+  resume_log: runs/p12_source2011/N16_GE_symmetry_queue_resume_2026-09-12.log
+  classification_change_allowed: false
+
+R3_N16_ledger_closure:
+  authorization_date: 2026-09-12
+  authorization_basis: user_requested_completion_of_N16_G_single_point_and_ledger_after_GE_queue_finished
+  GE_queue_completed_at: 2026-09-12T10:58:55+08:00
+  GE_execution_states_passed: 9
+  symmetry_control_passed: true
+  ordinary_G_geometry: data/processed/p12_source2011_planar_g_optimized_v0.1/N16_G_optimized.xyz
+  G_single_point_uses_existing_energy_contract: true
+  conditional_state_action: reevaluate_saved_density_energy_without_SCF_or_geometry_optimization
+  runner: scripts/validate_p12_n16_source_ledger.py
+  result: data/processed/p12_source2011_n16_ledger_v0.1.json
+  progress: data/processed/p12_source2011_planar_source_states_v0.1/N16_ledger_status.json
+  stop_after_N16_ledger: true
+  larger_size_execution_authorized: false
+  public_classification_change_allowed: false
+
+# Historical six-point scientific design; the current execution stop is N16.
+execution_order: [12, 14, 16, 18, 20, 22]
+resource_profile: configs/resources/local_wsl.yaml
+stop_conditions:
+  - nonplanarity
+  - configuration_isomer_change
+  - conditional_state_nonconvergence
+  - density_block_precondition_failure
+  - electron_count_failure
+  - energy_component_closure_failure
+  - direct_JK_equivalence_failure
+  - insufficient_memory_or_disk
+  - estimand_identity_failure

@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "protocol_id": "p12-source2011-planar-cese-recalculation/0.1",
+  "gate": "P12-R2 planar seed preparation",
+  "source_program_code_used": false,
+  "fit_to_published_energy_or_geometry_values": false,
+  "topology_rule": "each source digit d advances d-1 carbon positions between inner hydrogens",
+  "records": [
+    {
+      "N": 12,
+      "configuration": "[12]-555",
+      "source_fragment_lengths": [
+        5,
+        5,
+        5
+      ],
+      "inner_hydrogen_carbon_indices_zero_based": [
+        0,
+        4,
+        8
+      ],
+      "inner_hydrogen_count": 3,
+      "hydrogens_inside_carbon_polygon_zero_based": [
+        0,
+        4,
+        8
+      ],
+      "inner_hydrogen_topology_verified": true,
+      "nonadjacent_carbon_edge_intersections": 0,
+      "minimum_nonbonded_distance_angstrom": 1.084891016257251,
+      "maximum_absolute_z_angstrom": 0.0,
+      "closure_error_angstrom": 1.0400603426168659e-14,
+      "winding_error_radian": 0.0,
+      "minimum_CCC_angle_degree": 120.19039958556772,
+      "maximum_CCC_angle_degree": 136.2088580379846,
+      "path": "data/inputs/p12_source2011_planar_seeds_v0.1/N12_555_seed.xyz",
+      "sha256": "dcaa6579f8eb7a602b4901c39c516d15db960f5f42c55dab02e3f0d8bd835415",
+      "constraint_path": "data/inputs/p12_source2011_planar_seeds_v0.1/N12_all_atom_planar.constraints",
+      "constraint_sha256": "5b6fe1023e73f11177092b90b9aef6b31a33f26e70a78a78bd7299ef12bd1bb3",
+      "role": "configuration_identity_seed_only_not_scientific_evidence"
+    },
+    {
+      "N": 14,
+      "configuration": "[14]-665",
+      "source_fragment_lengths": [
+        6,
+        6,
+        5
+      ],
+      "inner_hydrogen_carbon_indices_zero_based": [
+        0,
+        5,
+        10
+      ],
+      "inner_hydrogen_count": 3,
+      "hydrogens_inside_carbon_polygon_zero_based": [
+        0,
+        5,
+        10
+      ],
+      "inner_hydrogen_topology_verified": true,
+      "nonadjacent_carbon_edge_intersections": 0,
+      "minimum_nonbonded_distance_angstrom": 1.606112419949329,
+      "maximum_absolute_z_angstrom": 0.0,
+      "closure_error_angstrom": 5.775251692420872e-14,
+      "winding_error_radian": 0.0,
+      "minimum_CCC_angle_degree": 131.18233027586075,
+      "maximum_CCC_angle_degree": 138.0267067924981,
+      "path": "data/inputs/p12_source2011_planar_seeds_v0.1/N14_665_seed.xyz",
+      "sha256": "56161132a36e4fbd98eeacfb72deadcc518cc53fead8c1f86806da4c6ba95eb5",
+      "constraint_path": "data/inputs/p12_source2011_planar_seeds_v0.1/N14_all_atom_planar.constraints",
+      "constraint_sha256": "4240d4f13af8b6a3f39a4dc13fe49dfde8d28e51dfae2875a45ab3b8ba8fd2dd",
+      "role": "configuration_identity_seed_only_not_scientific_evidence"
+    },
+    {
+      "N": 16,
+      "configuration": "[16]-5555",
+      "source_fragment_lengths": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "inner_hydrogen_carbon_indices_zero_based": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "inner_hydrogen_count": 4,
+      "hydrogens_inside_carbon_polygon_zero_based": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "inner_hydrogen_topology_verified": true,
+      "nonadjacent_carbon_edge_intersections": 0,
+      "minimum_nonbonded_distance_angstrom": 2.017334609481817,
+      "maximum_absolute_z_angstrom": 0.0,
+      "closure_error_angstrom": 4.051933808678556e-15,
+      "winding_error_radian": 0.0,
+      "minimum_CCC_angle_degree": 135.00000000034797,
+      "maximum_CCC_angle_degree": 135.0000000010439,
+      "path": "data/inputs/p12_source2011_planar_seeds_v0.1/N16_5555_seed.xyz",
+      "sha256": "cd89b0325482d3af71f90ddb158a204742bd7ee0e7077af4da206748e09b0506",
+      "constraint_path": "data/inputs/p12_source2011_planar_seeds_v0.1/N16_all_atom_planar.constraints",
+      "constraint_sha256": "44cd642b51ddfc6cb6b1d2a6d27022b8c405d89690c96c09fad87eb435ff3d8d",
+      "role": "configuration_identity_seed_only_not_scientific_evidence"
+    },
+    {
+      "N": 18,
+      "configuration": "[18]-444444",
+      "source_fragment_lengths": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "inner_hydrogen_carbon_indices_zero_based": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15
+      ],
+      "inner_hydrogen_count": 6,
+      "hydrogens_inside_carbon_polygon_zero_based": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15
+      ],
+      "inner_hydrogen_topology_verified": true,
+      "nonadjacent_carbon_edge_intersections": 0,
+      "minimum_nonbonded_distance_angstrom": 1.7200000000187934,
+      "maximum_absolute_z_angstrom": 0.0,
+      "closure_error_angstrom": 5.375130756895088e-15,
+      "winding_error_radian": 8.881784197001252e-16,
+      "minimum_CCC_angle_degree": 120.00000000046396,
+      "maximum_CCC_angle_degree": 120.00000000092791,
+      "path": "data/inputs/p12_source2011_planar_seeds_v0.1/N18_444444_seed.xyz",
+      "sha256": "22fcda7f98167a833b6148528d9b848fb330f8ad0f1cbe3007af0b391958d841",
+      "constraint_path": "data/inputs/p12_source2011_planar_seeds_v0.1/N18_all_atom_planar.constraints",
+      "constraint_sha256": "007d739d342c3d56a1aa85a0aa0c003dae9948ad1e4eca3269984459382410f9",
+      "role": "configuration_identity_seed_only_not_scientific_evidence"
+    },
+    {
+      "N": 20,
+      "configuration": "[20]-445445",
+      "source_fragment_lengths": [
+        4,
+        4,
+        5,
+        4,
+        4,
+        5
+      ],
+      "inner_hydrogen_carbon_indices_zero_based": [
+        0,
+        3,
+        6,
+        10,
+        13,
+        16
+      ],
+      "inner_hydrogen_count": 6,
+      "hydrogens_inside_carbon_polygon_zero_based": [
+        0,
+        3,
+        6,
+        10,
+        13,
+        16
+      ],
+      "inner_hydrogen_topology_verified": true,
+      "nonadjacent_carbon_edge_intersections": 0,
+      "minimum_nonbonded_distance_angstrom": 2.017334609482218,
+      "maximum_absolute_z_angstrom": 0.0,
+      "closure_error_angstrom": 9.060399436534878e-15,
+      "winding_error_radian": 0.0,
+      "minimum_CCC_angle_degree": 135.00000000041757,
+      "maximum_CCC_angle_degree": 135.0000000009743,
+      "path": "data/inputs/p12_source2011_planar_seeds_v0.1/N20_445445_seed.xyz",
+      "sha256": "4b84f68ee2f4390515d9ec7444c68379c6262294fa490e1c2b7761ecd26f7337",
+      "constraint_path": "data/inputs/p12_source2011_planar_seeds_v0.1/N20_all_atom_planar.constraints",
+      "constraint_sha256": "c073e1dddd12d10687304fde1192d65f33709740741bd5867c15fe7d2c9784e7",
+      "role": "configuration_identity_seed_only_not_scientific_evidence"
+    },
+    {
+      "N": 22,
+      "configuration": "[22]-5444444",
+      "source_fragment_lengths": [
+        5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "inner_hydrogen_carbon_indices_zero_based": [
+        0,
+        4,
+        7,
+        10,
+        13,
+        16,
+        19
+      ],
+      "inner_hydrogen_count": 7,
+      "hydrogens_inside_carbon_polygon_zero_based": [
+        0,
+        4,
+        7,
+        10,
+        13,
+        16,
+        19
+      ],
+      "inner_hydrogen_topology_verified": true,
+      "nonadjacent_carbon_edge_intersections": 0,
+      "minimum_nonbonded_distance_angstrom": 1.9986488268929683,
+      "maximum_absolute_z_angstrom": 0.0,
+      "closure_error_angstrom": 3.781283367737843e-15,
+      "winding_error_radian": 1.7763568394002505e-15,
+      "minimum_CCC_angle_degree": 132.1106433008976,
+      "maximum_CCC_angle_degree": 138.19768320783083,
+      "path": "data/inputs/p12_source2011_planar_seeds_v0.1/N22_5444444_seed.xyz",
+      "sha256": "5df501e16b8b139b99c20ea18dc1233dee4fdef28fbc584520fc69d6d99aa265",
+      "constraint_path": "data/inputs/p12_source2011_planar_seeds_v0.1/N22_all_atom_planar.constraints",
+      "constraint_sha256": "bff2f1f0efb01b4743d58a637c4eff9c1dcd42779d004186f458d5713151a648",
+      "role": "configuration_identity_seed_only_not_scientific_evidence"
+    }
+  ]
+}
