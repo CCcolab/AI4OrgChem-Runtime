@@ -1,0 +1,57 @@
+schema_version: 5
+protocol_id: lfmo-sigma-pi/0.5-target-c-scoped-release
+status: accepted_scoped_scientific_release_nonproduction
+effective_date: 2026-08-16
+inherits_protocol: configs/qm/protocol_v0.4.yaml
+specification: docs/theory/lfmo_protocol_v0.5.md
+decision: docs/adr/0038-adopt-target-c-tested-domain-destabilization-law.md
+production_labels_allowed: false
+ai_training_allowed: false
+historical_coordinate_identity: false
+universal_all_molecules_law: false
+
+target_c_scoped_release:
+  enabled: true
+  observable: E_FUD_minus_E_DSI3
+  positive_sign_meaning: destabilizing_endpoint
+  sign_tolerance_hartree: 1.0e-8
+  component_closure_tolerance_hartree: 1.0e-9
+  valid_point_count: 11
+  component_record_count: 33
+  final_label: pi_conjugation_endpoint_destabilizing_in_tested_source_proxy_domain
+  endpoint_range_hartree: [0.059397305663, 0.072200015016]
+  direct_term_universal_sign: rejected_by_divinyl_imine_0_degree_counterexample
+  orbital_response_sign: geometry_and_family_dependent
+  accepted_exclusion:
+    point: divinyl_imine:17.0
+    reason: non_square_lfmo_basis_no_scientific_value_emitted
+  data: data/processed/target_c_tested_domain_scientific_labels_v0.1.jsonl
+  data_card: docs/data_cards/target_c_tested_domain_scientific_labels_v0.1.md
+  report: docs/reports/target_c_tested_domain_scientific_conclusion_2026-08-16.md
+
+required_record_provenance:
+  - geometry_hash
+  - lfmo_basis_hash
+  - dsi3_state_config_sha256
+  - fud_state_config_sha256
+  - fragment_state_contract_sha256
+  - source_artifact
+  - source_artifact_sha256
+  - source_calculation_git_commit
+  - release_generator_git_commit
+  - engine
+  - engine_version
+  - method
+  - basis
+  - resource_profile
+  - source_reference_doi
+  - source_reference_pages
+
+explicitly_not_released:
+  - target_a_pi_sigma_final_chemical_law
+  - target_b_sigma_sigma_final_chemical_law
+  - universal_direct_pi_pi_sign
+  - universal_all_molecule_conjugation_law
+  - production_ml_dataset
+  - mace_or_pysr_scientific_model
+  - industrial_generalization

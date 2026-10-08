@@ -1,0 +1,65 @@
+schema_version: 1
+protocol_id: p10-benzene-nuclear-repulsion/0.1
+effective_date: 2026-08-21
+status: complete_execution_closed
+specification: docs/theory/p10_benzene_nuclear_repulsion_protocol_v0.1.md
+original_program_code_used: false
+proposition_id: P10
+system: benzene
+
+source_claim:
+  locations:
+    - monograph_chapter_9_section_9_3_printed_pages_289_293
+    - monograph_section_9_3_2_BLE_leading_to_minimization_of_nuclear_repulsion
+  endpoint_conditions:
+    delta_Ee: Ee_G_minus_Ee_GL_positive
+    delta_EN: EN_G_minus_EN_GL_negative
+    predominance: absolute_delta_EN_greater_than_delta_Ee
+  geometric_condition: nuclear_repulsion_minimized_when_ra_equals_rb
+  causal_boundary: nuclear_repulsion_predominance_is_a_result_of_pi_delocalization_driven_geometry_change
+
+p09_frozen_inputs:
+  G: data/processed/p09_benzene_G_DSI3_smoke_v0.1.json
+  GL: data/processed/p09_benzene_GL_GE1_ESE_v0.1.json
+  reuse_only_no_reoptimization: true
+
+physical_scan:
+  geometry: planar_D3h_alternating_hexagon
+  coordinate: ra_equals_r0_minus_delta_rb_equals_r0_plus_delta
+  fixed_mean_CC_from_p09_G: true
+  fixed_radial_CH_from_p09_G: true
+  delta_angstrom: [0.00, 0.01, 0.02, 0.04, 0.06]
+  negative_delta_nuclear_symmetry_check: true
+  electronic_state: ordinary_unmasked_closed_shell_singlet
+  engine: pyscf
+  method: B3LYP
+  pyscf_xc: B3LYPG
+  basis: 6-31g(d)
+  grid_level: 3
+  charge: 0
+  multiplicity: 1
+  scf_tolerance_hartree: 1.0e-10
+  maximum_scf_cycles: 100
+  maximum_memory_mb: 6000
+
+acceptance:
+  energy_identity_hartree: 1.0e-10
+  g_anchor_energy_hartree: 1.0e-6
+  nuclear_formula_hartree: 1.0e-10
+  nuclear_symmetry_hartree: 1.0e-10
+  strict_direction_tolerance_hartree: 1.0e-8
+
+execution:
+  p10_qm_allowed: false
+  scope: none_p10_complete
+  p11_p13_allowed: false
+  production_labels_allowed: false
+  ai_training_allowed: false
+
+prohibited:
+  - p09_reoptimization_or_extension
+  - additional_molecules
+  - basis_or_functional_scan
+  - geometry_relaxation_during_BLA_scan
+  - production_label_generation
+  - mace_nequip_pysr_training_or_search

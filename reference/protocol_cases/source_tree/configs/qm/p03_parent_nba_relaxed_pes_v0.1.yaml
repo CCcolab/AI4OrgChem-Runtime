@@ -1,0 +1,62 @@
+schema_version: 1
+experiment_id: p03-parent-nba-relaxed-pes/0.1
+proposition_id: P03
+status: frozen_ready_to_run
+
+source:
+  monograph: Questioning Fundamental Principles of Organic Chemistry
+  chapter: 2
+  molecule: 2-1_parent_n_benzylideneaniline
+  printed_pages: [31, 32, 33, 34, 35, 44, 45]
+  figures: [2-3, 2-4, 2-9]
+
+molecule:
+  charge: 0
+  spin: 0
+  geometry_artifact: configs/qm/geometries/source_nba_b3lypg_6311gdp_0_17_v0.1.json
+  initial_point_key: "0.0"
+  expected_geometry_sha256: 49628c24ae0df4d5032603eba0454aeed437695847e7e458ecb31a3e952fbcfe
+
+optimization:
+  implementation: pyscf-geometric
+  method: B3LYPG
+  basis: 6-311g(d,p)
+  grid_level: 3
+  scf_convergence_tolerance: 1.0e-10
+  scf_max_cycles: 200
+  optimizer_max_steps: 60
+  convergence_energy_hartree: 1.0e-6
+  convergence_gradient_rms_hartree_per_bohr: 3.0e-4
+  convergence_gradient_max_hartree_per_bohr: 4.5e-4
+  convergence_displacement_rms_angstrom: 1.2e-3
+  convergence_displacement_max_angstrom: 1.8e-3
+  constrained_dihedral_atom_indices: [1, 0, 6, 7]
+  rotation_axis_atom_indices: [0, 6]
+  rotating_atom_indices: [1, 2, 3, 4, 5, 14, 15, 16, 17, 18]
+  angles_degrees: [0.0, 20.0, 40.0, 60.0]
+  sequential_continuation: true
+
+acceptance:
+  twist_tolerance_degrees: 0.08
+  energy_closure_tolerance_hartree: 1.0e-9
+  direction_tolerance_hartree: 1.0e-7
+  minimum_supported_lower_segments: 2
+  require_total_minimum_not_at_boundary: true
+  require_all_scf_converged: true
+  require_all_optimizations_converged: true
+
+outputs:
+  checkpoint: artifacts/checkpoints/p03_parent_nba_relaxed_pes_v0.1.json
+  evidence: data/processed/p03_parent_nba_relaxed_pes_evidence_v0.1.json
+  report: docs/reports/p03_parent_nba_relaxed_pes_2026-08-20.md
+  data_card: docs/data_cards/p03_parent_nba_relaxed_pes_v0.1.md
+
+boundaries:
+  single_parent_nba_only: true
+  additional_molecules: false
+  basis_or_method_scan: false
+  solvent: false
+  lfmo_component_attribution: false
+  p08_started: false
+  ai_training_started: false
+  production_label: false

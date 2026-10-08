@@ -1,0 +1,1938 @@
+{
+  "angle_labels": {
+    "0.0": "indeterminate",
+    "10.0": "destabilizing",
+    "17.0": "destabilizing",
+    "25.0": "destabilizing",
+    "35.0": "destabilizing",
+    "45.0": "destabilizing",
+    "5.0": "destabilizing"
+  },
+  "boundaries": {
+    "additional_molecules_enabled": false,
+    "ai_training_enabled": false,
+    "basis_scan_enabled": false,
+    "fixed_parent_rigid_twist_only": true,
+    "p05_only": true,
+    "p07_work_enabled": false,
+    "relaxed_geometry_scan_enabled": false,
+    "same_parent_molecule_only": true,
+    "same_rhf_631gd_method_only": true,
+    "source_nonvariational_ledger_only": true,
+    "universal_law_claimed": false
+  },
+  "checks": {
+    "all_seven_points_technical_pass": true,
+    "all_six_nonzero_angles_are_destabilizing": true,
+    "direct_response_endpoint_closure": true,
+    "group_dimensions_constant": true,
+    "root_dimensions_constant": true,
+    "seventeen_degree_frozen_anchor_unchanged": true,
+    "zero_degree_is_indeterminate_control": true
+  },
+  "decision_verdict": "PASS_P05_SEVEN_ANGLE_CONTINUATION",
+  "experiment_id": "p05-target-a-seven-angle-continuation/0.2",
+  "geometry": {
+    "geometry_id": "p05-table-5-15-fixed-parent-seven-angle/0.2",
+    "points": {
+      "0.0": {
+        "angle_degrees": 0.0,
+        "atoms": [
+          [
+            "C",
+            -1.4,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -2.095,
+            1.2037753113,
+            0.0
+          ],
+          [
+            "C",
+            -3.485,
+            1.2037753113,
+            0.0
+          ],
+          [
+            "C",
+            -4.18,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -3.485,
+            -1.2037753113,
+            0.0
+          ],
+          [
+            "C",
+            -2.095,
+            -1.2037753113,
+            0.0
+          ],
+          [
+            "N",
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            0.64,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.1,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.88,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "H",
+            -1.555,
+            2.1390827474,
+            0.0
+          ],
+          [
+            "H",
+            -4.025,
+            2.1390827474,
+            0.0
+          ],
+          [
+            "H",
+            -5.26,
+            0.0,
+            0.0
+          ],
+          [
+            "H",
+            -4.025,
+            -2.1390827474,
+            0.0
+          ],
+          [
+            "H",
+            -1.555,
+            -2.1390827474,
+            0.0
+          ],
+          [
+            "H",
+            0.1,
+            2.0438199529,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            5.96,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            -1.0305702306,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            -1.0305702306,
+            0.0
+          ]
+        ]
+      },
+      "10.0": {
+        "angle_degrees": 10.0,
+        "atoms": [
+          [
+            "C",
+            -1.4,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -2.095,
+            1.1854872594529242,
+            0.20903338912768676
+          ],
+          [
+            "C",
+            -3.485,
+            1.1854872594529242,
+            0.20903338912768676
+          ],
+          [
+            "C",
+            -4.18,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -3.485,
+            -1.1854872594529242,
+            -0.20903338912768676
+          ],
+          [
+            "C",
+            -2.095,
+            -1.1854872594529242,
+            -0.20903338912768676
+          ],
+          [
+            "N",
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            0.64,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.1,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.88,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "H",
+            -1.555,
+            2.1065852739741744,
+            0.37144782096478063
+          ],
+          [
+            "H",
+            -4.025,
+            2.1065852739741744,
+            0.37144782096478063
+          ],
+          [
+            "H",
+            -5.26,
+            0.0,
+            0.0
+          ],
+          [
+            "H",
+            -4.025,
+            -2.1065852739741744,
+            -0.37144782096478063
+          ],
+          [
+            "H",
+            -1.555,
+            -2.1065852739741744,
+            -0.37144782096478063
+          ],
+          [
+            "H",
+            0.1,
+            2.0438199529,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            5.96,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            -1.0305702306,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            -1.0305702306,
+            0.0
+          ]
+        ]
+      },
+      "17.0": {
+        "angle_degrees": 17.0,
+        "atoms": [
+          [
+            "C",
+            -1.4,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -2.095,
+            1.1511760553070736,
+            0.35194983986792416
+          ],
+          [
+            "C",
+            -3.485,
+            1.1511760553070736,
+            0.35194983986792416
+          ],
+          [
+            "C",
+            -4.18,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -3.485,
+            -1.1511760553070736,
+            -0.35194983986792416
+          ],
+          [
+            "C",
+            -2.095,
+            -1.1511760553070736,
+            -0.35194983986792416
+          ],
+          [
+            "N",
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            0.64,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.1,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.88,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "H",
+            -1.555,
+            2.0456150047370962,
+            0.6254072694003333
+          ],
+          [
+            "H",
+            -4.025,
+            2.0456150047370962,
+            0.6254072694003333
+          ],
+          [
+            "H",
+            -5.26,
+            0.0,
+            0.0
+          ],
+          [
+            "H",
+            -4.025,
+            -2.0456150047370962,
+            -0.6254072694003333
+          ],
+          [
+            "H",
+            -1.555,
+            -2.0456150047370962,
+            -0.6254072694003333
+          ],
+          [
+            "H",
+            0.1,
+            2.0438199529,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            5.96,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            -1.0305702306,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            -1.0305702306,
+            0.0
+          ]
+        ]
+      },
+      "25.0": {
+        "angle_degrees": 25.0,
+        "atoms": [
+          [
+            "C",
+            -1.4,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -2.095,
+            1.0909909384736574,
+            0.5087374295879754
+          ],
+          [
+            "C",
+            -3.485,
+            1.0909909384736574,
+            0.5087374295879754
+          ],
+          [
+            "C",
+            -4.18,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -3.485,
+            -1.0909909384736574,
+            -0.5087374295879754
+          ],
+          [
+            "C",
+            -2.095,
+            -1.0909909384736574,
+            -0.5087374295879754
+          ],
+          [
+            "N",
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            0.64,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.1,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.88,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "H",
+            -1.555,
+            1.938667351084371,
+            0.9040154324257076
+          ],
+          [
+            "H",
+            -4.025,
+            1.938667351084371,
+            0.9040154324257076
+          ],
+          [
+            "H",
+            -5.26,
+            0.0,
+            0.0
+          ],
+          [
+            "H",
+            -4.025,
+            -1.938667351084371,
+            -0.9040154324257076
+          ],
+          [
+            "H",
+            -1.555,
+            -1.938667351084371,
+            -0.9040154324257076
+          ],
+          [
+            "H",
+            0.1,
+            2.0438199529,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            5.96,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            -1.0305702306,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            -1.0305702306,
+            0.0
+          ]
+        ]
+      },
+      "35.0": {
+        "angle_degrees": 35.0,
+        "atoms": [
+          [
+            "C",
+            -1.4,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -2.095,
+            0.9860750071160125,
+            0.6904571532228251
+          ],
+          [
+            "C",
+            -3.485,
+            0.9860750071160125,
+            0.6904571532228251
+          ],
+          [
+            "C",
+            -4.18,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -3.485,
+            -0.9860750071160125,
+            -0.6904571532228251
+          ],
+          [
+            "C",
+            -2.095,
+            -0.9860750071160125,
+            -0.6904571532228251
+          ],
+          [
+            "N",
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            0.64,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.1,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.88,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "H",
+            -1.555,
+            1.7522340054360228,
+            1.2269274593136967
+          ],
+          [
+            "H",
+            -4.025,
+            1.7522340054360228,
+            1.2269274593136967
+          ],
+          [
+            "H",
+            -5.26,
+            0.0,
+            0.0
+          ],
+          [
+            "H",
+            -4.025,
+            -1.7522340054360228,
+            -1.2269274593136967
+          ],
+          [
+            "H",
+            -1.555,
+            -1.7522340054360228,
+            -1.2269274593136967
+          ],
+          [
+            "H",
+            0.1,
+            2.0438199529,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            5.96,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            -1.0305702306,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            -1.0305702306,
+            0.0
+          ]
+        ]
+      },
+      "45.0": {
+        "angle_degrees": 45.0,
+        "atoms": [
+          [
+            "C",
+            -1.4,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -2.095,
+            0.8511976856451773,
+            0.8511976856451772
+          ],
+          [
+            "C",
+            -3.485,
+            0.8511976856451773,
+            0.8511976856451772
+          ],
+          [
+            "C",
+            -4.18,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -3.485,
+            -0.8511976856451773,
+            -0.8511976856451772
+          ],
+          [
+            "C",
+            -2.095,
+            -0.8511976856451773,
+            -0.8511976856451772
+          ],
+          [
+            "N",
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            0.64,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.1,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.88,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "H",
+            -1.555,
+            1.5125599162056906,
+            1.5125599162056904
+          ],
+          [
+            "H",
+            -4.025,
+            1.5125599162056906,
+            1.5125599162056904
+          ],
+          [
+            "H",
+            -5.26,
+            0.0,
+            0.0
+          ],
+          [
+            "H",
+            -4.025,
+            -1.5125599162056906,
+            -1.5125599162056904
+          ],
+          [
+            "H",
+            -1.555,
+            -1.5125599162056906,
+            -1.5125599162056904
+          ],
+          [
+            "H",
+            0.1,
+            2.0438199529,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            5.96,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            -1.0305702306,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            -1.0305702306,
+            0.0
+          ]
+        ]
+      },
+      "5.0": {
+        "angle_degrees": 5.0,
+        "atoms": [
+          [
+            "C",
+            -1.4,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -2.095,
+            1.1991945828108006,
+            0.10491593135764493
+          ],
+          [
+            "C",
+            -3.485,
+            1.1991945828108006,
+            0.10491593135764493
+          ],
+          [
+            "C",
+            -4.18,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            -3.485,
+            -1.1991945828108006,
+            -0.10491593135764493
+          ],
+          [
+            "C",
+            -2.095,
+            -1.1991945828108006,
+            -0.10491593135764493
+          ],
+          [
+            "N",
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            "C",
+            0.64,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.1,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            2.3122878281,
+            0.0
+          ],
+          [
+            "C",
+            4.88,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "C",
+            4.185,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "C",
+            2.795,
+            -0.0952627945,
+            0.0
+          ],
+          [
+            "H",
+            -1.555,
+            2.130942891739404,
+            0.18643334564834824
+          ],
+          [
+            "H",
+            -4.025,
+            2.130942891739404,
+            0.18643334564834824
+          ],
+          [
+            "H",
+            -5.26,
+            0.0,
+            0.0
+          ],
+          [
+            "H",
+            -4.025,
+            -2.130942891739404,
+            -0.18643334564834824
+          ],
+          [
+            "H",
+            -1.555,
+            -2.130942891739404,
+            -0.18643334564834824
+          ],
+          [
+            "H",
+            0.1,
+            2.0438199529,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            3.2475952642,
+            0.0
+          ],
+          [
+            "H",
+            5.96,
+            1.1085125168,
+            0.0
+          ],
+          [
+            "H",
+            4.725,
+            -1.0305702306,
+            0.0
+          ],
+          [
+            "H",
+            2.255,
+            -1.0305702306,
+            0.0
+          ]
+        ]
+      }
+    },
+    "protocol": {
+      "angles_degrees": [
+        0.0,
+        5.0,
+        10.0,
+        17.0,
+        25.0,
+        35.0,
+        45.0
+      ],
+      "coordinate_status": "independent_parent_geometry_reconstruction_not_source_exact",
+      "frozen_anchor_angles_degrees": [
+        0.0,
+        17.0
+      ],
+      "newly_computed_angles_degrees": [
+        5.0,
+        10.0,
+        25.0,
+        35.0,
+        45.0
+      ],
+      "rotating_atom_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "torsion_axis_atom_indices": [
+        0,
+        6
+      ],
+      "type": "fixed_parent_geometry_rigid_twist"
+    },
+    "schema_version": 1,
+    "status": "p05_preregistered_fixed_parent_continuation"
+  },
+  "maximum_closure_residual_hartree": 3.4932057246805925e-12,
+  "points": {
+    "0.0": {
+      "angle_degrees": 0.0,
+      "checks": {
+        "density_fixed_point": true,
+        "electron_trace": true,
+        "equations_5_12_to_5_16_close": true,
+        "fock_and_overlap_cross_blocks_deleted": true,
+        "fud_converged": true,
+        "ground_converged": true,
+        "independent_energy_assemblies": true,
+        "sigma_response_suballocation_closes": true,
+        "source_cross_group_density_zero": true
+      },
+      "components": {
+        "component_sum_hartree": 6.536991354224832e-13,
+        "direct_by_fragment_pair_hartree": {
+          "pi_A__sigma_A": -7.506990250858301e-21,
+          "pi_A__sigma_B": -1.8743623292694526e-21,
+          "pi_A__sigma_C": -5.805369562286188e-22,
+          "pi_B__sigma_A": -4.7261885170018746e-20,
+          "pi_B__sigma_B": -8.780897899768122e-20,
+          "pi_B__sigma_C": -2.321023370504743e-21,
+          "pi_C__sigma_A": -1.0803029869048671e-21,
+          "pi_C__sigma_B": -1.139871474556639e-20,
+          "pi_C__sigma_C": -2.16757977261582e-20
+        },
+        "direct_interfragment_hartree": -6.451682555849284e-20,
+        "direct_intrafragment_hartree": -1.1699176697469773e-19,
+        "direct_total_hartree": -1.8150859253319058e-19,
+        "endpoint_expression": "E_G-E_FUD",
+        "endpoint_hartree": -1.3642420526593924e-12,
+        "endpoint_kcal_mol": -8.560748129590593e-10,
+        "equation_closure_residual_hartree": 2.0179411880818756e-12,
+        "fud_density_reconstruction_residual": 1.854166589892673e-15,
+        "ground_density_reconstruction_residual": 1.885104405896513e-15,
+        "interpretation": {
+          "ledger": "source_nonvariational_definition",
+          "physical_variational_energy": false,
+          "production_label_allowed": false
+        },
+        "masked_fock_cross_block_norm_hartree": 0.0,
+        "masked_overlap_cross_block_norm": 0.0,
+        "pi_response_hartree": 1.7078245662105473e-06,
+        "pyscf_vs_assembled_helper_residual_hartree": 2.5011104298755527e-12,
+        "pyscf_vs_explicit_energy_residual_hartree": 2.5011104298755527e-12,
+        "sigma_response_by_category_pair_hartree": {
+          "bonded_sigma_A__bonded_sigma_A": 9.611890163796488e-07,
+          "bonded_sigma_A__bonded_sigma_B": 2.3358773719728276e-06,
+          "bonded_sigma_A__bonded_sigma_C": 4.581167933892516e-08,
+          "bonded_sigma_A__cut_sigma_A": 5.3003503031057164e-08,
+          "bonded_sigma_A__cut_sigma_B": -1.1516212491402555e-06,
+          "bonded_sigma_A__cut_sigma_C": -1.465089290164645e-07,
+          "bonded_sigma_B__bonded_sigma_B": 2.251949609899384e-06,
+          "bonded_sigma_B__bonded_sigma_C": -2.3731492992951075e-07,
+          "bonded_sigma_B__cut_sigma_A": -2.2923903160165793e-06,
+          "bonded_sigma_B__cut_sigma_B": 3.0643258841500653e-07,
+          "bonded_sigma_B__cut_sigma_C": -1.697443708925661e-07,
+          "bonded_sigma_C__bonded_sigma_C": -2.437658508824825e-06,
+          "bonded_sigma_C__cut_sigma_A": -7.623545694723788e-08,
+          "bonded_sigma_C__cut_sigma_B": -1.7823638545078069e-06,
+          "bonded_sigma_C__cut_sigma_C": -5.528950297595259e-08,
+          "cut_sigma_A__cut_sigma_A": 1.4625655073707833e-06,
+          "cut_sigma_A__cut_sigma_B": -2.8220487411356743e-06,
+          "cut_sigma_A__cut_sigma_C": 2.6072053216363855e-07,
+          "cut_sigma_B__cut_sigma_B": 5.1847992565967616e-06,
+          "cut_sigma_B__cut_sigma_C": -2.935489143318648e-06,
+          "cut_sigma_C__cut_sigma_C": -4.6350772908709814e-07
+        },
+        "sigma_response_by_role_pair_hartree": {
+          "bonded__bonded": 2.91985423883645e-06,
+          "bonded__cut": -5.314717588050799e-06,
+          "cut__cut": 6.870396825897629e-07
+        },
+        "sigma_response_category_closure_residual_hartree": 2.4588664437885654e-13,
+        "sigma_response_electronic_split_residual_hartree": 5.061298602448971e-13,
+        "sigma_response_hartree": -1.7078239125112304e-06,
+        "sigma_response_one_electron_hartree": -3.4386447745338167e-06,
+        "sigma_response_two_electron_hartree": 1.730820355892726e-06,
+        "source_cross_group_density_norm": 2.3115797761562193e-25,
+        "source_density_physical_idempotency_residual": 7.367206371976154e-12
+      },
+      "density_fixed_point_residual": 8.605522324345324e-09,
+      "electron_trace": 96.00000000000001,
+      "expected_electrons": 96,
+      "fud_converged": true,
+      "fud_energy_hartree": -553.1259708943157,
+      "geometry_id": "source-table-5-15-fixed-parent-twist-0-17/1.0",
+      "ground_converged": true,
+      "ground_energy_hartree": -553.1259708943171,
+      "group_sizes": [
+        56,
+        162
+      ],
+      "lfmo_basis_hash": "e68905edfb551a631accdfe10a6b42231ac5511742d1e014da9c156f43ffd521",
+      "point_provenance": "reused_frozen_2026_08_15_anchor",
+      "roots": [
+        7,
+        41
+      ],
+      "source_comparison": {
+        "reference_available": false,
+        "reference_note": "0-degree symmetry control; no Table 5-15 component comparison applied"
+      },
+      "technical_pass": true
+    },
+    "10.0": {
+      "angle_degrees": 10.0,
+      "checks": {
+        "density_fixed_point": true,
+        "electron_trace": true,
+        "equations_5_12_to_5_16_close": true,
+        "fock_and_overlap_cross_blocks_deleted": true,
+        "fud_converged": true,
+        "ground_converged": true,
+        "independent_energy_assemblies": true,
+        "sigma_response_suballocation_closes": true,
+        "source_cross_group_density_zero": true
+      },
+      "components": {
+        "component_sum_hartree": 0.003144291629698929,
+        "direct_by_fragment_pair_hartree": {
+          "pi_A__sigma_A": -1.3501550760736273e-05,
+          "pi_A__sigma_B": 0.01436157774630603,
+          "pi_A__sigma_C": -0.0014328729770691434,
+          "pi_B__sigma_A": 0.008219290765834055,
+          "pi_B__sigma_B": -0.00014082386204415648,
+          "pi_B__sigma_C": 0.00013196781972885056,
+          "pi_C__sigma_A": 0.0002488747962469975,
+          "pi_C__sigma_B": 2.9094026132736044e-05,
+          "pi_C__sigma_C": -3.190733345578728e-05
+        },
+        "direct_interfragment_hartree": 0.021557932177179506,
+        "direct_intrafragment_hartree": -0.00018623274626068003,
+        "direct_total_hartree": 0.021371699430918826,
+        "endpoint_expression": "E_G-E_FUD",
+        "endpoint_hartree": 0.0031442916285868705,
+        "endpoint_kcal_mol": 1.9730727861555553,
+        "equation_closure_residual_hartree": 1.11205836206274e-12,
+        "fud_density_reconstruction_residual": 1.96282165929521e-15,
+        "ground_density_reconstruction_residual": 1.857055135875076e-15,
+        "interpretation": {
+          "ledger": "source_nonvariational_definition",
+          "physical_variational_energy": false,
+          "production_label_allowed": false
+        },
+        "masked_fock_cross_block_norm_hartree": 0.0,
+        "masked_overlap_cross_block_norm": 0.0,
+        "pi_response_hartree": -0.015609119981633057,
+        "pyscf_vs_assembled_helper_residual_hartree": 6.821210263296962e-13,
+        "pyscf_vs_explicit_energy_residual_hartree": 6.821210263296962e-13,
+        "sigma_response_by_category_pair_hartree": {
+          "bonded_sigma_A__bonded_sigma_A": 0.10687113578234175,
+          "bonded_sigma_A__bonded_sigma_B": -0.23229066144852073,
+          "bonded_sigma_A__bonded_sigma_C": 0.005483750752678707,
+          "bonded_sigma_A__cut_sigma_A": -0.0009932591296017979,
+          "bonded_sigma_A__cut_sigma_B": -0.01811300822433426,
+          "bonded_sigma_A__cut_sigma_C": -0.01966643899079884,
+          "bonded_sigma_B__bonded_sigma_B": 0.13301432175774153,
+          "bonded_sigma_B__bonded_sigma_C": -0.032022253295882486,
+          "bonded_sigma_B__cut_sigma_A": -0.007224886491271176,
+          "bonded_sigma_B__cut_sigma_B": -0.007010773467829745,
+          "bonded_sigma_B__cut_sigma_C": 0.07902642140936722,
+          "bonded_sigma_C__bonded_sigma_C": 0.012056913065805475,
+          "bonded_sigma_C__cut_sigma_A": -0.0010861037534899698,
+          "bonded_sigma_C__cut_sigma_B": -0.0351082273013148,
+          "bonded_sigma_C__cut_sigma_C": 0.0012408604460759087,
+          "cut_sigma_A__cut_sigma_A": 0.0010391690524822472,
+          "cut_sigma_A__cut_sigma_B": 0.0060374421298392544,
+          "cut_sigma_A__cut_sigma_C": 0.005505928026054929,
+          "cut_sigma_B__cut_sigma_B": 0.06879487545854346,
+          "cut_sigma_B__cut_sigma_C": -0.09184302309339731,
+          "cut_sigma_C__cut_sigma_C": 0.023669529497091446
+        },
+        "sigma_response_by_role_pair_hartree": {
+          "bonded__bonded": -0.006886793385835754,
+          "bonded__cut": -0.008935415503197458,
+          "cut__cut": 0.013203921070614022
+        },
+        "sigma_response_category_closure_residual_hartree": 1.1676493105738928e-12,
+        "sigma_response_electronic_split_residual_hartree": 1.6534482116803417e-12,
+        "sigma_response_hartree": -0.0026182878195868398,
+        "sigma_response_one_electron_hartree": -0.011893323999518951,
+        "sigma_response_two_electron_hartree": 0.00927503618158556,
+        "source_cross_group_density_norm": 1.3748600175516803e-15,
+        "source_density_physical_idempotency_residual": 0.013010804445128069
+      },
+      "density_fixed_point_residual": 9.472194118970027e-09,
+      "electron_trace": 95.99999999999996,
+      "expected_electrons": 96,
+      "fud_converged": true,
+      "fud_energy_hartree": -553.1301650413557,
+      "geometry_id": "p05-table-5-15-fixed-parent-seven-angle/0.2",
+      "ground_converged": true,
+      "ground_energy_hartree": -553.1270207497271,
+      "group_sizes": [
+        56,
+        162
+      ],
+      "lfmo_basis_hash": "4e4ba4ef3743de5d68aec8186152381ad7be4c0f726be1081a3862bf47d5f346",
+      "point_provenance": "new_p05_continuation_calculation",
+      "roots": [
+        7,
+        41
+      ],
+      "source_comparison": {
+        "reference_available": false,
+        "reference_note": "no printed Table 5-15 component reference is available at this angle"
+      },
+      "technical_pass": true
+    },
+    "17.0": {
+      "angle_degrees": 17.0,
+      "checks": {
+        "density_fixed_point": true,
+        "electron_trace": true,
+        "equations_5_12_to_5_16_close": true,
+        "fock_and_overlap_cross_blocks_deleted": true,
+        "fud_converged": true,
+        "ground_converged": true,
+        "independent_energy_assemblies": true,
+        "sigma_response_suballocation_closes": true,
+        "source_cross_group_density_zero": true
+      },
+      "components": {
+        "component_sum_hartree": 0.00913109665560688,
+        "direct_by_fragment_pair_hartree": {
+          "pi_A__sigma_A": -0.00029953097487194034,
+          "pi_A__sigma_B": 0.04557984634911127,
+          "pi_A__sigma_C": -0.0037097151324048195,
+          "pi_B__sigma_A": 0.027202978425124237,
+          "pi_B__sigma_B": -0.0004288712738013269,
+          "pi_B__sigma_C": 0.00031553564521483017,
+          "pi_C__sigma_A": 0.0006121403585622958,
+          "pi_C__sigma_B": 7.192021957324403e-05,
+          "pi_C__sigma_C": -7.727794264235363e-05
+        },
+        "direct_interfragment_hartree": 0.07007270586518109,
+        "direct_intrafragment_hartree": -0.0008056801913156209,
+        "direct_total_hartree": 0.06926702567386547,
+        "endpoint_expression": "E_G-E_FUD",
+        "endpoint_hartree": 0.0091310966565743,
+        "endpoint_kcal_mol": 5.72984966058627,
+        "equation_closure_residual_hartree": 9.674205880827458e-13,
+        "fud_density_reconstruction_residual": 2.3018550552291164e-15,
+        "ground_density_reconstruction_residual": 2.1625252781362606e-15,
+        "interpretation": {
+          "ledger": "source_nonvariational_definition",
+          "physical_variational_energy": false,
+          "production_label_allowed": false
+        },
+        "masked_fock_cross_block_norm_hartree": 0.0,
+        "masked_overlap_cross_block_norm": 0.0,
+        "pi_response_hartree": -0.051579423207329,
+        "pyscf_vs_assembled_helper_residual_hartree": 9.094947017729282e-13,
+        "pyscf_vs_explicit_energy_residual_hartree": 9.094947017729282e-13,
+        "sigma_response_by_category_pair_hartree": {
+          "bonded_sigma_A__bonded_sigma_A": 0.26364882305841775,
+          "bonded_sigma_A__bonded_sigma_B": -0.5842653081596438,
+          "bonded_sigma_A__bonded_sigma_C": 0.016446713262836726,
+          "bonded_sigma_A__cut_sigma_A": -0.002487892135476788,
+          "bonded_sigma_A__cut_sigma_B": -0.04059812521634354,
+          "bonded_sigma_A__cut_sigma_C": -0.06039891781000098,
+          "bonded_sigma_B__bonded_sigma_B": 0.35315615514116416,
+          "bonded_sigma_B__bonded_sigma_C": -0.07784809916553082,
+          "bonded_sigma_B__cut_sigma_A": -0.019970668859985885,
+          "bonded_sigma_B__cut_sigma_B": -0.017276226556288687,
+          "bonded_sigma_B__cut_sigma_C": 0.17591308106405568,
+          "bonded_sigma_C__bonded_sigma_C": 0.041935300145382826,
+          "bonded_sigma_C__cut_sigma_A": -0.004771037265242126,
+          "bonded_sigma_C__cut_sigma_B": -0.11729687114786536,
+          "bonded_sigma_C__cut_sigma_C": 0.004062859328435531,
+          "cut_sigma_A__cut_sigma_A": 0.003875864201983159,
+          "cut_sigma_A__cut_sigma_B": 0.011753306861671309,
+          "cut_sigma_A__cut_sigma_C": 0.023521883393240572,
+          "cut_sigma_B__cut_sigma_B": 0.2675278731193096,
+          "cut_sigma_B__cut_sigma_C": -0.39128991195004836,
+          "cut_sigma_C__cut_sigma_C": 0.14580469288054676
+        },
+        "sigma_response_by_role_pair_hartree": {
+          "bonded__bonded": 0.013073584282626838,
+          "bonded__cut": -0.08282379859871215,
+          "cut__cut": 0.061193708506703026
+        },
+        "sigma_response_category_closure_residual_hartree": 1.5472761960566572e-12,
+        "sigma_response_electronic_split_residual_hartree": 1.6592283103022964e-12,
+        "sigma_response_hartree": -0.008556505810929593,
+        "sigma_response_one_electron_hartree": -0.03628258783991975,
+        "sigma_response_two_electron_hartree": 0.027726082030649385,
+        "source_cross_group_density_norm": 2.68985789227094e-15,
+        "source_density_physical_idempotency_residual": 0.022756899068855165
+      },
+      "density_fixed_point_residual": 7.70725552511163e-09,
+      "electron_trace": 96.00000000000009,
+      "expected_electrons": 96,
+      "fud_converged": true,
+      "fud_energy_hartree": -553.1378022255761,
+      "geometry_id": "source-table-5-15-fixed-parent-twist-0-17/1.0",
+      "ground_converged": true,
+      "ground_energy_hartree": -553.1286711289196,
+      "group_sizes": [
+        56,
+        162
+      ],
+      "lfmo_basis_hash": "b8e0ba26622fb5a8bca6d6cfda1af3a36224e56212565e5f8eac2e5988d374d0",
+      "point_provenance": "reused_frozen_2026_08_15_anchor",
+      "roots": [
+        7,
+        41
+      ],
+      "source_comparison": {
+        "absolute_error_hartree": {
+          "direct_interfragment": 0.006102705865181093,
+          "direct_intrafragment": 0.0007056801913156209,
+          "pi_response": 0.0014694232073289987,
+          "sigma_response": 0.002516505810929593,
+          "total": 0.0013810966565743002
+        },
+        "calculated_hartree": {
+          "direct_interfragment": 0.07007270586518109,
+          "direct_intrafragment": -0.0008056801913156209,
+          "pi_response": -0.051579423207329,
+          "sigma_response": -0.008556505810929593,
+          "total": 0.0091310966565743
+        },
+        "published_hartree": {
+          "direct_interfragment": 0.06397,
+          "direct_intrafragment": -0.0001,
+          "pi_response": -0.05011,
+          "sigma_response": -0.00604,
+          "total": 0.00775
+        },
+        "reference_available": true,
+        "tolerance_hartree": 0.01,
+        "within_declared_tolerance": true
+      },
+      "technical_pass": true
+    },
+    "25.0": {
+      "angle_degrees": 25.0,
+      "checks": {
+        "density_fixed_point": true,
+        "electron_trace": true,
+        "equations_5_12_to_5_16_close": true,
+        "fock_and_overlap_cross_blocks_deleted": true,
+        "fud_converged": true,
+        "ground_converged": true,
+        "independent_energy_assemblies": true,
+        "sigma_response_suballocation_closes": true,
+        "source_cross_group_density_zero": true
+      },
+      "components": {
+        "component_sum_hartree": 0.019698561872618647,
+        "direct_by_fragment_pair_hartree": {
+          "pi_A__sigma_A": -0.0011493506578890516,
+          "pi_A__sigma_B": 0.1062122252656444,
+          "pi_A__sigma_C": -0.00673736117238484,
+          "pi_B__sigma_A": 0.06707458398444532,
+          "pi_B__sigma_B": -0.0009136246995397488,
+          "pi_B__sigma_C": 0.0004993424747947773,
+          "pi_C__sigma_A": 0.0010206693005688173,
+          "pi_C__sigma_B": 0.00011905537022267423,
+          "pi_C__sigma_C": -0.00012415783457687284
+        },
+        "direct_interfragment_hartree": 0.168188515223291,
+        "direct_intrafragment_hartree": -0.0021871331920056735,
+        "direct_total_hartree": 0.16600138203128534,
+        "endpoint_expression": "E_G-E_FUD",
+        "endpoint_hartree": 0.019698561876111853,
+        "endpoint_kcal_mol": 12.36103420267838,
+        "equation_closure_residual_hartree": 3.4932057246805925e-12,
+        "fud_density_reconstruction_residual": 1.9633846316493053e-15,
+        "ground_density_reconstruction_residual": 2.0892734407822647e-15,
+        "interpretation": {
+          "ledger": "source_nonvariational_definition",
+          "physical_variational_energy": false,
+          "production_label_allowed": false
+        },
+        "masked_fock_cross_block_norm_hartree": 0.0,
+        "masked_overlap_cross_block_norm": 0.0,
+        "pi_response_hartree": -0.12469757563201256,
+        "pyscf_vs_assembled_helper_residual_hartree": 2.7284841053187847e-12,
+        "pyscf_vs_explicit_energy_residual_hartree": 2.7284841053187847e-12,
+        "sigma_response_by_category_pair_hartree": {
+          "bonded_sigma_A__bonded_sigma_A": 0.4347013126923116,
+          "bonded_sigma_A__bonded_sigma_B": -0.9983036612627831,
+          "bonded_sigma_A__bonded_sigma_C": 0.03513467193636867,
+          "bonded_sigma_A__cut_sigma_A": -0.004345186298172543,
+          "bonded_sigma_A__cut_sigma_B": -0.05417716806495121,
+          "bonded_sigma_A__cut_sigma_C": -0.13302075564802274,
+          "bonded_sigma_B__bonded_sigma_B": 0.6475299080905472,
+          "bonded_sigma_B__bonded_sigma_C": -0.12148665348848198,
+          "bonded_sigma_B__cut_sigma_A": -0.03813265186187409,
+          "bonded_sigma_B__cut_sigma_B": -0.02967442810092913,
+          "bonded_sigma_B__cut_sigma_C": 0.23863823008542784,
+          "bonded_sigma_C__bonded_sigma_C": 0.10508436267917887,
+          "bonded_sigma_C__cut_sigma_A": -0.01459881945645726,
+          "bonded_sigma_C__cut_sigma_B": -0.2865801392155892,
+          "bonded_sigma_C__cut_sigma_C": 0.010201783998186498,
+          "cut_sigma_A__cut_sigma_A": 0.0112184498496255,
+          "cut_sigma_A__cut_sigma_B": 0.009468233921811287,
+          "cut_sigma_A__cut_sigma_C": 0.07027450779870187,
+          "cut_sigma_B__cut_sigma_B": 0.7301424059537371,
+          "cut_sigma_B__cut_sigma_C": -1.138042476094961,
+          "cut_sigma_C__cut_sigma_C": 0.5043628279595289
+        },
+        "sigma_response_by_role_pair_hartree": {
+          "bonded__bonded": 0.10265994064714123,
+          "bonded__cut": -0.31168913456238184,
+          "cut__cut": 0.18742394938844376
+        },
+        "sigma_response_category_closure_residual_hartree": 1.4277468096679513e-13,
+        "sigma_response_electronic_split_residual_hartree": 1.9578783039264636e-13,
+        "sigma_response_hartree": -0.021605244526654133,
+        "sigma_response_one_electron_hartree": -0.08347877829995648,
+        "sigma_response_two_electron_hartree": 0.06187353377310656,
+        "source_cross_group_density_norm": 3.8689129050900014e-15,
+        "source_density_physical_idempotency_residual": 0.03552899406969948
+      },
+      "density_fixed_point_residual": 7.677911036441735e-09,
+      "electron_trace": 95.99999999999993,
+      "expected_electrons": 96,
+      "fud_converged": true,
+      "fud_energy_hartree": -553.1504815167739,
+      "geometry_id": "p05-table-5-15-fixed-parent-seven-angle/0.2",
+      "ground_converged": true,
+      "ground_energy_hartree": -553.1307829548978,
+      "group_sizes": [
+        56,
+        162
+      ],
+      "lfmo_basis_hash": "e2cd2eb466804057929c873a7bdbb8fccff90edcf2657d5780a7b91fa96769a6",
+      "point_provenance": "new_p05_continuation_calculation",
+      "roots": [
+        7,
+        41
+      ],
+      "source_comparison": {
+        "reference_available": false,
+        "reference_note": "no printed Table 5-15 component reference is available at this angle"
+      },
+      "technical_pass": true
+    },
+    "35.0": {
+      "angle_degrees": 35.0,
+      "checks": {
+        "density_fixed_point": true,
+        "electron_trace": true,
+        "equations_5_12_to_5_16_close": true,
+        "fock_and_overlap_cross_blocks_deleted": true,
+        "fud_converged": true,
+        "ground_converged": true,
+        "independent_energy_assemblies": true,
+        "sigma_response_suballocation_closes": true,
+        "source_cross_group_density_zero": true
+      },
+      "components": {
+        "component_sum_hartree": 0.03765551904765374,
+        "direct_by_fragment_pair_hartree": {
+          "pi_A__sigma_A": -0.0028431202391490393,
+          "pi_A__sigma_B": 0.21468209343387082,
+          "pi_A__sigma_C": -0.009954792239880814,
+          "pi_B__sigma_A": 0.14463046948687064,
+          "pi_B__sigma_B": -0.0015427215511208652,
+          "pi_B__sigma_C": 0.000586145779754105,
+          "pi_C__sigma_A": 0.0013193129379096826,
+          "pi_C__sigma_B": 0.00014868666935372797,
+          "pi_C__sigma_C": -0.00014800182447852805
+        },
+        "direct_interfragment_hartree": 0.3514119160678784,
+        "direct_intrafragment_hartree": -0.004533843614748433,
+        "direct_total_hartree": 0.34687807245312996,
+        "endpoint_expression": "E_G-E_FUD",
+        "endpoint_hartree": 0.03765551905053144,
+        "endpoint_kcal_mol": 23.629194954972025,
+        "equation_closure_residual_hartree": 2.8776980798284058e-12,
+        "fud_density_reconstruction_residual": 1.8640784713142963e-15,
+        "ground_density_reconstruction_residual": 2.0097905375168423e-15,
+        "interpretation": {
+          "ledger": "source_nonvariational_definition",
+          "physical_variational_energy": false,
+          "production_label_allowed": false
+        },
+        "masked_fock_cross_block_norm_hartree": 0.0,
+        "masked_overlap_cross_block_norm": 0.0,
+        "pi_response_hartree": -0.2603404643363376,
+        "pyscf_vs_assembled_helper_residual_hartree": 1.1368683772161603e-12,
+        "pyscf_vs_explicit_energy_residual_hartree": 1.1368683772161603e-12,
+        "sigma_response_by_category_pair_hartree": {
+          "bonded_sigma_A__bonded_sigma_A": 0.5284200731005058,
+          "bonded_sigma_A__bonded_sigma_B": -1.3019537950185789,
+          "bonded_sigma_A__bonded_sigma_C": 0.05951124635700411,
+          "bonded_sigma_A__cut_sigma_A": -0.005693551885804005,
+          "bonded_sigma_A__cut_sigma_B": -0.03316526070111203,
+          "bonded_sigma_A__cut_sigma_C": -0.23443231369827924,
+          "bonded_sigma_B__bonded_sigma_B": 0.9149603338951806,
+          "bonded_sigma_B__bonded_sigma_C": -0.12874533658631604,
+          "bonded_sigma_B__cut_sigma_A": -0.05079234880534478,
+          "bonded_sigma_B__cut_sigma_B": -0.04177407400767508,
+          "bonded_sigma_B__cut_sigma_C": 0.18344740171242235,
+          "bonded_sigma_C__bonded_sigma_C": 0.21535129033890144,
+          "bonded_sigma_C__cut_sigma_A": -0.034635255756165245,
+          "bonded_sigma_C__cut_sigma_B": -0.5799629373386395,
+          "bonded_sigma_C__cut_sigma_C": 0.021897319318817776,
+          "cut_sigma_A__cut_sigma_A": 0.023235664661164,
+          "cut_sigma_A__cut_sigma_B": -0.0011947008347685806,
+          "cut_sigma_A__cut_sigma_C": 0.16418185223613313,
+          "cut_sigma_B__cut_sigma_B": 1.5814325490826935,
+          "cut_sigma_B__cut_sigma_C": -2.587200152279194,
+          "cut_sigma_C__cut_sigma_C": 1.2582299071410494
+        },
+        "sigma_response_by_role_pair_hartree": {
+          "bonded__bonded": 0.287543812086697,
+          "bonded__cut": -0.7751110211617797,
+          "cut__cut": 0.4386851200070776
+        },
+        "sigma_response_category_closure_residual_hartree": 1.1334821969910536e-12,
+        "sigma_response_electronic_split_residual_hartree": 2.102859553154701e-12,
+        "sigma_response_hartree": -0.0488820890691386,
+        "sigma_response_one_electron_hartree": -0.16959574805686717,
+        "sigma_response_two_electron_hartree": 0.12071365898983143,
+        "source_cross_group_density_norm": 4.239757351816632e-15,
+        "source_density_physical_idempotency_residual": 0.05472814417146012
+      },
+      "density_fixed_point_residual": 5.511681344231128e-09,
+      "electron_trace": 96.0,
+      "expected_electrons": 96,
+      "fud_converged": true,
+      "fud_energy_hartree": -553.1705241688512,
+      "geometry_id": "p05-table-5-15-fixed-parent-seven-angle/0.2",
+      "ground_converged": true,
+      "ground_energy_hartree": -553.1328686498007,
+      "group_sizes": [
+        56,
+        162
+      ],
+      "lfmo_basis_hash": "db3b7cb1277cff0df916cea838ae5bd45d190630fa868715de36cc1dd4f17ea0",
+      "point_provenance": "new_p05_continuation_calculation",
+      "roots": [
+        7,
+        41
+      ],
+      "source_comparison": {
+        "reference_available": false,
+        "reference_note": "no printed Table 5-15 component reference is available at this angle"
+      },
+      "technical_pass": true
+    },
+    "45.0": {
+      "angle_degrees": 45.0,
+      "checks": {
+        "density_fixed_point": true,
+        "electron_trace": true,
+        "equations_5_12_to_5_16_close": true,
+        "fock_and_overlap_cross_blocks_deleted": true,
+        "fud_converged": true,
+        "ground_converged": true,
+        "independent_energy_assemblies": true,
+        "sigma_response_suballocation_closes": true,
+        "source_cross_group_density_zero": true
+      },
+      "components": {
+        "component_sum_hartree": 0.05889218299186261,
+        "direct_by_fragment_pair_hartree": {
+          "pi_A__sigma_A": -0.0047871587283765124,
+          "pi_A__sigma_B": 0.34580793847882546,
+          "pi_A__sigma_C": -0.011588870458166152,
+          "pi_B__sigma_A": 0.2446867422675177,
+          "pi_B__sigma_B": -0.001895418876770554,
+          "pi_B__sigma_C": 0.0005100531570475157,
+          "pi_C__sigma_A": 0.0013202106891879164,
+          "pi_C__sigma_B": 0.00013851233439002723,
+          "pi_C__sigma_C": -0.00013011710716178887
+        },
+        "direct_interfragment_hartree": 0.5808745864688026,
+        "direct_intrafragment_hartree": -0.006812694712308855,
+        "direct_total_hartree": 0.5740618917564938,
+        "endpoint_expression": "E_G-E_FUD",
+        "endpoint_hartree": 0.058892182992849484,
+        "endpoint_kcal_mol": 36.95540277627082,
+        "equation_closure_residual_hartree": 9.868772465893016e-13,
+        "fud_density_reconstruction_residual": 2.3617977254082334e-15,
+        "ground_density_reconstruction_residual": 2.2891201891948357e-15,
+        "interpretation": {
+          "ledger": "source_nonvariational_definition",
+          "physical_variational_energy": false,
+          "production_label_allowed": false
+        },
+        "masked_fock_cross_block_norm_hartree": 0.0,
+        "masked_overlap_cross_block_norm": 0.0,
+        "pi_response_hartree": -0.4299231019396643,
+        "pyscf_vs_assembled_helper_residual_hartree": 1.3642420526593924e-12,
+        "pyscf_vs_explicit_energy_residual_hartree": 1.3642420526593924e-12,
+        "sigma_response_by_category_pair_hartree": {
+          "bonded_sigma_A__bonded_sigma_A": 0.45173910312939825,
+          "bonded_sigma_A__bonded_sigma_B": -1.262458558390299,
+          "bonded_sigma_A__bonded_sigma_C": 0.07311747573547098,
+          "bonded_sigma_A__cut_sigma_A": -0.004753383166777869,
+          "bonded_sigma_A__cut_sigma_B": 0.027156761641660754,
+          "bonded_sigma_A__cut_sigma_C": -0.30047639744069893,
+          "bonded_sigma_B__bonded_sigma_B": 0.9395086715799721,
+          "bonded_sigma_B__bonded_sigma_C": -0.0826690070819116,
+          "bonded_sigma_B__cut_sigma_A": -0.031511010400145256,
+          "bonded_sigma_B__cut_sigma_B": -0.048312012207865296,
+          "bonded_sigma_B__cut_sigma_C": 0.01391144613954487,
+          "bonded_sigma_C__bonded_sigma_C": 0.3264200588650965,
+          "bonded_sigma_C__cut_sigma_A": -0.056290029487167964,
+          "bonded_sigma_C__cut_sigma_B": -0.8750730756650795,
+          "bonded_sigma_C__cut_sigma_C": 0.03479118049470575,
+          "cut_sigma_A__cut_sigma_A": 0.025735173893648877,
+          "cut_sigma_A__cut_sigma_B": 0.010469160997186311,
+          "cut_sigma_A__cut_sigma_C": 0.2651281409993215,
+          "cut_sigma_B__cut_sigma_B": 2.448273915624636,
+          "cut_sigma_B__cut_sigma_C": -4.14722531301527,
+          "cut_sigma_C__cut_sigma_C": 2.107271090929615
+        },
+        "sigma_response_by_role_pair_hartree": {
+          "bonded__bonded": 0.44565774383772727,
+          "bonded__cut": -1.2405565200918236,
+          "cut__cut": 0.7096521694291371
+        },
+        "sigma_response_category_closure_residual_hartree": 7.93809462606987e-15,
+        "sigma_response_electronic_split_residual_hartree": 2.7805535651737046e-13,
+        "sigma_response_hartree": -0.08524660682496688,
+        "sigma_response_one_electron_hartree": -0.27092597181281874,
+        "sigma_response_two_electron_hartree": 0.18567936498812992,
+        "source_cross_group_density_norm": 5.2698925217567645e-15,
+        "source_density_physical_idempotency_residual": 0.07539084543471894
+      },
+      "density_fixed_point_residual": 8.978554793836142e-09,
+      "electron_trace": 96.00000000000003,
+      "expected_electrons": 96,
+      "fud_converged": true,
+      "fud_energy_hartree": -553.1927523367843,
+      "geometry_id": "p05-table-5-15-fixed-parent-seven-angle/0.2",
+      "ground_converged": true,
+      "ground_energy_hartree": -553.1338601537915,
+      "group_sizes": [
+        56,
+        162
+      ],
+      "lfmo_basis_hash": "f1fcea5e5dcd7fcad5a4a925312eb30091afee75367c9b79502cee3ee231b155",
+      "point_provenance": "new_p05_continuation_calculation",
+      "roots": [
+        7,
+        41
+      ],
+      "source_comparison": {
+        "reference_available": false,
+        "reference_note": "no printed Table 5-15 component reference is available at this angle"
+      },
+      "technical_pass": true
+    },
+    "5.0": {
+      "angle_degrees": 5.0,
+      "checks": {
+        "density_fixed_point": true,
+        "electron_trace": true,
+        "equations_5_12_to_5_16_close": true,
+        "fock_and_overlap_cross_blocks_deleted": true,
+        "fud_converged": true,
+        "ground_converged": true,
+        "independent_energy_assemblies": true,
+        "sigma_response_suballocation_closes": true,
+        "source_cross_group_density_zero": true
+      },
+      "components": {
+        "component_sum_hartree": 0.0007831113433581557,
+        "direct_by_fragment_pair_hartree": {
+          "pi_A__sigma_A": 1.0005508627755887e-05,
+          "pi_A__sigma_B": 0.003382458263465516,
+          "pi_A__sigma_C": -0.00037578917084207103,
+          "pi_B__sigma_A": 0.0018992078885596614,
+          "pi_B__sigma_B": -3.3545820675920306e-05,
+          "pi_B__sigma_C": 3.571739585182586e-05,
+          "pi_C__sigma_A": 6.663434861240827e-05,
+          "pi_C__sigma_B": 7.746876181214703e-06,
+          "pi_C__sigma_C": -8.578549663721748e-06
+        },
+        "direct_interfragment_hartree": 0.0050159756018285625,
+        "direct_intrafragment_hartree": -3.2118861711886166e-05,
+        "direct_total_hartree": 0.004983856740116676,
+        "endpoint_expression": "E_G-E_FUD",
+        "endpoint_hartree": 0.0007831113416614244,
+        "endpoint_kcal_mol": 0.49140978613880903,
+        "equation_closure_residual_hartree": 1.696731297129439e-12,
+        "fud_density_reconstruction_residual": 1.9447537968008405e-15,
+        "ground_density_reconstruction_residual": 2.043551172398185e-15,
+        "interpretation": {
+          "ledger": "source_nonvariational_definition",
+          "physical_variational_energy": false,
+          "production_label_allowed": false
+        },
+        "masked_fock_cross_block_norm_hartree": 0.0,
+        "masked_overlap_cross_block_norm": 0.0,
+        "pi_response_hartree": -0.0035813683057881462,
+        "pyscf_vs_assembled_helper_residual_hartree": 4.547473508864641e-13,
+        "pyscf_vs_explicit_energy_residual_hartree": 6.821210263296962e-13,
+        "sigma_response_by_category_pair_hartree": {
+          "bonded_sigma_A__bonded_sigma_A": 0.028513495053459792,
+          "bonded_sigma_A__bonded_sigma_B": -0.06151517334785428,
+          "bonded_sigma_A__bonded_sigma_C": 0.00133210949004927,
+          "bonded_sigma_A__cut_sigma_A": -0.00026703366188834954,
+          "bonded_sigma_A__cut_sigma_B": -0.005002507592790084,
+          "bonded_sigma_A__cut_sigma_C": -0.004719706966360787,
+          "bonded_sigma_B__bonded_sigma_B": 0.03433195142929435,
+          "bonded_sigma_B__bonded_sigma_C": -0.008531312708228711,
+          "bonded_sigma_B__cut_sigma_A": -0.0018358762852446198,
+          "bonded_sigma_B__cut_sigma_B": -0.0018856173597554537,
+          "bonded_sigma_B__cut_sigma_C": 0.021946023870838438,
+          "bonded_sigma_C__bonded_sigma_C": 0.002681475522706478,
+          "bonded_sigma_C__cut_sigma_A": -0.00020676502563632404,
+          "bonded_sigma_C__cut_sigma_B": -0.008063344065628197,
+          "bonded_sigma_C__cut_sigma_C": 0.0002948210116872074,
+          "cut_sigma_A__cut_sigma_A": 0.0002429092017437462,
+          "cut_sigma_A__cut_sigma_B": 0.0016992897175880373,
+          "cut_sigma_A__cut_sigma_C": 0.001066216722798774,
+          "cut_sigma_B__cut_sigma_B": 0.014117235111100968,
+          "cut_sigma_B__cut_sigma_C": -0.01741200861372283,
+          "cut_sigma_C__cut_sigma_C": 0.0025944414054563936
+        },
+        "sigma_response_by_role_pair_hartree": {
+          "bonded__bonded": -0.003187454560573101,
+          "bonded__cut": 0.00025999392522182974,
+          "cut__cut": 0.0023080835449650894
+        },
+        "sigma_response_category_closure_residual_hartree": 5.841924166638535e-13,
+        "sigma_response_electronic_split_residual_hartree": 7.781969513231957e-13,
+        "sigma_response_hartree": -0.0006193770909703744,
+        "sigma_response_one_electron_hartree": -0.002898963760557538,
+        "sigma_response_two_electron_hartree": 0.0022795866688089667,
+        "source_cross_group_density_norm": 9.655989268723138e-16,
+        "source_density_physical_idempotency_residual": 0.00644527148611899
+      },
+      "density_fixed_point_residual": 8.810372484950015e-09,
+      "electron_trace": 95.99999999999996,
+      "expected_electrons": 96,
+      "fud_converged": true,
+      "fud_energy_hartree": -553.1270294258147,
+      "geometry_id": "p05-table-5-15-fixed-parent-seven-angle/0.2",
+      "ground_converged": true,
+      "ground_energy_hartree": -553.1262463144731,
+      "group_sizes": [
+        56,
+        162
+      ],
+      "lfmo_basis_hash": "99b28e10f2808186b50f67765b520b28bbf7dee2b699006311c2dfb155bad34d",
+      "point_provenance": "new_p05_continuation_calculation",
+      "roots": [
+        7,
+        41
+      ],
+      "source_comparison": {
+        "reference_available": false,
+        "reference_note": "no printed Table 5-15 component reference is available at this angle"
+      },
+      "technical_pass": true
+    }
+  },
+  "protocol": "source-equivalent-reconstruction/table-5-15-seven-angle-continuation/0.2",
+  "provenance": {
+    "config_sha256": "c50dc87ed156679edb093ea0a01a276b95b3e1a19c4be0180afb0640c75fa4b0",
+    "frozen_anchor_sha256": "2f83b1a8b4a394d39da4fab3942d17b52f4f4365c9cde55a3abc68f1b64a1933",
+    "geometry_sha256": "e8119c0470ee7bcde8315bc39541496a9e2f36596246cc3889b76e3eac61215b",
+    "git_commit": "d55e12c9ee9e4d8a201405be75a1c6c7e19e0d7f"
+  },
+  "schema_version": 1,
+  "scientific_verdict": "P05_CONSISTENT_WITH_MULTI_ANGLE_SUPPORT",
+  "seventeen_degree_anchor_delta_hartree": 0.0,
+  "technical_pass": true
+}

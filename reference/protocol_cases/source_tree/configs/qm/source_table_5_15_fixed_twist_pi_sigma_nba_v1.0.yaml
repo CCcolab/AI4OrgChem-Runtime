@@ -1,0 +1,77 @@
+schema_version: 1
+experiment_id: source-table-5-15-fixed-twist-pi-sigma-nba/1.0
+protocol: source-equivalent-reconstruction/1.0/table-5-15-fixed-twist
+status: se_2_provisional_fixed_ledger_validated
+production_labels_allowed: false
+validation_evidence: docs/reports/gate0_target_a_table_5_15_support_2026-08-15.md
+
+base_config: configs/qm/fud_diphenyl_imine_source_shaped_v0.1.yaml
+parent_geometry_config: configs/qm/dsi2_diphenyl_imine_source_shaped_v0.1.yaml
+
+electronic_structure:
+  method: RHF
+  basis: 6-31g(d)
+
+geometry_protocol:
+  type: fixed_parent_geometry_rigid_twist
+  source_evidence:
+    table_5_15_printed_pages: [138, 139, 140, 141]
+    table_5_19_printed_pages: [145, 146, 147]
+    table_5_15_wording: twisted_geometries_without_relaxed_pes_scan_statement
+    table_5_19_wording: relaxed_pes_scan_at_b3lyp_6_311g_double_star
+  coordinate_status: independent_parent_geometry_reconstruction_not_source_exact
+  parent_geometry_status: existing_planar_parent_reconstruction
+  torsion_axis_atom_indices: [0, 6]
+  rotating_atom_indices: [1, 2, 3, 4, 5, 14, 15, 16, 17, 18]
+  angles_degrees: [0.0, 17.0]
+  cross_geometry_orbital_tracking: false
+
+source_definition:
+  state: FUD
+  state_difference: E_G_minus_E_FUD
+  delete_cross_group_fock_blocks: true
+  delete_cross_group_overlap_blocks: true
+  density_reconstruction: source_block_metric_group_projector
+  energy_assembly: original_rhf_functional_on_source_density
+  geometry_specific_lfmo_reconstruction: true
+  equations: [5-12, 5-13, 5-14, 5-15, 5-16]
+  printed_pages: [138, 139, 140, 141]
+
+source_reference:
+  table: Table_5_15
+  published_total_17_degree_hartree: 0.00775
+  published_components_17_degree_hartree:
+    direct_intrafragment: -0.00010
+    direct_interfragment: 0.06397
+    pi_response: -0.05011
+    sigma_response: -0.00604
+
+lfmo_interface:
+  reflection_classification_policy: spectral_sign
+  minimum_absolute_reflection_eigenvalue: 0.99
+  maximum_accepted_reflection_residual: 1.0e-2
+  reflection_block_closure_tolerance: 1.0e-8
+  reflection_eigenvalue_tolerance: 1.0e-8
+
+acceptance:
+  density_fixed_point_tolerance: 1.0e-8
+  electron_trace_tolerance: 1.0e-6
+  source_cross_block_tolerance: 1.0e-8
+  energy_assembly_tolerance_hartree: 1.0e-9
+  equation_closure_tolerance_hartree: 1.0e-9
+  printed_component_absolute_tolerance_hartree: 1.0e-2
+  positive_sign_threshold_hartree: 0.0
+  require_source_component_sign_pattern: true
+
+boundaries:
+  existing_parent_nba_candidate_only: true
+  fixed_table_5_15_zero_and_seventeen_points_only: true
+  fixed_parent_geometry_rigid_twist_only: true
+  source_nonvariational_ledger_only: true
+  physical_projector_enabled: false
+  geometry_scan_enabled: false
+  relaxed_pes_scan_enabled: false
+  basis_scan_enabled: false
+  additional_molecules_enabled: false
+  production_labels_allowed: false
+  existing_untracked_tmp_untouched: true

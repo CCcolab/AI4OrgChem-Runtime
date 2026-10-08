@@ -1,0 +1,121 @@
+schema_version: 1
+experiment_id: dsi2-diphenyl-imine-source-shaped/0.1-candidate
+status: nonproduction_third_cross_molecule_source_shaped_candidate
+production_labels_allowed: false
+
+geometry:
+  id: idealized_planar_diphenyl_imine_project_geometry
+  unit: Angstrom
+  reflection_plane: xy
+  atoms:
+    - [C, -1.4000000000,  0.0000000000, 0.0000000000]
+    - [C, -2.0950000000,  1.2037753113, 0.0000000000]
+    - [C, -3.4850000000,  1.2037753113, 0.0000000000]
+    - [C, -4.1800000000,  0.0000000000, 0.0000000000]
+    - [C, -3.4850000000, -1.2037753113, 0.0000000000]
+    - [C, -2.0950000000, -1.2037753113, 0.0000000000]
+    - [N,  0.0000000000,  0.0000000000, 0.0000000000]
+    - [C,  0.6400000000,  1.1085125168, 0.0000000000]
+    - [C,  2.1000000000,  1.1085125168, 0.0000000000]
+    - [C,  2.7950000000,  2.3122878281, 0.0000000000]
+    - [C,  4.1850000000,  2.3122878281, 0.0000000000]
+    - [C,  4.8800000000,  1.1085125168, 0.0000000000]
+    - [C,  4.1850000000, -0.0952627945, 0.0000000000]
+    - [C,  2.7950000000, -0.0952627945, 0.0000000000]
+    - [H, -1.5550000000,  2.1390827474, 0.0000000000]
+    - [H, -4.0250000000,  2.1390827474, 0.0000000000]
+    - [H, -5.2600000000,  0.0000000000, 0.0000000000]
+    - [H, -4.0250000000, -2.1390827474, 0.0000000000]
+    - [H, -1.5550000000, -2.1390827474, 0.0000000000]
+    - [H,  0.1000000000,  2.0438199529, 0.0000000000]
+    - [H,  2.2550000000,  3.2475952642, 0.0000000000]
+    - [H,  4.7250000000,  3.2475952642, 0.0000000000]
+    - [H,  5.9600000000,  1.1085125168, 0.0000000000]
+    - [H,  4.7250000000, -1.0305702306, 0.0000000000]
+    - [H,  2.2550000000, -1.0305702306, 0.0000000000]
+
+electronic_structure:
+  basis: 6-31g(d)
+  charge: 0
+  spin: 0
+  expected_electrons: 96
+
+primitive_fragments:
+  A:
+    atom_indices: [0, 1, 2, 3, 4, 5, 14, 15, 16, 17, 18]
+    formula: C6H5
+    charge: 0
+    spin: 1
+    cut_atom_indices: [0]
+    external_partner_indices: [6]
+    expected_cut_somos: 1
+  B:
+    atom_indices: [6, 7, 19]
+    formula: NCH
+    charge: 0
+    spin: 2
+    cut_atom_indices: [6, 7]
+    external_partner_indices: [0, 8]
+    expected_cut_somos: 2
+  C:
+    atom_indices: [8, 9, 10, 11, 12, 13, 20, 21, 22, 23, 24]
+    formula: C6H5
+    charge: 0
+    spin: 1
+    cut_atom_indices: [8]
+    external_partner_indices: [7]
+    expected_cut_somos: 1
+
+fragment_scf:
+  method: UHF
+  convergence_tolerance: 1.0e-10
+  max_cycles: 100
+  initial_guess: minao
+  singly_occupied_window: [0.9, 1.1]
+
+reference_hydrogen_distance_angstrom: 1.10
+odd_ao_components: [z, xz, yz]
+
+kost:
+  tolerance: 1.0e-10
+  maximum_cycles: 3
+  maximum_macro_cycles: 12
+  occupied_maximum_sweeps: 8
+  monotonic_tolerance: 1.0e-12
+
+conditional_scf:
+  convergence_tolerance: 1.0e-10
+  convergence_tolerance_gradient: 1.0e-6
+  max_cycles: 100
+  initial_guess: minao
+  damping: 0.0
+  conditional_diis_start_cycle: 1
+  conditional_diis_space: 8
+
+acceptance:
+  reflection_eigenvalue_tolerance: 1.0e-8
+  electron_trace_tolerance: 1.0e-6
+  physical_density_idempotency_tolerance: 1.0e-8
+  generalized_eigen_residual_tolerance: 1.0e-8
+  conditional_commutator_residual_tolerance: 1.0e-6
+  root_subspace_minimum_singular_value: 0.5
+  coefficient_support_tolerance: 1.0e-10
+  metric_condition_number_limit: 1.0e8
+
+dsi2_state:
+  pi_superfragments: [A, B_plus_C]
+  sigma_superfragments: [molecule]
+  fixed_doubly_occupied_roots: [3, 4, 41]
+  expected_group_electrons: [6, 8, 82]
+  density_reconstruction: physical_metric_nonorthogonal_occupied_projector
+  solver: density_fixed_point_with_diis
+  density_fixed_point_tolerance: 1.0e-8
+  density_diis_start_cycle: 2
+  density_diis_space: 8
+  density_max_cycles: 200
+  occupation_status: molecule_specific_project_candidate
+  energy_label_enabled: false
+
+resources:
+  profile: configs/resources/local_wsl.yaml
+  threads: 8

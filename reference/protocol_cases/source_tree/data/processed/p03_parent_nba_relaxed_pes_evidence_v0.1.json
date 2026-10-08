@@ -1,0 +1,1069 @@
+{
+  "analysis": {
+    "checks": {
+      "all_energy_identities_close": true,
+      "all_optimizations_converged": true,
+      "all_scf_converged": true,
+      "all_twists_within_tolerance": true,
+      "enough_lower_branch_segments": true,
+      "sampled_total_minimum_not_at_boundary": true
+    },
+    "direction_checks": {
+      "electronic_decreases_on_lower_branch": true,
+      "nuclear_repulsion_increases_on_lower_branch": true,
+      "total_energy_decreases_on_lower_branch": true
+    },
+    "direction_pass": true,
+    "lfmo_component_attribution": false,
+    "lower_branch_segments": [
+      {
+        "delta_electronic_hartree": -0.4974779530161868,
+        "delta_nuclear_hartree": 0.49654007928143074,
+        "delta_total_hartree": -0.0009378737347560673,
+        "electronic_drives_twist": true,
+        "energy_identity_residual_hartree": 0.0,
+        "from_angle_degrees": 0.0,
+        "nuclear_opposes_twist": true,
+        "to_angle_degrees": 20.0,
+        "total_favors_twist": true
+      },
+      {
+        "delta_electronic_hartree": -0.5725789580078526,
+        "delta_nuclear_hartree": 0.5716690260746873,
+        "delta_total_hartree": -0.0009099319331653533,
+        "electronic_drives_twist": true,
+        "energy_identity_residual_hartree": 0.0,
+        "from_angle_degrees": 20.0,
+        "nuclear_opposes_twist": true,
+        "to_angle_degrees": 40.0,
+        "total_favors_twist": true
+      }
+    ],
+    "p03_complete": true,
+    "quadratic_fits": {
+      "electronic": {
+        "intercept": -1297.890602638717,
+        "linear": -0.03983125499286088,
+        "quadratic": 0.0003737593678395108,
+        "r_squared": 0.9613010884547131,
+        "rmse_hartree": 0.0836532035314028,
+        "second_derivative_hartree_per_degree2": 0.0007475187356790216,
+        "stationary_angle_degrees": 53.28462430667971
+      },
+      "nuclear_repulsion": {
+        "intercept": 741.0052607179321,
+        "linear": 0.03974501767819374,
+        "quadratic": -0.00037265096606263926,
+        "r_squared": 0.9613700872271235,
+        "rmse_hartree": 0.08346117457060412,
+        "second_derivative_hartree_per_degree2": -0.0007453019321252785,
+        "stationary_angle_degrees": 53.32740459273754
+      },
+      "total": {
+        "intercept": -556.8853419207843,
+        "linear": -8.62373146671412e-05,
+        "quadratic": 1.108401776684491e-06,
+        "r_squared": 0.9138720689001287,
+        "rmse_hartree": 0.00019202896077327107,
+        "second_derivative_hartree_per_degree2": 2.216803553368982e-06,
+        "stationary_angle_degrees": 38.90164942043793
+      }
+    },
+    "relative_points": [
+      {
+        "angle_degrees": 8.009690810753532e-15,
+        "delta_electronic_hartree": 0.0,
+        "delta_nuclear_hartree": 0.0,
+        "delta_total_hartree": 0.0
+      },
+      {
+        "angle_degrees": 20.00000121250792,
+        "delta_electronic_hartree": -0.4974779530161868,
+        "delta_nuclear_hartree": 0.49654007928143074,
+        "delta_total_hartree": -0.0009378737347560673
+      },
+      {
+        "angle_degrees": 40.00004470249401,
+        "delta_electronic_hartree": -1.0700569110240394,
+        "delta_nuclear_hartree": 1.068209105356118,
+        "delta_total_hartree": -0.0018478056679214205
+      },
+      {
+        "angle_degrees": 60.00042308113258,
+        "delta_electronic_hartree": -0.9695198754961893,
+        "delta_nuclear_hartree": 0.9685076389365577,
+        "delta_total_hartree": -0.001012236559631674
+      }
+    ],
+    "sampled_total_minimum_angle_degrees": 40.0,
+    "scope": "single_parent_nba_source_aligned_relaxed_fixed_torsion_path",
+    "technical_pass": true,
+    "universal_nba_claim": false,
+    "verdict": "P03_MINIMAL_PARENT_NBA_DIRECTION_SUPPORTED"
+  },
+  "boundaries": {
+    "additional_molecules": false,
+    "ai_training_started": false,
+    "basis_or_method_scan": false,
+    "lfmo_component_attribution": false,
+    "p08_started": false,
+    "production_label": false,
+    "single_parent_nba_only": true,
+    "solvent": false
+  },
+  "config": "configs/qm/p03_parent_nba_relaxed_pes_v0.1.yaml",
+  "config_sha256": "454f4617629b427fa97a3eb9a8ff903623bebd3a059d35335b951f1b49d0a96d",
+  "experiment_id": "p03-parent-nba-relaxed-pes/0.1",
+  "points": {
+    "0.0": {
+      "energies": {
+        "electronic_energy_hartree": -1297.9280134886435,
+        "energy_closure_residual_hartree": 0.0,
+        "nuclear_repulsion_hartree": 741.042585689897,
+        "scf_converged": true,
+        "total_energy_hartree": -556.8854277987465
+      },
+      "geometry": {
+        "achieved_signed_dihedral_degrees": 8.009690810753532e-15,
+        "achieved_twist_degrees": 8.009690810753532e-15,
+        "atoms": [
+          [
+            "C",
+            -1.4475937271931563,
+            0.1200726285775353,
+            1.3611154054930986e-13
+          ],
+          [
+            "C",
+            -2.247292992336862,
+            1.276509363221418,
+            1.7893008695356535e-15
+          ],
+          [
+            "C",
+            -3.6327957072924026,
+            1.173103182837368,
+            -2.705325666165147e-14
+          ],
+          [
+            "C",
+            -4.252070679268789,
+            -0.07774097237486165,
+            8.811344878407816e-14
+          ],
+          [
+            "C",
+            -3.4698232703136487,
+            -1.230067649233802,
+            2.367201205057809e-13
+          ],
+          [
+            "C",
+            -2.082741466653206,
+            -1.1299060858570282,
+            2.594830733932136e-13
+          ],
+          [
+            "N",
+            -0.03834143921241519,
+            0.08658684005316754,
+            2.4450973787026494e-13
+          ],
+          [
+            "C",
+            0.6776164841437473,
+            1.143787696619727,
+            2.3096736846851683e-13
+          ],
+          [
+            "C",
+            2.144167949390494,
+            1.0968489827859198,
+            7.47854429144736e-14
+          ],
+          [
+            "C",
+            2.871577409149129,
+            2.2945922608713567,
+            5.862438796656699e-14
+          ],
+          [
+            "C",
+            4.263323172399015,
+            2.2794046272834323,
+            -5.162684312615061e-14
+          ],
+          [
+            "C",
+            4.943988439129761,
+            1.064259548669608,
+            -1.7246165533147586e-13
+          ],
+          [
+            "C",
+            4.227454884912488,
+            -0.13568596467705402,
+            -1.3974071967200942e-13
+          ],
+          [
+            "C",
+            2.840227720178983,
+            -0.12249065821618081,
+            -1.854733905033385e-14
+          ],
+          [
+            "H",
+            -1.7959178939767857,
+            2.261251520879044,
+            -6.414037527484045e-14
+          ],
+          [
+            "H",
+            -4.2358559408112,
+            2.0745507543372192,
+            -1.1867541856933239e-13
+          ],
+          [
+            "H",
+            -5.333679395962911,
+            -0.14970928154652133,
+            6.513380335153947e-14
+          ],
+          [
+            "H",
+            -3.9394171731573246,
+            -2.207350007503943,
+            3.3892479953565363e-13
+          ],
+          [
+            "H",
+            -1.4548870174890947,
+            -2.012646871425522,
+            3.8462673303152573e-13
+          ],
+          [
+            "H",
+            0.25202629971545887,
+            2.1558308264044177,
+            2.7277002039277693e-13
+          ],
+          [
+            "H",
+            2.340318969403823,
+            3.2413100358283615,
+            1.49046226150338e-13
+          ],
+          [
+            "H",
+            4.815265941628384,
+            3.212469441557213,
+            -3.888316150088542e-14
+          ],
+          [
+            "H",
+            6.02812919624378,
+            1.0491057538115207,
+            -2.3515829350555203e-13
+          ],
+          [
+            "H",
+            4.7579674813421375,
+            -1.0813625023164866,
+            -2.1445381635313645e-13
+          ],
+          [
+            "H",
+            2.2678094043281787,
+            -1.0415435923575538,
+            1.4338753266231947e-14
+          ]
+        ],
+        "geometry_role": "reused_frozen_planar_optimized_endpoint",
+        "geometry_sha256": "49628c24ae0df4d5032603eba0454aeed437695847e7e458ecb31a3e952fbcfe",
+        "history": [],
+        "optimizer_converged": true,
+        "optimizer_cycles": 0,
+        "requested_twist_degrees": 0.0,
+        "target_signed_dihedral_degrees": 8.009690810753532e-15
+      }
+    },
+    "20.0": {
+      "energies": {
+        "electronic_energy_hartree": -1298.4254914416597,
+        "energy_closure_residual_hartree": 0.0,
+        "nuclear_repulsion_hartree": 741.5391257691784,
+        "scf_converged": true,
+        "total_energy_hartree": -556.8863656724812
+      },
+      "geometry": {
+        "achieved_signed_dihedral_degrees": -20.00000121250792,
+        "achieved_twist_degrees": 20.00000121250792,
+        "atoms": [
+          [
+            "C",
+            -1.4368717253188086,
+            0.09097495570641188,
+            -0.03257968256431103
+          ],
+          [
+            "C",
+            -2.2049763015370036,
+            1.1839992222082427,
+            0.40433437574552905
+          ],
+          [
+            "C",
+            -3.5935304989276684,
+            1.119612662953165,
+            0.3839887739215039
+          ],
+          [
+            "C",
+            -4.243419808085572,
+            -0.026492482066706374,
+            -0.07412041506353913
+          ],
+          [
+            "C",
+            -3.4900278442859154,
+            -1.118816856209822,
+            -0.500500326206967
+          ],
+          [
+            "C",
+            -2.101306534752746,
+            -1.0634298467555825,
+            -0.47133802181741624
+          ],
+          [
+            "N",
+            -0.030800505856863062,
+            0.05130293825032414,
+            -0.06255473342140977
+          ],
+          [
+            "C",
+            0.6745721746089548,
+            1.1153907520813902,
+            -0.05035750131821124
+          ],
+          [
+            "C",
+            2.141285687115627,
+            1.08757382756382,
+            -0.020693271415334457
+          ],
+          [
+            "C",
+            2.8534298799498967,
+            2.294165805413555,
+            -0.03679520666284796
+          ],
+          [
+            "C",
+            4.245000662477036,
+            2.2965906870026687,
+            -0.008484551483919361
+          ],
+          [
+            "C",
+            4.940057408032594,
+            1.0904366398796572,
+            0.035560919930312254
+          ],
+          [
+            "C",
+            4.238482800360883,
+            -0.11816565159123679,
+            0.0516556606426869
+          ],
+          [
+            "C",
+            2.851407210328108,
+            -0.12264587841888723,
+            0.02477067315924238
+          ],
+          [
+            "H",
+            -1.7204489963650562,
+            2.071697473154204,
+            0.793317905569804
+          ],
+          [
+            "H",
+            -4.17311607369622,
+            1.966300931637713,
+            0.7353463818475354
+          ],
+          [
+            "H",
+            -5.326414982583981,
+            -0.07078062453654448,
+            -0.08562749130086472
+          ],
+          [
+            "H",
+            -3.985301296982524,
+            -2.0178497533754345,
+            -0.8499474847907981
+          ],
+          [
+            "H",
+            -1.497985300343689,
+            -1.9038875548843532,
+            -0.7926499841896336
+          ],
+          [
+            "H",
+            0.2291384246567389,
+            2.11892597178264,
+            -0.08270111923279488
+          ],
+          [
+            "H",
+            2.31059659655836,
+            3.233592499303695,
+            -0.07187142026291267
+          ],
+          [
+            "H",
+            4.78552043435968,
+            3.2362082109188104,
+            -0.02126168675715157
+          ],
+          [
+            "H",
+            6.024075586595762,
+            1.0889938075456689,
+            0.057555053344762706
+          ],
+          [
+            "H",
+            4.780408663822453,
+            -1.056685258190901,
+            0.08608344322754245
+          ],
+          [
+            "H",
+            2.290469007424903,
+            -1.0487593245679607,
+            0.037073464358307225
+          ]
+        ],
+        "geometry_role": "relaxed_fixed_torsion_optimized_point",
+        "geometry_sha256": "f6e3729663edb0391c1a62961e020223fa10c8f093c30dfcf51bf50e2bf04624",
+        "history": [
+          {
+            "cycle": 1,
+            "gradient_max_hartree_per_bohr": 0.0025011521869252595,
+            "gradient_rms_hartree_per_bohr": 0.0006006639172183404,
+            "signed_dihedral_degrees": -19.999999999999996,
+            "source_twist_degrees": 19.999999999999996,
+            "total_energy_hartree": -556.8860330450165
+          },
+          {
+            "cycle": 2,
+            "gradient_max_hartree_per_bohr": 0.0045878785035842196,
+            "gradient_rms_hartree_per_bohr": 0.0009788220119977538,
+            "signed_dihedral_degrees": -19.996953229057635,
+            "source_twist_degrees": 19.996953229057635,
+            "total_energy_hartree": -556.8862657560418
+          },
+          {
+            "cycle": 3,
+            "gradient_max_hartree_per_bohr": 0.004699123611142109,
+            "gradient_rms_hartree_per_bohr": 0.0011245812724849193,
+            "signed_dihedral_degrees": -20.001762208270403,
+            "source_twist_degrees": 20.001762208270403,
+            "total_energy_hartree": -556.8862499181769
+          },
+          {
+            "cycle": 4,
+            "gradient_max_hartree_per_bohr": 0.004547737883069836,
+            "gradient_rms_hartree_per_bohr": 0.0008014642321268366,
+            "signed_dihedral_degrees": -19.999945832904967,
+            "source_twist_degrees": 19.999945832904967,
+            "total_energy_hartree": -556.8863487720723
+          },
+          {
+            "cycle": 5,
+            "gradient_max_hartree_per_bohr": 0.003253984344802091,
+            "gradient_rms_hartree_per_bohr": 0.0008340615190485168,
+            "signed_dihedral_degrees": -19.999179202619565,
+            "source_twist_degrees": 19.999179202619565,
+            "total_energy_hartree": -556.8863086812652
+          },
+          {
+            "cycle": 6,
+            "gradient_max_hartree_per_bohr": 0.0035407270168205107,
+            "gradient_rms_hartree_per_bohr": 0.0006636916980992249,
+            "signed_dihedral_degrees": -20.000315640703185,
+            "source_twist_degrees": 20.000315640703185,
+            "total_energy_hartree": -556.8863640762504
+          },
+          {
+            "cycle": 7,
+            "gradient_max_hartree_per_bohr": 0.004086945792697028,
+            "gradient_rms_hartree_per_bohr": 0.000733284426793383,
+            "signed_dihedral_degrees": -20.00018805995591,
+            "source_twist_degrees": 20.00018805995591,
+            "total_energy_hartree": -556.886362416449
+          },
+          {
+            "cycle": 8,
+            "gradient_max_hartree_per_bohr": 0.003951213510085427,
+            "gradient_rms_hartree_per_bohr": 0.0007106617027525584,
+            "signed_dihedral_degrees": -19.999975045179973,
+            "source_twist_degrees": 19.999975045179973,
+            "total_energy_hartree": -556.8863652443106
+          },
+          {
+            "cycle": 9,
+            "gradient_max_hartree_per_bohr": 0.0036886309869173517,
+            "gradient_rms_hartree_per_bohr": 0.0006791511624549392,
+            "signed_dihedral_degrees": -20.000025806377764,
+            "source_twist_degrees": 20.000025806377764,
+            "total_energy_hartree": -556.8863651825105
+          },
+          {
+            "cycle": 10,
+            "gradient_max_hartree_per_bohr": 0.0038015668958619186,
+            "gradient_rms_hartree_per_bohr": 0.0006915393574924942,
+            "signed_dihedral_degrees": -20.00000784884472,
+            "source_twist_degrees": 20.00000784884472,
+            "total_energy_hartree": -556.8863655471321
+          },
+          {
+            "cycle": 11,
+            "gradient_max_hartree_per_bohr": 0.003875269567630346,
+            "gradient_rms_hartree_per_bohr": 0.000700191646352678,
+            "signed_dihedral_degrees": -19.99999812136216,
+            "source_twist_degrees": 19.99999812136216,
+            "total_energy_hartree": -556.8863656254056
+          },
+          {
+            "cycle": 12,
+            "gradient_max_hartree_per_bohr": 0.0038904939583517817,
+            "gradient_rms_hartree_per_bohr": 0.0007019843129659125,
+            "signed_dihedral_degrees": -20.00000121250792,
+            "source_twist_degrees": 20.00000121250792,
+            "total_energy_hartree": -556.8863656724981
+          }
+        ],
+        "optimizer_converged": true,
+        "optimizer_cycles": 12,
+        "requested_twist_degrees": 20.0,
+        "target_signed_dihedral_degrees": -19.999999999999993
+      }
+    },
+    "40.0": {
+      "energies": {
+        "electronic_energy_hartree": -1298.9980703996675,
+        "energy_closure_residual_hartree": 0.0,
+        "nuclear_repulsion_hartree": 742.1107947952531,
+        "scf_converged": true,
+        "total_energy_hartree": -556.8872756044144
+      },
+      "geometry": {
+        "achieved_signed_dihedral_degrees": -40.00004470249401,
+        "achieved_twist_degrees": 40.00004470249401,
+        "atoms": [
+          [
+            "C",
+            -1.4267822290480516,
+            0.06912660072349627,
+            -0.08446764411750901
+          ],
+          [
+            "C",
+            -2.151582576136166,
+            0.9761958632847891,
+            0.7045153263083274
+          ],
+          [
+            "C",
+            -3.5433136132480185,
+            0.9639625004831188,
+            0.6884627790440855
+          ],
+          [
+            "C",
+            -4.231973537831211,
+            0.055427589440353475,
+            -0.11262771663563166
+          ],
+          [
+            "C",
+            -3.5168360122638584,
+            -0.8587604951095357,
+            -0.8869730433596459
+          ],
+          [
+            "C",
+            -2.1276496187064655,
+            -0.8644952687225854,
+            -0.8615679403442322
+          ],
+          [
+            "N",
+            -0.022818454600609953,
+            0.009491016538513653,
+            -0.09798617306849168
+          ],
+          [
+            "C",
+            0.6707071412809361,
+            1.0800279587321255,
+            -0.07049471575212507
+          ],
+          [
+            "C",
+            2.138053561533571,
+            1.07436052228698,
+            -0.024415748447494934
+          ],
+          [
+            "C",
+            2.8314233313770285,
+            2.2914269998157533,
+            -0.02263973151803779
+          ],
+          [
+            "C",
+            4.222555361564446,
+            2.313953193582539,
+            0.02082093376024618
+          ],
+          [
+            "C",
+            4.934648895841232,
+            1.1177346091454907,
+            0.061907340100786475
+          ],
+          [
+            "C",
+            4.251278694209586,
+            -0.10127099439323647,
+            0.059781593219632355
+          ],
+          [
+            "C",
+            2.864635785636658,
+            -0.1257228321576074,
+            0.017818673524954157
+          ],
+          [
+            "H",
+            -1.622423587078918,
+            1.662760628918482,
+            1.35543725197527
+          ],
+          [
+            "H",
+            -4.0915179966023105,
+            1.6618584203896722,
+            1.311855134393727
+          ],
+          [
+            "H",
+            -5.3158122716351555,
+            0.048142892943860975,
+            -0.12122689380368219
+          ],
+          [
+            "H",
+            -4.0450010638208935,
+            -1.5771058357042371,
+            -1.5041139274136914
+          ],
+          [
+            "H",
+            -1.558423081941185,
+            -1.5779303459179,
+            -1.4453716122993177
+          ],
+          [
+            "H",
+            0.20109585263211915,
+            2.0734559691325285,
+            -0.0951453771997186
+          ],
+          [
+            "H",
+            2.274854854299446,
+            3.2227883018521766,
+            -0.05565050826231609
+          ],
+          [
+            "H",
+            4.749305327240646,
+            3.261410428922958,
+            0.022014256928013714
+          ],
+          [
+            "H",
+            6.018271027558318,
+            1.1320590116540823,
+            0.09564841171130024
+          ],
+          [
+            "H",
+            4.806658801349718,
+            -1.0319352189292583,
+            0.09180310858252458
+          ],
+          [
+            "H",
+            2.3176426673895767,
+            -1.060361051362724,
+            0.01569612438273501
+          ]
+        ],
+        "geometry_role": "relaxed_fixed_torsion_optimized_point",
+        "geometry_sha256": "8c3bf5470e704226d22f4e39f8d82f2d988d52f7092348fdcb1ecbd7c8badd24",
+        "history": [
+          {
+            "cycle": 1,
+            "gradient_max_hartree_per_bohr": 0.005644427534774232,
+            "gradient_rms_hartree_per_bohr": 0.0011549932214960123,
+            "signed_dihedral_degrees": -40.00000121250794,
+            "source_twist_degrees": 40.00000121250794,
+            "total_energy_hartree": -556.8868119950537
+          },
+          {
+            "cycle": 2,
+            "gradient_max_hartree_per_bohr": 0.004247696014664015,
+            "gradient_rms_hartree_per_bohr": 0.0010742009771893184,
+            "signed_dihedral_degrees": -39.97997710327958,
+            "source_twist_degrees": 39.97997710327958,
+            "total_energy_hartree": -556.887063623545
+          },
+          {
+            "cycle": 3,
+            "gradient_max_hartree_per_bohr": 0.003992783598063099,
+            "gradient_rms_hartree_per_bohr": 0.001017701562920732,
+            "signed_dihedral_degrees": -40.01439136863366,
+            "source_twist_degrees": 40.01439136863366,
+            "total_energy_hartree": -556.8871227449323
+          },
+          {
+            "cycle": 4,
+            "gradient_max_hartree_per_bohr": 0.00146485549899808,
+            "gradient_rms_hartree_per_bohr": 0.0004096762015828266,
+            "signed_dihedral_degrees": -40.00272830008261,
+            "source_twist_degrees": 40.00272830008261,
+            "total_energy_hartree": -556.8872336004945
+          },
+          {
+            "cycle": 5,
+            "gradient_max_hartree_per_bohr": 0.003950568722623227,
+            "gradient_rms_hartree_per_bohr": 0.0007964491493883751,
+            "signed_dihedral_degrees": -39.98630308953649,
+            "source_twist_degrees": 39.98630308953649,
+            "total_energy_hartree": -556.8871921213436
+          },
+          {
+            "cycle": 6,
+            "gradient_max_hartree_per_bohr": 0.0003093232061593511,
+            "gradient_rms_hartree_per_bohr": 7.8040137095175e-05,
+            "signed_dihedral_degrees": -40.00344104221011,
+            "source_twist_degrees": 40.00344104221011,
+            "total_energy_hartree": -556.8872745439937
+          },
+          {
+            "cycle": 7,
+            "gradient_max_hartree_per_bohr": 0.0004689422493822093,
+            "gradient_rms_hartree_per_bohr": 0.00014194334330578783,
+            "signed_dihedral_degrees": -40.00270436591161,
+            "source_twist_degrees": 40.00270436591161,
+            "total_energy_hartree": -556.8872725838091
+          },
+          {
+            "cycle": 8,
+            "gradient_max_hartree_per_bohr": 0.00018488509607306192,
+            "gradient_rms_hartree_per_bohr": 3.40199904891126e-05,
+            "signed_dihedral_degrees": -40.00016959398362,
+            "source_twist_degrees": 40.00016959398362,
+            "total_energy_hartree": -556.8872754777085
+          },
+          {
+            "cycle": 9,
+            "gradient_max_hartree_per_bohr": 0.0001220414275651116,
+            "gradient_rms_hartree_per_bohr": 2.9273293237375566e-05,
+            "signed_dihedral_degrees": -40.00014846467329,
+            "source_twist_degrees": 40.00014846467329,
+            "total_energy_hartree": -556.8872755198526
+          },
+          {
+            "cycle": 10,
+            "gradient_max_hartree_per_bohr": 0.00015439957364460355,
+            "gradient_rms_hartree_per_bohr": 3.02603062243462e-05,
+            "signed_dihedral_degrees": -40.00004470249401,
+            "source_twist_degrees": 40.00004470249401,
+            "total_energy_hartree": -556.8872756044256
+          }
+        ],
+        "optimizer_converged": true,
+        "optimizer_cycles": 10,
+        "requested_twist_degrees": 40.0,
+        "target_signed_dihedral_degrees": -40.00000121250794
+      }
+    },
+    "60.0": {
+      "energies": {
+        "electronic_energy_hartree": -1298.8975333641397,
+        "energy_closure_residual_hartree": 0.0,
+        "nuclear_repulsion_hartree": 742.0110933288336,
+        "scf_converged": true,
+        "total_energy_hartree": -556.8864400353061
+      },
+      "geometry": {
+        "achieved_signed_dihedral_degrees": -60.00042308113258,
+        "achieved_twist_degrees": 60.00042308113258,
+        "atoms": [
+          [
+            "C",
+            -1.4261911381194512,
+            0.07809830322668962,
+            -0.11580345760683598
+          ],
+          [
+            "C",
+            -2.1440410872643545,
+            0.6850911318780171,
+            0.9236100880113831
+          ],
+          [
+            "C",
+            -3.5370666679714025,
+            0.6852921170531184,
+            0.9063293448509121
+          ],
+          [
+            "C",
+            -4.229170000966473,
+            0.08450689905111633,
+            -0.14178799340065565
+          ],
+          [
+            "C",
+            -3.516642335878012,
+            -0.5349926840697798,
+            -1.16957945036788
+          ],
+          [
+            "C",
+            -2.127314166866509,
+            -0.5566479847551343,
+            -1.150470707780317
+          ],
+          [
+            "N",
+            -0.02063297256809476,
+            0.0031846170279077025,
+            -0.10153552750281647
+          ],
+          [
+            "C",
+            0.6703099433203983,
+            1.0729349586400634,
+            -0.0657632242615864
+          ],
+          [
+            "C",
+            2.1393797180115763,
+            1.0722499643355328,
+            -0.017867981036589965
+          ],
+          [
+            "C",
+            2.8273977879780063,
+            2.291439427613616,
+            0.006191574082413585
+          ],
+          [
+            "C",
+            4.21863595458001,
+            2.3180716638881127,
+            0.05050387183708384
+          ],
+          [
+            "C",
+            4.934719476411197,
+            1.1238099946983433,
+            0.07033130226029768
+          ],
+          [
+            "C",
+            4.25603522010177,
+            -0.09748681232870644,
+            0.04581534107277206
+          ],
+          [
+            "C",
+            2.8693525577719865,
+            -0.12574690719444703,
+            0.0023323492642535145
+          ],
+          [
+            "H",
+            -1.6042776646910357,
+            1.1320130152009087,
+            1.750822590959715
+          ],
+          [
+            "H",
+            -4.081169238108917,
+            1.1535319060501326,
+            1.7192858487564613
+          ],
+          [
+            "H",
+            -5.312940944929572,
+            0.08607849405348349,
+            -0.15284700030492313
+          ],
+          [
+            "H",
+            -4.047513893687167,
+            -1.0136223155397097,
+            -1.9851255307234266
+          ],
+          [
+            "H",
+            -1.5651225651000524,
+            -1.05281501443092,
+            -1.9326683719963362
+          ],
+          [
+            "H",
+            0.19357010960717622,
+            2.063421009297983,
+            -0.07237364986133331
+          ],
+          [
+            "H",
+            2.267301811712284,
+            3.22109025166888,
+            -0.010038005605019133
+          ],
+          [
+            "H",
+            4.742096524106971,
+            3.267138991554066,
+            0.06906510236368033
+          ],
+          [
+            "H",
+            6.018278620142964,
+            1.1413776518320997,
+            0.10471154743709322
+          ],
+          [
+            "H",
+            4.814704398429436,
+            -1.026573735335356,
+            0.06116136009458531
+          ],
+          [
+            "H",
+            2.325781046928259,
+            -1.0622994086320463,
+            -0.0173051006832225
+          ]
+        ],
+        "geometry_role": "relaxed_fixed_torsion_optimized_point",
+        "geometry_sha256": "b744df6d8bc931ebdeee7741f134b15e2577bb4c7ede8e42bb4a0071ecd21db5",
+        "history": [
+          {
+            "cycle": 1,
+            "gradient_max_hartree_per_bohr": 0.0035143922437912978,
+            "gradient_rms_hartree_per_bohr": 0.000941240134895952,
+            "signed_dihedral_degrees": -60.000044702494,
+            "source_twist_degrees": 60.000044702494,
+            "total_energy_hartree": -556.886135185061
+          },
+          {
+            "cycle": 2,
+            "gradient_max_hartree_per_bohr": 0.005892447184782518,
+            "gradient_rms_hartree_per_bohr": 0.0011683919204754389,
+            "signed_dihedral_degrees": -59.99097423718566,
+            "source_twist_degrees": 59.99097423718566,
+            "total_energy_hartree": -556.8862921194809
+          },
+          {
+            "cycle": 3,
+            "gradient_max_hartree_per_bohr": 0.0044253303182726356,
+            "gradient_rms_hartree_per_bohr": 0.0010534993375383552,
+            "signed_dihedral_degrees": -60.00478411634117,
+            "source_twist_degrees": 60.00478411634117,
+            "total_energy_hartree": -556.8863867538229
+          },
+          {
+            "cycle": 4,
+            "gradient_max_hartree_per_bohr": 0.0025496045772119835,
+            "gradient_rms_hartree_per_bohr": 0.0006727961368970405,
+            "signed_dihedral_degrees": -60.000059540696995,
+            "source_twist_degrees": 60.000059540696995,
+            "total_energy_hartree": -556.886372559148
+          },
+          {
+            "cycle": 5,
+            "gradient_max_hartree_per_bohr": 0.0026502259411991247,
+            "gradient_rms_hartree_per_bohr": 0.0006521183044169175,
+            "signed_dihedral_degrees": -59.995906097483456,
+            "source_twist_degrees": 59.995906097483456,
+            "total_energy_hartree": -556.8864190943254
+          },
+          {
+            "cycle": 6,
+            "gradient_max_hartree_per_bohr": 0.0037812171639353687,
+            "gradient_rms_hartree_per_bohr": 0.0007814052675210125,
+            "signed_dihedral_degrees": -60.003614537878164,
+            "source_twist_degrees": 60.003614537878164,
+            "total_energy_hartree": -556.8864279174624
+          },
+          {
+            "cycle": 7,
+            "gradient_max_hartree_per_bohr": 0.0037241122896746748,
+            "gradient_rms_hartree_per_bohr": 0.0007124373254819398,
+            "signed_dihedral_degrees": -60.0006816874624,
+            "source_twist_degrees": 60.0006816874624,
+            "total_energy_hartree": -556.8864356798755
+          },
+          {
+            "cycle": 8,
+            "gradient_max_hartree_per_bohr": 0.003393121134503463,
+            "gradient_rms_hartree_per_bohr": 0.0006919388383160764,
+            "signed_dihedral_degrees": -59.995968712974374,
+            "source_twist_degrees": 59.995968712974374,
+            "total_energy_hartree": -556.8864352929263
+          },
+          {
+            "cycle": 9,
+            "gradient_max_hartree_per_bohr": 0.003579630044354687,
+            "gradient_rms_hartree_per_bohr": 0.0006872256559625963,
+            "signed_dihedral_degrees": -60.00119873845367,
+            "source_twist_degrees": 60.00119873845367,
+            "total_energy_hartree": -556.8864400225063
+          },
+          {
+            "cycle": 10,
+            "gradient_max_hartree_per_bohr": 0.0035810436638757936,
+            "gradient_rms_hartree_per_bohr": 0.0006857264553426427,
+            "signed_dihedral_degrees": -60.00042308113258,
+            "source_twist_degrees": 60.00042308113258,
+            "total_energy_hartree": -556.886440035327
+          }
+        ],
+        "optimizer_converged": true,
+        "optimizer_cycles": 10,
+        "requested_twist_degrees": 60.0,
+        "target_signed_dihedral_degrees": -60.000044702494
+      }
+    }
+  },
+  "proposition_id": "P03",
+  "schema_version": 1,
+  "source_geometry_sha256": "49628c24ae0df4d5032603eba0454aeed437695847e7e458ecb31a3e952fbcfe"
+}

@@ -1,0 +1,41 @@
+schema_version: 1
+conclusion_id: target-c-tested-domain-scientific-conclusion/0.1
+source_sign_convention: positive_E_FUD_minus_E_DSI3_is_destabilizing_endpoint
+sign_tolerance_hartree: 1.0e-8
+inputs:
+  geometry_window: artifacts/raw/target_c_source_proxy_geometry_window_2026-08-16.json
+  phenyl_vinyl: artifacts/raw/target_c_source_proxy_phenyl_vinyl_check_2026-08-16.json
+  divinyl_partial: artifacts/raw/target_c_source_proxy_cross_family_2026-08-16.json
+  geometry_manifest: data/interim/ai_shadow_protocol_numeric_mace_strict_anchor_transport_v0.1_full.json
+  state_definition_configs:
+    diphenyl_imine:
+      dsi3: configs/qm/dsi3_diphenyl_source_metric_v0.1.yaml
+      fud: configs/qm/fud_diphenyl_source_metric_v0.1.yaml
+    phenyl_vinyl_imine:
+      dsi3: configs/qm/dsi3_phenyl_vinyl_source_metric_v0.1.yaml
+      fud: configs/qm/fud_phenyl_vinyl_source_metric_v0.1.yaml
+    divinyl_imine:
+      dsi3: configs/qm/dsi3_divinyl_source_metric_v0.1.yaml
+      fud: configs/qm/fud_divinyl_source_metric_v0.1.yaml
+calculation_contract:
+  method: RHF
+  basis: 6-31g(d)
+  engine: PySCF
+  engine_version: 2.14.0
+  resource_profile: configs/resources/local_wsl.yaml
+  source_reference_doi: 10.6084/m9.figshare.27261243.v1
+  source_reference_pages: [94, 95, 96, 97]
+outputs:
+  labels: data/processed/target_c_tested_domain_scientific_labels_v0.1.jsonl
+  report: docs/reports/target_c_tested_domain_scientific_conclusion_2026-08-16.md
+accepted_exclusion:
+  point: divinyl_imine:17.0
+  reason: non_square_lfmo_basis_no_scientific_value_emitted
+boundaries:
+  scientific_scope: tested_valid_source_proxy_points_only
+  final_scoped_scientific_conclusion: true
+  universal_all_molecules_law: false
+  historical_coordinate_identity: false
+  production_label: false
+  training_eligible: false
+  ai_generalization_claim: false

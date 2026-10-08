@@ -1,0 +1,88 @@
+schema_version: 1
+experiment_id: source-geometry-matched-sigma-sigma-nba/0.1
+protocol: lfmo-sigma-pi/source-nonvariational-0.2
+status: se_3_provisional_source_geometry_candidate_validated
+production_labels_allowed: false
+validation_evidence: docs/reports/gate0_target_b_source_geometry_se3_2026-08-15.md
+
+source_sigma_sigma_config: configs/qm/source_nonvariational_sigma_sigma_nba_v0.1.yaml
+
+geometry_optimization:
+  implementation: pyscf-geometric
+  source_program_convention: gaussian-style-b3lyp
+  method: B3LYPG
+  basis: 6-311g(d,p)
+  grid_level: 3
+  scf_convergence_tolerance: 1.0e-10
+  scf_max_cycles: 200
+  optimizer_max_steps: 50
+  convergence_energy_hartree: 1.0e-6
+  convergence_gradient_rms_hartree_per_bohr: 3.0e-4
+  convergence_gradient_max_hartree_per_bohr: 4.5e-4
+  convergence_displacement_rms_angstrom: 1.2e-3
+  convergence_displacement_max_angstrom: 1.8e-3
+  constrained_dihedral_atom_indices: [1, 0, 6, 7]
+  source_twist_angles_degrees: [0.0, 17.0]
+  second_point_starts_from_optimized_planar: true
+  rotating_atom_indices: [1, 2, 3, 4, 5, 14, 15, 16, 17, 18]
+  rotation_axis_atom_indices: [0, 6]
+
+single_point_evaluation:
+  method: RHF
+  basis: sto-3g
+  state_pair: [FUL, PDSI]
+  state_difference: E_PDSI_minus_E_FUL
+  source_variant: FUL-2/2F-2S
+
+optimized_geometry_lfmo_interface:
+  reflection_classification_policy: spectral_sign
+  minimum_absolute_reflection_eigenvalue: 0.99
+  maximum_opposite_parity_weight: 5.0e-3
+  maximum_accepted_reflection_residual: 1.0e-2
+  reflection_block_closure_tolerance: 1.0e-8
+  reflection_eigenvalue_tolerance: 1.0e-8
+  classification_rule: sign_of_projected_reflection_with_spectral_gap
+  rationale: non_symmetric_optimized_geometry_requires_continuous_sigma_pi_typing
+
+source_local_typing_candidate:
+  protocol_id: source-local-spectral-gap-candidate/0.1
+  classification_policy: spectral_sign
+  minimum_absolute_reflection_eigenvalue: 0.99
+  maximum_accepted_reflection_residual: 1.0e-2
+  cross_geometry_transport: false
+  scientific_authority: candidate_only
+
+baseline:
+  geometry: idealized_project_geometry
+  endpoint_hartree:
+    "0.0": 0.097405797370
+    "17.0": 0.084919671516
+  source_table_5_19_hartree:
+    "0.0": 0.06891
+    "17.0": 0.06504
+  absolute_error_hartree:
+    "0.0": 0.028495797370
+    "17.0": 0.019879671516
+
+acceptance:
+  optimized_twist_tolerance_degrees: 0.05
+  endpoint_energy_assembly_tolerance_hartree: 1.0e-8
+  electron_trace_tolerance: 1.0e-6
+  source_cross_block_tolerance: 1.0e-8
+  require_error_reduction_at_both_points: true
+  magnitude_goal_absolute_error_hartree: 0.010
+
+boundaries:
+  existing_parent_nba_candidate_only: true
+  fixed_zero_and_seventeen_degree_optimizations_only: true
+  relaxed_pes_scan_enabled: false
+  geometry_scan_enabled: false
+  basis_scan_enabled: false
+  additional_molecules_enabled: false
+  electronic_state_definition_change_enabled: false
+  ideal_geometry_default_reflection_tolerance_unchanged: true
+  physical_response_ledger_unchanged: true
+  source_nonvariational_ledger_isolated: true
+  cross_basis_total_reconstruction_enabled: false
+  production_labels_allowed: false
+  existing_untracked_tmp_untouched: true

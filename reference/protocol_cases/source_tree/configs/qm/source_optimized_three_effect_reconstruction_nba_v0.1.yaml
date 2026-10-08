@@ -1,0 +1,62 @@
+schema_version: 1
+experiment_id: source-optimized-three-effect-reconstruction-nba/0.1
+protocol: lfmo-sigma-pi/source-nonvariational-same-geometry-same-basis/0.1
+status: nonproduction_same_hamiltonian_reconstruction
+production_labels_allowed: false
+adr:
+  - docs/adr/0031-freeze-three-effect-bridge-and-direct-response-boundary.md
+  - docs/adr/0032-assign-sigma-bridge-to-path-complete-sigma-term.md
+
+source_sigma_sigma_config: configs/qm/source_nonvariational_sigma_sigma_nba_v0.1.yaml
+source_geometry_config: configs/qm/source_geometry_matched_sigma_sigma_nba_v0.1.yaml
+geometry_artifact: configs/qm/geometries/source_nba_b3lypg_6311gdp_0_17_v0.1.json
+
+electronic_structure:
+  method: RHF
+  basis: sto-3g
+
+angles_degrees: [0.0, 17.0]
+
+state_differences:
+  pi_pi: E_FUD_minus_E_DSI2
+  pi_sigma: E_G_minus_E_FUD
+  sigma_sigma: E_PDSI_minus_E_FUL
+  bridge: E_DSI2_minus_E_PDSI
+  requested_total: E_G_minus_E_FUL
+
+path_complete_three_term:
+  pi_sigma: E_G_minus_E_FUD
+  pi_pi: E_FUD_minus_E_DSI2
+  sigma_sigma_total: E_DSI2_minus_E_FUL
+  total: E_G_minus_E_FUL
+
+accepted_sigma_sigma_endpoints_hartree:
+  "0.0": 0.06795710370852248
+  "17.0": 0.06275362428505105
+
+acceptance:
+  density_fixed_point_tolerance: 1.0e-8
+  electron_trace_tolerance: 1.0e-6
+  source_cross_block_tolerance: 1.0e-8
+  energy_assembly_tolerance_hartree: 1.0e-9
+  state_path_closure_tolerance_hartree: 1.0e-9
+  sigma_sigma_reproduction_tolerance_hartree: 1.0e-8
+  bridge_zero_tolerance_hartree: 1.0e-8
+
+boundaries:
+  existing_parent_nba_candidate_only: true
+  fixed_zero_and_seventeen_degree_points_only: true
+  same_geometry_within_each_state_family: true
+  same_rhf_sto3g_hamiltonian_for_all_states: true
+  shared_geometry_specific_lfmo_basis_within_each_angle: true
+  geometry_scan_enabled: false
+  basis_scan_enabled: false
+  additional_molecules_enabled: false
+  physical_response_ledger_unchanged: true
+  source_nonvariational_ledger_isolated: true
+  source_table_scoped_three_effect_reconstruction_available: false
+  path_complete_three_term_reconstruction_available: true
+  sigma_bridge_assigned_to_sigma_sigma_total: true
+  stabilization_interpretation_enabled: false
+  production_labels_allowed: false
+  existing_untracked_tmp_untouched: true

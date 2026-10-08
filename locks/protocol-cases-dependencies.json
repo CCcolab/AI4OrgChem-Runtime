@@ -1,0 +1,15 @@
+{
+  "schema": "molecular-service-dependencies-v1",
+  "python_version": "3.12.13",
+  "base_image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+  "packages": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "pyscf": "2.14.0",
+    "PyYAML": "6.0.3",
+    "rdkit": "2026.3.4",
+    "pillow": "11.3.0"
+  },
+  "additional_package_installation": "NONE; reuse existing locked candidate environment",
+  "image_distribution": "BLOCKED; inherited license/source-correspondence gaps remain"
+}

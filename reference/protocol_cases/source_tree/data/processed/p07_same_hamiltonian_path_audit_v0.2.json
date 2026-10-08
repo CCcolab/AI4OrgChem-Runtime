@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "experiment_id": "p07-same-hamiltonian-path-audit/0.2",
+  "proposition_id": "P07",
+  "verdict": "P07_CONSISTENT_WITH_INDEPENDENT_SAME_HAMILTONIAN_PATH_AUDIT",
+  "technical_pass": true,
+  "evidence_identity": "INDEPENDENT_COMPUTATIONAL_AUDIT_PLUS_DERIVED_SYNTHESIS",
+  "counts_as_independent_computational_audit": true,
+  "scope": {
+    "molecule": "diphenyl_imine_parent_nba",
+    "geometry_points_degrees": [
+      0.0,
+      17.0
+    ],
+    "electronic_structure_method": "RHF",
+    "basis": "sto-3g",
+    "state_path": [
+      "FUL",
+      "PDSI",
+      "DSI2",
+      "FUD",
+      "G"
+    ],
+    "same_geometry_within_each_angle": true,
+    "same_hamiltonian_for_all_states": true
+  },
+  "state_path": [
+    "FUL",
+    "PDSI",
+    "DSI2",
+    "FUD",
+    "G"
+  ],
+  "points": {
+    "0.0": {
+      "angle_degrees": 0.0,
+      "naive_three_terms_hartree": {
+        "pi_sigma_E_G_minus_E_FUD": -5.9117155615240335e-12,
+        "pi_pi_E_FUD_minus_E_DSI2": 0.008165130875113391,
+        "sigma_sigma_subterm_E_PDSI_minus_E_FUL": 0.06795710370670349,
+        "sum": 0.07612223457590517,
+        "closure_residual_vs_E_G_minus_E_FUL": 0.33576010409183255
+      },
+      "required_bridge_hartree": {
+        "expression": "E_DSI2-E_PDSI",
+        "value": -0.33576010409183255
+      },
+      "four_term_state_path_hartree": {
+        "sum": -0.2596378695159274,
+        "closure_residual_vs_E_G_minus_E_FUL": 0.0
+      },
+      "path_complete_three_terms_hartree": {
+        "pi_sigma_E_G_minus_E_FUD": -5.9117155615240335e-12,
+        "pi_pi_E_FUD_minus_E_DSI2": 0.008165130875113391,
+        "sigma_total_E_DSI2_minus_E_FUL": -0.26780300038512905,
+        "sum": -0.2596378695159274,
+        "closure_residual_vs_E_G_minus_E_FUL": 0.0
+      },
+      "requested_total_E_G_minus_E_FUL_hartree": -0.2596378695159274,
+      "sigma_total_identity_residual_hartree": 0.0,
+      "checks": {
+        "source_technical_pass": true,
+        "naive_three_terms_do_not_close": true,
+        "bridge_is_material": true,
+        "four_term_path_closes": true,
+        "path_complete_three_terms_close": true,
+        "sigma_bridge_identity_closes": true,
+        "sigma_subterm_positive": true
+      }
+    },
+    "17.0": {
+      "angle_degrees": 17.0,
+      "naive_three_terms_hartree": {
+        "pi_sigma_E_G_minus_E_FUD": 0.004048053899168735,
+        "pi_pi_E_FUD_minus_E_DSI2": 0.007087447527510449,
+        "sigma_sigma_subterm_E_PDSI_minus_E_FUL": 0.06275362428641529,
+        "sum": 0.07388912571309447,
+        "closure_residual_vs_E_G_minus_E_FUL": 0.3338159586949132
+      },
+      "required_bridge_hartree": {
+        "expression": "E_DSI2-E_PDSI",
+        "value": -0.3338159586949132
+      },
+      "four_term_state_path_hartree": {
+        "sum": -0.25992683298181873,
+        "closure_residual_vs_E_G_minus_E_FUL": 0.0
+      },
+      "path_complete_three_terms_hartree": {
+        "pi_sigma_E_G_minus_E_FUD": 0.004048053899168735,
+        "pi_pi_E_FUD_minus_E_DSI2": 0.007087447527510449,
+        "sigma_total_E_DSI2_minus_E_FUL": -0.2710623344084979,
+        "sum": -0.25992683298181873,
+        "closure_residual_vs_E_G_minus_E_FUL": 0.0
+      },
+      "requested_total_E_G_minus_E_FUL_hartree": -0.25992683298181873,
+      "sigma_total_identity_residual_hartree": 0.0,
+      "checks": {
+        "source_technical_pass": true,
+        "naive_three_terms_do_not_close": true,
+        "bridge_is_material": true,
+        "four_term_path_closes": true,
+        "path_complete_three_terms_close": true,
+        "sigma_bridge_identity_closes": true,
+        "sigma_subterm_positive": true
+      }
+    }
+  },
+  "global_checks": {
+    "source_declares_same_hamiltonian": true,
+    "source_declares_same_geometry": true,
+    "zero_angle_pi_sigma_is_control": true,
+    "seventeen_degree_pi_sigma_positive": true,
+    "both_source_points_available": true
+  },
+  "scientific_interpretation": {
+    "naive_pi_pi_pi_sigma_sigma_subterm_is_closed": false,
+    "explicit_sigma_bridge_is_required": true,
+    "path_complete_three_term_definition_is_closed": true,
+    "simple_two_term_conjugation_vs_steric_story_is_sufficient": false,
+    "claim": "an_unqualified_three-component_story_is_not_a_closed_state_path_and_explicit_bridge_or_path-complete_sigma_definition_is_required"
+  },
+  "boundaries": {
+    "new_qm_calculation": false,
+    "additional_molecules": false,
+    "additional_angles": false,
+    "basis_scan": false,
+    "cross_protocol_energy_sum": false,
+    "universal_mechanistic_law": false,
+    "production_label": false,
+    "ai_training": false
+  },
+  "provenance": {
+    "config": "configs/qm/p07_same_hamiltonian_path_audit_v0.2.yaml",
+    "config_sha256": "6ae4adfbdb287705d2f8f6a36f63b6d3552fcdeef3a092b99c493eafa58053d3",
+    "input_artifact": "artifacts/raw/source_optimized_three_effect_reconstruction_nba_2026-08-14.json",
+    "input_artifact_sha256": "2e8f38a97095b5b202afa6f86033c55fccd4ca97e8cee46aa80964893fc1cfc9",
+    "input_protocol": "configs/qm/source_optimized_three_effect_reconstruction_nba_v0.1.yaml",
+    "input_protocol_sha256": "e085ef23fb92bdba312d8015832ad4c16e65ccf6f812cec4fcbe8130225c1e4b",
+    "supplementary_derived_synthesis": "data/processed/p07_lfmo_core_integrated_mechanism_v0.1.json",
+    "supplementary_derived_synthesis_sha256": "a78551fd1de62c056b2f95962b4efe578a304fe331f74c41fe48610f3a6db304"
+  }
+}

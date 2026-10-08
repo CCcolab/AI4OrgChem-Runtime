@@ -1,0 +1,41 @@
+schema_version: 1
+profile: local_wsl
+status: gate_0_baseline
+
+cpu:
+  logical_processors_visible: 22
+  threads_default: 8
+  threads_hard_max_before_rebenchmark: 16
+  max_concurrent_medium_or_high_memory_qm_jobs: 1
+  environment:
+    OMP_NUM_THREADS: 8
+    OPENBLAS_NUM_THREADS: 8
+
+memory:
+  wsl_visible_gib: 15
+  swap_gib: 4
+  stop_if_available_below_gib: 4
+  swap_is_not_a_routine_oom_solution: true
+
+gpu:
+  model: NVIDIA GeForce RTX 4060 Laptop GPU
+  vram_mib: 8188
+  compute_capability: "8.9"
+  allowed_before_gate_1: false
+  sustained_vram_fraction_max: 0.90
+
+storage:
+  durable_root: D:\\AI4Science\\AI4OrgChem
+  scratch_root: /home/cascade/ai4orgchem-scratch
+  scratch_quota_gib: 20
+  minimum_free_host_drive_gib: 80
+  wsl_reported_capacity_is_virtual: true
+
+scientific_execution:
+  production_labels_allowed: false
+  require_resource_metrics: true
+  required_metrics:
+    - wall_time_seconds
+    - peak_rss_mib
+    - output_bytes
+    - thread_count

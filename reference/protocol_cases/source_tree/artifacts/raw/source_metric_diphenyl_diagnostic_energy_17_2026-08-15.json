@@ -1,0 +1,200 @@
+{
+  "experiment_id": "source-metric-diphenyl-pi-pi/17-degree/0.1-candidate",
+  "stage": "same_geometry_diagnostic_energy_difference",
+  "disposition": "PASS",
+  "energy_contract": {
+    "electronic_method": "RHF",
+    "energy_functional": "source_rhf_functional_on_source_density",
+    "unit": "hartree",
+    "expected_electrons": 96,
+    "hartree_to_kcal_per_mol": 627.5094740631
+  },
+  "common_overrides": {},
+  "geometry_point": {
+    "continuation_from_angle_degrees": 0.0,
+    "angle_degrees": 17.0,
+    "axis_atom_indices": [
+      0,
+      6
+    ],
+    "rotating_atom_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "contract_checks": {
+    "identical_common_calculation_contract": true,
+    "identical_density_and_solver_contract": true,
+    "same_expected_electron_count": true,
+    "state_root_electron_accounts_close": true,
+    "state_group_electron_accounts_close": true,
+    "all_scientific_labels_disabled": true
+  },
+  "calculation_checks": {
+    "all_states_pass": true,
+    "all_energies_finite": true,
+    "all_differences_finite": true,
+    "all_differences_resolved_above_same_state_floor": true
+  },
+  "boundary_checks": {
+    "same_geometry": true,
+    "same_method": true,
+    "same_lfmo_construction": true,
+    "same_density_reconstruction": true,
+    "same_solver": true,
+    "no_stabilization_interpretation": true,
+    "no_destabilization_interpretation": true,
+    "no_scientific_label": true,
+    "no_production_label": true,
+    "no_working_basis_audit": true
+  },
+  "contracts": {
+    "DSI-2": {
+      "common_contract_sha256": "edc27089c286fa9b75b6fa40d0a78d65b118ff29220d048d24124710f6ece9bc",
+      "state_solver_contract_sha256": "c59b9cbc14cba92aeeba24feaaba4fdccc3ca1f7f20a31a79d85295ce4fe440a",
+      "expected_electrons": 96,
+      "root_electrons": 96,
+      "expected_group_electrons_total": 96,
+      "production_labels_allowed": false,
+      "energy_label_enabled": false
+    },
+    "DSI-3": {
+      "common_contract_sha256": "edc27089c286fa9b75b6fa40d0a78d65b118ff29220d048d24124710f6ece9bc",
+      "state_solver_contract_sha256": "c59b9cbc14cba92aeeba24feaaba4fdccc3ca1f7f20a31a79d85295ce4fe440a",
+      "expected_electrons": 96,
+      "root_electrons": 96,
+      "expected_group_electrons_total": 96,
+      "production_labels_allowed": false,
+      "energy_label_enabled": false
+    },
+    "FUD": {
+      "common_contract_sha256": "edc27089c286fa9b75b6fa40d0a78d65b118ff29220d048d24124710f6ece9bc",
+      "state_solver_contract_sha256": "c59b9cbc14cba92aeeba24feaaba4fdccc3ca1f7f20a31a79d85295ce4fe440a",
+      "expected_electrons": 96,
+      "root_electrons": 96,
+      "expected_group_electrons_total": 96,
+      "production_labels_allowed": false,
+      "energy_label_enabled": false
+    }
+  },
+  "diagnostic_state_energies": {
+    "DSI-2": {
+      "disposition": "PASS",
+      "diagnostic_energy_hartree": -553.1812075883537,
+      "state_id": "DSI-2",
+      "group_sizes": [
+        24,
+        32,
+        162
+      ],
+      "fixed_doubly_occupied_roots": [
+        3,
+        4,
+        41
+      ],
+      "electron_trace": 96.00000000000001,
+      "density_fixed_point_residual": 6.020289689349167e-09,
+      "physical_density_idempotency_residual": 0.0660676756753814,
+      "root_continuity": 0.9930683726567656
+    },
+    "DSI-3": {
+      "disposition": "PASS",
+      "diagnostic_energy_hartree": -553.2039238077926,
+      "state_id": "DSI-3",
+      "group_sizes": [
+        24,
+        8,
+        24,
+        162
+      ],
+      "fixed_doubly_occupied_roots": [
+        3,
+        1,
+        3,
+        41
+      ],
+      "electron_trace": 95.99999999999997,
+      "density_fixed_point_residual": 9.64312573619156e-09,
+      "physical_density_idempotency_residual": 0.07733123185454953,
+      "root_continuity": 0.9951082929671582
+    },
+    "FUD": {
+      "disposition": "PASS",
+      "diagnostic_energy_hartree": -553.1378022255791,
+      "state_id": "FUD",
+      "group_sizes": [
+        56,
+        162
+      ],
+      "fixed_doubly_occupied_roots": [
+        7,
+        41
+      ],
+      "electron_trace": 95.99999999999996,
+      "density_fixed_point_residual": 7.707417900184455e-09,
+      "physical_density_idempotency_residual": 0.022756899070803298,
+      "root_continuity": 0.9948628279503867
+    }
+  },
+  "diagnostic_energy_differences": [
+    {
+      "id": "dsi2_minus_dsi3",
+      "label": "diagnostic_energy_difference",
+      "expression": "E_DSI-2 - E_DSI-3",
+      "minuend": "DSI-2",
+      "subtrahend": "DSI-3",
+      "value_hartree": 0.02271621943896207,
+      "value_kcal_per_mol": 14.254642912845059,
+      "combined_same_state_reproducibility_floor_hartree": 2e-08,
+      "absolute_value_to_reproducibility_floor_ratio": 1135810.9719481035,
+      "chemical_interpretation": null
+    },
+    {
+      "id": "fud_minus_dsi2",
+      "label": "diagnostic_energy_difference",
+      "expression": "E_FUD - E_DSI-2",
+      "minuend": "FUD",
+      "subtrahend": "DSI-2",
+      "value_hartree": 0.043405362774592504,
+      "value_kcal_per_mol": 27.2372763662026,
+      "combined_same_state_reproducibility_floor_hartree": 2e-08,
+      "absolute_value_to_reproducibility_floor_ratio": 2170268.1387296254,
+      "chemical_interpretation": null
+    },
+    {
+      "id": "fud_minus_dsi3",
+      "label": "diagnostic_energy_difference",
+      "expression": "E_FUD - E_DSI-3",
+      "minuend": "FUD",
+      "subtrahend": "DSI-3",
+      "value_hartree": 0.06612158221355457,
+      "value_kcal_per_mol": 41.49191927904766,
+      "combined_same_state_reproducibility_floor_hartree": 2e-08,
+      "absolute_value_to_reproducibility_floor_ratio": 3306079.110677729,
+      "chemical_interpretation": null
+    }
+  ],
+  "boundaries": {
+    "geometry_change_enabled": false,
+    "method_change_enabled": false,
+    "lfmo_reconstruction_change_enabled": false,
+    "density_reconstruction_change_enabled": false,
+    "solver_change_enabled": false,
+    "stabilization_interpretation_enabled": false,
+    "destabilization_interpretation_enabled": false,
+    "scientific_label_enabled": false,
+    "production_label_enabled": false,
+    "working_basis_audit_enabled": false
+  },
+  "provenance": {
+    "git_commit": "096dd9ea8c1d791b1dcca4c34bb6aeb356d6d853"
+  }
+}

@@ -1,0 +1,30 @@
+ARG BASE_IMAGE=ai4orgchem-runtime:molecular-rhf-20261008-local
+FROM ${BASE_IMAGE}
+USER root
+ARG RUNTIME_COMMIT
+ARG SOURCE_SNAPSHOT_SHA256
+ARG DEPENDENCY_LOCK_SHA256
+ARG BASE_IMAGE_ID
+LABEL org.opencontainers.image.title="AI4OrgChem bounded protocol cases local candidate" \
+      org.opencontainers.image.revision=$RUNTIME_COMMIT \
+      ai4orgchem.protocol.schema="protocol-cases-v1" \
+      ai4orgchem.protocol.runtime-commit=$RUNTIME_COMMIT \
+      ai4orgchem.protocol.source-sha256=$SOURCE_SNAPSHOT_SHA256 \
+      ai4orgchem.protocol.dependency-sha256=$DEPENDENCY_LOCK_SHA256 \
+      ai4orgchem.protocol.base-image-id=$BASE_IMAGE_ID \
+      ai4orgchem.protocol.distribution-status="BLOCKED-local-only"
+ENV AI4ORGCHEM_PROTOCOL_RUNTIME_COMMIT=$RUNTIME_COMMIT \
+    AI4ORGCHEM_PROTOCOL_SOURCE_SHA256=$SOURCE_SNAPSHOT_SHA256 \
+    AI4ORGCHEM_PROTOCOL_DEPENDENCY_SHA256=$DEPENDENCY_LOCK_SHA256
+COPY runtime/protocol_cases /opt/runtime/runtime/protocol_cases
+COPY reference/protocol_cases /opt/runtime/reference/protocol_cases
+COPY configs/protocol-cases-v1.json /opt/runtime/configs/
+COPY locks/protocol-cases*.json /opt/runtime/locks/
+COPY scripts/run-protocol-case.py scripts/start-protocol-case.ps1 /opt/runtime/scripts/
+COPY scripts/ci-protocol-cases.py scripts/list-protocol-cases.py /opt/runtime/scripts/
+COPY container/Dockerfile.protocol-cases container/Dockerfile.protocol-cases.dockerignore /opt/runtime/container/
+COPY tests/test_protocol_cases*.py /opt/runtime/tests/
+RUN /opt/venv/bin/python -m pip check && chmod -R a-w /opt/runtime
+USER 10001:10001
+ENTRYPOINT ["/opt/venv/bin/python", "-B", "-m", "runtime.protocol_cases"]
+CMD ["--help"]

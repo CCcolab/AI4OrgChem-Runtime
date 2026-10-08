@@ -1,0 +1,38 @@
+schema_version: 1
+experiment_id: target-c-source-native-reporting-basis-direct-response/0.1
+protocol: lfmo-sigma-pi/source-native-density-reporting-basis-direct-response/0.1
+status: nonproduction_scientific_candidate
+production_labels_allowed: false
+
+dsi3_config: configs/qm/dsi3_diphenyl_source_metric_v0.1.yaml
+fud_config: configs/qm/fud_diphenyl_source_metric_v0.1.yaml
+
+geometry:
+  axis_atom_indices: [0, 6]
+  rotating_atom_indices: [1, 2, 3, 4, 5, 14, 15, 16, 17, 18]
+  authorized_angles_degrees: [0.0, 17.0]
+
+reporting_basis:
+  anchor_state: DSI-3
+  role: density_reporting_only
+  cross_state_resolve_enabled: false
+  occupied_state_is_reoptimized_on_reporting_basis: false
+
+acceptance:
+  energy_tolerance_hartree: 1.0e-8
+  closure_tolerance_hartree: 1.0e-8
+  source_endpoint_tolerance_hartree: 1.0e-8
+
+boundaries:
+  fixed_zero_and_seventeen_degree_points_only: true
+  each_state_source_local_lfmo_reconstructed: true
+  each_state_source_density_frozen_before_reporting: true
+  reporting_basis_is_not_a_solver_basis: true
+  basis_scan_enabled: false
+  geometry_scan_enabled: false
+  additional_molecules_enabled: false
+  ai_training_enabled: false
+  stabilization_interpretation_enabled: false
+  destabilization_interpretation_enabled: false
+  production_labels_allowed: false
+  existing_untracked_tmp_untouched: true

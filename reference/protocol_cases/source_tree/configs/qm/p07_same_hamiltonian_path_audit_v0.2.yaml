@@ -1,0 +1,53 @@
+schema_version: 1
+experiment_id: p07-same-hamiltonian-path-audit/0.2
+proposition_id: P07
+status: preregistered_existing-qm-reanalysis
+
+input_artifact: artifacts/raw/source_optimized_three_effect_reconstruction_nba_2026-08-14.json
+input_protocol: configs/qm/source_optimized_three_effect_reconstruction_nba_v0.1.yaml
+supplementary_derived_synthesis: data/processed/p07_lfmo_core_integrated_mechanism_v0.1.json
+
+frozen_scope:
+  molecule: diphenyl_imine_parent_nba
+  geometry_points_degrees: [0.0, 17.0]
+  electronic_structure_method: RHF
+  basis: sto-3g
+  state_path: [FUL, PDSI, DSI2, FUD, G]
+  same_geometry_within_each_angle: true
+  same_hamiltonian_for_all_states: true
+
+tested_identities:
+  requested_total: E_G_minus_E_FUL
+  naive_three_terms:
+    pi_sigma: E_G_minus_E_FUD
+    pi_pi: E_FUD_minus_E_DSI2
+    sigma_sigma_subterm: E_PDSI_minus_E_FUL
+  missing_bridge: E_DSI2_minus_E_PDSI
+  path_complete_three_terms:
+    pi_sigma: E_G_minus_E_FUD
+    pi_pi: E_FUD_minus_E_DSI2
+    sigma_total: E_DSI2_minus_E_FUL
+
+acceptance:
+  required_angles_degrees: [0.0, 17.0]
+  closure_tolerance_hartree: 1.0e-9
+  minimum_naive_residual_hartree: 0.30
+  minimum_bridge_magnitude_hartree: 0.30
+  require_positive_sigma_subterm_at_both_angles: true
+  require_positive_pi_sigma_at_17_degrees: true
+  zero_angle_pi_sigma_tolerance_hartree: 1.0e-9
+
+interpretation:
+  pass_verdict: P07_CONSISTENT_WITH_INDEPENDENT_SAME_HAMILTONIAN_PATH_AUDIT
+  evidence_identity: INDEPENDENT_COMPUTATIONAL_AUDIT_PLUS_DERIVED_SYNTHESIS
+  claim: an_unqualified_three-component_story_is_not_a_closed_state_path_and_explicit_bridge_or_path-complete_sigma_definition_is_required
+
+boundaries:
+  new_qm_calculation: false
+  additional_molecules: false
+  additional_angles: false
+  basis_scan: false
+  cross_protocol_energy_sum: false
+  universal_mechanistic_law: false
+  production_label: false
+  ai_training: false

@@ -1,0 +1,82 @@
+schema_version: 1
+experiment_id: source-nonvariational-sigma-sigma-nba/0.1
+protocol: lfmo-sigma-pi/source-nonvariational-0.2
+status: nonproduction_source_table_5_19_direction_replication
+production_labels_allowed: false
+
+base_config: configs/qm/fud_diphenyl_imine_source_shaped_v0.1.yaml
+electronic_structure:
+  method: RHF
+  basis: sto-3g
+torsion:
+  axis_atom_indices: [0, 6]
+  rotating_atom_indices: [1, 2, 3, 4, 5, 14, 15, 16, 17, 18]
+  angle_degrees: 17.0
+
+source_definition:
+  source_variant: FUL-2/2F-2S
+  state_pair: [FUL, PDSI]
+  state_difference: E_PDSI_minus_E_FUL
+  density_reconstruction: source_block_metric_group_projector
+  energy_assembly: original_rhf_functional_on_source_density
+  geometry_specific_lfmo_reconstruction: true
+  shared_lfmo_basis_within_geometry: true
+  cross_geometry_orbital_tracking: false
+  ful_groups:
+    - pi_A
+    - pi_B_plus_C
+    - bonded_sigma_A
+    - bonded_sigma_B_plus_C
+    - cut_sigma_all
+  pdsi_groups:
+    - pi_A
+    - pi_B_plus_C
+    - bonded_sigma_all
+    - cut_sigma_all
+  cut_sigma_group_size: 2
+  cut_sigma_occupied_roots: 1
+  fragments:
+    A:
+      atom_indices: [0, 1, 2, 3, 4, 5, 14, 15, 16, 17, 18]
+      formula: C6H5
+      charge: 0
+      spin: 1
+      expected_electrons: 41
+      cut_atom_indices: [0]
+      external_partner_indices: [6]
+      expected_cut_somos: 1
+    P:
+      source_merge: [B, C]
+      atom_indices: [6, 7, 8, 9, 10, 11, 12, 13, 19, 20, 21, 22, 23, 24]
+      formula: NC7H6
+      charge: 0
+      spin: 1
+      expected_electrons: 55
+      cut_atom_indices: [6]
+      external_partner_indices: [0]
+      expected_cut_somos: 1
+      internalized_cut_bond: [7, 8]
+
+acceptance:
+  density_fixed_point_tolerance: 1.0e-8
+  electron_trace_tolerance: 1.0e-6
+  source_cross_block_tolerance: 1.0e-8
+  energy_assembly_tolerance_hartree: 1.0e-9
+  positive_sign_threshold_hartree: 0.0
+  ful_vacant_cut_orbital_energy_floor_hartree: 0.0
+  require_positive_at_both_points: true
+  require_decrease_from_zero_to_seventeen: true
+
+boundaries:
+  existing_parent_nba_candidate_only: true
+  zero_and_seventeen_degree_points_only: true
+  source_table_5_19_basis_only: true
+  geometry_scan_enabled: false
+  basis_scan_enabled: false
+  additional_molecules_enabled: false
+  physical_response_ledger_unchanged: true
+  source_nonvariational_ledger_isolated: true
+  source_equivalent_magnitude_claim_enabled: false
+  cross_basis_total_reconstruction_enabled: false
+  production_labels_allowed: false
+  existing_untracked_tmp_untouched: true

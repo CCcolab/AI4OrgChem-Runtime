@@ -1,0 +1,274 @@
+{
+  "boundaries": {
+    "additional_molecules_enabled": false,
+    "basis_scan_enabled": false,
+    "existing_parent_nba_candidate_only": true,
+    "existing_untracked_tmp_untouched": true,
+    "fixed_geometry_artifact_only": true,
+    "fixed_zero_and_seventeen_degree_points_only": true,
+    "geometry_scan_enabled": false,
+    "physical_response_ledger_unchanged": true,
+    "production_labels_allowed": false,
+    "source_equivalent_magnitude_claim_enabled": false,
+    "source_nonvariational_ledger_isolated": true,
+    "stabilization_interpretation_enabled": false
+  },
+  "direction_checks": {
+    "decreases_from_zero_to_seventeen": true,
+    "positive_at_seventeen_degrees": true,
+    "positive_at_zero_degrees": true
+  },
+  "direction_pass": true,
+  "disposition": "TARGET_B_INDEPENDENT_ASSEMBLY_PASS",
+  "endpoint_errors_hartree": {
+    "0.0": 0.0009528962905680227,
+    "17.0": 0.0022863757122204703
+  },
+  "environment_manifest": {
+    "electronic_structure": {
+      "basis": "sto-3g",
+      "method": "RHF",
+      "source_variant": "FUL-2/2F-2S",
+      "state_difference": "E_PDSI_minus_E_FUL",
+      "state_pair": [
+        "FUL",
+        "PDSI"
+      ]
+    },
+    "environment": {
+      "distribution": "Ubuntu-24.04-WSL2",
+      "environment_path": "/home/cascade/micromamba/envs/ai4orgchem",
+      "independent_energy_algebra": "explicit_numpy_rhf_jk_contraction",
+      "integral_provider": "PySCF",
+      "numpy": "2.5.2",
+      "numpy_runtime": "2.5.2",
+      "protected_environment_unchanged": true,
+      "pyscf": "2.14.0",
+      "pyscf_runtime": "2.14.0",
+      "python": "3.12.13",
+      "python_runtime": "3.12.13"
+    },
+    "geometry": {
+      "angles_degrees": [
+        0.0,
+        17.0
+      ],
+      "artifact_config_sha256": "2902d79b710b9ed0d5662f4389e5828494594f588692eacbfd30e074f2658c26",
+      "artifact_geometry_id": "source-nba-b3lypg-6311gdp-0-17/0.1",
+      "artifact_sha256": "6da0b6353c5a6fba2c2c9545f43e46d424dc00eaf7dad07be3a848bf75f738fe",
+      "artifact_status": "retained_source_geometry_candidate",
+      "cross_geometry_orbital_tracking": false,
+      "implementation": "pyscf_geometric",
+      "protocol": "constrained_B3LYPG_6-311G_double_star_relaxed_PES_points",
+      "source_program_convention": "gaussian_style_b3lyp"
+    },
+    "molecule": {
+      "atom_order_source": "configs/qm/dsi2_diphenyl_imine_source_shaped_v0.1.yaml",
+      "charge": 0,
+      "expected_electrons": 96,
+      "identity": "parent_N_benzylideneaniline",
+      "spin": 0
+    },
+    "source_evidence": {
+      "figure": "5-11",
+      "pdf_sha256": "07AADF5E25967616C4076C8B732EBB17E9E179F31C6546B6EB06D46E96D4A85D",
+      "printed_pages": [
+        144,
+        145,
+        146,
+        147
+      ],
+      "scheme": "5-5",
+      "table": "5-19"
+    },
+    "state_definition": {
+      "cut_sigma_block_unchanged": true,
+      "cut_sigma_group_size": 2,
+      "cut_sigma_occupied_roots": 1,
+      "density_reconstruction": "source_block_metric_group_projector",
+      "fock_overlap_masks": true,
+      "ful_groups": [
+        "pi_A",
+        "pi_B_plus_C",
+        "bonded_sigma_A",
+        "bonded_sigma_B_plus_C",
+        "cut_sigma_all"
+      ],
+      "only_released_block": "bonded_sigma_A_and_bonded_sigma_B_plus_C",
+      "pdsi_groups": [
+        "pi_A",
+        "pi_B_plus_C",
+        "bonded_sigma_all",
+        "cut_sigma_all"
+      ],
+      "pi_groups_unchanged": true
+    }
+  },
+  "experiment_id": "source-table-5-19-independent-assembly/1.0",
+  "points": {
+    "0.0": {
+      "angle_degrees": 0.0,
+      "geometry_sha256": "49628c24ae0df4d5032603eba0454aeed437695847e7e458ecb31a3e952fbcfe",
+      "geometry_source_twist_degrees": 8.009690810753532e-15,
+      "independent_endpoint_error_hartree": 2.2737367544323206e-13,
+      "independent_endpoint_hartree": 0.06795710370943198,
+      "independent_endpoint_kcal_mol": 42.6437264075572,
+      "pipeline_endpoint_hartree": 0.0679571037092046,
+      "pipeline_endpoint_kcal_mol": 42.643726407414526,
+      "shared_lfmo_basis_within_geometry": true,
+      "source_partition_contract_closes": true,
+      "states": {
+        "FUL": {
+          "converged": true,
+          "cycles": 17,
+          "density_fixed_point_residual": 5.343223786346524e-09,
+          "electron_trace": 95.99999999999996,
+          "group_labels": [
+            "pi_A",
+            "pi_B_plus_C",
+            "bonded_sigma_A",
+            "bonded_sigma_B_plus_C",
+            "cut_sigma_all"
+          ],
+          "group_sizes": [
+            6,
+            8,
+            28,
+            37,
+            2
+          ],
+          "independent_energy_hartree": -546.0831252400653,
+          "independent_state_energy_error_hartree": 4.547473508864641e-13,
+          "occupied_roots": [
+            3,
+            4,
+            17,
+            23,
+            1
+          ],
+          "physical_metric_idempotency_residual": 0.07020059547523753,
+          "pipeline_energy_hartree": -546.0831252400649
+        },
+        "PDSI": {
+          "converged": true,
+          "cycles": 17,
+          "density_fixed_point_residual": 9.92597943257084e-09,
+          "electron_trace": 95.99999999999999,
+          "group_labels": [
+            "pi_A",
+            "pi_B_plus_C",
+            "bonded_sigma_all",
+            "cut_sigma_all"
+          ],
+          "group_sizes": [
+            6,
+            8,
+            65,
+            2
+          ],
+          "independent_energy_hartree": -546.0151681363559,
+          "independent_state_energy_error_hartree": 2.2737367544323206e-13,
+          "occupied_roots": [
+            3,
+            4,
+            40,
+            1
+          ],
+          "physical_metric_idempotency_residual": 0.04196037171764636,
+          "pipeline_energy_hartree": -546.0151681363557
+        }
+      }
+    },
+    "17.0": {
+      "angle_degrees": 17.0,
+      "geometry_sha256": "381a5e059d8236048ce70b48881244cd9dcd2d0cba1cd0767ec277e6cdb5eca3",
+      "geometry_source_twist_degrees": 17.00000415485492,
+      "independent_endpoint_error_hartree": 0.0,
+      "independent_endpoint_hartree": 0.06275362428777953,
+      "independent_endpoint_kcal_mol": 39.378493772377915,
+      "pipeline_endpoint_hartree": 0.06275362428777953,
+      "pipeline_endpoint_kcal_mol": 39.378493772377915,
+      "shared_lfmo_basis_within_geometry": true,
+      "source_partition_contract_closes": true,
+      "states": {
+        "FUL": {
+          "converged": true,
+          "cycles": 17,
+          "density_fixed_point_residual": 5.287994644784166e-09,
+          "electron_trace": 96.0,
+          "group_labels": [
+            "pi_A",
+            "pi_B_plus_C",
+            "bonded_sigma_A",
+            "bonded_sigma_B_plus_C",
+            "cut_sigma_all"
+          ],
+          "group_sizes": [
+            6,
+            8,
+            28,
+            37,
+            2
+          ],
+          "independent_energy_hartree": -546.0831061627348,
+          "independent_state_energy_error_hartree": 0.0,
+          "occupied_roots": [
+            3,
+            4,
+            17,
+            23,
+            1
+          ],
+          "physical_metric_idempotency_residual": 0.06997433529330108,
+          "pipeline_energy_hartree": -546.0831061627348
+        },
+        "PDSI": {
+          "converged": true,
+          "cycles": 17,
+          "density_fixed_point_residual": 9.066054033472084e-09,
+          "electron_trace": 95.99999999999999,
+          "group_labels": [
+            "pi_A",
+            "pi_B_plus_C",
+            "bonded_sigma_all",
+            "cut_sigma_all"
+          ],
+          "group_sizes": [
+            6,
+            8,
+            65,
+            2
+          ],
+          "independent_energy_hartree": -546.020352538447,
+          "independent_state_energy_error_hartree": 0.0,
+          "occupied_roots": [
+            3,
+            4,
+            40,
+            1
+          ],
+          "physical_metric_idempotency_residual": 0.045963494475055634,
+          "pipeline_energy_hartree": -546.020352538447
+        }
+      }
+    }
+  },
+  "protocol": "source-equivalent-reconstruction/1.0/table-5-19-independent-assembly",
+  "provenance": {
+    "config_sha256": "840e19eb4cf0c91b49e94acc7c7d970a3f0d9cd6653c61e0484d3afba573eb6d",
+    "git_commit": "b44527bd221084a06d47648d93d5b56212c1efcf"
+  },
+  "target_pass": true,
+  "technical_checks": {
+    "all_states_converged": true,
+    "declared_environment_versions_match_runtime": true,
+    "density_fixed_points": true,
+    "electron_traces": true,
+    "independent_endpoint_energy_assembly": true,
+    "independent_state_energy_assembly": true,
+    "shared_lfmo_basis_within_each_geometry": true,
+    "source_endpoint_magnitude_tolerance": true,
+    "source_partition_contracts": true
+  },
+  "technical_pass": true
+}

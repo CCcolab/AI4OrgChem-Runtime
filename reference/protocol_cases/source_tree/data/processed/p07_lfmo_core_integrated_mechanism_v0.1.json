@@ -1,0 +1,158 @@
+{
+  "argument_matrix": {
+    "P04": {
+      "basis": [
+        "6-31g(d)"
+      ],
+      "component_role": "pi_pi_source_endpoint_with_direct_response_decomposition",
+      "direct_max_hartree": 0.29175777739309877,
+      "direct_min_hartree": -0.04422576229970756,
+      "direct_negative_counterexamples": [
+        {
+          "angle_degrees": 0.0,
+          "direct_hartree": -0.04422576229970756,
+          "family_id": "divinyl_imine"
+        }
+      ],
+      "endpoint_max_hartree": 0.07220001501559636,
+      "endpoint_min_hartree": 0.059397305662514555,
+      "endpoint_positive_points": 11,
+      "families": [
+        "diphenyl_imine",
+        "divinyl_imine",
+        "phenyl_vinyl_imine"
+      ],
+      "maximum_component_closure_hartree": 2.5334623288131297e-11,
+      "method": [
+        "RHF"
+      ],
+      "observable": "E_FUD_minus_E_DSI3",
+      "point_count": 11,
+      "record_count": 33,
+      "response_max_hartree": 0.10916911015715414,
+      "response_min_hartree": -0.23236047174464147,
+      "scoped_conclusion": "all_tested_source_proxy_endpoints_destabilizing_but_direct_term_not_universal",
+      "target": "Target_C"
+    },
+    "P05": {
+      "basis": [
+        "6-31g(d)"
+      ],
+      "component_role": "pi_sigma_source_endpoint_with_direct_response_decomposition",
+      "maximum_component_closure_hartree": 2.017941188050092e-12,
+      "method": [
+        "RHF"
+      ],
+      "observable": "E_G_minus_E_FUD",
+      "point_count": 2,
+      "points": {
+        "0.0": {
+          "direct_hartree": -1.8150859253319058e-19,
+          "endpoint_hartree": -1.3642420526593924e-12,
+          "label": "indeterminate_within_tolerance",
+          "orbital_response_hartree": 6.536993168992922e-13
+        },
+        "17.0": {
+          "direct_hartree": 0.06926702567386547,
+          "endpoint_hartree": 0.0091310966565743,
+          "label": "pi_sigma_source_endpoint_destabilizing_at_17deg_table_5_15_source_proxy",
+          "orbital_response_hartree": -0.060135929018258594
+        }
+      },
+      "record_count": 6,
+      "scoped_conclusion": "zero_degree_indeterminate_and_seventeen_degree_destabilizing_after_negative_response_offset",
+      "target": "Target_A"
+    },
+    "P06": {
+      "basis": [
+        "sto-3g"
+      ],
+      "component_role": "nonbonded_sigma_sigma_source_endpoint",
+      "endpoint_decrease_0_to_17_hartree": 0.005203479421652446,
+      "geometry_basis": [
+        "6-311g(d,p)"
+      ],
+      "geometry_method": [
+        "B3LYPG"
+      ],
+      "maximum_state_energy_closure_hartree": 0.0,
+      "method": [
+        "RHF"
+      ],
+      "observable": "E_PDSI_minus_E_FUL",
+      "point_count": 2,
+      "points": {
+        "0.0": {
+          "E_FUL_hartree": -546.0831252400653,
+          "E_PDSI_hartree": -546.0151681363559,
+          "endpoint_hartree": 0.06795710370943198,
+          "label": "nonbonded_sigma_sigma_source_endpoint_destabilizing_at_both_table_5_19_source_proxy_points"
+        },
+        "17.0": {
+          "E_FUL_hartree": -546.0831061627348,
+          "E_PDSI_hartree": -546.020352538447,
+          "endpoint_hartree": 0.06275362428777953,
+          "label": "nonbonded_sigma_sigma_source_endpoint_destabilizing_at_both_table_5_19_source_proxy_points"
+        }
+      },
+      "record_count": 6,
+      "scoped_conclusion": "both_nonbonded_sigma_sigma_source_endpoints_destabilizing_and_magnitude_decreases_with_twist",
+      "target": "Target_B"
+    }
+  },
+  "boundaries": {
+    "additional_angles": false,
+    "additional_molecules": false,
+    "additional_qm_calculation": false,
+    "ai_generalization_claim": false,
+    "basis_scan": false,
+    "classical_steric_energy_equivalence": false,
+    "complete_twist_pes_or_torque_model": false,
+    "cross_protocol_energy_sum_performed": false,
+    "physical_total_energy_reconstructed": false,
+    "production_label": false,
+    "proposition_level_integration_only": true,
+    "same_target_energy_closure_preserved": true,
+    "target_protocols_are_numerically_nonadditive": true,
+    "training_eligible": false,
+    "universal_all_molecules_law": false
+  },
+  "generated_date": "2026-08-20",
+  "evidence_state": "DERIVED",
+  "counts_as_independent_validation": false,
+  "integrated_findings": {
+    "all_source_defined_components_and_orbital_responses_require_separate_evaluation": true,
+    "endpoint_sign_inferable_from_direct_term_alone": false,
+    "mechanism_level_statement": "direct_interactions_or_conditioned_state_differences_and_orbital_response_can_have_distinct_or_opposing_signs_so_each_ledger_must_be_evaluated_explicitly",
+    "p04_endpoint_direction": "destabilizing_at_all_11_valid_tested_points",
+    "p05_endpoint_direction": "indeterminate_at_0_and_destabilizing_at_17_degrees",
+    "p06_endpoint_direction": "destabilizing_at_0_and_17_degrees_with_decreased_magnitude_at_17",
+    "simple_conjugation_stabilization_vs_steric_destabilization_narrative_adequate": false
+  },
+  "integration_id": "p07-lfmo-core-integrated-mechanism/0.1",
+  "proposition_id": "P07",
+  "protocol_id": "lfmo-sigma-pi/p07-scoped-multi-component-mechanism/0.1",
+  "schema_version": 1,
+  "scientific_label_status": "final_scoped_scientific_conclusion",
+  "source_releases": {
+    "P04": {
+      "path": "data/processed/target_c_tested_domain_scientific_labels_v0.1.jsonl",
+      "record_count": 33,
+      "sha256": "37fed066c8d27225d00bce526451142a21eebd382241e8ea8ae37ba6745b17a1",
+      "source_validator_verdict": "PASS_PUBLISHABLE_SCOPED_PARTIAL_SUCCESS"
+    },
+    "P05": {
+      "path": "data/processed/target_a_table_5_15_scoped_scientific_labels_v0.1.jsonl",
+      "record_count": 6,
+      "sha256": "638e8b94e000262a0fbd7378d2bc32b2487a7fc694b8ba40bc1b32a0ba9fcb54",
+      "source_validator_verdict": "PASS_P05_TARGET_A_SCOPED_RELEASE"
+    },
+    "P06": {
+      "path": "data/processed/target_b_table_5_19_scoped_scientific_labels_v0.1.jsonl",
+      "record_count": 6,
+      "sha256": "8934755936f3ea109cfb776922d69dcd5dab2384dc05fcc11aa9cabbdebee293",
+      "source_validator_verdict": "PASS_P06_TARGET_B_SCOPED_RELEASE"
+    }
+  },
+  "verdict": "P07_SCOPED_MULTI_COMPONENT_MECHANISM_SUPPORTED_WITHOUT_CROSS_PROTOCOL_ENERGY_SUM"
+}

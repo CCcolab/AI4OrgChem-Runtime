@@ -1,0 +1,90 @@
+protocol_id: p08-butadiene-gl2014-independent/0.1
+date: 2026-08-20
+proposition_id: P08
+
+system:
+  molecule: trans-1,3-butadiene
+  formula: C4H6
+  charge: 0
+  spin: 0
+  unit: Angstrom
+  carbon_fragment_left_atoms: [0, 1]
+  carbon_fragment_right_atoms: [2, 3]
+  central_bond_atoms: [1, 2]
+  inversion_pairs: [[0, 3], [1, 2], [4, 9], [5, 8], [6, 7]]
+  initial_atoms:
+    - [C, -1.4778, 1.1109, 0.0]
+    - [C, -0.7285, 0.0000, 0.0]
+    - [C,  0.7285, 0.0000, 0.0]
+    - [C,  1.4778,-1.1109, 0.0]
+    - [H, -0.9998, 2.0904, 0.0]
+    - [H, -2.5651, 1.0349, 0.0]
+    - [H, -1.2402,-0.9624, 0.0]
+    - [H,  1.2402, 0.9624, 0.0]
+    - [H,  2.5651,-1.0349, 0.0]
+    - [H,  0.9998,-2.0904, 0.0]
+
+electronic_structure:
+  source_method: B3LYP
+  pyscf_xc: B3LYPG
+  basis: 6-31G(d)
+  grid_level: 3
+  scf_convergence_tolerance: 1.0e-10
+  scf_max_cycles: 180
+
+ground_geometry_optimization:
+  optimizer: geomeTRIC_with_analytic_RKS_gradient
+  maximum_steps: 60
+  convergence_energy_hartree: 1.0e-6
+  convergence_gradient_rms_hartree_per_bohr: 3.0e-4
+  convergence_gradient_max_hartree_per_bohr: 4.5e-4
+  convergence_displacement_rms_angstrom: 1.2e-3
+  convergence_displacement_max_angstrom: 1.8e-3
+
+gl2014_conditional_scf:
+  maximum_cycles: 160
+  density_tolerance: 2.0e-8
+  energy_tolerance_hartree: 1.0e-10
+  density_diis_start_cycle: 3
+  density_diis_space: 10
+  damping: 0.20
+
+central_bond_pilot:
+  displacement_angstrom: [-0.012, -0.006, 0.0, 0.006, 0.012]
+
+gl2014_geometry_optimization:
+  optimizer: scipy_L_BFGS_B_two_point_finite_difference
+  symmetry: planar_C2h_nine_parameter
+  maximum_iterations: 18
+  maximum_function_evaluations: 260
+  finite_difference_relative_step: 8.0e-4
+  function_tolerance: 1.0e-11
+  gradient_tolerance_hartree_per_angstrom: 2.5e-4
+  maximum_line_search_steps: 12
+  central_bond_half_window_angstrom: 0.060
+  terminal_carbon_coordinate_half_window_angstrom: 0.120
+  hydrogen_coordinate_half_window_angstrom: 0.160
+
+acceptance:
+  gl_scf_must_converge: true
+  expected_occupied_pi_per_fragment: 1
+  maximum_mixed_occupied_pi: 0
+  modified_metric_electron_tolerance: 1.0e-7
+  energy_identity_tolerance_hartree: 1.0e-9
+  source_direction_minimum_kcal_per_mol: 0.05
+  source_direction_minimum_bond_difference_angstrom: 0.0005
+  source_numeric_comparison_tolerance_kcal_per_mol: 0.50
+  source_numeric_comparison_tolerance_angstrom: 0.005
+  source_comparison_only:
+    delta_EA_kcal_per_mol: 1.5
+    r23_G_angstrom: 1.457
+    r23_GL_angstrom: 1.451
+    delta_r23_angstrom: 0.006
+
+boundaries:
+  - This is a source-aligned independent implementation, not original-code identity.
+  - Alternative initial-density confirmation is same-implementation convergence robustness, not second-program replication.
+  - Legacy Project CASCADE thermochemical results are external reference only and have no P08 gate authority.
+  - The B3LYPG spelling is used to reproduce Gaussian-style B3LYP exchange-correlation.
+  - The pilot varies only the central bond and cannot by itself close P08-A or P08-C.
+  - No additional molecule, angle scan, basis scan, aromaticity calculation, or AI training.

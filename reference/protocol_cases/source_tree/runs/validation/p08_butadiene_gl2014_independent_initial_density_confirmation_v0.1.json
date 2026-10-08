@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "protocol_id": "p08-butadiene-gl2014-independent/0.1",
+  "proposition_id": "P08",
+  "confirmation": "independent_ordinary_RKS_initial_density",
+  "verdict": "PASS_P08_GL2014_INDEPENDENT_INITIAL_DENSITY_CONFIRMATION",
+  "ordinary_RKS_energy_hartree": -155.98825110973516,
+  "frozen_GL2014_energy_hartree": -155.9913940354175,
+  "confirmed_GL2014_energy_hartree": -155.99139403541642,
+  "absolute_energy_error_hartree": 1.0800249583553523e-12,
+  "conditional_cycles": 12,
+  "modified_metric_electron_count": 29.999999999999993,
+  "physical_metric_electron_count": 30.000000000000057,
+  "occupied_pi_audit": {
+    "left_occupied_pi_count": 1,
+    "right_occupied_pi_count": 1,
+    "mixed_occupied_pi_count": 0,
+    "orbitals": [
+      {
+        "occupied_index": 0,
+        "left_pi_weight": 2.5817754564328972e-33,
+        "right_pi_weight": 6.1024399038632274e-37,
+        "total_pi_weight": 2.5823857004232836e-33,
+        "role": "sigma"
+      },
+      {
+        "occupied_index": 1,
+        "left_pi_weight": 2.653229290304905e-33,
+        "right_pi_weight": 5.5341392867213795e-37,
+        "total_pi_weight": 2.653782704233577e-33,
+        "role": "sigma"
+      },
+      {
+        "occupied_index": 2,
+        "left_pi_weight": 1.277875112204938e-32,
+        "right_pi_weight": 1.6187647744956474e-36,
+        "total_pi_weight": 1.2780369886823875e-32,
+        "role": "sigma"
+      },
+      {
+        "occupied_index": 3,
+        "left_pi_weight": 1.2538598192258535e-32,
+        "right_pi_weight": 1.1032552125474179e-36,
+        "total_pi_weight": 1.2539701447471082e-32,
+        "role": "sigma"
+      },
+      {
+        "occupied_index": 4,
+        "left_pi_weight": 1.9818229342222603e-31,
+        "right_pi_weight": 1.4094986337336932e-33,
+        "total_pi_weight": 1.9959179205595972e-31,
+        "role": "sigma"
+      },
+      {
+        "occupied_index": 5,
+        "left_pi_weight": 3.8260181541746953e-31,
+        "right_pi_weight": 2.2339879888777014e-33,
+        "total_pi_weight": 3.848358034063472e-31,
+        "role": "sigma"
+      },
+      {
+        "occupied_index": 6,
+        "left_pi_weight": 1.660751249430943e-31,
+        "right_pi_weight": 7.726932668075674e-34,
+        "total_pi_weight": 1.6684781820990187e-31,
+        "role": "sigma"
+      },
+      {
+        "occupied_index": 7,
+        "left_pi_weight": 8.015311450387484e-31,
+        "right_pi_weight": 1.810360445709198e-33,
+        "total_pi_weight": 8.033415054844575e-31,
+        "role": "sigma"
+      },
+      {
+        "occupied_index": 8,
+        "left_pi_weight": 4.748652049042243e-31,
+        "right_pi_weight": 1.124092221614269e-31,
+        "total_pi_weight": 5.872744270656512e-31,
+        "role": "sigma"
+      },
+      {
+        "occupied_index": 9,
+        "left_pi_weight": 5.60370211490556e-30,
+        "right_pi_weight": 1.1326185698678872e-30,
+        "total_pi_weight": 6.736320684773447e-30,
+        "role": "sigma"
+      },
+      {
+        "occupied_index": 10,
+        "left_pi_weight": 4.0393541139747135e-29,
+        "right_pi_weight": 4.003447536917033e-32,
+        "total_pi_weight": 4.043357561511631e-29,
+        "role": "sigma"
+      },
+      {
+        "occupied_index": 11,
+        "left_pi_weight": 1.344255532934979e-29,
+        "right_pi_weight": 6.439027934943577e-31,
+        "total_pi_weight": 1.4086458122844147e-29,
+        "role": "sigma"
+      },
+      {
+        "occupied_index": 12,
+        "left_pi_weight": 9.82501898626481e-30,
+        "right_pi_weight": 3.061045188767951e-31,
+        "total_pi_weight": 1.0131123505141606e-29,
+        "role": "sigma"
+      },
+      {
+        "occupied_index": 13,
+        "left_pi_weight": 0.9999863910450603,
+        "right_pi_weight": 1.3608954940087632e-05,
+        "total_pi_weight": 1.0000000000000004,
+        "role": "pi_left"
+      },
+      {
+        "occupied_index": 14,
+        "left_pi_weight": 1.3608954940088475e-05,
+        "right_pi_weight": 0.9999863910450596,
+        "total_pi_weight": 0.9999999999999997,
+        "role": "pi_right"
+      }
+    ]
+  },
+  "checks": {
+    "ordinary_initial_density_converged": true,
+    "conditional_state_converged": true,
+    "energy_reproduced_within_1e_minus_9_hartree": true,
+    "one_occupied_pi_per_fragment": true,
+    "no_mixed_occupied_pi": true,
+    "modified_metric_electron_count_closes": true
+  }
+}

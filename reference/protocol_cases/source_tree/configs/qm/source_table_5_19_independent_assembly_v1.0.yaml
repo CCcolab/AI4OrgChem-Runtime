@@ -1,0 +1,90 @@
+schema_version: 1
+experiment_id: source-table-5-19-independent-assembly/1.0
+protocol: source-equivalent-reconstruction/1.0/table-5-19-independent-assembly
+status: nonproduction_independent_energy_assembly
+production_labels_allowed: false
+
+source_sigma_sigma_config: configs/qm/source_nonvariational_sigma_sigma_nba_v0.1.yaml
+geometry_config: configs/qm/source_geometry_matched_sigma_sigma_nba_v0.1.yaml
+geometry_artifact: configs/qm/geometries/source_nba_b3lypg_6311gdp_0_17_v0.1.json
+geometry_report: docs/reports/gate0_source_geometry_matched_sigma_sigma_nba_2026-08-14.md
+
+source_evidence:
+  pdf_sha256: 07AADF5E25967616C4076C8B732EBB17E9E179F31C6546B6EB06D46E96D4A85D
+  printed_pages: [144, 145, 146, 147]
+  figure: 5-11
+  scheme: 5-5
+  table: 5-19
+
+molecule:
+  identity: parent_N_benzylideneaniline
+  charge: 0
+  spin: 0
+  expected_electrons: 96
+  atom_order_source: configs/qm/dsi2_diphenyl_imine_source_shaped_v0.1.yaml
+
+geometry:
+  protocol: constrained_B3LYPG_6-311G_double_star_relaxed_PES_points
+  implementation: pyscf_geometric
+  source_program_convention: gaussian_style_b3lyp
+  artifact_status: retained_source_geometry_candidate
+  angles_degrees: [0.0, 17.0]
+  cross_geometry_orbital_tracking: false
+
+electronic_structure:
+  method: RHF
+  basis: sto-3g
+  state_pair: [FUL, PDSI]
+  state_difference: E_PDSI_minus_E_FUL
+  source_variant: FUL-2/2F-2S
+
+state_definition:
+  ful_groups: [pi_A, pi_B_plus_C, bonded_sigma_A, bonded_sigma_B_plus_C, cut_sigma_all]
+  pdsi_groups: [pi_A, pi_B_plus_C, bonded_sigma_all, cut_sigma_all]
+  cut_sigma_group_size: 2
+  cut_sigma_occupied_roots: 1
+  only_released_block: bonded_sigma_A_and_bonded_sigma_B_plus_C
+  pi_groups_unchanged: true
+  cut_sigma_block_unchanged: true
+  density_reconstruction: source_block_metric_group_projector
+  fock_overlap_masks: true
+
+acceptance:
+  state_energy_assembly_tolerance_hartree: 1.0e-9
+  endpoint_energy_assembly_tolerance_hartree: 1.0e-9
+  independent_difference_tolerance_hartree: 1.0e-9
+  printed_endpoint_absolute_tolerance_hartree: 1.0e-2
+  electron_trace_tolerance: 1.0e-6
+  density_fixed_point_tolerance: 1.0e-8
+  source_cross_block_tolerance: 1.0e-8
+  positive_sign_threshold_hartree: 0.0
+  require_decrease_from_zero_to_seventeen: true
+
+source_reference:
+  table_5_19_parent_nba_hartree:
+    "0.0": 0.06891
+    "17.0": 0.06504
+
+environment:
+  distribution: Ubuntu-24.04-WSL2
+  environment_path: /home/cascade/micromamba/envs/ai4orgchem
+  python: 3.12.13
+  pyscf: 2.14.0
+  numpy: 2.5.2
+  integral_provider: PySCF
+  independent_energy_algebra: explicit_numpy_rhf_jk_contraction
+  protected_environment_unchanged: true
+
+boundaries:
+  existing_parent_nba_candidate_only: true
+  fixed_geometry_artifact_only: true
+  fixed_zero_and_seventeen_degree_points_only: true
+  geometry_scan_enabled: false
+  basis_scan_enabled: false
+  additional_molecules_enabled: false
+  physical_response_ledger_unchanged: true
+  source_nonvariational_ledger_isolated: true
+  source_equivalent_magnitude_claim_enabled: false
+  stabilization_interpretation_enabled: false
+  production_labels_allowed: false
+  existing_untracked_tmp_untouched: true

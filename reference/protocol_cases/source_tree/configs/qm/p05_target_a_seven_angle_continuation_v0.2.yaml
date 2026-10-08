@@ -1,0 +1,71 @@
+schema_version: 1
+experiment_id: p05-target-a-seven-angle-continuation/0.2
+protocol: source-equivalent-reconstruction/table-5-15-seven-angle-continuation/0.2
+status: preregistered_p05_scientific_enhancement
+
+base_config: configs/qm/fud_diphenyl_imine_source_shaped_v0.1.yaml
+parent_geometry_config: configs/qm/dsi2_diphenyl_imine_source_shaped_v0.1.yaml
+frozen_anchor_artifact: artifacts/raw/source_table_5_15_fixed_twist_pi_sigma_nba_2026-08-15.json
+frozen_anchor_sha256: 2f83b1a8b4a394d39da4fab3942d17b52f4f4365c9cde55a3abc68f1b64a1933
+
+electronic_structure:
+  method: RHF
+  basis: 6-31g(d)
+
+geometry_protocol:
+  type: fixed_parent_geometry_rigid_twist
+  coordinate_status: independent_parent_geometry_reconstruction_not_source_exact
+  torsion_axis_atom_indices: [0, 6]
+  rotating_atom_indices: [1, 2, 3, 4, 5, 14, 15, 16, 17, 18]
+  angles_degrees: [0.0, 5.0, 10.0, 17.0, 25.0, 35.0, 45.0]
+  frozen_anchor_angles_degrees: [0.0, 17.0]
+  newly_computed_angles_degrees: [5.0, 10.0, 25.0, 35.0, 45.0]
+
+source_definition:
+  state: FUD
+  state_difference: E_G_minus_E_FUD
+  density_reconstruction: source_block_metric_group_projector
+  energy_assembly: original_rhf_functional_on_source_density
+  geometry_specific_lfmo_reconstruction: true
+  equations: [5-12, 5-13, 5-14, 5-15, 5-16]
+
+source_reference:
+  table: Table_5_15
+  published_total_17_degree_hartree: 0.00775
+  published_components_17_degree_hartree:
+    direct_intrafragment: -0.00010
+    direct_interfragment: 0.06397
+    pi_response: -0.05011
+    sigma_response: -0.00604
+
+lfmo_interface:
+  reflection_classification_policy: spectral_sign
+  minimum_absolute_reflection_eigenvalue: 0.99
+  maximum_accepted_reflection_residual: 1.0e-2
+  reflection_block_closure_tolerance: 1.0e-8
+  reflection_eigenvalue_tolerance: 1.0e-8
+
+acceptance:
+  density_fixed_point_tolerance: 1.0e-8
+  electron_trace_tolerance: 1.0e-6
+  source_cross_block_tolerance: 1.0e-8
+  energy_assembly_tolerance_hartree: 1.0e-9
+  equation_closure_tolerance_hartree: 1.0e-9
+  printed_component_absolute_tolerance_hartree: 1.0e-2
+  sign_tolerance_hartree: 1.0e-8
+  frozen_anchor_endpoint_tolerance_hartree: 1.0e-12
+  require_all_six_nonzero_angles_positive: true
+  require_constant_root_and_group_dimensions: true
+
+boundaries:
+  p05_only: true
+  same_parent_molecule_only: true
+  same_rhf_631gd_method_only: true
+  fixed_parent_rigid_twist_only: true
+  source_nonvariational_ledger_only: true
+  additional_molecules_enabled: false
+  basis_scan_enabled: false
+  relaxed_geometry_scan_enabled: false
+  p07_work_enabled: false
+  ai_training_enabled: false
+  universal_law_claimed: false

@@ -1,0 +1,27 @@
+schema_version: 1
+integration_id: p07-lfmo-core-integrated-mechanism/0.1
+protocol_id: lfmo-sigma-pi/p07-scoped-multi-component-mechanism/0.1
+proposition_id: P07
+sign_tolerance_hartree: 1.0e-8
+component_closure_tolerance_hartree: 1.0e-9
+inputs:
+  P04: data/processed/target_c_tested_domain_scientific_labels_v0.1.jsonl
+  P05: data/processed/target_a_table_5_15_scoped_scientific_labels_v0.1.jsonl
+  P06: data/processed/target_b_table_5_19_scoped_scientific_labels_v0.1.jsonl
+outputs:
+  integrated_record: data/processed/p07_lfmo_core_integrated_mechanism_v0.1.json
+  report: docs/reports/p07_lfmo_core_integrated_mechanism_2026-08-20.md
+required_verdict: P07_SCOPED_MULTI_COMPONENT_MECHANISM_SUPPORTED_WITHOUT_CROSS_PROTOCOL_ENERGY_SUM
+boundaries:
+  proposition_level_integration_only: true
+  cross_protocol_energy_sum_performed: false
+  physical_total_energy_reconstructed: false
+  same_target_energy_closure_preserved: true
+  additional_qm_calculation: false
+  additional_molecules: false
+  additional_angles: false
+  basis_scan: false
+  universal_all_molecules_law: false
+  production_label: false
+  training_eligible: false
+  ai_generalization_claim: false

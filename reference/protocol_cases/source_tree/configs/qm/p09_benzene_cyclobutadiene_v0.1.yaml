@@ -1,0 +1,350 @@
+schema_version: 1
+protocol_id: p09-benzene-cyclobutadiene-aromatic-energy/0.1
+effective_date: 2026-08-21
+status: complete_scoped_proposition_supported
+decision: docs/adr/0039-start-phase-03-and-freeze-p09-entry.md
+specification: docs/theory/p09_benzene_cyclobutadiene_protocol_v0.1.md
+original_program_code_used: false
+p09_qm_execution_allowed: false
+p09_qm_execution_scope: none_p09_complete
+p09_geometry_optimization_allowed: false
+p09_geometry_optimization_scope: none_p09_complete
+p09_blind_value_comparison_allowed: true
+p09_blind_value_comparison_scope: completed_benzene_ESE_and_cyclobutadiene_VDE_ADE
+production_labels_allowed: false
+ai_training_allowed: false
+
+proposition:
+  id: P09
+  phase: phase_03
+  category: CAT05
+  systems: [benzene, cyclobutadiene]
+  universal_aromaticity_claim_allowed: false
+
+sources:
+  monograph:
+    doi: 10.6084/m9.figshare.27261243
+    license: CC-BY-4.0
+  article_2011:
+    doi: 10.1002/jcc.21614
+    citation: Bao_P_Yu_ZH_J_Comput_Chem_2011_32_248_259
+
+blind_comparison_values:
+  benzene_ESE_kcal_mol: -36.3
+  cyclobutadiene_VDE_kcal_mol: 44.2
+  cyclobutadiene_ADE_kcal_mol: 53.6
+  fit_targets: false
+  reveal_to_calculation_logic: false
+
+state_contract:
+  G: ordinary_unmasked_ground_state
+  GL: source_2011_localized_geometry_and_electronic_state
+  VR: same_configuration_and_conformation_virtual_reference_from_additive_pair_increments
+  benzene:
+    delta_E_A: E_G_minus_E_GL
+    delta_E_VR: sum_pair_increments_equals_E_VR_minus_E_GL
+    ESE: delta_E_A_minus_delta_E_VR_equals_E_G_minus_E_VR
+  cyclobutadiene:
+    fragments: {A: [C1, C2], B: [C3, C4]}
+    G: ordinary_optimized_ground_state_geometry_and_energy
+    DSI: source_2011_localized_electronic_state_at_G_geometry
+    GL: source_2011_restricted_optimized_localized_geometry_and_energy
+    delta_E_V: E_G_minus_E_DSI_same_geometry
+    delta_E_A: E_G_minus_E_GL_adiabatic
+    primary_observable: delta_E_A
+    source_sign_convention: positive_is_destabilizing
+    proxy_substitution_allowed: false
+
+source_definition_gate:
+  status: passed
+  required:
+    - source_formula_pages_frozen
+    - fock_overlap_mask_indices_frozen
+    - fifteen_exchange_integral_classes_mapped
+    - eri_permutation_and_allow_deny_tests_passed
+    - geometry_and_state_paths_frozen_for_both_systems
+    - independent_energy_assembly_contract_frozen
+  evidence:
+    benzene_source_formula_pages_frozen: true
+    fock_overlap_mask_indices_frozen: true
+    fifteen_exchange_integral_classes_mapped: true
+    eri_permutation_and_allow_deny_tests_passed: true
+    real_pyscf_ao_and_shell_block_tests_passed: true
+    geometry_and_state_paths_frozen_for_both_systems: true
+    independent_energy_assembly_contract_frozen: true
+  assembly_contract: docs/theory/p09_conditional_b3lyp_energy_assembly_v0.1.md
+  assembly_tests:
+    command: "PYTHONPATH=src python -m unittest tests.unit.test_p09_eri_mask tests.unit.test_p09_energy_assembly tests.scientific.test_p09_pyscf_ao_mask -v"
+    passed: 15
+    failed: 0
+
+electronic_structure:
+  engine: pyscf
+  method: B3LYP
+  pyscf_xc: B3LYPG
+  basis: 6-31g(d)
+  gaussian_style_functional_convention_required: true
+  grid_level: 3
+  charge: 0
+  multiplicity: 1
+  phase: gas
+  scf_tolerance_hartree: 1.0e-10
+  max_scf_cycles: 100
+  cyclobutadiene_wavefunction_stability_check_required: true
+
+tolerances:
+  rerun_energy_difference_hartree: 1.0e-8
+  independent_assembly_hartree: 1.0e-8
+  energy_path_closure_hartree: 1.0e-8
+  sign_indeterminate_kcal_mol: 1.0
+  quantitative_source_difference_kcal_mol: 5.0
+
+resources:
+  profile: configs/resources/local_wsl.yaml
+  cpu_threads: 8
+  max_concurrent_medium_or_high_memory_qm_jobs: 1
+  scratch_quota_gib: 20
+  stop_if_available_memory_below_gib: 4
+  gpu_allowed: false
+
+smoke_gate:
+  status: passed
+  systems: [cyclobutadiene]
+  states: [G, DSI]
+  geometry: fixed_planar_rectangular_source_aligned_start
+  geometry_role: source_aligned_start_not_claimed_as_historical_cartesian
+  initial_atoms:
+    - [C, -0.755000, -0.670000, 0.000000]
+    - [C, -0.755000,  0.670000, 0.000000]
+    - [C,  0.755000,  0.670000, 0.000000]
+    - [C,  0.755000, -0.670000, 0.000000]
+    - [H, -1.562532, -1.386035, 0.000000]
+    - [H, -1.562532,  1.386035, 0.000000]
+    - [H,  1.562532,  1.386035, 0.000000]
+    - [H,  1.562532, -1.386035, 0.000000]
+  maximum_memory_mb: 6000
+  conditional_scf:
+    maximum_cycles: 100
+    density_tolerance: 2.0e-8
+    energy_tolerance_hartree: 1.0e-10
+    diis_start_cycle: 2
+    diis_space: 8
+    damping_cycles: 2
+    damping: 0.20
+  acceptance:
+    electron_count_tolerance: 1.0e-7
+    matrix_zero_tolerance: 1.0e-12
+    energy_component_closure_hartree: 1.0e-10
+    commutator_frobenius_tolerance: 1.0e-6
+    idempotency_relative_tolerance: 1.0e-7
+  fit_to_blind_values: false
+  required_checks:
+    - ordinary_and_conditional_scf_converged
+    - neutral_singlet_electron_count_closed
+    - masked_and_physical_metric_electron_counts_reported
+    - interfragment_pi_fock_and_overlap_blocks_zero
+    - fifteen_class_eri_mask_applied
+    - independent_energy_components_close
+    - wavefunction_stability_reported
+  evidence:
+    data: data/processed/p09_cyclobutadiene_fixed_geometry_smoke_v0.1.json
+    report: docs/reports/p09_cyclobutadiene_fixed_geometry_smoke_2026-08-21.md
+    validator: scripts/validate_p09_cyclobutadiene_smoke.py
+    verdict: PASS
+    ordinary_energy_hartree: -154.66611520845723
+    conditional_energy_hartree: -154.75297152687540
+    fixed_geometry_diagnostic_difference_kcal_mol: 54.503162689643624
+    conditional_scf_cycles: 10
+    passed_checks: 12
+
+cyclobutadiene_g_vde_gate:
+  status: passed
+  geometry_optimization: ordinary_G_only
+  conditional_state: DSI_at_identical_optimized_G_geometry
+  output_observable: delta_E_V_equals_E_G_minus_E_DSI
+  fit_to_blind_value: false
+  blind_comparison_during_calculation: false
+  gl_geometry_optimization_allowed: false
+  benzene_calculation_allowed: false
+  ordinary_G_optimization:
+    optimizer: geomeTRIC_with_analytic_RKS_gradient
+    maximum_steps: 60
+    convergence_energy_hartree: 1.0e-6
+    convergence_gradient_rms_hartree_per_bohr: 3.0e-4
+    convergence_gradient_max_hartree_per_bohr: 4.5e-4
+    convergence_displacement_rms_angstrom: 1.2e-3
+    convergence_displacement_max_angstrom: 1.8e-3
+    maximum_final_out_of_plane_angstrom: 1.0e-7
+  acceptance:
+    electron_count_tolerance: 1.0e-7
+    matrix_zero_tolerance: 1.0e-12
+    energy_component_closure_hartree: 1.0e-10
+    commutator_frobenius_tolerance: 1.0e-6
+    idempotency_relative_tolerance: 1.0e-7
+  evidence:
+    data: data/processed/p09_cyclobutadiene_G_DSI_VDE_v0.1.json
+    report: docs/reports/p09_cyclobutadiene_G_DSI_VDE_2026-08-21.md
+    validator: scripts/validate_p09_cyclobutadiene_g_vde.py
+    verdict: PASS_P09_CYCLOBUTADIENE_G_DSI_VDE
+    computed_VDE_kcal_mol: 44.18285738766974
+    source_VDE_kcal_mol: 44.2
+    difference_kcal_mol: -0.01714261233026093
+
+cyclobutadiene_gl_ade_gate:
+  status: passed
+  geometry_optimization: conditional_GL_D2h_four_parameter_only
+  source_path: optimized_G_energy_minus_optimized_conditional_GL_energy
+  output_observable: delta_E_A_equals_E_G_minus_E_GL
+  fit_to_blind_value: false
+  blind_comparison_during_calculation: false
+  benzene_calculation_allowed: false
+  optimizer:
+    method: scipy_L_BFGS_B_two_point_finite_difference
+    maximum_iterations: 20
+    maximum_function_evaluations: 120
+    finite_difference_relative_step: 1.0e-4
+    function_tolerance: 1.0e-11
+    gradient_tolerance_hartree_per_angstrom: 2.5e-4
+    maximum_line_search_steps: 12
+    carbon_half_window_angstrom: 0.120
+    hydrogen_half_window_angstrom: 0.160
+  acceptance:
+    electron_count_tolerance: 1.0e-7
+    matrix_zero_tolerance: 1.0e-12
+    energy_component_closure_hartree: 1.0e-10
+    commutator_frobenius_tolerance: 1.0e-6
+    idempotency_relative_tolerance: 1.0e-7
+  evidence:
+    data: data/processed/p09_cyclobutadiene_GL_ADE_v0.1.json
+    report: docs/reports/p09_cyclobutadiene_GL_ADE_2026-08-21.md
+    validator: scripts/validate_p09_cyclobutadiene_gl_ade.py
+    verdict: PASS_P09_CYCLOBUTADIENE_GL_ADE
+    computed_ADE_kcal_mol: 53.822467354119986
+    source_ADE_kcal_mol: 53.6
+    difference_kcal_mol: 0.22246735411998486
+
+benzene_g_smoke_gate:
+  status: passed
+  geometry_optimization: ordinary_G_only
+  conditional_state: three_Kekule_fragments_at_identical_optimized_G_geometry
+  fragments: {A: [C1, C2], B: [C3, C4], C: [C5, C6]}
+  output_observable: diagnostic_vertical_E_G_minus_E_DSI3
+  fit_to_blind_value: false
+  blind_comparison_during_calculation: false
+  conditional_geometry_optimization_allowed: false
+  initial_atoms:
+    - [C,  1.397000000,  0.000000000, 0.000000000]
+    - [C,  0.698500000,  1.209837489, 0.000000000]
+    - [C, -0.698500000,  1.209837489, 0.000000000]
+    - [C, -1.397000000,  0.000000000, 0.000000000]
+    - [C, -0.698500000, -1.209837489, 0.000000000]
+    - [C,  0.698500000, -1.209837489, 0.000000000]
+    - [H,  2.481000000,  0.000000000, 0.000000000]
+    - [H,  1.240500000,  2.148704219, 0.000000000]
+    - [H, -1.240500000,  2.148704219, 0.000000000]
+    - [H, -2.481000000,  0.000000000, 0.000000000]
+    - [H, -1.240500000, -2.148704219, 0.000000000]
+    - [H,  1.240500000, -2.148704219, 0.000000000]
+  ordinary_G_optimization:
+    optimizer: geomeTRIC_with_analytic_RKS_gradient
+    maximum_steps: 60
+    convergence_energy_hartree: 1.0e-6
+    convergence_gradient_rms_hartree_per_bohr: 3.0e-4
+    convergence_gradient_max_hartree_per_bohr: 4.5e-4
+    convergence_displacement_rms_angstrom: 1.2e-3
+    convergence_displacement_max_angstrom: 1.8e-3
+    maximum_final_out_of_plane_angstrom: 1.0e-7
+  acceptance:
+    electron_count_tolerance: 1.0e-7
+    matrix_zero_tolerance: 1.0e-12
+    energy_component_closure_hartree: 1.0e-10
+    commutator_frobenius_tolerance: 1.0e-6
+    idempotency_relative_tolerance: 1.0e-7
+  evidence:
+    data: data/processed/p09_benzene_G_DSI3_smoke_v0.1.json
+    report: docs/reports/p09_benzene_G_DSI3_smoke_2026-08-21.md
+    validator: scripts/validate_p09_benzene_g_smoke.py
+    verdict: PASS_P09_BENZENE_G_DSI3_SMOKE
+    diagnostic_vertical_difference_kcal_mol: -31.36657143768311
+    passed_checks: 17
+
+benzene_gl_ge1_ese_gate:
+  status: passed
+  source_definition:
+    GL: all_three_Kekule_double_bonds_mutually_localized
+    GE1: only_specific_adjacent_pair_A_B_permitted_to_conjugate_all_other_pairs_localized
+    delta_E_A: E_G_minus_E_GL
+    delta_E_A1: E_GE1_minus_E_GL
+    pair_multiplicity: 3
+    ESE: delta_E_A_minus_3_times_delta_E_A1
+    source_locations:
+      - monograph_printed_pages_266_267_outer_pages_143_144_section_8_3_and_figure_8_6
+      - monograph_printed_page_270_outer_page_145_table_8_8
+  fit_to_blind_value: false
+  blind_comparison_during_calculation: false
+  other_molecules_allowed: false
+  GL_optimizer:
+    parameterization: planar_D3h_alternating_CC_and_common_CH_three_parameter
+    method: scipy_L_BFGS_B_three_point_central_finite_difference
+    finite_difference_scheme: 3-point
+    maximum_iterations: 20
+    maximum_function_evaluations: 100
+    finite_difference_relative_step: 1.0e-4
+    function_tolerance: 1.0e-11
+    gradient_tolerance_hartree_per_angstrom: 2.5e-4
+    maximum_line_search_steps: 12
+    CC_half_window_angstrom: 0.120
+    CH_half_window_angstrom: 0.160
+  GE1_optimizer:
+    parameterization: planar_C2v_six_parameter_with_radial_common_CH
+    permitted_pair: A_B
+    localized_against: C
+    method: scipy_L_BFGS_B_three_point_central_finite_difference
+    finite_difference_scheme: 3-point
+    maximum_iterations: 20
+    maximum_function_evaluations: 160
+    finite_difference_relative_step: 1.0e-4
+    function_tolerance: 1.0e-11
+    gradient_tolerance_hartree_per_angstrom: 2.5e-4
+    maximum_line_search_steps: 12
+    carbon_coordinate_half_window_angstrom: 0.120
+    CH_half_window_angstrom: 0.160
+  acceptance:
+    electron_count_tolerance: 1.0e-7
+    matrix_zero_tolerance: 1.0e-12
+    energy_component_closure_hartree: 1.0e-10
+    commutator_frobenius_tolerance: 1.0e-6
+    idempotency_relative_tolerance: 1.0e-7
+    energy_identity_hartree: 1.0e-12
+  evidence:
+    data: data/processed/p09_benzene_GL_GE1_ESE_v0.1.json
+    report: docs/reports/p09_benzene_GL_GE1_ESE_2026-08-21.md
+    validator: scripts/validate_p09_scoped_aromatic_energy.py
+    verdict: PASS_P09_SCOPED_AROMATIC_ENERGY_RELEASE
+    computed_delta_E_A_kcal_mol: -19.862904026690355
+    computed_delta_E_A1_kcal_mol: 5.849953419222271
+    computed_ESE_kcal_mol: -37.412764284357166
+    source_ESE_kcal_mol: -36.3
+    difference_kcal_mol: -1.112764284357166
+
+final_scoped_verdict:
+  status: complete
+  verdict: P09_SCOPED_PROPOSITION_SUPPORTED
+  relation_to_monograph: consistent_in_frozen_benzene_and_cyclobutadiene_scope
+  conclusion: benzene_ESE_stabilizing_and_cyclobutadiene_ADE_destabilizing_with_quantitative_source_consistency
+  validator: scripts/validate_p09_scoped_aromatic_energy.py
+  machine_readable_conclusion: data/processed/p09_scoped_aromatic_energy_conclusion_v0.1.json
+  data_card: docs/data_cards/p09_benzene_cyclobutadiene_aromatic_energy_v0.1.md
+  report: docs/reports/p09_scoped_aromatic_energy_conclusion_2026-08-21.md
+  production_label: false
+  training_eligible: false
+  universal_aromaticity_law: false
+
+prohibited:
+  - use_of_original_program_code
+  - substitution_by_hydrogenation_or_homodesmotic_proxy
+  - substitution_by_cyclobutadiene_rectangular_square_gap_or_ring_strain
+  - basis_or_functional_scan_before_primary_verdict
+  - p10_p13_execution_before_p09_closure
+  - production_label_generation
+  - mace_nequip_pysr_training_or_search

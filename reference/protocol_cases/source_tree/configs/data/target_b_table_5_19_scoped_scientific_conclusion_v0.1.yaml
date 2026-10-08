@@ -1,0 +1,51 @@
+schema_version: 1
+conclusion_id: target-b-table-5-19-scoped-scientific-conclusion/0.1
+protocol_id: lfmo-sigma-pi/p06-target-b-table-5-19-scoped-release/0.1
+source_sign_convention: positive_E_PDSI_minus_E_FUL_is_destabilizing_nonbonded_sigma_sigma_endpoint
+sign_tolerance_hartree: 1.0e-8
+energy_closure_tolerance_hartree: 1.0e-9
+source_comparison_tolerance_hartree: 1.0e-2
+inputs:
+  source_geometry_ledger: artifacts/raw/source_geometry_matched_sigma_sigma_nba_2026-08-14.json
+  independent_assembly: artifacts/raw/source_table_5_19_independent_assembly_2026-08-15.json
+  source_calculation_config: configs/qm/source_table_5_19_independent_assembly_v1.0.yaml
+calculation_contract:
+  family_id: parent_N_benzylideneaniline
+  geometry_method: B3LYPG
+  geometry_basis: 6-311g(d,p)
+  single_point_method: RHF
+  single_point_basis: sto-3g
+  state_pair: [FUL, PDSI]
+  source_variant: FUL-2/2F-2S
+  engine: PySCF
+  engine_version: 2.14.0
+  resource_profile: configs/resources/local_wsl.yaml
+  geometry_disposition: constrained_source_geometry_candidate_not_historical_cartesian_identity
+  source_reference_doi: 10.6084/m9.figshare.27261243.v1
+  source_reference_pages: [144, 145, 146, 147]
+accepted_points:
+  - angle_degrees: 0.0
+    required_label: nonbonded_sigma_sigma_source_endpoint_destabilizing_at_both_table_5_19_source_proxy_points
+  - angle_degrees: 17.0
+    required_label: nonbonded_sigma_sigma_source_endpoint_destabilizing_at_both_table_5_19_source_proxy_points
+outputs:
+  labels: data/processed/target_b_table_5_19_scoped_scientific_labels_v0.1.jsonl
+  report: docs/reports/target_b_table_5_19_scoped_scientific_conclusion_2026-08-20.md
+boundaries:
+  proposition_id: P06
+  target: Target_B
+  scientific_scope: fixed_table_5_19_source_geometry_candidate_0_and_17_degrees_only
+  final_scoped_scientific_conclusion: true
+  source_nonvariational_ledger: true
+  physical_variational_interaction_energy: false
+  classical_steric_energy_equivalence: false
+  historical_coordinate_identity: false
+  universal_all_molecules_law: false
+  geometry_scan: false
+  basis_scan: false
+  additional_molecules: false
+  cross_target_energy_sum: false
+  production_label: false
+  training_eligible: false
+  ai_generalization_claim: false
+

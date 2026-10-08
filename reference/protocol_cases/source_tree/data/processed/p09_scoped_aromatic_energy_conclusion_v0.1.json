@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "protocol_id": "p09-benzene-cyclobutadiene-aromatic-energy/0.1",
+  "proposition_id": "P09",
+  "verdict": "P09_SCOPED_PROPOSITION_SUPPORTED",
+  "relation_to_monograph": "consistent_in_frozen_benzene_and_cyclobutadiene_scope",
+  "implementation_class": "source_aligned_independent_reconstruction_from_public_conditions",
+  "original_program_code_used": false,
+  "systems": {
+    "cyclobutadiene": {
+      "VDE_kcal_mol": 44.18285738766974,
+      "ADE_kcal_mol": 53.822467354119986,
+      "source_ADE_kcal_mol": 53.6,
+      "ADE_difference_kcal_mol": 0.22246735411998486,
+      "classification": "destabilizing",
+      "evidence": "data/processed/p09_cyclobutadiene_GL_ADE_v0.1.json"
+    },
+    "benzene": {
+      "delta_E_A_kcal_mol": -19.862904026690355,
+      "delta_E_A1_kcal_mol": 5.849953419222271,
+      "ESE_kcal_mol": -37.412764284357166,
+      "source_ESE_kcal_mol": -36.3,
+      "ESE_difference_kcal_mol": -1.1127642843571692,
+      "classification": "aromatic_extra_stabilization",
+      "evidence": "data/processed/p09_benzene_GL_GE1_ESE_v0.1.json"
+    }
+  },
+  "quantitatively_consistent_within_protocol_tolerance": true,
+  "validator_verdict": "PASS_P09_SCOPED_AROMATIC_ENERGY_RELEASE",
+  "production_label": false,
+  "training_eligible": false,
+  "universal_aromaticity_law": false
+}

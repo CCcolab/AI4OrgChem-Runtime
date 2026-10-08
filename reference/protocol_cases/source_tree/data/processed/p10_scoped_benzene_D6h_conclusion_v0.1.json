@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "protocol_id": "p10-benzene-nuclear-repulsion/0.1",
+  "proposition_id": "P10",
+  "verdict": "P10_SCOPED_PROPOSITION_SUPPORTED",
+  "relation_to_monograph": "consistent_on_frozen_benzene_bond_length_alternation_coordinate",
+  "implementation_class": "source_aligned_endpoint_decomposition_plus_ordinary_RKS_coordinate_control",
+  "original_program_code_used": false,
+  "source_aligned_endpoint": {
+    "delta_Ee_kcal_mol": 144.79017844130522,
+    "delta_EN_kcal_mol": -164.65308246845927,
+    "delta_E_kcal_mol": -19.86290402715406,
+    "nuclear_change_predominates": true
+  },
+  "ordinary_RKS_BLA_scan": {
+    "delta_range_angstrom": [0.0, 0.01, 0.02, 0.04, 0.06],
+    "electronic_curvature_hartree_per_angstrom2": -78.13009264367268,
+    "nuclear_curvature_hartree_per_angstrom2": 84.98871765169739,
+    "total_curvature_hartree_per_angstrom2": 6.858625007987951,
+    "equal_bond_length_is_local_total_energy_minimum_on_tested_coordinate": true
+  },
+  "scientific_statement": "On the frozen benzene bond-length-alternation coordinate, the electronic energy favors alternation while the larger opposing nuclear-repulsion change makes the equal-bond D6h endpoint lower in total energy.",
+  "nuclear_repulsion_as_independent_first_cause": false,
+  "evidence": "data/processed/p10_benzene_nuclear_repulsion_v0.1.json",
+  "validator_verdict": "PASS_P10_SCOPED_BENZENE_D6H_RELEASE",
+  "production_label": false,
+  "training_eligible": false,
+  "universal_benzene_symmetry_law": false
+}

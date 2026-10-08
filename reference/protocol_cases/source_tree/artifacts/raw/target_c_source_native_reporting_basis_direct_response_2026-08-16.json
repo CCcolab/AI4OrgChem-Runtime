@@ -1,0 +1,319 @@
+{
+  "boundaries": {
+    "additional_molecules_enabled": false,
+    "ai_training_enabled": false,
+    "basis_scan_enabled": false,
+    "destabilization_interpretation_enabled": false,
+    "each_state_source_density_frozen_before_reporting": true,
+    "each_state_source_local_lfmo_reconstructed": true,
+    "existing_untracked_tmp_untouched": true,
+    "fixed_zero_and_seventeen_degree_points_only": true,
+    "geometry_scan_enabled": false,
+    "production_labels_allowed": false,
+    "reporting_basis_is_not_a_solver_basis": true,
+    "stabilization_interpretation_enabled": false
+  },
+  "disposition": "TARGET_C_SOURCE_NATIVE_REPORTING_BASIS_PASS",
+  "experiment_id": "target-c-source-native-reporting-basis-direct-response/0.1",
+  "label_decision": {
+    "production_label_allowed": false,
+    "source_native_direct_response_candidate_allowed": true,
+    "stabilization_destabilization_interpretation_allowed": false
+  },
+  "points": {
+    "0.0": {
+      "angle_degrees": 0.0,
+      "basis_anchor": "DSI-3",
+      "basis_digest": "8c903133f2814a6285385b94d84d359080b6f015595359ade90d5a04ac589fd8",
+      "basis_role": "density_reporting_only",
+      "basis_shape": [
+        218,
+        218
+      ],
+      "checks": {
+        "direct_response_closes": true,
+        "dsi3_native_source_pass": true,
+        "fud_native_source_pass": true,
+        "fud_not_resolved_on_reporting_basis": true,
+        "native_endpoint_finite": true,
+        "native_endpoint_matches_source_metric": true,
+        "pi_cross_split_closes": true,
+        "reporting_basis_full_rank": true,
+        "response_split_closes": true
+      },
+      "native_source_metric_endpoint_hartree": 0.06955916812330543,
+      "native_state_energies_hartree": {
+        "DSI3": -553.195530062445,
+        "FUD": -553.1259708943189
+      },
+      "source_local_three_bucket_view": {
+        "direct_total_hartree": 0.025077133648814854,
+        "orbital_response_total_hartree": 0.044482034475777255,
+        "pi_pi_direct_change_hartree": 0.025077133648814854,
+        "pi_pi_direct_sign": "positive",
+        "pi_response_hartree": -0.11645960642182729,
+        "pi_sigma_direct_change_hartree": -1.510247764694282e-19,
+        "sigma_response_hartree": 0.16094164089759033
+      },
+      "technical_pass": true,
+      "transition": {
+        "closure_residual_hartree": 1.4418050087172674e-12,
+        "component_sum_hartree": 0.0695591681245921,
+        "direct_cross_group_change_hartree": 0.025077133648814854,
+        "direct_one_electron_change_hartree": 0.0745656335429011,
+        "direct_sign": "positive",
+        "direct_split_residual_hartree": 2.7755575615628914e-17,
+        "direct_two_electron_change_hartree": -0.04948849989408628,
+        "endpoint_expression": "E_FUD-E_DSI3",
+        "endpoint_hartree": 0.06955916812603391,
+        "endpoint_sign": "positive",
+        "interpretation": {
+          "allowed": "physical LFMO cross-group component change and within-group orbital response",
+          "forbidden": "source-equivalent stabilization or destabilization production label",
+          "production_label_allowed": false,
+          "restricted_cross_baseline_subtracted": true
+        },
+        "method": "physical_nonorthogonal_cross_change_plus_within_response_identity",
+        "orbital_response_hartree": 0.044482034475777255,
+        "positive_direct_masked_by_response": false,
+        "relaxed_components": {
+          "block_energy_assembly_residual_hartree": 9.094947017729282e-13,
+          "cross_group_hartree": 0.025077133648814854,
+          "cross_one_electron_by_pair_hartree": {
+            "pi_A__pi_B": 0.2948310869364952,
+            "pi_A__pi_C": 0.0019594348564036536,
+            "pi_A__sigma_all": -5.479214924792933e-20,
+            "pi_B__pi_C": -0.22222488824999773,
+            "pi_B__sigma_all": -1.176059385419321e-19,
+            "pi_C__sigma_all": -3.095645211022685e-20
+          },
+          "cross_one_electron_hartree": 0.0745656335429011,
+          "cross_pair_terms_hartree": {
+            "pi_A__pi_B": 0.14517713616312106,
+            "pi_A__pi_C": 0.0003609646601169553,
+            "pi_A__sigma_all": -3.9347083349579096e-20,
+            "pi_B__pi_C": -0.12046096717442316,
+            "pi_B__sigma_all": -9.005895373851442e-20,
+            "pi_C__sigma_all": -2.161873938133462e-20
+          },
+          "cross_split_residual_hartree": 2.7755575615628914e-17,
+          "cross_two_electron_by_pair_hartree": {
+            "pi_A__pi_B": -0.1496539507733747,
+            "pi_A__pi_C": -0.0015984701962867016,
+            "pi_A__sigma_all": 1.5445065898350267e-20,
+            "pi_B__pi_C": 0.10176392107557512,
+            "pi_B__sigma_all": 2.7546984803417595e-20,
+            "pi_C__sigma_all": 9.33771272889223e-21
+          },
+          "cross_two_electron_hartree": -0.04948849989408628,
+          "density_reconstruction_residual": 2.079739377848931e-15,
+          "electronic_energy_hartree": -1301.1815457965072,
+          "total_energy_hartree": -553.1259708943176,
+          "within_group_hartree": -1301.206622930156,
+          "within_group_terms_hartree": {
+            "pi_A": -55.75817970578465,
+            "pi_B": -21.41565488633356,
+            "pi_C": -54.80956065303362,
+            "sigma_all": -1169.2232276850043
+          }
+        },
+        "relaxed_cross_group_hartree": 0.025077133648814854,
+        "relaxed_within_group_hartree": -1301.206622930156,
+        "response_sign": "positive",
+        "restricted_components": {
+          "block_energy_assembly_residual_hartree": 1.3642420526593924e-12,
+          "cross_group_hartree": 6.546786355360813e-35,
+          "cross_one_electron_by_pair_hartree": {
+            "pi_A__pi_B": 4.367012784657177e-36,
+            "pi_A__pi_C": -7.405527316947095e-38,
+            "pi_A__sigma_all": 6.882217132447213e-35,
+            "pi_B__pi_C": 8.469035305212518e-36,
+            "pi_B__sigma_all": 3.000741197363251e-35,
+            "pi_C__sigma_all": 3.148218928758427e-35
+          },
+          "cross_one_electron_hartree": 1.4307376540238914e-34,
+          "cross_pair_terms_hartree": {
+            "pi_A__pi_B": 2.23169580289137e-36,
+            "pi_A__pi_C": -4.058801298244416e-38,
+            "pi_A__sigma_all": 3.12790666156371e-35,
+            "pi_B__pi_C": 4.3539965704840915e-36,
+            "pi_B__sigma_all": 1.1829078901321154e-35,
+            "pi_C__sigma_all": 1.5814613676256851e-35
+          },
+          "cross_split_residual_hartree": 2.1382117680737565e-50,
+          "cross_two_electron_by_pair_hartree": {
+            "pi_A__pi_B": -2.135316981765808e-36,
+            "pi_A__pi_C": 3.3467260187026774e-38,
+            "pi_A__sigma_all": -3.7543104708835026e-35,
+            "pi_B__pi_C": -4.1150387347284246e-36,
+            "pi_B__sigma_all": -1.8178333072311375e-35,
+            "pi_C__sigma_all": -1.5667575611327425e-35
+          },
+          "cross_two_electron_hartree": -7.760590184878103e-35,
+          "density_reconstruction_residual": 2.1288958080677084e-15,
+          "electronic_energy_hartree": -1301.2511049646318,
+          "total_energy_hartree": -553.1955300624418,
+          "within_group_hartree": -1301.2511049646318,
+          "within_group_terms_hartree": {
+            "pi_A": -55.64631725299495,
+            "pi_B": -20.90028699778639,
+            "pi_C": -55.32033138794866,
+            "sigma_all": -1169.384169325902
+          }
+        },
+        "restricted_cross_group_baseline_hartree": 6.546786355360813e-35,
+        "restricted_within_group_hartree": -1301.2511049646318
+      }
+    },
+    "17.0": {
+      "angle_degrees": 17.0,
+      "basis_anchor": "DSI-3",
+      "basis_digest": "c9a8dde36ef93deb15e6608947f56b8735eb19cd63bdde5e236493d1b85e669c",
+      "basis_role": "density_reporting_only",
+      "basis_shape": [
+        218,
+        218
+      ],
+      "checks": {
+        "direct_response_closes": true,
+        "dsi3_native_source_pass": true,
+        "fud_native_source_pass": true,
+        "fud_not_resolved_on_reporting_basis": true,
+        "native_endpoint_finite": true,
+        "native_endpoint_matches_source_metric": true,
+        "pi_cross_split_closes": true,
+        "reporting_basis_full_rank": true,
+        "response_split_closes": true
+      },
+      "native_source_metric_endpoint_hartree": 0.06612158221355457,
+      "native_state_energies_hartree": {
+        "DSI3": -553.203923807792,
+        "FUD": -553.1378022255786
+      },
+      "source_local_three_bucket_view": {
+        "direct_total_hartree": 0.142786269323921,
+        "orbital_response_total_hartree": -0.07666468711113339,
+        "pi_pi_direct_change_hartree": 0.14278626932526314,
+        "pi_pi_direct_sign": "positive",
+        "pi_response_hartree": -0.23786159116482253,
+        "pi_sigma_direct_change_hartree": -1.3421586082509626e-12,
+        "sigma_response_hartree": 0.16119690405366782
+      },
+      "technical_pass": true,
+      "transition": {
+        "closure_residual_hartree": 5.395961455434417e-13,
+        "component_sum_hartree": 0.0661215822127876,
+        "direct_cross_group_change_hartree": 0.142786269323921,
+        "direct_one_electron_change_hartree": 0.30228050190953737,
+        "direct_sign": "positive",
+        "direct_split_residual_hartree": 2.7755575615628914e-17,
+        "direct_two_electron_change_hartree": -0.15949423258561635,
+        "endpoint_expression": "E_FUD-E_DSI3",
+        "endpoint_hartree": 0.0661215822133272,
+        "endpoint_sign": "positive",
+        "interpretation": {
+          "allowed": "physical LFMO cross-group component change and within-group orbital response",
+          "forbidden": "source-equivalent stabilization or destabilization production label",
+          "production_label_allowed": false,
+          "restricted_cross_baseline_subtracted": true
+        },
+        "method": "physical_nonorthogonal_cross_change_plus_within_response_identity",
+        "orbital_response_hartree": -0.07666468711113339,
+        "positive_direct_masked_by_response": false,
+        "relaxed_components": {
+          "block_energy_assembly_residual_hartree": 2.2737367544323206e-13,
+          "cross_group_hartree": 0.14278626932392094,
+          "cross_one_electron_by_pair_hartree": {
+            "pi_A__pi_B": 0.50865062499025,
+            "pi_A__pi_C": 0.0006181235055742648,
+            "pi_A__sigma_all": -6.275437604270715e-12,
+            "pi_B__pi_C": -0.2069882465837058,
+            "pi_B__sigma_all": 3.67416032849123e-12,
+            "pi_C__sigma_all": 2.001212589880195e-14
+          },
+          "cross_one_electron_hartree": 0.30228050190953726,
+          "cross_pair_terms_hartree": {
+            "pi_A__pi_B": 0.25571805856121094,
+            "pi_A__pi_C": -0.0002623145216992866,
+            "pi_A__sigma_all": -3.117993694981919e-12,
+            "pi_B__pi_C": -0.1126694747142485,
+            "pi_B__sigma_all": 1.7659170884617147e-12,
+            "pi_C__sigma_all": 9.868447486119956e-15
+          },
+          "cross_split_residual_hartree": 2.7755575615628914e-17,
+          "cross_two_electron_by_pair_hartree": {
+            "pi_A__pi_B": -0.25293256642903894,
+            "pi_A__pi_C": -0.0008804380272735476,
+            "pi_A__sigma_all": 3.1574439092887946e-12,
+            "pi_B__pi_C": 0.09431877186945713,
+            "pi_B__sigma_all": -1.9082432400295165e-12,
+            "pi_C__sigma_all": -1.014367841268197e-14
+          },
+          "cross_two_electron_hartree": -0.1594942325856163,
+          "density_reconstruction_residual": 2.2202308131863134e-15,
+          "electronic_energy_hartree": -1301.0559454318613,
+          "total_energy_hartree": -553.1378022255789,
+          "within_group_hartree": -1301.1987317011854,
+          "within_group_terms_hartree": {
+            "pi_A": -55.79997595437363,
+            "pi_B": -21.503536766876152,
+            "pi_C": -54.80040843918605,
+            "sigma_all": -1169.0948105407494
+          }
+        },
+        "relaxed_cross_group_hartree": 0.14278626932392094,
+        "relaxed_within_group_hartree": -1301.1987317011854,
+        "response_sign": "negative",
+        "restricted_components": {
+          "block_energy_assembly_residual_hartree": 1.5916157281026244e-12,
+          "cross_group_hartree": -4.955078312037644e-17,
+          "cross_one_electron_by_pair_hartree": {
+            "pi_A__pi_B": 2.7357048344088016e-27,
+            "pi_A__pi_C": 3.5935397483518747e-29,
+            "pi_A__sigma_all": -9.737728435579332e-17,
+            "pi_B__pi_C": -1.2778452736660734e-36,
+            "pi_B__sigma_all": 1.2995169467966682e-26,
+            "pi_C__sigma_all": 4.509715459504774e-29
+          },
+          "cross_one_electron_hartree": -9.737728433998142e-17,
+          "cross_pair_terms_hartree": {
+            "pi_A__pi_B": 1.5305176746138539e-27,
+            "pi_A__pi_C": 1.9797368841409845e-29,
+            "pi_A__sigma_all": -4.9550783128894477e-17,
+            "pi_B__pi_C": -6.6451297644635145e-37,
+            "pi_B__sigma_all": 6.941979938437528e-27,
+            "pi_C__sigma_all": 2.5737716143022674e-29
+          },
+          "cross_split_residual_hartree": 4.930380657631324e-32,
+          "cross_two_electron_by_pair_hartree": {
+            "pi_A__pi_B": -1.205187159794948e-27,
+            "pi_A__pi_C": -1.6138028642108924e-29,
+            "pi_A__sigma_all": 4.78265012268988e-17,
+            "pi_B__pi_C": 6.133322972197224e-37,
+            "pi_B__sigma_all": -6.053189529529154e-27,
+            "pi_C__sigma_all": -1.9359438452024856e-29
+          },
+          "cross_two_electron_hartree": 4.7826501219604925e-17,
+          "density_reconstruction_residual": 2.6242140784887947e-15,
+          "electronic_energy_hartree": -1301.1220670140742,
+          "total_energy_hartree": -553.2039238077904,
+          "within_group_hartree": -1301.1220670140742,
+          "within_group_terms_hartree": {
+            "pi_A": -55.64715171711324,
+            "pi_B": -20.90046781914662,
+            "pi_C": -55.31844003301115,
+            "sigma_all": -1169.2560074448031
+          }
+        },
+        "restricted_cross_group_baseline_hartree": -4.955078312037644e-17,
+        "restricted_within_group_hartree": -1301.1220670140742
+      }
+    }
+  },
+  "protocol": "lfmo-sigma-pi/source-native-density-reporting-basis-direct-response/0.1",
+  "provenance": {
+    "config_sha256": "2d901e3a539a3049ea9edf8cbc55cc8b9c65162eca35bcf4d78e37467a2ec7ec",
+    "git_commit": "d15b9a8592769ae172d80eed9c35471540a5b8e5"
+  },
+  "technical_pass": true
+}

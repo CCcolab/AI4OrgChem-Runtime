@@ -1,0 +1,44 @@
+schema_version: 1
+conclusion_id: target-a-table-5-15-scoped-scientific-conclusion/0.1
+protocol_id: lfmo-sigma-pi/p05-target-a-table-5-15-scoped-release/0.1
+source_sign_convention: positive_E_G_minus_E_FUD_is_destabilizing_pi_sigma_endpoint
+sign_tolerance_hartree: 1.0e-8
+component_closure_tolerance_hartree: 1.0e-9
+inputs:
+  source_ledger: artifacts/raw/source_table_5_15_fixed_twist_pi_sigma_nba_2026-08-15.json
+  direct_response_certificate: artifacts/raw/target_a_source_direct_response_certificate_2026-08-16.json
+  source_calculation_config: configs/qm/source_table_5_15_fixed_twist_pi_sigma_nba_v1.0.yaml
+calculation_contract:
+  family_id: diphenyl_imine
+  method: RHF
+  basis: 6-31g(d)
+  engine: PySCF
+  engine_version: 2.14.0
+  resource_profile: configs/resources/local_wsl.yaml
+  geometry_disposition: fixed_parent_rigid_twist_source_proxy_not_historical_cartesian_identity
+  source_reference_doi: 10.6084/m9.figshare.27261243.v1
+  source_reference_pages: [138, 139, 140, 141]
+accepted_points:
+  - angle_degrees: 0.0
+    required_label: indeterminate_within_tolerance
+  - angle_degrees: 17.0
+    required_label: pi_sigma_source_endpoint_destabilizing_at_17deg_table_5_15_source_proxy
+outputs:
+  labels: data/processed/target_a_table_5_15_scoped_scientific_labels_v0.1.jsonl
+  report: docs/reports/target_a_table_5_15_scoped_scientific_conclusion_2026-08-20.md
+boundaries:
+  proposition_id: P05
+  target: Target_A
+  scientific_scope: fixed_table_5_15_source_proxy_0_and_17_degrees_only
+  final_scoped_scientific_conclusion: true
+  source_nonvariational_ledger: true
+  physical_variational_interaction_energy: false
+  historical_coordinate_identity: false
+  universal_all_molecules_law: false
+  geometry_scan: false
+  basis_scan: false
+  additional_molecules: false
+  production_label: false
+  training_eligible: false
+  ai_generalization_claim: false
+

@@ -1,0 +1,21 @@
+schema_version: 1
+experiment_id: fud-diphenyl-source-metric/0.1-candidate
+status: nonproduction_source_metric_pi_pi_candidate
+production_labels_allowed: false
+base_config: configs/qm/dsi2_diphenyl_imine_source_shaped_v0.1.yaml
+active_masked_state: fud_state
+fud_state:
+  id: FUD
+  pi_superfragments: [molecule]
+  sigma_superfragments: [molecule]
+  fixed_doubly_occupied_roots: [7, 41]
+  expected_group_electrons: [14, 82]
+  density_reconstruction: source_block_metric_group_projector
+  physical_density_idempotency_required: false
+  solver: density_fixed_point_with_diis
+  density_fixed_point_tolerance: 1.0e-8
+  density_diis_start_cycle: 2
+  density_diis_space: 8
+  density_max_cycles: 200
+  occupation_status: molecule_specific_project_candidate
+  energy_label_enabled: false

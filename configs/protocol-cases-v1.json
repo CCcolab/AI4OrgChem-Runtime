@@ -1,0 +1,113 @@
+{
+  "schema": "protocol-cases-v1",
+  "general_conditional_compute": "BLOCKED",
+  "cases": {
+    "P03": {
+      "name_zh": "约束扭转路径账本与固定端点 DFT",
+      "source_protocol_context_id": "p03-parent-nba-relaxed-pes/0.1",
+      "runtime_protocol_id": "runtime-p03-bounded/0.1",
+      "modes": [
+        "ledger",
+        "preflight",
+        "live"
+      ],
+      "status": "CANDIDATE_PENDING_MEASURED_VALIDATION"
+    },
+    "P04": {
+      "name_zh": "源原生双状态直接响应",
+      "source_protocol_context_id": "lfmo-sigma-pi/0.5-target-c-scoped-release",
+      "runtime_protocol_id": "runtime-p04-bounded/0.1",
+      "modes": [
+        "ledger",
+        "preflight",
+        "live"
+      ],
+      "status": "CANDIDATE_PENDING_MEASURED_VALIDATION"
+    },
+    "P05": {
+      "name_zh": "π–σ 条件能量单点",
+      "source_protocol_context_id": "source-equivalent-reconstruction/table-5-15-seven-angle-continuation/0.2",
+      "runtime_protocol_id": "runtime-p05-bounded/0.1",
+      "modes": [
+        "ledger",
+        "preflight",
+        "live"
+      ],
+      "status": "CANDIDATE_PENDING_MEASURED_VALIDATION"
+    },
+    "P06": {
+      "name_zh": "双片段条件能量独立组装",
+      "source_protocol_context_id": "lfmo-sigma-pi/p06-target-b-table-5-19-scoped-release/0.1",
+      "runtime_protocol_id": "runtime-p06-bounded/0.1",
+      "modes": [
+        "ledger",
+        "preflight",
+        "live"
+      ],
+      "status": "CANDIDATE_PENDING_MEASURED_VALIDATION"
+    },
+    "P07": {
+      "name_zh": "同 Hamiltonian 路径闭合账本",
+      "source_protocol_context_id": "p07-same-hamiltonian-path-audit/0.2",
+      "runtime_protocol_id": "runtime-p07-bounded/0.1",
+      "modes": [
+        "ledger",
+        "preflight"
+      ],
+      "status": "CANDIDATE_PENDING_MEASURED_VALIDATION"
+    },
+    "P08": {
+      "name_zh": "丁二烯 GL 固定端点与参照热化学",
+      "source_protocol_context_id": "p08-butadiene-gl2014-independent/0.1",
+      "runtime_protocol_id": "runtime-p08-bounded/0.1",
+      "modes": [
+        "ledger",
+        "preflight",
+        "live"
+      ],
+      "status": "CANDIDATE_PENDING_MEASURED_VALIDATION"
+    },
+    "P09": {
+      "name_zh": "环丁二烯固定几何条件态诊断",
+      "source_protocol_context_id": "p09-benzene-cyclobutadiene-aromatic-energy/0.1",
+      "runtime_protocol_id": "runtime-p09-bounded/0.1",
+      "modes": [
+        "ledger",
+        "preflight",
+        "live"
+      ],
+      "status": "CANDIDATE_PENDING_MEASURED_VALIDATION"
+    },
+    "P10": {
+      "name_zh": "苯核排斥与五点普通 DFT 扫描",
+      "source_protocol_context_id": "p10-benzene-nuclear-repulsion/0.1",
+      "runtime_protocol_id": "runtime-p10-bounded/0.1",
+      "modes": [
+        "ledger",
+        "preflight",
+        "live"
+      ],
+      "status": "CANDIDATE_PENDING_MEASURED_VALIDATION"
+    }
+  },
+  "live_budget": {
+    "one_attempt_per_case": true,
+    "maximum_scientific_cases": 7,
+    "max_wall_seconds_per_case": 900,
+    "total_reserved_wall_ceiling_seconds": 6300,
+    "memory_bytes": 4294967296,
+    "cpus": 2,
+    "threads": 2,
+    "automatic_retry": false,
+    "original_budget_reused": false
+  },
+  "prohibitions": [
+    "geometry optimization",
+    "arbitrary user conditional states",
+    "tolerance changes",
+    "source workspace writes",
+    "WSLc",
+    "online calculation",
+    "publishing"
+  ]
+}

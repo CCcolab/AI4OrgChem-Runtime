@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "protocol_id": "p09-benzene-cyclobutadiene-aromatic-energy/0.1",
+  "proposition_id": "P09",
+  "stage": "benzene_optimized_G_and_same_geometry_three_fragment_smoke",
+  "method": {
+    "engine": "PySCF",
+    "pyscf_xc": "B3LYPG",
+    "basis": "6-31g(d)",
+    "original_program_code_used": false,
+    "fit_to_published_values": false,
+    "published_ESE_read_by_calculation": false
+  },
+  "optimized_G_geometry": {
+    "optimizer_converged": true,
+    "optimizer_cycles": 3,
+    "atoms_angstrom": [
+      [
+        "C",
+        1.3969456458331369,
+        3.930285287720303e-13,
+        0.0
+      ],
+      [
+        "C",
+        0.6984728229162283,
+        1.2097904169977522,
+        0.0
+      ],
+      [
+        "C",
+        -0.6984728229169087,
+        1.2097904169973592,
+        0.0
+      ],
+      [
+        "C",
+        -1.3969456458331369,
+        -3.931425449296304e-13,
+        0.0
+      ],
+      [
+        "C",
+        -0.6984728229162284,
+        -1.209790416997752,
+        0.0
+      ],
+      [
+        "C",
+        0.6984728229169092,
+        -1.209790416997359,
+        0.0
+      ],
+      [
+        "H",
+        2.4839505150602146,
+        6.988556923375502e-13,
+        0.0
+      ],
+      [
+        "H",
+        1.2419752575295024,
+        2.151164247785936,
+        0.0
+      ],
+      [
+        "H",
+        -1.2419752575307124,
+        2.1511642477852373,
+        0.0
+      ],
+      [
+        "H",
+        -2.4839505150602146,
+        -6.990584278514485e-13,
+        0.0
+      ],
+      [
+        "H",
+        -1.2419752575295027,
+        -2.151164247785936,
+        0.0
+      ],
+      [
+        "H",
+        1.2419752575307133,
+        -2.151164247785237,
+        0.0
+      ]
+    ],
+    "geometry_sha256": "B3649795109398A22F70DA5C04785FCBD931881DF8DAE1BDB229A22414B32572",
+    "raw_optimizer_atoms_angstrom": [
+      [
+        "C",
+        1.396584299802014,
+        2.608473321206284e-13,
+        1.0787672769266467e-14
+      ],
+      [
+        "C",
+        0.6984621384471082,
+        1.210005203284341,
+        2.4181963709311304e-15
+      ],
+      [
+        "C",
+        -0.6984621384479951,
+        1.2100052032837347,
+        -2.477590936455911e-16
+      ],
+      [
+        "C",
+        -1.396584299802117,
+        -2.201045209326914e-13,
+        -5.545643064147947e-16
+      ],
+      [
+        "C",
+        -0.698462138448155,
+        -1.2100052032844453,
+        5.235074260827641e-15
+      ],
+      [
+        "C",
+        0.6984621384473712,
+        -1.2100052032841624,
+        1.496540258006404e-14
+      ],
+      [
+        "H",
+        2.483579032832707,
+        2.13733820362768e-13,
+        1.54398589471293e-14
+      ],
+      [
+        "H",
+        1.2420541167569894,
+        2.1513331936927984,
+        5.326248119109459e-16
+      ],
+      [
+        "H",
+        -1.2420541167579635,
+        2.151333193691989,
+        -3.001414497664556e-15
+      ],
+      [
+        "H",
+        -2.4835790328326057,
+        -3.8868927424085627e-13,
+        -1.1116461446071265e-15
+      ],
+      [
+        "H",
+        -1.242054116757857,
+        -2.151333193693065,
+        6.285357272554504e-15
+      ],
+      [
+        "H",
+        1.2420541167574983,
+        -2.1513331936926408,
+        2.0430621377433797e-14
+      ]
+    ],
+    "d6h_projection_maximum_displacement_angstrom": 0.00037148222785932106,
+    "maximum_out_of_plane_angstrom": 0.0,
+    "ring_CC_bonds_angstrom": [
+      1.3969456458331366,
+      1.3969456458331369,
+      1.396945645833137,
+      1.3969456458331364,
+      1.3969456458331375,
+      1.3969456458331364
+    ],
+    "ring_CC_range_angstrom": 1.1102230246251565e-15,
+    "history": [
+      {
+        "cycle": 1,
+        "energy_hartree": -232.24379502718702,
+        "gradient_rms_hartree_per_bohr": 0.0011652952706574437,
+        "gradient_max_hartree_per_bohr": 0.002061975649223058
+      },
+      {
+        "cycle": 2,
+        "energy_hartree": -232.24382859759936,
+        "gradient_rms_hartree_per_bohr": 2.8522085167406587e-05,
+        "gradient_max_hartree_per_bohr": 6.887713870007417e-05
+      },
+      {
+        "cycle": 3,
+        "energy_hartree": -232.24382848169483,
+        "gradient_rms_hartree_per_bohr": 4.9308932924508414e-05,
+        "gradient_max_hartree_per_bohr": 0.00017992906033015288
+      }
+    ]
+  },
+  "ordinary_G_state": {
+    "converged": true,
+    "total_energy_hartree": -232.2438286752168,
+    "physical_metric_electron_count": 41.999999999999986
+  },
+  "conditional_DSI3_at_G_geometry": {
+    "converged": true,
+    "cycles": 10,
+    "total_energy_hartree": -232.19384286187986,
+    "electronic_energy_hartree": -435.3400421068785,
+    "nuclear_repulsion_hartree": 203.14619924499866,
+    "one_electron_energy_hartree": -713.3782408937227,
+    "coulomb_energy_hartree": 312.8140543407584,
+    "exact_exchange_energy_hartree": -6.641386919829009,
+    "semilocal_xc_energy_hartree": -28.1344686340852,
+    "energy_component_closure_residual_hartree": 0.0,
+    "grid_electron_count": 42.000082987860964,
+    "masked_metric_electron_count": 42.000000000000014,
+    "physical_metric_electron_count": 42.000000000000014,
+    "masked_overlap_minimum_eigenvalue": 0.0005365701268979993,
+    "masked_overlap_condition_number": 10474.623625868613,
+    "masked_overlap_cross_pi_max_abs": 0.0,
+    "conditional_fock_cross_pi_max_abs": 0.0,
+    "deleted_eri_count": 12091392,
+    "total_eri_count": 84934656,
+    "deleted_eri_fraction": 0.1423611111111111,
+    "exact_exchange_fraction": 0.2,
+    "final_commutator_frobenius_norm": 1.8801626062070675e-08,
+    "closed_shell_idempotency_relative_residual": 2.814865403304891e-15,
+    "occupied_virtual_gap_hartree": 0.250018249126243,
+    "history": [
+      {
+        "cycle": 1.0,
+        "total_energy_hartree": -231.7801574543981,
+        "energy_change_hartree": Infinity,
+        "density_residual": 0.19239800702470536,
+        "commutator_frobenius_norm": 0.7203246952225782,
+        "masked_metric_electron_count": 41.28087659323049,
+        "physical_metric_electron_count": 41.999999999999986
+      },
+      {
+        "cycle": 2.0,
+        "total_energy_hartree": -232.09338267411025,
+        "energy_change_hartree": 0.31322521971213746,
+        "density_residual": 0.11838601760294655,
+        "commutator_frobenius_norm": 0.5632180938643266,
+        "masked_metric_electron_count": 41.85617531864611,
+        "physical_metric_electron_count": 42.00000000000001
+      },
+      {
+        "cycle": 3.0,
+        "total_energy_hartree": -232.16530188886944,
+        "energy_change_hartree": 0.07191921475919116,
+        "density_residual": 0.02645658093004082,
+        "commutator_frobenius_norm": 0.3137440179715101,
+        "masked_metric_electron_count": 41.97123506372923,
+        "physical_metric_electron_count": 42.00000000000001
+      },
+      {
+        "cycle": 4.0,
+        "total_energy_hartree": -232.19372059417893,
+        "energy_change_hartree": 0.028418705309491088,
+        "density_residual": 0.007299660805704886,
+        "commutator_frobenius_norm": 0.040871668615981696,
+        "masked_metric_electron_count": 42.00000000000001,
+        "physical_metric_electron_count": 42.00000000000001
+      },
+      {
+        "cycle": 5.0,
+        "total_energy_hartree": -232.19384190023354,
+        "energy_change_hartree": 0.00012130605460924926,
+        "density_residual": 0.0006009443813413232,
+        "commutator_frobenius_norm": 0.003770064181614788,
+        "masked_metric_electron_count": 42.00000000000003,
+        "physical_metric_electron_count": 42.00000000000003
+      },
+      {
+        "cycle": 6.0,
+        "total_energy_hartree": -232.193842860768,
+        "energy_change_hartree": 9.605344644114666e-07,
+        "density_residual": 1.591930689547919e-05,
+        "commutator_frobenius_norm": 0.0001469983044138824,
+        "masked_metric_electron_count": 42.0,
+        "physical_metric_electron_count": 42.0
+      },
+      {
+        "cycle": 7.0,
+        "total_energy_hartree": -232.19384286131267,
+        "energy_change_hartree": 5.446736395242624e-10,
+        "density_residual": 1.0594312083236319e-05,
+        "commutator_frobenius_norm": 8.309471096060028e-05,
+        "masked_metric_electron_count": 42.0,
+        "physical_metric_electron_count": 42.0
+      },
+      {
+        "cycle": 8.0,
+        "total_energy_hartree": -232.19384286162094,
+        "energy_change_hartree": 3.0826186048216186e-10,
+        "density_residual": 4.2506235473988115e-06,
+        "commutator_frobenius_norm": 6.302085848850598e-05,
+        "masked_metric_electron_count": 42.0,
+        "physical_metric_electron_count": 42.0
+      },
+      {
+        "cycle": 9.0,
+        "total_energy_hartree": -232.1938428618793,
+        "energy_change_hartree": 2.5835333872237243e-10,
+        "density_residual": 2.4732237687746055e-07,
+        "commutator_frobenius_norm": 2.3610227112560875e-06,
+        "masked_metric_electron_count": 42.00000000000001,
+        "physical_metric_electron_count": 42.00000000000001
+      },
+      {
+        "cycle": 10.0,
+        "total_energy_hartree": -232.19384286188014,
+        "energy_change_hartree": 8.526512829121202e-13,
+        "density_residual": 1.3675537968839295e-08,
+        "commutator_frobenius_norm": 1.1763186096696553e-07,
+        "masked_metric_electron_count": 42.000000000000014,
+        "physical_metric_electron_count": 42.000000000000014
+      }
+    ]
+  },
+  "diagnostic_vertical_difference_hartree": -0.04998581333694574,
+  "diagnostic_vertical_difference_kcal_mol": -31.36657143768311,
+  "acceptance_checks": {
+    "ordinary_G_optimizer_converged": true,
+    "ordinary_G_scf_converged": true,
+    "optimized_G_is_planar": true,
+    "ordinary_G_D6h_bond_equalization": true,
+    "D6h_projection_below_geometry_tolerance": true,
+    "neutral_singlet_42_electrons": true,
+    "ordinary_physical_metric_electron_count": true,
+    "benzene_AO_partition_96_72_24": true,
+    "eight_pi_AOs_per_fragment": true,
+    "conditional_DSI3_scf_converged": true,
+    "conditional_masked_metric_electron_count": true,
+    "cross_pi_overlap_zero": true,
+    "cross_pi_fock_zero": true,
+    "fifteen_class_eri_mask_applied": true,
+    "conditional_energy_components_close": true,
+    "conditional_commutator_closed": true,
+    "conditional_density_idempotent": true,
+    "diagnostic_difference_is_finite": true
+  },
+  "smoke_gate_verdict": "PASS",
+  "ESE_status": "not_computed_GL_and_GE1_not_authorized",
+  "production_labels_allowed": false,
+  "ai_training_allowed": false
+}
