@@ -1,0 +1,14 @@
+{
+  "schema": "registered-case-local-image-v1",
+  "image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+  "local_tag": "ai4orgchem-runtime:registered-cases-20261008-local",
+  "base_image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+  "image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
+  "source_snapshot_sha256": "1bc64c322920671b9fe2335b13ea639619e960648422e7eb984c4001f2a481ca",
+  "dependency_lock_sha256": "511711d709508ff77fa995b120d5aeed3a9058984868a3a17f1d0604b788d393",
+  "image_distribution": "BLOCKED",
+  "public_registry_manifest_digest": null,
+  "build_network": "none",
+  "build_source_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-registered-p02-p13-p01\\build-source",
+  "through_inspection_seconds": 100.8729145526886
+}
