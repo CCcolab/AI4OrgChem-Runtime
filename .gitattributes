@@ -4,3 +4,11 @@
 scripts/start-local-runtime.ps1 -text
 scripts/start-registered-case.ps1 -text
 scripts/start-molecular-service.ps1 -text
+# Batch2 byte locks include captured historical files; preserve their raw bytes.
+reference/protocol_cases/source_tree/** -text
+runtime/protocol_cases/** -text
+tests/test_protocol_cases*.py -text
+scripts/start-protocol-case.ps1 -text
+scripts/run-protocol-case.py -text
+scripts/ci-protocol-cases.py -text
+scripts/list-protocol-cases.py -text
