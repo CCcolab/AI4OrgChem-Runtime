@@ -2,12 +2,75 @@
 from pathlib import Path
 import argparse, datetime, hashlib, importlib.util, json, os, re, shutil, stat, subprocess, sys, time, uuid
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
-from runtime.high_cost_cases import SOURCE_LOCK,DEPENDENCY_LOCK,PROFILE,read_json,save,digest,verify_source,unit,units,limits,validate_contract
+from runtime.high_cost_cases import SOURCE_LOCK,DEPENDENCY_LOCK,PROFILE,read_json,save,digest,unit,units,limits,validate_contract
 from runtime.high_cost_cases.resources import host_memory,admission
 LABEL='ai4orgchem.high-cost.execution-id'
 spec=importlib.util.spec_from_file_location('_preserved_batch2_path_helpers',ROOT/'scripts/run-protocol-case.py')
 helpers=importlib.util.module_from_spec(spec);spec.loader.exec_module(helpers)
 validate_directory=helpers.validate_directory
+
+# This exception covers only final host evidence collection. The worker keeps
+# the original 107-file scientific/source lock and immutable image identity.
+HOST_LAUNCHER_LOCK=ROOT/'locks/high-cost-host-launcher.json'
+HOST_LAUNCHER_FILES=frozenset(['scripts/run-high-cost-case.py','tests/test_high_cost_supervisor.py'])
+BASE_SOURCE_SHA256='d8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322'
+BASE_IMAGE_ID='sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc'
+
+def _base_host_sources(record):
+    if digest(SOURCE_LOCK)!=BASE_SOURCE_SHA256 or record.get('source_sha256')!=BASE_SOURCE_SHA256 or record.get('image_id')!=BASE_IMAGE_ID:
+        raise ValueError('Frozen host/worker base source or image differs')
+    source=read_json(SOURCE_LOCK);rows=source.get('files')
+    if not isinstance(rows,list) or len(rows)!=107:raise ValueError('Original 107-file source lock required')
+    paths={}
+    for row in rows:
+        if not isinstance(row,dict) or set(row)!={'path','sha256','size'}:raise ValueError('Original source file fields differ')
+        name=row['path'];rel=Path(name)
+        if not isinstance(name,str) or rel.is_absolute() or '..' in rel.parts or ':' in name or '\\' in name or name in paths or not re.fullmatch('[0-9a-f]{64}',str(row['sha256'])):
+            raise ValueError('Unsafe or duplicate base source path/hash')
+        if type(row['size']) is not int or row['size']<0:raise ValueError('Invalid base source size')
+        paths[name]=row
+    if not HOST_LAUNCHER_FILES<=set(paths):raise ValueError('The two fixed host paths are absent from base source')
+    return paths
+
+def _verify_host_files(base,overrides):
+    for name,row in base.items():
+        path=ROOT/name
+        expected=overrides[name]['sha256'] if name in overrides else row['sha256']
+        if path.is_symlink() or not path.is_file() or digest(path)!=expected:
+            raise ValueError('Host source byte identity differs: '+name)
+
+def make_host_launcher_lock(record=None):
+    record=record or read_json(ROOT/'validation/high-cost-cases/candidate-image.json')
+    base=_base_host_sources(record)
+    files={name:{'base_sha256':base[name]['sha256'],'sha256':digest(ROOT/name)} for name in sorted(HOST_LAUNCHER_FILES)}
+    _verify_host_files(base,files)
+    return {'schema':'high-cost-host-launcher-v1','scope':'HOST_FINAL_EVIDENCE_ONLY',
+            'base_source_sha256':BASE_SOURCE_SHA256,'image_id':BASE_IMAGE_ID,'files':files}
+
+def verify_source(record=None):
+    record=record or read_json(ROOT/'validation/high-cost-cases/candidate-image.json')
+    base=_base_host_sources(record);registered=record.get('host_launcher_lock_sha256')
+    if registered is None:
+        _verify_host_files(base,{})
+        return {'schema':'high-cost-host-launcher-identity-v1','scope':'BASELINE_NO_OVERLAY',
+                'base_source_sha256':BASE_SOURCE_SHA256,'image_id':BASE_IMAGE_ID,'host_launcher_lock_sha256':None}
+    if not re.fullmatch('[0-9a-f]{64}',str(registered)) or digest(HOST_LAUNCHER_LOCK)!=registered:
+        raise ValueError('Registered host launcher lock SHA differs')
+    overlay=read_json(HOST_LAUNCHER_LOCK)
+    if set(overlay)!={'schema','scope','base_source_sha256','image_id','files'} or overlay['schema']!='high-cost-host-launcher-v1' or overlay['scope']!='HOST_FINAL_EVIDENCE_ONLY':
+        raise ValueError('Closed final-evidence-only host launcher lock required')
+    if overlay['base_source_sha256']!=BASE_SOURCE_SHA256 or overlay['image_id']!=BASE_IMAGE_ID:
+        raise ValueError('Host launcher lock base source/image binding differs')
+    files=overlay['files']
+    if not isinstance(files,dict) or set(files)!=HOST_LAUNCHER_FILES:
+        raise ValueError('Only the two frozen host file overrides are allowed')
+    for name,row in files.items():
+        if not isinstance(row,dict) or set(row)!={'base_sha256','sha256'} or row['base_sha256']!=base[name]['sha256'] or not re.fullmatch('[0-9a-f]{64}',str(row['sha256'])):
+            raise ValueError('Host file override base/hash differs')
+    _verify_host_files(base,files)
+    return {'schema':'high-cost-host-launcher-identity-v1','scope':overlay['scope'],
+            'base_source_sha256':BASE_SOURCE_SHA256,'image_id':BASE_IMAGE_ID,
+            'host_launcher_lock_sha256':registered,'files':files}
 
 class DockerJournal:
     def __init__(self,exe,run):self.exe=exe;self.run=run;self.deadline=None
@@ -112,12 +175,12 @@ def verify_outputs(out,c):
         if r.get(field)!=digest(out/file):raise ValueError('Receipt hash differs')
     return {'status':'PASS','worker_receipt_sha256':digest(out/'worker-receipt.json'),'result_sha256':digest(out/'result.json'),'counts':g['counts']}
 def run(args):
-    verify_source();root=validate_directory(args.output_root);root.mkdir(parents=True,exist_ok=True)
+    host_launcher=verify_source();root=validate_directory(args.output_root);root.mkdir(parents=True,exist_ok=True)
     identifier=uuid.uuid4().hex;run=root/(datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+(args.unit or args.task)+'-'+identifier);run.mkdir()
     out=run/'output';out.mkdir();scratch=run/'scratch';scratch.mkdir();(run/'contract').mkdir()
     lock=root/'.high-cost-active.lock';locked=False;cid=None;docker=DockerJournal(args.docker_executable,run);start=None;reservation=None;code=40;c=None;create_attempted=False;absence_confirmed=False
     probe_name='high-cost-resource-probe-'+identifier;probe_attempted=False
-    e={'schema':'high-cost-host-v1','execution_id':identifier,'case':args.task,'unit':args.unit,'mode':args.mode,'status':'NOT_EXECUTED','container_removed':False,'worker_started':False,'automatic_retry':False,'resume_supported':False}
+    e={'schema':'high-cost-host-v1','execution_id':identifier,'case':args.task,'unit':args.unit,'mode':args.mode,'status':'NOT_EXECUTED','container_removed':False,'worker_started':False,'automatic_retry':False,'resume_supported':False,'host_launcher':host_launcher}
     try:
         with lock.open('x',encoding='utf-8') as f:json.dump({'execution_id':identifier},f)
         locked=True
@@ -195,17 +258,6 @@ def run(args):
                     if after!=e['evidence_review']:raise ValueError('Output changed after deletion')
                     e['post_removal_evidence_review']=after;e['status']='PASS_SCOPED_HIGH_COST_'+args.mode.upper()
             except BaseException as error:e.update(cleanup_error=type(error).__name__+': '+str(error),status='FAILED_OR_UNKNOWN_CLEANUP');code=50
-        # Only persistent evidence is hashed; temporary scratch is explicitly
-        # excluded, so tens of GiB of intermediates do not delay cleanup/hash.
-        hashes={str(f.relative_to(run)).replace('\\','/'):digest(f) for f in run.rglob('*') if f.is_file() and not f.is_symlink() and scratch not in f.parents}
-        elapsed=time.monotonic()-start if start else 0
-        if start and elapsed>c['resources']['hard_wall_seconds']:e['status']='FAILED_HARD_WALL_EXCEEDED';code=50
-        e.update(host_exit_code=code,through_cleanup_wall_seconds=elapsed,ended_utc=datetime.datetime.now(datetime.timezone.utc).isoformat())
-        if reservation:
-            try:
-                from runtime.high_cost_cases.budget import settle
-                e['budget']=settle(args.budget,identifier,elapsed,e['container_removed'] or absence_confirmed or not create_attempted,e['status'])
-            except BaseException as error:e['budget_error']=str(error);code=40;e.update(host_exit_code=code,status='FAILED_BUDGET_CLOSURE')
         if probe_attempted:
             try:
                 old_deadline=docker.deadline;docker.deadline=None
@@ -222,6 +274,18 @@ def run(args):
                 if read_json(lock).get('execution_id')!=identifier:raise ValueError('Active lock ownership differs')
                 lock.unlink();e['owned_lock_released']=True
             except BaseException as error:e.update(status='FAILED_LOCK_CLEANUP',host_exit_code=40,lock_cleanup_error=str(error));code=40
+        # Close every owned Docker operation before hashing the journal and its
+        # stdout/stderr files. Probe cleanup also appends to commands.jsonl.
+        # Scratch is retained but excluded from scientific output hashes.
+        hashes={str(f.relative_to(run)).replace('\\','/'):digest(f) for f in run.rglob('*') if f.is_file() and not f.is_symlink() and scratch not in f.parents}
+        elapsed=time.monotonic()-start if start else 0
+        if start and elapsed>c['resources']['hard_wall_seconds']:e['status']='FAILED_HARD_WALL_EXCEEDED';code=50
+        e.update(host_exit_code=code,through_cleanup_wall_seconds=elapsed,ended_utc=datetime.datetime.now(datetime.timezone.utc).isoformat())
+        if reservation:
+            try:
+                from runtime.high_cost_cases.budget import settle
+                e['budget']=settle(args.budget,identifier,elapsed,e['container_removed'] or absence_confirmed or not create_attempted,e['status'])
+            except BaseException as error:e['budget_error']=str(error);code=40;e.update(host_exit_code=code,status='FAILED_BUDGET_CLOSURE')
         save(run/'host-execution.json',e)
         hashes['host-execution.json']=digest(run/'host-execution.json')
         save(run/'host-run-manifest.json',{'schema':'high-cost-host-output-v1','execution_id':identifier,'status':e['status'],'files':hashes,'scratch':'RETAINED_INTERMEDIATE_NOT_HASHED_AS_SCIENTIFIC_OUTPUT','wall_scope':'THROUGH_OWNED_SCIENTIFIC_CLEANUP_AND_EVIDENCE_HASH_COLLECTION_EXCLUDES_FINAL_RECEIPT_SERIALIZATION'})

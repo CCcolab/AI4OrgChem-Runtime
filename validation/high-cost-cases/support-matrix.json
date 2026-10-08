@@ -1,5 +1,75 @@
 {
   "candidate_image_id": "sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc",
+  "latest_capacity": {
+    "observed_at_utc": "2026-10-08T12:50:11.572651+00:00",
+    "record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+    "results": {
+      "P11": {
+        "disk_free_bytes": 243037913088,
+        "does_not_modify_global_configuration": true,
+        "does_not_stop_other_processes": true,
+        "engine": {
+          "MemTotal": 16565334016,
+          "NCPU": 22
+        },
+        "guest": {
+          "available_bytes": 15504551936,
+          "total_bytes": 16565334016
+        },
+        "host": {
+          "available_bytes": 12747505664,
+          "source": "Windows GlobalMemoryStatusEx",
+          "total_bytes": 33945935872
+        },
+        "host_reserve_bytes": 2147483648,
+        "reasons": [],
+        "resources": {
+          "cpus": 8,
+          "hard_wall_seconds": 43200,
+          "memory_bytes": 8589934592,
+          "scratch_bytes_required": 21474836480,
+          "soft_wall_seconds": 43080,
+          "threads": 8
+        },
+        "status": "PASS"
+      },
+      "P12": {
+        "disk_free_bytes": 243037913088,
+        "does_not_modify_global_configuration": true,
+        "does_not_stop_other_processes": true,
+        "engine": {
+          "MemTotal": 16565334016,
+          "NCPU": 22
+        },
+        "guest": {
+          "available_bytes": 15504551936,
+          "total_bytes": 16565334016
+        },
+        "host": {
+          "available_bytes": 12747505664,
+          "source": "Windows GlobalMemoryStatusEx",
+          "total_bytes": 33945935872
+        },
+        "host_reserve_bytes": 2147483648,
+        "reasons": [
+          "GUEST_AVAILABLE_MEMORY_PLUS_RESERVE_TOO_SMALL",
+          "HOST_AVAILABLE_MEMORY_PLUS_RESERVE_TOO_SMALL"
+        ],
+        "resources": {
+          "cpus": 16,
+          "hard_wall_seconds": 43200,
+          "memory_bytes": 15032385536,
+          "scratch_bytes_required": 21474836480,
+          "soft_wall_seconds": 43080,
+          "threads": 16
+        },
+        "status": "BLOCKED_RESOURCE_CAPACITY"
+      }
+    },
+    "scientific_calls": 0,
+    "scope": "LATEST_TASK_RESOURCE_CAPACITY_ONLY_NOT_FULL_UNIT_ADMISSION_OR_CONVERGENCE",
+    "sha256": "5bba8417990cad0dca858b3d79a0f65964f024285854d5305951503afff13e0a"
+  },
   "limits": {
     "GitHub_Actions": "NOT_EXECUTED",
     "WSL_upgrade": "PAUSED",
@@ -11,14 +81,50 @@
     "scientific_rules_or_tolerances_changed": false,
     "source_publication": "SEPARATE_CONFIRMATION_REQUIRED"
   },
+  "recorded_at_utc": "2026-10-08T12:58:22.746432+00:00",
   "schema": "high-cost-support-matrix-v1",
-  "status": "LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED",
+  "scientific_coverage": {
+    "P11": {
+      "completed_single_state_scientific_gates": 1,
+      "full_multistate_acceptance": "NOT_EXECUTED",
+      "total_states": 17,
+      "unexecuted_states": 16
+    },
+    "P12": {
+      "completed_single_state_scientific_gates": 0,
+      "full_multisize_acceptance": "NOT_EXECUTED",
+      "total_states": 61,
+      "unexecuted_states": 61
+    },
+    "complete_state_assembly": "NOT_EXECUTED_INCOMPLETE_STATE_SET",
+    "remaining_unexecuted_states": 77
+  },
+  "source_identity_boundaries": {
+    "current_HEAD_is_original_worker_build_context": false,
+    "host_launcher_lock_sha256": "c10fb922a89ef122d4988cda19db77a2d6c6dd542060a665ca1e44494afb5574",
+    "host_launcher_scope": "HOST_FINAL_EVIDENCE_ONLY",
+    "host_override_files": [
+      "scripts/run-high-cost-case.py",
+      "tests/test_high_cost_supervisor.py"
+    ],
+    "other_105_original_source_files_must_match": true,
+    "patched_host_actual_scientific_lane": "NOT_EXECUTED_ZERO_SCIENCE_LEDGER_ONLY",
+    "pilot_executed_with_patched_host": false,
+    "scientific_image_rebuilt": false,
+    "scientific_worker_image_id": "sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc",
+    "scientific_worker_runtime_build_commit": "05308a1872d769aaa85e39adbafe7020e36358e6",
+    "scientific_worker_source_sha256": "d8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322"
+  },
+  "status": "LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_P11_PILOT_PASS_P12_RESOURCE_BLOCKED",
   "units": [
     {
       "case": "P11",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;ordinary-RKS",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "ordinary_rks",
@@ -34,8 +140,11 @@
       "dependencies": [
         "P11A-furan-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-h/F/S-mask;no-ERI-deletion",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "furan_p09",
@@ -52,8 +161,11 @@
         "P11A-furan-G",
         "P11A-furan-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-h/F/S-mask;no-ERI-deletion",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "furan_p09",
@@ -70,8 +182,11 @@
         "P11A-furan-G",
         "P11A-furan-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-h/F/S-mask;no-ERI-deletion",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "furan_p09",
@@ -85,23 +200,43 @@
     {
       "case": "P11",
       "dependencies": [],
+      "full_multistate_acceptance": "NOT_EXECUTED",
+      "host_launcher_scope": "PRE_PATCH_ORIGINAL_BASELINE",
+      "image_id": "sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc",
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
+      "live_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\pilot-runs\\20261008T115227Z-P11B-benzene-G-130390e0008e44d5b1105c7341fb516d",
       "method_id": "B3LYPG/6-31g(d);grid=3;ordinary-RKS",
-      "new_optimisation": "NOT_EXECUTED",
+      "new_optimisation": "PASS_SCOPED_SINGLE_STATE_SCIENTIFIC_GATES_SUPPLEMENTED_HOST_EVIDENCE",
       "operator_id": "ordinary_rks",
+      "original_host_manifest": "INCONSISTENT_COMMAND_JOURNAL_RETAINED",
       "pair": null,
       "preflight": "PASS_REAL_AO_GEOMETRY_ZERO_QM",
       "preflight_records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-high-cost-p11-p12\\controls\\20261008T110003Z-P11-5337974855ae4b00a12fa17a64a52476",
+      "scientific_counts": {
+        "gradient": 3,
+        "grids": 5,
+        "numint": 32,
+        "optimizer": 1,
+        "scf": 5
+      },
+      "source_sha256": "d8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322",
       "state": "G",
+      "supplemental_manifest": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\pilot-evidence-addendum-manifest.json",
       "system": "benzene",
       "unit": "P11B-benzene-G"
     },
     {
       "case": "P11",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2007",
@@ -115,8 +250,11 @@
     {
       "case": "P11",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2007",
@@ -130,8 +268,11 @@
     {
       "case": "P11",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;ordinary-RKS",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "ordinary_rks",
@@ -145,8 +286,11 @@
     {
       "case": "P11",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2007",
@@ -160,8 +304,11 @@
     {
       "case": "P11",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2007",
@@ -175,8 +322,11 @@
     {
       "case": "P11",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2007",
@@ -190,8 +340,11 @@
     {
       "case": "P11",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2007",
@@ -205,8 +358,11 @@
     {
       "case": "P11",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2007",
@@ -220,8 +376,11 @@
     {
       "case": "P11",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2007",
@@ -235,8 +394,11 @@
     {
       "case": "P11",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2007",
@@ -250,8 +412,11 @@
     {
       "case": "P11",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2007",
@@ -265,8 +430,11 @@
     {
       "case": "P11",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
-      "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
+      "live_admission": "PASS_RESOURCE_CAPACITY_ONLY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-31g(d);grid=3;source2007-F/S-mask;physical-hcore-and-ERI",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2007",
@@ -280,8 +448,11 @@
     {
       "case": "P12",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "ordinary_rks",
@@ -297,8 +468,11 @@
       "dependencies": [
         "P12-N12-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -314,8 +488,11 @@
       "dependencies": [
         "P12-N12-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -334,8 +511,11 @@
       "dependencies": [
         "P12-N12-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -354,8 +534,11 @@
       "dependencies": [
         "P12-N12-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -374,8 +557,11 @@
       "dependencies": [
         "P12-N12-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -394,8 +580,11 @@
       "dependencies": [
         "P12-N12-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -414,8 +603,11 @@
       "dependencies": [
         "P12-N12-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -432,8 +624,11 @@
     {
       "case": "P12",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "ordinary_rks",
@@ -449,8 +644,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -466,8 +664,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -486,8 +687,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -506,8 +710,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -526,8 +733,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -546,8 +756,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -566,8 +779,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -586,8 +802,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -606,8 +825,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -626,8 +848,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -646,8 +871,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -666,8 +894,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -686,8 +917,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -706,8 +940,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -726,8 +963,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -746,8 +986,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -766,8 +1009,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -786,8 +1032,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -806,8 +1055,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -826,8 +1078,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -846,8 +1101,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -866,8 +1124,11 @@
       "dependencies": [
         "P12-N14-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -884,8 +1145,11 @@
     {
       "case": "P12",
       "dependencies": [],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "ordinary_rks",
@@ -901,8 +1165,11 @@
       "dependencies": [
         "P12-N16-G"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -919,8 +1186,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -940,8 +1210,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -961,8 +1234,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -982,8 +1258,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1003,8 +1282,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1024,8 +1306,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1045,8 +1330,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1066,8 +1354,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1087,8 +1378,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1108,8 +1402,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1129,8 +1426,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1150,8 +1450,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1171,8 +1474,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1192,8 +1498,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1213,8 +1522,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1234,8 +1546,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1255,8 +1570,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1276,8 +1594,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1297,8 +1618,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1318,8 +1642,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1339,8 +1666,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1360,8 +1690,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1381,8 +1714,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1402,8 +1738,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1423,8 +1762,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1444,8 +1786,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1465,8 +1810,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",
@@ -1486,8 +1834,11 @@
         "P12-N16-G",
         "P12-N16-GL"
       ],
+      "initial_live_admission": "BLOCKED_RESOURCE_CAPACITY",
       "interface": "IMPLEMENTED_LOCAL_CANDIDATE",
+      "latest_capacity_record": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-deployment-limit-remediation\\capacity-734d312c6f1b42bbaf7b3f452c53abb1.json",
       "live_admission": "BLOCKED_RESOURCE_CAPACITY",
+      "live_admission_scope": "LATEST_TASK_CAPACITY_SNAPSHOT_NOT_UNIT_DEPENDENCY_OR_BUDGET_ADMISSION",
       "method_id": "B3LYPG/6-311g(2df,p)",
       "new_optimisation": "NOT_EXECUTED",
       "operator_id": "source2011",

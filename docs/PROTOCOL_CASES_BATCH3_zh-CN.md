@@ -1,6 +1,6 @@
 # 第三批 P11/P12：本地多态优化入口
 
-本批提供 **78 个固定状态的独立几何优化入口**：P11 为 17 态；P12 的 N12/N14/N16 分别为 8/23/30 态。每次 `live` 选择一个状态，执行一次新优化。实现是本地部署候选；本轮新高成本科学验收仍待实际运行记录确认，不能由历史账本、预检或工程测试推定通过。
+本批提供 **78 个固定状态的独立几何优化入口**：P11 为 17 态；P12 的 N12/N14/N16 分别为 8/23/30 态。每次 `live` 选择一个状态，执行一次新优化。当前 P11 苯 G 单态已完成新优化并通过源科学门禁，P11 尚余16态、P12全部61态未执行；完整多态验收及结果组装未完成，不能由历史账本、预检或工程测试推定通过。
 
 入口使用独立的 `runtime/high_cost_cases`、`locks/high-cost-*.json` 和 `configs/high-cost-cases-v1.json`。原第二批 P03—P10 的源码锁、科学资产、预算和验收结果保持原有身份；原科研目录只读。任意用户分子的条件态 Compute 仍为 `BLOCKED`。
 
@@ -43,6 +43,22 @@ $OutputRoot = 'D:\AI4Science\high-cost-case-runs'
 `ledger` 复核保存能量的恒等式、权重和历史范围；P12 另复核保存几何的 N12 对称控制。`preflight` 构建真实 Mole/AO、核对构型、原子/电子数及状态映射，不运行积分、SCF、梯度或优化器。省略 `-Unit` 时预检该 Task 的全部固定状态。两种模式都不保证新优化收敛，也不重新认证原 P11/P12 科学命题。
 
 候选镜像登记路径为 `validation/high-cost-cases/candidate-image.json`。启动器核对完整镜像 ID、构建提交、来源锁、依赖锁和资源 profile；本地文件存在不等于镜像已公开可下载。
+
+当前科学 worker 仍使用提交 `05308a1872d769aaa85e39adbafe7020e36358e6` 的干净构建镜像，原 `locks/high-cost-source.json` SHA 为 `d8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322`。后续宿主日志封存修复以独立 `locks/high-cost-host-launcher.json` 登记，scope 为 `HOST_FINAL_EVIDENCE_ONLY`，只覆盖启动器与其测试两项文件；其余105项保持原字节，镜像及计算合同未变。当前 Git HEAD 因含宿主补丁，不能直接当作原107项 worker 构建上下文，也不能把宿主补丁提交称为镜像构建提交。
+
+源码与工程检查分开进行。下列第一条在现有镜像中只核验冻结 worker 字节；第二条只核验当前宿主登记的两项覆盖及105项原字节；第三条是宿主假 Docker 回归，不运行科学计算：
+
+```powershell
+$ImageId = 'sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc'
+& $DockerExe run --rm --network none --read-only --user 10001:10001 `
+  --memory 1g --memory-swap 1g --cpus 1 --entrypoint /opt/venv/bin/python `
+  $ImageId -B -c "from runtime.high_cost_cases import verify_source; verify_source(); print('PASS_ORIGINAL_WORKER_SOURCE')"
+
+& $PythonExe -B -c "import importlib.util; s=importlib.util.spec_from_file_location('host_source_check','scripts/run-high-cost-case.py'); m=importlib.util.module_from_spec(s); s.loader.exec_module(m); print(m.verify_source())"
+& $PythonExe -B -m unittest discover -s tests -p test_high_cost_supervisor.py -v
+```
+
+镜像内原工程 CI 与宿主补丁17项测试分别记录，不能混称为当前全部源码已在新镜像中运行。重新构建 worker 时必须另行固定干净科学构建上下文、镜像和验收记录；本次补救未重建科学镜像。
 
 ## 新建独立预算后逐态运行
 
@@ -105,10 +121,12 @@ P11 live 保存 `p11-state.json`、`optimized.xyz`、`density.npy` 和源进度�
 
 P12 的范围是 N12/N14/N16 受测三点，不是完整六点。旧同基组 CESE 分别为 `+2.887010、−15.947079、−0.339527 kcal/mol`，对应原著印刷值 `+2.59、−16.28、−0.65`；数值差异继续披露，不能声明逐数字复现。历史 N16 相对 CESE 为约2.103137%，原10%起点门槛保持；历史2011实现对齐仍 `NOT_ESTABLISHED`，电子态连续性不由现有 runner 证明。单态新优化不会自动组装完整新账本、改变分类、扩至N18/N20/N22或生成训练标签。
 
-本轮最终状态须由 root 按实际镜像、CI、metadata 与逐态记录填入 `PROTOCOL_CASES_BATCH3_ACCEPTANCE_zh-CN.md`。当前不宣称新的78态全部或任何一态已通过高成本科学验收。WSLc 继续 `BLOCKED_PAUSED`；GitHub Actions 为 `NOT_EXECUTED`；公开镜像分发为 `BLOCKED_LOCAL_ONLY`，没有公开推送、标签或 Release。
+当前登记状态见 `PROTOCOL_CASES_BATCH3_ACCEPTANCE_zh-CN.md`：仅 P11B-benzene-G 单态源科学门禁已实测通过，完整78态及组装未验收。WSLc 继续 `BLOCKED_PAUSED`；GitHub Actions 为 `NOT_EXECUTED`；公开镜像分发为 `BLOCKED_LOCAL_ONLY`，没有公开推送、标签或 Release。
 
 ## 本轮实际状态
 
-本地候选镜像已构建；第三批工程测试108项中107通过、1跳过；17＋61态真实AO/几何预检及两类账本通过，PS5.1账本启动器已验证。P11/P12新优化因资源不足BLOCKED，仍NOT_EXECUTED。详细记录见 [第三批验证报告](PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md)。
+冻结科学镜像的第三批工程测试108项中107通过、1跳过；17＋61态真实AO/几何预检及两类账本通过，PS5.1账本启动器已验证。补救阶段苯 G 实测1次优化、5次SCF、3次梯度，连同清理56.687秒，cgroup峰值约1.20GiB。该先导使用修复前宿主：科学输出及worker回执完整，原宿主manifest的命令日志哈希不一致已保留，并另提供50文件补核manifest。修复后宿主17项工程回归和一次真实零SCF P11账本均通过，后者42项宿主载荷全部匹配、容器删除后输出保留；没有用新宿主重算苯 G。
+
+最新容量快照为主机可用约11.872GiB、guest约14.440GiB，P11资源条件通过；P12仍需要主机16GiB和guest15GiB，保持 `BLOCKED_RESOURCE_CAPACITY`。资源通过仅代表当时容量，不保证其他状态收敛，启动时仍重新核验依赖与预算。详细记录见 [第三批验证报告](PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md)。
 
 完成同环境的新状态后，可运行 `scripts/assemble-high-cost-results.py --task P11或P12 --inputs <unit-ID到output目录映射.json> --output <全新外部目录>`，只读核验各态完成回执再组装；本轮只验证工程假数据，未执行新科学结果组装。

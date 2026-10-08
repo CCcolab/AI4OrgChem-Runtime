@@ -1,0 +1,16 @@
+{
+  "base_source_sha256": "d8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322",
+  "files": {
+    "scripts/run-high-cost-case.py": {
+      "base_sha256": "76fa7c77f9d4ef61fc60c95b809fcd30ee16b70d9639445461f78694432eca55",
+      "sha256": "55c5306ba2ee493e521e533c05d39f5be8870de40dff7da6040680fedaeda607"
+    },
+    "tests/test_high_cost_supervisor.py": {
+      "base_sha256": "923a6d61569ca76f600246d8e230149812c78c8ecc4bfc8a9d053ab43595c229",
+      "sha256": "0a478092ac794c5979cde71772b353a06dc4498fcc41fc253cec3f71e4132b66"
+    }
+  },
+  "image_id": "sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc",
+  "schema": "high-cost-host-launcher-v1",
+  "scope": "HOST_FINAL_EVIDENCE_ONLY"
+}

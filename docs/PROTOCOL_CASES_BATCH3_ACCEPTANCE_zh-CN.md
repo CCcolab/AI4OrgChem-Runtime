@@ -1,21 +1,23 @@
 # 第三批 P11/P12 验收合同与待验证登记
 
-**登记状态：`LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED`。** 本文件记录验收条件和当前待填实测项，不宣称新高成本科学计算通过，也不重新认证原 P11/P12。root 完成本轮实际验证后，应按原始日志、镜像ID和文件SHA更新下表；未执行项保持 `NOT_EXECUTED`，资源拒绝项保存实际原因。
+**登记状态：`LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_P11_PILOT_PASS_P12_RESOURCE_BLOCKED`。** 本文件记录冻结验收条件与当前实测范围：P11苯G单态源科学门禁通过，P11其余16态、P12全部61态及完整组装未执行。原先导宿主manifest缺陷保留并单独补核；修复后宿主只进行了零SCF真实账本验收。两次记录不能混称为修复后宿主已完成科学优化，也不重新认证原 P11/P12。
 
 | 项目 | 当前登记 | 更新所需证据 |
 | --- | --- | --- |
-| 固定优化接口 | `CANDIDATE_IMPLEMENTED_PENDING_MEASURED_VALIDATION` | 78态注册及源协议/参数核对 |
-| 76份科学来源捕获与源锁 | `LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED` | 实际捕获清单、逐文件SHA、tracked/blob/上下文记录 |
-| 新候选镜像身份与工程CI | `LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED` | 构建提交、精确镜像ID、锁SHA、真实CI输出 |
-| P11 ledger / 17态 preflight | `LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED` | 两种模式的资源、零kernel入口计数及清理闭合 |
-| P12 ledger / 61态 preflight | `LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED` | 三尺寸恒等式/对称控制、真实Mole/AO预检及清理闭合 |
-| P11 本轮17态新优化 | `NOT_EXECUTED_PENDING_RESOURCE_ADMISSION` | 每态新轨迹、源数值资格和完整host/worker证据 |
+| 固定优化接口 | `IMPLEMENTED_LOCAL_CANDIDATE` | 78态注册及源协议/参数核对 |
+| 76份科学来源捕获与原107项源锁 | `PASS_BYTE_IDENTITY` | 实际捕获清单、逐文件SHA、tracked/blob/上下文记录 |
+| 冻结科学镜像身份与原工程CI | `PASS_ENGINEERING_SCOPED` | 构建05308a、镜像18dcd、原d8ee锁；108项运行、107通过、1跳过 |
+| P11 ledger / 17态 preflight | `PASS_ZERO_SCIENCE_METADATA` | 历史算术与真实AO/几何；量化入口计数0 |
+| P12 ledger / 61态 preflight | `PASS_ZERO_SCIENCE_METADATA` | 三尺寸恒等式/对称控制、真实Mole/AO预检 |
+| P11 本轮17态新优化 | `PARTIAL_1_OF_17_SCIENTIFIC_GATES_PASS` | 仅苯G；原宿主日志缺陷与50文件补核独立披露，完整集合NOT_EXECUTED |
 | P12 本轮8/23/30态新优化 | `NOT_EXECUTED_PENDING_RESOURCE_ADMISSION` | 每态新轨迹、构型/SCF/优化门禁及本轮前序证据 |
-| 最终资源阻塞及准入状态 | `LOCAL_CANDIDATE_ENGINEERING_ACCEPTED_LIVE_RESOURCE_BLOCKED` | `admission.json` 的实际host/engine/guest/磁盘观察 |
+| 宿主补丁身份、回归与最终manifest | `PASS_HOST_PATCH_ZERO_SCIENCE` | c10fb宿主锁、其他105项原字节、17项回归；真实账本42项宿主载荷全部匹配 |
+| 最新资源快照 | `P11_PASS_CAPACITY_ONLY_P12_BLOCKED` | 主机11.872GiB、guest14.440GiB；不是全部Unit准入或收敛证明 |
+| 完整17/61态验收及新结果组装 | `NOT_EXECUTED_INCOMPLETE_STATE_SET` | 全部新状态与一致身份；不得以先导或fake组装替代 |
 | GitHub Actions | `NOT_EXECUTED` | 本轮无远端执行声明 |
 | WSLc / 镜像分发 | `BLOCKED_PAUSED` / `BLOCKED_LOCAL_ONLY` | 本轮不开放或发布 |
 
-以上占位状态仅用于避免把未完成验证写成成功。最终报告应分别列工程、历史算术、metadata及新科学计算的实测状态；若实际未启动，不能填写新优化墙时、RSS、收敛态或科学PASS。
+工程、历史算术、metadata、单态科学门禁及完整科学验收分别登记。未执行状态不能填写优化墙时、内存峰值、收敛态或科学PASS。苯G cgroup峰值不是单进程RSS，不能外推其他分子/状态容量。
 
 ## 固定科学范围
 
@@ -56,6 +58,10 @@ N12历史ledger复核包括15对覆盖、重数3、参考GL的C3残差，以及�
 - `result.json`、run/host manifests及科学产物：路径与每份字节SHA匹配；P11状态/XYZ/density及源进度，P12原状态JSON/XYZ/条件态NPZ及source-routing-review。P12 G原runner没有保存密度NPZ，不补造缺失证据。
 - live前序的已完成host/worker receipts和只读输入快照：来源、依赖、profile、镜像一致，精确dependencies，原输出删除所属容器后仍保存；不能使用历史账本或仅通过预检的结果。
 
+科学worker与宿主身份另行核对。科学镜像固定原干净构建提交05308a、107项源锁d8ee、镜像18dcd；当前宿主仅允许 `scripts/run-high-cost-case.py` 和 `tests/test_high_cost_supervisor.py` 两项覆盖，登记在 `locks/high-cost-host-launcher.json`，scope `HOST_FINAL_EVIDENCE_ONLY`，candidate锚定其SHA c10fb。其余105项原字节必须完全一致，宿主回执写独立 `host_launcher`，计算合同继续原科学身份。当前HEAD不能冒充原worker构建上下文；验证方法见用户指南。
+
+修复前苯G原worker12项哈希及科学门禁/资源/清理/预算通过，但原host manifest的命令日志仅匹配22行旧前缀，最终为23行。原文件保留，50文件后补manifest补核当前字节；不能回写旧manifest或把后补当作原封存已经正确。修复后真实P11 ledger的42项宿主载荷完全匹配、科学计数为空，证明修复后的封存路径闭合，不构成重做苯G科学优化。
+
 失败/中断保留部分轨迹、checkpoint、异常、日志、资源和未闭合预算；不得删除失败后写成功记录。source capture以76份文件各自字节身份为准，dirty上下文HEAD不是全部文件的提交身份。geomeTRIC1.1.1仅进入新本地容器；原科研目录、旧runtime和第二批源锁字节保持。WSLc暂停、GitHub Actions未执行、公开镜像分发BLOCKED保持到另有真实授权与验收。
 
-本轮实际补验见 [第三批验证报告](PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md)：17/61真实零SCF预检、两类账本、最终镜像工程CI及PS5.1已执行。所有新优化仍NOT_EXECUTED，资源准入BLOCKED；本合同不将框架验收升级为科学完成。
+本轮实际补验见 [第三批验证报告](PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md)：17/61真实零SCF预检、两类账本、冻结镜像工程CI及PS5.1已执行，另完成苯G单态源科学门禁与宿主封存修复。P11为1/17、P12为0/61，完整集合和组装仍NOT_EXECUTED，P12资源仍BLOCKED；本合同不将框架或先导验收升级为全部科学完成。
