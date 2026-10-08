@@ -12,3 +12,12 @@ scripts/start-protocol-case.ps1 -text
 scripts/run-protocol-case.py -text
 scripts/ci-protocol-cases.py -text
 scripts/list-protocol-cases.py -text
+# Third-batch byte captures and locked entry points remain exact in clean clones.
+reference/high_cost_cases/source_tree/** -text
+runtime/high_cost_cases/** -text
+tests/test_high_cost*.py -text
+locks/high-cost*.json -text
+configs/high-cost-cases-v1.json -text
+scripts/*high-cost*.py -text
+scripts/start-high-cost-case.ps1 -text
+container/Dockerfile.high-cost* -text
