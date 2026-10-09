@@ -11,7 +11,7 @@ DOCUMENTATION / 使用与复核
 
 本地阅读与操作指南
 网页不执行 Runtime
-六区物理顺序：overview、quick-start、user-molecule、results、tasks、help；无JS时目录与原生折叠正文可读。浏览器禁用JS验收：NOT\_EXECUTED。
+六区物理顺序：overview、quick-start、user-molecule、results、tasks、help；无JS时目录与原生折叠正文可读。本页手工QA默认未执行；包外禁JS阅读记录另见本地验证报告。
 
 <a id="overview"></a>
 

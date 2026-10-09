@@ -1,0 +1,21 @@
+{
+  "schema": "ci-job-context-reporting-repair-v1",
+  "date": "2026-10-09",
+  "test_command": "python -B -m unittest discover -s tests -p test_ci_local_services_context.py -v",
+  "tests_run": 4,
+  "result": "PASS",
+  "cases": [
+    "false_actions_flag_stays_local",
+    "identified_actions_keeps_job_scope_and_identity",
+    "local_does_not_claim_remote_execution",
+    "unidentified_actions_is_unknown"
+  ],
+  "tested_source_files": {
+    "scripts/ci-unit-local-services.py": "c7d0de0f78c2b8bbb014a4330def7368396cee720b45c3a9f8be76a849087869",
+    "tests/test_ci_local_services_context.py": "43d9348d3a3909dee8dd002c15a94cfa13500e513562acd4c8ba9ef3c0c4a9f3"
+  },
+  "scope": "Standard-library reporting metadata tests, including synthetic Actions environments; no actual GitHub job or science",
+  "remote_GitHub_Actions": "NOT_EXECUTED",
+  "science": "NOT_EXECUTED",
+  "NoQuantumImports_and_scientific_opt_in_guard": "UNCHANGED"
+}

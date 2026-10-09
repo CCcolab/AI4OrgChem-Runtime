@@ -1,5 +1,7 @@
 # Runtime 本地网页指南
 
+以下导入／模块改名章节保留各自历史字节；当前网页身份与导出见文末“推送前验收记录口径修订”。
+
 2026-10-09已接纳 YouMind 更新的 `v0.3.0-candidate` 为本地文档候选，本轮未发现必须继续修改的功能或声明问题。网页入口为 [docs/index.html](index.html)，可直接在本地浏览器打开。
 
 完整原包10成员保存在 [runtime-guide/source](runtime-guide/source/README.md)，原ZIP备份在 [runtime-guide/archive](runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip)。网页是使用指南，本地科学计算由对应Runtime入口执行。GitHub推送和Pages部署留待后续整体同步，当前未执行。
@@ -28,8 +30,16 @@
 
 本轮只改变展示与维护材料。普通用户分子服务仍限定普通RHF单点；十四个模块采用固定案例或已有证据，没有扩大任意分子条件态、优化或尺寸扫描能力。高成本固定状态清单的接入与实际验收继续分别说明。
 
-最新实际网页导出保存在 [current/README.md](runtime-guide/current/README.md)，可携带包为 [模块名称修订ZIP](runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip)。current是从唯一活动入口重新生成的维护快照，不作为第二个日常编辑入口；source及原ZIP是历史导入材料。
+模块改名轮的实际网页导出当时保存在 [current/README.md](runtime-guide/current/README.md)，可携带包为 [模块名称修订ZIP](runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip)。current是从唯一活动入口重新生成的维护快照，不作为第二个日常编辑入口；source及原ZIP是历史导入材料。
 
 本次独立本地Edge检查通过三宽度默认／展开布局、十四名称与对应表、按功能名搜索、三路径与清除、79个复制目标、七项实际导出、ZIP CRC／10成员及根／模拟仓库子路径重开。复制内容仅允许Windows CRLF→LF归一化，计算命令及输入文本与导入版一致。禁JavaScript检查使用浏览器原生折叠操作读取全部名称；首次默认收起文本探针与后续检查均保留在记录中。真实200%缩放、完整键盘及多浏览器未执行，不宣称完整网页认证。
 
-记录见 [模块修订身份与范围](../validation/web-guide/module-names-20261009.json)和[当前浏览器实测](../validation/web-guide/browser-module-names-20261009.json)。原导入测试属于历史字节版本，不冒充本轮记录。本轮未运行科学计算、Docker或WSL，也未推送或部署网站；来源和权属边界沿用原记录。
+记录见 [模块修订身份与范围](../validation/web-guide/module-names-20261009.json)和[模块改名轮浏览器实测](../validation/web-guide/browser-module-names-20261009.json)。原导入测试属于历史字节版本，不冒充本轮记录。本轮未运行科学计算、Docker或WSL，也未推送或部署网站；来源和权属边界沿用原记录。
+
+## 推送前验收记录口径修订
+
+最终静态审查发现，原维护导出的“当前全部NOT_EXECUTED”会与已经保存的局部浏览器实测混淆。现已把YouMind原始维护文字明确标为历史；浏览器内手工QA初始未填写另列，包外实测按实际HTML SHA与范围登记。未把手工QA所有项自动改成PASS，真实200%缩放、完整键盘和多浏览器仍未执行。
+
+当前活动入口仍为docs/index.html；[current维护导出](runtime-guide/current/README.md)现对应本轮字节，可携带[最终口径修订网页包](runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-final-consistency.zip)。旧模块名称包、原YouMind包和原始导入快照均保留。此前记录中的current_export是历史导出位置；原字节可在对应归档ZIP及Git提交恢复，不用当前目录冒充旧哈希。
+
+本轮三宽度默认／全展开、79逻辑复制目标、功能名搜索、三路径、七项导出CRC和HTTP根／子路径重开、真禁JS原生展开阅读通过；计算命令及水模板原字节不变。新身份与范围见[final-consistency-20261009.json](../validation/web-guide/final-consistency-20261009.json)和[本轮浏览器记录](../validation/web-guide/browser-final-consistency-20261009.json)。没有科学重算、镜像重建、WSL变更或公开动作，未分配新Runtime版本。

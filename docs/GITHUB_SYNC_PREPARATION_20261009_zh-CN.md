@@ -60,3 +60,7 @@ Git克隆用于源码安装；GitHub自动Download ZIP缺少安装器要求的co
 本地候选、扫描、文件／提交清单、CI静态审查、来源标签核对和备份均可供最终确认。上游注释标签v0.3.2对象afd91ea6ec6847b329ee75a7b20ed564560d9460解析到28511f3d84fa65707a107cde1e8121a7b4334ecb，与冻结来源锁一致。Git对象检查未报告损坏；本地不可达dangling对象与工作树管理提示不属于拟推送HEAD历史，本轮不清理它们。
 
 待确认的是公开动作与范围；远端CI及Pages验收只能在该动作后执行。镜像许可／来源缺口和WSLc暂停继续单独保留。外部专家咨询已由用户取消，不作为同步前置条件。本轮不改变原科研环境。
+
+## 推送前最终增补
+
+十一YouMind Skill由用户延后导出，不构成本次源码／指南同步前置；私有原指令与空目录没有加入候选。独立复核后的[两项记录修正](../validation/github-sync/FINAL_CONSISTENCY_CORRECTIONS_20261009_zh-CN.md)明确网页历史维护／当前手工QA／包外实测的区别，并修正未来CI工程job的执行上下文，保持实际远端CI NOT_EXECUTED。当前网页身份见[最终局部验收](../validation/web-guide/final-consistency-20261009.json)，旧68ab316封包与旧记录保留，最终新源码以仓库外封存manifest为准。版本号暂不确定；创建仓库、公开范围与Pages仍待用户确认。

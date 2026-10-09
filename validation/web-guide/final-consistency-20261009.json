@@ -1,0 +1,96 @@
+{
+  "schema": "web-guide-final-consistency-repair-v1",
+  "date": "2026-10-09",
+  "runtime_base_commit": "68ab3169756e81e165d2ce9f265dbc6d5744c3da",
+  "parent_html_sha256": "4946cd2a5af4685c27627de26fbf045545689e049a9a51fd1fcd9de002d7962c",
+  "active_html": {
+    "path": "docs/index.html",
+    "bytes": 189319,
+    "sha256": "1430e2a00a17c5e575f8624b74d50bf57d9faff61723d92223f17be32545244c"
+  },
+  "current_export": "docs/runtime-guide/current",
+  "archive": {
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-final-consistency.zip",
+    "bytes": 409802,
+    "sha256": "ae46628066a288ae369086b8b8402523727904bf2ae58b7bcce9e6c41e0696e3",
+    "crc": "PASS",
+    "members": [
+      {
+        "path": "docs/index.html",
+        "bytes": 189319,
+        "sha256": "1430e2a00a17c5e575f8624b74d50bf57d9faff61723d92223f17be32545244c"
+      },
+      {
+        "path": "docs/.nojekyll",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "README.md",
+        "bytes": 32246,
+        "sha256": "9f5e4dc5e69d98bba11707f7827197bc9a42b26f85e6792526b0559d337dfb7b"
+      },
+      {
+        "path": "content/guide_zh-CN.md",
+        "bytes": 97981,
+        "sha256": "254080c163de029db9715e8af61b45bbb90d262bfbbe316b1bcea7cedf8d5186"
+      },
+      {
+        "path": "provenance/sources.md",
+        "bytes": 17256,
+        "sha256": "8e4e79b6f5fbab6c867135cc05b6c83278987cfec70ca47a4f6542436b0f0373"
+      },
+      {
+        "path": "verification/checks.md",
+        "bytes": 33647,
+        "sha256": "ad945bb937f61cab007cb38658aa487908325b6ac30a81b9791a992e4466bf64"
+      },
+      {
+        "path": "MIGRATION.md",
+        "bytes": 35389,
+        "sha256": "10c80ed8d84e380f14176831497ceaa767b672a75aaeca750ad81897fcaccab1"
+      },
+      {
+        "path": "MANIFEST.txt",
+        "bytes": 1844,
+        "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+      },
+      {
+        "path": "templates/molecular-service/water/request.json",
+        "bytes": 277,
+        "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+      },
+      {
+        "path": "templates/molecular-service/water/molecule.xyz",
+        "bytes": 123,
+        "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+      }
+    ]
+  },
+  "repair": "Original maintenance checklists are historical; fresh manual QA defaults are distinct from SHA-bound saved local browser checks",
+  "historical_module_names_export": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip",
+  "historical_records": "PRESERVED; their current_export field denotes their historical export, now recoverable from immutable archived ZIP and Git commit",
+  "browser_record": "validation/web-guide/browser-final-consistency-20261009.json",
+  "verified": [
+    "360/768/1440 default and expanded",
+    "79 clipboard logical text targets unchanged",
+    "functional name search",
+    "three paths and clear",
+    "seven actual downloads and CRC10 members",
+    "HTML-source-export identity",
+    "HTTP root/subpath reopen",
+    "real JS-disabled native disclosure reading"
+  ],
+  "not_executed": [
+    "true 200 percent zoom",
+    "full keyboard audit",
+    "multi-browser audit",
+    "Runtime calculation",
+    "Docker/WSL acceptance",
+    "remote CI",
+    "Pages or publication"
+  ],
+  "scientific_contracts_and_existing_code_blocks": "UNCHANGED",
+  "skill_export": "DEFERRED_BY_USER",
+  "new_Runtime_version": "NOT_ASSIGNED"
+}

@@ -10,7 +10,26 @@ import unittest
 
 ROOT=Path(__file__).resolve().parents[1]
 PATTERNS=('test_registered_*.py','test_protocol_cases_*.py','test_high_cost_*.py',
-          'test_molecular_service_*.py','test_native_wsl2_check.py')
+          'test_molecular_service_*.py','test_native_wsl2_check.py',
+          'test_ci_local_services_context.py')
+
+def execution_context(environment=None):
+    """Describe this job from runner declarations, never certify the whole CI."""
+    env=os.environ if environment is None else environment
+    actions=env.get('GITHUB_ACTIONS')=='true'
+    fields={name:env.get(variable) for name,variable in (
+        ('repository','GITHUB_REPOSITORY'),('commit','GITHUB_SHA'),
+        ('run_id','GITHUB_RUN_ID'),('run_attempt','GITHUB_RUN_ATTEMPT'),
+        ('job','GITHUB_JOB'),('workflow','GITHUB_WORKFLOW'))}
+    identified=all(fields[key] for key in ('repository','commit','run_id','job'))
+    status=('EXECUTED_THIS_JOB_IN_DECLARED_ACTIONS_ENV' if identified else
+            'UNKNOWN_UNBOUND_ACTIONS_DECLARATION') if actions else 'NOT_EXECUTED'
+    return {'remote_GitHub_Actions':status,'execution_context':{
+        'platform':'GITHUB_ACTIONS' if actions else 'LOCAL',
+        'basis':'RUNNER_ENVIRONMENT_DECLARATION_NOT_AUTHENTICATION',
+        'scope':'THIS_ENGINEERING_JOB_ONLY_NOT_OVERALL_WORKFLOW_OR_SCIENTIFIC_ACCEPTANCE',
+        'actions_declared':actions,'actions_identity_present':identified if actions else False,
+        **(fields if actions else {key:None for key in fields})}}
 
 class NoQuantumImports(importlib.abc.MetaPathFinder):
     def find_spec(self, fullname, path=None, target=None):
@@ -53,7 +72,7 @@ def main():
             'failures':[{'test':test.id(),'traceback':trace} for test,trace in result.failures],
             'errors':[{'test':test.id(),'traceback':trace} for test,trace in result.errors],
             'discovered_unique':len(all_ids),'groups':groups,'real_quantum_imports':'BLOCKED',
-            'scientific_tests_opted_in':False,'remote_GitHub_Actions':'NOT_EXECUTED',
+            'scientific_tests_opted_in':False,**execution_context(),
             'test_source_files':{path.relative_to(ROOT).as_posix():hashlib.sha256(path.read_bytes()).hexdigest() for path in files}}
     (args.output_root/'result.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({key:report[key] for key in ['status','executed','passed','skipped','discovered_unique']},ensure_ascii=False))

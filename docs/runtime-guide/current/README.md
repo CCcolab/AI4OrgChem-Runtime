@@ -1,8 +1,11 @@
+# 历史维护说明与本地实测范围
+以下原始维护登记中“当时”“原次”指YouMind提供材料时的状态；保留原失败与未执行清单，不把它们当作当前包外实测结论。当前网页身份与局部实测以Runtime validation/web-guide/final-consistency-20261009.json为准，存在该记录时逐项读取，缺少则标未知。本页手工QA初始未填写与包外实测是两种记录。真实200%缩放、完整键盘和多浏览器仍NOT_EXECUTED，不宣称完整网页认证；网页和CI均不授予新增科学资格。
+
 # README
-本轮网页资料包 · v0.3.0-candidate（候选，完整验收未完成）
+原轮网页资料包 · v0.3.0-candidate（候选，完整验收未完成）
 
 ## 交付范围
-普通 RHF 单点为本轮主路径；三个固定案例为 p02-statistics、p13-graph-ledger、p01-orbital-density，保留 14 证据卡和 7 旧任务。包仅含网页、维护资料与水模板，不含 Runtime 源码、Docker 镜像、科学完整档案。Runtime 与匹配镜像另备；网页不运行计算、不自动安装、不上传、无发布。
+普通 RHF 单点为原轮主路径；三个固定案例为 p02-statistics、p13-graph-ledger、p01-orbital-density，保留 14 证据卡和 7 旧任务。包仅含网页、维护资料与水模板，不含 Runtime 源码、Docker 镜像、科学完整档案。Runtime 与匹配镜像另备；网页不运行计算、不自动安装、不上传、无发布。
 
 ## 下载与阅读
 点击现有 ZIP 按钮，由浏览器本地生成 ai4orgchem-runtime-guide-v0.3.0-candidate.zip；一次解压整个包，不需逐个解压子目录。解压后直接打开 docs/index.html。CSS/JS 内嵌，单文件无运行依赖，无自动构建，不依赖 YouMind URL。禁用 JS 可阅读正文，下载需 JS。
@@ -14,7 +17,7 @@ docs/.nojekyll — 空静态托管标记
 README.md — 交付说明
 content/guide_zh-CN.md — 正文快照
 provenance/sources.md — 来源与权属边界
-verification/checks.md — 当前检查状态及历史证据
+verification/checks.md — 当时检查状态及历史证据
 MIGRATION.md — 迁移待办
 MANIFEST.txt — 成员用途与范围清单
 templates/molecular-service/water/request.json — 277 字节请求原文
@@ -23,10 +26,10 @@ templates/molecular-service/water/molecule.xyz — 123 字节几何原文
 
 ## 维护与授权
 HTML 是唯一内容源，Markdown 无反向自动构建。修改六区域、命令及状态须手工同步摘要、FAQ、来源、维护常量，重新导出 HTML、MD、ZIP 并按 T14/T19 实际复核。自有脚本以 app-script 或 data-guide-script 登记，导出恢复默认会话状态。维护文件非运行依赖，合法资料链接可能在用户点击时联网。
-完整网页源码已取得，来源与权属尚待确认，不自动套用 Runtime 源码许可证。六份上传材料已有静态核对；29 份参考文件仅索引，未逐读或独立哈希；完整科学输出未提供，本轮不重运行。无新增外链、不变权限、不发布。
+完整网页源码已取得，来源与权属尚待确认，不自动套用 Runtime 源码许可证。六份上传材料已有静态核对；29 份参考文件仅索引，未逐读或独立哈希；完整科学输出未提供，原轮不重运行。无新增外链、不变权限、不发布。
 
 ## 验收状态
-本次维护更新产生新字节版本，当前动态 QA 初始 NOT_EXECUTED，不继承历史三宽度 PASS。修订前受测响应及下载实物仅见 verification/checks.md 历史区；不是新版重新验收、科学验收或完整 WEB-A01—A24 通过。独立运行与完整迁移验收未完成。
+原次维护更新产生新字节版本，当时动态 QA 初始 NOT_EXECUTED，不继承历史三宽度 PASS。修订前受测响应及下载实物仅见 verification/checks.md 历史区；不是新版重新验收、科学验收或完整 WEB-A01—A24 通过。独立运行与完整迁移验收未完成。
 
 ## 第二批协议修订（候选，不发布）
 <a id="batch2-sources"></a>
@@ -55,7 +58,7 @@ a44fa481af7c5a62d9d7b923f3b3f0d4947e682b
 
 38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e / sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440；早两失败Git封装缺口保留，非科学反例。
 
-八ledger、八preflight、七live是已保存本地限定记录，不是本轮重算，不是总计算数或全通过数。115本地工程非GitHub Actions；science lane非其runner执行。内存为cgroup峰值，非RSS。所有科学项最终镜像重跑、scratch峰值、异机安装：NOT\_EXECUTED。
+八ledger、八preflight、七live是已保存本地限定记录，不是原轮重算，不是总计算数或全通过数。115本地工程非GitHub Actions；science lane非其runner执行。内存为cgroup峰值，非RSS。所有科学项最终镜像重跑、scratch峰值、异机安装：NOT\_EXECUTED。
 
 普通四步、水技术样例和固定案例已提供；完整网页验收仍有未执行项。任意用户分子的旧条件态比较 Compute BLOCKED；镜像分发 BLOCKED 等其他对象状态不改。
 <a id="protocol-batch2"></a>
@@ -274,15 +277,15 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 ```
 <a id="verification-records"></a>
 
-## 验证记录（外部记录与当前版本分开）
+## 验证记录（外部记录与当时版本分开）
 
-外部来源：用户上传 REVIEW\_SUMMARY 转述；执行方本地 Codex，浏览器 IAB，2026-10-08。非 YouMind 本轮自执行，非真实 GitHub 部署。
+外部来源：用户上传 REVIEW\_SUMMARY 转述；执行方本地 Codex，浏览器 IAB，2026-10-08。非 YouMind 原轮自执行，非真实 GitHub 部署。
 
 严格绑定旧 HTML：161123 bytes，SHA256 ` 9a40351eac2ea05ef3990b5a6f7d782b8b9311e0abf4f06a5efbc965e3efcaea `；ZIP：257444 bytes，SHA256 ` 2f448b02c737b60caa605af76543d085649a8593d2da2652c54ebd0271ab643b `。新版字节改变，不继承 PASS。
 
 外部限定记录：10 ZIP 成员 CRC、安全唯一路径、README 内外一致、水277/123一致、132 ID无重复／49 targets、50复制回读（49+Capabilities/List）、360/768/1440三宽度无整页overflow、三路径与搜索、默认导出、真实HTTP根模拟repo子路径与刷新、基础手机菜单与Tab范围。
 
-200%真缩放、真禁JS、全键盘、多浏览器、二次导出、全部维护独立按钮：NOT\_EXECUTED。当前版本完整检查默认 NOT\_EXECUTED；字节身份按钮不执行结构测试，不授予结构PASS。
+200%真缩放、真禁JS、全键盘、多浏览器、二次导出、全部维护独立按钮：NOT\_EXECUTED。当时版本完整检查默认 NOT\_EXECUTED；字节身份按钮不执行结构测试，不授予结构PASS。
 
 <a id="verification-current"></a>
 
@@ -290,18 +293,18 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 NOT_EXECUTED
 ```
 
-当前复制按钮与目标动态inventory单独下载，不自动升级逐字PASS；当前完整验收NOT_EXECUTED。
+当时复制按钮与目标动态inventory单独下载，不自动升级逐字PASS；当时完整验收NOT_EXECUTED。
 
 
 ## 文件索引表局部滚动修复
-文件索引表局部滚动修复已写入，修后独立三宽度复测待执行。360/768/1440 须在全部 details 展开时独立复测；本次不登记通过、不套用旧哈希。裸表已在源 HTML 中置入可键盘聚焦的 table-scroll 局部滚动区域，保留表格 min-width:680px 与现有 grid/card/details 收缩规则；cleanExport 与 ZIP 内 docs/index.html 沿用源 HTML 修复，导出算法未改。
+文件索引表局部滚动修复已写入，修后独立三宽度复测待执行。360/768/1440 须在全部 details 展开时独立复测；原次不登记通过、不套用旧哈希。裸表已在源 HTML 中置入可键盘聚焦的 table-scroll 局部滚动区域，保留表格 min-width:680px 与现有 grid/card/details 收缩规则；cleanExport 与 ZIP 内 docs/index.html 沿用源 HTML 修复，导出算法未改。
 
-## v0.3.0-candidate 当前交付
-候选非已验收；currentordinaryenabled / legacyconditionalblocked。物理顺序 overview、quick-start、user-molecule、results、tasks、help。10 members：原8文件，加 templates/molecular-service/water/request.json 与 molecule.xyz；277/123 bytes、LF结尾、代码textContent原文。14 evidence、7旧任务、3固定案例、1普通服务，12数值checks。当前新字节版本的复制核对、ZIP实物CRC/哈希、HTML一致性、重开再导出与迁移及完整WEB合同尚未完成；修订前下载实物与三宽度结构实测只作历史，当前QA不继承。新包大小和SHA-256须现场生成。
+## v0.3.0-candidate 当时交付
+候选非已验收；currentordinaryenabled / legacyconditionalblocked。物理顺序 overview、quick-start、user-molecule、results、tasks、help。10 members：原8文件，加 templates/molecular-service/water/request.json 与 molecule.xyz；277/123 bytes、LF结尾、代码textContent原文。14 evidence、7旧任务、3固定案例、1普通服务，12数值checks。当时新字节版本的复制核对、ZIP实物CRC/哈希、HTML一致性、重开再导出与迁移及完整WEB合同尚未完成；修订前下载实物与三宽度结构实测只作历史，当时QA不继承。新包大小和SHA-256须现场生成。
 
 
 ## P11/P12局部补齐维护边界
-状态清单置于两卡前，high-cost-list-command原命令字节与id保留。P11只复制历史账本，不建议已PASS苯G重复preflight；从实际注册清单尚未执行16态恰选一个Unit，不猜ID。P11高级原生details仅说明：工具创建全新不存在的独立预算、单态ceiling43200s，live精确Unit/Budget/OutputRoot，可选PythonExe/DockerExe；呋喃G→GL→GE使用本轮合格output的Inputs映射，P11B独立初始化。P11合同8GiB/8CPU/8线程；P12合同14GiB/16CPU/16线程，前序本轮G，N16 GE额外GL。两者软43080/硬43200s、scratch20GiB、engine+1/host+2/disk+1GiB，每态一次、失败计费、容器删除及证据闭合前不后续，不retry/resume。P12可复制预检改为来源已有未执行P12-N16-G；高级链接n16-live-details存在于完整guide快照，转换继续传guideTargets。原资源合同不明不足拒绝、分档未启用，不将15GiB作日常默认，不恢复18GiB，不重复内存探针。不是任意分子优化、不代表78态全部验收、不改科学规则，新安装镜像未重放，旧两PASS原历史保留且不继承新镜像。六主区顺序不变，tasks主标题最前。共同顶层10成员、水277/XYZ123原文、复制不执行保留；真200%/键盘/多浏览器/新版复制磁盘HTTP均NOT_EXECUTED，本轮不运行Runtime/Docker/科学。
+状态清单置于两卡前，high-cost-list-command原命令字节与id保留。P11只复制历史账本，不建议已PASS苯G重复preflight；从实际注册清单尚未执行16态恰选一个Unit，不猜ID。P11高级原生details仅说明：工具创建全新不存在的独立预算、单态ceiling43200s，live精确Unit/Budget/OutputRoot，可选PythonExe/DockerExe；呋喃G→GL→GE使用原轮合格output的Inputs映射，P11B独立初始化。P11合同8GiB/8CPU/8线程；P12合同14GiB/16CPU/16线程，前序原轮G，N16 GE额外GL。两者软43080/硬43200s、scratch20GiB、engine+1/host+2/disk+1GiB，每态一次、失败计费、容器删除及证据闭合前不后续，不retry/resume。P12可复制预检改为来源已有未执行P12-N16-G；高级链接n16-live-details存在于完整guide快照，转换继续传guideTargets。原资源合同不明不足拒绝、分档未启用，不将15GiB作日常默认，不恢复18GiB，不重复内存探针。不是任意分子优化、不代表78态全部验收、不改科学规则，新安装镜像未重放，旧两PASS原历史保留且不继承新镜像。六主区顺序不变，tasks主标题最前。共同顶层10成员、水277/XYZ123原文、复制不执行保留；真200%/键盘/多浏览器/新版复制磁盘HTTP均NOT_EXECUTED，原轮不运行Runtime/Docker/科学。
 
 
 ## 2026-10-09限定更新（优先于历史维护说明）
@@ -376,7 +379,7 @@ state list读取实际注册状态与Unit；ledger只读历史账本，不批准
 
 用create-high-cost-budget.py为所选Unit在全新、尚不存在的文件创建独立预算，单态ceiling为43200秒。start-high-cost-case.ps1的-Task 多态约束结构优化 -Mode live必须精确指定-Unit、-Budget、-OutputRoot，可选-PythonExe/-DockerExe。此处只有参数说明，没有可复制的虚构live命令。
 
-P11A呋喃按G→GL→GE，必须以-Inputs提供本轮合格前序output映射；P11B保留原独立初始化。科学规则固定，每态一次、失败计费；容器删除与证据闭合前不启动后续，不retry、不resume。
+P11A呋喃按G→GL→GE，必须以-Inputs提供原轮合格前序output映射；P11B保留原独立初始化。科学规则固定，每态一次、失败计费；容器删除与证据闭合前不启动后续，不retry、不resume。
 
 资源合同：8GiB、8CPU、8线程，软43080／硬43200s，scratch20GiB；engine +1GiB、host +2GiB、disk +1GiB。新安装镜像高成本未重放，旧先导PASS不继承到新镜像。
 
@@ -384,7 +387,7 @@ P11A呋喃按G→GL→GE，必须以-Inputs提供本轮合格前序output映射�
 
 ### 尺寸与状态对照
 
-协议来源P12：N12/N14/N16 = 8/23/30态，B3LYPG/6-311g(2df,p)，原2011规则。N12控制不入加权；N14/16全部21/28组对权1。GL/GE依赖本轮G，N16 GE还需本轮GL。
+协议来源P12：N12/N14/N16 = 8/23/30态，B3LYPG/6-311g(2df,p)，原2011规则。N12控制不入加权；N14/16全部21/28组对权1。GL/GE依赖原轮G，N16 GE还需原轮GL。
 
 通过回执和output子目录输入映射、哈希及容器删除核对前序，不能历史PASS替代新前序。完整组装未完成，历史2011对齐 NOT\_ESTABLISHED，不新增分类标签。
 
@@ -399,7 +402,7 @@ P11A呋喃按G→GL→GE，必须以-Inputs提供本轮合格前序output映射�
 
 ### 高级：环状体系尺寸与状态对照 · 单状态live边界（仅说明，不安排执行）
 
-参见[已有N16-G单态live来源说明](#n16-live-details)。精确选择一个未执行Unit，工具create-high-cost-budget.py在全新不存在文件创建独立预算，单态43200s；不手写或复用预算。GL/GE前序须为本轮合格G，N16 GE额外需要本轮合格GL，以-Inputs提供output映射，历史PASS不能替代。
+参见[已有N16-G单态live来源说明](#n16-live-details)。精确选择一个未执行Unit，工具create-high-cost-budget.py在全新不存在文件创建独立预算，单态43200s；不手写或复用预算。GL/GE前序须为原轮合格G，N16 GE额外需要原轮合格GL，以-Inputs提供output映射，历史PASS不能替代。
 
 14GiB、16CPU、16线程，软43080／硬43200s，scratch20GiB，engine +1GiB、host +2GiB、disk +1GiB；原资源合同不明或资源不足拒绝，分档尚未启用。不将15GiB作为所有用户日常默认，不恢复18GiB配置。每态一次、失败计费，容器删除及证据闭合前不后续，不retry/resume，不重复内存探针；新安装镜像未重放，旧先导PASS不继承。
 
@@ -422,13 +425,13 @@ python -B .\scripts\create-high-cost-budget.py --output 'D:\chem-work\batch3-n16
 
 ### 旧先导记录与2026-10-08历史边界
 
-2026-10-08第二批历史说明：多态约束结构优化/环状体系尺寸与状态对照 未接入新计算，无新入口。仅描述当时状态，不是当前能力。
+2026-10-08第二批历史说明：多态约束结构优化/环状体系尺寸与状态对照 未接入新计算，无新入口。仅描述当时状态，不是当时能力。
 
 旧先导镜像 ` sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc `；worker构建 ` 05308a1872d769aaa85e39adbafe7020e36358e6 `，不可替换为a4086d。
 
 P12先导：2721.5秒、cgroup 3987410944 bytes；15几何点、17SCF、16梯度、1优化；24worker / 61host哈希通过，容器删除后输出保留。P11苯G旧host日志缺陷与50文件补核保留；补核不表示原封存完美。
 
-结果、receipts、manifests、native-events、资源、optimizedXYZ、checkpoint整目录保留；环状体系尺寸与状态对照 G没有density NPZ。旧受限PASS不重算，本轮没有科学执行。
+结果、receipts、manifests、native-events、资源、optimizedXYZ、checkpoint整目录保留；环状体系尺寸与状态对照 G没有density NPZ。旧受限PASS不重算，原轮没有科学执行。
 
 
 <a id="revision-20261009-sources"></a>
@@ -443,24 +446,24 @@ P12先导：2721.5秒、cgroup 3987410944 bytes；15几何点、17SCF、16梯度
 - source\_basis/SOURCE\_INSTALLATION\_ACCEPTANCE\_20261009\_zh-CN.md
 - 环状体系尺寸与状态对照 pilot JSON与REVIEW\_SUMMARY（来源索引名；不虚构未提供的完整路径）
 
-外部2026-10-09 Edge154本地复核严格绑定旧导出HTML：166102 bytes，SHA256 ` f1b634e30a16438c635c634b07f46a6ff75a7d6c665b85ee13ce19cd20af727c `；ZIP：311948 bytes，SHA256 ` abbce379db36240b97996f23322f57a11a8044693ce67be4045b0e1514eaf65b `。不是YouMind本轮自执行，不是新版继承PASS，也不是GitHub部署。
+外部2026-10-09 Edge154本地复核严格绑定旧导出HTML：166102 bytes，SHA256 ` f1b634e30a16438c635c634b07f46a6ff75a7d6c665b85ee13ce19cd20af727c `；ZIP：311948 bytes，SHA256 ` abbce379db36240b97996f23322f57a11a8044693ce67be4045b0e1514eaf65b `。不是YouMind原轮自执行，不是新版继承PASS，也不是GitHub部署。
 
 旧字节外部记录：10成员CRC／磁盘哈希、8副本一致、74逻辑复制PASS（40 raw equal，34仅LF→CRLF）、7维护下载、水request 277 / XYZ 123 / 预算286精确身份。HTTP根／模拟repo刷新PASS、3路径／清除PASS、默认HTTP重开PASS；真禁JS仅9关键词覆盖。搜索仅OBSERVED；真200%缩放、全键盘、多浏览器仍NOT\_EXECUTED。不要修改复制代码来修平台换行。
 
-YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点击。当前修后脚本、三宽度默认／全展开／路径／手机菜单、导出、CRC与复制下载验收均待执行，不预填PASS，不引用旧SHA作为新身份。
+YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点击。当时修后脚本、三宽度默认／全展开／路径／手机菜单、导出、CRC与复制下载验收均待执行，不预填PASS，不引用旧SHA作为新身份。
 
-维护：进入解压后的 ` ai4orgchem-runtime-guide/ ` 目录，运行 ` python -m http.server 8000 `，浏览 ` http://localhost:8000/docs/ `。仅静态指南维护，不启动Runtime；无真实托管。10成员共同顶层保持，包外清单／审计JSON和MD按当前字节动态生成。
+维护：进入解压后的 ` ai4orgchem-runtime-guide/ ` 目录，运行 ` python -m http.server 8000 `，浏览 ` http://localhost:8000/docs/ `。仅静态指南维护，不启动Runtime；无真实托管。10成员共同顶层保持，包外清单／审计JSON和MD按当时字节动态生成。
 
-条件Compute BLOCKED；WSLc BLOCKED / NOT\_EXECUTED；远CI NOT\_EXECUTED；镜像分发BLOCKED；外部专家咨询已取消非前置。本轮不运行Runtime/Docker/WSL/科学，不发布、不改权限。
+条件Compute BLOCKED；WSLc BLOCKED / NOT\_EXECUTED；远CI NOT\_EXECUTED；镜像分发BLOCKED；外部专家咨询已取消非前置。原轮不运行Runtime/Docker/WSL/科学，不发布、不改权限。
 
 
 ## 2026-10-09本地模块名称修订（优先于历史命名）
-网页按实际计算功能命名十四个模块；主标题、选择提示和复制按钮说明无需先了解专著编号。内部P01—P14、任务键、命令参数、来源路径与科学规则保持。名称和编号对应表位于来源追溯折叠区。用户自己的分子目前仅支持普通RHF单点服务；这些模块采用固定案例或保存证据，不增加任意分子条件计算、优化或尺寸扫描的支持范围。多态约束优化和环状体系分别保持固定17态与61态，旧候选仅苯G、N12-G通过；新镜像不继承这些科学验收。WSLc BLOCKED、远端CI NOT_EXECUTED、镜像分发BLOCKED，未推送或部署网站。当前本地网页实测记录单独保存在Runtime validation/web-guide/module-names-20261009.json；历史维护清单继续保留，不能替代本轮证据。
+网页按实际计算功能命名十四个模块；主标题、选择提示和复制按钮说明无需先了解专著编号。内部P01—P14、任务键、命令参数、来源路径与科学规则保持。名称和编号对应表位于来源追溯折叠区。用户自己的分子目前仅支持普通RHF单点服务；这些模块采用固定案例或保存证据，不增加任意分子条件计算、优化或尺寸扫描的支持范围。多态约束优化和环状体系分别保持固定17态与61态，旧候选仅苯G、N12-G通过；新镜像不继承这些科学验收。WSLc BLOCKED、远端CI NOT_EXECUTED、镜像分发BLOCKED，未推送或部署网站。模块改名轮的历史实测记录保存在Runtime validation/web-guide/module-names-20261009.json，绑定其当时HTML与归档ZIP；最终清单口径修订另见validation/web-guide/final-consistency-20261009.json，不继承历史SHA。
 <a id="module-protocol-map"></a>
 
 ### 模块名称与内部协议编号（来源追溯）
 
-| 内部协议编号 | 计算模块 | 当前范围 |
+| 内部协议编号 | 计算模块 | 当时范围 |
 | --- | --- | --- |
 | ` P01 ` | 轨道表示与密度对照 | 固定乙烯轨道变换与密度／能量不变量对照 |
 | ` P02 ` | 结构与光谱表值统计 | 冻结出版表值统计与回归；不计算新光谱 |
