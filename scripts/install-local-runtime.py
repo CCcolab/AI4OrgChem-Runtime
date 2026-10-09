@@ -17,6 +17,7 @@ import stat
 import subprocess
 import sys
 import time
+import uuid
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -385,7 +386,7 @@ def build(args):
     engine = capture([docker, 'info', '--format', '{{.OSType}}/{{.Architecture}}'])
     if engine not in ('linux/x86_64', 'linux/amd64'):
         raise ValueError('Available Linux amd64 Docker engine required; actual '+engine)
-    suffix = receipt['runtime_commit'][:12]
+    suffix = receipt['runtime_commit'][:12]+'-'+uuid.uuid4().hex[:8]
     foundation = 'ai4orgchem-runtime:source-foundation-'+suffix
     candidate = 'ai4orgchem-runtime:source-installation-'+suffix
     logged([docker, 'build', '--platform', 'linux/amd64', '--pull', '--progress=plain', '-f',
@@ -396,13 +397,15 @@ def build(args):
     base = json.loads(capture([docker, 'image', 'inspect', foundation]))[0]['Id']
     arguments = [docker, 'build', '--platform', 'linux/amd64', '--progress=plain', '-f',
                  context/'container/Dockerfile.installation-runtime', '-t', candidate,
-                 '--build-arg', 'BASE_IMAGE='+base, '--build-arg', 'BASE_IMAGE_ID='+base,
+                 '--build-arg', 'BASE_IMAGE='+foundation, '--build-arg', 'BASE_IMAGE_ID='+base,
                  '--build-arg', 'RUNTIME_COMMIT='+receipt['runtime_commit']]
     for prefix, family in [('MOLECULAR','molecular-service'),('REGISTERED','registered-cases'),('PROTOCOL','protocol-cases'),('HIGH_COST','high-cost')]:
         for field, ending in [('SOURCE','source'),('DEPENDENCY','dependencies')]:
             arguments += ['--build-arg', prefix+'_'+field+'_SHA256='+sha(context/('locks/'+family+'-'+ending+'.json'))]
     arguments += ['--build-arg','HIGH_COST_PROFILE_SHA256='+sha(context/'configs/high-cost-cases-v1.json'),context]
     logged(arguments, destination, 'build-runtime')
+    if json.loads(capture([docker, 'image', 'inspect', foundation]))[0]['Id'] != base:
+        raise ValueError('Foundation tag changed during construction')
     inspection = json.loads(capture([docker, 'image', 'inspect', candidate]))[0]
     save(destination/'built-image.json', {'schema': 'runtime-source-built-image-v1', 'image_id': inspection['Id'],
          'local_tag': candidate, 'base_image_id': base, 'runtime_build_commit': receipt['runtime_commit'],
