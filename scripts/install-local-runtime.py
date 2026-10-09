@@ -122,7 +122,32 @@ def package_bytes(root):
     if not re.fullmatch('[0-9a-f]{40}', commit):
         raise ValueError('Full runtime commit required')
     subprocess.run(['git', '-C', str(root), 'diff', '--quiet', 'HEAD'], check=True)
-    raw = subprocess.run(['git', '-C', str(root), 'archive', '--format=zip', commit], capture_output=True, check=True).stdout
+    # Read raw Git blobs in one batch. `git archive` can apply export-subst or
+    # newline attributes and therefore is not itself a byte identity proof.
+    listing_raw = subprocess.run(['git', '-C', str(root), 'ls-tree', '-r', '-z', commit], capture_output=True, check=True).stdout
+    entries = []
+    for entry in listing_raw.split(b'\0'):
+        if not entry: continue
+        metadata, name = entry.split(b'\t', 1)
+        mode, kind, oid = metadata.split(b' ')
+        if kind != b'blob' or mode not in (b'100644', b'100755'):
+            raise ValueError('Only regular Git source blobs supported')
+        name = name.decode('utf-8'); safe_path(name)
+        entries.append((name, oid.decode('ascii')))
+    batch = subprocess.run(['git', '-C', str(root), 'cat-file', '--batch'],
+                           input=('\n'.join(oid for _,oid in entries)+'\n').encode(),
+                           capture_output=True, check=True).stdout
+    packed = io.BytesIO(); position = 0
+    with zipfile.ZipFile(packed, 'w', compression=zipfile.ZIP_DEFLATED) as archive:
+        for name, oid in entries:
+            end = batch.index(b'\n', position)
+            actual_oid, kind, length = batch[position:end].split(b' ')
+            if actual_oid.decode()!=oid or kind!=b'blob': raise ValueError('Git blob batch header differs')
+            length = int(length); content = batch[end+1:end+1+length]; position=end+length+2
+            if len(content)!=length or git_object('blob', content)!=oid: raise ValueError('Git blob batch bytes differ')
+            archive.writestr(name, content)
+    if position != len(batch): raise ValueError('Unexpected Git blob batch suffix')
+    raw = packed.getvalue()
     with zipfile.ZipFile(io.BytesIO(raw)) as archive:
         files = {}
         for item in archive.infolist():
