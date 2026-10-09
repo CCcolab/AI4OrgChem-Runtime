@@ -22,3 +22,12 @@ is distributed. References to the monograph do not relicense runtime software.
 
 AI-assisted engineering was provided through OpenAI Codex. Scientific claims
 and publication responsibility remain with the human project owner.
+
+The actual high-cost Docker candidate has additional third-party materials.
+See compliance/HIGH_COST_COMPONENTS_20261009_zh-CN.md and its machine addendum.
+geomeTRIC 1.1.1 has BSD-style terms with an additional training-dataset
+restriction; RDKit core BSD and wheel-packaging MIT notices are distinct.
+Bundled native libraries and fonts retain their own terms. The Amadeus font's
+redistribution authorization and several exact build/source mappings remain
+unresolved. This source clarification does not modify the existing image,
+grant third-party rights or authorize image publication.

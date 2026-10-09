@@ -130,3 +130,14 @@ P12 的范围是 N12/N14/N16 受测三点，不是完整六点。旧同基组 CE
 先前主机11.872GiB、guest14.440GiB的P12资源阻塞记录保留。本轮经用户明确授权临时设置WSL上限18GiB并结束两个未使用的独立后台应用；实际P12-N12-G启动按原16/15GiB门槛通过。该单态耗时2721.5秒（45分21.5秒），cgroup峰值约3.71GiB，15个几何点、17次SCF、16次梯度、1次优化；源门禁、24项worker与61项宿主登记哈希及容器删除后输出保留均通过。资源通过仅代表当时容量，启动其他状态仍重新核验资源、前序与独立预算。科学镜像和方法未改变，WSLc继续暂停。详细记录见 [第三批验证报告](PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md)。
 
 完成同环境的新状态后，可运行 `scripts/assemble-high-cost-results.py --task P11或P12 --inputs <unit-ID到output目录映射.json> --output <全新外部目录>`，只读核验各态完成回执再组装；本轮只验证工程假数据，未执行新科学结果组装。
+
+
+## 当前环境补记：已恢复WSL默认配置（2026-10-09）
+
+用户已撤销临时18GiB上限；原`.wslconfig`已移入备份，恢复原“无自定义配置”状态，WSL2／Docker服务自检通过。成功N12-G的18GiB启动条件、方法、结果与封存记录继续保留，是历史验收依据；不表示当前仍应用18GiB上限。
+
+恢复后的实际客体容量低于P12原15GiB可用门槛，当前P12后续启动重新BLOCKED_RESOURCE_CAPACITY；不得降低门槛或自动重新添加配置。第一、第二批及P11/P12两个已通过单态的科学验收不回写、不重算。当前容量见`validation/high-cost-cases/support-matrix.json`的latest_capacity；临时设置历史见historical_environment_adjustment_used_for_P12_pilot。完整状态集和组装仍未执行，WSLc/远端CI/公开分发保持原边界。
+
+## 已通过状态的保留政策（2026-10-09补记）
+
+P12-N12-G和P11B-benzene-G的保存验收保持PASS，不重算、不要求对旧结果重复内存准入。当前容量与资源候选仅用于将来尚未执行状态，不把当前快照作为旧结果的新门槛；本轮不再追加P12内存探针。15GiB是旧Docker统一资源合同，不是所有P12状态的固有需求或用户日常默认要求。[分档候选](P12_RESOURCE_TIERS_CANDIDATE_zh-CN.md)尚未启用；[普通WSL2可行性](NATIVE_WSL2_FEASIBILITY_20261009_zh-CN.md)与WSLc分开，尚不代表原生P12已经验收。

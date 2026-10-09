@@ -1,0 +1,235 @@
+{
+  "schema_version": "native-wsl2-check-v1",
+  "created_at_utc": "2026-10-08T23:05:42.105342+00:00",
+  "backend": "native-wsl2",
+  "action": "Check",
+  "status": "PASS",
+  "image_id": null,
+  "compute_enabled": false,
+  "qm_calls": 0,
+  "scientific_acceptance": "NOT_EXECUTED",
+  "native_p12_compute": "NOT_IMPLEMENTED",
+  "declaration_grants_execution_authorization": false,
+  "distribution_running_before_check": false,
+  "distribution_running_after_check": true,
+  "environment_identity": {
+    "backend": "native-wsl2",
+    "image_id": null,
+    "python_executable": "/home/cascade/micromamba/envs/ai4orgchem/bin/python",
+    "python_prefix": "/home/cascade/micromamba/envs/ai4orgchem",
+    "python_version": "3.12.13",
+    "kernel_release": "5.15.167.4-microsoft-standard-WSL2",
+    "machine": "x86_64",
+    "packages": {
+      "pyscf": {
+        "version": "2.14.0",
+        "metadata_sha256": "6aede69454a6d7e8504e135c223a221c67d8219bae01f819c325f1cd0da6d491",
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+      },
+      "numpy": {
+        "version": "2.5.1",
+        "metadata_sha256": "6ae45122ee97050e48849438320430d05f01814f72e66e69cbeed027d2c6a1e8",
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+      },
+      "scipy": {
+        "version": "1.18.0",
+        "metadata_sha256": "8272917b79a86119af502444da8e2bf7de3e5663a09b0b3f0e9fc9a582eecbe5",
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+      },
+      "geometric": {
+        "version": "1.1.1",
+        "metadata_sha256": "ad702eaf21fa59e8c8c2723f5e747d3e8fe045d44abf8bae48de786ae88a68f8",
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+      },
+      "PyYAML": {
+        "version": "6.0.3",
+        "metadata_sha256": "03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34",
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+      },
+      "jsonschema": {
+        "version": "4.26.0",
+        "metadata_sha256": "05b189866ca98a96da3934bf6b83687ced3ff85325273b77e16b705f6d8b26d2",
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+      },
+      "Pillow": {
+        "version": "12.3.0",
+        "metadata_sha256": "8fc07146cab33ef7582361dab6eac596d340b03ec648f18217da7894f73838c8",
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+      }
+    },
+    "source_files": [
+      {
+        "path": "/mnt/d/AI4Science/AI4OrgChem/src/ai4orgchem/qm/p12_source2011_rks.py",
+        "resolved_path": "/mnt/d/AI4Science/AI4OrgChem/src/ai4orgchem/qm/p12_source2011_rks.py",
+        "sha256": "381bef6586388d72f3af5196bf97ad092c868e992ecd3670be01b934e2e65882"
+      },
+      {
+        "path": "/mnt/d/AI4Science/AI4OrgChem/scripts/run_p12_planar_source_state_optimization.py",
+        "resolved_path": "/mnt/d/AI4Science/AI4OrgChem/scripts/run_p12_planar_source_state_optimization.py",
+        "sha256": "260b9dcbf8238f5ddc7e84a1470a8ab405162b4f0402e48ae9f37b633bae55b4"
+      }
+    ],
+    "identity_scope": "Metadata and explicit source hashes; not an immutable environment snapshot",
+    "distribution": "Ubuntu-24.04",
+    "wsl_distribution_version": 2,
+    "wsl_version_text": "WSL 版本： 2.3.26.0\r\n内核版本： 5.15.167.4-1\r\nWSLg 版本： 1.0.65\r\nMSRDC 版本： 1.2.5620\r\nDirect3D 版本： 1.611.1-81528511\r\nDXCore 版本： 10.0.26100.1-240331-1435.ge-release\r\nWindows 版本： 10.0.26300.9550",
+    "checker_sha256": "df6c8bc97eaba90ae28f649977072269dce3abb7826465d522ff45d679c9f15c",
+    "worker_sha256": "a6ccf81185d26c21463065c401d1deb3daa4c4eac7cb370a6d9b9e97e3ca1204"
+  },
+  "environment_fingerprint_sha256": "04f3118680cc03d4914d1fd9ef0faeadcfc98074f442129aa8c89fffc04e21c3",
+  "observation": {
+    "schema_version": "native-wsl2-observation-v1",
+    "compute_enabled": false,
+    "qm_calls": 0,
+    "environment_identity": {
+      "backend": "native-wsl2",
+      "image_id": null,
+      "python_executable": "/home/cascade/micromamba/envs/ai4orgchem/bin/python",
+      "python_prefix": "/home/cascade/micromamba/envs/ai4orgchem",
+      "python_version": "3.12.13",
+      "kernel_release": "5.15.167.4-microsoft-standard-WSL2",
+      "machine": "x86_64",
+      "packages": {
+        "pyscf": {
+          "version": "2.14.0",
+          "metadata_sha256": "6aede69454a6d7e8504e135c223a221c67d8219bae01f819c325f1cd0da6d491",
+          "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+        },
+        "numpy": {
+          "version": "2.5.1",
+          "metadata_sha256": "6ae45122ee97050e48849438320430d05f01814f72e66e69cbeed027d2c6a1e8",
+          "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+        },
+        "scipy": {
+          "version": "1.18.0",
+          "metadata_sha256": "8272917b79a86119af502444da8e2bf7de3e5663a09b0b3f0e9fc9a582eecbe5",
+          "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+        },
+        "geometric": {
+          "version": "1.1.1",
+          "metadata_sha256": "ad702eaf21fa59e8c8c2723f5e747d3e8fe045d44abf8bae48de786ae88a68f8",
+          "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+        },
+        "PyYAML": {
+          "version": "6.0.3",
+          "metadata_sha256": "03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34",
+          "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+        },
+        "jsonschema": {
+          "version": "4.26.0",
+          "metadata_sha256": "05b189866ca98a96da3934bf6b83687ced3ff85325273b77e16b705f6d8b26d2",
+          "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+        },
+        "Pillow": {
+          "version": "12.3.0",
+          "metadata_sha256": "8fc07146cab33ef7582361dab6eac596d340b03ec648f18217da7894f73838c8",
+          "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages"
+        }
+      },
+      "source_files": [
+        {
+          "path": "/mnt/d/AI4Science/AI4OrgChem/src/ai4orgchem/qm/p12_source2011_rks.py",
+          "resolved_path": "/mnt/d/AI4Science/AI4OrgChem/src/ai4orgchem/qm/p12_source2011_rks.py",
+          "sha256": "381bef6586388d72f3af5196bf97ad092c868e992ecd3670be01b934e2e65882"
+        },
+        {
+          "path": "/mnt/d/AI4Science/AI4OrgChem/scripts/run_p12_planar_source_state_optimization.py",
+          "resolved_path": "/mnt/d/AI4Science/AI4OrgChem/scripts/run_p12_planar_source_state_optimization.py",
+          "sha256": "260b9dcbf8238f5ddc7e84a1470a8ab405162b4f0402e48ae9f37b633bae55b4"
+        }
+      ],
+      "identity_scope": "Metadata and explicit source hashes; not an immutable environment snapshot",
+      "distribution": "Ubuntu-24.04",
+      "wsl_distribution_version": 2,
+      "wsl_version_text": "WSL 版本： 2.3.26.0\r\n内核版本： 5.15.167.4-1\r\nWSLg 版本： 1.0.65\r\nMSRDC 版本： 1.2.5620\r\nDirect3D 版本： 1.611.1-81528511\r\nDXCore 版本： 10.0.26100.1-240331-1435.ge-release\r\nWindows 版本： 10.0.26300.9550",
+      "checker_sha256": "df6c8bc97eaba90ae28f649977072269dce3abb7826465d522ff45d679c9f15c",
+      "worker_sha256": "a6ccf81185d26c21463065c401d1deb3daa4c4eac7cb370a6d9b9e97e3ca1204"
+    },
+    "uid": 1000,
+    "memory": {
+      "MemTotal_bytes": 16565334016,
+      "MemAvailable_bytes": 15376232448,
+      "SwapTotal_bytes": 4294967296,
+      "SwapFree_bytes": 4294967296
+    },
+    "cgroup": {
+      "memberships": [
+        "15:name=systemd:/init.scope",
+        "14:misc:/",
+        "13:rdma:/",
+        "12:pids:/init.scope",
+        "11:hugetlb:/",
+        "10:net_prio:/",
+        "9:perf_event:/",
+        "8:net_cls:/",
+        "7:freezer:/",
+        "6:devices:/init.scope",
+        "5:memory:/init.scope",
+        "4:blkio:/",
+        "3:cpuacct:/",
+        "2:cpu:/",
+        "1:cpuset:/",
+        "0::/init.scope"
+      ],
+      "memory_hierarchy": [
+        {
+          "version": 1,
+          "path": "/sys/fs/cgroup/memory/init.scope",
+          "counters": {
+            "memory.limit_in_bytes": "9223372036854771712",
+            "memory.usage_in_bytes": "64745472",
+            "memory.memsw.limit_in_bytes": "9223372036854771712",
+            "memory.memsw.usage_in_bytes": "64745472"
+          }
+        },
+        {
+          "version": 1,
+          "path": "/sys/fs/cgroup/memory",
+          "counters": {
+            "memory.limit_in_bytes": "9223372036854771712",
+            "memory.usage_in_bytes": "1124749312",
+            "memory.memsw.limit_in_bytes": "9223372036854771712",
+            "memory.memsw.usage_in_bytes": "1124757504"
+          }
+        },
+        {
+          "version": 2,
+          "path": "/sys/fs/cgroup/unified/init.scope",
+          "counters": {
+            "memory.max": null,
+            "memory.current": null,
+            "memory.swap.max": null,
+            "memory.swap.current": null
+          }
+        },
+        {
+          "version": 2,
+          "path": "/sys/fs/cgroup/unified",
+          "counters": {
+            "memory.max": null,
+            "memory.current": null,
+            "memory.swap.max": null,
+            "memory.swap.current": null
+          }
+        }
+      ],
+      "errors": [],
+      "resource_profile": "NOT_IMPLEMENTED"
+    },
+    "logical_cpus": 22,
+    "affinity_cpus": 22,
+    "pid1_name": "systemd",
+    "available_tools": {
+      "systemd-run": "/usr/bin/systemd-run",
+      "prlimit": "/usr/bin/prlimit",
+      "unshare": "/usr/bin/unshare",
+      "timeout": "/usr/bin/timeout",
+      "taskset": "/usr/bin/taskset",
+      "flock": "/usr/bin/flock"
+    },
+    "python_isolated": true,
+    "bytecode_disabled": true,
+    "user_site_disabled": true,
+    "resource_observation_grants_compute": false
+  }
+}

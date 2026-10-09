@@ -1,0 +1,170 @@
+{
+  "components": [
+    {
+      "installed_python_source_counts": {
+        "DIFFERENT": 0,
+        "MATCH": 49,
+        "NOT_IN_CANDIDATE_SOURCE": 0
+      },
+      "name": "geometric",
+      "native_binary_correspondence": "NO_NATIVE_LIBRARIES_IN_THIS_PACKAGE",
+      "obligations": [
+        "Retain full copyright, author/contributor attribution, four conditions and disclaimer in source/binary distribution materials.",
+        "No endorsement using upstream names without permission.",
+        "Do not include the software source, binaries or their modifications in machine-learning training datasets; do not label as unmodified BSD-3-Clause or assume OSI approval.",
+        "This clause concerns training datasets; it is not evidence that ordinary geometry optimization or Agent orchestration is prohibited."
+      ],
+      "original_license_expression": null,
+      "original_metadata_license": null,
+      "reviewed_terms": "LicenseRef-geomeTRIC-NonAI (local identifier; BSD-style with additional AI-training restriction)",
+      "version": "1.1.1"
+    },
+    {
+      "installed_python_source_counts": {
+        "DIFFERENT": 0,
+        "MATCH": 580,
+        "NOT_IN_CANDIDATE_SOURCE": 0
+      },
+      "name": "networkx",
+      "native_binary_correspondence": "NO_NATIVE_LIBRARIES_IN_THIS_PACKAGE",
+      "obligations": [
+        "Retain copyright, named author notices, BSD conditions and disclaimer; no endorsement without permission."
+      ],
+      "original_license_expression": "BSD-3-Clause",
+      "original_metadata_license": null,
+      "reviewed_terms": "BSD-3-Clause",
+      "version": "3.6.1"
+    },
+    {
+      "installed_python_source_counts": {
+        "DIFFERENT": 0,
+        "MATCH": 1,
+        "NOT_IN_CANDIDATE_SOURCE": 0
+      },
+      "name": "six",
+      "native_binary_correspondence": "NO_NATIVE_LIBRARIES_IN_THIS_PACKAGE",
+      "obligations": [
+        "Retain copyright and MIT permission/disclaimer."
+      ],
+      "original_license_expression": null,
+      "original_metadata_license": "MIT",
+      "reviewed_terms": "MIT",
+      "version": "1.17.0"
+    },
+    {
+      "installed_python_source_counts": {
+        "DIFFERENT": 0,
+        "MATCH": 96,
+        "NOT_IN_CANDIDATE_SOURCE": 0
+      },
+      "name": "pillow",
+      "native_binary_correspondence": "NOT_ESTABLISHED",
+      "obligations": [
+        "Retain PIL/Pillow copyright and MIT-CMU permission notice in copies and supporting documentation; do not use upstream names for publicity without permission.",
+        "This core license does not close the separately bundled native image/codec library review."
+      ],
+      "original_license_expression": "MIT-CMU",
+      "original_metadata_license": null,
+      "reviewed_terms": "MIT-CMU (Pillow core only)",
+      "version": "11.3.0"
+    },
+    {
+      "installed_python_source_counts": {
+        "DIFFERENT": 0,
+        "MATCH": 293,
+        "NOT_IN_CANDIDATE_SOURCE": 1
+      },
+      "name": "rdkit",
+      "native_binary_correspondence": "NOT_ESTABLISHED",
+      "obligations": [
+        "Retain RDKit BSD copyright/conditions/disclaimer and the distinct Kuenneth wheel-packaging MIT notice.",
+        "Retain font-specific OFL/Apache materials where applicable; do not treat the Amadeus disclaimer as a grant of redistribution rights.",
+        "Cairo, FreeType and other bundled libraries require separate exact-source and notice mapping; core RDKit BSD does not relicense them."
+      ],
+      "original_license_expression": null,
+      "original_metadata_license": "BSD-3-Clause",
+      "reviewed_terms": "BSD-3-Clause (RDKit core) + MIT (wheel packaging) + separately licensed native/font components",
+      "version": "2026.3.4"
+    }
+  ],
+  "containers_started_for_material_extraction": 1,
+  "evidence_directory": "D:/AI4Science/ai4orgchem-runtime-deliveries/20261009-six-issue-remediation/licenses",
+  "frozen_locks_modified": false,
+  "historical_reports_preserved": true,
+  "image_distribution": "BLOCKED_LOCAL_ONLY",
+  "image_id": "sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc",
+  "new_image_builds": 0,
+  "observed_at_utc": "2026-10-08T22:51:47.398958+00:00",
+  "publication": false,
+  "records": [
+    "actual-image-component-materials.json",
+    "oci-notices-manifest.json",
+    "exact-source-acquisition.json",
+    "rdkit-source-acquisition.json",
+    "corresponding-source-mapping.json"
+  ],
+  "review_date": "2026-10-09",
+  "runtime_owned_license": "Apache-2.0 applies only to runtime-owned materials",
+  "schema": "actual-image-license-addendum-v1",
+  "science_calls": 0,
+  "scope": "Actual high-cost image material evidence plus inherited source mapping; no legal certification of full distribution",
+  "source_repository_publication": "SEPARATE_USER_CONFIRMATION; this review does not authorize pushing",
+  "unresolved": [
+    {
+      "detail": "Exact wheel-vendored GCC runtime versions, patches and build inputs for NumPy/SciPy/PySCF/RDKit are not established; generic Debian GCC sources do not prove correspondence.",
+      "id": "IMG-GCC-EXACT-SOURCE",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": "SciPy development OpenBLAS commit and NumPy/PySCF BLAS exact build provenance remain absent.",
+      "id": "IMG-BLAS-PROVENANCE",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": "Exact h5py-vendored HDF5/libaec/libsz build source versions/patches and build inputs remain unestablished.",
+      "id": "IMG-HDF5-PROVENANCE",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": "PySCF recipe, candidate XCFun source and patch applicability exist; actual wheel patch application/build records remain unknown.",
+      "id": "IMG-XCFUN-PATCH",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": "RDKit/Pillow wheel native libraries have actual byte hashes and parent source candidates, but exact native component source/build mapping and corresponding source obligations are incomplete. Native SONAMEs are not complete source-version evidence.",
+      "id": "IMG-RDKIT-PILLOW-NATIVE",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": "Actual Amadeus.ttf is present. The accompanying amadeus_font_license.txt says no license was provided and gives no guarantee; it does not establish redistribution permission. Obtain authoritative permission or prepare/verify a new candidate omitting it; do not change this accepted scientific image in place.",
+      "id": "IMG-AMADEUS-FONT",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": "293 of 294 installed RDKit Python files match official release sources with explicit installation-path mappings. Generated RDPaths.py lacks a byte-matched source file; packaging recipe candidate exists, exact build environment/provenance is not established.",
+      "id": "IMG-RDPATHS-GENERATION",
+      "status": "UNKNOWN"
+    },
+    {
+      "detail": "Local supplemental notices/source archives are now retained; an actual distribution tying the exact image to the required notices and corresponding source availability has not been validated or authorized.",
+      "id": "IMG-DISTRIBUTION-MECHANISM",
+      "status": "BLOCKED"
+    }
+  ],
+  "verified": {
+    "declared_license_files": 50,
+    "declared_license_files_found": 50,
+    "dpkg_source_version_mappings": 105,
+    "installed_distributions": 23,
+    "installed_metadata_notice_files": 237,
+    "legacy_archives_rehashed": 254,
+    "legacy_native_identity": {
+      "DIFFERENT": 0,
+      "MATCH": 191,
+      "NOT_IN_LEGACY_INVENTORY": 222
+    },
+    "native_library_hashes": 413,
+    "oci_layers_hash_verified": 56,
+    "oci_notice_font_files": 198
+  }
+}

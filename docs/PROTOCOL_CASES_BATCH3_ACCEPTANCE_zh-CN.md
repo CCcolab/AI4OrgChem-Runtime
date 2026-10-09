@@ -65,3 +65,14 @@ N12历史ledger复核包括15对覆盖、重数3、参考GL的C3残差，以及�
 失败/中断保留部分轨迹、checkpoint、异常、日志、资源和未闭合预算；不得删除失败后写成功记录。source capture以76份文件各自字节身份为准，dirty上下文HEAD不是全部文件的提交身份。geomeTRIC1.1.1仅进入新本地容器；原科研目录、旧runtime和第二批源锁字节保持。WSLc暂停、GitHub Actions未执行、公开镜像分发BLOCKED保持到另有真实授权与验收。
 
 本轮实际补验见 [第三批验证报告](PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md)：原预检、账本与工程记录保留；P11为1/17，P12为1/61。P12-N12-G的原科学门禁、资源、预算、两层manifest及删除后保留均通过。完整集合与组装仍NOT_EXECUTED，不将两个单态先导升级为全部科学完成。
+
+
+## 当前环境补记：已恢复WSL默认配置（2026-10-09）
+
+用户已撤销临时18GiB上限；原`.wslconfig`已移入备份，恢复原“无自定义配置”状态，WSL2／Docker服务自检通过。成功N12-G的18GiB启动条件、方法、结果与封存记录继续保留，是历史验收依据；不表示当前仍应用18GiB上限。
+
+恢复后的实际客体容量低于P12原15GiB可用门槛，当前P12后续启动重新BLOCKED_RESOURCE_CAPACITY；不得降低门槛或自动重新添加配置。第一、第二批及P11/P12两个已通过单态的科学验收不回写、不重算。当前容量见`validation/high-cost-cases/support-matrix.json`的latest_capacity；临时设置历史见historical_environment_adjustment_used_for_P12_pilot。完整状态集和组装仍未执行，WSLc/远端CI/公开分发保持原边界。
+
+## 已通过状态的保留政策（2026-10-09补记）
+
+P12-N12-G和P11B-benzene-G的保存验收保持PASS，不重算、不要求对旧结果重复内存准入。当前容量与资源候选仅用于将来尚未执行状态，不把当前快照作为旧结果的新门槛；本轮不再追加P12内存探针。15GiB是旧Docker统一资源合同，不是所有P12状态的固有需求或用户日常默认要求。[分档候选](P12_RESOURCE_TIERS_CANDIDATE_zh-CN.md)尚未启用；[普通WSL2可行性](NATIVE_WSL2_FEASIBILITY_20261009_zh-CN.md)与WSLc分开，尚不代表原生P12已经验收。

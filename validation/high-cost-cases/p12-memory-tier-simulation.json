@@ -1,0 +1,295 @@
+{
+  "status": "PASS_SCOPED_27_DESIGN_REFUSAL_SCENARIOS_ONLY",
+  "new_QM_calls": 0,
+  "production_qualification": false,
+  "tests": [
+    {
+      "id": "p12-n12-g-direct-resource-candidate-v1:ample_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED"
+        ]
+      }
+    },
+    {
+      "id": "p12-n12-g-direct-resource-candidate-v1:insufficient_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "PROPOSED_CAPACITY_INSUFFICIENT"
+        ]
+      }
+    },
+    {
+      "id": "p12-n12-g-direct-resource-candidate-v1:unknown_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "RESOURCE_UNKNOWN"
+        ]
+      }
+    },
+    {
+      "id": "p12-n12-gl-direct-resource-candidate-v1:ample_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED"
+        ]
+      }
+    },
+    {
+      "id": "p12-n12-gl-direct-resource-candidate-v1:insufficient_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "PROPOSED_CAPACITY_INSUFFICIENT"
+        ]
+      }
+    },
+    {
+      "id": "p12-n12-gl-direct-resource-candidate-v1:unknown_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "RESOURCE_UNKNOWN"
+        ]
+      }
+    },
+    {
+      "id": "p12-n12-ge-direct-resource-candidate-v1:ample_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED"
+        ]
+      }
+    },
+    {
+      "id": "p12-n12-ge-direct-resource-candidate-v1:insufficient_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "PROPOSED_CAPACITY_INSUFFICIENT"
+        ]
+      }
+    },
+    {
+      "id": "p12-n12-ge-direct-resource-candidate-v1:unknown_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "RESOURCE_UNKNOWN"
+        ]
+      }
+    },
+    {
+      "id": "p12-n14-g-direct-resource-candidate-v1:ample_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED"
+        ]
+      }
+    },
+    {
+      "id": "p12-n14-g-direct-resource-candidate-v1:insufficient_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "PROPOSED_CAPACITY_INSUFFICIENT"
+        ]
+      }
+    },
+    {
+      "id": "p12-n14-g-direct-resource-candidate-v1:unknown_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "RESOURCE_UNKNOWN"
+        ]
+      }
+    },
+    {
+      "id": "p12-n14-gl-direct-resource-candidate-v1:ample_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED"
+        ]
+      }
+    },
+    {
+      "id": "p12-n14-gl-direct-resource-candidate-v1:insufficient_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "PROPOSED_CAPACITY_INSUFFICIENT"
+        ]
+      }
+    },
+    {
+      "id": "p12-n14-gl-direct-resource-candidate-v1:unknown_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "RESOURCE_UNKNOWN"
+        ]
+      }
+    },
+    {
+      "id": "p12-n14-ge-direct-resource-candidate-v1:ample_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED"
+        ]
+      }
+    },
+    {
+      "id": "p12-n14-ge-direct-resource-candidate-v1:insufficient_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "PROPOSED_CAPACITY_INSUFFICIENT"
+        ]
+      }
+    },
+    {
+      "id": "p12-n14-ge-direct-resource-candidate-v1:unknown_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "RESOURCE_UNKNOWN"
+        ]
+      }
+    },
+    {
+      "id": "p12-n16-g-direct-resource-candidate-v1:ample_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED"
+        ]
+      }
+    },
+    {
+      "id": "p12-n16-g-direct-resource-candidate-v1:insufficient_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "PROPOSED_CAPACITY_INSUFFICIENT"
+        ]
+      }
+    },
+    {
+      "id": "p12-n16-g-direct-resource-candidate-v1:unknown_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "RESOURCE_UNKNOWN"
+        ]
+      }
+    },
+    {
+      "id": "p12-n16-gl-direct-resource-candidate-v1:ample_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED"
+        ]
+      }
+    },
+    {
+      "id": "p12-n16-gl-direct-resource-candidate-v1:insufficient_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "PROPOSED_CAPACITY_INSUFFICIENT"
+        ]
+      }
+    },
+    {
+      "id": "p12-n16-gl-direct-resource-candidate-v1:unknown_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "RESOURCE_UNKNOWN"
+        ]
+      }
+    },
+    {
+      "id": "p12-n16-ge-direct-resource-candidate-v1:ample_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED"
+        ]
+      }
+    },
+    {
+      "id": "p12-n16-ge-direct-resource-candidate-v1:insufficient_capacity_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "PROPOSED_CAPACITY_INSUFFICIENT"
+        ]
+      }
+    },
+    {
+      "id": "p12-n16-ge-direct-resource-candidate-v1:unknown_does_not_enable",
+      "result": "PASS_EXPECTED_REFUSAL_ENGINEERING_SIMULATION",
+      "observed": {
+        "status": "BLOCKED",
+        "reasons": [
+          "CANDIDATE_NOT_VALIDATED_OR_ENABLED",
+          "RESOURCE_UNKNOWN"
+        ]
+      }
+    }
+  ]
+}

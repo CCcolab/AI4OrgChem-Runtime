@@ -101,3 +101,41 @@ jobs:
           path: ${{ runner.temp }}/user-molecule-contracts
           if-no-files-found: warn
           retention-days: 7
+  local-service-contracts:
+    # Engineering mocks/arrays only. Real SCF/optimization and high-cost opt-in
+    # are disabled by the runner. Native WSL2 tests use fake process responses.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - name: Locked local-service engineering tests (no science)
+        shell: bash
+        env:
+          AI4ORGCHEM_HIGH_COST_SCIENTIFIC_TESTS: '0'
+          PYTHONDONTWRITEBYTECODE: '1'
+          OMP_NUM_THREADS: '1'
+          OPENBLAS_NUM_THREADS: '1'
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/local-services"
+          python3 -c 'import sys; assert sys.version_info[:2] == (3, 12)'
+          python3 -m venv "$RUNNER_TEMP/local-services-ci-venv"
+          PYTHON="$RUNNER_TEMP/local-services-ci-venv/bin/python"
+          "$PYTHON" -m pip install --only-binary=:all: --require-hashes \
+            -r locks/requirements-local-services-ci.txt \
+            2>&1 | tee "$RUNNER_TEMP/local-services/install.log"
+          "$PYTHON" -m pip check
+          "$PYTHON" -m pip freeze > "$RUNNER_TEMP/local-services/dependencies.txt"
+          "$PYTHON" -B scripts/ci-unit-local-services.py \
+            --output-root "$RUNNER_TEMP/local-services/tests" \
+            2>&1 | tee "$RUNNER_TEMP/local-services/summary.log"
+      - name: Preserve engineering evidence (including failures)
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: local-services-contracts-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/local-services
+          if-no-files-found: warn
+          retention-days: 7

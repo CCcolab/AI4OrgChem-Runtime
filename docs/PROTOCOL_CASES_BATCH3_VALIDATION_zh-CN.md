@@ -83,3 +83,14 @@ P11其余16态、P12其余60态未执行；完整17/61态验收及组装需要�
 证据目录：`D:/AI4Science/ai4orgchem-runtime-deliveries/20261008-p12-n12-g-pilot`；`pilot-verification.json`为`PASS_SCOPED_P12_N12_G_SAVED_EVIDENCE`，原始run位于`runs/20261008T144220Z-P12-N12-G-a12ac23760ff48088c00133bd7fc2e2e`。本次补丁后的真实科学路径没有重现旧commands日志封存缺陷；P11旧缺陷与50文件补核仍按历史身份保留。
 
 P12仍有60态未执行，P11仍有16态未执行；完整CESE、多尺寸验收、电子态连续性、SCF稳定性和原2011程序对齐未由此证明。未恢复检查点，未启动整批队列，未升级WSL、未恢复WSLc、未执行远端CI或公开分发。Docker旧Inference socket故障重启时复现，临时socket目录保留隔离后本次启动恢复，永久根因仍未闭合。
+
+
+## 当前环境补记：已恢复WSL默认配置（2026-10-09）
+
+用户已撤销临时18GiB上限；原`.wslconfig`已移入备份，恢复原“无自定义配置”状态，WSL2／Docker服务自检通过。成功N12-G的18GiB启动条件、方法、结果与封存记录继续保留，是历史验收依据；不表示当前仍应用18GiB上限。
+
+恢复后的实际客体容量低于P12原15GiB可用门槛，当前P12后续启动重新BLOCKED_RESOURCE_CAPACITY；不得降低门槛或自动重新添加配置。第一、第二批及P11/P12两个已通过单态的科学验收不回写、不重算。当前容量见`validation/high-cost-cases/support-matrix.json`的latest_capacity；临时设置历史见historical_environment_adjustment_used_for_P12_pilot。完整状态集和组装仍未执行，WSLc/远端CI/公开分发保持原边界。
+
+## 已通过状态的保留政策（2026-10-09补记）
+
+P12-N12-G和P11B-benzene-G的保存验收保持PASS，不重算、不要求对旧结果重复内存准入。当前容量与资源候选仅用于将来尚未执行状态，不把当前快照作为旧结果的新门槛；本轮不再追加P12内存探针。15GiB是旧Docker统一资源合同，不是所有P12状态的固有需求或用户日常默认要求。[分档候选](P12_RESOURCE_TIERS_CANDIDATE_zh-CN.md)尚未启用；[普通WSL2可行性](NATIVE_WSL2_FEASIBILITY_20261009_zh-CN.md)与WSLc分开，尚不代表原生P12已经验收。

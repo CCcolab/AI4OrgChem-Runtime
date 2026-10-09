@@ -1,5 +1,9 @@
 # AI4OrgChem 本地分子计算 Runtime
 
+阅读 GitHub、网页指南或已有结果无需启动 WSL2／Docker；实际本地计算时才需要所选后端。当前计算验收主要对应记录中的 Docker 候选。[普通WSL2原生入口](docs/NATIVE_WSL2_RUNTIME_zh-CN.md)现已通过只读 Check，原生 Compute 尚未实现／验收；普通WSL2与暂停的WSLc分开。不计算时可退出Docker，镜像保存在磁盘即可。
+
+2026-10-09维护增补：[Docker启动防护](docs/DOCKER_STARTUP_RECOVERY_20261009_zh-CN.md)三次受限重启与活动任务拒绝通过；[实际组件许可附录](compliance/HIGH_COST_COMPONENTS_20261009_zh-CN.md)已补齐新增材料，镜像分发仍BLOCKED_LOCAL_ONLY。已验收P12-N12-G继续PASS，不重算或重复内存准入；15GiB是旧Docker统一门槛，不是用户日常默认要求。[P12资源分档候选](docs/P12_RESOURCE_TIERS_CANDIDATE_zh-CN.md)未启用。远端CI、WSLc和源码公开仍按各自记录确认。
+
 项目目标是面向用户分子的本地化学计算平台：按分子输入、单点能量、轨道/密度分析和结构优化等研究目标提供服务。用户无需先了解专著P01—P14；这些编号保留在“示例与验证”及来源详情。新增通用入口的拆分、实施顺序和验收要求见[面向用户分子的入口设计](docs/GENERAL_CHEMISTRY_ENTRY_DESIGN_zh-CN.md)。已交付首版用户自选分子普通RHF单点、canonical轨道与AO密度矩阵导出；首版范围为H/C/N/O、中性单重态、RHF/6-31G(d)、最多20原子且实际AO数≤80。三维结构可用，无需P编号或专有片段。DFT、开壳层、通用优化、扫描和网格密度仍待独立实施。
 
 普通分子计算从[四步使用指南](docs/MOLECULAR_SINGLE_POINT_zh-CN.md)开始，使用 `scripts/start-molecular-service.ps1` 和自己的XYZ/请求。四个分子实测及同库直接调用对照通过，候选镜像内114项工程测试通过；非root、只读源与输入、断网、退出码和删除容器后输出保留分别核验。见[2026-10-08验收报告](docs/MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)及[机器状态](validation/molecular-service/deployment-20261008.json)。同库对照不是独立科学引擎认证，波函数稳定性未执行。
