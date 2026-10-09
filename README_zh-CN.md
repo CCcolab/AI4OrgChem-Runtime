@@ -22,22 +22,24 @@ AI4OrgChem Runtime 帮助你在自己的电脑上进行分子计算，并复核�
 
 以下模块使用登记的分子、几何、表值和方法设置，提供固定案例计算或已有结果复核，不能直接换成自己的 XYZ。
 
+按研究目的和输入范围选择模块，再点击该行“查看使用指南”，了解输入、运行步骤和结果判读；无需另选指南类别。
+
 | 计算模块 | 可以计算或复核什么 | 使用指南 |
 | --- | --- | --- |
-| 轨道表示与密度对照 | 固定乙烯的轨道变换，核对密度与能量不变量。 | [固定案例](docs/REGISTERED_CASES_zh-CN.md) |
-| 结构与光谱表值统计 | 冻结出版表值的统计与回归，不产生新的光谱。 | [固定案例](docs/REGISTERED_CASES_zh-CN.md) |
-| 扭转构型端点与能量账本 | 复核保存的扭转端点账本，并计算登记的冻结几何单点。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| π–π条件态与轨道响应 | 固定两种条件态的直接项与轨道响应对照。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| π–σ条件能量对照 | 比较已有角度账本，并计算登记的固定角度条件能量单点。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| 片段条件能量组装 | 固定双片段 σ–σ 条件态的独立能量组装。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| 能量账本闭合校验 | 核对同一哈密顿量的保存账本，不产生新的量子计算。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| 局域化端点与参照能量 | 丁二烯固定局域化端点、参照热化学与固定几何计算。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| 条件态与稳定性诊断 | 环丁二烯固定几何的条件态与稳定性诊断。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| 键长交替与能量响应 | 苯的五点固定几何普通 DFT 能量响应。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| 多态约束结构优化 | 登记 17 个固定状态，目前仅苯 G 先导完成验收。 | [多态优化](docs/PROTOCOL_CASES_BATCH3_zh-CN.md) |
-| 环状体系尺寸与状态对照 | 登记 61 个固定状态，目前仅 N12-G 先导完成验收。 | [多态优化](docs/PROTOCOL_CASES_BATCH3_zh-CN.md) |
-| 共轭图规则与能量账本 | 固定图案例与 ESE/CESE 算术账本，不产生新的量子能量。 | [固定案例](docs/REGISTERED_CASES_zh-CN.md) |
-| 条件能量与结构响应复核 | 固定协议的能量与约束结构计算、实现对照及联合复核。 | [运行指南](docs/RUN_zh-CN.md) |
+| 轨道表示与密度对照 | 固定乙烯的轨道变换，核对密度与能量不变量。 | [查看使用指南](docs/REGISTERED_CASES_zh-CN.md) |
+| 结构与光谱表值统计 | 冻结出版表值的统计与回归，不产生新的光谱。 | [查看使用指南](docs/REGISTERED_CASES_zh-CN.md) |
+| 扭转构型端点与能量账本 | 复核保存的扭转端点账本，并计算登记的冻结几何单点。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| π–π条件态与轨道响应 | 固定两种条件态的直接项与轨道响应对照。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| π–σ条件能量对照 | 比较已有角度账本，并计算登记的固定角度条件能量单点。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| 片段条件能量组装 | 固定双片段 σ–σ 条件态的独立能量组装。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| 能量账本闭合校验 | 核对同一哈密顿量的保存账本，不产生新的量子计算。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| 局域化端点与参照能量 | 丁二烯固定局域化端点、参照热化学与固定几何计算。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| 条件态与稳定性诊断 | 环丁二烯固定几何的条件态与稳定性诊断。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| 键长交替与能量响应 | 苯的五点固定几何普通 DFT 能量响应。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| 多态约束结构优化 | 登记 17 个固定状态，目前仅苯 G 先导完成验收。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH3_zh-CN.md) |
+| 环状体系尺寸与状态对照 | 登记 61 个固定状态，目前仅 N12-G 先导完成验收。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH3_zh-CN.md) |
+| 共轭图规则与能量账本 | 固定图案例与 ESE/CESE 算术账本，不产生新的量子能量。 | [查看使用指南](docs/REGISTERED_CASES_zh-CN.md) |
+| 条件能量与结构响应复核 | 固定协议的能量与约束结构计算、实现对照及联合复核。 | [查看使用指南](docs/RUN_zh-CN.md) |
 
 多态约束优化与环状体系对照合计登记 78 个状态；两个已验收先导不代表其他状态或完整多态结果已通过。各模块的输入、方法、资源与结果范围以对应指南为准。已有账本的算术复核与新的分子计算分别提供。
 

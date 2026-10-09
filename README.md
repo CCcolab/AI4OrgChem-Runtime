@@ -20,24 +20,26 @@ This is the current entry for your own molecule. DFT, ions, open-shell states, g
 
 ## Review fixed research protocols
 
-The following modules use registered molecules, geometries, tables and method settings. They are fixed-case calculations or saved-result reviews; their inputs cannot be replaced with your own XYZ. Protocol IDs are included only to help you find the corresponding guide.
+The following modules use registered molecules, geometries, tables and method settings. They are fixed-case calculations or saved-result reviews; their inputs cannot be replaced with your own XYZ.
 
-| Module | What you can calculate or review | Guide |
+Choose a module by its research goal and input scope. Each usage guide explains that module’s inputs, execution steps and results; you do not need to choose a guide category.
+
+| Module | What you can calculate or review | Usage guide |
 | --- | --- | --- |
-| Orbital representation and density comparison / 轨道表示与密度对照 | Fixed ethene orbital rotations; compare density and energy invariants. | [Fixed cases](docs/REGISTERED_CASES_zh-CN.md) |
-| Structure and spectrum table statistics / 结构与光谱表值统计 | Statistics and regression from frozen published tables; produces no new spectrum. | [Fixed cases](docs/REGISTERED_CASES_zh-CN.md) |
-| Torsion endpoints and energy ledger / 扭转构型端点与能量账本 | Review saved torsion endpoints and run a single point at the registered frozen geometry. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| π–π conditional states and orbital response / π–π条件态与轨道响应 | Compare the direct term and orbital response of two fixed conditional states. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| π–σ conditional-energy comparison / π–σ条件能量对照 | Compare saved angle records and calculate the registered fixed-angle conditional-energy point. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| Fragment conditional-energy assembly / 片段条件能量组装 | Independently assemble the energy of a fixed two-fragment σ–σ conditional state. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| Energy-ledger closure checks / 能量账本闭合校验 | Check saved energy ledgers under the same Hamiltonian; runs no new quantum calculation. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| Localized endpoints and reference energies / 局域化端点与参照能量 | Fixed butadiene localization endpoints and reference thermochemistry; fixed-geometry calculations. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| Conditional-state and stability diagnostics / 条件态与稳定性诊断 | Conditional-state and stability diagnostics at the fixed cyclobutadiene geometry. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| Bond-length alternation and energy response / 键长交替与能量响应 | Ordinary DFT energy response at five fixed benzene geometries. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
-| Constrained multistate geometry optimization / 多态约束结构优化 | 17 registered fixed states; only the benzene G pilot has completed acceptance. | [Multistate cases](docs/PROTOCOL_CASES_BATCH3_zh-CN.md) |
-| Cyclic-system size and state comparison / 环状体系尺寸与状态对照 | 61 registered fixed states; only the N12-G pilot has completed acceptance. | [Multistate cases](docs/PROTOCOL_CASES_BATCH3_zh-CN.md) |
-| Conjugated graph rules and energy ledger / 共轭图规则与能量账本 | Fixed graph cases and ESE/CESE arithmetic ledgers; produces no new quantum energies. | [Fixed cases](docs/REGISTERED_CASES_zh-CN.md) |
-| Conditional-energy and structure-response review / 条件能量与结构响应复核 | Fixed-protocol energy and constrained-geometry calculations, implementation comparisons and joint review. | [Run guide](docs/RUN_zh-CN.md) |
+| Orbital representation and density comparison / 轨道表示与密度对照 | Fixed ethene orbital rotations; compare density and energy invariants. | [Usage guide](docs/REGISTERED_CASES_zh-CN.md) |
+| Structure and spectrum table statistics / 结构与光谱表值统计 | Statistics and regression from frozen published tables; produces no new spectrum. | [Usage guide](docs/REGISTERED_CASES_zh-CN.md) |
+| Torsion endpoints and energy ledger / 扭转构型端点与能量账本 | Review saved torsion endpoints and run a single point at the registered frozen geometry. | [Usage guide](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| π–π conditional states and orbital response / π–π条件态与轨道响应 | Compare the direct term and orbital response of two fixed conditional states. | [Usage guide](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| π–σ conditional-energy comparison / π–σ条件能量对照 | Compare saved angle records and calculate the registered fixed-angle conditional-energy point. | [Usage guide](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| Fragment conditional-energy assembly / 片段条件能量组装 | Independently assemble the energy of a fixed two-fragment σ–σ conditional state. | [Usage guide](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| Energy-ledger closure checks / 能量账本闭合校验 | Check saved energy ledgers under the same Hamiltonian; runs no new quantum calculation. | [Usage guide](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| Localized endpoints and reference energies / 局域化端点与参照能量 | Fixed butadiene localization endpoints and reference thermochemistry; fixed-geometry calculations. | [Usage guide](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| Conditional-state and stability diagnostics / 条件态与稳定性诊断 | Conditional-state and stability diagnostics at the fixed cyclobutadiene geometry. | [Usage guide](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| Bond-length alternation and energy response / 键长交替与能量响应 | Ordinary DFT energy response at five fixed benzene geometries. | [Usage guide](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| Constrained multistate geometry optimization / 多态约束结构优化 | 17 registered fixed states; only the benzene G pilot has completed acceptance. | [Usage guide](docs/PROTOCOL_CASES_BATCH3_zh-CN.md) |
+| Cyclic-system size and state comparison / 环状体系尺寸与状态对照 | 61 registered fixed states; only the N12-G pilot has completed acceptance. | [Usage guide](docs/PROTOCOL_CASES_BATCH3_zh-CN.md) |
+| Conjugated graph rules and energy ledger / 共轭图规则与能量账本 | Fixed graph cases and ESE/CESE arithmetic ledgers; produces no new quantum energies. | [Usage guide](docs/REGISTERED_CASES_zh-CN.md) |
+| Conditional-energy and structure-response review / 条件能量与结构响应复核 | Fixed-protocol energy and constrained-geometry calculations, implementation comparisons and joint review. | [Usage guide](docs/RUN_zh-CN.md) |
 
 The two high-cost modules list 78 states in total; the two accepted pilots do not establish acceptance of the remaining states or complete multistate results. Each module's guide states its input, method, resource and result boundaries. Saved-ledger arithmetic and a new molecular calculation are separate operations.
 
