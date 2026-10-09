@@ -21,3 +21,7 @@ configs/high-cost-cases-v1.json -text
 scripts/*high-cost*.py -text
 scripts/start-high-cost-case.ps1 -text
 container/Dockerfile.high-cost* -text
+# Imported guide and audit evidence retain their recorded byte identities.
+docs/index.html -text
+docs/runtime-guide/** -text
+validation/web-guide/** -text

@@ -1,5 +1,7 @@
 # AI4OrgChem Local Molecular Calculation Runtime
 
+The [local browser guide](docs/index.html) is now stored with the project. Its [import and maintenance record](docs/RUNTIME_WEB_GUIDE_zh-CN.md) preserves the original package and validation scope. GitHub synchronization and Pages hosting remain for a later user-authorized step.
+
 Source installation now has a separate [prepare/build/identity-registration guide](docs/SOURCE_INSTALLATION_zh-CN.md). It uses a public pinned base, public locked dependencies and a reconstructed frozen scientific source tree; newly built images receive independent installation records and do not inherit historical scientific PASS. Use a Git clone or the installer-produced source ZIP. [Clean-directory acceptance](docs/SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.md) passed public preparation/build, four service registrations, 45 engineering tests and four bounded tasks. High-cost scientific replay and fresh-machine acceptance were NOT_EXECUTED; historical candidates below remain separately identified.
 
 Reading GitHub, the guide or saved results requires no running WSL2 or Docker. Local calculations require the selected backend. Current scientific acceptance mainly applies to identified Docker candidates. The [ordinary native WSL2 entry](docs/NATIVE_WSL2_RUNTIME_zh-CN.md) passed read-only Check; native Compute is not implemented or accepted. Ordinary WSL2 is separate from paused WSLc. Docker can be closed when unused; stored images do not need to run.

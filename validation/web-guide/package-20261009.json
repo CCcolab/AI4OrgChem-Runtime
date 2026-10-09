@@ -1,0 +1,62 @@
+{
+  "schema": "runtime-guide-candidate-integrity-v1",
+  "zip": "C:\\Users\\chenx\\Downloads\\ai4orgchem-runtime-guide-v0.3.0-candidate (6).zip",
+  "size": 389414,
+  "sha256": "ca0e947b0e11ae931ee097780e9872c63fd5a9d72cfdb6dd2798e5f8e27d8b8d",
+  "crc": "PASS",
+  "path_safety": "PASS",
+  "members": [
+    {
+      "path": "ai4orgchem-runtime-guide/docs/index.html",
+      "size": 183232,
+      "sha256": "b4762b4b4f1851afc1c13f177a7f1a08bbacb91ada1fe977cd3ce7567d110cca"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/docs/.nojekyll",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/README.md",
+      "size": 28643,
+      "sha256": "316a43fcd7231e50565c5e63fb38afe35a81b157bb82d6609fe06d86a27e43e2"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/content/guide_zh-CN.md",
+      "size": 94925,
+      "sha256": "4f163bb19d1c1e2c16cd99815506069a489c3d88ccfd2eea124747ea0436fc78"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/provenance/sources.md",
+      "size": 16884,
+      "sha256": "12fbaae58e85451e0d1e3db5307faa5f5baeb9097b31a0d851d7f00834b2b41a"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/verification/checks.md",
+      "size": 29980,
+      "sha256": "973956e869dbcf294fab2239a1f2f9e47ec22c3a9e1dff2e4ad4b69623bb76ca"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/MIGRATION.md",
+      "size": 31786,
+      "sha256": "261ed7d01298ff431bc55b9cb1225fcff3831f03562030253ada3845be47496b"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/MANIFEST.txt",
+      "size": 1844,
+      "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/templates/molecular-service/water/request.json",
+      "size": 277,
+      "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/templates/molecular-service/water/molecule.xyz",
+      "size": 123,
+      "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+    }
+  ],
+  "html": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261009-guide-v030-final-review\\expanded\\ai4orgchem-runtime-guide\\docs\\index.html",
+  "html_sha256": "b4762b4b4f1851afc1c13f177a7f1a08bbacb91ada1fe977cd3ce7567d110cca"
+}

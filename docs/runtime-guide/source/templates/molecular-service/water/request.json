@@ -1,0 +1,14 @@
+{
+  "basis": "6-31G(d)",
+  "charge": 0,
+  "method": "RHF",
+  "multiplicity": 1,
+  "profile": "rhf-631gd-small-v1",
+  "schema": "molecular-single-point-v1",
+  "structure": {
+    "file": "molecule.xyz",
+    "format": "xyz",
+    "unit": "angstrom"
+  },
+  "task": "single-point"
+}

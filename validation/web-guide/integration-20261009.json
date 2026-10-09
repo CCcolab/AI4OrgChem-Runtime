@@ -1,0 +1,95 @@
+{
+  "schema": "runtime-web-guide-integration-v1",
+  "date": "2026-10-09",
+  "status": "ACCEPTED_LOCAL_DOCUMENTATION_CANDIDATE_NO_REQUIRED_CONTENT_FIX",
+  "guide_version": "v0.3.0-candidate",
+  "entrypoint": "docs/index.html",
+  "html_sha256": "b4762b4b4f1851afc1c13f177a7f1a08bbacb91ada1fe977cd3ce7567d110cca",
+  "html_bytes": 183232,
+  "archive_path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip",
+  "archive_sha256": "ca0e947b0e11ae931ee097780e9872c63fd5a9d72cfdb6dd2798e5f8e27d8b8d",
+  "archive_bytes": 389414,
+  "source_members": [
+    {
+      "path": "docs/runtime-guide/source/docs/index.html",
+      "size": 183232,
+      "sha256": "b4762b4b4f1851afc1c13f177a7f1a08bbacb91ada1fe977cd3ce7567d110cca"
+    },
+    {
+      "path": "docs/runtime-guide/source/docs/.nojekyll",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/runtime-guide/source/README.md",
+      "size": 28643,
+      "sha256": "316a43fcd7231e50565c5e63fb38afe35a81b157bb82d6609fe06d86a27e43e2"
+    },
+    {
+      "path": "docs/runtime-guide/source/content/guide_zh-CN.md",
+      "size": 94925,
+      "sha256": "4f163bb19d1c1e2c16cd99815506069a489c3d88ccfd2eea124747ea0436fc78"
+    },
+    {
+      "path": "docs/runtime-guide/source/provenance/sources.md",
+      "size": 16884,
+      "sha256": "12fbaae58e85451e0d1e3db5307faa5f5baeb9097b31a0d851d7f00834b2b41a"
+    },
+    {
+      "path": "docs/runtime-guide/source/verification/checks.md",
+      "size": 29980,
+      "sha256": "973956e869dbcf294fab2239a1f2f9e47ec22c3a9e1dff2e4ad4b69623bb76ca"
+    },
+    {
+      "path": "docs/runtime-guide/source/MIGRATION.md",
+      "size": 31786,
+      "sha256": "261ed7d01298ff431bc55b9cb1225fcff3831f03562030253ada3845be47496b"
+    },
+    {
+      "path": "docs/runtime-guide/source/MANIFEST.txt",
+      "size": 1844,
+      "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+    },
+    {
+      "path": "docs/runtime-guide/source/templates/molecular-service/water/request.json",
+      "size": 277,
+      "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+    },
+    {
+      "path": "docs/runtime-guide/source/templates/molecular-service/water/molecule.xyz",
+      "size": 123,
+      "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+    }
+  ],
+  "runtime_source_reference": "575127b94214ca1a3c605bd2139bf77ba7e5dd1d",
+  "scientific_image_build_reference": "59f576c5a11f7192d0425765611a49369c6f561a",
+  "checks": {
+    "CRC": "PASS",
+    "member_byte_identity": "PASS",
+    "viewport_default_360_768_1440": "PASS",
+    "viewport_expanded_360_768_1440": "PASS",
+    "HTTP_root_and_simulated_repo_path": "PASS",
+    "export_default_reopen": "PASS",
+    "downloaded_exports_match_original_package": "PASS",
+    "clipboard_logical_text": "PASS",
+    "clipboard_buttons": 79,
+    "clipboard_raw_equal": 42,
+    "clipboard_only_windows_crlf_difference": 37,
+    "true_nojs": "PASS_KEYWORD_COVERAGE",
+    "page_javascript_errors": "NONE"
+  },
+  "not_executed": [
+    "real_browser_200_percent_zoom",
+    "full_keyboard_workflow",
+    "multiple_browser_engines",
+    "actual_GitHub_Pages_deployment"
+  ],
+  "scope": "GUIDE_ONLY_NOT_ONLINE_COMPUTE_OR_SCIENTIFIC_REVALIDATION",
+  "scientific_recomputation": "NOT_EXECUTED",
+  "Docker_or_WSL_execution_this_review": "NOT_EXECUTED",
+  "public_push": "NOT_PERFORMED",
+  "publication": "PENDING_USER_FUTURE_INSTRUCTION",
+  "guide_license": "IMPORTED_PROVENANCE_RETAINED_NOT_AUTOMATICALLY_RELICENSED_AS_RUNTIME",
+  "browser_evidence_sha256": "e7deb54c6eb1e821c76d70d2a91e11241a0220108ac35809fb358ff1d15e02c3",
+  "package_evidence_sha256": "14239c40f5725fd696ad26ff6cebdaa407b54036a965f857a3f148f54a2590f6"
+}
