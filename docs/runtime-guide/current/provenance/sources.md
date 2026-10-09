@@ -262,5 +262,7 @@ YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点
 
 条件Compute BLOCKED；WSLc BLOCKED / NOT\_EXECUTED；远CI NOT\_EXECUTED；镜像分发BLOCKED；外部专家咨询已取消非前置。本轮不运行Runtime/Docker/WSL/科学，不发布、不改权限。
 
-## v0.3.0-candidate 当前交付
-候选非已验收；currentordinaryenabled / legacyconditionalblocked。物理顺序 overview、quick-start、user-molecule、results、tasks、help。10 members：原8文件，加 templates/molecular-service/water/request.json 与 molecule.xyz；277/123 bytes、LF结尾、代码textContent原文。14 evidence、7旧任务、3固定案例、1普通服务，12数值checks。当前新字节版本的复制核对、ZIP实物CRC/哈希、HTML一致性、重开再导出与迁移及完整WEB合同尚未完成；修订前下载实物与三宽度结构实测只作历史，当前QA不继承。新包大小和SHA-256须现场生成。
+说明：下列状态是YouMind原提供时的登记，不是最新包外实测。最新局部网页身份与检查见Runtime validation/web-guide/final-consistency-r2-20261009.json；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
+
+## 原YouMind v0.3.0-candidate交付登记（历史）
+候选非已验收；currentordinaryenabled / legacyconditionalblocked。物理顺序 overview、quick-start、user-molecule、results、tasks、help。10 members：原8文件，加 templates/molecular-service/water/request.json 与 molecule.xyz；277/123 bytes、LF结尾、代码textContent原文。14 evidence、7旧任务、3固定案例、1普通服务，12数值checks。原提供时新字节版本的复制核对、ZIP实物CRC/哈希、HTML一致性、重开再导出与迁移及完整WEB合同尚未完成；修订前下载实物与三宽度结构实测只作历史，原提供时QA不继承。新包大小和SHA-256须现场生成。

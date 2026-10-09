@@ -64,3 +64,5 @@ Git克隆用于源码安装；GitHub自动Download ZIP缺少安装器要求的co
 ## 推送前最终增补
 
 十一YouMind Skill由用户延后导出，不构成本次源码／指南同步前置；私有原指令与空目录没有加入候选。独立复核后的[两项记录修正](../validation/github-sync/FINAL_CONSISTENCY_CORRECTIONS_20261009_zh-CN.md)明确网页历史维护／当前手工QA／包外实测的区别，并修正未来CI工程job的执行上下文，保持实际远端CI NOT_EXECUTED。当前网页身份见[最终局部验收](../validation/web-guide/final-consistency-20261009.json)，旧68ab316封包与旧记录保留，最终新源码以仓库外封存manifest为准。版本号暂不确定；创建仓库、公开范围与Pages仍待用户确认。
+
+当前网页最终字节与导出另见[语义补核记录](../validation/web-guide/final-consistency-r2-20261009.json)；较早记录仅用于其相应历史归档。

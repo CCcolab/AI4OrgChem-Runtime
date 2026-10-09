@@ -1,0 +1,91 @@
+{
+  "schema": "web-guide-final-consistency-refinement-v1",
+  "date": "2026-10-09",
+  "runtime_base_commit": "9795c31c389aeab39cecd04f0f16c7d110c1aed8",
+  "parent_record": "validation/web-guide/final-consistency-20261009.json",
+  "parent_html_sha256": "1430e2a00a17c5e575f8624b74d50bf57d9faff61723d92223f17be32545244c",
+  "active_html": {
+    "path": "docs/index.html",
+    "bytes": 189692,
+    "sha256": "ad62e38dd4206c806788fc6dd365cb206704bcd5d0d66adf7a68481e2cdba037"
+  },
+  "current_export": "docs/runtime-guide/current",
+  "archive": {
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-final-consistency-r2.zip",
+    "bytes": 411758,
+    "sha256": "e3a75ac71e9eff9db90f1540fe5bccf16ad5a46caa37d767f3bb224f8e06cbc5",
+    "crc": "PASS",
+    "members": [
+      {
+        "path": "docs/index.html",
+        "bytes": 189692,
+        "sha256": "ad62e38dd4206c806788fc6dd365cb206704bcd5d0d66adf7a68481e2cdba037"
+      },
+      {
+        "path": "docs/.nojekyll",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "README.md",
+        "bytes": 32565,
+        "sha256": "214f9ee7ca2807ed724a3086474b2e44e8dd490203e85a27b4379270cf96d8d5"
+      },
+      {
+        "path": "content/guide_zh-CN.md",
+        "bytes": 98294,
+        "sha256": "9d586703e08c1c029e7c3515fb87a146d0b7d0b9ad3b30fbcc5241396e8365e9"
+      },
+      {
+        "path": "provenance/sources.md",
+        "bytes": 17569,
+        "sha256": "754214a81d2d2904e33c4bf7e0f39f6ac8377b02edcc7972f59752333c7c850f"
+      },
+      {
+        "path": "verification/checks.md",
+        "bytes": 33966,
+        "sha256": "7d50b8b7f1b4addede22be9024d61d9616cd0654bdc3d6ab8fc912b4d7de2f38"
+      },
+      {
+        "path": "MIGRATION.md",
+        "bytes": 35708,
+        "sha256": "4648648dc89e1e89805aa3fc10c69a6986d16d0c4bcb4ad1c1314f545970afd1"
+      },
+      {
+        "path": "MANIFEST.txt",
+        "bytes": 1844,
+        "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+      },
+      {
+        "path": "templates/molecular-service/water/request.json",
+        "bytes": 277,
+        "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+      },
+      {
+        "path": "templates/molecular-service/water/molecule.xyz",
+        "bytes": 123,
+        "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+      }
+    ]
+  },
+  "repairs": [
+    "Preserve historical-state/current-capability negation meaning",
+    "Guide and provenance download delivery notes explicitly historical and point to latest SHA-bound local records"
+  ],
+  "browser_record": "validation/web-guide/browser-final-consistency-r2-20261009.json",
+  "scope": "Same actual local browser subset as previous final-consistency pass, repeated on these changed HTML bytes; no full WEB/scientific/platform certification",
+  "calculation_commands_and_templates": "UNCHANGED",
+  "CI_runner_and_context_tests": "UNCHANGED_FROM_9795c31",
+  "not_executed": [
+    "true 200 percent zoom",
+    "full keyboard audit",
+    "multi-browser audit",
+    "remote CI",
+    "science",
+    "Docker/WSL acceptance",
+    "Pages or public push"
+  ],
+  "old_records_and_archives": "PRESERVED; mutable current_export positions are historical in old records, original bytes recoverable from their immutable archive ZIPs and Git commits",
+  "skill_export": "DEFERRED_BY_USER",
+  "new_Runtime_version": "NOT_ASSIGNED"
+}

@@ -43,3 +43,7 @@
 当前活动入口仍为docs/index.html；[current维护导出](runtime-guide/current/README.md)现对应本轮字节，可携带[最终口径修订网页包](runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-final-consistency.zip)。旧模块名称包、原YouMind包和原始导入快照均保留。此前记录中的current_export是历史导出位置；原字节可在对应归档ZIP及Git提交恢复，不用当前目录冒充旧哈希。
 
 本轮三宽度默认／全展开、79逻辑复制目标、功能名搜索、三路径、七项导出CRC和HTTP根／子路径重开、真禁JS原生展开阅读通过；计算命令及水模板原字节不变。新身份与范围见[final-consistency-20261009.json](../validation/web-guide/final-consistency-20261009.json)和[本轮浏览器记录](../validation/web-guide/browser-final-consistency-20261009.json)。没有科学重算、镜像重建、WSL变更或公开动作，未分配新Runtime版本。
+
+### 维护语义与两项下载出口补核
+
+当前活动字节和current目录以[final-consistency-r2-20261009.json](../validation/web-guide/final-consistency-r2-20261009.json)为准，[本轮浏览器记录](../validation/web-guide/browser-final-consistency-r2-20261009.json)绑定新HTML。明确保留“仅描述当时状态，不是当前能力”的原意；guide与sources附加的交付说明同样标为历史，不再把原提供时未执行误写成当前全未执行。旧final-consistency记录／归档继续保留各自身份。最新[可携带网页包](runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-final-consistency-r2.zip)另存，未更改原始输入或科学内容。
