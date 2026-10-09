@@ -76,7 +76,7 @@ sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d
 
 cc7437901119e71ef7945a12813c021c383e7648
 
-Runtime本地工程候选未公开发布；任意用户分子的旧条件态比较 Compute BLOCKED；外部咨询CANCELLED\_BY\_USER，不是科学批准；Actions NOT\_EXECUTED；WSLc BLOCKED／NOT\_EXECUTED且升级实机暂停；镜像分发BLOCKED；源码公开另确认；Colab暂缓。固定L3／L4严格断网未执行，L4不能恢复。
+Runtime本地工程候选未公开发布；任意用户分子的旧条件态比较 Compute BLOCKED；外部咨询CANCELLED\_BY\_USER，不是科学批准；首次Actions三项job已在06d5088通过，范围见当前同步记录；WSLc BLOCKED／NOT\_EXECUTED且升级实机暂停；镜像分发BLOCKED；源码与指南已公开、Pages未启用；Colab暂缓。固定L3／L4严格断网未执行，L4不能恢复。
 
 ### 原七任务科学来源
 
@@ -260,7 +260,10 @@ YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点
 
 维护：进入解压后的 ` ai4orgchem-runtime-guide/ ` 目录，运行 ` python -m http.server 8000 `，浏览 ` http://localhost:8000/docs/ `。仅静态指南维护，不启动Runtime；无真实托管。10成员共同顶层保持，包外清单／审计JSON和MD按当前字节动态生成。
 
-条件Compute BLOCKED；WSLc BLOCKED / NOT\_EXECUTED；远CI NOT\_EXECUTED；镜像分发BLOCKED；外部专家咨询已取消非前置。本轮不运行Runtime/Docker/WSL/科学，不发布、不改权限。
+原YouMind提供时状态（历史）：条件Compute BLOCKED；WSLc BLOCKED / NOT\_EXECUTED；远CI NOT\_EXECUTED；镜像分发BLOCKED；外部专家咨询已取消非前置。该原包轮不运行Runtime/Docker/WSL/科学，不发布、不改权限；本次公开与实际CI另见当前同步记录。
+
+## 最新公开与远端CI记录
+2026-10-09已按项目负责人授权公开源码与指南：https://github.com/CCcolab/AI4OrgChem-Runtime 。06d5088首次CI三项job均成功，真实P11预检一项跳过；详见https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122 。Pages未启用；WSLc、镜像分发和旧条件态Compute限制保留，不是全科学验收；未创建新版本/标签/Release。
 
 说明：下列状态是YouMind原提供时的登记，不是最新包外实测。最新局部网页身份与检查见Runtime validation/web-guide/final-consistency-r2-20261009.json；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
 

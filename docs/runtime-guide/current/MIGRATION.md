@@ -292,6 +292,9 @@ NOT_EXECUTED
 ## 文件索引表局部滚动修复
 文件索引表局部滚动修复已写入，修后独立三宽度复测待执行。360/768/1440 须在全部 details 展开时独立复测；原次不登记通过、不套用旧哈希。裸表已在源 HTML 中置入可键盘聚焦的 table-scroll 局部滚动区域，保留表格 min-width:680px 与现有 grid/card/details 收缩规则；cleanExport 与 ZIP 内 docs/index.html 沿用源 HTML 修复，导出算法未改。
 
+## 最新公开与远端CI记录
+2026-10-09已按项目负责人授权公开源码与指南：https://github.com/CCcolab/AI4OrgChem-Runtime 。06d5088首次CI三项job均成功，真实P11预检一项跳过；详见https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122 。Pages未启用；WSLc、镜像分发和旧条件态Compute限制保留，不是全科学验收；未创建新版本/标签/Release。
+
 说明：下列状态是YouMind原提供时的登记，不是最新包外实测。最新局部网页身份与检查见Runtime validation/web-guide/final-consistency-r2-20261009.json；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
 
 ## 原YouMind v0.3.0-candidate交付登记（历史）
@@ -449,11 +452,11 @@ YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点
 
 维护：进入解压后的 ` ai4orgchem-runtime-guide/ ` 目录，运行 ` python -m http.server 8000 `，浏览 ` http://localhost:8000/docs/ `。仅静态指南维护，不启动Runtime；无真实托管。10成员共同顶层保持，包外清单／审计JSON和MD按当时字节动态生成。
 
-条件Compute BLOCKED；WSLc BLOCKED / NOT\_EXECUTED；远CI NOT\_EXECUTED；镜像分发BLOCKED；外部专家咨询已取消非前置。原轮不运行Runtime/Docker/WSL/科学，不发布、不改权限。
+原YouMind提供时状态（历史）：条件Compute BLOCKED；WSLc BLOCKED / NOT\_EXECUTED；远CI NOT\_EXECUTED；镜像分发BLOCKED；外部专家咨询已取消非前置。该原包轮不运行Runtime/Docker/WSL/科学，不发布、不改权限；原次公开与实际CI另见当时同步记录。
 
 
 ## 2026-10-09本地模块名称修订（优先于历史命名）
-网页按实际计算功能命名十四个模块；主标题、选择提示和复制按钮说明无需先了解专著编号。内部P01—P14、任务键、命令参数、来源路径与科学规则保持。名称和编号对应表位于来源追溯折叠区。用户自己的分子目前仅支持普通RHF单点服务；这些模块采用固定案例或保存证据，不增加任意分子条件计算、优化或尺寸扫描的支持范围。多态约束优化和环状体系分别保持固定17态与61态，旧候选仅苯G、N12-G通过；新镜像不继承这些科学验收。WSLc BLOCKED、远端CI NOT_EXECUTED、镜像分发BLOCKED，未推送或部署网站。模块改名轮的历史实测记录保存在Runtime validation/web-guide/module-names-20261009.json，绑定其当时HTML与归档ZIP；最终清单口径修订另见validation/web-guide/final-consistency-r2-20261009.json，不继承历史SHA。
+网页按实际计算功能命名十四个模块；主标题、选择提示和复制按钮说明无需先了解专著编号。内部P01—P14、任务键、命令参数、来源路径与科学规则保持。名称和编号对应表位于来源追溯折叠区。用户自己的分子目前仅支持普通RHF单点服务；这些模块采用固定案例或保存证据，不增加任意分子条件计算、优化或尺寸扫描的支持范围。多态约束优化和环状体系分别保持固定17态与61态，旧候选仅苯G、N12-G通过；新镜像不继承这些科学验收。模块改名轮当时为WSLc BLOCKED、远端CI NOT_EXECUTED、镜像分发BLOCKED且未推送。2026-10-09已公开源码与指南，06d5088首次CI三项job成功；Pages仍未启用，WSLc与镜像分发限制保留。模块改名轮的历史实测记录保存在Runtime validation/web-guide/module-names-20261009.json，绑定其当时HTML与归档ZIP；最终清单口径修订另见validation/web-guide/final-consistency-r2-20261009.json，不继承历史SHA。
 <a id="module-protocol-map"></a>
 
 ### 模块名称与内部协议编号（来源追溯）

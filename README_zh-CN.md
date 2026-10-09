@@ -1,8 +1,8 @@
 # AI4OrgChem 本地分子计算 Runtime
 
-[GitHub同步准备与范围](docs/GITHUB_SYNC_PREPARATION_20261009_zh-CN.md)：拟同步到独立仓库`CCcolab/AI4OrgChem-Runtime`，完整历史与网站公开范围待最终确认，当前尚未创建／推送或启用Pages。
+源码与用户提供的网页指南已按用户授权公开同步到[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。首推提交`06d50885bdccf31f83b89229c1513121542375d5`对应[GitHub Actions run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122)，三个限定范围的job均成功。详见[公开同步实绩](docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)；不据此认证全部科学服务或分发镜像。Pages尚未启用，不提供在线计算，尚未确定新版本号、打标签或发布Release。
 
-[本地网页使用指南](docs/index.html)已纳入项目，可在浏览器打开；[导入、验收与后续维护说明](docs/RUNTIME_WEB_GUIDE_zh-CN.md)保留原包和字节身份。网页与Runtime源码留待后续整体同步到GitHub，当前尚未推送或部署Pages。
+[网页使用指南](docs/index.html)已随Runtime源码纳入公开仓库，可下载后在本地浏览器打开；[导入、验收与后续维护说明](docs/RUNTIME_WEB_GUIDE_zh-CN.md)保留原包和字节身份。仓库同步已完成，Pages托管仍是单独待办。
 
 新增[源码安装、构建与独立身份登记指南](docs/SOURCE_INSTALLATION_zh-CN.md)：使用固定公开基础镜像、公开锁定依赖和重建的冻结科学源码，不再依赖旧的本地 Runtime 基础镜像。新镜像独立登记，不继承历史科学 PASS。使用 Git 克隆或安装器制作的源码 ZIP；[干净目录受限验收](docs/SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.md)已通过公开准备、构建、四类登记、45 项工程测试及四个小任务。高成本重放和全新机器验收未执行，以下历史候选记录继续独立保留。
 
@@ -16,7 +16,7 @@
 
 示例与历史复核从 [本地Runtime入口](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md) 开始：查阅P01—P14既有证据、执行受限Check/Report，或选择三个新增[固定登记复算](docs/REGISTERED_CASES_zh-CN.md)：P02冻结表统计、P13图规则与账本、小体系P01乙烯占据表示控制。三个任务有独立来源锁、受控本地镜像和运行记录；实际部署状态见[部署边界](docs/REGISTERED_CASES_DEPLOYMENT_BOUNDARIES_zh-CN.md)。旧用户分子条件态比较Compute仍BLOCKED，与新普通单点分开。Git/项目ZIP提供来源可核对的源码，不包含完整安装环境；WSLc、镜像分发及源码公开保持分别记录。
 
-以下带日期的工程、条件态失败和原七任务记录保留各自历史范围；其中“Compute BLOCKED”指旧条件态比较服务，不撤销上方普通RHF入口的限定支持。
+以下带日期的工程、条件态失败和原七任务记录保留各自历史范围；其中GitHub CI未执行、源码公开待确认等表述属于对应日期的历史状态，当前首推与远端CI实绩见上方新记录。“Compute BLOCKED”指旧条件态比较服务，不撤销上方普通RHF入口的限定支持。
 
 [2026-10-07合作停止工程](docs/USER_MOLECULE_NATIVE_SHUTDOWN_ENGINEERING_20261007_zh-CN.md)：154项专项工程回归通过；两种零原生停止场景保存关闭回执，强杀反例的最终回执保持未知。四段开销各测3次，不外推真实求解容量。该2026-10-07增补无新增科学计算/预算，旧139次OPEN账本保留，不重试；Compute仍BLOCKED。
 
@@ -78,7 +78,7 @@ W07 本地源码/证据候选另含可搬移 Check 和失败样例、源码备�
 
 本项目封装 AI4OrgChem 公开科学程序，以固定源码、精确依赖、分层启动和持久结果降低复核门槛。科学程序、协议、冻结证据和判定由上游管理。
 
-当前为 **v0.1.0 开发候选**，未公开发布。上游来源为 `v0.3.2` / `28511f3d84fa65707a107cde1e8121a7b4334ecb`；上游 Python 包版本另为 `0.1.0`。
+Runtime源码和指南现已公开同步，本轮以提交身份记录候选，尚未确定新Runtime版本号；此前v0.1.0开发候选标记属于历史记录，不是本轮正式Release。上游来源为 `v0.3.2` / `28511f3d84fa65707a107cde1e8121a7b4334ecb`；上游 Python 包版本另为 `0.1.0`。
 
 | 入口 | 独立 WSL2 候选环境 | 本地 Docker 候选镜像 | Windows WSLc |
 |---|---|---|---|
@@ -118,13 +118,13 @@ build-wslc.ps1 虽以 WSLc 命名，也支持显式 Docker 引擎。自行构建
 
 不纳入 GPU 训练、在线 Agent 服务、新命题、P09/P10 完整重优化、任意用户分子条件态或原著全文。第二批另提供固定协议的 P09 诊断与 P10 普通 DFT 扫描，范围见下方指南。运行任务不临时安装软件、更新源码或调用大模型 API。项目不新增科学判定，也不构成科学认证。
 
-专业复核阅读层见 [S1—S6 模块对应与服务卡片](docs/PROFESSIONAL_SERVICES_zh-CN.md)、[结果判读](docs/REVIEW_RESULTS_zh-CN.md)、[三类用户路径](docs/USER_PATHS_zh-CN.md)及[已有 Docker 记录示例](docs/examples/P14_REVIEW_20261002_zh-CN.md)。[复核报告](docs/templates/REVIEW_REPORT_zh-CN.md)与[反馈模板](docs/templates/FEEDBACK_zh-CN.md)供手工填写；自动汇总工具未实现，旧七任务入口保留；2026-10-08另增加三个固定P02/P13/P01入口，见上方指南。该文档增补与 `2460eef` 此前公开候选分开审阅，公开范围另行确认。
+专业复核阅读层见 [S1—S6 模块对应与服务卡片](docs/PROFESSIONAL_SERVICES_zh-CN.md)、[结果判读](docs/REVIEW_RESULTS_zh-CN.md)、[三类用户路径](docs/USER_PATHS_zh-CN.md)及[已有 Docker 记录示例](docs/examples/P14_REVIEW_20261002_zh-CN.md)。[复核报告](docs/templates/REVIEW_REPORT_zh-CN.md)与[反馈模板](docs/templates/FEEDBACK_zh-CN.md)供手工填写；自动汇总工具未实现，旧七任务入口保留；2026-10-08另增加三个固定P02/P13/P01入口，见上方指南。该文档增补与 `2460eef` 此前候选保留不同历史身份；两者现已纳入用户授权公开的完整历史。十一份YouMind Skill导出由用户延后，不作为已实现Skill交付。
 
-首次向获授权仓库推送会触发现有 GitHub Actions CI，执行构建/轻量测试并上传运行证据附件，保留七天；日志和附件须纳入公开范围审阅。CI 不推送镜像、不打正式标签、不发布 Release；GitHub Actions 实际运行仍为 NOT_EXECUTED。本地工程 CI 的执行结果另有记录，不与远端运行混淆。
+获授权的首次推送已触发现有 GitHub Actions CI：[run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122)三个限定job均成功，执行构建／轻量测试并上传运行证据附件，保留七天；日志和附件已纳入用户授权公开范围。CI不推送镜像、不打正式标签、不发布Release。本次运行不替代历史科学验收，不执行WSLc或高成本科学重放；本地工程CI旧记录继续单独保留。
 
 第二批按研究用途接入扭转路径账本、条件态直接响应、π–σ 比较、独立能量组装、路径闭合、丁二烯 GL 端点、环丁二烯条件态诊断及苯核排斥／普通 DFT 扫描。入口、固定输入及新计算范围见[第二批使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.md)，实际结果见[验证摘要](docs/PROTOCOL_CASES_BATCH2_VALIDATION_zh-CN.md)及[支持矩阵](validation/protocol-cases/support-matrix.json)。这是本地固定协议服务；任意用户小分子的普通 RHF 服务另有首批范围，任意用户分子的条件态 Compute 仍 BLOCKED。各次数值记录属于各自登记的镜像，不冒充最终候选镜像上全部重新执行的验收。
 
-第三方许可补充包与未解决的对应源码要求见 [源码交付方案](docs/CORRESPONDING_SOURCE_zh-CN.md)及[材料校验记录](validation/license-materials-review.json)。取得通知不等于 binary/source 对应关系已证明；**镜像分发 BLOCKED；源码公开另行确认**。
+第三方许可补充包与未解决的对应源码要求见 [源码交付方案](docs/CORRESPONDING_SOURCE_zh-CN.md)及[材料校验记录](validation/license-materials-review.json)。取得通知不等于 binary/source 对应关系已证明；**镜像分发BLOCKED；源码与用户提供的指南已按授权公开**。第三方许可和NOTICE边界继续适用。
 
 
-源码公开和镜像分发分别评估，见[公开边界与本地候选](docs/PUBLICATION_BOUNDARIES_zh-CN.md)。原生 wheel 来源仍有未解决项，两类公开操作均未执行。
+源码公开和镜像分发分别评估，见[公开边界与本地候选](docs/PUBLICATION_BOUNDARIES_zh-CN.md)。源码与指南同步已完成；原生wheel来源仍有未解决项，镜像未分发。

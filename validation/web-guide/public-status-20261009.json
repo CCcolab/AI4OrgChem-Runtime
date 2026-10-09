@@ -1,0 +1,95 @@
+{
+  "schema": "web-guide-public-status-v1",
+  "date": "2026-10-09",
+  "runtime_base_commit": "06d50885bdccf31f83b89229c1513121542375d5",
+  "parent_record": "validation/web-guide/final-consistency-r2-20261009.json",
+  "parent_html_sha256": "ad62e38dd4206c806788fc6dd365cb206704bcd5d0d66adf7a68481e2cdba037",
+  "active_html": {
+    "path": "docs/index.html",
+    "bytes": 191788,
+    "sha256": "2d36e3af14108defeab5c1f58cdb746569a13bcdec26d50d0f92c1815ff59659"
+  },
+  "current_export": "docs/runtime-guide/current",
+  "archive": {
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-public-status-20261009.zip",
+    "bytes": 418151,
+    "sha256": "517326b26b0022dbcf2accf479e0e16519b996caf8fd74b6ef6fea09a3ef002b",
+    "crc": "PASS",
+    "members": [
+      {
+        "path": "docs/index.html",
+        "bytes": 191788,
+        "sha256": "2d36e3af14108defeab5c1f58cdb746569a13bcdec26d50d0f92c1815ff59659"
+      },
+      {
+        "path": "docs/.nojekyll",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "README.md",
+        "bytes": 33218,
+        "sha256": "4b071388fde0240f58ef211966882445345ec0b99391bb2ac2e4c7c0c280dad3"
+      },
+      {
+        "path": "content/guide_zh-CN.md",
+        "bytes": 100042,
+        "sha256": "894487178ce7b599c4a9df064b6a8c56593538f618c5b40aabc8f2f3e1877bb4"
+      },
+      {
+        "path": "provenance/sources.md",
+        "bytes": 18159,
+        "sha256": "88844db83bbd4be380a4ab28f18e234b15032602b613abaf03364e87c43724cc"
+      },
+      {
+        "path": "verification/checks.md",
+        "bytes": 34619,
+        "sha256": "e00f04d5cefabe874f289b30b3501a3ee31c8438a2fa4d152ea3aa9409e9630e"
+      },
+      {
+        "path": "MIGRATION.md",
+        "bytes": 36361,
+        "sha256": "c5e09063bde673170bf6be9a1ac8eae26c7d1e811688cd8afdf8ee072d85d073"
+      },
+      {
+        "path": "MANIFEST.txt",
+        "bytes": 1844,
+        "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+      },
+      {
+        "path": "templates/molecular-service/water/request.json",
+        "bytes": 277,
+        "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+      },
+      {
+        "path": "templates/molecular-service/water/molecule.xyz",
+        "bytes": 123,
+        "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+      }
+    ]
+  },
+  "repairs": [
+    "Current source/guide publicly pushed; Pages still not enabled",
+    "First actual GitHub CI success bound to 06d5088/run37933616122 and three scoped jobs",
+    "Prior NOT_EXECUTED/publication records explicitly historical"
+  ],
+  "browser_record": "validation/web-guide/browser-public-status-20261009.json",
+  "browser_scope": "Same local scoped subset; not full WEB/platform/scientific acceptance",
+  "calculation_commands_and_templates": "UNCHANGED_ALL_79_COPY_TARGETS_AND_PRE_CODE_BLOCKS",
+  "actual_remote_CI": {
+    "status": "THREE_JOBS_SUCCESS_WITH_DECLARED_SCOPE_AND_ONE_P11_SKIP",
+    "sha": "06d50885bdccf31f83b89229c1513121542375d5",
+    "run_id": 37933616122
+  },
+  "not_executed": [
+    "true 200 percent zoom",
+    "full keyboard audit",
+    "multi-browser audit",
+    "Pages deployment",
+    "new local scientific computation",
+    "new local Docker/WSL acceptance"
+  ],
+  "scientific_code_rules_and_thresholds": "UNCHANGED",
+  "old_records_and_archives": "PRESERVED",
+  "new_Runtime_version": "NOT_ASSIGNED"
+}

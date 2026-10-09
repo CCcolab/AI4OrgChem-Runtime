@@ -1,5 +1,13 @@
 # Runtime 本地网页指南
 
+## 2026-10-09公开同步后的当前状态
+
+Runtime源码及用户提供的网页指南已按用户授权同步到[公开仓库CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)，首推提交为`06d50885bdccf31f83b89229c1513121542375d5`。[Actions run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122)三个限定job均成功；详见[公开同步实绩](GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)。网站目前是仓库中的使用指南，Pages未启用，不提供在线计算，也不把CI成功视作全部网页／科学验收。
+
+源码与指南的公开范围已获用户授权；该授权不替第三方授予权利，YouMind来源、原包及NOTICE许可边界继续保留。十一Skill导出已延后，不作为已实现Skill交付；新版本号未确定，未打正式标签或发布Release。镜像分发BLOCKED_LOCAL_ONLY、WSLc BLOCKED／NOT_EXECUTED且暂停、旧条件态Compute BLOCKED及L4不支持恢复运行均未改变。
+
+以下各轮导入、改名与推送前局部验收属于历史记录；其中“未推送／公开待确认／远端CI NOT_EXECUTED”保留当时意义，当前状态以本段及新同步记录为准。当前活动网页仍以docs/index.html为唯一编辑入口，维护字节增补另行保存身份，不把此前浏览器实测套用给后来字节。
+
 以下导入／模块改名章节保留各自历史字节；当前网页身份与导出见文末“推送前验收记录口径修订”。
 
 2026-10-09已接纳 YouMind 更新的 `v0.3.0-candidate` 为本地文档候选，本轮未发现必须继续修改的功能或声明问题。网页入口为 [docs/index.html](index.html)，可直接在本地浏览器打开。
@@ -47,3 +55,7 @@
 ### 维护语义与两项下载出口补核
 
 当前活动字节和current目录以[final-consistency-r2-20261009.json](../validation/web-guide/final-consistency-r2-20261009.json)为准，[本轮浏览器记录](../validation/web-guide/browser-final-consistency-r2-20261009.json)绑定新HTML。明确保留“仅描述当时状态，不是当前能力”的原意；guide与sources附加的交付说明同样标为历史，不再把原提供时未执行误写成当前全未执行。旧final-consistency记录／归档继续保留各自身份。最新[可携带网页包](runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-final-consistency-r2.zip)另存，未更改原始输入或科学内容。
+
+## 公开状态增补后的当前网页身份
+
+本次仅同步已发生的源码公开与三项远端CI结果，Pages仍未启用。当前HTML、10成员导出与归档身份见[public-status-20261009.json](../validation/web-guide/public-status-20261009.json)，[局部浏览器记录](../validation/web-guide/browser-public-status-20261009.json)绑定新字节；三宽度、79复制、三路径、模块名搜索、七导出、HTTP根/模拟子路径和真禁JS阅读通过。全部计算命令与水模板未变，旧原包与r2归档继续保留各自哈希。[当前可携带网页包](runtime-guide/archive/ai4orgchem-runtime-guide-public-status-20261009.zip)只是指南；200%/全键盘/多浏览器仍未执行，未分配新Runtime版本。

@@ -1,6 +1,14 @@
 # Runtime 与网站 GitHub 同步准备
 
-准备日期：2026-10-09。目标为独立仓库 **CCcolab/AI4OrgChem-Runtime**。已核验GitHub CLI登录账号CCcolab；目标仓库当前不存在。本轮完成本地候选整理、历史扫描和备份准备，尚未创建仓库、设置remote、推送、改变可见性或启用Pages。
+## 已按授权完成同步（2026-10-09最新记录）
+
+[公开仓库CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)已创建，main已接收完整候选提交`06d50885bdccf31f83b89229c1513121542375d5`（128个提交、836个当前跟踪文件），含用户授权公开的源码、完整历史与YouMind指南。首推[Actions run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122)三个限定job均成功；附件与日志按现有七天保留策略提供。详见[实际同步与范围记录](GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)。本次未推送标签、镜像或发布Release，新版本号未确定。
+
+网站源码已在仓库，Pages尚未启用，预期Pages URL仍不是上线证明。没有新增在线计算。十一YouMind Skill导出由用户延后；公开授权不替第三方授予权利，NOTICE及各自许可边界保留。WSLc、镜像分发、旧条件态Compute及未执行的科学／浏览器验收项继续按原记录保留。
+
+以下是推送前的准备快照和当时执行步骤；“待确认／未创建／未推送／远端CI NOT_EXECUTED”均属于当时状态，以本段及新同步记录为当前依据。不要在已存在仓库再次执行创建步骤。
+
+历史准备日期：2026-10-09。目标为独立仓库 **CCcolab/AI4OrgChem-Runtime**。已核验GitHub CLI登录账号CCcolab；目标仓库当前不存在。本轮完成本地候选整理、历史扫描和备份准备，尚未创建仓库、设置remote、推送、改变可见性或启用Pages。
 
 ## 拟同步内容与历史
 

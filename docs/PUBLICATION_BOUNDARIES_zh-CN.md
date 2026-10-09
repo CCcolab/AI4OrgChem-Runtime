@@ -1,6 +1,14 @@
 # 源码公开、镜像分发与本地候选交付
 
-核对日期：2026-10-03。本轮仅完成本地材料和备份；未设置 remote、推送、改变可见性、打正式标签或发布 Release。
+## 2026-10-09公开同步实绩（最新状态）
+
+用户已授权公开本次候选的完整历史、源码材料及用户提供的网页指南，公开仓库为[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。首推main为`06d50885bdccf31f83b89229c1513121542375d5`；[Actions run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122)三个限定job均成功，日志与证据附件属于授权公开范围。详见[公开同步记录](GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)。
+
+这是源码与指南公开同步，不是镜像分发或全部科学服务认证。Pages尚未启用，不提供在线计算；新版本号未确定，没有正式标签或Release。YouMind十一Skill导出由用户延后。公开授权不替第三方授予权利，根Apache-2.0和NOTICE的第三方材料边界继续适用。镜像分发仍BLOCKED_LOCAL_ONLY，WSLc仍BLOCKED／NOT_EXECUTED并暂停；旧用户分子条件态Compute仍BLOCKED，L4可保存检查点但不支持恢复运行。
+
+下文2026-10-03及“同步准备增补”保留各自历史状态；其中未推送、公开待确认和远端CI NOT_EXECUTED不代表本段最新状态，不改写旧证据。
+
+历史核对日期：2026-10-03。当轮仅完成本地材料和备份；未设置 remote、推送、改变可见性、打正式标签或发布 Release。
 
 ## 已闭合的本地材料
 
