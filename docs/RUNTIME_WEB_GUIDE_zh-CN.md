@@ -1,6 +1,12 @@
 # Runtime 本地网页指南
 
-## 2026-10-09公开同步后的当前状态
+## 2026-10-10静态指南上线（最新状态）
+
+[直接打开Runtime用户指南](https://cccolab.github.io/AI4OrgChem-Runtime/)：GitHub Pages已按用户要求启用`main`的`/docs`分支发布源，使用GitHub默认域名和HTTPS。首次managed Pages部署[run 37998298990](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37998298990)成功，对应部署基线`99a52b8a992260cc7ee3e88f699da5454ffb87af`；实际HTTPS与页面验收范围见[指南上线记录](GITHUB_PAGES_GUIDE_20261010_zh-CN.md)。
+
+网页是静态使用指南，阅读无需Docker／WSL；复制的命令在用户本地Runtime执行，不提供在线计算。`/docs`中的文档和已公开归档均属于分支发布范围。此次不分配新版本号、不打标签、不发布Release或镜像；WSLc、镜像分发、旧条件态Compute及L4不支持恢复运行的边界不变。以下2026-10-09及更早章节保留历史状态，其中Pages未启用的表述不代表当前状态。
+
+## 2026-10-09公开同步后的历史状态
 
 Runtime源码及用户提供的网页指南已按用户授权同步到[公开仓库CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)，首推提交为`06d50885bdccf31f83b89229c1513121542375d5`。[Actions run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122)三个限定job均成功；详见[公开同步实绩](GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)。网站目前是仓库中的使用指南，Pages未启用，不提供在线计算，也不把CI成功视作全部网页／科学验收。
 

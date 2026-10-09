@@ -27,3 +27,7 @@
 YouMind 11 个 Skill 的导出由用户延后，不构成此次同步前置。完整网页的真实 200% 缩放、全键盘、多浏览器及真实 Pages 平台验收仍未执行；局部页面状态文字增补按新 HTML 哈希另存浏览器记录，不继承旧哈希的 PASS。
 
 当前网页状态文字增补的局部实测见[网页身份](../validation/web-guide/public-status-20261009.json)及[浏览器记录](../validation/web-guide/browser-public-status-20261009.json)，79个复制目标、所有计算代码块及水输入模板与公开前候选一致。三个外部链接采用原网页相同的target/rel规则，活动HTML与实际导出逐字一致；原提供记录与归档不覆盖。
+
+## 2026-10-10后续静态指南托管
+
+本文件保留2026-10-09首次源码同步时的身份和“Pages未启用”历史状态。后续已按用户要求启用静态指南，直接入口为 https://cccolab.github.io/AI4OrgChem-Runtime/ ，范围与独立部署记录见[网页打开与托管指南](GITHUB_PAGES_GUIDE_20261010_zh-CN.md)。原先源码公开和CI记录不改写为网页部署记录；网站不提供在线计算，科学和镜像限制保留。

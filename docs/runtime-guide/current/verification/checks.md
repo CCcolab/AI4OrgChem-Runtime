@@ -286,7 +286,10 @@ NOT_EXECUTED
 ## 文件索引表局部滚动修复
 文件索引表局部滚动修复已写入，修后独立三宽度复测待执行。360/768/1440 须在全部 details 展开时独立复测；原次不登记通过、不套用旧哈希。裸表已在源 HTML 中置入可键盘聚焦的 table-scroll 局部滚动区域，保留表格 min-width:680px 与现有 grid/card/details 收缩规则；cleanExport 与 ZIP 内 docs/index.html 沿用源 HTML 修复，导出算法未改。
 
-## 最新公开与远端CI记录
+## 静态指南网址与使用方式（2026-10-10）
+GitHub Pages静态指南已启用：https://cccolab.github.io/AI4OrgChem-Runtime/ 。可直接在浏览器阅读、搜索、复制命令和下载指南；网页不提供在线计算，计算命令仍由用户本地Runtime执行。整个已公开main/docs作为发布源。WSLc、镜像分发及旧条件态Compute限制保留，不分配新Runtime版本、标签或Release。
+
+## 2026-10-09源码首次公开与远端CI记录（历史）
 2026-10-09已按项目负责人授权公开源码与指南：https://github.com/CCcolab/AI4OrgChem-Runtime 。06d5088首次CI三项job均成功，真实P11预检一项跳过；详见https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122 。Pages未启用；WSLc、镜像分发和旧条件态Compute限制保留，不是全科学验收；未创建新版本/标签/Release。
 
 说明：下列状态是YouMind原提供时的登记，不是最新包外实测。最新局部网页身份与检查见Runtime validation/web-guide/final-consistency-r2-20261009.json；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
@@ -304,7 +307,7 @@ NOT_EXECUTED
 
 ### 从源码安装：新用户水分子起点
 
-先取得 Runtime Git 克隆（需要Git），或本项目带 Git commit/tree/blob 证据的安装源码ZIP。公开仓库与下载地址未确认，不提供虚构链接；普通GitHub自动ZIP不可替代。网页ZIP不是安装源码包，不含镜像或依赖。
+先取得 Runtime Git 克隆（需要Git），或本项目带 Git commit/tree/blob 证据的安装源码ZIP。公开源码位于[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)，可按下方命令Git克隆；专用来源证明ZIP尚无正式Release下载入口，普通GitHub自动ZIP不可替代。网页ZIP不是安装源码包，不含镜像或依赖。
 
 需要自己的 Python3.12+、Docker Linux/amd64；构建网络需访问 GitHub / PyPI / DockerHub / Debian。选择全新的独立目录，不覆盖科研工作区。
 
@@ -452,7 +455,7 @@ YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点
 
 
 ## 2026-10-09本地模块名称修订（优先于历史命名）
-网页按实际计算功能命名十四个模块；主标题、选择提示和复制按钮说明无需先了解专著编号。内部P01—P14、任务键、命令参数、来源路径与科学规则保持。名称和编号对应表位于来源追溯折叠区。用户自己的分子目前仅支持普通RHF单点服务；这些模块采用固定案例或保存证据，不增加任意分子条件计算、优化或尺寸扫描的支持范围。多态约束优化和环状体系分别保持固定17态与61态，旧候选仅苯G、N12-G通过；新镜像不继承这些科学验收。模块改名轮当时为WSLc BLOCKED、远端CI NOT_EXECUTED、镜像分发BLOCKED且未推送。2026-10-09已公开源码与指南，06d5088首次CI三项job成功；Pages仍未启用，WSLc与镜像分发限制保留。模块改名轮的历史实测记录保存在Runtime validation/web-guide/module-names-20261009.json，绑定其当时HTML与归档ZIP；最终清单口径修订另见validation/web-guide/final-consistency-r2-20261009.json，不继承历史SHA。
+网页按实际计算功能命名十四个模块；主标题、选择提示和复制按钮说明无需先了解专著编号。内部P01—P14、任务键、命令参数、来源路径与科学规则保持。名称和编号对应表位于来源追溯折叠区。用户自己的分子目前仅支持普通RHF单点服务；这些模块采用固定案例或保存证据，不增加任意分子条件计算、优化或尺寸扫描的支持范围。多态约束优化和环状体系分别保持固定17态与61态，旧候选仅苯G、N12-G通过；新镜像不继承这些科学验收。模块改名轮当时为WSLc BLOCKED、远端CI NOT_EXECUTED、镜像分发BLOCKED且未推送。2026-10-09已公开源码与指南，06d5088首次CI三项job成功；该源码同步日Pages仍未启用；2026-10-10已启用静态指南，WSLc与镜像分发限制保留。模块改名轮的历史实测记录保存在Runtime validation/web-guide/module-names-20261009.json，绑定其当时HTML与归档ZIP；最终清单口径修订另见validation/web-guide/final-consistency-r2-20261009.json，不继承历史SHA。
 <a id="module-protocol-map"></a>
 
 ### 模块名称与内部协议编号（来源追溯）

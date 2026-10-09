@@ -2,9 +2,11 @@
 
 [English](README.md)
 
-源码与用户提供的网页指南已按用户授权公开同步到[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。首推提交`06d50885bdccf31f83b89229c1513121542375d5`对应[GitHub Actions run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122)，三个限定范围的job均成功。详见[公开同步实绩](docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)；不据此认证全部科学服务或分发镜像。Pages尚未启用，不提供在线计算，尚未确定新版本号、打标签或发布Release。
+**[直接打开Runtime用户指南网页](https://cccolab.github.io/AI4OrgChem-Runtime/)**。这是静态使用指南，阅读无需启动Docker或WSL；复制计算命令后，在自己的本地Runtime执行。网页不执行分子计算。部署记录见[GitHub Pages指南上线记录](docs/GITHUB_PAGES_GUIDE_20261010_zh-CN.md)。
 
-[网页使用指南](docs/index.html)已随Runtime源码纳入公开仓库，可下载后在本地浏览器打开；[导入、验收与后续维护说明](docs/RUNTIME_WEB_GUIDE_zh-CN.md)保留原包和字节身份。仓库同步已完成，Pages托管仍是单独待办。
+源码与用户提供的网页指南已按用户授权公开同步到[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。首推提交`06d50885bdccf31f83b89229c1513121542375d5`对应[GitHub Actions run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122)，三个限定范围的job均成功。详见[公开同步实绩](docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)；不据此认证全部科学服务或分发镜像。2026-10-10已启用GitHub Pages静态指南托管；不提供在线计算，尚未确定新版本号、打标签或发布Release。
+
+[在线网页使用指南](https://cccolab.github.io/AI4OrgChem-Runtime/)由GitHub Pages从`main`的`/docs`托管；[HTML源码](docs/index.html)仍可下载后在本地浏览器打开。[导入、验收与后续维护说明](docs/RUNTIME_WEB_GUIDE_zh-CN.md)保留原包和字节身份。本轮是指南网站上线，不是容器镜像分发或完整软件Release。
 
 新增[源码安装、构建与独立身份登记指南](docs/SOURCE_INSTALLATION_zh-CN.md)：使用固定公开基础镜像、公开锁定依赖和重建的冻结科学源码，不再依赖旧的本地 Runtime 基础镜像。新镜像独立登记，不继承历史科学 PASS。使用 Git 克隆或安装器制作的源码 ZIP；[干净目录受限验收](docs/SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.md)已通过公开准备、构建、四类登记、45 项工程测试及四个小任务。高成本重放和全新机器验收未执行，以下历史候选记录继续独立保留。
 

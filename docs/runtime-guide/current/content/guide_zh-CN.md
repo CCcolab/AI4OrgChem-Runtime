@@ -23,7 +23,7 @@ DOCUMENTATION / 使用与复核
 
 ### 源码与指南已同步 GitHub
 
-2026-10-09 已按项目负责人授权公开到 [CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。首个候选提交 **06d5088** 的 [首次远端 CI](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122) 三项 job 均成功：Linux 构建、L0/L1、容器探针及限定工程测试；真实 P11 预检保留一项跳过。不是全部科学任务验收。网页文件已随源码同步，GitHub Pages 尚未启用；本页不提供在线计算。
+2026-10-09 已按项目负责人授权公开到 [CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。首个候选提交 **06d5088** 的 [首次远端 CI](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122) 三项 job 均成功：Linux 构建、L0/L1、容器探针及限定工程测试；真实 P11 预检保留一项跳过。不是全部科学任务验收。网页文件已随源码同步，GitHub Pages 已于2026-10-10启用，可[直接打开静态指南](https://cccolab.github.io/AI4OrgChem-Runtime/)；本页不提供在线计算，复制的计算命令在用户本地执行。
 
 WSLc 暂停并保持 BLOCKED / NOT\_EXECUTED；镜像分发 BLOCKED；旧条件态 Compute BLOCKED；L4 仅保存检查点、不能恢复运行。下面原提供时及既有版本的状态记录保留历史范围，当前公开与 CI 记录见 [本次同步记录](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)。未创建新 Runtime 版本、标签或 Release。
 
@@ -82,7 +82,7 @@ AI4OrgChem Runtime 通过固定源码与依赖、分层启动和持久输出，�
 
 ### 从源码安装：新用户水分子起点
 
-先取得 Runtime Git 克隆（需要Git），或本项目带 Git commit/tree/blob 证据的安装源码ZIP。公开仓库与下载地址未确认，不提供虚构链接；普通GitHub自动ZIP不可替代。网页ZIP不是安装源码包，不含镜像或依赖。
+先取得 Runtime Git 克隆（需要Git），或本项目带 Git commit/tree/blob 证据的安装源码ZIP。公开源码位于[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)，可按下方命令Git克隆；专用来源证明ZIP尚无正式Release下载入口，普通GitHub自动ZIP不可替代。网页ZIP不是安装源码包，不含镜像或依赖。
 
 需要自己的 Python3.12+、Docker Linux/amd64；构建网络需访问 GitHub / PyPI / DockerHub / Debian。选择全新的独立目录，不覆盖科研工作区。
 
@@ -2417,7 +2417,7 @@ sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d
 
 cc7437901119e71ef7945a12813c021c383e7648
 
-Runtime本地工程候选未公开发布；任意用户分子的旧条件态比较 Compute BLOCKED；外部咨询CANCELLED\_BY\_USER，不是科学批准；首次Actions三项job已在06d5088通过，范围见当前同步记录；WSLc BLOCKED／NOT\_EXECUTED且升级实机暂停；镜像分发BLOCKED；源码与指南已公开、Pages未启用；Colab暂缓。固定L3／L4严格断网未执行，L4不能恢复。
+Runtime本地工程候选未公开发布；任意用户分子的旧条件态比较 Compute BLOCKED；外部咨询CANCELLED\_BY\_USER，不是科学批准；首次Actions三项job已在06d5088通过，范围见当前同步记录；WSLc BLOCKED／NOT\_EXECUTED且升级实机暂停；镜像分发BLOCKED；源码与指南已公开，GitHub Pages静态指南已启用；本页没有在线计算，Colab暂缓。固定L3／L4严格断网未执行，L4不能恢复。
 
 ### 原七任务科学来源
 
@@ -2469,9 +2469,12 @@ AI4OrgChem v0.3.2 · 固定提交：
 
 下列下载仅在你点击时发生，使用内嵌文本或初始化时保留的 HTML，通过本地 Blob 生成；不依赖当前页面 URL，不上传。
 
-无主动采集、上传或科学计算。托管方日志范围另待确认；保持原有分享权限，不进行发布。
+静态指南由GitHub Pages托管；托管服务的访问记录由GitHub管理。网页不向计算后端提交分子或请求，复制与导出在本地浏览器完成；科学计算在用户本地Runtime执行。
 
-## 最新公开与远端CI记录
+## 静态指南网址与使用方式（2026-10-10）
+GitHub Pages静态指南已启用：https://cccolab.github.io/AI4OrgChem-Runtime/ 。可直接在浏览器阅读、搜索、复制命令和下载指南；网页不提供在线计算，计算命令仍由用户本地Runtime执行。整个已公开main/docs作为发布源。WSLc、镜像分发及旧条件态Compute限制保留，不分配新Runtime版本、标签或Release。
+
+## 2026-10-09源码首次公开与远端CI记录（历史）
 2026-10-09已按项目负责人授权公开源码与指南：https://github.com/CCcolab/AI4OrgChem-Runtime 。06d5088首次CI三项job均成功，真实P11预检一项跳过；详见https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122 。Pages未启用；WSLc、镜像分发和旧条件态Compute限制保留，不是全科学验收；未创建新版本/标签/Release。
 
 说明：下列状态是YouMind原提供时的登记，不是最新包外实测。最新局部网页身份与检查见Runtime validation/web-guide/final-consistency-r2-20261009.json；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
