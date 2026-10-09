@@ -1,5 +1,7 @@
 # WSLc 能力与实测矩阵
 
+2026-10-09 补充：[新源码安装候选的受限 Docker 验收](SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.md)已通过公开构建、四类身份登记与小任务；没有 WSLc 实测、WSL 升级或高成本科学重放。新镜像不继承旧候选的 L0—L4 PASS。以下 2026-10-03 状态与身份属于历史验收范围；WSLc 仍为 BLOCKED / NOT_EXECUTED，镜像分发 BLOCKED，源码公开另行确认。
+
 当前状态（2026-10-03）：本地 Docker L0—L4/等价性/联合分类已验证，WSLc 暂缓并保持 BLOCKED / NOT_EXECUTED；CI 静态审查完成、运行 NOT_EXECUTED；**镜像分发 BLOCKED；源码公开另行确认**。L0—L2、等价性及指定验收探针已断网验证，L3/L4 严格断网 NOT_EXECUTED。身份与范围以 validation/final-delivery-status.json 和 DELIVERY_REVIEW_2026-10-03_zh-CN.md 为准，既有备份为历史快照。
 
 本轮收尾决定（2026-10-02）：用户为优先保护原 AI4OrgChem 科研运行环境，暂停 WSL 升级和 WSLc 实机验收。WSLc 继续 BLOCKED / NOT_EXECUTED；后续恢复须明确授权。本地 Docker OCI 已验证范围保留，不替代 WSLc 支持声明。

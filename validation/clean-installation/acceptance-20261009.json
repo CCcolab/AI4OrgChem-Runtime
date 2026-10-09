@@ -1,0 +1,152 @@
+{
+  "attempts_preserved": [
+    "initial Git archive blob-proof refusal",
+    "7911f50 BuildKit base image reference failure",
+    "59f576c bounded acceptance PASS"
+  ],
+  "base_image_id": "sha256:d8cfae924e225782eec07ac494401a4090f473793fb850fc10af2ea1080bdebd",
+  "date": "2026-10-09",
+  "default_public_preparation": {
+    "context_inventory_matches_built_candidate": true,
+    "status": "PASS",
+    "used_private_inputs": false
+  },
+  "engineering_tests": {
+    "failed": 0,
+    "log": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261009-clean-installation\\attempt-59f576c\\clean-installation-engineering-tests.stdout.log",
+    "passed": 45,
+    "status": "PASS"
+  },
+  "historical_P12_N12_G": "PASS_PRESERVED_NO_RECOMPUTATION_OR_MEMORY_PROBE",
+  "image_distribution": "BLOCKED",
+  "image_id": "sha256:a4086d916101ab16650a878971361b5ee6e4e7f9e62b7d750f672825b6bbe96f",
+  "installation_identity": "INDEPENDENT_NOT_HISTORICAL_ACCEPTANCE",
+  "installed_python_distribution_count": 23,
+  "l4_checkpoint_resume": "NOT_SUPPORTED",
+  "local_tag": "ai4orgchem-runtime:source-installation-59f576c5a11f-525126a8",
+  "new_installation_runs": {
+    "P07": {
+      "container_removed": true,
+      "execution_id": "678f10e84b45480ca3091841f23fbd56",
+      "host_exit_code": 0,
+      "installation_record_sha256": "02cc3eff42651e7d54719ee444e917a31d1fcf6ccf0deaae1e231a47871f023b",
+      "network": "none",
+      "non_root": true,
+      "output_hashes_verified": 48,
+      "readonly_rootfs": true,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261009-clean-installation\\attempt-59f576c\\installation\\runs\\P07\\20261009T032442Z-P07-678f10e84b45480ca3091841f23fbd56",
+      "retained_manifest_sha256": "6d38172f5edeba63d3371e54e9dec4b43ff8237e4f47590bc386cb22cc1f025b",
+      "status": "PASS_SCOPED_PROTOCOL_CASE"
+    },
+    "p02-statistics": {
+      "container_removed": true,
+      "execution_id": "67025a232b4f416e809cb5fa609b65f9",
+      "host_exit_code": 0,
+      "installation_record_sha256": "01e7025907c0ea30e2ec3088fe957a28e209ebabe95a07facdcbb72e49d1a21a",
+      "network": "none",
+      "non_root": true,
+      "output_hashes_verified": 46,
+      "readonly_rootfs": true,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261009-clean-installation\\attempt-59f576c\\installation\\runs\\p02-statistics\\20261009T032431Z-p02-statistics-67025a232b4f416e809cb5fa609b65f9",
+      "retained_manifest_sha256": "b0f1428439d7fe180cec2bba4c22d723d5876b1800fcd0498d1658fb48584d86",
+      "status": "PASS_SCOPED_FIXED_CASE"
+    },
+    "p13-graph-ledger": {
+      "container_removed": true,
+      "execution_id": "fd394a276634453ea6722b8055c141f6",
+      "host_exit_code": 0,
+      "installation_record_sha256": "01e7025907c0ea30e2ec3088fe957a28e209ebabe95a07facdcbb72e49d1a21a",
+      "network": "none",
+      "non_root": true,
+      "output_hashes_verified": 48,
+      "readonly_rootfs": true,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261009-clean-installation\\attempt-59f576c\\installation\\runs\\p13-graph-ledger\\20261009T032436Z-p13-graph-ledger-fd394a276634453ea6722b8055c141f6",
+      "retained_manifest_sha256": "2bcf0459c0f7ece5127309d0c8d36c070eddf80effcc319691890f7a79adcf7b",
+      "status": "PASS_SCOPED_FIXED_CASE"
+    },
+    "single-point": {
+      "container_removed": true,
+      "execution_id": "af675dfee2e94b4f8e7c8d7af8b2d15c",
+      "host_exit_code": 0,
+      "installation_record_sha256": "3a1f2785c1126240204f0a0dbd169ac445873af9469f0605be51af41ae784792",
+      "native_dispatch_counts": {
+        "boys_kernel": 0,
+        "conditional_NR": 0,
+        "pipek_mezey_kernel": 0,
+        "scf_kernel": 1
+      },
+      "network": "none",
+      "non_root": true,
+      "output_hashes_verified": 54,
+      "readonly_rootfs": true,
+      "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261009-clean-installation\\attempt-59f576c\\installation\\runs\\single-point\\20261009T032426Z-single-point-af675dfee2e94b4f8e7c8d7af8b2d15c",
+      "result_sha256": "ed148fe05374bac9a52e7f2d45da36517e072d709557d935bef93f81845280f6",
+      "retained_manifest_sha256": "3c5646e1dcf1ec8af46587046018282b16adbc4ae6ded508e53e70438ec263d7",
+      "status": "PASS_SCOPED_MOLECULAR_SINGLE_POINT"
+    }
+  },
+  "new_installation_scientific_replay": {
+    "P01": "NOT_EXECUTED",
+    "P03-P10_live": "NOT_EXECUTED",
+    "P11": "NOT_EXECUTED",
+    "P12": "NOT_EXECUTED"
+  },
+  "public_python_artifact_count": 22,
+  "remaining_limits": [
+    "Full fresh-host and other-host installation acceptance NOT_EXECUTED",
+    "Debian apt packages recorded but not bitwise version-pinned",
+    "New images do not inherit historical full scientific acceptance",
+    "Image-license/native-build-source-correspondence restrictions remain"
+  ],
+  "remote_ci": "NOT_EXECUTED",
+  "runtime_build_commit": "59f576c5a11f7192d0425765611a49369c6f561a",
+  "schema": "runtime-clean-installation-acceptance-v1",
+  "science_archive_sha256": "a2d1b18d22c363893b53801a6a7e3f6aa4e7bccc18de119b4b2bd9e62e0ffed7",
+  "science_file_count": 591,
+  "scope": "CLEAN_DIRECTORY_ON_EXISTING_WINDOWS_DOCKER_ENGINE_NOT_FRESH_MACHINE_CERTIFICATION",
+  "service_registration": {
+    "high-cost-cases": {
+      "dependency_lock_sha256": "ca5f5e8b6de0e95364383bb7481e091bb37595cc7e2668dd489eadb9e0b3bb3c",
+      "record_sha256": "b9fddd0371e7d87db19bbb263e1f0fe7dba34a430f191fc3a9436fd5404b1bfb",
+      "scientific_acceptance": "UNKNOWN",
+      "source_snapshot_sha256": "a4467307972ebff2dbbe3c3c7775a9e6e9b252bc0f0bf67e4ce2cfd3b691d741",
+      "status": "ENGINEERING_VALIDATED"
+    },
+    "molecular-service": {
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "record_sha256": "3a1f2785c1126240204f0a0dbd169ac445873af9469f0605be51af41ae784792",
+      "scientific_acceptance": "UNKNOWN",
+      "source_snapshot_sha256": "0f1370a8ef1c5e1a8c7b58f310dc6ad2faa0c08e568e19b01cf8e02d7eff29ab",
+      "status": "ENGINEERING_VALIDATED"
+    },
+    "protocol-cases": {
+      "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "record_sha256": "02cc3eff42651e7d54719ee444e917a31d1fcf6ccf0deaae1e231a47871f023b",
+      "scientific_acceptance": "UNKNOWN",
+      "source_snapshot_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+      "status": "ENGINEERING_VALIDATED"
+    },
+    "registered-cases": {
+      "dependency_lock_sha256": "511711d709508ff77fa995b120d5aeed3a9058984868a3a17f1d0604b788d393",
+      "record_sha256": "01e7025907c0ea30e2ec3088fe957a28e209ebabe95a07facdcbb72e49d1a21a",
+      "scientific_acceptance": "UNKNOWN",
+      "source_snapshot_sha256": "1bc64c322920671b9fe2335b13ea639619e960648422e7eb984c4001f2a481ca",
+      "status": "ENGINEERING_VALIDATED"
+    }
+  },
+  "source_package": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261009-clean-installation\\attempt-59f576c\\ai4orgchem-runtime-source-59f576c.zip",
+  "source_package_sha256": "09e85af5e0396084b6610464bd4c6b9820dfeab911ed7ee233f62017fb322121",
+  "source_publication": "NOT_AUTHORIZED_NOT_PUSHED",
+  "status": "PASS_BOUNDED_SOURCE_INSTALLATION",
+  "user_molecule_check": {
+    "conditional_compute": "BLOCKED",
+    "host_exit_code": 0,
+    "records": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261009-clean-installation\\attempt-59f576c\\user-molecule-check\\check-20261009T032817Z-608d9a9c95bd47cb84e356f4ffa91363",
+    "status": "COMPLETED"
+  },
+  "wslc": {
+    "execution": "NOT_EXECUTED",
+    "status": "BLOCKED",
+    "upgrade": "PAUSED"
+  }
+}

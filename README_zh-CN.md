@@ -1,6 +1,6 @@
 # AI4OrgChem 本地分子计算 Runtime
 
-新增[源码安装、构建与独立身份登记指南](docs/SOURCE_INSTALLATION_zh-CN.md)：使用固定公开基础镜像、公开锁定依赖和重建的冻结科学源码，不再依赖旧的本地 Runtime 基础镜像。新镜像独立登记，不继承历史科学 PASS。使用 Git 克隆或安装器制作的源码 ZIP；干净目录安装验收与以下历史候选记录分别保存。
+新增[源码安装、构建与独立身份登记指南](docs/SOURCE_INSTALLATION_zh-CN.md)：使用固定公开基础镜像、公开锁定依赖和重建的冻结科学源码，不再依赖旧的本地 Runtime 基础镜像。新镜像独立登记，不继承历史科学 PASS。使用 Git 克隆或安装器制作的源码 ZIP；[干净目录受限验收](docs/SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.md)已通过公开准备、构建、四类登记、45 项工程测试及四个小任务。高成本重放和全新机器验收未执行，以下历史候选记录继续独立保留。
 
 阅读 GitHub、网页指南或已有结果无需启动 WSL2／Docker；实际本地计算时才需要所选后端。当前计算验收主要对应记录中的 Docker 候选。[普通WSL2原生入口](docs/NATIVE_WSL2_RUNTIME_zh-CN.md)现已通过只读 Check，原生 Compute 尚未实现／验收；普通WSL2与暂停的WSLc分开。不计算时可退出Docker，镜像保存在磁盘即可。
 

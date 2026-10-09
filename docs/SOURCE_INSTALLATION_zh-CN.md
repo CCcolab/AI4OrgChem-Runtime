@@ -2,9 +2,11 @@
 
 本入口为已有服务提供独立的本地安装身份。它不公开镜像，不把历史候选的科学验收结论赋予新镜像，不修改原科研环境、WSL 设置或原来源锁。
 
+2026-10-09 [干净目录受限安装验收](SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.md)已通过：公开下载、构建、四类身份登记、45 项工程测试及四个小任务。高成本任务没有重放；全新机器的验收尚未执行。
+
 ## 环境与下载
 
-需要 Python 3.12 或更新版本、可用的 Linux/amd64 Docker 引擎，以及构建时访问 GitHub、PyPI、Docker Hub 和 Debian 软件源的网络。主机 Python 只运行标准库脚本，不在主机或原 WSL 科研环境中安装科学依赖。首次构建下载约 161 MB 的 Python 依赖，另外需要基础系统镜像和 Git 系统包。磁盘与任务资源仍由各服务的原预检核查。
+需要 Python 3.12 或更新版本、可用的 Linux/amd64 Docker 引擎，以及构建时访问 GitHub、PyPI、Docker Hub 和 Debian 软件源的网络。使用 Git 克隆时需要已有 Git。主机 Python 只运行标准库脚本，不在主机或原 WSL 科研环境中安装科学依赖。首次构建下载约 161 MB 的 Python 依赖，另外需要基础系统镜像和 Git 系统包。磁盘与任务资源仍由各服务的原预检核查。原用户分子 Check/Report 的 PowerShell 启动器另需已有 PowerShell 7.3+。
 
 可以在 Git 克隆目录运行，或使用本项目 `install-local-runtime.py package` 制作的安装源码 ZIP。该 ZIP 携带 Git commit/tree/blob 身份证据，不含镜像、wheels 或旧 `science.tar`。普通 GitHub 自动源码 ZIP 尚不携带本安装证据，使用它时应改用 Git 克隆或本项目制作的安装 ZIP；不要自行改写身份清单。
 
