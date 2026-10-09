@@ -2,6 +2,56 @@
 
 [English](README.md)
 
+**[直接打开 Runtime 用户指南网页](https://cccolab.github.io/AI4OrgChem-Runtime/)**
+
+## 项目目的与目标
+
+AI4OrgChem Runtime 帮助你在自己的电脑上进行分子计算，并复核项目登记的研究案例。项目通过固定科学源码与依赖、检查输入、共同保存输入、日志和结果，让计算过程可追溯、便于复核。
+
+我们的目标是降低单点能量计算、轨道与密度矩阵分析，以及指定能量和结构对照的使用门槛。在线指南帮助你选择模块和准备命令；实际计算在你的本地 Runtime 中执行。
+
+## 计算自己的分子
+
+| 计算模块 | 输入 | 输出与支持范围 |
+| --- | --- | --- |
+| [RHF 单点能量、轨道与密度](docs/MOLECULAR_SINGLE_POINT_zh-CN.md) | 自己的 XYZ 结构与请求文件 | RHF/6-31G(d) 单点能量、正则轨道、自旋求和的 AO 电子密度矩阵。支持 H/C/N/O、中性闭壳层单重态，至多 20 个原子、80 个原子轨道。 |
+
+这是目前接收自己分子的计算入口。用户分子的 DFT、离子、开壳层、几何优化、扫描与条件态比较仍需进一步开发和验证。
+
+## 复核固定研究协议
+
+以下模块使用登记的分子、几何、表值和方法设置，提供固定案例计算或已有结果复核，不能直接换成自己的 XYZ。
+
+| 计算模块 | 可以计算或复核什么 | 使用指南 |
+| --- | --- | --- |
+| 轨道表示与密度对照 | 固定乙烯的轨道变换，核对密度与能量不变量。 | [固定案例](docs/REGISTERED_CASES_zh-CN.md) |
+| 结构与光谱表值统计 | 冻结出版表值的统计与回归，不产生新的光谱。 | [固定案例](docs/REGISTERED_CASES_zh-CN.md) |
+| 扭转构型端点与能量账本 | 复核保存的扭转端点账本，并计算登记的冻结几何单点。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| π–π条件态与轨道响应 | 固定两种条件态的直接项与轨道响应对照。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| π–σ条件能量对照 | 比较已有角度账本，并计算登记的固定角度条件能量单点。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| 片段条件能量组装 | 固定双片段 σ–σ 条件态的独立能量组装。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| 能量账本闭合校验 | 核对同一哈密顿量的保存账本，不产生新的量子计算。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| 局域化端点与参照能量 | 丁二烯固定局域化端点、参照热化学与固定几何计算。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| 条件态与稳定性诊断 | 环丁二烯固定几何的条件态与稳定性诊断。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| 键长交替与能量响应 | 苯的五点固定几何普通 DFT 能量响应。 | [协议计算](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| 多态约束结构优化 | 登记 17 个固定状态，目前仅苯 G 先导完成验收。 | [多态优化](docs/PROTOCOL_CASES_BATCH3_zh-CN.md) |
+| 环状体系尺寸与状态对照 | 登记 61 个固定状态，目前仅 N12-G 先导完成验收。 | [多态优化](docs/PROTOCOL_CASES_BATCH3_zh-CN.md) |
+| 共轭图规则与能量账本 | 固定图案例与 ESE/CESE 算术账本，不产生新的量子能量。 | [固定案例](docs/REGISTERED_CASES_zh-CN.md) |
+| 条件能量与结构响应复核 | 固定协议的能量与约束结构计算、实现对照及联合复核。 | [运行指南](docs/RUN_zh-CN.md) |
+
+多态约束优化与环状体系对照合计登记 78 个状态；两个已验收先导不代表其他状态或完整多态结果已通过。各模块的输入、方法、资源与结果范围以对应指南为准。已有账本的算术复核与新的分子计算分别提供。
+
+## 三步开始使用
+
+1. **准备本地 Runtime。** 按[源码安装指南](docs/SOURCE_INSTALLATION_zh-CN.md)准备、构建并登记本地 Docker 环境。源码已公开，项目未提供预构建镜像下载；新安装保存自己的验证记录。
+2. **选择输入与模块。** 自己的 XYZ 使用[用户分子单点指南](docs/MOLECULAR_SINGLE_POINT_zh-CN.md)；登记案例从[本地入口指南](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md)和上表对应的协议指南开始。
+3. **运行并查看结果。** 按模块指南执行命令，保留生成的运行目录，再通过[结果判读指南](docs/REVIEW_RESULTS_zh-CN.md)查看本次计算范围与检查结果。
+
+组件许可与分发条件见[许可证审查](docs/LICENSE_REVIEW_zh-CN.md)及[公开边界](docs/PUBLICATION_BOUNDARIES_zh-CN.md)。详细开发、支持与历史验证记录保留在下方，按需展开。
+
+<details>
+<summary>开发、支持与历史验证记录</summary>
+
 **[直接打开Runtime用户指南网页](https://cccolab.github.io/AI4OrgChem-Runtime/)**。这是静态使用指南，阅读无需启动Docker或WSL；复制计算命令后，在自己的本地Runtime执行。网页不执行分子计算。部署记录见[GitHub Pages指南上线记录](docs/GITHUB_PAGES_GUIDE_20261010_zh-CN.md)。
 
 源码与用户提供的网页指南已按用户授权公开同步到[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。首推提交`06d50885bdccf31f83b89229c1513121542375d5`对应[GitHub Actions run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122)，三个限定范围的job均成功。详见[公开同步实绩](docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)；不据此认证全部科学服务或分发镜像。2026-10-10已启用GitHub Pages静态指南托管；不提供在线计算，尚未确定新版本号、打标签或发布Release。
@@ -132,3 +182,6 @@ build-wslc.ps1 虽以 WSLc 命名，也支持显式 Docker 引擎。自行构建
 
 
 源码公开和镜像分发分别评估，见[公开边界与本地候选](docs/PUBLICATION_BOUNDARIES_zh-CN.md)。源码与指南同步已完成；原生wheel来源仍有未解决项，镜像未分发。
+
+
+</details>

@@ -79,6 +79,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 
 ```
 
+<a id="case-protocol-p03"></a>
+
 ### 约束扭转路径能量账本
 
 <a id="batch2-p03-ledger"></a>
@@ -102,6 +104,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 ```powershell
 .\scripts\start-protocol-case.ps1 -Task P03 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p03-live-new'
 ```
+
+ <a id="case-protocol-p04"></a>
 
 ### 两条件态直接项和轨道响应
 
@@ -127,6 +131,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 .\scripts\start-protocol-case.ps1 -Task P04 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p04-live-new'
 ```
 
+ <a id="case-protocol-p05"></a>
+
 ### π–σ条件比较
 
 <a id="batch2-p05-ledger"></a>
@@ -150,6 +156,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 ```powershell
 .\scripts\start-protocol-case.ps1 -Task P05 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p05-live-new'
 ```
+
+ <a id="case-protocol-p06"></a>
 
 ### 双片段独立能量组装
 
@@ -175,6 +183,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 .\scripts\start-protocol-case.ps1 -Task P06 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p06-live-new'
 ```
 
+ <a id="case-protocol-p07"></a>
+
 ### 同Hamiltonian路径闭合
 
 <a id="batch2-p07-preflight"></a>
@@ -190,6 +200,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 ```
 
 固定输入：五态桥接闭合。方法：同Hamiltonian冻结账本与资格/资源预检；P07不构建新的量子计算，零新QM；ledger/preflight ONLY，零新QM，无live入口。输出遵循整目录清单；闭合核对不是新增能量计算或科学端点批准。
+
+ <a id="case-protocol-p08"></a>
 
 ### 丁二烯GL端点参照敏感性
 
@@ -215,6 +227,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 .\scripts\start-protocol-case.ps1 -Task P08 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p08-live-new'
 ```
 
+ <a id="case-protocol-p09"></a>
+
 ### 环丁二烯固定几何条件态诊断
 
 <a id="batch2-p09-ledger"></a>
@@ -238,6 +252,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 ```powershell
 .\scripts\start-protocol-case.ps1 -Task P09 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p09-live-new'
 ```
+
+ <a id="case-protocol-p10"></a>
 
 ### 苯核排斥键长交替
 

@@ -2,75 +2,101 @@ DOCUMENTATION / 使用与复核
 
 # AI4OrgChem Runtime 用户指南
 
-导航原型，本地操作，非计算控制台
+面向分子研究的本地计算与可追溯复核
 
-网页 v0.3.0-candidate · 候选，未完成验收Runtime v0.1.0开发候选内容核对2026-10-09
+自己的XYZ分子固定案例分析模块完整结果与运行记录
 
 <a id="toc"></a>
-[01 开始使用](#overview)[02 本地环境与文件准备](#quick-start)[03 计算自己的分子](#user-molecule)[04 查看结果与保存记录](#results)[05 示例与验证](#tasks)[06 帮助与来源](#help)
+[01 项目与计算模块](#overview)[02 本地环境与文件准备](#quick-start)[03 计算自己的分子](#user-molecule)[04 查看结果与保存记录](#results)[05 固定案例与分析模块](#tasks)[06 帮助与来源](#help)
 
-本地阅读与操作指南
-网页不执行 Runtime
-六区物理顺序：overview、quick-start、user-molecule、results、tasks、help；无JS时目录与原生折叠正文可读。本页手工QA默认未执行；包外禁JS阅读记录另见本地验证报告。
+选择研究目标，查看对应模块与步骤。
+阅读指南无需启动计算环境；运行命令时使用本地Runtime。
 
 <a id="overview"></a>
 
-01 / OVERVIEW
+01 / PROJECT
 
-## 从你的目标开始
+## 本地分子计算与结果复核
 
-<a id="github-public-status"></a>
+AI4OrgChem Runtime 面向化学研究用户，将分子输入、计算执行和结果记录组织为可复用的本地工作流程。
 
-### 源码与指南已同步 GitHub
+项目目标是帮助你获得分子能量、轨道与密度信息，开展固定协议对照，并保存可追溯的研究记录。网页负责选择模块和指导操作，计算在你的本地环境执行。
 
-2026-10-09 已按项目负责人授权公开到 [CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。首个候选提交 **06d5088** 的 [首次远端 CI](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122) 三项 job 均成功：Linux 构建、L0/L1、容器探针及限定工程测试；真实 P11 预检保留一项跳过。不是全部科学任务验收。网页文件已随源码同步，GitHub Pages 已于2026-10-10启用，可[直接打开静态指南](https://cccolab.github.io/AI4OrgChem-Runtime/)；本页不提供在线计算，复制的计算命令在用户本地执行。
+<a id="home-single-point"></a>
 
-WSLc 暂停并保持 BLOCKED / NOT\_EXECUTED；镜像分发 BLOCKED；旧条件态 Compute BLOCKED；L4 仅保存检查点、不能恢复运行。下面原提供时及既有版本的状态记录保留历史范围，当前公开与 CI 记录见 [本次同步记录](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)。未创建新 Runtime 版本、标签或 Release。
+自己的分子
 
-在本地使用自己的XYZ进行普通RHF单点计算，获取能量账本、canonical轨道和AO密度矩阵，保存完整记录。首版限H/C/N/O、中性单重态、RHF/6-31G(d)，1—20原子且实际AO≤80；三维允许。普通RHF首版已有本地限定验收，旧条件态比较仍BLOCKED。网页不执行计算。
+### RHF 单点能量、轨道与密度矩阵
+
+提交XYZ结构与计算请求，获得总能量、canonical轨道、AO密度矩阵、占据数和完整运行记录。
+
+当前适用：H/C/N/O，中性单重态，RHF/6-31G(d)，最多20原子且AO数不超过80。
+
+[查看四步计算指南 →](#user-molecule)
+
+<a id="home-modules"></a>
+
+### 按研究目标选择分析与复算模块
+
+以下14个模块使用随项目提供的固定案例和协议；点击模块名称查看输入、运行方式和结果解释。
+
+#### 轨道与密度对照
+
+- [轨道表示与密度对照](#case-p01-orbital-density)乙烯固定案例：轨道表示变化与密度、能量不变量
+- [局域化端点与参照能量](#case-protocol-p08)丁二烯固定案例：局域化端点与参照能量
+
+#### 结构数据与图规则
+
+- [结构与光谱表值统计](#case-p02-statistics)已提供表值：统计、拟合与残差分析
+- [共轭图规则与能量账本](#case-p13-graph-ledger)固定分子图：图规则检查与能量账本
+
+#### 条件能量与片段分析
+
+- [π–π条件态与轨道响应](#case-protocol-p04)固定双状态：直接项与轨道响应
+- [π–σ条件能量对照](#case-protocol-p05)固定角度：条件能量比较
+- [片段条件能量组装](#case-protocol-p06)固定双片段：条件能量独立组装
+
+#### 构型与能量响应
+
+- [扭转构型端点与能量账本](#case-protocol-p03)固定扭转端点：单点能量与账本对照
+- [键长交替与能量响应](#case-protocol-p10)苯固定五点几何：普通DFT能量响应
+- [条件能量与结构响应复核](#p14-tasks)固定应变体系：条件能量与结构端点联合复核
+
+#### 能量闭合与状态诊断
+
+- [能量账本闭合校验](#case-protocol-p07)保存账本：同一哈密顿量下的路径闭合校验
+- [条件态与稳定性诊断](#case-protocol-p09)环丁二烯固定几何：条件态诊断
+
+#### 固定体系多态与尺寸对照
+
+- [多态约束结构优化](#case-p11-high-cost)固定多态任务；从苯G先导示例开始
+- [环状体系尺寸与状态对照](#case-p12-high-cost)固定环状尺寸与状态任务；从N12-G先导示例开始
+
+这组是高成本固定任务：当前验收起点为上述两个先导，完整状态集合需按预算分态执行。
+
+<a id="home-start"></a>
+
+### 从这里开始
 
 **计算自己的分子**
 
-[普通RHF单点：准备文件并在本地运行 →](#user-molecule)
+[准备XYZ → 运行单点 → 读取报告](#user-molecule)
 
-普通RHF服务已存在；网页不运行 **学习与复算示例**
+**学习与复算示例**
 
-[查看证据与固定任务 →](#tasks)
+[选择固定案例模块与运行步骤](#home-modules)
 
-登记案例／本地Docker **查阅已有证据**
+**查阅已有证据**
 
-[按计算模块选择，查看本地查阅步骤 →](#proposition-catalog)
+[按模块读取结果与来源](#proposition-catalog)
 
-只读查阅／所选文件核对
+第一次使用可先运行水分子示例。[查看本地安装与环境准备](#source-installation)，或[了解结果与记录的保存方式](#results)。
 
-普通RHF单点计算在本地执行；旧条件态Check／Report与BLOCKED Compute属于另一条专项服务线。
+### 需要深入复核？查看专业阅读路径
 
-### 项目说明、状态与来源
+S1—S6提供协议查阅、实现审查、运行资格、固定几何、结构响应及联合复核的专业材料。
 
-AI4OrgChem Runtime 通过固定源码与依赖、分层启动和持久输出，帮助用户检查证据、运行登记案例并整理复核材料。科学程序、协议与判定由对应科学来源管理；本指南说明各入口的使用方法和适用范围。
-
-已读任务书、基线、索引、入口、请求与P14保存摘录的核对等级逐项列于来源表；29份参考文件仅索引、未逐读。本轮未重运行或独立哈希。[查看来源索引](#sources)。
-
-### 五项状态摘要
-
-- 开发候选未公开发布（材料记载）。
-- 原七任务：Docker 候选历史记录仅限固定协议与登记范围，见唯一平台矩阵；不意味着所有比较判据全通过。
-- 用户分子 Check / Report：登记工程范围，不继承原七任务科学验收。
-- 普通RHF首版限定范围内可用；旧条件态生产Compute：BLOCKED。
-- WSLc：升级实机验收暂停。
-
-### 需要深入复核？查看专业阅读路径 S1—S6
-
-三个用户流程均不要求先完成S1；以下背景按需阅读。
-
-1. S1 科学协议与证据范围查阅
-2. S2 条件 SCF 实现审查
-3. S3 运行资格与实现等价性检查
-4. S4 登记固定几何与 anchor 资格复核
-5. S5 登记约束结构响应与优化资格复核
-6. S6 联合分类与独立复核交付
-
-最新 PROFESSIONAL\_SERVICES 待核对；阶段完整名称仍须对照规划与最新原文确认。以上仅为阅读导航，不新增 Runtime 任务。
+[打开专业服务指南](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROFESSIONAL_SERVICES_zh-CN.md)
 
 <a id="quick-start"></a>
 
@@ -729,6 +755,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 
 ```
 
+<a id="case-protocol-p03"></a>
+
 ### 约束扭转路径能量账本
 
 <a id="batch2-p03-ledger"></a>
@@ -752,6 +780,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 ```powershell
 .\scripts\start-protocol-case.ps1 -Task P03 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p03-live-new'
 ```
+
+ <a id="case-protocol-p04"></a>
 
 ### 两条件态直接项和轨道响应
 
@@ -777,6 +807,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 .\scripts\start-protocol-case.ps1 -Task P04 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p04-live-new'
 ```
 
+ <a id="case-protocol-p05"></a>
+
 ### π–σ条件比较
 
 <a id="batch2-p05-ledger"></a>
@@ -800,6 +832,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 ```powershell
 .\scripts\start-protocol-case.ps1 -Task P05 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p05-live-new'
 ```
+
+ <a id="case-protocol-p06"></a>
 
 ### 双片段独立能量组装
 
@@ -825,6 +859,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 .\scripts\start-protocol-case.ps1 -Task P06 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p06-live-new'
 ```
 
+ <a id="case-protocol-p07"></a>
+
 ### 同Hamiltonian路径闭合
 
 <a id="batch2-p07-preflight"></a>
@@ -840,6 +876,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 ```
 
 固定输入：五态桥接闭合。方法：同Hamiltonian冻结账本与资格/资源预检；P07不构建新的量子计算，零新QM；ledger/preflight ONLY，零新QM，无live入口。输出遵循整目录清单；闭合核对不是新增能量计算或科学端点批准。
+
+ <a id="case-protocol-p08"></a>
 
 ### 丁二烯GL端点参照敏感性
 
@@ -865,6 +903,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 .\scripts\start-protocol-case.ps1 -Task P08 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p08-live-new'
 ```
 
+ <a id="case-protocol-p09"></a>
+
 ### 环丁二烯固定几何条件态诊断
 
 <a id="batch2-p09-ledger"></a>
@@ -888,6 +928,8 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 ```powershell
 .\scripts\start-protocol-case.ps1 -Task P09 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p09-live-new'
 ```
+
+ <a id="case-protocol-p10"></a>
 
 ### 苯核排斥键长交替
 
@@ -2129,6 +2171,47 @@ YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点
 维护：进入解压后的 ` ai4orgchem-runtime-guide/ ` 目录，运行 ` python -m http.server 8000 `，浏览 ` http://localhost:8000/docs/ `。仅静态指南维护，不启动Runtime；无真实托管。10成员共同顶层保持，包外清单／审计JSON和MD按当前字节动态生成。
 
 原YouMind提供时状态（历史）：条件Compute BLOCKED；WSLc BLOCKED / NOT\_EXECUTED；远CI NOT\_EXECUTED；镜像分发BLOCKED；外部专家咨询已取消非前置。该原包轮不运行Runtime/Docker/WSL/科学，不发布、不改权限；本次公开与实际CI另见当前同步记录。
+
+<a id="home-support-records"></a>
+
+### 支持范围、部署与历史验证记录（按需查阅）
+
+<a id="github-public-status"></a>
+
+### 源码与指南已同步 GitHub
+
+2026-10-09 已按项目负责人授权公开到 [CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。首个候选提交 **06d5088** 的 [首次远端 CI](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122) 三项 job 均成功：Linux 构建、L0/L1、容器探针及限定工程测试；真实 P11 预检保留一项跳过。不是全部科学任务验收。网页文件已随源码同步，GitHub Pages 已于2026-10-10启用，可[直接打开静态指南](https://cccolab.github.io/AI4OrgChem-Runtime/)；本页不提供在线计算，复制的计算命令在用户本地执行。
+
+WSLc 暂停并保持 BLOCKED / NOT\_EXECUTED；镜像分发 BLOCKED；旧条件态 Compute BLOCKED；L4 仅保存检查点、不能恢复运行。下面原提供时及既有版本的状态记录保留历史范围，当前公开与 CI 记录见 [本次同步记录](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)。未创建新 Runtime 版本、标签或 Release。
+
+### 原提供时的项目与阅读状态（历史）
+
+### 项目说明、状态与来源
+
+AI4OrgChem Runtime 通过固定源码与依赖、分层启动和持久输出，帮助用户检查证据、运行登记案例并整理复核材料。科学程序、协议与判定由对应科学来源管理；本指南说明各入口的使用方法和适用范围。
+
+已读任务书、基线、索引、入口、请求与P14保存摘录的核对等级逐项列于来源表；29份参考文件仅索引、未逐读。本轮未重运行或独立哈希。[查看来源索引](#sources)。
+
+### 五项状态摘要
+
+- 开发候选未公开发布（材料记载）。
+- 原七任务：Docker 候选历史记录仅限固定协议与登记范围，见唯一平台矩阵；不意味着所有比较判据全通过。
+- 用户分子 Check / Report：登记工程范围，不继承原七任务科学验收。
+- 普通RHF首版限定范围内可用；旧条件态生产Compute：BLOCKED。
+- WSLc：升级实机验收暂停。
+
+### 需要深入复核？查看专业阅读路径 S1—S6
+
+三个用户流程均不要求先完成S1；以下背景按需阅读。
+
+1. S1 科学协议与证据范围查阅
+2. S2 条件 SCF 实现审查
+3. S3 运行资格与实现等价性检查
+4. S4 登记固定几何与 anchor 资格复核
+5. S5 登记约束结构响应与优化资格复核
+6. S6 联合分类与独立复核交付
+
+最新 PROFESSIONAL\_SERVICES 待核对；阶段完整名称仍须对照规划与最新原文确认。以上仅为阅读导航，不新增 Runtime 任务。
 
 <a id="verification-records"></a>
 

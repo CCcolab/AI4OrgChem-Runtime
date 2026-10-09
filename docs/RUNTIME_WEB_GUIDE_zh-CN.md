@@ -65,3 +65,7 @@ Runtime源码及用户提供的网页指南已按用户授权同步到[公开仓
 ## 公开状态增补后的当前网页身份
 
 本次仅同步已发生的源码公开与三项远端CI结果，Pages仍未启用。当前HTML、10成员导出与归档身份见[public-status-20261009.json](../validation/web-guide/public-status-20261009.json)，[局部浏览器记录](../validation/web-guide/browser-public-status-20261009.json)绑定新字节；三宽度、79复制、三路径、模块名搜索、七导出、HTTP根/模拟子路径和真禁JS阅读通过。全部计算命令与水模板未变，旧原包与r2归档继续保留各自哈希。[当前可携带网页包](runtime-guide/archive/ai4orgchem-runtime-guide-public-status-20261009.zip)只是指南；200%/全键盘/多浏览器仍未执行，未分配新Runtime版本。
+
+## 2026-10-10用户首页目的与模块目录
+
+首页和两语言README已调整为项目目的、自己的XYZ单点入口、六组十四固定协议模块与入门步骤；技术部署和历史验证记录默认折叠，原文与旧归档保留。当前活动字节、current导出及[用户首页网页包](runtime-guide/archive/ai4orgchem-runtime-guide-user-home-20261010.zip)见[用户首页记录](../validation/web-guide/user-home-20261010.json)和[新版浏览器核对](../validation/web-guide/browser-user-home-20261010.json)，不继承旧网页哈希的PASS。25项局部检查包括折叠后的QA直达，79计算/输入复制目标和所有代码块未变；功能和科学范围不随展示整理扩大。

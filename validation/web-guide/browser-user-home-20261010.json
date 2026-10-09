@@ -1,0 +1,2307 @@
+{
+  "html_sha256": "c5380b0b9655a7f096a35056ff0ca9aac65c6ed5c1ba3f90ea2cddd2d2b88931",
+  "html_bytes": 197042,
+  "results": [
+    {
+      "name": "Browser engine",
+      "status": "RECORDED",
+      "engine": "Microsoft Edge headless",
+      "version": "154.0.4258.62",
+      "browser_plugin": "INITIALIZATION_FAILED",
+      "bundled_default_revision": "NOT_INSTALLED_NO_INSTALL_PERFORMED"
+    },
+    {
+      "name": "HTTP /",
+      "status": "PASS",
+      "url": "http://127.0.0.1:63602/",
+      "response_sha256": "c5380b0b9655a7f096a35056ff0ca9aac65c6ed5c1ba3f90ea2cddd2d2b88931",
+      "bytes": 197042
+    },
+    {
+      "name": "Refresh /",
+      "status": "PASS",
+      "title": "AI4OrgChem Runtime 用户指南"
+    },
+    {
+      "name": "HTTP /AI4OrgChem-Runtime/",
+      "status": "PASS",
+      "url": "http://127.0.0.1:63602/AI4OrgChem-Runtime/",
+      "response_sha256": "c5380b0b9655a7f096a35056ff0ca9aac65c6ed5c1ba3f90ea2cddd2d2b88931",
+      "bytes": 197042
+    },
+    {
+      "name": "Refresh /AI4OrgChem-Runtime/",
+      "status": "PASS",
+      "title": "AI4OrgChem Runtime 用户指南"
+    },
+    {
+      "name": "QA shortcut unfolds validation records",
+      "status": "PASS"
+    },
+    {
+      "name": "Viewport 360 default",
+      "status": "PASS",
+      "inner": 360,
+      "client": 360,
+      "scroll": 360,
+      "bodyScroll": 360,
+      "openDetails": 0,
+      "overflowElements": [
+        {
+          "tag": "CODE",
+          "id": "source-install-command",
+          "class": "",
+          "width": 1913.328125,
+          "left": 72,
+          "right": 1985.328125,
+          "text": "# 在取得的 Runtime 源码目录执行\npython -B .\\scripts\\install-local-runtime.py prepare --destination D:\\chem-wor"
+        },
+        {
+          "tag": "TABLE",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "用户要做什么本地所需条件Capabilities／List／Show／ReviewRuntime源码；Windows PowerShell 5.1或可用PowerShell；已有Python3.12+"
+        },
+        {
+          "tag": "THEAD",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "用户要做什么本地所需条件"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "用户要做什么本地所需条件"
+        },
+        {
+          "tag": "TH",
+          "id": "search-quick-start-13",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "本地所需条件"
+        },
+        {
+          "tag": "TBODY",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "Capabilities／List／Show／ReviewRuntime源码；Windows PowerShell 5.1或可用PowerShell；已有Python3.12+。Review另需自己持"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "Capabilities／List／Show／ReviewRuntime源码；Windows PowerShell 5.1或可用PowerShell；已有Python3.12+。Review另需自己持"
+        },
+        {
+          "tag": "TD",
+          "id": "search-quick-start-15",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "Runtime源码；Windows PowerShell 5.1或可用PowerShell；已有Python3.12+。Review另需自己持有的固定科学源码目录。"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "普通RHF单点Python3.12+；Windows PowerShell 5.1或PowerShell 7；Docker Linux/amd64与molecular-service/candidat"
+        },
+        {
+          "tag": "TD",
+          "id": "search-quick-start-17",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "Python3.12+；Windows PowerShell 5.1或PowerShell 7；Docker Linux/amd64与molecular-service/candidate-image"
+        },
+        {
+          "tag": "CODE",
+          "id": "",
+          "class": "",
+          "width": 254.015625,
+          "left": 329.671875,
+          "right": 583.6875,
+          "text": "molecular-service/candidate-image"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "3项固定服务Python3.12+；Windows PowerShell 5.1或PowerShell 7；Docker Linux/amd64与registered-cases/candidate-"
+        },
+        {
+          "tag": "TD",
+          "id": "search-quick-start-19",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "Python3.12+；Windows PowerShell 5.1或PowerShell 7；Docker Linux/amd64与registered-cases/candidate-image登"
+        },
+        {
+          "tag": "CODE",
+          "id": "",
+          "class": "",
+          "width": 246.3125,
+          "left": 329.671875,
+          "right": 575.984375,
+          "text": "registered-cases/candidate-image"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "旧固定七任务／条件能量与结构响应复核（独立环境）可用Docker Linux/amd64引擎；旧任务匹配镜像；已有PowerShell7.3+；持久输出与有效资源。入口可从PS5.1寻找已有PS7。不"
+        },
+        {
+          "tag": "TD",
+          "id": "search-quick-start-21",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "可用Docker Linux/amd64引擎；旧任务匹配镜像；已有PowerShell7.3+；持久输出与有效资源。入口可从PS5.1寻找已有PS7。不与普通服务共用环境合同。"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "用户分子Check本地源码、请求及XYZ；用户分子r3候选或独立验收的匹配环境；Docker、已有PS7.3+。"
+        },
+        {
+          "tag": "TD",
+          "id": "search-quick-start-23",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "本地源码、请求及XYZ；用户分子r3候选或独立验收的匹配环境；Docker、已有PS7.3+。"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "用户服务Report既有服务运行目录；基础Report需已有PS7.3+；高级只读／导出另需Python3.12+。Report不需要Docker。"
+        },
+        {
+          "tag": "TD",
+          "id": "search-quick-start-25",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "既有服务运行目录；基础Report需已有PS7.3+；高级只读／导出另需Python3.12+。Report不需要Docker。"
+        }
+      ]
+    },
+    {
+      "name": "Viewport 360 visible details expanded",
+      "status": "PASS",
+      "clicked": 119,
+      "inner": 360,
+      "client": 360,
+      "scroll": 360,
+      "bodyScroll": 360,
+      "openDetails": 119,
+      "overflowElements": [
+        {
+          "tag": "CODE",
+          "id": "source-install-command",
+          "class": "",
+          "width": 1913.328125,
+          "left": 72,
+          "right": 1985.328125,
+          "text": "# 在取得的 Runtime 源码目录执行\npython -B .\\scripts\\install-local-runtime.py prepare --destination D:\\chem-wor"
+        },
+        {
+          "tag": "TABLE",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "用户要做什么本地所需条件Capabilities／List／Show／ReviewRuntime源码；Windows PowerShell 5.1或可用PowerShell；已有Python3.12+"
+        },
+        {
+          "tag": "THEAD",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "用户要做什么本地所需条件"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "用户要做什么本地所需条件"
+        },
+        {
+          "tag": "TH",
+          "id": "search-quick-start-13",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "本地所需条件"
+        },
+        {
+          "tag": "TBODY",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "Capabilities／List／Show／ReviewRuntime源码；Windows PowerShell 5.1或可用PowerShell；已有Python3.12+。Review另需自己持"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "Capabilities／List／Show／ReviewRuntime源码；Windows PowerShell 5.1或可用PowerShell；已有Python3.12+。Review另需自己持"
+        },
+        {
+          "tag": "TD",
+          "id": "search-quick-start-15",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "Runtime源码；Windows PowerShell 5.1或可用PowerShell；已有Python3.12+。Review另需自己持有的固定科学源码目录。"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "普通RHF单点Python3.12+；Windows PowerShell 5.1或PowerShell 7；Docker Linux/amd64与molecular-service/candidat"
+        },
+        {
+          "tag": "TD",
+          "id": "search-quick-start-17",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "Python3.12+；Windows PowerShell 5.1或PowerShell 7；Docker Linux/amd64与molecular-service/candidate-image"
+        },
+        {
+          "tag": "CODE",
+          "id": "",
+          "class": "",
+          "width": 254.015625,
+          "left": 329.671875,
+          "right": 583.6875,
+          "text": "molecular-service/candidate-image"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "3项固定服务Python3.12+；Windows PowerShell 5.1或PowerShell 7；Docker Linux/amd64与registered-cases/candidate-"
+        },
+        {
+          "tag": "TD",
+          "id": "search-quick-start-19",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "Python3.12+；Windows PowerShell 5.1或PowerShell 7；Docker Linux/amd64与registered-cases/candidate-image登"
+        },
+        {
+          "tag": "CODE",
+          "id": "",
+          "class": "",
+          "width": 246.3125,
+          "left": 329.671875,
+          "right": 575.984375,
+          "text": "registered-cases/candidate-image"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "旧固定七任务／条件能量与结构响应复核（独立环境）可用Docker Linux/amd64引擎；旧任务匹配镜像；已有PowerShell7.3+；持久输出与有效资源。入口可从PS5.1寻找已有PS7。不"
+        },
+        {
+          "tag": "TD",
+          "id": "search-quick-start-21",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "可用Docker Linux/amd64引擎；旧任务匹配镜像；已有PowerShell7.3+；持久输出与有效资源。入口可从PS5.1寻找已有PS7。不与普通服务共用环境合同。"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "用户分子Check本地源码、请求及XYZ；用户分子r3候选或独立验收的匹配环境；Docker、已有PS7.3+。"
+        },
+        {
+          "tag": "TD",
+          "id": "search-quick-start-23",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "本地源码、请求及XYZ；用户分子r3候选或独立验收的匹配环境；Docker、已有PS7.3+。"
+        },
+        {
+          "tag": "TR",
+          "id": "",
+          "class": "",
+          "width": 680,
+          "left": 37,
+          "right": 717,
+          "text": "用户服务Report既有服务运行目录；基础Report需已有PS7.3+；高级只读／导出另需Python3.12+。Report不需要Docker。"
+        },
+        {
+          "tag": "TD",
+          "id": "search-quick-start-25",
+          "class": "",
+          "width": 500.8125,
+          "left": 216.1875,
+          "right": 717,
+          "text": "既有服务运行目录；基础Report需已有PS7.3+；高级只读／导出另需Python3.12+。Report不需要Docker。"
+        }
+      ]
+    },
+    {
+      "name": "Viewport 768 default",
+      "status": "PASS",
+      "inner": 768,
+      "client": 768,
+      "scroll": 768,
+      "bodyScroll": 768,
+      "openDetails": 0,
+      "overflowElements": [
+        {
+          "tag": "CODE",
+          "id": "source-install-command",
+          "class": "",
+          "width": 1913.328125,
+          "left": 72,
+          "right": 1985.328125,
+          "text": "# 在取得的 Runtime 源码目录执行\npython -B .\\scripts\\install-local-runtime.py prepare --destination D:\\chem-wor"
+        },
+        {
+          "tag": "CODE",
+          "id": "single-point-report-command",
+          "class": "",
+          "width": 750.484375,
+          "left": 55,
+          "right": 805.484375,
+          "text": "$records = '<终端 records 的实际路径>'\nGet-Content -LiteralPath (Join-Path $records 'output\\calculation\\rep"
+        },
+        {
+          "tag": "CODE",
+          "id": "molecule-request-json",
+          "class": "",
+          "width": 727.421875,
+          "left": 89,
+          "right": 816.421875,
+          "text": "{\n  \"schema_version\": 1,\n  \"service\": \"user-molecule-fixed\",\n  \"geometry_file\": \"molecule.xyz\",\n  \"c"
+        },
+        {
+          "tag": "CODE",
+          "id": "molecule-check-command",
+          "class": "",
+          "width": 824.71875,
+          "left": 89,
+          "right": 913.71875,
+          "text": "./scripts/start-local-runtime.ps1 -Action Check `\n  -Request '.\\examples\\user-molecule\\w05-candidate"
+        },
+        {
+          "tag": "CODE",
+          "id": "p11-ledger-command",
+          "class": "",
+          "width": 816.46875,
+          "left": 72,
+          "right": 888.46875,
+          "text": ".\\scripts\\start-high-cost-case.ps1 -Task P11 -Mode ledger -OutputRoot 'D:\\chem-work\\high-cost-runs'"
+        },
+        {
+          "tag": "CODE",
+          "id": "p12-ledger-command",
+          "class": "",
+          "width": 973.15625,
+          "left": 72,
+          "right": 1045.15625,
+          "text": ".\\scripts\\start-high-cost-case.ps1 -Task P12 -Mode ledger -OutputRoot 'D:\\chem-work\\high-cost-runs'\n"
+        },
+        {
+          "tag": "CODE",
+          "id": "n16-live-command",
+          "class": "",
+          "width": 1303.046875,
+          "left": 72,
+          "right": 1375.046875,
+          "text": "python -B .\\scripts\\create-high-cost-budget.py --output 'D:\\chem-work\\batch3-n16-g-new.json' --unit "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p03-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 72,
+          "right": 1020.421875,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P03 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p03-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 72,
+          "right": 1045.15625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P03 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p03-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 89,
+          "right": 1466.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P03 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p04-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 72,
+          "right": 1020.421875,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p04-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 72,
+          "right": 1045.15625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p04-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 89,
+          "right": 1466.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p05-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 72,
+          "right": 1020.421875,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p05-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 72,
+          "right": 1045.15625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p05-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 89,
+          "right": 1466.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p06-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 72,
+          "right": 1020.421875,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P06 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p06-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 72,
+          "right": 1045.15625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P06 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p06-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 89,
+          "right": 1466.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P06 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p07-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 72,
+          "right": 1045.15625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P07 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        }
+      ]
+    },
+    {
+      "name": "Viewport 768 visible details expanded",
+      "status": "PASS",
+      "clicked": 119,
+      "inner": 768,
+      "client": 768,
+      "scroll": 768,
+      "bodyScroll": 768,
+      "openDetails": 119,
+      "overflowElements": [
+        {
+          "tag": "CODE",
+          "id": "source-install-command",
+          "class": "",
+          "width": 1913.328125,
+          "left": 72,
+          "right": 1985.328125,
+          "text": "# 在取得的 Runtime 源码目录执行\npython -B .\\scripts\\install-local-runtime.py prepare --destination D:\\chem-wor"
+        },
+        {
+          "tag": "CODE",
+          "id": "single-point-report-command",
+          "class": "",
+          "width": 750.484375,
+          "left": 55,
+          "right": 805.484375,
+          "text": "$records = '<终端 records 的实际路径>'\nGet-Content -LiteralPath (Join-Path $records 'output\\calculation\\rep"
+        },
+        {
+          "tag": "CODE",
+          "id": "molecule-request-json",
+          "class": "",
+          "width": 727.421875,
+          "left": 89,
+          "right": 816.421875,
+          "text": "{\n  \"schema_version\": 1,\n  \"service\": \"user-molecule-fixed\",\n  \"geometry_file\": \"molecule.xyz\",\n  \"c"
+        },
+        {
+          "tag": "CODE",
+          "id": "molecule-check-command",
+          "class": "",
+          "width": 824.71875,
+          "left": 89,
+          "right": 913.71875,
+          "text": "./scripts/start-local-runtime.ps1 -Action Check `\n  -Request '.\\examples\\user-molecule\\w05-candidate"
+        },
+        {
+          "tag": "CODE",
+          "id": "p11-ledger-command",
+          "class": "",
+          "width": 816.46875,
+          "left": 72,
+          "right": 888.46875,
+          "text": ".\\scripts\\start-high-cost-case.ps1 -Task P11 -Mode ledger -OutputRoot 'D:\\chem-work\\high-cost-runs'"
+        },
+        {
+          "tag": "CODE",
+          "id": "p12-ledger-command",
+          "class": "",
+          "width": 973.15625,
+          "left": 72,
+          "right": 1045.15625,
+          "text": ".\\scripts\\start-high-cost-case.ps1 -Task P12 -Mode ledger -OutputRoot 'D:\\chem-work\\high-cost-runs'\n"
+        },
+        {
+          "tag": "CODE",
+          "id": "n16-live-command",
+          "class": "",
+          "width": 1303.046875,
+          "left": 72,
+          "right": 1375.046875,
+          "text": "python -B .\\scripts\\create-high-cost-budget.py --output 'D:\\chem-work\\batch3-n16-g-new.json' --unit "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p03-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 72,
+          "right": 1020.421875,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P03 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p03-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 72,
+          "right": 1045.15625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P03 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p03-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 89,
+          "right": 1466.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P03 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p04-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 72,
+          "right": 1020.421875,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p04-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 72,
+          "right": 1045.15625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p04-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 89,
+          "right": 1466.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p05-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 72,
+          "right": 1020.421875,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p05-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 72,
+          "right": 1045.15625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p05-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 89,
+          "right": 1466.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p06-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 72,
+          "right": 1020.421875,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P06 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p06-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 72,
+          "right": 1045.15625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P06 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p06-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 89,
+          "right": 1466.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P06 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p07-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 72,
+          "right": 1045.15625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P07 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        }
+      ]
+    },
+    {
+      "name": "Viewport 1440 default",
+      "status": "PASS",
+      "inner": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "bodyScroll": 1440,
+      "openDetails": 0,
+      "overflowElements": [
+        {
+          "tag": "CODE",
+          "id": "source-install-command",
+          "class": "",
+          "width": 1913.328125,
+          "left": 464,
+          "right": 2377.328125,
+          "text": "# 在取得的 Runtime 源码目录执行\npython -B .\\scripts\\install-local-runtime.py prepare --destination D:\\chem-wor"
+        },
+        {
+          "tag": "CODE",
+          "id": "molecule-check-command",
+          "class": "",
+          "width": 824.71875,
+          "left": 1025,
+          "right": 1849.71875,
+          "text": "./scripts/start-local-runtime.ps1 -Action Check `\n  -Request '.\\examples\\user-molecule\\w05-candidate"
+        },
+        {
+          "tag": "CODE",
+          "id": "p12-ledger-command",
+          "class": "",
+          "width": 973.15625,
+          "left": 747.328125,
+          "right": 1720.484375,
+          "text": ".\\scripts\\start-high-cost-case.ps1 -Task P12 -Mode ledger -OutputRoot 'D:\\chem-work\\high-cost-runs'\n"
+        },
+        {
+          "tag": "CODE",
+          "id": "n16-live-command",
+          "class": "",
+          "width": 1303.046875,
+          "left": 464,
+          "right": 1767.046875,
+          "text": "python -B .\\scripts\\create-high-cost-budget.py --output 'D:\\chem-work\\batch3-n16-g-new.json' --unit "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p03-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 481,
+          "right": 1858.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P03 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p04-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 747.328125,
+          "right": 1695.75,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p04-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 747.328125,
+          "right": 1720.484375,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p04-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 764.328125,
+          "right": 2141.59375,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p05-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 1030.65625,
+          "right": 1979.078125,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p05-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 1030.65625,
+          "right": 2003.8125,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p05-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 1047.65625,
+          "right": 2424.921875,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p06-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 481,
+          "right": 1858.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P06 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p07-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 747.328125,
+          "right": 1720.484375,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P07 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p07-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 747.328125,
+          "right": 1695.75,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P07 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p08-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 1030.65625,
+          "right": 1979.078125,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P08 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p08-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 1030.65625,
+          "right": 2003.8125,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P08 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p08-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 1047.65625,
+          "right": 2424.921875,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P08 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p09-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 481,
+          "right": 1858.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P09 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p10-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 747.328125,
+          "right": 1695.75,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P10 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p10-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 747.328125,
+          "right": 1720.484375,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P10 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        }
+      ]
+    },
+    {
+      "name": "Viewport 1440 visible details expanded",
+      "status": "PASS",
+      "clicked": 119,
+      "inner": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "bodyScroll": 1440,
+      "openDetails": 119,
+      "overflowElements": [
+        {
+          "tag": "CODE",
+          "id": "source-install-command",
+          "class": "",
+          "width": 1913.328125,
+          "left": 464,
+          "right": 2377.328125,
+          "text": "# 在取得的 Runtime 源码目录执行\npython -B .\\scripts\\install-local-runtime.py prepare --destination D:\\chem-wor"
+        },
+        {
+          "tag": "CODE",
+          "id": "molecule-check-command",
+          "class": "",
+          "width": 824.71875,
+          "left": 1025,
+          "right": 1849.71875,
+          "text": "./scripts/start-local-runtime.ps1 -Action Check `\n  -Request '.\\examples\\user-molecule\\w05-candidate"
+        },
+        {
+          "tag": "CODE",
+          "id": "p12-ledger-command",
+          "class": "",
+          "width": 973.15625,
+          "left": 747.328125,
+          "right": 1720.484375,
+          "text": ".\\scripts\\start-high-cost-case.ps1 -Task P12 -Mode ledger -OutputRoot 'D:\\chem-work\\high-cost-runs'\n"
+        },
+        {
+          "tag": "CODE",
+          "id": "n16-live-command",
+          "class": "",
+          "width": 1303.046875,
+          "left": 464,
+          "right": 1767.046875,
+          "text": "python -B .\\scripts\\create-high-cost-budget.py --output 'D:\\chem-work\\batch3-n16-g-new.json' --unit "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p03-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 481,
+          "right": 1858.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P03 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p04-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 747.328125,
+          "right": 1695.75,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p04-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 747.328125,
+          "right": 1720.484375,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p04-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 764.328125,
+          "right": 2141.59375,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p05-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 1030.65625,
+          "right": 1979.078125,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p05-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 1030.65625,
+          "right": 2003.8125,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p05-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 1047.65625,
+          "right": 2424.921875,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p06-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 481,
+          "right": 1858.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P06 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p07-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 747.328125,
+          "right": 1720.484375,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P07 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p07-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 747.328125,
+          "right": 1695.75,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P07 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p08-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 1030.65625,
+          "right": 1979.078125,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P08 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p08-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 1030.65625,
+          "right": 2003.8125,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P08 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p08-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 1047.65625,
+          "right": 2424.921875,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P08 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p09-live",
+          "class": "",
+          "width": 1377.265625,
+          "left": 481,
+          "right": 1858.265625,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P09 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' "
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p10-ledger",
+          "class": "",
+          "width": 948.421875,
+          "left": 747.328125,
+          "right": 1695.75,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P10 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\prot"
+        },
+        {
+          "tag": "CODE",
+          "id": "batch2-p10-preflight",
+          "class": "",
+          "width": 973.15625,
+          "left": 747.328125,
+          "right": 1720.484375,
+          "text": ".\\scripts\\start-protocol-case.ps1 -Task P10 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\p"
+        }
+      ]
+    },
+    {
+      "name": "Actual clipboard copy/read",
+      "status": "PASS_LOGICAL_TEXT",
+      "normalization": "Only Windows CRLF to LF; raw hash equality recorded separately",
+      "button_count": 79,
+      "results": [
+        {
+          "target": "source-install-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 803,
+          "actual_bytes": 811,
+          "clipboard_crlf": 8,
+          "actual_sha256": "0794172bd8d3d899b41dc106425697bc5b18baddb39f0e93afa0e67b237292e3",
+          "expected_sha256": "e64389942e1496275f6d6db7fc14c9d3085a6d006223d9d8b51750a41757a9fe",
+          "logical_lf_sha256": "e64389942e1496275f6d6db7fc14c9d3085a6d006223d9d8b51750a41757a9fe"
+        },
+        {
+          "target": "evidence-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 101,
+          "actual_bytes": 102,
+          "clipboard_crlf": 1,
+          "actual_sha256": "60d742931c942ebc5b2ecd9c3ae190dedab155c5ac3ef1c602a95292f2ca2be5",
+          "expected_sha256": "b5cfe80f0431de462c38bcdd07d8ed8b52a04840ad36f73924bbc3900130997e",
+          "logical_lf_sha256": "b5cfe80f0431de462c38bcdd07d8ed8b52a04840ad36f73924bbc3900130997e"
+        },
+        {
+          "target": "single-point-location-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 47,
+          "actual_bytes": 48,
+          "clipboard_crlf": 1,
+          "actual_sha256": "bdb776f71ef52a8799e7cceaaa952151c0293c940f46bc49a2948d2e0e45c9d0",
+          "expected_sha256": "9dec846ad786db01353fbbc9ff3633607a2050cfda936d6cd2c3ef688f27a4ea",
+          "logical_lf_sha256": "9dec846ad786db01353fbbc9ff3633607a2050cfda936d6cd2c3ef688f27a4ea"
+        },
+        {
+          "target": "single-point-request-json",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 277,
+          "actual_bytes": 291,
+          "clipboard_crlf": 14,
+          "actual_sha256": "e361a0888bd80a2db9e580c9c7f77defbd0ae9a2866b4eb5d7814cf41296f54e",
+          "expected_sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92",
+          "logical_lf_sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+        },
+        {
+          "target": "single-point-xyz-text",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 123,
+          "actual_bytes": 128,
+          "clipboard_crlf": 5,
+          "actual_sha256": "561c6a1fd6b896741ae79bfed6c61d80d6c728c34772f858f54b04a808ebd117",
+          "expected_sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7",
+          "logical_lf_sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+        },
+        {
+          "target": "single-point-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 156,
+          "actual_bytes": 159,
+          "clipboard_crlf": 3,
+          "actual_sha256": "2a2147160ad85c0db59d78fb9429986706ef54f6eb8071c0c276fc76397c2a2d",
+          "expected_sha256": "8a0bff94b0b0170191f712c39bf0a670945012a657547fdc2f020f6b62362a0f",
+          "logical_lf_sha256": "8a0bff94b0b0170191f712c39bf0a670945012a657547fdc2f020f6b62362a0f"
+        },
+        {
+          "target": "single-point-custom-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 148,
+          "actual_bytes": 151,
+          "clipboard_crlf": 3,
+          "actual_sha256": "c78eea23c76e4f59c791652c8c7b11ec79e7d4a70c656443502bb2d22097fe29",
+          "expected_sha256": "c64231853cdfed75d4cf5ea8986c998cb893813945f4eb92d61336a83514309c",
+          "logical_lf_sha256": "c64231853cdfed75d4cf5ea8986c998cb893813945f4eb92d61336a83514309c"
+        },
+        {
+          "target": "single-point-report-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 138,
+          "actual_bytes": 140,
+          "clipboard_crlf": 2,
+          "actual_sha256": "f3168869c59cf09b814901dbed2a962a5be99a73c78cbbe88b238d2f236dfd65",
+          "expected_sha256": "be066962c7418ef44fa0341b49095733c269479e935b36a33deb8b4eb7027ec8",
+          "logical_lf_sha256": "be066962c7418ef44fa0341b49095733c269479e935b36a33deb8b4eb7027ec8"
+        },
+        {
+          "target": "molecule-request-json",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 741,
+          "actual_bytes": 771,
+          "clipboard_crlf": 30,
+          "actual_sha256": "e6667a83a1aaaf68c6f1e805234f815e5ace14617c1e837b4fef049a254a0724",
+          "expected_sha256": "eb464b03cbc03f41ec63b142914d39f37bbadeb7de2d7b559873ec61879e0b3f",
+          "logical_lf_sha256": "eb464b03cbc03f41ec63b142914d39f37bbadeb7de2d7b559873ec61879e0b3f"
+        },
+        {
+          "target": "molecule-xyz-text",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 233,
+          "actual_bytes": 241,
+          "clipboard_crlf": 8,
+          "actual_sha256": "c47e4750a8b33549f6f706eb64bde1f81a9d0ad41b07f664a68240951ba1c809",
+          "expected_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+          "logical_lf_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d"
+        },
+        {
+          "target": "molecule-check-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 190,
+          "actual_bytes": 192,
+          "clipboard_crlf": 2,
+          "actual_sha256": "f1c50211231a3e4f58cd3b3859a951b9e7aaa15ea213dcffd5ae9b252947cf57",
+          "expected_sha256": "6ad3e058d48cf3308ca512fb3f4c9bce7b44028478efed2c06e790b00338d690",
+          "logical_lf_sha256": "6ad3e058d48cf3308ca512fb3f4c9bce7b44028478efed2c06e790b00338d690"
+        },
+        {
+          "target": "molecule-report-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 107,
+          "actual_bytes": 108,
+          "clipboard_crlf": 1,
+          "actual_sha256": "0bd7288ff2c7f2e27eeb9e785e52d1dd3a134e7fb5985f005a25ae4a6583667e",
+          "expected_sha256": "152099b3e431e3f18d9fc33af1e5de2a371ce2ddc1611e7c3bf3ff82bceeffcc",
+          "logical_lf_sha256": "152099b3e431e3f18d9fc33af1e5de2a371ce2ddc1611e7c3bf3ff82bceeffcc"
+        },
+        {
+          "target": "molecule-report-export-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 215,
+          "actual_bytes": 218,
+          "clipboard_crlf": 3,
+          "actual_sha256": "df58abb2ad7c710c8f47fb17261c94f46d5307418daeb6a5da8fb5ba95683925",
+          "expected_sha256": "252883fe9c8abca130db8ba2ec2c7f5d9772380eb93a1128e1ae02a6578a1140",
+          "logical_lf_sha256": "252883fe9c8abca130db8ba2ec2c7f5d9772380eb93a1128e1ae02a6578a1140"
+        },
+        {
+          "target": "high-cost-list-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 43,
+          "actual_bytes": 43,
+          "clipboard_crlf": 0,
+          "actual_sha256": "434e5a3513320eef5c82e36eb93a34d203ee32773360d1955c7dea06f5a9cbeb",
+          "expected_sha256": "434e5a3513320eef5c82e36eb93a34d203ee32773360d1955c7dea06f5a9cbeb",
+          "logical_lf_sha256": "434e5a3513320eef5c82e36eb93a34d203ee32773360d1955c7dea06f5a9cbeb"
+        },
+        {
+          "target": "p11-ledger-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 99,
+          "actual_bytes": 99,
+          "clipboard_crlf": 0,
+          "actual_sha256": "c8d4d541c83b67d8f92381bfc974c677bed2d814445b38985360516edfb83ed7",
+          "expected_sha256": "c8d4d541c83b67d8f92381bfc974c677bed2d814445b38985360516edfb83ed7",
+          "logical_lf_sha256": "c8d4d541c83b67d8f92381bfc974c677bed2d814445b38985360516edfb83ed7"
+        },
+        {
+          "target": "p12-ledger-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 218,
+          "actual_bytes": 219,
+          "clipboard_crlf": 1,
+          "actual_sha256": "f77f5c15d096e825b406ef4cdb3c43245313e57837c4a02da9d397e8e5eef347",
+          "expected_sha256": "954c620b5bb513198ea534d4e24af1314ce6135d26e62ce35b93690c5ed1b10d",
+          "logical_lf_sha256": "954c620b5bb513198ea534d4e24af1314ce6135d26e62ce35b93690c5ed1b10d"
+        },
+        {
+          "target": "n16-live-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 292,
+          "actual_bytes": 293,
+          "clipboard_crlf": 1,
+          "actual_sha256": "5026b2913dbdd7ca198d1c694cbfddb5870dce70fcfbd53f426d747001c9004f",
+          "expected_sha256": "98d4a3deb1d7a14fd1c058e2802dc1d39458c0f7ff85203e64b51cd1f3cad5dd",
+          "logical_lf_sha256": "98d4a3deb1d7a14fd1c058e2802dc1d39458c0f7ff85203e64b51cd1f3cad5dd"
+        },
+        {
+          "target": "batch2-budget-json",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 286,
+          "actual_bytes": 295,
+          "clipboard_crlf": 9,
+          "actual_sha256": "5280e9ef3222c64b06072b05cdd85bc61fde697b09653e596d20892fec2dafe2",
+          "expected_sha256": "953355d6c85bf0f08f6a64bc7da5f4b418b82d538f1bc8b7fe7571f32da37445",
+          "logical_lf_sha256": "953355d6c85bf0f08f6a64bc7da5f4b418b82d538f1bc8b7fe7571f32da37445"
+        },
+        {
+          "target": "batch2-p03-ledger",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 115,
+          "actual_bytes": 115,
+          "clipboard_crlf": 0,
+          "actual_sha256": "eaf590006a536bf935267cc7104655d911390e310a044c2b473ec1cbb8c9aaaf",
+          "expected_sha256": "eaf590006a536bf935267cc7104655d911390e310a044c2b473ec1cbb8c9aaaf",
+          "logical_lf_sha256": "eaf590006a536bf935267cc7104655d911390e310a044c2b473ec1cbb8c9aaaf"
+        },
+        {
+          "target": "batch2-p03-preflight",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 118,
+          "actual_bytes": 118,
+          "clipboard_crlf": 0,
+          "actual_sha256": "27af7b4fbb4c86d555291e70d375074a3b9317019fbd13e2202aad2f8cfb1652",
+          "expected_sha256": "27af7b4fbb4c86d555291e70d375074a3b9317019fbd13e2202aad2f8cfb1652",
+          "logical_lf_sha256": "27af7b4fbb4c86d555291e70d375074a3b9317019fbd13e2202aad2f8cfb1652"
+        },
+        {
+          "target": "batch2-p03-live",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 167,
+          "actual_bytes": 167,
+          "clipboard_crlf": 0,
+          "actual_sha256": "eedd3944a5497e4ee121e306c9fde5591cab15d46ff92a70a99bc45b86314a8e",
+          "expected_sha256": "eedd3944a5497e4ee121e306c9fde5591cab15d46ff92a70a99bc45b86314a8e",
+          "logical_lf_sha256": "eedd3944a5497e4ee121e306c9fde5591cab15d46ff92a70a99bc45b86314a8e"
+        },
+        {
+          "target": "batch2-p04-ledger",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 115,
+          "actual_bytes": 115,
+          "clipboard_crlf": 0,
+          "actual_sha256": "b09ca52b92348257a36be2b45af0f09c2b80fdb227c1cbf2b72cad5c9c6d7d4c",
+          "expected_sha256": "b09ca52b92348257a36be2b45af0f09c2b80fdb227c1cbf2b72cad5c9c6d7d4c",
+          "logical_lf_sha256": "b09ca52b92348257a36be2b45af0f09c2b80fdb227c1cbf2b72cad5c9c6d7d4c"
+        },
+        {
+          "target": "batch2-p04-preflight",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 118,
+          "actual_bytes": 118,
+          "clipboard_crlf": 0,
+          "actual_sha256": "5db72a8ca2f8520acad9ac6225557e362af7c504289be4251bae7bbae23fb1c9",
+          "expected_sha256": "5db72a8ca2f8520acad9ac6225557e362af7c504289be4251bae7bbae23fb1c9",
+          "logical_lf_sha256": "5db72a8ca2f8520acad9ac6225557e362af7c504289be4251bae7bbae23fb1c9"
+        },
+        {
+          "target": "batch2-p04-live",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 167,
+          "actual_bytes": 167,
+          "clipboard_crlf": 0,
+          "actual_sha256": "a775dca41a10141dd912fb7edccf6ff6e3b3e432eb311627bcad7ca082f558c2",
+          "expected_sha256": "a775dca41a10141dd912fb7edccf6ff6e3b3e432eb311627bcad7ca082f558c2",
+          "logical_lf_sha256": "a775dca41a10141dd912fb7edccf6ff6e3b3e432eb311627bcad7ca082f558c2"
+        },
+        {
+          "target": "batch2-p05-ledger",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 115,
+          "actual_bytes": 115,
+          "clipboard_crlf": 0,
+          "actual_sha256": "d2b4b4835e5ea10bf25cff3aebb715bd591a99b05c78449ca1c71c90c3720e90",
+          "expected_sha256": "d2b4b4835e5ea10bf25cff3aebb715bd591a99b05c78449ca1c71c90c3720e90",
+          "logical_lf_sha256": "d2b4b4835e5ea10bf25cff3aebb715bd591a99b05c78449ca1c71c90c3720e90"
+        },
+        {
+          "target": "batch2-p05-preflight",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 118,
+          "actual_bytes": 118,
+          "clipboard_crlf": 0,
+          "actual_sha256": "82eb8de5118d29cd6733881a81f1973ccf4d1f7d48175034b2a7f03b2a65e12d",
+          "expected_sha256": "82eb8de5118d29cd6733881a81f1973ccf4d1f7d48175034b2a7f03b2a65e12d",
+          "logical_lf_sha256": "82eb8de5118d29cd6733881a81f1973ccf4d1f7d48175034b2a7f03b2a65e12d"
+        },
+        {
+          "target": "batch2-p05-live",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 167,
+          "actual_bytes": 167,
+          "clipboard_crlf": 0,
+          "actual_sha256": "4c115ef896311e8060f0c53f85fb7c95288f853fd6fa4e19e6ecabf6748fc1dd",
+          "expected_sha256": "4c115ef896311e8060f0c53f85fb7c95288f853fd6fa4e19e6ecabf6748fc1dd",
+          "logical_lf_sha256": "4c115ef896311e8060f0c53f85fb7c95288f853fd6fa4e19e6ecabf6748fc1dd"
+        },
+        {
+          "target": "batch2-p06-ledger",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 115,
+          "actual_bytes": 115,
+          "clipboard_crlf": 0,
+          "actual_sha256": "6a84fb737e842054a874f6369067f0da882e4a9025e8b5ab7a8bf3bfc371ecd9",
+          "expected_sha256": "6a84fb737e842054a874f6369067f0da882e4a9025e8b5ab7a8bf3bfc371ecd9",
+          "logical_lf_sha256": "6a84fb737e842054a874f6369067f0da882e4a9025e8b5ab7a8bf3bfc371ecd9"
+        },
+        {
+          "target": "batch2-p06-preflight",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 118,
+          "actual_bytes": 118,
+          "clipboard_crlf": 0,
+          "actual_sha256": "51db53126f98fc7b93f0915d813c2302acd9c7569432c2ac4e14141d02e7bfe8",
+          "expected_sha256": "51db53126f98fc7b93f0915d813c2302acd9c7569432c2ac4e14141d02e7bfe8",
+          "logical_lf_sha256": "51db53126f98fc7b93f0915d813c2302acd9c7569432c2ac4e14141d02e7bfe8"
+        },
+        {
+          "target": "batch2-p06-live",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 167,
+          "actual_bytes": 167,
+          "clipboard_crlf": 0,
+          "actual_sha256": "2e1f07b7e9e18b4a3eba52d0de1acc29568f2e49b1fc3c48a38e2a503cbfaef7",
+          "expected_sha256": "2e1f07b7e9e18b4a3eba52d0de1acc29568f2e49b1fc3c48a38e2a503cbfaef7",
+          "logical_lf_sha256": "2e1f07b7e9e18b4a3eba52d0de1acc29568f2e49b1fc3c48a38e2a503cbfaef7"
+        },
+        {
+          "target": "batch2-p07-preflight",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 118,
+          "actual_bytes": 118,
+          "clipboard_crlf": 0,
+          "actual_sha256": "81f01b8a0e6255dbbef28de569ea278cddb38ddf9eaffa8d4bb8daccacc67d1b",
+          "expected_sha256": "81f01b8a0e6255dbbef28de569ea278cddb38ddf9eaffa8d4bb8daccacc67d1b",
+          "logical_lf_sha256": "81f01b8a0e6255dbbef28de569ea278cddb38ddf9eaffa8d4bb8daccacc67d1b"
+        },
+        {
+          "target": "batch2-p07-ledger",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 115,
+          "actual_bytes": 115,
+          "clipboard_crlf": 0,
+          "actual_sha256": "a9a8924f1d98f6559be0b60982da886638c16a67b311415db267514f1ffa4bb0",
+          "expected_sha256": "a9a8924f1d98f6559be0b60982da886638c16a67b311415db267514f1ffa4bb0",
+          "logical_lf_sha256": "a9a8924f1d98f6559be0b60982da886638c16a67b311415db267514f1ffa4bb0"
+        },
+        {
+          "target": "batch2-p08-ledger",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 115,
+          "actual_bytes": 115,
+          "clipboard_crlf": 0,
+          "actual_sha256": "613f6f20d54d40a8a9acde0a2f72b01afe311d496f99c0e78e9f75c4e9b854a6",
+          "expected_sha256": "613f6f20d54d40a8a9acde0a2f72b01afe311d496f99c0e78e9f75c4e9b854a6",
+          "logical_lf_sha256": "613f6f20d54d40a8a9acde0a2f72b01afe311d496f99c0e78e9f75c4e9b854a6"
+        },
+        {
+          "target": "batch2-p08-preflight",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 118,
+          "actual_bytes": 118,
+          "clipboard_crlf": 0,
+          "actual_sha256": "ccbc23a09ec8734fd6e3e91bd37b024caf4bef423f9f895037489c1555296c14",
+          "expected_sha256": "ccbc23a09ec8734fd6e3e91bd37b024caf4bef423f9f895037489c1555296c14",
+          "logical_lf_sha256": "ccbc23a09ec8734fd6e3e91bd37b024caf4bef423f9f895037489c1555296c14"
+        },
+        {
+          "target": "batch2-p08-live",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 167,
+          "actual_bytes": 167,
+          "clipboard_crlf": 0,
+          "actual_sha256": "850d0eb0de4b10351ff4e47fee33ad641e05fd8dda674fc8856f60d54255938c",
+          "expected_sha256": "850d0eb0de4b10351ff4e47fee33ad641e05fd8dda674fc8856f60d54255938c",
+          "logical_lf_sha256": "850d0eb0de4b10351ff4e47fee33ad641e05fd8dda674fc8856f60d54255938c"
+        },
+        {
+          "target": "batch2-p09-ledger",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 115,
+          "actual_bytes": 115,
+          "clipboard_crlf": 0,
+          "actual_sha256": "17987974af934da871e32287546d181f792d50fa3562f0952f5d4a912f486406",
+          "expected_sha256": "17987974af934da871e32287546d181f792d50fa3562f0952f5d4a912f486406",
+          "logical_lf_sha256": "17987974af934da871e32287546d181f792d50fa3562f0952f5d4a912f486406"
+        },
+        {
+          "target": "batch2-p09-preflight",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 118,
+          "actual_bytes": 118,
+          "clipboard_crlf": 0,
+          "actual_sha256": "1fc0f23c17d8815c2fda258bb81c3448700d4609af797136036c6592a5908be3",
+          "expected_sha256": "1fc0f23c17d8815c2fda258bb81c3448700d4609af797136036c6592a5908be3",
+          "logical_lf_sha256": "1fc0f23c17d8815c2fda258bb81c3448700d4609af797136036c6592a5908be3"
+        },
+        {
+          "target": "batch2-p09-live",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 167,
+          "actual_bytes": 167,
+          "clipboard_crlf": 0,
+          "actual_sha256": "453802bdad8cc21594647b7c0c9b93ee014c0c014475244e389e6488ff60cac4",
+          "expected_sha256": "453802bdad8cc21594647b7c0c9b93ee014c0c014475244e389e6488ff60cac4",
+          "logical_lf_sha256": "453802bdad8cc21594647b7c0c9b93ee014c0c014475244e389e6488ff60cac4"
+        },
+        {
+          "target": "batch2-p10-ledger",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 115,
+          "actual_bytes": 115,
+          "clipboard_crlf": 0,
+          "actual_sha256": "1fb352247f2c5e36923f9ba818791a33ca6aa7378002f5c2e3ee9bf10c24a710",
+          "expected_sha256": "1fb352247f2c5e36923f9ba818791a33ca6aa7378002f5c2e3ee9bf10c24a710",
+          "logical_lf_sha256": "1fb352247f2c5e36923f9ba818791a33ca6aa7378002f5c2e3ee9bf10c24a710"
+        },
+        {
+          "target": "batch2-p10-preflight",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 118,
+          "actual_bytes": 118,
+          "clipboard_crlf": 0,
+          "actual_sha256": "860257e4da3650787823b2b1958049b64ccc4853300f31c2280bf7bc645dd4b3",
+          "expected_sha256": "860257e4da3650787823b2b1958049b64ccc4853300f31c2280bf7bc645dd4b3",
+          "logical_lf_sha256": "860257e4da3650787823b2b1958049b64ccc4853300f31c2280bf7bc645dd4b3"
+        },
+        {
+          "target": "batch2-p10-live",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 167,
+          "actual_bytes": 167,
+          "clipboard_crlf": 0,
+          "actual_sha256": "ec77ae66ab38681c2f6dd080c9b14c46594511cbac3852ca3bbcf397bf336e8b",
+          "expected_sha256": "ec77ae66ab38681c2f6dd080c9b14c46594511cbac3852ca3bbcf397bf336e8b",
+          "logical_lf_sha256": "ec77ae66ab38681c2f6dd080c9b14c46594511cbac3852ca3bbcf397bf336e8b"
+        },
+        {
+          "target": "case-p02-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 107,
+          "actual_bytes": 107,
+          "clipboard_crlf": 0,
+          "actual_sha256": "b5e89cd79d3643d9d742558d622017183aa723a2ed994c3d882ad63f72de8af4",
+          "expected_sha256": "b5e89cd79d3643d9d742558d622017183aa723a2ed994c3d882ad63f72de8af4",
+          "logical_lf_sha256": "b5e89cd79d3643d9d742558d622017183aa723a2ed994c3d882ad63f72de8af4"
+        },
+        {
+          "target": "case-p13-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 109,
+          "actual_bytes": 109,
+          "clipboard_crlf": 0,
+          "actual_sha256": "ac46c8c7fb928c865502df87e7086357057ab914b0fc7faccf8f272d89797e8a",
+          "expected_sha256": "ac46c8c7fb928c865502df87e7086357057ab914b0fc7faccf8f272d89797e8a",
+          "logical_lf_sha256": "ac46c8c7fb928c865502df87e7086357057ab914b0fc7faccf8f272d89797e8a"
+        },
+        {
+          "target": "case-p01-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 112,
+          "actual_bytes": 112,
+          "clipboard_crlf": 0,
+          "actual_sha256": "978a11a69ff407789e25efe81df3caf6a5450da8a2b5408b5d94b0eda46917c0",
+          "expected_sha256": "978a11a69ff407789e25efe81df3caf6a5450da8a2b5408b5d94b0eda46917c0",
+          "logical_lf_sha256": "978a11a69ff407789e25efe81df3caf6a5450da8a2b5408b5d94b0eda46917c0"
+        },
+        {
+          "target": "p01-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "7ae35507ba3aedaa4916aa9a92bcdda7cd6a07fd39114ab848ed62afccdaa46c",
+          "expected_sha256": "7ae35507ba3aedaa4916aa9a92bcdda7cd6a07fd39114ab848ed62afccdaa46c",
+          "logical_lf_sha256": "7ae35507ba3aedaa4916aa9a92bcdda7cd6a07fd39114ab848ed62afccdaa46c"
+        },
+        {
+          "target": "p01-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "53b19611a90e4beacd4b76de8dda431da7284f631476cb9c0ec37577470ece31",
+          "expected_sha256": "9fa47cd5b3d91fda033cceebbef1464da709fdf2aacba9c5355000a7cb4d54bf",
+          "logical_lf_sha256": "9fa47cd5b3d91fda033cceebbef1464da709fdf2aacba9c5355000a7cb4d54bf"
+        },
+        {
+          "target": "p02-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "09247be5be867898175ed7403d81d3160312b32db08a4afc5dfe1c4f33a9cda4",
+          "expected_sha256": "09247be5be867898175ed7403d81d3160312b32db08a4afc5dfe1c4f33a9cda4",
+          "logical_lf_sha256": "09247be5be867898175ed7403d81d3160312b32db08a4afc5dfe1c4f33a9cda4"
+        },
+        {
+          "target": "p02-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "4b160bdec5276bab7aca92d10007b60e7e4187184787ecffac41701ccb27911b",
+          "expected_sha256": "ae28033c10862ca86961aefafc95159c38de5177c17b4f20418b59b53ee7e02d",
+          "logical_lf_sha256": "ae28033c10862ca86961aefafc95159c38de5177c17b4f20418b59b53ee7e02d"
+        },
+        {
+          "target": "p03-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "29417334dc86a44a1921a6c73eb67dbfed85d4dfa696fcf27ad1e5698ca90b44",
+          "expected_sha256": "29417334dc86a44a1921a6c73eb67dbfed85d4dfa696fcf27ad1e5698ca90b44",
+          "logical_lf_sha256": "29417334dc86a44a1921a6c73eb67dbfed85d4dfa696fcf27ad1e5698ca90b44"
+        },
+        {
+          "target": "p03-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "94b2664859d9a97b46d65678506e974bc8411bd2d7a09ef7a73fbe820720a874",
+          "expected_sha256": "01c43a598ba6daa05329be5617fd3068eeec9d7a90a7b7d2c894e9d713d6618c",
+          "logical_lf_sha256": "01c43a598ba6daa05329be5617fd3068eeec9d7a90a7b7d2c894e9d713d6618c"
+        },
+        {
+          "target": "p04-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "f099d1a0e65241d655ec28c451dad78355e11de8c40f880158b0270976cfb5c4",
+          "expected_sha256": "f099d1a0e65241d655ec28c451dad78355e11de8c40f880158b0270976cfb5c4",
+          "logical_lf_sha256": "f099d1a0e65241d655ec28c451dad78355e11de8c40f880158b0270976cfb5c4"
+        },
+        {
+          "target": "p04-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "ab58cd3efae578b13f7538e682caeeb82128c68bcbbb3ed27c8215ee1ef741eb",
+          "expected_sha256": "5aaa686409c2b112ced7197b470f6635295bad384d7cd74fc440dcc312e4c0f1",
+          "logical_lf_sha256": "5aaa686409c2b112ced7197b470f6635295bad384d7cd74fc440dcc312e4c0f1"
+        },
+        {
+          "target": "p05-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "2104ce4467b3c827ee6558fcf571d23f8d61d8913fb205fa4fa6ac688ef4b112",
+          "expected_sha256": "2104ce4467b3c827ee6558fcf571d23f8d61d8913fb205fa4fa6ac688ef4b112",
+          "logical_lf_sha256": "2104ce4467b3c827ee6558fcf571d23f8d61d8913fb205fa4fa6ac688ef4b112"
+        },
+        {
+          "target": "p05-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "13a09c87908a695fa33c4a38f15893c6b4de1f8ef8f84cf45ed97f64001a3d27",
+          "expected_sha256": "3bb449bfe57f2ec94d94ece4dfdbf7e3afbe7acbe9e5a7df5617506a6b703153",
+          "logical_lf_sha256": "3bb449bfe57f2ec94d94ece4dfdbf7e3afbe7acbe9e5a7df5617506a6b703153"
+        },
+        {
+          "target": "p06-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "663c43f21cc9bd865fdf6bbbda1dbd4402e65be69d236971ccb64966126e9973",
+          "expected_sha256": "663c43f21cc9bd865fdf6bbbda1dbd4402e65be69d236971ccb64966126e9973",
+          "logical_lf_sha256": "663c43f21cc9bd865fdf6bbbda1dbd4402e65be69d236971ccb64966126e9973"
+        },
+        {
+          "target": "p06-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "53c4c24d24d798bcdaf060d96cf54ac36241a6786e7183392a8f776cccd8ade9",
+          "expected_sha256": "e4e340c36e7b804ad2a5502d32e38a0391b2282a0329cf4b65bc07518f30451c",
+          "logical_lf_sha256": "e4e340c36e7b804ad2a5502d32e38a0391b2282a0329cf4b65bc07518f30451c"
+        },
+        {
+          "target": "p07-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "5243e9121f4f5efcdde07efa667b2cb4dd6b1367ff10ce7df909f1131fe84b27",
+          "expected_sha256": "5243e9121f4f5efcdde07efa667b2cb4dd6b1367ff10ce7df909f1131fe84b27",
+          "logical_lf_sha256": "5243e9121f4f5efcdde07efa667b2cb4dd6b1367ff10ce7df909f1131fe84b27"
+        },
+        {
+          "target": "p07-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "d443bbaa4feca1170bad5efa43cdb1a6decd7eff8bce0d8a545efe0d31da9d20",
+          "expected_sha256": "a7224b316832ab1d6cba1e56b5242df12f15c007b69be5ec220142645858629a",
+          "logical_lf_sha256": "a7224b316832ab1d6cba1e56b5242df12f15c007b69be5ec220142645858629a"
+        },
+        {
+          "target": "p08-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "917772595c1868f59fd699ce60849df9df8d48adcd23d70e3c162b3f566602d2",
+          "expected_sha256": "917772595c1868f59fd699ce60849df9df8d48adcd23d70e3c162b3f566602d2",
+          "logical_lf_sha256": "917772595c1868f59fd699ce60849df9df8d48adcd23d70e3c162b3f566602d2"
+        },
+        {
+          "target": "p08-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "bb0f2879d7ed81ad0e4080197d7bdce23376991b7d704960a48e5c9eb8e12276",
+          "expected_sha256": "e9137eaed539c3271be004be7c8031652c20f4b3e17749219d62414ac2ab4440",
+          "logical_lf_sha256": "e9137eaed539c3271be004be7c8031652c20f4b3e17749219d62414ac2ab4440"
+        },
+        {
+          "target": "p09-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "b4909c1ed31c66d3c663ae1794dac33b10128f9daeb4fbc0cd4fb410786308aa",
+          "expected_sha256": "b4909c1ed31c66d3c663ae1794dac33b10128f9daeb4fbc0cd4fb410786308aa",
+          "logical_lf_sha256": "b4909c1ed31c66d3c663ae1794dac33b10128f9daeb4fbc0cd4fb410786308aa"
+        },
+        {
+          "target": "p09-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "8839748c124de79bba8b6dd895adadce9a9bcfdb4e99732e76344e8e1f581eb2",
+          "expected_sha256": "b4470fc15a051feaf2c0114065c4b828cccf8c182c93554edd1b30861e5c64f5",
+          "logical_lf_sha256": "b4470fc15a051feaf2c0114065c4b828cccf8c182c93554edd1b30861e5c64f5"
+        },
+        {
+          "target": "p10-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "6585ef44da14ab6618c95850632e2609da6da9786a71e4c20748940d268624a2",
+          "expected_sha256": "6585ef44da14ab6618c95850632e2609da6da9786a71e4c20748940d268624a2",
+          "logical_lf_sha256": "6585ef44da14ab6618c95850632e2609da6da9786a71e4c20748940d268624a2"
+        },
+        {
+          "target": "p10-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "7f90b551262761a901accfb844cf4128d48888c380704730b15c2838881a84bd",
+          "expected_sha256": "b23b1466cd86f711aa9441c54201b59dbee4621826ee05fe26924dc70205792e",
+          "logical_lf_sha256": "b23b1466cd86f711aa9441c54201b59dbee4621826ee05fe26924dc70205792e"
+        },
+        {
+          "target": "p11-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "e08cb9ee3242b11bfeb79d723ba89df5f74c2494b1b2023af4358986927b6bd4",
+          "expected_sha256": "e08cb9ee3242b11bfeb79d723ba89df5f74c2494b1b2023af4358986927b6bd4",
+          "logical_lf_sha256": "e08cb9ee3242b11bfeb79d723ba89df5f74c2494b1b2023af4358986927b6bd4"
+        },
+        {
+          "target": "p11-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "12397d502260911523a7eff1b642755554e3e1d3e0c6dce5254604382bc858e6",
+          "expected_sha256": "d090b55be5951069c4f8844e11d00cc9558d03652cc03bd64130588d83ce3fd3",
+          "logical_lf_sha256": "d090b55be5951069c4f8844e11d00cc9558d03652cc03bd64130588d83ce3fd3"
+        },
+        {
+          "target": "p12-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "e3ad1ceb8a98957e90de5fefc2e7e1a1aa18d4d68a42f671a709f2a8af909036",
+          "expected_sha256": "e3ad1ceb8a98957e90de5fefc2e7e1a1aa18d4d68a42f671a709f2a8af909036",
+          "logical_lf_sha256": "e3ad1ceb8a98957e90de5fefc2e7e1a1aa18d4d68a42f671a709f2a8af909036"
+        },
+        {
+          "target": "p12-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "e59517a208aa21725c6b42a5c1444518e65d0382a1577036e695f897e5ee786d",
+          "expected_sha256": "6c9cedf5c36bbc3c407d0b06c8daf2cc38e72c56bafabf4d7081a1ab63a18ab9",
+          "logical_lf_sha256": "6c9cedf5c36bbc3c407d0b06c8daf2cc38e72c56bafabf4d7081a1ab63a18ab9"
+        },
+        {
+          "target": "p13-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "1f66f81a69cb48672e4c791480918058795e511a569f0c3d7d9c8ef8689348f6",
+          "expected_sha256": "1f66f81a69cb48672e4c791480918058795e511a569f0c3d7d9c8ef8689348f6",
+          "logical_lf_sha256": "1f66f81a69cb48672e4c791480918058795e511a569f0c3d7d9c8ef8689348f6"
+        },
+        {
+          "target": "p13-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "aeee120b6009091edd7ff2440bfe2372ebb4cf67a5efd07c784e545020d21d52",
+          "expected_sha256": "b1e1f3705c69171d1e9b2e62e217070bdd339152c4b4dd79dfffc07250ec07d8",
+          "logical_lf_sha256": "b1e1f3705c69171d1e9b2e62e217070bdd339152c4b4dd79dfffc07250ec07d8"
+        },
+        {
+          "target": "p14-show",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": true,
+          "expected_bytes": 63,
+          "actual_bytes": 63,
+          "clipboard_crlf": 0,
+          "actual_sha256": "10e1be4a54101946fb144e18c4f97451adcd3e4e35a19f7818fc488ff9632e61",
+          "expected_sha256": "10e1be4a54101946fb144e18c4f97451adcd3e4e35a19f7818fc488ff9632e61",
+          "logical_lf_sha256": "10e1be4a54101946fb144e18c4f97451adcd3e4e35a19f7818fc488ff9632e61"
+        },
+        {
+          "target": "p14-review",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 166,
+          "actual_bytes": 168,
+          "clipboard_crlf": 2,
+          "actual_sha256": "1b88522af272e88776db171f0e0aab22281bbc0dd13166c992f279778de7e944",
+          "expected_sha256": "ffc7e8a57dffb094889b00303920f5f2b97aa17497acc164b4b4638c56bb93de",
+          "logical_lf_sha256": "ffc7e8a57dffb094889b00303920f5f2b97aa17497acc164b4b4638c56bb93de"
+        },
+        {
+          "target": "task-evidence-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 215,
+          "actual_bytes": 217,
+          "clipboard_crlf": 2,
+          "actual_sha256": "78aca94fcc7d0e45c6adce4331c35c845b34265850cf77572970508b08225beb",
+          "expected_sha256": "40d541f5d3f7e8e196effaeb81590db3f85c78a4132d368352ed9da862e9e614",
+          "logical_lf_sha256": "40d541f5d3f7e8e196effaeb81590db3f85c78a4132d368352ed9da862e9e614"
+        },
+        {
+          "target": "core-tests-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 217,
+          "actual_bytes": 219,
+          "clipboard_crlf": 2,
+          "actual_sha256": "13bcc7406cb8fed8944b15f39d19ea1864cefa9e35a0fff34865cc486253466d",
+          "expected_sha256": "2fa607b2ce80b6ac9e9bbfec2d2ab28017c143459164881e2757ad3658e43e0a",
+          "logical_lf_sha256": "2fa607b2ce80b6ac9e9bbfec2d2ab28017c143459164881e2757ad3658e43e0a"
+        },
+        {
+          "target": "p14-smoke-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 227,
+          "actual_bytes": 229,
+          "clipboard_crlf": 2,
+          "actual_sha256": "22695581be60466dcb9cff47b58c59199a748f7bc52a72ab3b2953a168136a1d",
+          "expected_sha256": "9e5c8b6ff2ccf6ebe2b722da0f34e753713f065a385d0cb5acdab7ab9c405fc7",
+          "logical_lf_sha256": "9e5c8b6ff2ccf6ebe2b722da0f34e753713f065a385d0cb5acdab7ab9c405fc7"
+        },
+        {
+          "target": "p14-equivalence-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 233,
+          "actual_bytes": 235,
+          "clipboard_crlf": 2,
+          "actual_sha256": "9ab52eadcfbf48916ebe9a28fe328f3ad2db225fef2cb2f5a679af49b331d24e",
+          "expected_sha256": "2c6506a02a1521af6769f86043b1ca28b3f71836e982a605e971782c7c902959",
+          "logical_lf_sha256": "2c6506a02a1521af6769f86043b1ca28b3f71836e982a605e971782c7c902959"
+        },
+        {
+          "target": "p14-fixed-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 227,
+          "actual_bytes": 229,
+          "clipboard_crlf": 2,
+          "actual_sha256": "2824eced8e513c6c697ad7427ee95e80c11667b5c445f365ea7e5093ec9a8b77",
+          "expected_sha256": "04a3500a0a4724f03757f80218cef274f917c7b2ffc4e9058e402f03320ee918",
+          "logical_lf_sha256": "04a3500a0a4724f03757f80218cef274f917c7b2ffc4e9058e402f03320ee918"
+        },
+        {
+          "target": "p14-optimize-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 230,
+          "actual_bytes": 232,
+          "clipboard_crlf": 2,
+          "actual_sha256": "ad0e1c9407ff60ed3adf60dc2fb23438e3d0bd22ad617531b0a43c1c75cbac5e",
+          "expected_sha256": "578809c6f988851358fd7b626c1bd65aaf08985c74889c511ef8824c3feb5e1c",
+          "logical_lf_sha256": "578809c6f988851358fd7b626c1bd65aaf08985c74889c511ef8824c3feb5e1c"
+        },
+        {
+          "target": "p14-classify-command",
+          "status": "PASS_LOGICAL_TEXT",
+          "raw_bytes_equal": false,
+          "expected_bytes": 483,
+          "actual_bytes": 489,
+          "clipboard_crlf": 6,
+          "actual_sha256": "7cd7b2814ac47363b46f44db638fe4f4ff790885fb68d804cdcc7c514f596dec",
+          "expected_sha256": "7e0c7151b413d0544e1e4183b6fb8f637253b1e6016e024504660f154ee3b8be",
+          "logical_lf_sha256": "7e0c7151b413d0544e1e4183b6fb8f637253b1e6016e024504660f154ee3b8be"
+        }
+      ]
+    },
+    {
+      "name": "Three reading paths",
+      "status": "PASS",
+      "observations": [
+        {
+          "selected": [
+            {
+              "name": "path",
+              "value": "molecule"
+            }
+          ],
+          "hiddenSections": [],
+          "bodyData": {}
+        },
+        {
+          "selected": [
+            {
+              "name": "path",
+              "value": "p14"
+            }
+          ],
+          "hiddenSections": [],
+          "bodyData": {}
+        },
+        {
+          "selected": [
+            {
+              "name": "path",
+              "value": "evidence"
+            }
+          ],
+          "hiddenSections": [],
+          "bodyData": {}
+        }
+      ]
+    },
+    {
+      "name": "Clear reading path",
+      "status": "PASS"
+    },
+    {
+      "name": "Search rendered state",
+      "status": "OBSERVED",
+      "state": {
+        "query": "单点",
+        "hiddenSections": []
+      }
+    },
+    {
+      "name": "Seven actual UI downloads",
+      "status": "PASS",
+      "downloads": [
+        {
+          "kind": "html",
+          "status": "DOWNLOADED",
+          "filename": "index.html",
+          "bytes": 197042,
+          "sha256": "c5380b0b9655a7f096a35056ff0ca9aac65c6ed5c1ba3f90ea2cddd2d2b88931",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-user-homepage\\browser\\export-html-index.html"
+        },
+        {
+          "kind": "readme",
+          "status": "DOWNLOADED",
+          "filename": "README.md",
+          "bytes": 34109,
+          "sha256": "50808756358315586339d365eab3a87f15edb4338eedb63581ff866cd2f61551",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-user-homepage\\browser\\export-readme-README.md"
+        },
+        {
+          "kind": "snapshot",
+          "status": "DOWNLOADED",
+          "filename": "guide_zh-CN.md",
+          "bytes": 103783,
+          "sha256": "d3f17f00c57a636ec821a8a5d05dee26e6cd87dc8ef01ec555daebc9cbd0e4a7",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-user-homepage\\browser\\export-snapshot-guide_zh-CN.md"
+        },
+        {
+          "kind": "sources",
+          "status": "DOWNLOADED",
+          "filename": "provenance-sources.md",
+          "bytes": 18663,
+          "sha256": "0ac1404ca35ef0b4c27a472c1791e9ee3f60af1f9ef5126cad06658a007c3fbe",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-user-homepage\\browser\\export-sources-provenance-sources.md"
+        },
+        {
+          "kind": "checklist",
+          "status": "DOWNLOADED",
+          "filename": "checks.md",
+          "bytes": 35510,
+          "sha256": "d8164fa6e8635b6436367225592016abe8bcf2adcb9ae57d18955125bac1c79e",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-user-homepage\\browser\\export-checklist-checks.md"
+        },
+        {
+          "kind": "migration",
+          "status": "DOWNLOADED",
+          "filename": "MIGRATION.md",
+          "bytes": 37252,
+          "sha256": "bbccef4ae4e972b7f751d718424288cfb5a1d6f93d7b28da0a987fa93bb31cf2",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-user-homepage\\browser\\export-migration-MIGRATION.md"
+        },
+        {
+          "kind": "zip",
+          "status": "DOWNLOADED",
+          "filename": "ai4orgchem-runtime-guide-v0.3.0-candidate.zip",
+          "bytes": 430323,
+          "sha256": "b6ad53a2b36a1c02243115b9356401c1f213f9a6b5041aaecc205f7dea06ef6d",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-user-homepage\\browser\\export-zip-ai4orgchem-runtime-guide-v0.3.0-candidate.zip"
+        }
+      ]
+    },
+    {
+      "name": "Exported HTML HTTP /audit-export/index.html",
+      "status": "PASS",
+      "bytes": 197042,
+      "state": {
+        "search": "",
+        "selected": 0,
+        "openDetails": 0,
+        "checked": 0
+      }
+    },
+    {
+      "name": "Exported HTML HTTP /AI4OrgChem-Runtime/audit-export/index.html",
+      "status": "PASS",
+      "bytes": 197042,
+      "state": {
+        "search": "",
+        "selected": 0,
+        "openDetails": 0,
+        "checked": 0
+      }
+    },
+    {
+      "name": "Functional module headings",
+      "status": "PASS",
+      "cards": [
+        {
+          "protocol_id": "P01",
+          "name": "轨道表示与密度对照",
+          "badge": "固定案例 · 证据复核"
+        },
+        {
+          "protocol_id": "P02",
+          "name": "结构与光谱表值统计",
+          "badge": "固定案例 · 证据复核"
+        },
+        {
+          "protocol_id": "P03",
+          "name": "扭转构型端点与能量账本",
+          "badge": "固定案例 · 证据复核"
+        },
+        {
+          "protocol_id": "P04",
+          "name": "π–π条件态与轨道响应",
+          "badge": "固定案例 · 证据复核"
+        },
+        {
+          "protocol_id": "P05",
+          "name": "π–σ条件能量对照",
+          "badge": "固定案例 · 证据复核"
+        },
+        {
+          "protocol_id": "P06",
+          "name": "片段条件能量组装",
+          "badge": "固定案例 · 证据复核"
+        },
+        {
+          "protocol_id": "P07",
+          "name": "能量账本闭合校验",
+          "badge": "固定案例 · 证据复核"
+        },
+        {
+          "protocol_id": "P08",
+          "name": "局域化端点与参照能量",
+          "badge": "固定案例 · 证据复核"
+        },
+        {
+          "protocol_id": "P09",
+          "name": "条件态与稳定性诊断",
+          "badge": "固定案例 · 证据复核"
+        },
+        {
+          "protocol_id": "P10",
+          "name": "键长交替与能量响应",
+          "badge": "固定案例 · 证据复核"
+        },
+        {
+          "protocol_id": "P11",
+          "name": "多态约束结构优化",
+          "badge": "固定案例 · 证据复核"
+        },
+        {
+          "protocol_id": "P12",
+          "name": "环状体系尺寸与状态对照",
+          "badge": "固定案例 · 证据复核"
+        },
+        {
+          "protocol_id": "P13",
+          "name": "共轭图规则与能量账本",
+          "badge": "固定案例 · 证据复核"
+        },
+        {
+          "protocol_id": "P14",
+          "name": "条件能量与结构响应复核",
+          "badge": "固定案例 · 证据复核"
+        }
+      ],
+      "scope": "按实际计算功能选择模块，无需先了解专著编号。用户自己的分子目前仅支持普通RHF单点服务；下列模块用于固定研究案例计算或已保存证据复核，具体输入、模式与验收范围见各入口。模块名称调整不增加算法、体系或科学验收范围。",
+      "mapRows": 14
+    },
+    {
+      "name": "Calculation commands and copied input unchanged",
+      "status": "PASS",
+      "targets": 79
+    },
+    {
+      "name": "Search by functional module name",
+      "status": "PASS",
+      "text": "本地分子计算与结果复核 — 能量账本闭合校验保存账本：同一哈密顿量下的路径闭合校验\n示例与验证 [计算模块] — 能量账本闭合校验\n示例与验证 [P07] — 能量账本闭合校验"
+    },
+    {
+      "name": "Real JavaScript-disabled context",
+      "status": "PASS",
+      "native_summary_clicks": 118,
+      "body_text_length": 57097,
+      "contains_single_point": true,
+      "all_functional_names": true,
+      "contains_BLOCKED": true
+    },
+    {
+      "name": "Page JavaScript errors",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "True browser 200-percent zoom",
+      "status": "NOT_EXECUTED",
+      "reason": "Viewport tests are not real browser zoom"
+    }
+  ]
+}

@@ -2,6 +2,56 @@
 
 [中文说明](README_zh-CN.md)
 
+**[Open the Runtime user guide](https://cccolab.github.io/AI4OrgChem-Runtime/)**
+
+## Purpose and goals
+
+AI4OrgChem Runtime helps you run molecular calculations on your own computer and review the project's registered research examples. It packages fixed scientific sources and dependencies, checks inputs, and saves inputs, logs and results together so calculations can be traced and reviewed.
+
+The goal is to make it easier to obtain single-point energies, inspect orbitals and density matrices, and reproduce specified energy and structure comparisons. The online guide helps you choose a module and prepare a command; calculations run in your local Runtime.
+
+## Calculate your own molecule
+
+| Module | Input | Results and supported scope |
+| --- | --- | --- |
+| [RHF single-point energy, orbitals and density](docs/MOLECULAR_SINGLE_POINT_zh-CN.md) | Your own XYZ structure and request file | RHF/6-31G(d) energy, canonical orbitals and spin-summed AO density matrix. H/C/N/O, neutral closed-shell singlets, at most 20 atoms and 80 atomic orbitals. |
+
+This is the current entry for your own molecule. DFT, ions, open-shell states, geometry optimization, scans and conditional-state comparisons for user-supplied molecules require further development and validation.
+
+## Review fixed research protocols
+
+The following modules use registered molecules, geometries, tables and method settings. They are fixed-case calculations or saved-result reviews; their inputs cannot be replaced with your own XYZ. Protocol IDs are included only to help you find the corresponding guide.
+
+| Module | What you can calculate or review | Guide |
+| --- | --- | --- |
+| Orbital representation and density comparison / 轨道表示与密度对照 | Fixed ethene orbital rotations; compare density and energy invariants. | [Fixed cases](docs/REGISTERED_CASES_zh-CN.md) |
+| Structure and spectrum table statistics / 结构与光谱表值统计 | Statistics and regression from frozen published tables; produces no new spectrum. | [Fixed cases](docs/REGISTERED_CASES_zh-CN.md) |
+| Torsion endpoints and energy ledger / 扭转构型端点与能量账本 | Review saved torsion endpoints and run a single point at the registered frozen geometry. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| π–π conditional states and orbital response / π–π条件态与轨道响应 | Compare the direct term and orbital response of two fixed conditional states. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| π–σ conditional-energy comparison / π–σ条件能量对照 | Compare saved angle records and calculate the registered fixed-angle conditional-energy point. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| Fragment conditional-energy assembly / 片段条件能量组装 | Independently assemble the energy of a fixed two-fragment σ–σ conditional state. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| Energy-ledger closure checks / 能量账本闭合校验 | Check saved energy ledgers under the same Hamiltonian; runs no new quantum calculation. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| Localized endpoints and reference energies / 局域化端点与参照能量 | Fixed butadiene localization endpoints and reference thermochemistry; fixed-geometry calculations. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| Conditional-state and stability diagnostics / 条件态与稳定性诊断 | Conditional-state and stability diagnostics at the fixed cyclobutadiene geometry. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| Bond-length alternation and energy response / 键长交替与能量响应 | Ordinary DFT energy response at five fixed benzene geometries. | [Protocol cases](docs/PROTOCOL_CASES_BATCH2_zh-CN.md) |
+| Constrained multistate geometry optimization / 多态约束结构优化 | 17 registered fixed states; only the benzene G pilot has completed acceptance. | [Multistate cases](docs/PROTOCOL_CASES_BATCH3_zh-CN.md) |
+| Cyclic-system size and state comparison / 环状体系尺寸与状态对照 | 61 registered fixed states; only the N12-G pilot has completed acceptance. | [Multistate cases](docs/PROTOCOL_CASES_BATCH3_zh-CN.md) |
+| Conjugated graph rules and energy ledger / 共轭图规则与能量账本 | Fixed graph cases and ESE/CESE arithmetic ledgers; produces no new quantum energies. | [Fixed cases](docs/REGISTERED_CASES_zh-CN.md) |
+| Conditional-energy and structure-response review / 条件能量与结构响应复核 | Fixed-protocol energy and constrained-geometry calculations, implementation comparisons and joint review. | [Run guide](docs/RUN_zh-CN.md) |
+
+The two high-cost modules list 78 states in total; the two accepted pilots do not establish acceptance of the remaining states or complete multistate results. Each module's guide states its input, method, resource and result boundaries. Saved-ledger arithmetic and a new molecular calculation are separate operations.
+
+## Start in three steps
+
+1. **Prepare a local Runtime.** Follow the [source installation guide](docs/SOURCE_INSTALLATION_zh-CN.md) to prepare, build and register a local Docker environment. Source is public; the project does not provide a prebuilt public image. A new installation keeps its own validation records.
+2. **Choose your input and module.** Use the [molecular single-point guide](docs/MOLECULAR_SINGLE_POINT_zh-CN.md) for your XYZ, or the [local entry guide](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md) and fixed-protocol guides above for registered examples.
+3. **Run and read the result.** Follow your module's command, retain the generated run directory, and use the [result-review guide](docs/REVIEW_RESULTS_zh-CN.md) to interpret the recorded scope and checks.
+
+For component licenses and distribution conditions, see the [license review](docs/LICENSE_REVIEW_zh-CN.md) and [publication boundaries](docs/PUBLICATION_BOUNDARIES_zh-CN.md). Detailed development and historical validation records remain available below.
+
+<details>
+<summary>Development, support and historical validation records / 开发、支持与历史验证记录</summary>
+
 **[Open the Runtime user guide](https://cccolab.github.io/AI4OrgChem-Runtime/)** — a static website you can read directly, without Docker or WSL. Copy calculation commands for execution in your own local Runtime; the website does not run molecular calculations. See the [Pages deployment record](docs/GITHUB_PAGES_GUIDE_20261010_zh-CN.md).
 
 Source and the supplied web guide have been publicly synchronized to [CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime) under the owner's authorization. The first push of `06d50885bdccf31f83b89229c1513121542375d5` completed [GitHub Actions run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122): all three scoped jobs succeeded. See the [public synchronization record](docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.md); this does not certify all scientific services or release an image. GitHub Pages static-guide hosting is enabled as of 2026-10-10; no online calculation, new version number, tag or Release is provided.
@@ -117,3 +167,6 @@ Third-party notice materials and outstanding corresponding-source requirements: 
 Source publication and image distribution are assessed separately: [publication boundaries and local candidate](docs/PUBLICATION_BOUNDARIES_zh-CN.md). Source and guide synchronization is complete; native wheel provenance remains unresolved and no image has been distributed.
 
 Professional review documentation (Chinese): [S1–S6 services and task mapping](docs/PROFESSIONAL_SERVICES_zh-CN.md), [result interpretation](docs/REVIEW_RESULTS_zh-CN.md), [three user paths](docs/USER_PATHS_zh-CN.md), and [historical Docker example](docs/examples/P14_REVIEW_20261002_zh-CN.md). The [review report](docs/templates/REVIEW_REPORT_zh-CN.md) and [feedback](docs/templates/FEEDBACK_zh-CN.md) templates are filled manually. An automatic summarizer is not implemented; the legacy seven-task entry remains, with three separate fixed P02/P13/P01 entries added on 2026-10-08. The original `2460eef` candidate and this documentation supplement retain their distinct historical identities; both are included in the complete history authorized for the current source synchronization. Eleven YouMind Skill exports are deferred by the user and are not included as implemented Skills.
+
+
+</details>
