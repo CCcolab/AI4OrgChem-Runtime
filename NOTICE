@@ -31,3 +31,9 @@ Bundled native libraries and fonts retain their own terms. The Amadeus font's
 redistribution authorization and several exact build/source mappings remain
 unresolved. This source clarification does not modify the existing image,
 grant third-party rights or authorize image publication.
+
+The user-supplied YouMind guide at docs/index.html and its original and
+derivative materials under docs/runtime-guide retain the rights status
+recorded in their provenance. They are not automatically relicensed under
+the root Apache-2.0 license; public inclusion requires project-owner scope
+confirmation. This source clarification does not alter existing images.

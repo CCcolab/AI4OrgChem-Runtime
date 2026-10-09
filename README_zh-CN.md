@@ -1,5 +1,7 @@
 # AI4OrgChem 本地分子计算 Runtime
 
+[GitHub同步准备与范围](docs/GITHUB_SYNC_PREPARATION_20261009_zh-CN.md)：拟同步到独立仓库`CCcolab/AI4OrgChem-Runtime`，完整历史与网站公开范围待最终确认，当前尚未创建／推送或启用Pages。
+
 [本地网页使用指南](docs/index.html)已纳入项目，可在浏览器打开；[导入、验收与后续维护说明](docs/RUNTIME_WEB_GUIDE_zh-CN.md)保留原包和字节身份。网页与Runtime源码留待后续整体同步到GitHub，当前尚未推送或部署Pages。
 
 新增[源码安装、构建与独立身份登记指南](docs/SOURCE_INSTALLATION_zh-CN.md)：使用固定公开基础镜像、公开锁定依赖和重建的冻结科学源码，不再依赖旧的本地 Runtime 基础镜像。新镜像独立登记，不继承历史科学 PASS。使用 Git 克隆或安装器制作的源码 ZIP；[干净目录受限验收](docs/SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.md)已通过公开准备、构建、四类登记、45 项工程测试及四个小任务。高成本重放和全新机器验收未执行，以下历史候选记录继续独立保留。

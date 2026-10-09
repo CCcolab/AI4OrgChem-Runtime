@@ -1,0 +1,1127 @@
+[
+  {
+    "commit": "c2cc5027d25defa32338b04cda577285dcc06cf9",
+    "parents": "",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Implement pinned CPU runtime candidate and document platform blockers"
+  },
+  {
+    "commit": "11e24ac6bc6ebb64f8ed2577714bc5de8d6fa6bf",
+    "parents": "c2cc5027d25defa32338b04cda577285dcc06cf9",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record identified WSL2 validation and retained platform blockers"
+  },
+  {
+    "commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+    "parents": "11e24ac6bc6ebb64f8ed2577714bc5de8d6fa6bf",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add offline Docker acceptance and handle hybrid cgroup memory"
+  },
+  {
+    "commit": "721ea41807424b239e811384003dc0de7988e00f",
+    "parents": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record successful local OCI acceptance and remaining WSLc conditions"
+  },
+  {
+    "commit": "72d29ff1b6b6e8be07c59770e8dda2dad9530b70",
+    "parents": "721ea41807424b239e811384003dc0de7988e00f",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Defer WSL upgrade and WSLc acceptance to preserve scientific environment"
+  },
+  {
+    "commit": "770e47e10d725f4c2fa578a1aa18b46ff810caa8",
+    "parents": "72d29ff1b6b6e8be07c59770e8dda2dad9530b70",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Prepare L3 resource assessment and validation contract"
+  },
+  {
+    "commit": "1cf2582d645337961f43e4d95a244e977bc34d1d",
+    "parents": "770e47e10d725f4c2fa578a1aa18b46ff810caa8",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record authorized L3 fixed geometry run and measured resources"
+  },
+  {
+    "commit": "82645bd96e83ec9b8022fc27f622b25cb5f72c5c",
+    "parents": "1cf2582d645337961f43e4d95a244e977bc34d1d",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record completed L4 optimization and validated output hashes"
+  },
+  {
+    "commit": "20973d3acd8b492ae68b655c9bc8eca4e52c7fae",
+    "parents": "82645bd96e83ec9b8022fc27f622b25cb5f72c5c",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record four-run P14 joint classification with provenance boundaries"
+  },
+  {
+    "commit": "b515c1d10f7077ebbdff7b4c5a7240432e4b8545",
+    "parents": "20973d3acd8b492ae68b655c9bc8eca4e52c7fae",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add PowerShell 5 bootstrap and local backup delivery workflow"
+  },
+  {
+    "commit": "8f0be94d6ee1c1ef4b3f4c68cd5c1dfe9a6ea902",
+    "parents": "b515c1d10f7077ebbdff7b4c5a7240432e4b8545",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Archive Windows run records without container-only source links"
+  },
+  {
+    "commit": "b9e5c015a7fb0569145f6ee3e6ba9c2dfa40e281",
+    "parents": "8f0be94d6ee1c1ef4b3f4c68cd5c1dfe9a6ea902",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Use explicit ordinary-file archive list for Windows symlinks"
+  },
+  {
+    "commit": "56e435916577f55a1c094ccbe1a57d2bc4de3bb9",
+    "parents": "b9e5c015a7fb0569145f6ee3e6ba9c2dfa40e281",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Use Unicode-safe ZIP for ordinary run files"
+  },
+  {
+    "commit": "c27101414d88350598a1977eecf2a2fd60761333",
+    "parents": "56e435916577f55a1c094ccbe1a57d2bc4de3bb9",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Finalize current local delivery status and archive verification"
+  },
+  {
+    "commit": "c61b6d84adc76cd0c2e9c7bf154c85ac4d9fa8c0",
+    "parents": "c27101414d88350598a1977eecf2a2fd60761333",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Audit image licenses provenance and CI with explicit release blockers"
+  },
+  {
+    "commit": "0498b1f81f7cf2b8cf2a32f2241352f006c5f335",
+    "parents": "c61b6d84adc76cd0c2e9c7bf154c85ac4d9fa8c0",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Collect third-party notices and document corresponding-source gaps"
+  },
+  {
+    "commit": "4d1903021190cbe5867f14cdb47ed1cbefe743cf",
+    "parents": "0498b1f81f7cf2b8cf2a32f2241352f006c5f335",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Complete local source materials mapping and separate publication readiness"
+  },
+  {
+    "commit": "2460eef636be9a143d3bbb81daf8f66fc7e70959",
+    "parents": "4d1903021190cbe5867f14cdb47ed1cbefe743cf",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Clarify source publication support scope and supplement history attribution review"
+  },
+  {
+    "commit": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
+    "parents": "2460eef636be9a143d3bbb81daf8f66fc7e70959",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "docs: add professional review services and traceable examples"
+  },
+  {
+    "commit": "7df683ae7d9beea8e892bf41d564c3f974618302",
+    "parents": "0288eb8455a85c2082142dbdc62b7c018adb2e56",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "feat: implement gated local user molecule W01-W04 candidate"
+  },
+  {
+    "commit": "5fae2bd0f0a2d68c8209d06e4b07bcebef06792d",
+    "parents": "7df683ae7d9beea8e892bf41d564c3f974618302",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "fix: scope new candidate Docker build context independently"
+  },
+  {
+    "commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+    "parents": "5fae2bd0f0a2d68c8209d06e4b07bcebef06792d",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Fix hybrid CPU quota observation and PowerShell bootstrap arguments"
+  },
+  {
+    "commit": "55726d4ee0f76dee5065f47fc5f55824b0083db3",
+    "parents": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record W01-W04 engineering delivery and final host rejection evidence"
+  },
+  {
+    "commit": "a54f4222277df857d3fe3be993d687a88fa3a806",
+    "parents": "55726d4ee0f76dee5065f47fc5f55824b0083db3",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "docs: prepare W05 fixtures, criteria and bounded acceptance review"
+  },
+  {
+    "commit": "1093b677120b2d26f8fb327ae6def9c3fd4c7f2d",
+    "parents": "a54f4222277df857d3fe3be993d687a88fa3a806",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "test: add bounded local W01-W05 CI and isolated contract job"
+  },
+  {
+    "commit": "9037f3cfe655b0728b6765d1e04eb408c2af750e",
+    "parents": "1093b677120b2d26f8fb327ae6def9c3fd4c7f2d",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "test: validate clean Git export and exact historical EOL receipts"
+  },
+  {
+    "commit": "c671025e2a2933ed26e9406ee4b878f1163c443c",
+    "parents": "9037f3cfe655b0728b6765d1e04eb408c2af750e",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "fix: isolate executable CI virtualenv from production tmpfs"
+  },
+  {
+    "commit": "39922083d91025b4efaef4ab5972860c91e2df55",
+    "parents": "c671025e2a2933ed26e9406ee4b878f1163c443c",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "docs: record local W01-W05 CI and remote scientific limits"
+  },
+  {
+    "commit": "3500d0b04b514a14e279e8050f687c346cb91ec0",
+    "parents": "39922083d91025b4efaef4ab5972860c91e2df55",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Implement gated W06 array reference and research assessment candidate"
+  },
+  {
+    "commit": "43e80de31140d8685b5087ac5ac56654c7e68e28",
+    "parents": "3500d0b04b514a14e279e8050f687c346cb91ec0",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Bind W06 review receipts to exact results and test interacting toy models"
+  },
+  {
+    "commit": "2dce58cffd5208231772ca1c55ac037bcd0cc9b9",
+    "parents": "43e80de31140d8685b5087ac5ac56654c7e68e28",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record bounded W06 engineering validation and remaining research gates"
+  },
+  {
+    "commit": "3df9b762e7f117fec351a1b76729c71a2b71ce08",
+    "parents": "2dce58cffd5208231772ca1c55ac037bcd0cc9b9",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record W01-W06 local engineering CI with deduplicated evidence"
+  },
+  {
+    "commit": "ff6c08e61b919b376d0094433782423503ae11fc",
+    "parents": "3df9b762e7f117fec351a1b76729c71a2b71ce08",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add frozen bounded W05-W06 numerical acceptance drivers"
+  },
+  {
+    "commit": "99598ee080285e4540cbf15a1883df3fa201b165",
+    "parents": "ff6c08e61b919b376d0094433782423503ae11fc",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Support native cgroup v1 acceptance evidence and fail-closed guards"
+  },
+  {
+    "commit": "792fcd4de37eb2ab1d03482fed9126c6085fdb8f",
+    "parents": "99598ee080285e4540cbf15a1883df3fa201b165",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Freeze smaller acceptance budget after host admission refusal"
+  },
+  {
+    "commit": "65c5848d0a9fe58d4f7320e15eadeba2ebd61db6",
+    "parents": "792fcd4de37eb2ab1d03482fed9126c6085fdb8f",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Fix acceptance scalar normalization without changing scientific tolerances"
+  },
+  {
+    "commit": "8f1434e0e80d135247757c7694bcb7ceb60031c7",
+    "parents": "65c5848d0a9fe58d4f7320e15eadeba2ebd61db6",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Keep failed acceptance research status unqualified"
+  },
+  {
+    "commit": "2ec866a4b45f58f37744e999477947f9ca2442ea",
+    "parents": "8f1434e0e80d135247757c7694bcb7ceb60031c7",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record W05-W06 numerical failures and exact resource evidence"
+  },
+  {
+    "commit": "8012f25279361bca58e811abe4406ca3929d2d81",
+    "parents": "2ec866a4b45f58f37744e999477947f9ca2442ea",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Clarify historical and final acceptance test identities"
+  },
+  {
+    "commit": "8fc64a43389947301c6b50587eb8fa173090050d",
+    "parents": "8012f25279361bca58e811abe4406ca3929d2d81",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Bind stored-array diagnosis to actual acceptance contract identity"
+  },
+  {
+    "commit": "64a2f9fb52fd17b08c80a8f62645b8d21f4548cc",
+    "parents": "8fc64a43389947301c6b50587eb8fa173090050d",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add endpoint-checked solver candidates and bounded v2 acceptance"
+  },
+  {
+    "commit": "378c74e7ffb584deda72de32fb25cd9a2cd52d06",
+    "parents": "64a2f9fb52fd17b08c80a8f62645b8d21f4548cc",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Reject unusable DIIS extrapolation and preserve actual test failures"
+  },
+  {
+    "commit": "c8a580f70d7dba721758b77c0c534c31b50953b8",
+    "parents": "378c74e7ffb584deda72de32fb25cd9a2cd52d06",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Allow registered linear algebra fallback in independent solver"
+  },
+  {
+    "commit": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
+    "parents": "c8a580f70d7dba721758b77c0c534c31b50953b8",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Clarify unqualified candidate and unevaluated final-check metadata"
+  },
+  {
+    "commit": "a2cda61da582cb406bc478d068af35b2c6cd9609",
+    "parents": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record strict-solver numerical failure and retain review evidence"
+  },
+  {
+    "commit": "edd683b07389bb389028f2cb4f67fb688cb8e173",
+    "parents": "a2cda61da582cb406bc478d068af35b2c6cd9609",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Document occupied-boundary diagnosis and next solver review gates"
+  },
+  {
+    "commit": "822a09d0d49dd21180a7e4e22dd5a56c8171088d",
+    "parents": "edd683b07389bb389028f2cb4f67fb688cb8e173",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record scoped method definitions and external consistency review roles"
+  },
+  {
+    "commit": "40efec1bb565bf39bb23b5fc70e1ce49eef7a55b",
+    "parents": "822a09d0d49dd21180a7e4e22dd5a56c8171088d",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Preserve old runs and add verified host-side molecule reports"
+  },
+  {
+    "commit": "472714a08c8e9d807e57e78db1471294d376bee2",
+    "parents": "40efec1bb565bf39bb23b5fc70e1ce49eef7a55b",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Restrict the host report wrapper to read-only actions"
+  },
+  {
+    "commit": "ed4a7718e814aaef1f7329555897f0cf0c0455a6",
+    "parents": "472714a08c8e9d807e57e78db1471294d376bee2",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Suppress saved comparisons when final host execution is blocked"
+  },
+  {
+    "commit": "e03e3371709df917b718bf50cbe62d5363efecdb",
+    "parents": "ed4a7718e814aaef1f7329555897f0cf0c0455a6",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Document verified host reports and preserve pending scientific gates"
+  },
+  {
+    "commit": "9e1c1b939defa94de686ca31ce653fadbb688351",
+    "parents": "e03e3371709df917b718bf50cbe62d5363efecdb",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record W07 engineering trial and defer method consultation"
+  },
+  {
+    "commit": "a9f7b3baaf92637d77a88cd983cff94b5b934b87",
+    "parents": "9e1c1b939defa94de686ca31ce653fadbb688351",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Complete scoped W07 source and evidence handoff"
+  },
+  {
+    "commit": "5f2288cad43b261e6a0e058387f941d067a29e2b",
+    "parents": "a9f7b3baaf92637d77a88cd983cff94b5b934b87",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Document scoped W07 simulated-user selftest and deferred human feedback"
+  },
+  {
+    "commit": "44ad90e0e3b293879ec67b7a10475825cde05d3a",
+    "parents": "5f2288cad43b261e6a0e058387f941d067a29e2b",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Fix CI dependency groups and add guarded W01-W07 engineering coverage"
+  },
+  {
+    "commit": "29fa9b59532b47526131569f814821c8f96ac3f8",
+    "parents": "44ad90e0e3b293879ec67b7a10475825cde05d3a",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record verified local W01-W07 engineering CI and preserved scientific gates"
+  },
+  {
+    "commit": "8eabbe1ec95565aa510bd451371a8b2416fb021f",
+    "parents": "29fa9b59532b47526131569f814821c8f96ac3f8",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add bounded pure-array conditional residual solver prototype"
+  },
+  {
+    "commit": "1dbf672bd0f894fbe45a4163acd15fa1f1a9fd74",
+    "parents": "8eabbe1ec95565aa510bd451371a8b2416fb021f",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Check structured operator-reproducibility refusal instead of wording"
+  },
+  {
+    "commit": "19692dff25dc886a6e1c792f62762b5ef9173af4",
+    "parents": "1dbf672bd0f894fbe45a4163acd15fa1f1a9fd74",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record residual prototype array acceptance and unchanged molecular gates"
+  },
+  {
+    "commit": "f95987802edab11c90a659f1b6a4ec32942d4edc",
+    "parents": "19692dff25dc886a6e1c792f62762b5ef9173af4",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add prepared conditional operator bridge with explicit bounded initialization"
+  },
+  {
+    "commit": "971e7567d91fa0d7999aefe03d6466e5a893ebe2",
+    "parents": "f95987802edab11c90a659f1b6a4ec32942d4edc",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record prepared bridge fake-backend acceptance and remaining molecular contract"
+  },
+  {
+    "commit": "b02139c43683b2768c8083bdbfd7977cb1a6bc7d",
+    "parents": "971e7567d91fa0d7999aefe03d6466e5a893ebe2",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Complete fixed preparation mapping independent residual reference and durable budgets"
+  },
+  {
+    "commit": "eba5b1798b944abb811900a388d8c1ad547035cc",
+    "parents": "b02139c43683b2768c8083bdbfd7977cb1a6bc7d",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Distinguish far-root progress from stationary residual-merit refusal"
+  },
+  {
+    "commit": "faabf22cc965dfd00d7d76c19dda434a96fb43b2",
+    "parents": "eba5b1798b944abb811900a388d8c1ad547035cc",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Avoid duplicate unittest discovery of imported preparation fixture"
+  },
+  {
+    "commit": "82436e4b0070799dacb6822bcd1d5c382a4a4907",
+    "parents": "faabf22cc965dfd00d7d76c19dda434a96fb43b2",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Bind legacy basis representation by exact fixed-element key-order proof"
+  },
+  {
+    "commit": "cda4509466bab0de72316f657c012ef507949e9f",
+    "parents": "82436e4b0070799dacb6822bcd1d5c382a4a4907",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record preparation reference and persistent budget engineering acceptance"
+  },
+  {
+    "commit": "c5d07cb4c29d01896cdf0e89c2793b4c653ed10e",
+    "parents": "cda4509466bab0de72316f657c012ef507949e9f",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add bounded live residual diagnostic admission and supervisor"
+  },
+  {
+    "commit": "ea41793daea5f175cddaf9e077217e3337c5c216",
+    "parents": "c5d07cb4c29d01896cdf0e89c2793b4c653ed10e",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record refused independent initialization after actual evaluation"
+  },
+  {
+    "commit": "9b14bab01804dd6580ddff55772e107fe5ae6aa3",
+    "parents": "ea41793daea5f175cddaf9e077217e3337c5c216",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record live admission and ambiguous conditional initialization evidence"
+  },
+  {
+    "commit": "f8a2f4c30ac2d7d310027465a0fb83216a0fd6a1",
+    "parents": "9b14bab01804dd6580ddff55772e107fe5ae6aa3",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Define narrow near-degeneracy initialization and scoped review draft"
+  },
+  {
+    "commit": "ea065e052d06f94e2fcd10d55ec01503f2f2090e",
+    "parents": "f8a2f4c30ac2d7d310027465a0fb83216a0fd6a1",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Clarify seed admission and user-molecule acceptance identifiers"
+  },
+  {
+    "commit": "03acd478974d24766aa578fb173a2ffdc95a2cfe",
+    "parents": "ea065e052d06f94e2fcd10d55ec01503f2f2090e",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Cancel external expert prerequisite and continue internal validation"
+  },
+  {
+    "commit": "60d76deeb468fdd2dc2c444b7cf60d95a9dd9290",
+    "parents": "03acd478974d24766aa578fb173a2ffdc95a2cfe",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Implement isolated masked-metric seed V2 and bounded diagnostic path"
+  },
+  {
+    "commit": "afdde3dab6a31feb500dcc8f3b910ed429c6eeba",
+    "parents": "60d76deeb468fdd2dc2c444b7cf60d95a9dd9290",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record seed V2 diagnostics and retain numerical Compute gate"
+  },
+  {
+    "commit": "09a28e2e06290f663c1b04091a18a38f74cdb113",
+    "parents": "afdde3dab6a31feb500dcc8f3b910ed429c6eeba",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Clarify saved V2 occupation and reference budget without new SCF"
+  },
+  {
+    "commit": "1a1c0c261141f02058669f710ef402d906695c1c",
+    "parents": "09a28e2e06290f663c1b04091a18a38f74cdb113",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add isolated budget-aware reference recording engineering candidate"
+  },
+  {
+    "commit": "d5eeb6bc6388cddbc896bde2766d91d4644a14c9",
+    "parents": "1a1c0c261141f02058669f710ef402d906695c1c",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Persist guarded synthetic budget and matched snapshot examples"
+  },
+  {
+    "commit": "16a85a9e63417955e2ac02c39b9694129dc8e16b",
+    "parents": "d5eeb6bc6388cddbc896bde2766d91d4644a14c9",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record guarded budget engineering acceptance and synthetic exports"
+  },
+  {
+    "commit": "5db362af214fd25ddd8f63078f2e176606aa458a",
+    "parents": "16a85a9e63417955e2ac02c39b9694129dc8e16b",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Clarify strict occupation scope with frozen endpoint evidence"
+  },
+  {
+    "commit": "b8e9c29f48fe4886ac362ff12be9e661c868c265",
+    "parents": "5db362af214fd25ddd8f63078f2e176606aa458a",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add isolated three-density single-F response diagnostic"
+  },
+  {
+    "commit": "616be48fb841d4711da42b07793f4bfa90ba40c6",
+    "parents": "b8e9c29f48fe4886ac362ff12be9e661c868c265",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Bind synthetic response tests to the durable budget identity contract"
+  },
+  {
+    "commit": "34f115723d8537759259bee7279a7cfb61ea54d2",
+    "parents": "616be48fb841d4711da42b07793f4bfa90ba40c6",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record nine-point operator response and preserve strict endpoint scope"
+  },
+  {
+    "commit": "029cd557f2a858051a4f98d34cadc981b932346c",
+    "parents": "34f115723d8537759259bee7279a7cfb61ea54d2",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add deterministic occupied-space seeds and guarded fake-only admission"
+  },
+  {
+    "commit": "9faf794244f0959b3d3528cb1ced3126b75b9b53",
+    "parents": "029cd557f2a858051a4f98d34cadc981b932346c",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record occupied-space fake admission and separate next molecular response design"
+  },
+  {
+    "commit": "63dc6f64a683682fbdcbfc0debcece4f6c40d3c6",
+    "parents": "9faf794244f0959b3d3528cb1ced3126b75b9b53",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Implement isolated twelve-point occupied-space response diagnostic"
+  },
+  {
+    "commit": "fae8a17d3ff44fa14f2c84b66a0570d0e1fa2dbb",
+    "parents": "63dc6f64a683682fbdcbfc0debcece4f6c40d3c6",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record twelve native responses and preserve strict root acceptance scope"
+  },
+  {
+    "commit": "7530595c71c0395c37f2e0e8669db14de5e14342",
+    "parents": "fae8a17d3ff44fa14f2c84b66a0570d0e1fa2dbb",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add fake-only single-start root candidate and zero-F preparation guards"
+  },
+  {
+    "commit": "ab0348a87f4d75aa981a5250a488b7241bc1f3e3",
+    "parents": "7530595c71c0395c37f2e0e8669db14de5e14342",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record bounded root engineering and zero-F preparation delivery"
+  },
+  {
+    "commit": "c49213c0b520b63a8386dbd4c4514655b08c7ad2",
+    "parents": "ab0348a87f4d75aa981a5250a488b7241bc1f3e3",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add local evidence selector and verified runtime source snapshots"
+  },
+  {
+    "commit": "636a54ce294eba42acec492cac54a1af06d1389b",
+    "parents": "c49213c0b520b63a8386dbd4c4514655b08c7ad2",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Bind W05 checks to exact historical source material snapshots"
+  },
+  {
+    "commit": "fcad3465d54e3d63453eba110d3ce6174c9acde5",
+    "parents": "636a54ce294eba42acec492cac54a1af06d1389b",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record local framework engineering acceptance and retained boundaries"
+  },
+  {
+    "commit": "2840f6d0845506d5942e4b425970035538b4cfbd",
+    "parents": "fcad3465d54e3d63453eba110d3ce6174c9acde5",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add gated source-native root diagnostic and durable callback accounting"
+  },
+  {
+    "commit": "aad7c5b51168a2364cc6c88081c981afea50a200",
+    "parents": "2840f6d0845506d5942e4b425970035538b4cfbd",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Normalize native source-lock dependency paths across host and container"
+  },
+  {
+    "commit": "73e8dfd8aef4881dec6b8cd30b21b2228f8b51ab",
+    "parents": "aad7c5b51168a2364cc6c88081c981afea50a200",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record native candidate engineering and zero-F preparation acceptance"
+  },
+  {
+    "commit": "137bcb41f5726488afbcea30dbf34c090c577074",
+    "parents": "73e8dfd8aef4881dec6b8cd30b21b2228f8b51ab",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record one wall-stopped native root diagnosis and immutable forensic audit"
+  },
+  {
+    "commit": "f5b30e46e251d8b6ee45005ee5bc3d37b5f93313",
+    "parents": "137bcb41f5726488afbcea30dbf34c090c577074",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add cooperative native shutdown and guarded zero-native overhead probes"
+  },
+  {
+    "commit": "6eb356a0ebaa647bdf4aa6ea4b0f90cf69fc07f6",
+    "parents": "f5b30e46e251d8b6ee45005ee5bc3d37b5f93313",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Bind cooperative checkpoint identity and preserve semantic cleanup regression"
+  },
+  {
+    "commit": "1eed31c4ab8ae224f0df86b9eb0b26bd28388d1e",
+    "parents": "6eb356a0ebaa647bdf4aa6ea4b0f90cf69fc07f6",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record bounded cooperative-stop engineering and zero-native timings"
+  },
+  {
+    "commit": "18e72f41d4f51964030a9164fbd54d14f0461cf1",
+    "parents": "1eed31c4ab8ae224f0df86b9eb0b26bd28388d1e",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "feat: add bounded fixed P02 P13 and ethene P01 cases"
+  },
+  {
+    "commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
+    "parents": "18e72f41d4f51964030a9164fbd54d14f0461cf1",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "fix: bind dependency wheel lock to exported LF bytes"
+  },
+  {
+    "commit": "e2e90e9bec3637c986d2b581b352730658677113",
+    "parents": "e572787b11bbfc3b9e95779a5166ae413040c50d",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "chore: record local fixed-case candidate image identity"
+  },
+  {
+    "commit": "35a18175053a6b638161cadc5386dc8f0a1e57d6",
+    "parents": "e2e90e9bec3637c986d2b581b352730658677113",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "docs: record three fixed-case Docker acceptances and limits"
+  },
+  {
+    "commit": "136e4edc388f19937059f88a062f9a210a02b9b1",
+    "parents": "35a18175053a6b638161cadc5386dc8f0a1e57d6",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "docs: organize platform around user molecule calculation goals"
+  },
+  {
+    "commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
+    "parents": "136e4edc388f19937059f88a062f9a210a02b9b1",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "feat: add user XYZ ordinary RHF single-point service"
+  },
+  {
+    "commit": "a3f6ec7536c510f06b7d521bc09515eb451b9cff",
+    "parents": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "chore: record ordinary molecular local candidate image"
+  },
+  {
+    "commit": "f7ddf447cb3a2255aa372afcc834d1e97937c57b",
+    "parents": "a3f6ec7536c510f06b7d521bc09515eb451b9cff",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "docs: record accepted local user-molecule RHF service and scope"
+  },
+  {
+    "commit": "08d910d34114b74949733d9bc6ad9abb325c03cb",
+    "parents": "f7ddf447cb3a2255aa372afcc834d1e97937c57b",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add bounded protocol-specific P03-P10 local replay adapters"
+  },
+  {
+    "commit": "49e39e22e5b19eee1864b5d7ceb3fb121baf8ede",
+    "parents": "08d910d34114b74949733d9bc6ad9abb325c03cb",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Preserve batch2 source and launcher bytes in clean checkouts"
+  },
+  {
+    "commit": "0ee566397844d9885d50ca2a2d5ae5b974f19425",
+    "parents": "49e39e22e5b19eee1864b5d7ceb3fb121baf8ede",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record pre-science historical batch2 build identity"
+  },
+  {
+    "commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+    "parents": "0ee566397844d9885d50ca2a2d5ae5b974f19425",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Audit one-electron UHF terminals without changing science protocols"
+  },
+  {
+    "commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+    "parents": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Handle missing Git only in byte-locked source reporting"
+  },
+  {
+    "commit": "a44fa481af7c5a62d9d7b923f3b3f0d4947e682b",
+    "parents": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record scoped P03-P10 numerical acceptance and delivery boundaries"
+  },
+  {
+    "commit": "c56efb43a268c73ec6314a41d574c81946397155",
+    "parents": "a44fa481af7c5a62d9d7b923f3b3f0d4947e682b",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add fixed P11 P12 high-cost state adapters and independent admission contracts"
+  },
+  {
+    "commit": "05308a1872d769aaa85e39adbafe7020e36358e6",
+    "parents": "c56efb43a268c73ec6314a41d574c81946397155",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Preserve exact high-cost source and launcher bytes in clean checkouts"
+  },
+  {
+    "commit": "2e791df826e24a57e7477555e279c5d05d93ce02",
+    "parents": "05308a1872d769aaa85e39adbafe7020e36358e6",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record P11 P12 zero-kernel acceptance and high-cost resource blockers"
+  },
+  {
+    "commit": "03d2d9212d1280945462851e805d6d64218215a0",
+    "parents": "2e791df826e24a57e7477555e279c5d05d93ce02",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Fix high-cost host evidence sealing and record recovered images"
+  },
+  {
+    "commit": "7a202fb9198959e008faaeafa96bc7c3d2101e92",
+    "parents": "03d2d9212d1280945462851e805d6d64218215a0",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record scoped P12 N12 G pilot acceptance and resource remediation"
+  },
+  {
+    "commit": "812a8b82ca3a7f4748f7cd6e99a905a6b7f4aaf8",
+    "parents": "7a202fb9198959e008faaeafa96bc7c3d2101e92",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add native WSL2 checks and reconcile local service evidence"
+  },
+  {
+    "commit": "27a9a389513c44aa5f9f145faee4a820b73ef49c",
+    "parents": "812a8b82ca3a7f4748f7cd6e99a905a6b7f4aaf8",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Add public-source Docker installation and independent service identities"
+  },
+  {
+    "commit": "7911f5095735f7f3dea7f25090f7aded95ce0d77",
+    "parents": "27a9a389513c44aa5f9f145faee4a820b73ef49c",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Export raw Git blobs for installation source identity"
+  },
+  {
+    "commit": "59f576c5a11f7192d0425765611a49369c6f561a",
+    "parents": "7911f5095735f7f3dea7f25090f7aded95ce0d77",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Bind source builds to unique local foundation tags and immutable IDs"
+  },
+  {
+    "commit": "e0bdf29df125a8df89e8588718992b60c85188e6",
+    "parents": "59f576c5a11f7192d0425765611a49369c6f561a",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Record bounded clean-source installation acceptance and support limits"
+  },
+  {
+    "commit": "575127b94214ca1a3c605bd2139bf77ba7e5dd1d",
+    "parents": "e0bdf29df125a8df89e8588718992b60c85188e6",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Clarify installed runner evidence versus legacy Check records"
+  },
+  {
+    "commit": "298c5e494071f7360511ed852db838beebcecc6a",
+    "parents": "575127b94214ca1a3c605bd2139bf77ba7e5dd1d",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Store reviewed local web guide and original YouMind package"
+  },
+  {
+    "commit": "bdf813bc8a4912797ae179118fb2ee649b536f93",
+    "parents": "298c5e494071f7360511ed852db838beebcecc6a",
+    "author_name": "Codex (AI4OrgChem local)",
+    "author_email": "ai4orgchem@localhost",
+    "committer_name": "Codex (AI4OrgChem local)",
+    "committer_email": "ai4orgchem@localhost",
+    "subject": "Name guide modules by actual calculation functions"
+  }
+]

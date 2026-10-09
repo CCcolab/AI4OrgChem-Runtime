@@ -1,0 +1,39 @@
+{
+  "schema": "github-sync-target-readiness-v1",
+  "checked_date": "2026-10-09",
+  "authenticated_account": "CCcolab",
+  "target_repository": "CCcolab/AI4OrgChem-Runtime",
+  "target_exists": false,
+  "observation": "gh repo view could not resolve repository under the authenticated owner",
+  "remote_configured": false,
+  "proposed_remote": "https://github.com/CCcolab/AI4OrgChem-Runtime.git",
+  "proposed_branch": "main",
+  "source_branch": "implementation/protocol-cases-batch3",
+  "reviewed_base_commit": "bdf813bc8a4912797ae179118fb2ee649b536f93",
+  "public_push": "NOT_AUTHORIZED_THIS_PREPARATION_REQUEST; NOT_PERFORMED",
+  "repository_visibility": "AWAITING_OWNER_CONFIRMATION",
+  "Pages": "NOT_ENABLED",
+  "upstream": {
+    "repository": "CCcolab/AI4OrgChem",
+    "visibility": "PUBLIC",
+    "tag": "v0.3.2",
+    "annotated_tag_object": "afd91ea6ec6847b329ee75a7b20ed564560d9460",
+    "peeled_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+    "status": "REMOTE_MATCHES_FROZEN_SCIENCE_LOCK"
+  },
+  "commands_read_only": [
+    "gh auth status",
+    "gh api user",
+    "gh repo view CCcolab/AI4OrgChem-Runtime --json nameWithOwner,url,visibility,defaultBranchRef,isEmpty",
+    "gh api repos/CCcolab/AI4OrgChem/git/ref/tags/v0.3.2",
+    "gh api repos/CCcolab/AI4OrgChem/git/tags/afd91ea6ec6847b329ee75a7b20ed564560d9460"
+  ],
+  "historical_other_query": {
+    "command": "gh api repos/CCcolab/AI4OrgChem/pages",
+    "result": "HTTP_404; no conclusion about target Pages eligibility"
+  },
+  "technical_source_readiness": "LOCAL_CANDIDATE_READY_FOR_OWNER_SCOPE_CONFIRMATION; REMOTE_CI_NOT_EXECUTED",
+  "website_rights": "USER_SUPPLIED_YOUMIND_GUIDE_RETAINS_PENDING_RIGHTS_STATUS; ROOT_APACHE_DOES_NOT_RELICENSE",
+  "image_distribution": "BLOCKED; NO_IMAGE_IN_SYNC",
+  "WSLc": "BLOCKED_NOT_EXECUTED; PAUSED"
+}

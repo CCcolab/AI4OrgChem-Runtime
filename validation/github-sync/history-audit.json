@@ -1,0 +1,485 @@
+{
+  "schema": "github-sync-history-review-v1",
+  "candidate_commit": "bdf813bc8a4912797ae179118fb2ee649b536f93",
+  "branch": "implementation/protocol-cases-batch3",
+  "intended_remote": "https://github.com/CCcolab/AI4OrgChem-Runtime.git",
+  "intended_remote_branch": "main",
+  "history_scope": "ALL_COMMITS_AND_UNIQUE_BLOBS_REACHABLE_FROM_CANDIDATE_HEAD; NO_OTHER_BRANCH_OR_TAG_PUSH",
+  "commit_count": 125,
+  "current_tracked_file_count": 818,
+  "history_path_count": 818,
+  "history_blob_count": 1249,
+  "current_file_bytes": 12544916,
+  "history_uncompressed_blob_bytes": 18099261,
+  "current_top_level_counts": {
+    ".dockerignore": 1,
+    ".gitattributes": 1,
+    ".github": 1,
+    ".gitignore": 1,
+    "AI4OrgChem-user-molecule-DRAFT2-review_zh-CN.md": 1,
+    "LICENSE": 1,
+    "NOTICE": 1,
+    "README.md": 1,
+    "README_zh-CN.md": 1,
+    "ai4orgchem-runtime-implementation-plan-professional-revised.md": 1,
+    "ai4orgchem-runtime-implementation-plan.md": 1,
+    "assets": 4,
+    "compliance": 11,
+    "configs": 5,
+    "container": 17,
+    "docs": 120,
+    "examples": 20,
+    "locks": 25,
+    "profiles": 3,
+    "reference": 203,
+    "runtime": 67,
+    "schemas": 4,
+    "scripts": 96,
+    "tests": 89,
+    "validation": 143
+  },
+  "largest_current_files": [
+    {
+      "path": "reference/high_cost_cases/source_tree/data/processed/p11_furan_lde_v0.1.json",
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "a20fc32c9d63dc026464733db54e49320c354b9d",
+      "bytes": 512661
+    },
+    {
+      "path": "validation/component-license-inventory.json",
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "6d9f0631a82a445aae09607fa089985f9fb5699a",
+      "bytes": 461831
+    },
+    {
+      "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip",
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "d906162d019da4dd34abb167361443dd96d974a1",
+      "bytes": 406565
+    },
+    {
+      "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip",
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "1ac36b2ba2809cb90f98a201964c7c9456d44613",
+      "bytes": 389414
+    },
+    {
+      "path": "docs/index.html",
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "02ac22b8ab2a457348b90eacb55383fba6c5b108",
+      "bytes": 188142
+    },
+    {
+      "path": "docs/runtime-guide/current/docs/index.html",
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "02ac22b8ab2a457348b90eacb55383fba6c5b108",
+      "bytes": 188142
+    },
+    {
+      "path": "docs/runtime-guide/source/docs/index.html",
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "944d5d2fe36e3113222dfd22502ccb76b8b69935",
+      "bytes": 183232
+    },
+    {
+      "path": "reference/protocol_cases/source_tree/data/processed/p08_butadiene_gl2014_evidence_v0.1.json",
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "3b6fcb69d48143bd718c51fabbdf792d504bbea5",
+      "bytes": 138415
+    },
+    {
+      "path": "validation/high-cost-cases/deployment-verification.json",
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "daa1e6063eb3e4c5d15b3456a7da4e9c265f2822",
+      "bytes": 137249
+    },
+    {
+      "path": "validation/vendor-source-comparison.json",
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "025ceb74113e99aeebf8ebc2e6e012e1dc707696",
+      "bytes": 135160
+    },
+    {
+      "path": "validation/source-acquisition.json",
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "6cfaa68e011fb63b1caec543e25ebba9af8bf752",
+      "bytes": 115666
+    },
+    {
+      "path": "validation/license-materials-manifest.json",
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "d29dba287c0d75132e72c30fa74a53bafc2c0035",
+      "bytes": 110698
+    }
+  ],
+  "largest_historical_blobs": [
+    {
+      "oid": "a20fc32c9d63dc026464733db54e49320c354b9d",
+      "path": "reference/high_cost_cases/source_tree/data/processed/p11_furan_lde_v0.1.json",
+      "kind": "blob",
+      "bytes": 512661
+    },
+    {
+      "oid": "6d9f0631a82a445aae09607fa089985f9fb5699a",
+      "path": "validation/component-license-inventory.json",
+      "kind": "blob",
+      "bytes": 461831
+    },
+    {
+      "oid": "d906162d019da4dd34abb167361443dd96d974a1",
+      "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip",
+      "kind": "blob",
+      "bytes": 406565
+    },
+    {
+      "oid": "1ac36b2ba2809cb90f98a201964c7c9456d44613",
+      "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip",
+      "kind": "blob",
+      "bytes": 389414
+    },
+    {
+      "oid": "bab465cd3f43d955295207a846148d414ec1e075",
+      "path": "validation/component-license-inventory.json",
+      "kind": "blob",
+      "bytes": 316750
+    },
+    {
+      "oid": "20b53b12215556844057ebe206d3ea6bf1ac1e24",
+      "path": "validation/component-license-inventory.json",
+      "kind": "blob",
+      "bytes": 316658
+    },
+    {
+      "oid": "02ac22b8ab2a457348b90eacb55383fba6c5b108",
+      "path": "docs/index.html",
+      "kind": "blob",
+      "bytes": 188142
+    },
+    {
+      "oid": "944d5d2fe36e3113222dfd22502ccb76b8b69935",
+      "path": "docs/runtime-guide/source/docs/index.html",
+      "kind": "blob",
+      "bytes": 183232
+    },
+    {
+      "oid": "3b6fcb69d48143bd718c51fabbdf792d504bbea5",
+      "path": "reference/protocol_cases/source_tree/data/processed/p08_butadiene_gl2014_evidence_v0.1.json",
+      "kind": "blob",
+      "bytes": 138415
+    },
+    {
+      "oid": "daa1e6063eb3e4c5d15b3456a7da4e9c265f2822",
+      "path": "validation/high-cost-cases/deployment-verification.json",
+      "kind": "blob",
+      "bytes": 137249
+    },
+    {
+      "oid": "025ceb74113e99aeebf8ebc2e6e012e1dc707696",
+      "path": "validation/vendor-source-comparison.json",
+      "kind": "blob",
+      "bytes": 135160
+    },
+    {
+      "oid": "a3538af555702207ed955359cb4ff53d62829dd7",
+      "path": "validation/high-cost-cases/deployment-verification.json",
+      "kind": "blob",
+      "bytes": 134814
+    }
+  ],
+  "historical_files_over_50_MiB": [],
+  "historical_files_over_100_MiB": [],
+  "authors": [
+    [
+      "Codex (AI4OrgChem local)",
+      "ai4orgchem@localhost"
+    ]
+  ],
+  "committers": [
+    [
+      "Codex (AI4OrgChem local)",
+      "ai4orgchem@localhost"
+    ]
+  ],
+  "limited_credential_pattern_scan": {
+    "scope": "All reachable unique Git blobs and all members of encountered ZIP archives",
+    "patterns": {
+      "github_classic_or_oauth_token": "\\b(?:gh[pousr]_[A-Za-z0-9]{36,255}|github_pat_[A-Za-z0-9_]{60,255})\\b",
+      "openai_style_key": "\\bsk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{28,255}\\b",
+      "aws_access_key": "\\b(?:AKIA|ASIA)[A-Z0-9]{16}\\b",
+      "private_key_header": "-----BEGIN (?:RSA |EC |DSA |OPENSSH |ENCRYPTED )?PRIVATE KEY-----",
+      "google_api_key": "\\bAIza[0-9A-Za-z_-]{35}\\b",
+      "slack_token": "\\bxox[baprs]-[A-Za-z0-9-]{20,255}\\b",
+      "credentialed_url": "https?://[^\\s/<>:@]{2,}:[^\\s/<>@]{3,}@[^\\s/<>]+"
+    },
+    "hits": [],
+    "text_blob_count": 1247,
+    "binary_blob_count": 2,
+    "not_a_general_security_certification": true
+  },
+  "potential_sensitive_path_candidates": [],
+  "local_path_disclosure": {
+    "blob_count": 315,
+    "samples": [
+      {
+        "git_blob": "14a66aaa9cac15ade9b7640859df0a009189a5f1",
+        "path": "README.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "3fb314dacad4185c44c873ff81e7ef5e2b194eff",
+        "path": "README_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "35d63615a2a9aa49b3673fadc237d3558aedf85c",
+        "path": "ai4orgchem-runtime-implementation-plan-professional-revised.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "6b09abc07915a93420d2babde3bdc2621ebdefb2",
+        "path": "ai4orgchem-runtime-implementation-plan.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "f9f60faef0c8f947d4aba3d3fbd6128b8ce8ef1d",
+        "path": "compliance/HIGH_COST_COMPONENTS_20261009_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "669e5222ce0a106baa5b26015633d93d1e94d761",
+        "path": "compliance/high-cost-license-addendum-20261009.json",
+        "archive_member": null
+      },
+      {
+        "git_blob": "bebb17adccb544c21ca335b593f9cf30488810ac",
+        "path": "docs/CORRESPONDING_SOURCE_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "19375be78ff39af24978acee56b56c4dbb980089",
+        "path": "docs/DOCKER_STARTUP_RECOVERY_20261009_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "2b3837fc5409220f77f779af057e000e120db284",
+        "path": "docs/INSTALL_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "4bba0aa60f1149c0ededd5dac1e301bd24dcea87",
+        "path": "docs/L3_PREPARATION_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "e42e48ce06bda9994b6e0766a24a09440c6b3733",
+        "path": "docs/LICENSE_REVIEW_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "a62195629d5d71b81fcb528ed53c85920faafba0",
+        "path": "docs/LOCAL_DELIVERY_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "14388c5ea037832fc29a7b63e34193c40bd44564",
+        "path": "docs/LOCAL_RUNTIME_ENTRY_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "5dcafdf883f43a913ed2f4b4dbf74bc2d7c405a0",
+        "path": "docs/LOCAL_RUNTIME_FRAMEWORK_20261007_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "c62361d5e760ef437389b382780cda04cf2c388a",
+        "path": "docs/LOCAL_SERVICES_CI_20261009_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "d09ce45938079d682e32dd959313d0c41387a5f0",
+        "path": "docs/MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "8c9d0668241a06d9895eac854350a34a0d66ffed",
+        "path": "docs/MOLECULAR_SINGLE_POINT_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "191211809a0ee4f2538ee2d434616bdabe006e4e",
+        "path": "docs/NATIVE_WSL2_FEASIBILITY_20261009_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "9b8a511a843371bb216cd811def1c211f591c380",
+        "path": "docs/NATIVE_WSL2_RUNTIME_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "a58992a98f679ca244121896e93bc57843448db3",
+        "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "84e024784ef9c536657065235e77556ea3a8c513",
+        "path": "docs/PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "3a07537b730a5c175dc16ef62dfac1a64b9b3397",
+        "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "22b118a48843abe8ed0651fa7e711c601ecb5adf",
+        "path": "docs/PROTOCOL_CASES_SOURCE_AUDIT_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "116fde3e1181980f99dbfb208f2f36c2065230e7",
+        "path": "docs/PUBLICATION_BOUNDARIES_zh-CN.md",
+        "archive_member": null
+      },
+      {
+        "git_blob": "47011f8d61c0d4c93a3b260a3eb17254d60249f3",
+        "path": "docs/REGISTERED_CASES_ACCEPTANCE_20261008_zh-CN.md",
+        "archive_member": null
+      }
+    ],
+    "full_index": "local-path-disclosures.json"
+  },
+  "zip_archives": [
+    {
+      "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip",
+      "git_blob": "d906162d019da4dd34abb167361443dd96d974a1",
+      "crc": "PASS",
+      "member_count": 10,
+      "members": [
+        {
+          "path": "ai4orgchem-runtime-guide/docs/index.html",
+          "bytes": 188142,
+          "sha256": "4946cd2a5af4685c27627de26fbf045545689e049a9a51fd1fcd9de002d7962c"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/docs/.nojekyll",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/README.md",
+          "bytes": 31594,
+          "sha256": "77dded7fe8cc1852c7fc8c0335b47e1bcf05afd68c4ea062c2397a606f65eb18"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/content/guide_zh-CN.md",
+          "bytes": 97941,
+          "sha256": "dad720a915a2977cfd865599bf7495e51c6c92f4919904bf049b818383d1486d"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/provenance/sources.md",
+          "bytes": 17256,
+          "sha256": "8e4e79b6f5fbab6c867135cc05b6c83278987cfec70ca47a4f6542436b0f0373"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/verification/checks.md",
+          "bytes": 32931,
+          "sha256": "ebc18ee5ca99f251c016fe983228a30c42e42232aa9c411473a2d411c2c803d8"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/MIGRATION.md",
+          "bytes": 34737,
+          "sha256": "01b1a7525dd9795dde990f99abb7384bbafff26f89295d511e3bbcfb275c352a"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/MANIFEST.txt",
+          "bytes": 1844,
+          "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/templates/molecular-service/water/request.json",
+          "bytes": 277,
+          "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/templates/molecular-service/water/molecule.xyz",
+          "bytes": 123,
+          "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+        }
+      ]
+    },
+    {
+      "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip",
+      "git_blob": "1ac36b2ba2809cb90f98a201964c7c9456d44613",
+      "crc": "PASS",
+      "member_count": 10,
+      "members": [
+        {
+          "path": "ai4orgchem-runtime-guide/docs/index.html",
+          "bytes": 183232,
+          "sha256": "b4762b4b4f1851afc1c13f177a7f1a08bbacb91ada1fe977cd3ce7567d110cca"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/docs/.nojekyll",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/README.md",
+          "bytes": 28643,
+          "sha256": "316a43fcd7231e50565c5e63fb38afe35a81b157bb82d6609fe06d86a27e43e2"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/content/guide_zh-CN.md",
+          "bytes": 94925,
+          "sha256": "4f163bb19d1c1e2c16cd99815506069a489c3d88ccfd2eea124747ea0436fc78"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/provenance/sources.md",
+          "bytes": 16884,
+          "sha256": "12fbaae58e85451e0d1e3db5307faa5f5baeb9097b31a0d851d7f00834b2b41a"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/verification/checks.md",
+          "bytes": 29980,
+          "sha256": "973956e869dbcf294fab2239a1f2f9e47ec22c3a9e1dff2e4ad4b69623bb76ca"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/MIGRATION.md",
+          "bytes": 31786,
+          "sha256": "261ed7d01298ff431bc55b9cb1225fcff3831f03562030253ada3845be47496b"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/MANIFEST.txt",
+          "bytes": 1844,
+          "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/templates/molecular-service/water/request.json",
+          "bytes": 277,
+          "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+        },
+        {
+          "path": "ai4orgchem-runtime-guide/templates/molecular-service/water/molecule.xyz",
+          "bytes": 123,
+          "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+        }
+      ]
+    }
+  ],
+  "submodules_or_symlinks": [],
+  "working_tree_status": "",
+  "public_push": "NOT_PERFORMED",
+  "GitHub_Pages": "NOT_ENABLED"
+}

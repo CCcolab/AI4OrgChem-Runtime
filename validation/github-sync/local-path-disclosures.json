@@ -1,0 +1,1577 @@
+[
+  {
+    "git_blob": "14a66aaa9cac15ade9b7640859df0a009189a5f1",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "3fb314dacad4185c44c873ff81e7ef5e2b194eff",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "35d63615a2a9aa49b3673fadc237d3558aedf85c",
+    "path": "ai4orgchem-runtime-implementation-plan-professional-revised.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "6b09abc07915a93420d2babde3bdc2621ebdefb2",
+    "path": "ai4orgchem-runtime-implementation-plan.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "f9f60faef0c8f947d4aba3d3fbd6128b8ce8ef1d",
+    "path": "compliance/HIGH_COST_COMPONENTS_20261009_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "669e5222ce0a106baa5b26015633d93d1e94d761",
+    "path": "compliance/high-cost-license-addendum-20261009.json",
+    "archive_member": null
+  },
+  {
+    "git_blob": "bebb17adccb544c21ca335b593f9cf30488810ac",
+    "path": "docs/CORRESPONDING_SOURCE_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "19375be78ff39af24978acee56b56c4dbb980089",
+    "path": "docs/DOCKER_STARTUP_RECOVERY_20261009_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "2b3837fc5409220f77f779af057e000e120db284",
+    "path": "docs/INSTALL_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "4bba0aa60f1149c0ededd5dac1e301bd24dcea87",
+    "path": "docs/L3_PREPARATION_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e42e48ce06bda9994b6e0766a24a09440c6b3733",
+    "path": "docs/LICENSE_REVIEW_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a62195629d5d71b81fcb528ed53c85920faafba0",
+    "path": "docs/LOCAL_DELIVERY_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "14388c5ea037832fc29a7b63e34193c40bd44564",
+    "path": "docs/LOCAL_RUNTIME_ENTRY_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "5dcafdf883f43a913ed2f4b4dbf74bc2d7c405a0",
+    "path": "docs/LOCAL_RUNTIME_FRAMEWORK_20261007_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "c62361d5e760ef437389b382780cda04cf2c388a",
+    "path": "docs/LOCAL_SERVICES_CI_20261009_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d09ce45938079d682e32dd959313d0c41387a5f0",
+    "path": "docs/MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8c9d0668241a06d9895eac854350a34a0d66ffed",
+    "path": "docs/MOLECULAR_SINGLE_POINT_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "191211809a0ee4f2538ee2d434616bdabe006e4e",
+    "path": "docs/NATIVE_WSL2_FEASIBILITY_20261009_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "9b8a511a843371bb216cd811def1c211f591c380",
+    "path": "docs/NATIVE_WSL2_RUNTIME_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a58992a98f679ca244121896e93bc57843448db3",
+    "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "84e024784ef9c536657065235e77556ea3a8c513",
+    "path": "docs/PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "3a07537b730a5c175dc16ef62dfac1a64b9b3397",
+    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "22b118a48843abe8ed0651fa7e711c601ecb5adf",
+    "path": "docs/PROTOCOL_CASES_SOURCE_AUDIT_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "116fde3e1181980f99dbfb208f2f36c2065230e7",
+    "path": "docs/PUBLICATION_BOUNDARIES_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "47011f8d61c0d4c93a3b260a3eb17254d60249f3",
+    "path": "docs/REGISTERED_CASES_ACCEPTANCE_20261008_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "705c6688a8a3e00647e67653f9bd1b59c667beb9",
+    "path": "docs/REGISTERED_CASES_DEPLOYMENT_BOUNDARIES_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "aa22b8d21f38588a0ea8fe542df289ef69118956",
+    "path": "docs/REGISTERED_CASES_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "ed93bf028bf67500a5cb167340d5ba01c0d6b93e",
+    "path": "docs/RUNTIME_WEB_GUIDE_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8e485963a49e6556e2571a57c758e545223e9d53",
+    "path": "docs/RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d43031852c6827bf1b26ab93f02d5b9caa721660",
+    "path": "docs/SIX_ISSUE_REMEDIATION_20261009_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "15abf4301ca4b15e63174b46f7bb0d7c87dc4e9f",
+    "path": "docs/SOURCE_AUDIT_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "f7939d820f8b5e4aa4be020c77696f11a5f7304f",
+    "path": "docs/SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "c131b2fd8b24f1bb7e304ddd7166d428c5ebf6e7",
+    "path": "docs/USER_MOLECULE_CI_20261005_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "4966a903a3feb2859dbc5e92ba0200907807aaed",
+    "path": "docs/USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e8a8c5ee7d71cb09489ca76d7ecda88b4a3082a4",
+    "path": "docs/USER_MOLECULE_CI_W01_W07_20261006_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "5c7fdb895359edb39e5522a4b00621d5a36b9d66",
+    "path": "docs/USER_MOLECULE_DIRECTORY_LAYOUT_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "fe890103fd9c6e0348c7de4b7917564206141752",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "98daa58d52a9a998b2a01dd8fabf78cff2298b5b",
+    "path": "docs/USER_MOLECULE_NATIVE_SHUTDOWN_ENGINEERING_20261007_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a0d6f88405dfcc6be4f50f19b7f166ec6f1a93ca",
+    "path": "docs/USER_MOLECULE_OCCUPATION_RESPONSE_20261007_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "9a5156eea79ffdb89e9e28473c9f0c07cd3a613e",
+    "path": "docs/USER_MOLECULE_OCCUPATION_SCOPE_20261007_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "824f2b5651526dee9d643911b0898461c1aacf1a",
+    "path": "docs/USER_MOLECULE_OCCUPIED_SPACE_ADMISSION_20261007_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "815d2c90a404a4d7187b7414ddf67b8271783daa",
+    "path": "docs/USER_MOLECULE_OCCUPIED_SPACE_RESPONSE_20261007_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "93f3f26a766e76f87abc63f94c42a4d3f5f72c6c",
+    "path": "docs/USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e392ee743cea88780fb593ae0c963e62a33f7af2",
+    "path": "docs/USER_MOLECULE_PREPARATION_REFERENCE_20261006_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "665cffcd88d8fce3fe5d5a0b5b2cdb4051c28e65",
+    "path": "docs/USER_MOLECULE_REPORT_20261006_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "6bc8385ec6f108e6f1397b284e2912972749180b",
+    "path": "docs/USER_MOLECULE_RESIDUAL_BRIDGE_20261006_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "175b56e369e0fe564483f88e1f39aa8a7787143e",
+    "path": "docs/USER_MOLECULE_RESIDUAL_PROTOTYPE_20261006_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "c7c411242c12764cb604bc2844ece14a46db1ea1",
+    "path": "docs/USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "6f3bbd48cc0f8d78499bd83f7f47b67b7023fd26",
+    "path": "docs/USER_MOLECULE_ROOT_NATIVE_ENGINEERING_20261007_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "5d9a7f84c4a267fb7d3f37f66324b594ad2799e5",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "cf4ade13027f01853f9d7f971efb2084ba247efa",
+    "path": "docs/USER_MOLECULE_SOLVER_V2_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "00054c9f086f78d148d9ba8b50e7e8c2d50bcf67",
+    "path": "docs/USER_MOLECULE_TECHNICAL_PLAN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "f7cb2973c7e2fb668daacb625c26f96e9fb7398d",
+    "path": "docs/USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "aa614de8f0e081fea22a7515bd0bceed1ebcd115",
+    "path": "docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "4edc88472d8b067e8437b4a3ccffab7c05e0b3f6",
+    "path": "docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "0d2c1aeed5db87d720daf20df37818b0e1542af7",
+    "path": "docs/USER_MOLECULE_W07_SELFTEST_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "02ac22b8ab2a457348b90eacb55383fba6c5b108",
+    "path": "docs/index.html",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d906162d019da4dd34abb167361443dd96d974a1",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d906162d019da4dd34abb167361443dd96d974a1",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip",
+    "archive_member": "ai4orgchem-runtime-guide/docs/index.html"
+  },
+  {
+    "git_blob": "d906162d019da4dd34abb167361443dd96d974a1",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip",
+    "archive_member": "ai4orgchem-runtime-guide/README.md"
+  },
+  {
+    "git_blob": "d906162d019da4dd34abb167361443dd96d974a1",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip",
+    "archive_member": "ai4orgchem-runtime-guide/content/guide_zh-CN.md"
+  },
+  {
+    "git_blob": "d906162d019da4dd34abb167361443dd96d974a1",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip",
+    "archive_member": "ai4orgchem-runtime-guide/provenance/sources.md"
+  },
+  {
+    "git_blob": "d906162d019da4dd34abb167361443dd96d974a1",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip",
+    "archive_member": "ai4orgchem-runtime-guide/verification/checks.md"
+  },
+  {
+    "git_blob": "d906162d019da4dd34abb167361443dd96d974a1",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip",
+    "archive_member": "ai4orgchem-runtime-guide/MIGRATION.md"
+  },
+  {
+    "git_blob": "1ac36b2ba2809cb90f98a201964c7c9456d44613",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip",
+    "archive_member": null
+  },
+  {
+    "git_blob": "1ac36b2ba2809cb90f98a201964c7c9456d44613",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip",
+    "archive_member": "ai4orgchem-runtime-guide/docs/index.html"
+  },
+  {
+    "git_blob": "1ac36b2ba2809cb90f98a201964c7c9456d44613",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip",
+    "archive_member": "ai4orgchem-runtime-guide/README.md"
+  },
+  {
+    "git_blob": "1ac36b2ba2809cb90f98a201964c7c9456d44613",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip",
+    "archive_member": "ai4orgchem-runtime-guide/content/guide_zh-CN.md"
+  },
+  {
+    "git_blob": "1ac36b2ba2809cb90f98a201964c7c9456d44613",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip",
+    "archive_member": "ai4orgchem-runtime-guide/provenance/sources.md"
+  },
+  {
+    "git_blob": "1ac36b2ba2809cb90f98a201964c7c9456d44613",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip",
+    "archive_member": "ai4orgchem-runtime-guide/verification/checks.md"
+  },
+  {
+    "git_blob": "1ac36b2ba2809cb90f98a201964c7c9456d44613",
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip",
+    "archive_member": "ai4orgchem-runtime-guide/MIGRATION.md"
+  },
+  {
+    "git_blob": "89973492b135ea099e8617084e317ae6689f5cdd",
+    "path": "docs/runtime-guide/current/MIGRATION.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a8d19534fa86b240960bb8e37bccfbb33b19f31c",
+    "path": "docs/runtime-guide/current/README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "59dbb351f348c19396cde53b398a427e3c18daac",
+    "path": "docs/runtime-guide/current/content/guide_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "03d3ccc428456eeca808096bc7e7ac4abde7b762",
+    "path": "docs/runtime-guide/current/provenance/sources.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "20975e849505abc40b1ca41919c0fef92698ea97",
+    "path": "docs/runtime-guide/current/verification/checks.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "9d785c80c157dc454b51b1ddfb527d63bb98ca03",
+    "path": "docs/runtime-guide/source/MIGRATION.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d7bfcdd865e733aa58c6c0ac06b92138e6554016",
+    "path": "docs/runtime-guide/source/README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b21373a63c34cdabd918c54d47350db50bd550e0",
+    "path": "docs/runtime-guide/source/content/guide_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "944d5d2fe36e3113222dfd22502ccb76b8b69935",
+    "path": "docs/runtime-guide/source/docs/index.html",
+    "archive_member": null
+  },
+  {
+    "git_blob": "4df61881764a149d9d99c491a14c4568b625ef79",
+    "path": "docs/runtime-guide/source/provenance/sources.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "20c92022547b1a4df0ea6bcf4a271d8249495ad3",
+    "path": "docs/runtime-guide/source/verification/checks.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "99a1daeae4d135ce8c8bfd75d28f8a36c20eb3b2",
+    "path": "examples/user-molecule/w05-candidates/README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "9b42491506151748c8d9dd08eb64e0d8ada44f31",
+    "path": "reference/high_cost_cases/source_tree/configs/resources/local_wsl.yaml",
+    "archive_member": null
+  },
+  {
+    "git_blob": "5ed22d41a9cee89b80041864f21ffa4f97881ebd",
+    "path": "reference/protocol_cases/source_tree/artifacts/raw/source_table_5_19_independent_assembly_2026-08-15.json",
+    "archive_member": null
+  },
+  {
+    "git_blob": "bde6afffe483eab2c721110dd33da1bfa10388fe",
+    "path": "reference/protocol_cases/source_tree/configs/qm/source_table_5_19_independent_assembly_v1.0.yaml",
+    "archive_member": null
+  },
+  {
+    "git_blob": "18500440fb2a61c26515d0f8a54e868a80208c88",
+    "path": "runtime/registered_cases/p02.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d91c6a302a6db7cee7420b3704818e7f66287353",
+    "path": "runtime/registered_cases/p13.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8781a57eb73bda8e6f8008000ed044dfe8982c21",
+    "path": "scripts/accept-user-molecule-v2.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8e4f61f3f2a368ac1ade9b0350f8ccaae2f57604",
+    "path": "scripts/accept-user-molecule.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "643afa3b25ac1521351282c4435820354b65a610",
+    "path": "scripts/check-wsl2-runtime.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "463d3045d78739627e78b91a3bec7d65214a3ff6",
+    "path": "scripts/diagnose-user-molecule-root-native.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "3955b3a10c1b9377e63152f952c1c61919512323",
+    "path": "scripts/prepare-high-cost-cases.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "28c523d9921ac1b84f2c0adb2533c562385a0c0f",
+    "path": "scripts/prepare-protocol-cases.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "7d72c2e6b7845d3978be7bbe056eb7e7f1db989d",
+    "path": "scripts/run-molecular-service.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "66beb0d42e0c98412f2dbfb0863dc56061f311a3",
+    "path": "scripts/run-protocol-case.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d9cb99caa161bb298db09c8fafc66808d24c46ff",
+    "path": "scripts/run-registered-case.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "407f4a3f7a925e2dcb1801debb33d1be8c0c468d",
+    "path": "scripts/run-user-molecule.ps1",
+    "archive_member": null
+  },
+  {
+    "git_blob": "811f54bebc1ab8c755721333fe008fe0e465a575",
+    "path": "tests/test_high_cost_p12.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "930249accf53e5812f349f37100b618f8c097410",
+    "path": "tests/test_native_wsl2_check.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "0804a4fa3a1e87aaa4b02be8260f4b474a0245d8",
+    "path": "tests/test_user_molecule_report_export.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "c6398f97df5ca4743a3b3b9157e28a0ed35a1dfa",
+    "path": "validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "28901ebe38e7254e8b3b25868ac709ddc2e1b76d",
+    "path": "validation/PREPUBLICATION_REVISION_REVIEW_2026-10-03_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "4210be9f1824f4836e9b292e673e2c3ee79e451d",
+    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "76e6da11282e37f168c1c5dd99745e9ef2fa9f04",
+    "path": "validation/final-delivery-status.json",
+    "archive_member": null
+  },
+  {
+    "git_blob": "daa1e6063eb3e4c5d15b3456a7da4e9c265f2822",
+    "path": "validation/high-cost-cases/deployment-verification.json",
+    "archive_member": null
+  },
+  {
+    "git_blob": "5641ca5212652705851cc23b911adb22a025d82c",
+    "path": "validation/high-cost-cases/support-matrix.json",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d29dba287c0d75132e72c30fa74a53bafc2c0035",
+    "path": "validation/license-materials-manifest.json",
+    "archive_member": null
+  },
+  {
+    "git_blob": "4b9073aa21d20e139a50fb1cca86a5d594c38093",
+    "path": "validation/license-materials-review.json",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b36083a9924945e3894d7d0977ef984421baefe4",
+    "path": "validation/local-delivery-summary.json",
+    "archive_member": null
+  },
+  {
+    "git_blob": "1c74bb12dd920ea5c82b122b9eb327bbc0858c72",
+    "path": "validation/native-wsl2/check-20261009.json",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e597a91de295b852db0fbe5124a4b4d3ec487e34",
+    "path": "validation/native-wsl2/environment-readiness-20261009.json",
+    "archive_member": null
+  },
+  {
+    "git_blob": "54fc8dbddf224f26ab8cca09b5ba56cc952e6c60",
+    "path": "validation/user-molecule/w05/historical-source-materials/USER_MOLECULE_TECHNICAL_PLAN_55726d4_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "4c26a34306e8e5139edc1120ae08dc78671cbbe7",
+    "path": "docs/RUNTIME_WEB_GUIDE_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8d1d32b7c135f219594094fe824958e738c771b7",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "0a503873778ae3c60e48ff5d8142b1cdfd955ed8",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b69265b46f5a001a638d1d9b8c55ebc6242e5f60",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b8fc75c41c9c6cd8ae76e41b6d162c49f65ab401",
+    "path": "docs/SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "ae47ac53888eb8e0ffbba2a4152e49a9f27264c4",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a03e3eeb5037497f99dc072b48b5eb53a7d896e0",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "ab3e4d633717a8152f6efd7a788f19c5538a533f",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "1570bf6affb09171c7e9c554183f173544317d4d",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "0af5ff2d85175c00e38ae61367dda3bdc7371997",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "1aa4eef1dd6a60cb70953b7c0f559f370c614b82",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "896a2a342cd611f77d8a5704703f24ac1be6abc1",
+    "path": "docs/PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8ca618c5f126d9fd125c2055fc25f5a730f49014",
+    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a3538af555702207ed955359cb4ff53d62829dd7",
+    "path": "validation/high-cost-cases/deployment-verification.json",
+    "archive_member": null
+  },
+  {
+    "git_blob": "491a1dc0f84e5194a660e4cc1eecd7d5a72fe004",
+    "path": "validation/high-cost-cases/support-matrix.json",
+    "archive_member": null
+  },
+  {
+    "git_blob": "71e65210990d557b0adaaab1bdf0c05f0b8a3315",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "4214e1f3a162aec551cba13c5d6a81ff053051cb",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d4b3107dd1923c3903499f089b1b23da23ddc0d8",
+    "path": "docs/PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "015f26c30a62a4266594d16994913f05dad79285",
+    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "87565c770b117ecd7fc852d895939ce7d369d0a0",
+    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a43bb255615f3ae789de952547833ae95ada0ef8",
+    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "72bba85ea808edcf39c22c54104c9cdef2aecc6d",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a33441cf6195ea406cb889728b01c39640fdd0e8",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "1dcf7556e4e019562083f8dac0cba8af696400d6",
+    "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b80443b6715141d599116ad9e9be39094c349fd0",
+    "path": "docs/PROTOCOL_CASES_SOURCE_AUDIT_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "abfed678da049187785bd7ad77ab5271dcb06fb1",
+    "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b3a84d1d59ef691e0d5dd38a420f111042a619a6",
+    "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8cc3d2bfd4ec38d41f2f2de4ebf8f75fd6ea1f24",
+    "path": "scripts/run-protocol-case.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "21db220888a47216278ba536c051759f9dc91bf8",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "f28e31bc70ed48febcc5a8a626ff71b4979b0bc2",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "dff9669b05a2c1440b2947c293f039d37b2a77a2",
+    "path": "docs/MOLECULAR_SINGLE_POINT_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "6213dbc349fe7930b329313a1463337752ccc9cc",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e32b81598e9537f21f65b09bd8c18f5ed2bfe59c",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "819d25a93950fcf05491d22d21e222143f77cb7c",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e1a65c624a911b95bceccbaa81f1d5e56224d0c2",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "24771a0ecb69ed6c7eb4f6045f0ef11d64de3dc2",
+    "path": "docs/REGISTERED_CASES_DEPLOYMENT_BOUNDARIES_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8860ad01b5e5f444960e26e8cdebb59c89660257",
+    "path": "docs/REGISTERED_CASES_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "37f0e601197f789476dd39ad08ab423afb24125f",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "99527f10ec7099de3c13b1eb5281b4c24dcbc6d8",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e4b153c1b1f2f0e1d3a1be5e9599f6a535cf59d1",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "1f56171a0ab036bfb9478fe910ccacd7d598dea3",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "1985559ce7c5f498034ba1e6cc293336ba4fc818",
+    "path": "scripts/diagnose-user-molecule-root-native.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d97d3c977cd6c88ab5a1a43076ae4b0764f16bc1",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "15aeb3105665ac2ebb821094e9eebaa6d1928530",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "71c6a0a0b19758e2c235375c056e6edd4eb4e2ee",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "3bf2bb735749a53039160c1e78ff4bc570075aff",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b0cac15de132182e9c38df080025aff6e6805c95",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "5ea8474aed5609b96d92f19b1035ff889c9bfe0d",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a681e8a563ebe24fcbb132f01a6ae760a783e4b9",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "bc9a7147cf5bf343e177e254610cbdeac03dd04d",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "9de9b62c100b7f73a4a17b2e87c365979c052389",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "da9deaab8004b63fa902febfee675a6ab2c84291",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "6b5be3091470a06d9c577e47340749517cf4a8d6",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "1cadca5c335b06e8c9f5d5fa9d7d87c7082a0b6f",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b8ed4b9e7a008469a03a4857d50c5b4df332167a",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "3b770919593c9958d59c764d1bd424a44f1faf2a",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b4f011c12ab5f506277c680cef43a421d5d545ae",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "32911ec13856299e90836ab8cb4a40796e8924df",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "0214aa0a5a0d76cf433f23b274cd4a836797f50a",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "fa5ebdcec12856378b2bb461252307a049bfb0ca",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d6036dbd42d21805a6af9a995c71405b2e8be7d1",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "60a47653c2b75a9a8ba57f40c8da7bcedb42e7ec",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "bd4b3d100fcd62e6a91672e3ba58196fca28256c",
+    "path": "docs/USER_MOLECULE_OCCUPATION_SCOPE_20261007_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e4fcb9a5286f042d82c55570bd1f3859a8784c70",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "677132404e833bf6990eaaeb7433ae0e421f2f04",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "364d1fbda268e2c4e176dd38adeee3869e0d4555",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e7a252466bf12db78585d415bf0a630e64578533",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "701a5e49f23e45c16aafe94b146deae25fc89359",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "1ac8438a108a68094b06cf6f5f34c56863479116",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "4b2fe87a0837a6bee293fe482373aab04f5e835c",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e125c6cdf986a28057f7653cc71178fd34fbe1c3",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "ba4baca5acc4f5d58ec12dd0936018ac5c12dfda",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "10b175cbed3847607301278ca3d981248212a309",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "7dbd454ea0fa6b4ee1d618ad6c81de076e8f7add",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "1801a3e9674a8e9642f6c2205fd15bf591e46931",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "08e24a10503fddd954293623b4d14689ea7b8c45",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "3ea189ab133f0a86ac0028d3acb2cfbf268e7b4b",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "ecc3c634c8044d19a137bc7759037d7be3386eef",
+    "path": "ai4orgchem-runtime-implementation-plan-professional-revised.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a05d7afdb193815a11ca29d8c055dc2d074b561e",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "5b869a1bd236d227f30750d863a5377da2e72d74",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "9124e64002946d3cd99ed4836c497a4596a4cade",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e290812127868c3cea0b9997bce0f0081932d509",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e16ca9f099f48916034f5dc8822e55c755c7453a",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "7ca187ad4ddf022471f28ab78043cea7dd9feac7",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "c4b68548041993ae52dd7bd6ccf5945020c2efa7",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "87fb57c413beed871385627af5e8328c8c3aa0e7",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "91a0fa5ef5b01d091f04636465cb0d78a83df378",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d2b06a0c86186efd3ae7d5d2f2c63761091c3b3c",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "c346c6f1434d9917857fa50b216dd2fde7169ae3",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "2c7087f188aa8c3129f3c8c316131f81bbc85b55",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "7783dc0854d727bd49e4e422c8630b07907676ad",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e4ea3bc8952fe17def6607199fb2b58756ba6d77",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a51dcd5d4853019e319a4530c4354f03964d808a",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d6c91065eb25caa688485629eed2916847753dd4",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "544423a024fc517284e23e08651aadf453d96dd5",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "43c5b52405519711108cdae3642511ca0a107b26",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "610a2abadafe133c99427d8fc6cf77382e4f8f42",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "011b4ac5158561580e87fe034ddd960cd752da95",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "502c5e617907afcb3d06de02e299d803628794aa",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a95aad82e3a438d36fa32cd6cc83c24595239c50",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e329df1d7f8f2992d44dae90c051a9013a2d760d",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "9685b05fb8029fe1b9a854384d8da07ffa079db3",
+    "path": "tests/test_user_molecule_evidence.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "ee2c4fc06eb5449fe3426842f9296d16485e86a0",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "27ea78f0e4215b8904d9cc67ab392aa59e7b8850",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b29039ca7570bd4e15c20d495f4609303ce0d426",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "19ed4303478495ce3c5e2fad7ed5617e7db5e312",
+    "path": "docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "7bb44d6c29c9e6cb12fbfbf45e44589c8022b19c",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8b5b84ca4d77d8fce8499cf509051d8d94d2052d",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "92e07eeb37c3962ed488588a857489632dabf2dd",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8eb9c50c6b516b2317ffd3a05707b4b6c5dea5f9",
+    "path": "docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "7f6e3c3cca29832dac4e4c4cee7cc738ca7ff3a2",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "0cfe41f9ad78a43c18e56ae9c0cc336a273837f3",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "24bb9f19b5eb1649957e26e0b0adb772d3cfc05f",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "60ece49425170b7b888bc309d314a8bab4d7b45c",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "cffe17d9c248680c14d02cbf7488674a51c21e37",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "5c12858f18c16e9fe0f29d739b3b3c281a6308c1",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "cc682394476f308530378754cffb60b47626dedd",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b4b3cec7562e2f747e507e46408958ce5745b0a9",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e90fa47ee292f641b9ec7e7f7d183c505c6c87fa",
+    "path": "tests/test_user_molecule_evidence.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "84a147a1e05e049ecd7ffa0e55d8fe529f551fa4",
+    "path": "tests/test_user_molecule_report_export.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "c426dab57ff7b181c1230b15854545c4668a208a",
+    "path": "scripts/run-user-molecule.ps1",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e6795fd405c7db9277c259149ef5e8c1ab0e0ec3",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "1d5cfde5bee70db34ce07b1f115f06d4c2fe2d24",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "c40a65b20209e2ddb526cca5e866f201eb8fb5ab",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "3851c25ea453ee5889e43ebd41b8a0861d32ac50",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a09bbcde0b0057bcf42ef32f60b5997117366d11",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "cd56e3010aaefcb83b15e36e9970d50a62e8669b",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "526c3e3665d77db826fd8a0cbcdf36fbda55c531",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "ecea36d5afb27e22f3d3ae61674079c4b1cebb9f",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8d0e0b43f30b8ab4644a80dc443c66b2035b4ff4",
+    "path": "docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "076ec1665777e0c68abd30c7a37a6e6df67b0b0b",
+    "path": "scripts/accept-user-molecule-v2.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "702e54b8204b197f7f08ed09fdb69d48cdfbb618",
+    "path": "docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "09472950dc66450b4ebc5d1444f62e63d57695db",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "be3012a5d64b052f7a5787f0063d7ac0a4d237b8",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e1f3ed490266cf6117e54c070ac4bd316d2d44f8",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "80a9c162b25d2f10aed165783bc602324f6006d7",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "efd73a532ece3ee9dc3e9a660d623eac92f4befd",
+    "path": "examples/user-molecule/w05-candidates/README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "10926f1e810ca339d9ff44bb8c471c15edb9756d",
+    "path": "scripts/accept-user-molecule.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "ee83ccd0ed47ba5f3193e3ea62c408ab509753e5",
+    "path": "scripts/accept-user-molecule.py",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d6399028dfa76c053224b953f3f419aaf080660a",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "46b62fb6db1286ca7e68f175b729013e4b1d527c",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "07ca713c45cc1c572388bfaadd016d290146f4cf",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8118169ae9078f3030e6356db85aa86c47af32b3",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b147c44d35025a44ead2ba7ffa389d0497bfbe3c",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "998811f8c29954b95a0c9f091621145ce40fe17a",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8a2772f9ca74a36a607dfaa966d90d53cca94591",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "07ac71c1e747fa68478f45c7a0e878b6a6a889a2",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "98b7a26ab1c9922b88ceaa3c2edceec50d6eeff1",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b942d1cb1faa9698d200b2d98a7359fdf3731a09",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "7632cc86fa1f853fd7726fc497c1d9c53aa7dd19",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a8776f97d12b190dece9ab8f823d85a2899a08d7",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "46b1dbc0cebd416d25724c80fcea0b31eb390fe0",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d91b04d48b6a8275e5c553beacdbc5e0d0ced983",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "46e980386902fb555ffdda34de12134ad1f842ef",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "9c96b9870b2bde1338105cc802f033379ff11dfa",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "bcd930a10682b4090e3e309744d1e37e0be2464b",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "24d893cdfbaded0a141d304920b2a7cbf4b32763",
+    "path": "docs/USER_MOLECULE_DIRECTORY_LAYOUT_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "07b54bc328dff4fa6fd3f0418f9498252d003564",
+    "path": "docs/USER_MOLECULE_DOCUMENT_INDEX_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e4bca7f9e9fb76a0e813084f0569fd497276db71",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a08123bc63b0090f73f15310dfa1415c06575db1",
+    "path": "docs/USER_MOLECULE_TECHNICAL_PLAN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "4d5fe5ba2edfe2ddbc4061b4a0f3cc1addf21fd3",
+    "path": "scripts/run-user-molecule.ps1",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8f6e2f2833c098a5fb139d234bb85e18ab12e03c",
+    "path": "README.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "080815159ca7f4d4a8a0642fbbf307c2de6739c3",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "b177c9217ae7abb1441073e799798ba1fe172733",
+    "path": "docs/RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "99bef46f7c2387aa3e76a08cce5a399696cf4af4",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "fd54f98c6a194983da4da86b48fc88b3b66771c6",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "edb9cb22ca9654bce79d6745bc588533ea6eb4fa",
+    "path": "docs/CORRESPONDING_SOURCE_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "ae96d1ae4b8a190fe98063acca2b98e88e256f91",
+    "path": "docs/INSTALL_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "6dfcfeea1bcdee9a60329e7d05f52a29c7d9c789",
+    "path": "docs/LICENSE_REVIEW_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "3f94b0ba72cc2a9dcec654e077cf24f0f1b63059",
+    "path": "docs/LOCAL_DELIVERY_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "febc6a7bae936b39f54bbaa031197f2f49fe97b2",
+    "path": "validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "909c31cd65c92b390b943516a7ad7ccb9ebb24b8",
+    "path": "validation/local-delivery-summary.json",
+    "archive_member": null
+  },
+  {
+    "git_blob": "5e59194a1f1e41b26358e71f37279143b4cf3f0e",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "3002f393aa788c69fbf15d29f4fd2da963616244",
+    "path": "docs/LICENSE_REVIEW_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "16c25c2f2919657705e6d1d0f3ffe50e900f0062",
+    "path": "validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "c260601de8ed427c3b0dbb402dacaa81fe71ab8d",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "ad698a765fd83057d7f18daf07bbf7a5b142399e",
+    "path": "docs/INSTALL_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d55cd01474b9362b90e437a3355e721d27e68b38",
+    "path": "docs/LOCAL_DELIVERY_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a2ae389927523a1c55cdd15dc2f0ef05cb6faee3",
+    "path": "docs/RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8d55b233ee2665c3ecbbd8a2de00007ab8d92468",
+    "path": "docs/SOURCE_AUDIT_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "1c418762c5492f8a65eed37911760eea35ae50de",
+    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e38f24b446c9e75d4b3fd48b2b56eba0bf500b80",
+    "path": "docs/L3_PREPARATION_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e9921d5826ed7f822381e6eb12e29b92d7fc87e2",
+    "path": "docs/LOCAL_DELIVERY_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "353837a8247f98e1ff9bd0464824e3ee14ae6322",
+    "path": "docs/SOURCE_AUDIT_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "101db6e9de46cf251df82bbad75e336877732c25",
+    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "f7a023cba75483f6c214b8bdb8b8f9a50612e3dc",
+    "path": "docs/LOCAL_DELIVERY_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "67730b5e895938351dcf784a47fa8acbc9a75ad6",
+    "path": "docs/LOCAL_DELIVERY_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "cfc1cf51606efb40dd25a3c14888c01b6b307e6b",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "937f6fb8368a66603802eab76b1e101eb3cfce5d",
+    "path": "docs/RUN_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "c12e188ef9017fcf5ed3c729ffa18b6d987fec2b",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "d8e8ce0d1260619f80f4f9a08e032565c38bd31b",
+    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "579e83a0f82d7d5e2112bb0992bc610d0fee007f",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "8c68cfd01a62e07f80ee5e1fc330864d0086e466",
+    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "93012b2ec54c96381a4ff57a31926e3bb44e0cf0",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "268093a10d93d8f1013d78529975c208522122f5",
+    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e8d786b50adde25e3dbae1c139d648bd9ca7bd27",
+    "path": "docs/INSTALL_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "76691fdb15a96955c09e32be20a7ad3f2e3a07e4",
+    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "58b60ff4e5a4833f29a80cd461c8727fb564bb5e",
+    "path": "README_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "bce9b3095d63851cb3e4190269adbc23024d492e",
+    "path": "docs/INSTALL_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "766a472823b8916bf6a917ca33d79e6082e446c8",
+    "path": "docs/SOURCE_AUDIT_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "a14707080d2859c036f1236ec6b98e6d56a43c05",
+    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "archive_member": null
+  },
+  {
+    "git_blob": "e5b9d38d2cd2a87e18936b619277f5f8358aec6a",
+    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "archive_member": null
+  }
+]

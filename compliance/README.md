@@ -20,3 +20,10 @@ The XCFun patch touches CMakeLists.txt, whose original header credits Radovan Ba
 Native dependency archives and the OCI image are outside Git, in the local candidate package. Source-only publication and image distribution have separate readiness assessments in docs/PUBLICATION_BOUNDARIES_zh-CN.md. Neither is published by this repository's CI.
 
 The actual high-cost Docker candidate has a separate [2026-10-09 component review](HIGH_COST_COMPONENTS_20261009_zh-CN.md) and [machine addendum](high-cost-license-addendum-20261009.json). geomeTRIC 1.1.1 carries an additional training-dataset restriction and must not be described as unmodified BSD-3-Clause. RDKit's core BSD and wheel-packaging MIT notices are distinct. Bundled native build/source mapping and the Amadeus font's redistribution authorization remain unresolved. Image distribution stays BLOCKED_LOCAL_ONLY; this source repository's Apache-2.0 does not relicense those materials.
+
+The user-supplied YouMind guide at `docs/index.html` and the original/derived
+guide materials under `docs/runtime-guide` preserve their recorded provenance
+and pending rights status. The root Apache-2.0 does not automatically relicense
+them. Public inclusion is part of the project owner's final synchronization
+scope confirmation, distinct from OCI image distribution. See
+[the synchronization preparation](../docs/GITHUB_SYNC_PREPARATION_20261009_zh-CN.md).

@@ -1,5 +1,7 @@
 # AI4OrgChem Local Molecular Calculation Runtime
 
+[GitHub synchronization preparation and scope](docs/GITHUB_SYNC_PREPARATION_20261009_zh-CN.md): the proposed independent repository is `CCcolab/AI4OrgChem-Runtime`. History and guide publication scope await owner confirmation; no repository creation, push or Pages activation has occurred.
+
 The [local browser guide](docs/index.html) is now stored with the project. Its [import and maintenance record](docs/RUNTIME_WEB_GUIDE_zh-CN.md) preserves the original package and validation scope. GitHub synchronization and Pages hosting remain for a later user-authorized step.
 
 Source installation now has a separate [prepare/build/identity-registration guide](docs/SOURCE_INSTALLATION_zh-CN.md). It uses a public pinned base, public locked dependencies and a reconstructed frozen scientific source tree; newly built images receive independent installation records and do not inherit historical scientific PASS. Use a Git clone or the installer-produced source ZIP. [Clean-directory acceptance](docs/SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.md) passed public preparation/build, four service registrations, 45 engineering tests and four bounded tasks. High-cost scientific replay and fresh-machine acceptance were NOT_EXECUTED; historical candidates below remain separately identified.
