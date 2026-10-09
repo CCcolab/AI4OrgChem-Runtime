@@ -1,0 +1,33 @@
+FROM --platform=linux/amd64 docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2
+ARG SCIENCE_ARCHIVE_SHA256
+ARG INSTALL_REQUIREMENTS_SHA256
+LABEL ai4orgchem.installation.foundation="public-source-v1" \
+      ai4orgchem.installation.science-archive-sha256=$SCIENCE_ARCHIVE_SHA256 \
+      ai4orgchem.installation.requirements-sha256=$INSTALL_REQUIREMENTS_SHA256
+ENV PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 \
+    AI4ORGCHEM_SOURCE=/opt/ai4orgchem PYTHONPATH=/opt/ai4orgchem/software/src \
+    OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
+WORKDIR /opt/runtime
+COPY build-inputs/dependencies /install-dependencies
+COPY locks/requirements-installation-linux-amd64.txt /install-dependencies/requirements.txt
+RUN python -m venv /opt/venv \
+ && /opt/venv/bin/python -m pip install --no-index --no-deps --find-links /install-dependencies/wheels setuptools==78.1.0 \
+ && /opt/venv/bin/python -m pip install --no-index --no-deps --no-build-isolation --require-hashes --find-links /install-dependencies/wheels --find-links /install-dependencies/sources -r /install-dependencies/requirements.txt \
+ && /opt/venv/bin/python -m pip check
+RUN mkdir -p /opt/install-build \
+ && /opt/venv/bin/python -c "import hashlib,json,pathlib; files=sorted(pathlib.Path('/root/.cache/pip/wheels').rglob('geometric*.whl')); assert len(files)==1; pathlib.Path('/opt/install-build/generated-wheels.json').write_text(json.dumps([{'filename':p.name,'size':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'identity':'NEW_BUILD_OUTPUT'} for p in files],indent=2)+'\n')"
+# Git is used by the existing fixed protocol readers; this affects this image only.
+RUN apt-get update && apt-get install -y --no-install-recommends git \
+ && rm -rf /var/lib/apt/lists/*
+COPY locks/source.installation.lock.json locks/source.lock.json locks/source.user-molecule.lock.json locks/source-files.sha256.json locks/source-user-molecule-files.sha256.json /opt/runtime/locks/
+COPY scripts/prepare-science-install-source.py /opt/runtime/scripts/prepare-science-install-source.py
+COPY build-inputs/science.tar /install-science.tar
+RUN python scripts/prepare-science-install-source.py extract --archive /install-science.tar --destination /opt/ai4orgchem \
+ && mkdir -p /opt/install-build /output /locks /input /scratch \
+ && dpkg-query -W > /opt/install-build/debian-packages.txt \
+ && /opt/venv/bin/python -m pip list --format=json > /opt/install-build/python-packages.json \
+ && useradd --uid 10001 --create-home runner \
+ && chown runner:runner /output /locks /scratch \
+ && chmod -R a-w /opt/ai4orgchem /opt/venv /opt/install-build
+ENV PATH="/opt/venv/bin:$PATH"
+USER 10001:10001

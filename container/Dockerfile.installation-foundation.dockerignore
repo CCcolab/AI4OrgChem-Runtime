@@ -1,0 +1,9 @@
+.git
+.venv
+__pycache__
+.pytest_cache
+validation
+docs
+build-inputs/**
+!build-inputs/science.tar
+!build-inputs/dependencies/**

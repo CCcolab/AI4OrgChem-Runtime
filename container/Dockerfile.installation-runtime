@@ -1,0 +1,68 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+USER root
+ARG RUNTIME_COMMIT
+ARG BASE_IMAGE_ID
+ARG MOLECULAR_SOURCE_SHA256
+ARG MOLECULAR_DEPENDENCY_SHA256
+ARG REGISTERED_SOURCE_SHA256
+ARG REGISTERED_DEPENDENCY_SHA256
+ARG PROTOCOL_SOURCE_SHA256
+ARG PROTOCOL_DEPENDENCY_SHA256
+ARG HIGH_COST_SOURCE_SHA256
+ARG HIGH_COST_DEPENDENCY_SHA256
+ARG HIGH_COST_PROFILE_SHA256
+LABEL org.opencontainers.image.title="AI4OrgChem source-built local installation" \
+      org.opencontainers.image.revision=$RUNTIME_COMMIT \
+      ai4orgchem.source.commit="cc7437901119e71ef7945a12813c021c383e7648" \
+      ai4orgchem.source.baseline="28511f3d84fa65707a107cde1e8121a7b4334ecb" \
+      ai4orgchem.source.tag-status="public-baseline-plus-retained-overlay" \
+      ai4orgchem.user-molecule.status="engineering-only-compute-gated" \
+      ai4orgchem.installation.distribution="BLOCKED-local-only" \
+      ai4orgchem.molecular.schema="molecular-single-point-v1" \
+      ai4orgchem.molecular.runtime-commit=$RUNTIME_COMMIT \
+      ai4orgchem.molecular.source-sha256=$MOLECULAR_SOURCE_SHA256 \
+      ai4orgchem.molecular.dependency-sha256=$MOLECULAR_DEPENDENCY_SHA256 \
+      ai4orgchem.molecular.base-image-id=$BASE_IMAGE_ID \
+      ai4orgchem.registered.schema="fixed-registered-cases-v1" \
+      ai4orgchem.registered.runtime-commit=$RUNTIME_COMMIT \
+      ai4orgchem.registered.source-sha256=$REGISTERED_SOURCE_SHA256 \
+      ai4orgchem.registered.dependency-sha256=$REGISTERED_DEPENDENCY_SHA256 \
+      ai4orgchem.registered.base-image-id=$BASE_IMAGE_ID \
+      ai4orgchem.protocol.schema="protocol-cases-v1" \
+      ai4orgchem.protocol.runtime-commit=$RUNTIME_COMMIT \
+      ai4orgchem.protocol.source-sha256=$PROTOCOL_SOURCE_SHA256 \
+      ai4orgchem.protocol.dependency-sha256=$PROTOCOL_DEPENDENCY_SHA256 \
+      ai4orgchem.protocol.base-image-id=$BASE_IMAGE_ID \
+      ai4orgchem.high-cost.schema="high-cost-cases-v1" \
+      ai4orgchem.high-cost.runtime-commit=$RUNTIME_COMMIT \
+      ai4orgchem.high-cost.source-sha256=$HIGH_COST_SOURCE_SHA256 \
+      ai4orgchem.high-cost.dependency-sha256=$HIGH_COST_DEPENDENCY_SHA256 \
+      ai4orgchem.high-cost.profile-sha256=$HIGH_COST_PROFILE_SHA256 \
+      ai4orgchem.high-cost.base-image-id=$BASE_IMAGE_ID
+ENV AI4ORGCHEM_RUNTIME_COMMIT=$RUNTIME_COMMIT \
+    AI4ORGCHEM_MOLECULAR_SOURCE_SHA256=$MOLECULAR_SOURCE_SHA256 \
+    AI4ORGCHEM_MOLECULAR_DEPENDENCY_SHA256=$MOLECULAR_DEPENDENCY_SHA256 \
+    AI4ORGCHEM_REGISTERED_SOURCE_SHA256=$REGISTERED_SOURCE_SHA256 \
+    AI4ORGCHEM_REGISTERED_DEPENDENCY_SHA256=$REGISTERED_DEPENDENCY_SHA256 \
+    AI4ORGCHEM_PROTOCOL_RUNTIME_COMMIT=$RUNTIME_COMMIT \
+    AI4ORGCHEM_PROTOCOL_SOURCE_SHA256=$PROTOCOL_SOURCE_SHA256 \
+    AI4ORGCHEM_PROTOCOL_DEPENDENCY_SHA256=$PROTOCOL_DEPENDENCY_SHA256 \
+    AI4ORGCHEM_HIGH_COST_COMMIT=$RUNTIME_COMMIT \
+    AI4ORGCHEM_HIGH_COST_SOURCE_SHA256=$HIGH_COST_SOURCE_SHA256 \
+    AI4ORGCHEM_HIGH_COST_DEPENDENCY_SHA256=$HIGH_COST_DEPENDENCY_SHA256
+COPY runtime /opt/runtime/runtime
+COPY reference /opt/runtime/reference
+COPY configs /opt/runtime/configs
+COPY profiles /opt/runtime/profiles
+COPY schemas /opt/runtime/schemas
+COPY locks /opt/runtime/locks
+COPY scripts /opt/runtime/scripts
+COPY tests /opt/runtime/tests
+COPY container /opt/runtime/container
+COPY examples /opt/runtime/examples
+COPY LICENSE NOTICE /opt/runtime/
+RUN /opt/venv/bin/python -m pip check && chmod -R a-w /opt/runtime
+USER 10001:10001
+ENTRYPOINT ["/opt/venv/bin/python", "-m", "runtime.user_molecule"]
+CMD ["--help"]
