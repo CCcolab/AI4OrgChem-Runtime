@@ -1,0 +1,76 @@
+{
+  "schema": "runtime-web-module-names-v1",
+  "scope": "PRESENTATION_ONLY_INTERNAL_IDS_AND_SCIENCE_UNCHANGED",
+  "modules": [
+    {
+      "protocol_id": "P01",
+      "name": "轨道表示与密度对照",
+      "scope": "固定乙烯轨道变换与密度／能量不变量对照"
+    },
+    {
+      "protocol_id": "P02",
+      "name": "结构与光谱表值统计",
+      "scope": "冻结出版表值统计与回归；不计算新光谱"
+    },
+    {
+      "protocol_id": "P03",
+      "name": "扭转构型端点与能量账本",
+      "scope": "已保存端点账本与冻结几何单点"
+    },
+    {
+      "protocol_id": "P04",
+      "name": "π–π条件态与轨道响应",
+      "scope": "固定双状态直接项与轨道响应对照"
+    },
+    {
+      "protocol_id": "P05",
+      "name": "π–σ条件能量对照",
+      "scope": "固定角度条件能量单点"
+    },
+    {
+      "protocol_id": "P06",
+      "name": "片段条件能量组装",
+      "scope": "固定双片段σ–σ条件态独立组装"
+    },
+    {
+      "protocol_id": "P07",
+      "name": "能量账本闭合校验",
+      "scope": "同哈密顿量保存账本；无新量子计算"
+    },
+    {
+      "protocol_id": "P08",
+      "name": "局域化端点与参照能量",
+      "scope": "丁二烯固定局域化端点与参照热化学"
+    },
+    {
+      "protocol_id": "P09",
+      "name": "条件态与稳定性诊断",
+      "scope": "环丁二烯固定几何的条件态诊断"
+    },
+    {
+      "protocol_id": "P10",
+      "name": "键长交替与能量响应",
+      "scope": "苯固定五点几何的普通DFT能量响应"
+    },
+    {
+      "protocol_id": "P11",
+      "name": "多态约束结构优化",
+      "scope": "固定体系17态；旧候选仅苯G先导通过"
+    },
+    {
+      "protocol_id": "P12",
+      "name": "环状体系尺寸与状态对照",
+      "scope": "固定环状体系61态；旧候选仅N12-G先导通过"
+    },
+    {
+      "protocol_id": "P13",
+      "name": "共轭图规则与能量账本",
+      "scope": "固定图案例与ESE／CESE算术账本"
+    },
+    {
+      "protocol_id": "P14",
+      "name": "条件能量与结构响应复核",
+      "scope": "固定协议联合复核；任意用户条件Compute仍BLOCKED"
+    }
+  ]
+}

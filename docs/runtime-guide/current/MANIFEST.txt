@@ -1,0 +1,18 @@
+# MANIFEST · v0.3.0-candidate
+根目录：ai4orgchem-runtime-guide/
+文件总数：10（不添加目录条目）
+状态 currentordinaryenabled / legacyconditionalblocked；候选非已验收
+物理顺序 overview、quick-start、user-molecule、results、tasks、help
+
+templates/molecular-service/water/request.json — 277 bytes LF原文
+templates/molecular-service/water/molecule.xyz — 123 bytes LF原文
+docs/index.html — 当前cleanExport完整HTML，全部内嵌CSS/JS，可独立编辑并再次生成ZIP。
+docs/.nojekyll — 空文件，供静态托管跳过Jekyll处理；不自动发布。
+README.md — 网页维护、包目录、环境前提及解压根目录预览指南。
+content/guide_zh-CN.md — 正文快照、多命令（按每个代码ID与data-language登记），入门命令登记及历史登记。
+provenance/sources.md — 来源索引、资料缺口及资源授权说明。
+verification/checks.md — 既有检查清单；所有已知未完成及历史证据限制保留。
+MIGRATION.md — 目录说明及待执行迁移步骤。
+MANIFEST.txt — 本10文件及用途清单、完整包范围和验收限制。
+
+“包完整”仅指网页、维护材料及水模板；水两个文件UTF-8 LF保留末LF，不trim。动态QA及包外清单另行下载、不入ZIP。新包大小和SHA-256须现场生成，不继承历史数值；修订前下载和三宽度结构证据见verification/checks.md历史区，不代表当前重新验收。ZIP实物CRC/哈希与HTML一致性尚未完成。不含Runtime、镜像、科学档案、未取得资料、虚构依赖文件、额外图片或第三方授权。网页来源与权属待确认，不默认开源或套用Runtime许可。下载、解压、导出后再运行及迁移测试未声称通过，需用户实际浏览器验证。无上传、不发布、不变权限。
