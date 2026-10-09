@@ -1,5 +1,7 @@
 # AI4OrgChem Local Molecular Calculation Runtime
 
+[中文说明](README_zh-CN.md)
+
 Source and the supplied web guide have been publicly synchronized to [CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime) under the owner's authorization. The first push of `06d50885bdccf31f83b89229c1513121542375d5` completed [GitHub Actions run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122): all three scoped jobs succeeded. See the [public synchronization record](docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.md); this does not certify all scientific services or release an image. GitHub Pages remains disabled; no online calculation, version tag or Release is provided.
 
 The [browser guide](docs/index.html) is included in the public source repository and can be opened locally. Its [import and maintenance record](docs/RUNTIME_WEB_GUIDE_zh-CN.md) preserves the original package and validation scope. Repository synchronization is complete; Pages hosting is a separate pending action.
@@ -73,8 +75,6 @@ The earlier [full local W01–W06 engineering CI](docs/USER_MOLECULE_CI_W01_W06_
 [W06 engineering](docs/USER_MOLECULE_W06_ENGINEERING_zh-CN.md) and the new independent molecular bridge run from read-only committed-source mounts over the existing r3 image; they are not baked into it. [SCF/method review questions](docs/USER_MOLECULE_SCF_REVIEW_REQUEST_zh-CN.md) identify the remaining scientific decisions. No image was rebuilt or published.
 
 Delivery review (2026-10-03): local Docker L0–L4, equivalence and scoped joint classification are verified. WSLc is **BLOCKED / NOT_EXECUTED**. GitHub Actions is **statically reviewed; execution NOT_EXECUTED**; later local engineering CI runs have separate records. **Image distribution is BLOCKED; source-only publication requires separate confirmation.** Apache-2.0 covers runtime-owned code, not every image component. See [final review](validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md) and [license review](docs/LICENSE_REVIEW_zh-CN.md).
-
-[中文说明](README_zh-CN.md)
 
 An Apache-2.0 CPU runtime wrapper around the unchanged, commit-pinned AI4OrgChem public software and protocols. Source: `v0.3.2`, commit `28511f3d84fa65707a107cde1e8121a7b4334ecb`.
 

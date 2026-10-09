@@ -1,5 +1,7 @@
 # AI4OrgChem 本地分子计算 Runtime
 
+[English](README.md)
+
 源码与用户提供的网页指南已按用户授权公开同步到[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。首推提交`06d50885bdccf31f83b89229c1513121542375d5`对应[GitHub Actions run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122)，三个限定范围的job均成功。详见[公开同步实绩](docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)；不据此认证全部科学服务或分发镜像。Pages尚未启用，不提供在线计算，尚未确定新版本号、打标签或发布Release。
 
 [网页使用指南](docs/index.html)已随Runtime源码纳入公开仓库，可下载后在本地浏览器打开；[导入、验收与后续维护说明](docs/RUNTIME_WEB_GUIDE_zh-CN.md)保留原包和字节身份。仓库同步已完成，Pages托管仍是单独待办。
