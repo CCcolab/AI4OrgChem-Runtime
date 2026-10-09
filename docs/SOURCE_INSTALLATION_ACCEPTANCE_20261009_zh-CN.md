@@ -29,7 +29,7 @@ Python 输入为官方 PyPI 的 21 wheel＋1 geomeTRIC 源码包，22 项版本�
 | 原用户分子 Check 使用新镜像 | COMPLETED、退出 0 | 原请求格式；条件 Compute 继续 BLOCKED |
 | 非 root、只读根文件系统、断网、退出码与输出留存 | PASS | 四个受测任务均检查实际容器；删除后复核 196 项输出哈希 |
 
-新安装每次运行保存 `INSTALLATION_RECORD.json`、`INSTALLATION_PREFLIGHT.json` 和原任务证据。新镜像的安装 ID 与历史验收记录区分，标签被重指向、来源或依赖不同、越范围任务均拒绝。原预算、科学规则、数值门槛和清理合同继续生效。
+通过 `run-installed-runtime.py` 执行的任务保存 `INSTALLATION_RECORD.json`、`INSTALLATION_PREFLIGHT.json` 和原任务证据。原用户分子 Check 另以原格式保存镜像身份、预检及运行清单。新镜像的安装 ID 与历史验收记录区分，标签被重指向、来源或依赖不同、越范围任务均拒绝。原预算、科学规则、数值门槛和清理合同继续生效。
 
 ## 保留的限制
 
