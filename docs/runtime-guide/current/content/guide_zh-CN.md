@@ -108,7 +108,7 @@ S1—S6提供协议查阅、实现审查、运行资格、固定几何、结构�
 
 ### 从源码安装：新用户水分子起点
 
-先取得 Runtime Git 克隆（需要Git），或本项目带 Git commit/tree/blob 证据的安装源码ZIP。公开源码位于[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)，可按下方命令Git克隆；专用来源证明ZIP尚无正式Release下载入口，普通GitHub自动ZIP不可替代。网页ZIP不是安装源码包，不含镜像或依赖。
+先取得 Runtime Git 克隆（需要Git），或本项目带 Git commit/tree/blob 证据的安装源码ZIP。公开源码位于[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)，可按下方命令Git克隆；v0.1.0的[Release附件](https://github.com/CCcolab/AI4OrgChem-Runtime/releases/tag/v0.1.0)提供带身份证明的source-v0.1.0源码ZIP；guide-v0.1.0只是网页包。普通GitHub自动ZIP不可替代专用安装源码包。网页ZIP不是安装源码包，不含镜像或依赖。
 
 需要自己的 Python3.12+、Docker Linux/amd64；构建网络需访问 GitHub / PyPI / DockerHub / Debian。选择全新的独立目录，不覆盖科研工作区。
 
@@ -2626,6 +2626,9 @@ AI4OrgChem v0.3.2 · 固定提交：
 如果当前浏览器的动态导出被完整性守卫拒绝，可下载已核验的部署文件：[静态指南 ZIP](https://cccolab.github.io/AI4OrgChem-Runtime/runtime-guide/current-guide.zip) · [静态指南 HTML](https://cccolab.github.io/AI4OrgChem-Runtime/runtime-guide/current/docs/index.html)。这些文件由实际下载产物核验后随仓库部署，不依赖当前浏览器的快照解析；身份与哈希见本轮导出验收记录。动态导出的守卫继续保留。
 
 静态指南由GitHub Pages托管；托管服务的访问记录由GitHub管理。网页不向计算后端提交分子或请求，复制与导出在本地浏览器完成；科学计算在用户本地Runtime执行。
+
+## v0.1.0源码与指南发布材料
+发布入口：https://github.com/CCcolab/AI4OrgChem-Runtime/releases/tag/v0.1.0 。本次发布链接文字与实际导出字节记录见 validation/web-guide/release-v0.1.0-downloads.json；旧修订及原浏览器补验记录各保留其原字节身份，不作为本次新包哈希。没有改动导出算法或科学代码。
 
 ## 静态指南网址与使用方式（2026-10-10）
 GitHub Pages静态指南已启用：https://cccolab.github.io/AI4OrgChem-Runtime/ 。可直接在浏览器阅读、搜索、复制命令和下载指南；网页不提供在线计算，计算命令仍由用户本地Runtime执行。整个已公开main/docs作为发布源。

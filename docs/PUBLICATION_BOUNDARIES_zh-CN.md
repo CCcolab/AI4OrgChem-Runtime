@@ -28,7 +28,7 @@ Git clone 提供源码和历史；项目制作的安装源码 ZIP 提供源码�
 
 既有 Debian/Python 精确版本源码、签名、vendor 通知与许可材料已取得的事实保留；未知项不能扩大为“所有源码都缺失”。根 Apache-2.0 只覆盖 Runtime 自有代码，第三方文件按其原许可；见 [LICENSE](../LICENSE)、[NOTICE](../NOTICE)及[compliance README](../compliance/README.md)。
 
-镜像另需核对目标 registry、权限和可见性，取得明确分发授权，完成实际推送/拉取和 registry digest 登记。本轮不分配新 Runtime 版本号，不打正式标签，不发布 Release 或镜像。
+镜像另需核对目标 registry、权限和可见性，取得明确分发授权，完成实际推送/拉取和 registry digest 登记。项目负责人已另行授权v0.1.0源码与静态指南Release及对应标签；该授权不包含镜像分发，也不赋予未执行科学功能验收。版本范围见[发布说明](RELEASE_v0.1.0_zh-CN.md)。
 
 ## 本地归档与后续增强
 

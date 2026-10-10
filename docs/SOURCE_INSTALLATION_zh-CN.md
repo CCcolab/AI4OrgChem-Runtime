@@ -8,6 +8,8 @@
 
 ## 环境与下载
 
+v0.1.0的[Release附件](https://github.com/CCcolab/AI4OrgChem-Runtime/releases/tag/v0.1.0)提供 `AI4OrgChem-Runtime-source-v0.1.0.zip`，该专用源码ZIP带本项目Git身份证明；解压到全新目录，进入包含scripts的目录后继续下方prepare/build流程。`AI4OrgChem-Runtime-guide-v0.1.0.zip`只是网页指南，不能用于安装。GitHub自动的Source code ZIP仍不替代专用安装源码包。
+
 需要 Python 3.12 或更新版本、可用的 Linux/amd64 Docker 引擎，以及构建时访问 GitHub、PyPI、Docker Hub 和 Debian 软件源的网络。使用 Git 克隆时需要已有 Git。主机 Python 只运行标准库脚本，不在主机或原 WSL 科研环境中安装科学依赖。首次构建下载约 161 MB 的 Python 依赖，另外需要基础系统镜像和 Git 系统包。磁盘与任务资源仍由各服务的原预检核查。原用户分子 Check/Report 的 PowerShell 启动器另需已有 PowerShell 7.3+。
 
 可以在 Git 克隆目录运行，或使用本项目 `install-local-runtime.py package` 制作的安装源码 ZIP。该 ZIP 携带 Git commit/tree/blob 身份证据，不含镜像、wheels 或旧 `science.tar`。普通 GitHub 自动源码 ZIP 尚不携带本安装证据，使用它时应改用 Git 克隆或本项目制作的安装 ZIP；不要自行改写身份清单。

@@ -1,0 +1,33 @@
+{
+  "schema": "external-browser-retest-receipt-v1",
+  "date": "2026-10-10",
+  "status": "PASS",
+  "scope": "Original failing browser: three dynamic download buttons and actual downloaded files, as reported by the external reviewer through the project owner",
+  "evidence_basis": "USER_PROVIDED_EXTERNAL_REVIEW_RESULT_NOT_MAINTAINER_INDEPENDENT_EXECUTION",
+  "user_report": "原失败浏览器的三个按钮及下载实物均已补验通过。",
+  "reported_target_context": "f3c6bdfd8210d6d8b89a9f453245615477b95157; guide HTML unchanged since46b5c1a",
+  "site_url": "https://cccolab.github.io/AI4OrgChem-Runtime/",
+  "buttons": {
+    "standalone_html": "PASS_REPORTED",
+    "dynamic_zip": "PASS_REPORTED",
+    "delivery_manifest_json": "PASS_REPORTED"
+  },
+  "expected_reviewed_artifact_identity": {
+    "basis": "Previously fixed identity supplied for reviewer verification, not newly supplied raw attachment hashes",
+    "html_bytes": 227890,
+    "html_sha256": "76e95a1682888b41521ee715250fbd4a5ab17a63d31f76b38f421d2c0e7b29d4",
+    "zip_bytes": 494481,
+    "zip_sha256": "b97380616eec8463c890d37e754d0bf75fa3799e14db5e9ee3db72985d5cda6e"
+  },
+  "raw_reviewer_downloads_attached_this_turn": false,
+  "raw_reviewer_diagnostic_json_attached_this_turn": false,
+  "browser_profile_details": "NOT_PROVIDED_THIS_TURN",
+  "current_screenshot_scope": "GitHub sidebar example, not a download receipt",
+  "historical_failure_state": "PRESERVED; prior70ad3d6 rejection remains failed at its own identity",
+  "historical_local_success_receipts_changed": false,
+  "supersedes_current_issue_state": "NOT_RETESTED_TO_SCOPED_PASS; does not rewrite prior execution records",
+  "applies_to_later_content_exports": "NO_AUTOMATIC_BYTE_IDENTITY_INHERITANCE",
+  "scientific_calls": 0,
+  "local_image_rebuilds": 0,
+  "full_browser_scientific_certification": false
+}

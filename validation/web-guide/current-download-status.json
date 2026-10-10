@@ -1,0 +1,12 @@
+{
+  "schema": "current-download-issue-state-v1",
+  "date": "2026-10-10",
+  "issue": "Original browser dynamic export compatibility",
+  "status": "PASS",
+  "qualification": "SCOPED_EXTERNAL_REVIEW_RESULT_RELAYED_BY_PROJECT_OWNER",
+  "receipt": "validation/web-guide/external-browser-retest-20261010.json",
+  "previous_state": "NOT_RETESTED",
+  "previous_observations_preserved": true,
+  "older_receipts_are_immutable": true,
+  "scope_excludes": ["All browsers", "True200percent zoom", "Full keyboard audit", "Scientific or platform acceptance", "Byte identity of later content exports"]
+}

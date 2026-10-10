@@ -1,3 +1,6 @@
+# v0.1.0发布链接与指南身份
+当前源码与指南版本为v0.1.0，Release入口https://github.com/CCcolab/AI4OrgChem-Runtime/releases/tag/v0.1.0 。本次实际导出身份见validation/web-guide/release-v0.1.0-downloads.json；原浏览器补验PASS是外部审阅者经负责人报告，对应此前固定字节，见validation/web-guide/external-browser-retest-20261010.json。旧记录保持原身份。源码ZIP用于安装，指南ZIP不含计算引擎。
+
 # 历史维护说明与本地实测范围
 以下原始维护登记中“当时”“原次”指YouMind提供材料时的状态；保留原失败与未执行清单，不把它们当作当前包外实测结论。本次修订网页及实际按钮产物登记于 Runtime validation/web-guide/special-review-followup-20261010.json；此前 full-review-repairs-20261010.json、online-browser-followup-fa7b4ee-20261010.json 和 export-compatibility-round2-20261010.json 均仅对应各自旧字节，逐项核对对应对象；记录缺少、未执行或哈希不匹配时标未知，不自动继承 PASS。final-consistency-r2-20261009.json 仅为历史网页身份，不绑定本版 HTML 或浏览器 ZIP。本页手工QA初始未填写与包外实测是两种记录。真实200%缩放、完整键盘和多浏览器仍NOT_EXECUTED，不宣称完整网页认证；网页和CI均不授予新增科学资格。
 
@@ -326,6 +329,9 @@ NOT_EXECUTED
 ## 文件索引表局部滚动修复
 文件索引表局部滚动修复已写入，修后独立三宽度复测待执行。360/768/1440 须在全部 details 展开时独立复测；原次不登记通过、不套用旧哈希。裸表已在源 HTML 中置入可键盘聚焦的 table-scroll 局部滚动区域，保留表格 min-width:680px 与现有 grid/card/details 收缩规则；cleanExport 与 ZIP 内 docs/index.html 沿用源 HTML 修复，导出算法未改。
 
+## v0.1.0源码与指南发布材料
+发布入口：https://github.com/CCcolab/AI4OrgChem-Runtime/releases/tag/v0.1.0 。原次发布链接文字与实际导出字节记录见 validation/web-guide/release-v0.1.0-downloads.json；旧修订及原浏览器补验记录各保留其原字节身份，不作为原次新包哈希。没有改动导出算法或科学代码。
+
 ## 静态指南网址与使用方式（2026-10-10）
 GitHub Pages静态指南已启用：https://cccolab.github.io/AI4OrgChem-Runtime/ 。可直接在浏览器阅读、搜索、复制命令和下载指南；网页不提供在线计算，计算命令仍由用户本地Runtime执行。整个已公开main/docs作为发布源。
 
@@ -347,7 +353,7 @@ GitHub Pages静态指南已启用：https://cccolab.github.io/AI4OrgChem-Runtime
 
 ### 从源码安装：新用户水分子起点
 
-先取得 Runtime Git 克隆（需要Git），或本项目带 Git commit/tree/blob 证据的安装源码ZIP。公开源码位于[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)，可按下方命令Git克隆；专用来源证明ZIP尚无正式Release下载入口，普通GitHub自动ZIP不可替代。网页ZIP不是安装源码包，不含镜像或依赖。
+先取得 Runtime Git 克隆（需要Git），或本项目带 Git commit/tree/blob 证据的安装源码ZIP。公开源码位于[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)，可按下方命令Git克隆；v0.1.0的[Release附件](https://github.com/CCcolab/AI4OrgChem-Runtime/releases/tag/v0.1.0)提供带身份证明的source-v0.1.0源码ZIP；guide-v0.1.0只是网页包。普通GitHub自动ZIP不可替代专用安装源码包。网页ZIP不是安装源码包，不含镜像或依赖。
 
 需要自己的 Python3.12+、Docker Linux/amd64；构建网络需访问 GitHub / PyPI / DockerHub / Debian。选择全新的独立目录，不覆盖科研工作区。
 

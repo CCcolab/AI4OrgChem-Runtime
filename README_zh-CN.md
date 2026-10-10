@@ -2,6 +2,8 @@
 
 [English](README.md)
 
+**版本 v0.1.0** · [Release与下载](https://github.com/CCcolab/AI4OrgChem-Runtime/releases/tag/v0.1.0) · [版本范围](docs/RELEASE_v0.1.0_zh-CN.md) · [作者与致谢](AUTHORS.md)。提供源码与指南，不含预构建镜像或完整环境。
+
 **[直接打开 Runtime 用户指南网页](https://cccolab.github.io/AI4OrgChem-Runtime/)**
 
 ## 项目目的与目标

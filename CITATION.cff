@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this source software when using AI4OrgChem Runtime. Scientific sources and dependencies require their own citations."
+type: software
+title: "AI4OrgChem Runtime: Scoped Local Computation and Traceable Review"
+authors:
+  - family-names: Chen
+    given-names: Xiao
+version: 0.1.0
+date-released: 2026-10-10
+url: "https://github.com/CCcolab/AI4OrgChem-Runtime"
+repository-code: "https://github.com/CCcolab/AI4OrgChem-Runtime"
+abstract: "Local scoped RHF single-point calculations, registered fixed-protocol replay and traceable result review. Not an online calculation service or certification of unexecuted scientific modules."

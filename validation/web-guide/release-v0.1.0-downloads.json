@@ -1,0 +1,76 @@
+{
+  "schema": "release-guide-downloads-v1",
+  "release_version": "0.1.0",
+  "prior_reviewed_runtime_commit": "f3c6bdfd8210d6d8b89a9f453245615477b95157",
+  "scope": "RELEASE_ASSET_LINK_TEXT_AND_MAINTENANCE_NOTES_ONLY; no export algorithm or science change",
+  "status": "PASS_ACTUAL_LOCAL_HTML_ZIP_MANIFEST",
+  "browser": "Codex in-app browser localhost HTTP",
+  "html": {
+    "size": 228926,
+    "sha256": "92d9f5e448c0e71e2bc435b2c1300bd9495ae66f2db12ce77bd3b115cdeafb10"
+  },
+  "zip": {
+    "size": 499322,
+    "sha256": "6f7d7dbe9bc2abcf129059704902739afd2bce1e01cfa53f8cbb8f4691b56ac7",
+    "member_count": 10,
+    "crc": "PASS"
+  },
+  "members": [
+    {
+      "path": "docs/index.html",
+      "size": 228926,
+      "sha256": "92d9f5e448c0e71e2bc435b2c1300bd9495ae66f2db12ce77bd3b115cdeafb10"
+    },
+    {
+      "path": "docs/.nojekyll",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "size": 39316,
+      "sha256": "c22412987eab27b11b63922b0cb137fd86ac23db872d7a5152132fc1c3579f0d"
+    },
+    {
+      "path": "content/guide_zh-CN.md",
+      "size": 123982,
+      "sha256": "971f282fe282101780c71084436a8b8e875e6bd40a33fa3e9e118b9ecc1f970e"
+    },
+    {
+      "path": "provenance/sources.md",
+      "size": 19955,
+      "sha256": "2c7173b9e116cdc35fee84318991ace800dba04f203a965ccd3a7802e9bef140"
+    },
+    {
+      "path": "verification/checks.md",
+      "size": 40720,
+      "sha256": "32f637a1cea31ed8886e406a7247302cc057493fec8844ce3b680b10986e02ac"
+    },
+    {
+      "path": "MIGRATION.md",
+      "size": 42459,
+      "sha256": "793be58da3f417d125579d539595b233bf4975edca5a405a77a0381fa7144c8c"
+    },
+    {
+      "path": "MANIFEST.txt",
+      "size": 1844,
+      "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+    },
+    {
+      "path": "templates/molecular-service/water/request.json",
+      "size": 277,
+      "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+    },
+    {
+      "path": "templates/molecular-service/water/molecule.xyz",
+      "size": 123,
+      "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+    }
+  ],
+  "code_id_texts_preserved": 82,
+  "export_guard_byte_unchanged": true,
+  "guide_internal_identifier": "v0.3.0-candidate retained independently of Runtime version",
+  "external_browser_retest": "PASS_REPORTED_FOR_PRIOR_BYTES; see external-browser-retest-20261010.json; no claim these new content bytes were independently resampled",
+  "scientific_calls": 0,
+  "local_image_rebuilds": 0
+}
