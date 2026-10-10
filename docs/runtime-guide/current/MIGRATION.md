@@ -1,5 +1,5 @@
 # 历史维护说明与本地实测范围
-以下原始维护登记中“当时”“原次”指YouMind提供材料时的状态；保留原失败与未执行清单，不把它们当作当前包外实测结论。当前网页及实际按钮产物分别登记于 Runtime validation/web-guide/current-delivery-20261010.json，逐项核对对应对象；记录缺少、未执行或哈希不匹配时标未知，不自动继承 PASS。final-consistency-r2-20261009.json 仅为历史网页身份，不绑定本版 HTML 或浏览器 ZIP。本页手工QA初始未填写与包外实测是两种记录。真实200%缩放、完整键盘和多浏览器仍NOT_EXECUTED，不宣称完整网页认证；网页和CI均不授予新增科学资格。
+以下原始维护登记中“当时”“原次”指YouMind提供材料时的状态；保留原失败与未执行清单，不把它们当作当前包外实测结论。当前网页及实际按钮产物分别登记于 Runtime validation/web-guide/export-followup-20261010.json，逐项核对对应对象；记录缺少、未执行或哈希不匹配时标未知，不自动继承 PASS。final-consistency-r2-20261009.json 仅为历史网页身份，不绑定本版 HTML 或浏览器 ZIP。本页手工QA初始未填写与包外实测是两种记录。真实200%缩放、完整键盘和多浏览器仍NOT_EXECUTED，不宣称完整网页认证；网页和CI均不授予新增科学资格。
 
 
 
@@ -56,6 +56,17 @@ a44fa481af7c5a62d9d7b923f3b3f0d4947e682b
 普通四步、水技术样例和固定案例已提供；完整网页验收仍有未执行项。任意用户分子的旧条件态比较 Compute BLOCKED；镜像分发 BLOCKED 等其他对象状态不改。
 <a id="protocol-batch2"></a>
 
+新安装入口：先完成[源码安装与构建](https://cccolab.github.io/AI4OrgChem-Runtime/#quick-start)，在同一安装目录登记专题协议案例的服务身份。下列运行命令均沿用这份记录；已登记时不重复登记，不覆盖原记录。示例目录按本机实际位置替换。
+
+<a id="protocol-cases-installation-command"></a>
+
+```powershell
+Set-Location 'D:\chem-work\runtime-install\runtime'
+$installed = Get-Content ..\built-image.json -Raw | ConvertFrom-Json
+python -B .\scripts\register-installation.py --service protocol-cases --image $installed.local_tag --output-dir ..\installations\protocol-cases
+
+```
+
 ### 固定协议受限复核
 
 v0.3.0-candidate · 第二批协议修订。研究用途入口与 Show/Review 证据目录分开；普通用户通过自己的 XYZ 普通 RHF 四步启动，不靠 P 编号。固定研究示例的多态结构优化与多个体系尺寸／状态入口已接入，共P11 17态、环状体系尺寸与状态对照 61态。现有旧Docker候选仅完成苯G与N12-G两个单态的受限科学验收，其他76态和完整新结果组装尚未执行。新源码安装镜像的高成本任务尚未重放，身份登记不能替代科学验收。自选分子的普通DFT尚未开放；部分固定协议已有受限RKS/GL/条件核复核。
@@ -92,13 +103,13 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p03-ledger"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P03 -Mode ledger -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P03 --mode ledger --output-root '..\runs\batch2-p03-ledger-new'
 ```
 
 <a id="batch2-p03-preflight"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P03 -Mode preflight -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P03 --mode preflight --output-root '..\runs\batch2-p03-preflight-new'
 ```
 
 固定输入：旧四优化端点ledger；方法：冻结0° B3LYPG/6-311G(d,p)单点，不新优化。模式 ledger/preflight/live。判读：端点账本与冻结点分开，不声称新优化路径；输出遵循本区整目录清单。
@@ -108,7 +119,7 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p03-live"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P03 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p03-live-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P03 --mode live --budget 'D:\your-work\batch-budget-new.json' --output-root 'D:\your-work\runtime-runs\protocol-cases-p03-live-new'
 ```
 
  <a id="case-protocol-p04"></a>
@@ -118,13 +129,13 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p04-ledger"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P04 -Mode ledger -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P04 --mode ledger --output-root '..\runs\batch2-p04-ledger-new'
 ```
 
 <a id="batch2-p04-preflight"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P04 -Mode preflight -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P04 --mode preflight --output-root '..\runs\batch2-p04-preflight-new'
 ```
 
 固定输入：11有效点ledger；diphenyl imine 0°，原DSI3/FUD各自求解。模式 ledger/preflight/live；精确泛函/基组以原固定协议为准，不猜。输出遵循整目录清单；直接项与轨道响应分别判读，不替换任意分子。
@@ -134,7 +145,7 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p04-live"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P04 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p04-live-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P04 --mode live --budget 'D:\your-work\batch-budget-new.json' --output-root 'D:\your-work\runtime-runs\protocol-cases-p04-live-new'
 ```
 
  <a id="case-protocol-p05"></a>
@@ -144,13 +155,13 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p05-ledger"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P05 -Mode ledger -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P05 --mode ledger --output-root '..\runs\batch2-p05-ledger-new'
 ```
 
 <a id="batch2-p05-preflight"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P05 -Mode preflight -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P05 --mode preflight --output-root '..\runs\batch2-p05-preflight-new'
 ```
 
 固定输入：七角度同母体账本，原定义17° G/FUD。模式 ledger/preflight/live；精确泛函/基组以原协议为准，不猜。输出遵循整目录清单；同母体条件比较，不增加角度或混入其他协议能量。
@@ -160,7 +171,7 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p05-live"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P05 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p05-live-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P05 --mode live --budget 'D:\your-work\batch-budget-new.json' --output-root 'D:\your-work\runtime-runs\protocol-cases-p05-live-new'
 ```
 
  <a id="case-protocol-p06"></a>
@@ -170,13 +181,13 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p06-ledger"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P06 -Mode ledger -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P06 --mode ledger --output-root '..\runs\batch2-p06-ledger-new'
 ```
 
 <a id="batch2-p06-preflight"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P06 -Mode preflight -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P06 --mode preflight --output-root '..\runs\batch2-p06-preflight-new'
 ```
 
 固定输入：0°/17° FUL-2/PDSI账本；新0°原RHF/STO-3G。模式 ledger/preflight/live。输出遵循整目录清单；双片段独立能量按原定义组装，不重优化、不混协议。
@@ -186,7 +197,7 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p06-live"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P06 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p06-live-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P06 --mode live --budget 'D:\your-work\batch-budget-new.json' --output-root 'D:\your-work\runtime-runs\protocol-cases-p06-live-new'
 ```
 
  <a id="case-protocol-p07"></a>
@@ -196,13 +207,13 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p07-preflight"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P07 -Mode preflight -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P07 --mode preflight --output-root '..\runs\batch2-p07-preflight-new'
 ```
 
 <a id="batch2-p07-ledger"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P07 -Mode ledger -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P07 --mode ledger --output-root '..\runs\batch2-p07-ledger-new'
 ```
 
 固定输入：五态桥接闭合。方法：同Hamiltonian冻结账本与资格/资源预检；P07不构建新的量子计算，零新QM；ledger/preflight ONLY，零新QM，无live入口。输出遵循整目录清单；闭合核对不是新增能量计算或科学端点批准。
@@ -214,13 +225,13 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p08-ledger"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P08 -Mode ledger -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P08 --mode ledger --output-root '..\runs\batch2-p08-ledger-new'
 ```
 
 <a id="batch2-p08-preflight"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P08 -Mode preflight -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P08 --mode preflight --output-root '..\runs\batch2-p08-preflight-new'
 ```
 
 固定输入：氢化热表值历史优化账本；新冻结GL几何一次普通RKS、一次原GL核。模式 ledger/preflight/live；精确泛函/基组不猜。输出遵循整目录清单；参照敏感性诊断，非新优化ΔEA。
@@ -230,7 +241,7 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p08-live"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P08 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p08-live-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P08 --mode live --budget 'D:\your-work\batch-budget-new.json' --output-root 'D:\your-work\runtime-runs\protocol-cases-p08-live-new'
 ```
 
  <a id="case-protocol-p09"></a>
@@ -240,13 +251,13 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p09-ledger"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P09 -Mode ledger -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P09 --mode ledger --output-root '..\runs\batch2-p09-ledger-new'
 ```
 
 <a id="batch2-p09-preflight"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P09 -Mode preflight -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P09 --mode preflight --output-root '..\runs\batch2-p09-preflight-new'
 ```
 
 固定输入：旧VDE/ADE/ESE账本；新G-like RKS/稳定性/DSI固定核。模式 ledger/preflight/live；精确泛函/基组不猜。输出遵循整目录清单；固定几何诊断，非最终VDE/ADE/ESE。
@@ -256,7 +267,7 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p09-live"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P09 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p09-live-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P09 --mode live --budget 'D:\your-work\batch-budget-new.json' --output-root 'D:\your-work\runtime-runs\protocol-cases-p09-live-new'
 ```
 
  <a id="case-protocol-p10"></a>
@@ -266,13 +277,13 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p10-ledger"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P10 -Mode ledger -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P10 --mode ledger --output-root '..\runs\batch2-p10-ledger-new'
 ```
 
 <a id="batch2-p10-preflight"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P10 -Mode preflight -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P10 --mode preflight --output-root '..\runs\batch2-p10-preflight-new'
 ```
 
 固定输入：旧核公式与五点账本；新delta=0/0.01/0.02/0.04/0.06 Å五普通RKS。模式 ledger/preflight/live；精确泛函/基组不猜。输出遵循整目录清单；核排斥与键长交替分开，不新增点、不重优化。
@@ -282,7 +293,7 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 <a id="batch2-p10-live"></a>
 
 ```powershell
-.\scripts\start-protocol-case.ps1 -Task P10 -Mode live -Budget 'D:\your-work\batch-budget-new.json' -OutputRoot 'D:\your-work\runtime-runs\protocol-cases-p10-live-new'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\protocol-cases\installation-record.json --task P10 --mode live --budget 'D:\your-work\batch-budget-new.json' --output-root 'D:\your-work\runtime-runs\protocol-cases-p10-live-new'
 ```
 <a id="verification-records"></a>
 
@@ -314,7 +325,7 @@ GitHub Pages静态指南已启用：https://cccolab.github.io/AI4OrgChem-Runtime
 ## 2026-10-09源码首次公开与远端CI记录（历史）
 2026-10-09已按项目负责人授权公开源码与指南：https://github.com/CCcolab/AI4OrgChem-Runtime 。06d5088首次CI三项job均成功，真实P11预检一项跳过；详见https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122 。Pages未启用；；未创建新版本/标签/Release。
 
-说明：下列状态是YouMind原提供时的登记，不是最新包外实测。当时网页与实际下载身份见 Runtime validation/web-guide/current-delivery-20261010.json；final-consistency-r2-20261009.json 仅为历史身份；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
+说明：下列状态是YouMind原提供时的登记，不是最新包外实测。当时网页与实际下载身份见 Runtime validation/web-guide/export-followup-20261010.json；final-consistency-r2-20261009.json 仅为历史身份；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
 
 ## 原YouMind v0.3.0-candidate交付登记（历史）
 候选非已验收；currentordinaryenabled / legacyconditionalblocked。物理顺序 overview、quick-start、user-molecule、results、tasks、help。10 members：原8文件，加 templates/molecular-service/water/request.json 与 molecule.xyz；277/123 bytes、LF结尾、代码textContent原文。14 evidence、7旧任务、3固定案例、1普通服务，12数值checks。原提供时新字节版本的复制核对、ZIP实物CRC/哈希、HTML一致性、重开再导出与迁移及完整WEB合同尚未完成；修订前下载实物与三宽度结构实测只作历史，原提供时QA不继承。新包大小和SHA-256须现场生成。
@@ -387,10 +398,21 @@ python -B .\scripts\list-high-cost-cases.py
 
 不是任意用户分子的通用优化，不代表78态全验收，不改方法或规则，不自动重试／续算。
 
+新安装先登记高成本服务身份；已登记时直接使用现有记录，账本与预检不授权实际计算。
+
+<a id="high-cost-installation-command"></a>
+
+```powershell
+Set-Location 'D:\chem-work\runtime-install\runtime'
+$installed = Get-Content ..\built-image.json -Raw | ConvertFrom-Json
+python -B .\scripts\register-installation.py --service high-cost-cases --image $installed.local_tag --output-dir ..\installations\high-cost-cases
+
+```
+
 <a id="p11-ledger-command"></a>
 
 ```powershell
-.\scripts\start-high-cost-case.ps1 -Task P11 -Mode ledger -OutputRoot 'D:\chem-work\high-cost-runs'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\high-cost-cases\installation-record.json --task P11 --mode ledger --output-root 'D:\chem-work\high-cost-runs'
 ```
 
 state list读取实际注册状态与Unit；ledger只读历史账本，不批准计算。preflight仅元数据预检：按状态清单选择尚未执行Unit，不猜ID、不重复准入已通过态；live才是受预算约束的单态科学执行，本卡仅说明、不安排执行。
@@ -399,7 +421,7 @@ state list读取实际注册状态与Unit；ledger只读历史账本，不批准
 
 先用list-high-cost-cases.py读取实际注册Unit，从尚未执行的16态中选择恰一个Unit。已通过P11B-benzene-G保留PASS、不重算、不重复准入。不猜其他Unit ID，不用可运行占位命令冒充真实例子。
 
-用create-high-cost-budget.py为所选Unit在全新、尚不存在的文件创建独立预算，单态ceiling为43200秒。start-high-cost-case.ps1的-Task P11 -Mode live必须精确指定-Unit、-Budget、-OutputRoot，可选-PythonExe/-DockerExe。此处只有参数说明，没有可复制的虚构live命令。
+用create-high-cost-budget.py为所选Unit在全新、尚不存在的文件创建独立预算，单态ceiling为43200秒。新安装使用 run-installed-runtime.py，指定 high-cost-cases 的 --installation-record、--task P11 --mode live，并精确指定 --unit、--budget、--output-root；可选 --docker-executable。此处只有参数说明，没有可复制的虚构live命令。
 
 P11A呋喃按G→GL→GE，必须以-Inputs提供原轮合格前序output映射；P11B保留原独立初始化。科学规则固定，每态一次、失败计费；容器删除与证据闭合前不启动后续，不retry、不resume。
 
@@ -416,8 +438,8 @@ P11A呋喃按G→GL→GE，必须以-Inputs提供原轮合格前序output映射�
 <a id="p12-ledger-command"></a>
 
 ```powershell
-.\scripts\start-high-cost-case.ps1 -Task P12 -Mode ledger -OutputRoot 'D:\chem-work\high-cost-runs'
-.\scripts\start-high-cost-case.ps1 -Task P12 -Mode preflight -Unit P12-N16-G -OutputRoot 'D:\chem-work\high-cost-runs'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\high-cost-cases\installation-record.json --task P12 --mode ledger --output-root 'D:\chem-work\high-cost-runs'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\high-cost-cases\installation-record.json --task P12 --mode preflight --unit P12-N16-G --output-root 'D:\chem-work\high-cost-runs'
 ```
 
 不是用户任意分子的通用优化入口，不代表78态全部验收，不改变原科学规则。state list读取实际注册Unit；ledger只读历史账本；preflight仅元数据预检，按清单选择未执行Unit，以上N16-G为原来源已有未执行态，不重复准入P12-N12-G。live为单态科学执行，仅高级折叠说明，不自动启动、重试或续算。
@@ -440,7 +462,7 @@ P11A呋喃按G→GL→GE，必须以-Inputs提供原轮合格前序output映射�
 
 ```powershell
 python -B .\scripts\create-high-cost-budget.py --output 'D:\chem-work\batch3-n16-g-new.json' --unit P12-N16-G --ceiling-seconds 43200
-.\scripts\start-high-cost-case.ps1 -Task P12 -Mode live -Unit P12-N16-G -Budget 'D:\chem-work\batch3-n16-g-new.json' -OutputRoot 'D:\chem-work\high-cost-runs'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\high-cost-cases\installation-record.json --task P12 --mode live --unit P12-N16-G --budget 'D:\chem-work\batch3-n16-g-new.json' --output-root 'D:\chem-work\high-cost-runs'
 ```
 
 多态约束结构优化 live：8GiB、8CPU/线程；环状体系尺寸与状态对照 live：14GiB、16CPU/线程；43080/43200秒、20GiB scratch。engine +1GiB、host +2GiB、disk +1GiB。不是所有用户默认15GiB；资源分档尚未启用，历史18GiB临时上限已撤销。不教配置WSL，不追加旧PASS内存探针。新任务资源未知或不足拒绝。checkpoint保存不支持resume。
@@ -480,7 +502,7 @@ YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点
 
 
 ## 2026-10-09本地模块名称修订（优先于历史命名）
-网页按实际计算功能命名十四个模块；主标题、选择提示和复制按钮说明无需先了解专著编号。内部P01—P14、任务键、命令参数、来源路径与科学规则保持。名称和编号对应表位于来源追溯折叠区。用户自己的分子目前仅支持普通RHF单点服务；这些模块采用固定案例或保存证据，不增加任意分子条件计算、优化或尺寸扫描的支持范围。多态约束优化和环状体系分别保持固定17态与61态，旧候选仅苯G、N12-G通过；新镜像不继承这些科学验收。2026-10-09已公开源码与指南，06d5088首次CI三项job成功；该源码同步日Pages仍未启用；模块改名轮的历史实测记录保存在Runtime validation/web-guide/module-names-20261009.public.json，绑定其当时HTML与归档ZIP；当时网页与实际按钮产物另见 validation/web-guide/current-delivery-20261010.json；旧 final-consistency-r2-20261009.json 仅为历史证据，不继承其 SHA。
+网页按实际计算功能命名十四个模块；主标题、选择提示和复制按钮说明无需先了解专著编号。内部P01—P14、任务键、命令参数、来源路径与科学规则保持。名称和编号对应表位于来源追溯折叠区。用户自己的分子目前仅支持普通RHF单点服务；这些模块采用固定案例或保存证据，不增加任意分子条件计算、优化或尺寸扫描的支持范围。多态约束优化和环状体系分别保持固定17态与61态，旧候选仅苯G、N12-G通过；新镜像不继承这些科学验收。2026-10-09已公开源码与指南，06d5088首次CI三项job成功；该源码同步日Pages仍未启用；模块改名轮的历史实测记录保存在Runtime validation/web-guide/module-names-20261009.public.json，绑定其当时HTML与归档ZIP；当时网页与实际按钮产物另见 validation/web-guide/export-followup-20261010.json；旧 final-consistency-r2-20261009.json 仅为历史证据，不继承其 SHA。
 <a id="module-protocol-map"></a>
 
 ### 模块名称与内部协议编号（来源追溯）
@@ -501,3 +523,4 @@ YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点
 | ` P12 ` | 环状体系尺寸与状态对照 | 固定环状体系61态；旧候选仅N12-G先导通过 |
 | ` P13 ` | 共轭图规则与能量账本 | 固定图案例与ESE／CESE算术账本 |
 | ` P14 ` | 条件能量与结构响应复核 | 固定协议联合复核；任意用户条件Compute仍BLOCKED |
+

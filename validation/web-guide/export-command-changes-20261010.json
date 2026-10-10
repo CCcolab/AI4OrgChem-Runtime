@@ -1,0 +1,147 @@
+[
+  {
+    "target": "p11-ledger-command",
+    "before": ".\\scripts\\start-high-cost-case.ps1 -Task P11 -Mode ledger -OutputRoot 'D:\\chem-work\\high-cost-runs'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\high-cost-cases\\installation-record.json --task P11 --mode ledger --output-root 'D:\\chem-work\\high-cost-runs'"
+  },
+  {
+    "target": "p12-ledger-command",
+    "before": ".\\scripts\\start-high-cost-case.ps1 -Task P12 -Mode ledger -OutputRoot 'D:\\chem-work\\high-cost-runs'\n.\\scripts\\start-high-cost-case.ps1 -Task P12 -Mode preflight -Unit P12-N16-G -OutputRoot 'D:\\chem-work\\high-cost-runs'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\high-cost-cases\\installation-record.json --task P12 --mode ledger --output-root 'D:\\chem-work\\high-cost-runs'\npython -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\high-cost-cases\\installation-record.json --task P12 --mode preflight --unit P12-N16-G --output-root 'D:\\chem-work\\high-cost-runs'"
+  },
+  {
+    "target": "n16-live-command",
+    "before": "python -B .\\scripts\\create-high-cost-budget.py --output 'D:\\chem-work\\batch3-n16-g-new.json' --unit P12-N16-G --ceiling-seconds 43200\n.\\scripts\\start-high-cost-case.ps1 -Task P12 -Mode live -Unit P12-N16-G -Budget 'D:\\chem-work\\batch3-n16-g-new.json' -OutputRoot 'D:\\chem-work\\high-cost-runs'",
+    "after": "python -B .\\scripts\\create-high-cost-budget.py --output 'D:\\chem-work\\batch3-n16-g-new.json' --unit P12-N16-G --ceiling-seconds 43200\npython -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\high-cost-cases\\installation-record.json --task P12 --mode live --unit P12-N16-G --budget 'D:\\chem-work\\batch3-n16-g-new.json' --output-root 'D:\\chem-work\\high-cost-runs'"
+  },
+  {
+    "target": "batch2-p03-ledger",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P03 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P03 --mode ledger --output-root '..\\runs\\batch2-p03-ledger-new'"
+  },
+  {
+    "target": "batch2-p03-preflight",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P03 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P03 --mode preflight --output-root '..\\runs\\batch2-p03-preflight-new'"
+  },
+  {
+    "target": "batch2-p03-live",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P03 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-p03-live-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P03 --mode live --budget 'D:\\your-work\\batch-budget-new.json' --output-root 'D:\\your-work\\runtime-runs\\protocol-cases-p03-live-new'"
+  },
+  {
+    "target": "batch2-p04-ledger",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P04 --mode ledger --output-root '..\\runs\\batch2-p04-ledger-new'"
+  },
+  {
+    "target": "batch2-p04-preflight",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P04 --mode preflight --output-root '..\\runs\\batch2-p04-preflight-new'"
+  },
+  {
+    "target": "batch2-p04-live",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P04 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-p04-live-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P04 --mode live --budget 'D:\\your-work\\batch-budget-new.json' --output-root 'D:\\your-work\\runtime-runs\\protocol-cases-p04-live-new'"
+  },
+  {
+    "target": "batch2-p05-ledger",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P05 --mode ledger --output-root '..\\runs\\batch2-p05-ledger-new'"
+  },
+  {
+    "target": "batch2-p05-preflight",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P05 --mode preflight --output-root '..\\runs\\batch2-p05-preflight-new'"
+  },
+  {
+    "target": "batch2-p05-live",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P05 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-p05-live-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P05 --mode live --budget 'D:\\your-work\\batch-budget-new.json' --output-root 'D:\\your-work\\runtime-runs\\protocol-cases-p05-live-new'"
+  },
+  {
+    "target": "batch2-p06-ledger",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P06 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P06 --mode ledger --output-root '..\\runs\\batch2-p06-ledger-new'"
+  },
+  {
+    "target": "batch2-p06-preflight",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P06 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P06 --mode preflight --output-root '..\\runs\\batch2-p06-preflight-new'"
+  },
+  {
+    "target": "batch2-p06-live",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P06 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-p06-live-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P06 --mode live --budget 'D:\\your-work\\batch-budget-new.json' --output-root 'D:\\your-work\\runtime-runs\\protocol-cases-p06-live-new'"
+  },
+  {
+    "target": "batch2-p07-preflight",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P07 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P07 --mode preflight --output-root '..\\runs\\batch2-p07-preflight-new'"
+  },
+  {
+    "target": "batch2-p07-ledger",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P07 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P07 --mode ledger --output-root '..\\runs\\batch2-p07-ledger-new'"
+  },
+  {
+    "target": "batch2-p08-ledger",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P08 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P08 --mode ledger --output-root '..\\runs\\batch2-p08-ledger-new'"
+  },
+  {
+    "target": "batch2-p08-preflight",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P08 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P08 --mode preflight --output-root '..\\runs\\batch2-p08-preflight-new'"
+  },
+  {
+    "target": "batch2-p08-live",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P08 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-p08-live-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P08 --mode live --budget 'D:\\your-work\\batch-budget-new.json' --output-root 'D:\\your-work\\runtime-runs\\protocol-cases-p08-live-new'"
+  },
+  {
+    "target": "batch2-p09-ledger",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P09 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P09 --mode ledger --output-root '..\\runs\\batch2-p09-ledger-new'"
+  },
+  {
+    "target": "batch2-p09-preflight",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P09 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P09 --mode preflight --output-root '..\\runs\\batch2-p09-preflight-new'"
+  },
+  {
+    "target": "batch2-p09-live",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P09 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-p09-live-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P09 --mode live --budget 'D:\\your-work\\batch-budget-new.json' --output-root 'D:\\your-work\\runtime-runs\\protocol-cases-p09-live-new'"
+  },
+  {
+    "target": "batch2-p10-ledger",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P10 -Mode ledger -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P10 --mode ledger --output-root '..\\runs\\batch2-p10-ledger-new'"
+  },
+  {
+    "target": "batch2-p10-preflight",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P10 -Mode preflight -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P10 --mode preflight --output-root '..\\runs\\batch2-p10-preflight-new'"
+  },
+  {
+    "target": "batch2-p10-live",
+    "before": ".\\scripts\\start-protocol-case.ps1 -Task P10 -Mode live -Budget 'D:\\your-work\\batch-budget-new.json' -OutputRoot 'D:\\your-work\\runtime-runs\\protocol-cases-p10-live-new'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\protocol-cases\\installation-record.json --task P10 --mode live --budget 'D:\\your-work\\batch-budget-new.json' --output-root 'D:\\your-work\\runtime-runs\\protocol-cases-p10-live-new'"
+  },
+  {
+    "target": "case-p02-command",
+    "before": ".\\scripts\\start-registered-case.ps1 -Task p02-statistics -OutputRoot 'D:\\your-work\\runtime-runs\\registered'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\registered-cases\\installation-record.json --task p02-statistics --output-root '..\\runs\\case-p02-command-new'"
+  },
+  {
+    "target": "case-p13-command",
+    "before": ".\\scripts\\start-registered-case.ps1 -Task p13-graph-ledger -OutputRoot 'D:\\your-work\\runtime-runs\\registered'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\registered-cases\\installation-record.json --task p13-graph-ledger --output-root '..\\runs\\case-p13-command-new'"
+  },
+  {
+    "target": "case-p01-command",
+    "before": ".\\scripts\\start-registered-case.ps1 -Task p01-orbital-density -OutputRoot 'D:\\your-work\\runtime-runs\\registered'",
+    "after": "python -B .\\scripts\\run-installed-runtime.py --installation-record ..\\installations\\registered-cases\\installation-record.json --task p01-orbital-density --output-root '..\\runs\\case-p01-command-new'"
+  }
+]

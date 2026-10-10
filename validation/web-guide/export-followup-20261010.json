@@ -1,0 +1,411 @@
+{
+  "date": "2026-10-10",
+  "reviewed_prior_commit": "051a469edaaf9c07511dd1cc7fd3bc5abde77782",
+  "scope": "Export environment diagnostics and registered/protocol/high-cost guide commands only; no scientific implementation, thresholds, rebuild or new molecular calculation",
+  "reported_failure": {
+    "reviewed_commit": "3597a52",
+    "standalone_html": "REFUSED_HEAD_INCOMPLETE_IN_EXTERNAL_BROWSER",
+    "zip": "REFUSED_HEAD_INCOMPLETE_IN_EXTERNAL_BROWSER",
+    "cause_in_reporter_environment": "UNKNOWN_NOT_INDEPENDENTLY_CONFIRMED"
+  },
+  "previous_local_records_preserved": [
+    "validation/web-guide/current-delivery-20261010.json",
+    "validation/web-guide/current-browser-20261010.json",
+    "validation/web-guide/current-reexport-20261010.json"
+  ],
+  "environment": {
+    "browser": "Existing local Microsoft Edge headless",
+    "other_browser_or_reporter_environment": "NOT_RETESTED",
+    "true_200_percent_zoom": "NOT_EXECUTED",
+    "complete_keyboard_navigation": "NOT_EXECUTED"
+  },
+  "head_contract": {
+    "ownership_marker": "data-guide-head",
+    "required": [
+      "UTF-8 charset",
+      "width=device-width viewport",
+      "nonempty title",
+      "one nonempty owned inline style"
+    ],
+    "diagnostic_stages": [
+      "EXPORT_SOURCE",
+      "EXPORT_ASSEMBLED",
+      "EXPORT_SERIALIZED"
+    ],
+    "completeness_and_exact_head_comparison_retained": true,
+    "synthetic_extra_empty_style_reproduces_old_failure": true,
+    "synthetic_extra_empty_style_new_export": "PASS",
+    "missing_owned_style_refused": "PASS",
+    "assembled_and_serialized_head_corruption_refused": "PASS"
+  },
+  "command_contract": {
+    "changed_run_targets": 29,
+    "new_service_registration_targets": 3,
+    "unchanged_existing_code_targets": 51,
+    "unchanged_inputs_and_other_commands_verified": true,
+    "actual_clipboard_comparisons": 33,
+    "windows_crlf_to_lf_only": true,
+    "compute_commands_not_executed": true
+  },
+  "standalone_html": {
+    "path": "docs/index.html",
+    "size": 222679,
+    "sha256": "4cdf93cb54fc2a8be6c1681effb1ed338625ef092c26389baa5333d8203320ad"
+  },
+  "actual_browser_zip": {
+    "path": "docs/runtime-guide/current-guide.zip",
+    "size": 485834,
+    "sha256": "d4489b39899f240b8a3ff3537e70889e66af0132a2cfb77ffd74da18fd2965c0",
+    "crc": "PASS",
+    "member_count": 10,
+    "members": [
+      {
+        "path": "docs/index.html",
+        "size": 222679,
+        "sha256": "4cdf93cb54fc2a8be6c1681effb1ed338625ef092c26389baa5333d8203320ad"
+      },
+      {
+        "path": "docs/.nojekyll",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "README.md",
+        "size": 37780,
+        "sha256": "b49ed56c7e182812c2ff6463691ea2de7edd0a86cd3369f5803471bcbb1679c2"
+      },
+      {
+        "path": "content/guide_zh-CN.md",
+        "size": 121932,
+        "sha256": "e5c3e22e15fdd1918ff4f60ad09aa5e5543e607ab60ef4db4cc17aa943185a2a"
+      },
+      {
+        "path": "provenance/sources.md",
+        "size": 19375,
+        "sha256": "e0f27e3d59427619ab3277d8e156f24fed7d4c40b47b63ebe5e599a7278ba40e"
+      },
+      {
+        "path": "verification/checks.md",
+        "size": 39181,
+        "sha256": "67e765adc7b5abad16aed70d12a974f45e257b554d371d3fda65021c77714626"
+      },
+      {
+        "path": "MIGRATION.md",
+        "size": 40923,
+        "sha256": "61d9e03097edaf9e4f4f2523f1c410ec8f5901db7d9721d9aa78cb290a506c1f"
+      },
+      {
+        "path": "MANIFEST.txt",
+        "size": 1844,
+        "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+      },
+      {
+        "path": "templates/molecular-service/water/request.json",
+        "size": 277,
+        "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+      },
+      {
+        "path": "templates/molecular-service/water/molecule.xyz",
+        "size": 123,
+        "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+      }
+    ]
+  },
+  "browser_results": [
+    {
+      "name": "Old guard reproduction with extra empty style",
+      "status": "PASS",
+      "observed": {
+        "refused": true,
+        "message": "导出HTML头部不完整；已停止下载"
+      },
+      "interpretation": "Synthetic environment reproduction; not proof of the reporter browser cause"
+    },
+    {
+      "name": "Viewport 360",
+      "status": "PASS",
+      "width": 360,
+      "scroll": 360
+    },
+    {
+      "name": "Viewport 768",
+      "status": "PASS",
+      "width": 768,
+      "scroll": 768
+    },
+    {
+      "name": "Viewport 1440",
+      "status": "PASS",
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "name": "Owned head ignores additional empty style and charset",
+      "status": "PASS",
+      "preserves_owned_head": true
+    },
+    {
+      "name": "Missing owned style refused before download",
+      "status": "PASS",
+      "message": "无法可靠完成下载：index.html；原因：[EXPORT_SOURCE:INCOMPLETE] 导出HTML头部不完整或不一致；已停止下载；{\"issues\":[\"owned_style_missing_or_empty\"],\"charset\":\"UTF-8\",\"viewport\":\"width=device-width,initial-scale=1\",\"title_present\":true,\"owned_style_count\":0,\"owned_style_lengths\":[]}。请检查浏览器下载权限与支持，或手工保留源码后核对；未上传。",
+      "downloads": 0
+    },
+    {
+      "name": "EXPORT_ASSEMBLED diagnostic",
+      "status": "PASS",
+      "observed": {
+        "refused": true,
+        "stage": "EXPORT_ASSEMBLED",
+        "code": "INCOMPLETE",
+        "message": "[EXPORT_ASSEMBLED:INCOMPLETE] 导出HTML头部不完整或不一致；已停止下载；{\"issues\":[\"owned_style_missing_or_empty\"],\"charset\":\"UTF-8\",\"viewport\":\"width=device-width,initial-scale=1\",\"title_present\":true,\"owned_style_count\":0,\"owned_style_lengths\":[]}"
+      }
+    },
+    {
+      "name": "EXPORT_SERIALIZED diagnostic",
+      "status": "PASS",
+      "observed": {
+        "refused": true,
+        "stage": "EXPORT_SERIALIZED",
+        "code": "INCOMPLETE",
+        "message": "[EXPORT_SERIALIZED:INCOMPLETE] 导出HTML头部不完整或不一致；已停止下载；{\"issues\":[\"owned_charset_invalid\"],\"charset\":\"\",\"viewport\":\"width=device-width,initial-scale=1\",\"title_present\":true,\"owned_style_count\":1,\"owned_style_lengths\":[4546]}"
+      }
+    },
+    {
+      "name": "New installation commands actual clipboard",
+      "status": "PASS",
+      "results": [
+        {
+          "target": "p11-ledger-command",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "high-cost-installation-command",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "p12-ledger-command",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "n16-live-command",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "protocol-cases-installation-command",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-budget-json",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p03-ledger",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p03-preflight",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p03-live",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p04-ledger",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p04-preflight",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p04-live",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p05-ledger",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p05-preflight",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p05-live",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p06-ledger",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p06-preflight",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p06-live",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p07-preflight",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p07-ledger",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p08-ledger",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p08-preflight",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p08-live",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p09-ledger",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p09-preflight",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p09-live",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p10-ledger",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p10-preflight",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "batch2-p10-live",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "registered-cases-installation-command",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "case-p02-command",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "case-p13-command",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        },
+        {
+          "target": "case-p01-command",
+          "exact_lf_text": true,
+          "uses_installation_record": true
+        }
+      ]
+    },
+    {
+      "name": "Seven actual downloads",
+      "status": "PASS",
+      "files": [
+        {
+          "kind": "html",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-web-export-followup\\actual-html-index.html",
+          "bytes": 222679,
+          "sha256": "4cdf93cb54fc2a8be6c1681effb1ed338625ef092c26389baa5333d8203320ad"
+        },
+        {
+          "kind": "zip",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-web-export-followup\\actual-zip-ai4orgchem-runtime-guide-v0.3.0-candidate.zip",
+          "bytes": 485834,
+          "sha256": "d4489b39899f240b8a3ff3537e70889e66af0132a2cfb77ffd74da18fd2965c0"
+        },
+        {
+          "kind": "readme",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-web-export-followup\\actual-readme-README.md",
+          "bytes": 37780,
+          "sha256": "b49ed56c7e182812c2ff6463691ea2de7edd0a86cd3369f5803471bcbb1679c2"
+        },
+        {
+          "kind": "snapshot",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-web-export-followup\\actual-snapshot-guide_zh-CN.md",
+          "bytes": 121932,
+          "sha256": "e5c3e22e15fdd1918ff4f60ad09aa5e5543e607ab60ef4db4cc17aa943185a2a"
+        },
+        {
+          "kind": "sources",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-web-export-followup\\actual-sources-provenance-sources.md",
+          "bytes": 19375,
+          "sha256": "e0f27e3d59427619ab3277d8e156f24fed7d4c40b47b63ebe5e599a7278ba40e"
+        },
+        {
+          "kind": "checklist",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-web-export-followup\\actual-checklist-checks.md",
+          "bytes": 39181,
+          "sha256": "67e765adc7b5abad16aed70d12a974f45e257b554d371d3fda65021c77714626"
+        },
+        {
+          "kind": "migration",
+          "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-web-export-followup\\actual-migration-MIGRATION.md",
+          "bytes": 40923,
+          "sha256": "61d9e03097edaf9e4f4f2523f1c410ec8f5901db7d9721d9aa78cb290a506c1f"
+        }
+      ]
+    },
+    {
+      "name": "Actual HTML equals canonical bytes",
+      "status": "PASS"
+    },
+    {
+      "name": "Re-export /exported",
+      "status": "PASS"
+    },
+    {
+      "name": "Re-export /AI4OrgChem-Runtime/exported",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript runtime errors",
+      "status": "PASS",
+      "errors": []
+    }
+  ],
+  "scientific_execution": "NOT_EXECUTED"
+}

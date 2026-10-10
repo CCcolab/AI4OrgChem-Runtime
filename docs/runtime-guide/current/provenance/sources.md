@@ -172,10 +172,21 @@ python -B .\scripts\list-high-cost-cases.py
 
 不是任意用户分子的通用优化，不代表78态全验收，不改方法或规则，不自动重试／续算。
 
+新安装先登记高成本服务身份；已登记时直接使用现有记录，账本与预检不授权实际计算。
+
+<a id="high-cost-installation-command"></a>
+
+```powershell
+Set-Location 'D:\chem-work\runtime-install\runtime'
+$installed = Get-Content ..\built-image.json -Raw | ConvertFrom-Json
+python -B .\scripts\register-installation.py --service high-cost-cases --image $installed.local_tag --output-dir ..\installations\high-cost-cases
+
+```
+
 <a id="p11-ledger-command"></a>
 
 ```powershell
-.\scripts\start-high-cost-case.ps1 -Task P11 -Mode ledger -OutputRoot 'D:\chem-work\high-cost-runs'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\high-cost-cases\installation-record.json --task P11 --mode ledger --output-root 'D:\chem-work\high-cost-runs'
 ```
 
 state list读取实际注册状态与Unit；ledger只读历史账本，不批准计算。preflight仅元数据预检：按状态清单选择尚未执行Unit，不猜ID、不重复准入已通过态；live才是受预算约束的单态科学执行，本卡仅说明、不安排执行。
@@ -184,7 +195,7 @@ state list读取实际注册状态与Unit；ledger只读历史账本，不批准
 
 先用list-high-cost-cases.py读取实际注册Unit，从尚未执行的16态中选择恰一个Unit。已通过P11B-benzene-G保留PASS、不重算、不重复准入。不猜其他Unit ID，不用可运行占位命令冒充真实例子。
 
-用create-high-cost-budget.py为所选Unit在全新、尚不存在的文件创建独立预算，单态ceiling为43200秒。start-high-cost-case.ps1的-Task P11 -Mode live必须精确指定-Unit、-Budget、-OutputRoot，可选-PythonExe/-DockerExe。此处只有参数说明，没有可复制的虚构live命令。
+用create-high-cost-budget.py为所选Unit在全新、尚不存在的文件创建独立预算，单态ceiling为43200秒。新安装使用 run-installed-runtime.py，指定 high-cost-cases 的 --installation-record、--task P11 --mode live，并精确指定 --unit、--budget、--output-root；可选 --docker-executable。此处只有参数说明，没有可复制的虚构live命令。
 
 P11A呋喃按G→GL→GE，必须以-Inputs提供本轮合格前序output映射；P11B保留原独立初始化。科学规则固定，每态一次、失败计费；容器删除与证据闭合前不启动后续，不retry、不resume。
 
@@ -201,8 +212,8 @@ P11A呋喃按G→GL→GE，必须以-Inputs提供本轮合格前序output映射�
 <a id="p12-ledger-command"></a>
 
 ```powershell
-.\scripts\start-high-cost-case.ps1 -Task P12 -Mode ledger -OutputRoot 'D:\chem-work\high-cost-runs'
-.\scripts\start-high-cost-case.ps1 -Task P12 -Mode preflight -Unit P12-N16-G -OutputRoot 'D:\chem-work\high-cost-runs'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\high-cost-cases\installation-record.json --task P12 --mode ledger --output-root 'D:\chem-work\high-cost-runs'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\high-cost-cases\installation-record.json --task P12 --mode preflight --unit P12-N16-G --output-root 'D:\chem-work\high-cost-runs'
 ```
 
 不是用户任意分子的通用优化入口，不代表78态全部验收，不改变原科学规则。state list读取实际注册Unit；ledger只读历史账本；preflight仅元数据预检，按清单选择未执行Unit，以上N16-G为原来源已有未执行态，不重复准入P12-N12-G。live为单态科学执行，仅高级折叠说明，不自动启动、重试或续算。
@@ -225,7 +236,7 @@ P11A呋喃按G→GL→GE，必须以-Inputs提供本轮合格前序output映射�
 
 ```powershell
 python -B .\scripts\create-high-cost-budget.py --output 'D:\chem-work\batch3-n16-g-new.json' --unit P12-N16-G --ceiling-seconds 43200
-.\scripts\start-high-cost-case.ps1 -Task P12 -Mode live -Unit P12-N16-G -Budget 'D:\chem-work\batch3-n16-g-new.json' -OutputRoot 'D:\chem-work\high-cost-runs'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\high-cost-cases\installation-record.json --task P12 --mode live --unit P12-N16-G --budget 'D:\chem-work\batch3-n16-g-new.json' --output-root 'D:\chem-work\high-cost-runs'
 ```
 
 多态约束结构优化 live：8GiB、8CPU/线程；环状体系尺寸与状态对照 live：14GiB、16CPU/线程；43080/43200秒、20GiB scratch。engine +1GiB、host +2GiB、disk +1GiB。不是所有用户默认15GiB；资源分档尚未启用，历史18GiB临时上限已撤销。不教配置WSL，不追加旧PASS内存探针。新任务资源未知或不足拒绝。checkpoint保存不支持resume。
@@ -268,7 +279,7 @@ GitHub Pages静态指南已启用：https://cccolab.github.io/AI4OrgChem-Runtime
 ## 2026-10-09源码首次公开与远端CI记录（历史）
 2026-10-09已按项目负责人授权公开源码与指南：https://github.com/CCcolab/AI4OrgChem-Runtime 。06d5088首次CI三项job均成功，真实P11预检一项跳过；详见https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122 。Pages未启用；；未创建新版本/标签/Release。
 
-说明：下列状态是YouMind原提供时的登记，不是最新包外实测。当前网页与实际下载身份见 Runtime validation/web-guide/current-delivery-20261010.json；final-consistency-r2-20261009.json 仅为历史身份；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
+说明：下列状态是YouMind原提供时的登记，不是最新包外实测。当前网页与实际下载身份见 Runtime validation/web-guide/export-followup-20261010.json；final-consistency-r2-20261009.json 仅为历史身份；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
 
 ## 原YouMind v0.3.0-candidate交付登记（历史）
 候选非已验收；currentordinaryenabled / legacyconditionalblocked。物理顺序 overview、quick-start、user-molecule、results、tasks、help。10 members：原8文件，加 templates/molecular-service/water/request.json 与 molecule.xyz；277/123 bytes、LF结尾、代码textContent原文。14 evidence、7旧任务、3固定案例、1普通服务，12数值checks。原提供时新字节版本的复制核对、ZIP实物CRC/哈希、HTML一致性、重开再导出与迁移及完整WEB合同尚未完成；修订前下载实物与三宽度结构实测只作历史，原提供时QA不继承。新包大小和SHA-256须现场生成。
