@@ -17,6 +17,4 @@
 !container/
 !container/Dockerfile.protocol-cases
 !container/Dockerfile.protocol-cases.dockerignore
-!tests/
-!tests/test_protocol_cases*.py
 **/__pycache__/

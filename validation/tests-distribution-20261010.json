@@ -1,0 +1,67 @@
+{
+  "status": "PASS_LOCAL_ENGINEERING",
+  "regressions": [
+    {
+      "pattern": "test_installation_source_bindings.py",
+      "exit_code": 0
+    },
+    {
+      "pattern": "test_installation_identity.py",
+      "exit_code": 0
+    },
+    {
+      "pattern": "test_public_installation_ci.py",
+      "exit_code": 0
+    }
+  ],
+  "source_binding_checks": [
+    {
+      "family": "molecular-service",
+      "baseline_count": 20,
+      "installed_count": 20,
+      "unchanged_rows": 17,
+      "excluded_tests": 0,
+      "excluded_tests_not_read": true,
+      "extra_exclusion_refused": true
+    },
+    {
+      "family": "registered-cases",
+      "baseline_count": 37,
+      "installed_count": 37,
+      "unchanged_rows": 34,
+      "excluded_tests": 0,
+      "excluded_tests_not_read": true,
+      "extra_exclusion_refused": true
+    },
+    {
+      "family": "protocol-cases",
+      "baseline_count": 118,
+      "installed_count": 113,
+      "unchanged_rows": 108,
+      "excluded_tests": 5,
+      "excluded_tests_not_read": true,
+      "extra_exclusion_refused": true
+    },
+    {
+      "family": "high-cost-cases",
+      "baseline_count": 107,
+      "installed_count": 100,
+      "unchanged_rows": 93,
+      "excluded_tests": 7,
+      "excluded_tests_not_read": true,
+      "extra_exclusion_refused": true
+    }
+  ],
+  "root_tests_tracked": false,
+  "scientific_execution": "NOT_EXECUTED",
+  "remote_ci_for_new_commit": "NOT_EXECUTED_AT_PREPARATION",
+  "request_scope": "Withdraw root Runtime tests from current public tree; preserve local copies and original Git history",
+  "previous_public_commit": "3597a5221765be7ecffdf1264fa46f90842a14ec",
+  "backup_file_count": 101,
+  "current_public_ci_jobs": [
+    "linux",
+    "public-installation-engineering"
+  ],
+  "unit_test_suites_in_new_public_ci": "NOT_EXECUTED",
+  "original_source_catalogs_modified": false
+}

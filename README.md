@@ -57,6 +57,9 @@ See the [current professional service matrix](docs/CURRENT_PROFESSIONAL_SERVICES
 [3 CI jobs succeeded for 86e29b47](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857); this records engineering contracts and legacy L0/L1, not acceptance of later changes or all scientific services.
 <!-- CURRENT_CAPABILITIES_END -->
 
+Runtime development tests are retained locally and excluded from the current public tree and installation package. Public CI now covers source installation, container permissions/exit codes/output persistence and legacy L0/L1; Runtime unit suites are no longer executed in public CI. Prior passing records retain their original commits and scope. See [test distribution scope](docs/TEST_DISTRIBUTION_zh-CN.md).
+
+
 <details>
 <summary>Development, support and historical validation records / 开发、支持与历史验证记录</summary>
 

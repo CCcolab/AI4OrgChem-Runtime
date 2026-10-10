@@ -28,7 +28,6 @@ RUN python -m venv /opt/venv \
 COPY runtime runtime
 COPY schemas schemas
 COPY profiles profiles
-COPY tests tests
 COPY examples examples
 COPY LICENSE NOTICE /opt/runtime/
 RUN useradd --uid 10001 --create-home runner \

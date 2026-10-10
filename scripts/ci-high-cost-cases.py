@@ -4,6 +4,8 @@ import argparse,json,sys,time,unittest
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from runtime.high_cost_cases import save
 def main():
+    if not (Path(__file__).resolve().parents[1]/'tests').is_dir():
+        raise SystemExit('LOCAL_TEST_SUITE_REQUIRED: tests are retained locally and excluded from the public repository; no test PASS is granted.')
     p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);a=p.parse_args()
     if a.output.exists():raise ValueError('Fresh CI output directory required')
     a.output.mkdir(parents=True);start=time.monotonic()

@@ -24,7 +24,6 @@ COPY configs/molecular-service-v1.json /opt/runtime/configs/molecular-service-v1
 COPY locks/molecular-service-source.json locks/molecular-service-dependencies.json /opt/runtime/locks/
 COPY scripts/run-molecular-service.py scripts/start-molecular-service.ps1 /opt/runtime/scripts/
 COPY container/Dockerfile.molecular-service container/Dockerfile.molecular-service.dockerignore /opt/runtime/container/
-COPY tests /opt/runtime/tests
 COPY examples/molecular-service /opt/runtime/examples/molecular-service
 RUN /opt/venv/bin/python -m pip check \
  && chmod -R a-w /opt/runtime

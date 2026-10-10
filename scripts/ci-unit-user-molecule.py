@@ -291,6 +291,8 @@ def run_minimal_ci(output_root,*,root=ROOT,classifications=TEST_CLASSIFICATIONS,
     return record
 
 def main():
+    if not (Path(__file__).resolve().parents[1]/'tests').is_dir():
+        raise SystemExit('LOCAL_TEST_SUITE_REQUIRED: tests are retained locally and excluded from the public repository; no test PASS is granted.')
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output-root',type=Path,required=True)
     run_minimal_ci(parser.parse_args().output_root)

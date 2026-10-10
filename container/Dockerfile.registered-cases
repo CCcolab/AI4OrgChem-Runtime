@@ -27,7 +27,6 @@ COPY configs/registered-cases-v1.json /opt/runtime/configs/registered-cases-v1.j
 COPY locks/registered-cases-source.json locks/registered-cases-dependencies.json /opt/runtime/locks/
 COPY locks/requirements-registered-cases.txt /opt/runtime/locks/requirements-registered-cases.txt
 COPY scripts/run-registered-case.py scripts/start-registered-case.ps1 scripts/start-local-runtime.ps1 /opt/runtime/scripts/
-COPY tests /opt/runtime/tests
 COPY container/Dockerfile.registered-cases container/Dockerfile.registered-cases.dockerignore /opt/runtime/container/
 RUN chmod -R a-w /opt/runtime /opt/venv /registered-wheels
 USER 10001:10001

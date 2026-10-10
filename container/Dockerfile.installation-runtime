@@ -58,7 +58,6 @@ COPY profiles /opt/runtime/profiles
 COPY schemas /opt/runtime/schemas
 COPY locks /opt/runtime/locks
 COPY scripts /opt/runtime/scripts
-COPY tests /opt/runtime/tests
 COPY container /opt/runtime/container
 COPY examples /opt/runtime/examples
 COPY LICENSE NOTICE /opt/runtime/

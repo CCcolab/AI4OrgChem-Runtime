@@ -1,4 +1,4 @@
-name: Candidate runtime validation
+name: Public installation and container validation
 on:
   push:
   pull_request:
@@ -23,16 +23,6 @@ jobs:
             --build-arg DEPENDENCY_LOCK_SHA256="$(sha256sum locks/requirements-linux-amd64.txt | cut -d ' ' -f 1)" . \
             2>&1 | tee "$RUNNER_TEMP/ai4orgchem-runs/build.log"
           docker image inspect ai4orgchem-runtime:ci > "$RUNNER_TEMP/ai4orgchem-runs/image-inspect.json"
-      - name: Legacy wrapper tests (user-molecule contracts have a separate job)
-        shell: bash
-        run: |
-          set -euo pipefail
-          for pattern in test_runtime.py test_process.py test_classifier_adapter.py test_runtime_qualification_exit.py; do
-            docker run --rm --network none --entrypoint python \
-              --mount type=bind,source="$PWD/tests",target=/tests,readonly \
-              ai4orgchem-runtime:ci -m unittest discover -s /tests -p "$pattern" -v \
-              2>&1 | tee "$RUNNER_TEMP/ai4orgchem-runs/wrapper-$pattern.log"
-          done
       - name: L0 and L1 offline with persistent output
         shell: bash
         run: |
@@ -86,88 +76,5 @@ jobs:
             ${{ runner.temp }}/public-installation-engineering/installation/*.json
             ${{ runner.temp }}/public-installation-engineering/installation/*.log
             ${{ runner.temp }}/public-installation-engineering/linux-output-*/
-          if-no-files-found: warn
-          retention-days: 7
-  user-molecule-contracts:
-    # Input/resource/fixture/receipt/report engineering with minimal dependencies.
-    # The script explicitly classifies every user-molecule unit file. NumPy array
-    # witnesses, v1/v2 references and the unpublished scientific adapter remain a
-    # separately recorded local guarded run; this job does not cover those groups.
-    # Docker/PowerShell/W07 scenario acceptance also remains local.
-    runs-on: ubuntu-24.04
-    timeout-minutes: 5
-    steps:
-      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
-        with:
-          persist-credentials: false
-      - name: Strict input, resource, fixture and W07 report contracts (no science)
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 -c 'import sys; assert sys.version_info[:2] == (3, 12), "CI lock requires CPython 3.12"'
-          mkdir -p "$RUNNER_TEMP/user-molecule-contracts"
-          python3 -m venv "$RUNNER_TEMP/user-molecule-ci-venv"
-          PYTHON="$RUNNER_TEMP/user-molecule-ci-venv/bin/python"
-          "$PYTHON" -m pip install --only-binary=:all: --require-hashes \
-            -r locks/requirements-user-molecule-ci.txt \
-            2>&1 | tee "$RUNNER_TEMP/user-molecule-contracts/install.log"
-          "$PYTHON" -m pip check
-          "$PYTHON" -m pip freeze > "$RUNNER_TEMP/user-molecule-contracts/dependencies.txt"
-          "$PYTHON" scripts/ci-unit-user-molecule.py \
-            --output-root "$RUNNER_TEMP/user-molecule-contracts/minimal-units" \
-            2>&1 | tee "$RUNNER_TEMP/user-molecule-contracts/tests.log"
-      - name: Local evidence and source snapshot engineering (no molecular computation)
-        shell: bash
-        run: |
-          set -euo pipefail
-          PYTHON="$RUNNER_TEMP/user-molecule-ci-venv/bin/python"
-          for pattern in test_ci_user_molecule_classification.py test_propositions.py test_distribution.py test_historical_source_materials.py; do
-            "$PYTHON" -B -m unittest discover -s tests -p "$pattern" -v \
-              2>&1 | tee "$RUNNER_TEMP/user-molecule-contracts/framework-$pattern.log"
-          done
-      - name: Preserve contract evidence
-        if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        with:
-          name: user-molecule-contracts-${{ github.run_id }}-${{ github.run_attempt }}
-          path: ${{ runner.temp }}/user-molecule-contracts
-          if-no-files-found: warn
-          retention-days: 7
-  local-service-contracts:
-    # Engineering mocks/arrays only. Real SCF/optimization and high-cost opt-in
-    # are disabled by the runner. Native WSL2 tests use fake process responses.
-    runs-on: ubuntu-24.04
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
-        with:
-          persist-credentials: false
-      - name: Locked local-service engineering tests (no science)
-        shell: bash
-        env:
-          AI4ORGCHEM_HIGH_COST_SCIENTIFIC_TESTS: '0'
-          PYTHONDONTWRITEBYTECODE: '1'
-          OMP_NUM_THREADS: '1'
-          OPENBLAS_NUM_THREADS: '1'
-        run: |
-          set -euo pipefail
-          mkdir -p "$RUNNER_TEMP/local-services"
-          python3 -c 'import sys; assert sys.version_info[:2] == (3, 12)'
-          python3 -m venv "$RUNNER_TEMP/local-services-ci-venv"
-          PYTHON="$RUNNER_TEMP/local-services-ci-venv/bin/python"
-          "$PYTHON" -m pip install --only-binary=:all: --require-hashes \
-            -r locks/requirements-local-services-ci.txt \
-            2>&1 | tee "$RUNNER_TEMP/local-services/install.log"
-          "$PYTHON" -m pip check
-          "$PYTHON" -m pip freeze > "$RUNNER_TEMP/local-services/dependencies.txt"
-          "$PYTHON" -B scripts/ci-unit-local-services.py \
-            --output-root "$RUNNER_TEMP/local-services/tests" \
-            2>&1 | tee "$RUNNER_TEMP/local-services/summary.log"
-      - name: Preserve engineering evidence (including failures)
-        if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        with:
-          name: local-services-contracts-${{ github.run_id }}-${{ github.run_attempt }}
-          path: ${{ runner.temp }}/local-services
           if-no-files-found: warn
           retention-days: 7

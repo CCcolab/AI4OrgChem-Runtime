@@ -1,6 +1,7 @@
 #!/bin/bash
 # One controlled local verification; no global configuration or environment edits.
 set -eu
+[ -d "$(dirname -- "${BASH_SOURCE[0]}")/../tests" ] || { printf "%s\n" "LOCAL_TEST_SUITE_REQUIRED: tests are local-only" >&2; exit 2; }
 runtime_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 cd "$runtime_root"
 python=${1:?absolute independent candidate Python}

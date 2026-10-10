@@ -21,7 +21,6 @@ COPY reference/high_cost_cases /opt/runtime/reference/high_cost_cases
 COPY configs/high-cost-cases-v1.json /opt/runtime/configs/
 COPY locks/high-cost*.json /opt/runtime/locks/
 COPY scripts/*high-cost*.py scripts/start-high-cost-case.ps1 /opt/runtime/scripts/
-COPY tests/test_high_cost*.py /opt/runtime/tests/
 COPY container/Dockerfile.high-cost container/Dockerfile.high-cost.dockerignore container/Dockerfile.high-cost-dependencies /opt/runtime/container/
 RUN /opt/venv/bin/python -m pip check && chmod -R a-w /opt/runtime
 USER 10001:10001

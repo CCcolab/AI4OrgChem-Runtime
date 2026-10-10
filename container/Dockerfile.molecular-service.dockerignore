@@ -17,8 +17,6 @@
 !container/
 !container/Dockerfile.molecular-service
 !container/Dockerfile.molecular-service.dockerignore
-!tests/
-!tests/**
 !examples/
 !examples/molecular-service/
 !examples/molecular-service/**

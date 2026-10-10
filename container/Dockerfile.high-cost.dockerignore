@@ -12,8 +12,6 @@
 !scripts
 !scripts/*high-cost*.py
 !scripts/start-high-cost-case.ps1
-!tests
-!tests/test_high_cost*.py
 !container
 !container/Dockerfile.high-cost
 !container/Dockerfile.high-cost.dockerignore

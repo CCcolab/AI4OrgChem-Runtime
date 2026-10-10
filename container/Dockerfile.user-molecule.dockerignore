@@ -9,8 +9,6 @@
 !schemas/**
 !profiles/
 !profiles/**
-!tests/
-!tests/**
 !examples/
 !examples/**
 !scripts/

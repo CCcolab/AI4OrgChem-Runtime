@@ -14,8 +14,6 @@
 !scripts/run-registered-case.py
 !scripts/start-registered-case.ps1
 !scripts/start-local-runtime.ps1
-!tests/
-!tests/**
 !container/
 !container/Dockerfile.registered-cases
 !container/Dockerfile.registered-cases.dockerignore

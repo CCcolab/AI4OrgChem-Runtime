@@ -262,6 +262,8 @@ def validate_record(record, *, expected=None):
     binding = record["source_catalog_binding"]
     common = {"kind", "baseline_sha256", "source_sha256", "file_count", "host_overrides"}
     required_binding = common | ({"unchanged_rows"} if binding.get('kind') in ('EXACT_TWO_HOST_PATH_REBIND', source_bindings.KIND) else set()) if isinstance(binding, dict) else common
+    if isinstance(binding, dict) and binding.get('kind') == source_bindings.KIND:
+        required_binding |= {'baseline_file_count', 'excluded_test_rows'}
     if not isinstance(binding, dict) or set(binding) != required_binding or binding.get("baseline_sha256") != spec["source_sha"] or binding.get("source_sha256") != record["source_snapshot_sha256"]:
         raise ValueError("Closed source catalog baseline binding required")
     if type(binding.get("file_count")) is not int or binding["file_count"] < 1:

@@ -57,6 +57,9 @@ AI4OrgChem Runtime 帮助你在自己的电脑上进行分子计算，并复核�
 已记录 [86e29b47 的 3 个 CI job 成功](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857)；仅覆盖登记工程合同和旧入口 L0/L1，不认证本次修改或全部科学服务。
 <!-- CURRENT_CAPABILITIES_END -->
 
+开发测试文件保留在本地，不随当前公开仓库或安装包分发。当前 CI 保留公开源码安装、容器权限与退出码、输出保留及旧入口 L0/L1 验证；Runtime 单元测试不再在公开 CI 中执行。此前测试通过记录保留其原提交与范围，详见[测试分发范围](docs/TEST_DISTRIBUTION_zh-CN.md)。
+
+
 <details>
 <summary>开发、支持与历史验证记录</summary>
 

@@ -4,6 +4,7 @@ param([Parameter(Mandatory)][string] $Image, [Parameter(Mandatory)][string] $Out
 . (Join-Path $PSScriptRoot 'Runtime.Common.ps1')
 $PSNativeCommandArgumentPassing='Standard'
 $output=Get-SafeDirectory $OutputRoot
+if (-not (Test-Path -LiteralPath (Join-Path (Get-RuntimeRoot) 'tests') -PathType Container)) { throw 'LOCAL_TEST_SUITE_REQUIRED: tests are local-only; use public CI for container probes' }
 $engine=Get-Engine 'docker'
 $identity=Get-ImageIdentity $engine $Image
 $identity | ConvertTo-Json -Depth 30 | Set-Content (Join-Path $output 'image-inspect.json') -Encoding utf8

@@ -84,6 +84,8 @@ def verify_export(directory, source, expected_report_exit):
 
 
 def main():
+    if not (Path(__file__).resolve().parents[1]/'tests').is_dir():
+        raise SystemExit('LOCAL_TEST_SUITE_REQUIRED: tests are retained locally and excluded from the public repository; no test PASS is granted.')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output-root', type=Path, required=True)
     parser.add_argument('--check-run', type=Path, required=True,

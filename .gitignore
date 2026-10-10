@@ -7,3 +7,5 @@ __pycache__/
 *.tar
 *.tar.gz
 *.whl
+# Runtime development tests are retained locally, outside the public payload.
+/tests/
