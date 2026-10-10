@@ -1,7 +1,7 @@
 {
   "schema_version": "runtime-capabilities-v2",
   "date": "2026-10-10",
-  "reviewed_runtime_commit": "86e29b47b38fbd31717ff9aac653386d2e3f768d",
+  "reviewed_runtime_commit": "be51dcbbd2e9ef519c55f9598faf18c567f76184",
   "declaration_grants_execution_authorization": false,
   "declaration_scope": "Current capability navigation only; enabled rows still require actual installation/image/input/source/resource/budget admission. Historical acceptance identifies its own code and image, not this update.",
   "historical_snapshot": "validation/local-runtime-capabilities-v1.public.json",
@@ -28,11 +28,21 @@
   },
   "ci": {
     "status": "SUCCESS_RECORDED_COMMIT_ONLY",
-    "commit": "86e29b47b38fbd31717ff9aac653386d2e3f768d",
-    "run_id": 38003025857,
-    "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857",
-    "successful_jobs": 3,
-    "scope": "Existing engineering contracts and legacy L0/L1 jobs only; not all scientific services; does not certify later edits"
+    "commit": "be51dcbbd2e9ef519c55f9598faf18c567f76184",
+    "run_id": 38036972441,
+    "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38036972441",
+    "successful_jobs": 2,
+    "scope": "Public pinned installation engineering and legacy L0/L1 only; no new scientific replay; does not certify later edits",
+    "historical_records": [
+      {
+        "status": "SUCCESS_RECORDED_COMMIT_ONLY",
+        "commit": "86e29b47b38fbd31717ff9aac653386d2e3f768d",
+        "run_id": 38003025857,
+        "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857",
+        "successful_jobs": 3,
+        "scope": "Existing engineering contracts and legacy L0/L1 jobs only; not all scientific services; does not certify later edits"
+      }
+    ]
   },
   "platform": {
     "docker": "SCOPED_LOCAL_ACCEPTANCE_RECORDS"
@@ -138,7 +148,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/MOLECULAR_SINGLE_POINT_zh-CN.public.md",
+          "path": "docs/CURRENT_MOLECULAR_SINGLE_POINT_zh-CN.md",
           "pointer": ""
         },
         {
@@ -149,7 +159,9 @@
       "qualification": {
         "engineering": "114 locked-image engineering tests in recorded candidate",
         "numerical": "Four ordinary RHF runs and four same-version PySCF direct wrapper controls; 12 recorded gates",
-        "science": "Teaching and specified-geometry baseline/wrapper consistency; stability NOT_EXECUTED; no independent program certification"
+        "science": "Teaching and specified-geometry baseline/wrapper consistency; stability NOT_EXECUTED; no independent program certification",
+        "scope": "SPECIFIED_GEOMETRY_ORDINARY_RHF_V1_NUMERICAL_GATES_ONLY",
+        "all_canonical_orbitals": "NOT_ESTABLISHED_BY_V1_GATES"
       }
     },
     {
@@ -207,7 +219,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/REGISTERED_CASES_zh-CN.md",
+          "path": "docs/CURRENT_REGISTERED_CASES_zh-CN.md",
           "pointer": ""
         },
         {
@@ -276,7 +288,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/REGISTERED_CASES_zh-CN.md",
+          "path": "docs/CURRENT_REGISTERED_CASES_zh-CN.md",
           "pointer": ""
         },
         {
@@ -345,7 +357,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/REGISTERED_CASES_zh-CN.md",
+          "path": "docs/CURRENT_REGISTERED_CASES_zh-CN.md",
           "pointer": ""
         },
         {
@@ -423,7 +435,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
+          "path": "docs/CURRENT_PROTOCOL_CASES_zh-CN.md",
           "pointer": ""
         },
         {
@@ -501,7 +513,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
+          "path": "docs/CURRENT_PROTOCOL_CASES_zh-CN.md",
           "pointer": ""
         },
         {
@@ -579,7 +591,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
+          "path": "docs/CURRENT_PROTOCOL_CASES_zh-CN.md",
           "pointer": ""
         },
         {
@@ -657,7 +669,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
+          "path": "docs/CURRENT_PROTOCOL_CASES_zh-CN.md",
           "pointer": ""
         },
         {
@@ -721,7 +733,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
+          "path": "docs/CURRENT_PROTOCOL_CASES_zh-CN.md",
           "pointer": ""
         },
         {
@@ -799,7 +811,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
+          "path": "docs/CURRENT_PROTOCOL_CASES_zh-CN.md",
           "pointer": ""
         },
         {
@@ -877,7 +889,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
+          "path": "docs/CURRENT_PROTOCOL_CASES_zh-CN.md",
           "pointer": ""
         },
         {
@@ -955,7 +967,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
+          "path": "docs/CURRENT_PROTOCOL_CASES_zh-CN.md",
           "pointer": ""
         },
         {
@@ -1021,7 +1033,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.public.md",
+          "path": "docs/CURRENT_HIGH_COST_CASES_zh-CN.md",
           "pointer": ""
         },
         {
@@ -1091,7 +1103,7 @@
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.public.md",
+          "path": "docs/CURRENT_HIGH_COST_CASES_zh-CN.md",
           "pointer": ""
         },
         {
@@ -1148,7 +1160,9 @@
       "image": {
         "historical_image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
         "public_registry_digest": null,
-        "new_installation_requires_own_registration": true
+        "new_installation_requires_own_registration": false,
+        "identity_contract": "INDEPENDENT_LEGACY_DOCKER_BUILD_RUN_NOT_FOUR_FAMILY_INSTALLATION_RECORD",
+        "build_run_guide": "docs/CURRENT_P14_BUILD_RUN_zh-CN.md"
       },
       "accepted_runs": [
         {
@@ -1230,6 +1244,10 @@
         }
       ],
       "evidence": [
+        {
+          "path": "docs/CURRENT_P14_BUILD_RUN_zh-CN.md",
+          "kind": "CURRENT_INDEPENDENT_BUILD_RUN_IDENTITY"
+        },
         {
           "path": "docs/PROFESSIONAL_SERVICES_zh-CN.public.md",
           "pointer": ""

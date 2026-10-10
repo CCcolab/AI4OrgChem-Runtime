@@ -2,17 +2,17 @@
 
 入口按用户计算目标组织，普通用户不需要读专著或选择P编号。首版用户XYZ普通RHF单点与canonical轨道/AO密度导出已部署并完成本地验收；详细范围见[用户分子入口设计](GENERAL_CHEMISTRY_ENTRY_DESIGN_zh-CN.md)。P01—P14继续保留在示例与验证详情。通用优化、扫描等功能仍未交付。
 
-2026-10-08。网页仅提供使用指南；操作在本机进行。普通单点与旧条件态比较分开登记：前者在首版profile内可用，后者Compute仍BLOCKED。固定示例使用原独立候选镜像，详见[固定P02/P13/P01使用指南](REGISTERED_CASES_zh-CN.md)。
+2026-10-08。网页仅提供使用指南；操作在本机进行。普通单点与旧条件态比较分开登记：前者在首版profile内可用，后者Compute仍BLOCKED。当前固定示例使用各自安装记录，详见[固定P02/P13/P01使用指南](CURRENT_REGISTERED_CASES_zh-CN.md)。
 
 ## 计算自己的分子
 
-按[普通分子四步指南](MOLECULAR_SINGLE_POINT_zh-CN.public.md)准备同目录的XYZ与请求，在本轮runtime仓库中运行：
+按[普通分子四步指南](CURRENT_MOLECULAR_SINGLE_POINT_zh-CN.md)准备同目录的XYZ与请求，在本轮runtime仓库中运行：
 
 ```powershell
-.\scripts\start-molecular-service.ps1 -Request .\examples\molecular-service\water\request.json -OutputRoot D:\AI4Science\ai4orgchem-runtime-runs\molecular
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\molecular-service\installation-record.json --task single-point --request .\examples\molecular-service\water\request.json --output-root ..\runs\water-new
 ```
 
-将 `-Request` 换成自己的请求。支持H/C/N/O、中性单重态、RHF/6-31G(d)、最多20原子/实际AO≤80，三维结构可用。返回记录中的 `output/calculation/report.md` 提供结果；完整成功还须闭合主机/worker回执、12项数值检查、资源与输出保留。新启动器兼容PowerShell5.1/7，使用现有Python3.12+和Docker，固定本地镜像身份，不自动安装。详见[实际验收](MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)。下面是可选的历史证据和受限服务操作。
+先进入同一安装工作目录并登记普通服务；将 `--request` 换成自己的请求。支持H/C/N/O、中性单重态、RHF/6-31G(d)、最多20原子/实际AO≤80，三维结构可用。返回记录中的 `output/calculation/report.md` 提供结果；完整成功还须闭合主机/worker回执、12项数值检查、资源与输出保留。新启动器兼容PowerShell5.1/7，使用现有Python3.12+和Docker，固定本地镜像身份，不自动安装。详见[实际验收](MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)。下面是可选的历史证据和受限服务操作。
 
 ## 可选：阅读示例和旧受限Check/Report
 

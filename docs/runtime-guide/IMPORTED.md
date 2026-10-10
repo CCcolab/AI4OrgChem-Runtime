@@ -1,12 +1,9 @@
-# YouMind 指南原包保存
+# 用户指南导入与当前维护范围
 
-此目录保存用户提供并经2026-10-09本地检查的 v0.3.0-candidate。
+指南由用户提供的 YouMind 网页候选演进，原材料和历史字节保留于本地归档及既有 Git 历史。旧 source/archive 已不在当前公开目录，不伪称当前仍提供该目录。
 
-- `source/`：原ZIP全部10成员，保留原字节。
-- `archive/`：原ZIP备份。
-- `../index.html`：统一使用的活动网页入口；导入后模块名称修订已改变其字节，原HTML仍保存在source中。
-- 验证记录在 `../../validation/web-guide/`。
+当前公开站点为 https://cccolab.github.io/AI4OrgChem-Runtime/ 。自有维护源是 docs/index.html；实际下载核验后的十成员维护副本位于 docs/runtime-guide/current，静态 ZIP 位于 current-guide.zip。新增修改在本地核验后按已有公开授权同步源码／Pages；不另造未经确认的版本、标签或 Release。
 
-日常编辑入口为 `docs/index.html`；source与archive属于导入快照。后续修订须重新导出和核对维护材料，保留历史包，避免两份HTML各自发展。包内权属与来源说明保留，不自动扩大为Runtime源码许可。当前保存仅为本地文档候选，GitHub推送、Pages部署与公开范围另按用户后续指令执行。
+YouMind 材料的来源、署名与授权边界独立保留，不自动改为根 Apache-2.0；当前维护文件不是完整运行档案或环境安装包。动态导出、静态文件身份和每次浏览器观察各有自己的验证记录。未复测环境不继承其他浏览器 PASS。
 
-`current/`为活动网页重新导出的当前维护快照；`module-names.json`登记计算模块名称与内部协议编号；archive中的module-names ZIP为本地修订包。原ZIP及source保持导入时原字节。
+根 Runtime tests 不公开分发，CI、源码、网页和镜像分发是不同范围。指南不会执行计算、上传分子、自动安装或升级平台。L4 仅可保存检查点，不支持恢复。

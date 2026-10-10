@@ -327,6 +327,7 @@ def supervise(args, *, clock=time.monotonic, sleep=time.sleep, executor=subproce
              "label_key": LABEL, "token": token, "scientific_worker_started": False})
         save(run / "launch-command.json", [args.docker_executable, *command])
         creation_attempted = True
+        execution["creation_attempted"] = True
         cid = docker(*command, timeout=10).stdout.decode().strip()
         if not re.fullmatch(r"[0-9a-f]{64}", cid):
             raise ValueError("Complete owned container ID required")
@@ -441,6 +442,8 @@ def supervise(args, *, clock=time.monotonic, sleep=time.sleep, executor=subproce
         elif locked:
             execution.update(owned_lock_released=False, owned_lock_retained="UNCONFIRMED_CONTAINER_STATE",
                              quarantine_lock=str(lock))
+        execution["creation_attempted"] = creation_attempted
+        execution["cleanup_closed"] = not quarantine and (not creation_attempted or execution["container_removed"] is True)
         if started is not None:
             execution["through_cleanup_wall_seconds"] = clock() - started
             if clock() > started + WALL_SECONDS:
@@ -506,7 +509,9 @@ def settle_batch(args,token,execution,output):
     with _lock(path.with_suffix('.lock')):
         value=read_json(path);row=value['attempts'][args.task]
         if row['reservation']!=token or row['state']!='RESERVED': raise ValueError('Budget reservation identity differs')
-        if execution.get('container_removed') is not True and execution.get('container_id') is not None: return
+        # Absence of an ID is not evidence that a timed-out create has ended.
+        if execution.get('cleanup_closed') is not True or execution.get('owned_lock_released') is not True:
+            return
         wall=execution.get('through_cleanup_wall_seconds')
         row.update(state='SETTLED',charged_seconds=wall if type(wall) in (int,float) and 0<=wall<=900 else 900,
                    status=execution['status'],records=output,settled_utc=utc())

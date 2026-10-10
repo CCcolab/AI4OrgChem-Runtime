@@ -211,6 +211,5 @@ GitHub 仓库公开构建文件、精确锁、封装代码、中文指南、支�
 - 公开环境：https://github.com/CCcolab/AI4OrgChem/blob/main/reproducibility/environment.yml
 - 平台矩阵：https://github.com/CCcolab/AI4OrgChem/blob/main/reproducibility/PLATFORM_MATRIX_zh-CN.md
 - 软件依赖：https://github.com/CCcolab/AI4OrgChem/blob/main/software/pyproject.toml
-- 微软 WSL Containers 正式可用公告：https://blogs.windows.com/windowsdeveloper/2026/09/29/wsl-containers-now-generally-available/
 
 实施时将上游链接转换为已核对 commit 的永久链接；版本、参数和兼容性以实际源码、官方文档和目标主机运行结果为准。

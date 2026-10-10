@@ -142,10 +142,23 @@ def main(argv=None):
         built = json.loads((install/'built-image.json').read_bytes())
         report['built_image'] = built
         context = install/'runtime'
+        adapter_spec=importlib.util.spec_from_file_location('ci_installed_host_adapter',context/'scripts/run-installed-runtime.py')
+        adapter=importlib.util.module_from_spec(adapter_spec);adapter_spec.loader.exec_module(adapter)
         for service in ('molecular-service', 'registered-cases', 'protocol-cases', 'high-cost-cases'):
             run([sys.executable, '-B', context/'scripts/register-installation.py', '--service', service,
                  '--image', built['local_tag'], '--output-dir', output/('identity-'+service)],
                 output, 'register-'+service, cwd=context, timeout=300)
+            record=adapter.identity.read_json(output/('identity-'+service)/'installation-record.json')
+            launcher=adapter.identity.load_launcher(service)
+            adapter.adapt_launcher(launcher,record,{})
+            if service=='high-cost-cases':
+                actual=launcher.verify_source(adapter.identity.legacy_record(record))
+                binding=actual['source_catalog_binding']
+            else:
+                _,binding=adapter.identity.source_bindings.bind(context,service)
+            if binding!=record['source_catalog_binding']:
+                raise ValueError('Actual installed host/source route differs: '+service)
+            report.setdefault('installed_host_source_routes',{})[service]={'status':'PASS_SOURCE_BINDING_ZERO_SCIENCE','file_count':binding['file_count'],'unchanged_rows':binding['unchanged_rows']}
         denied = output/'linux-output-uid1000-0755'
         allowed = output/'linux-output-uid10001'
         denied.mkdir(mode=0o755)
@@ -181,7 +194,7 @@ def main(argv=None):
         docker_probe(built['image_id'], allowed, 'writable-output', writable=True)
         report['status'] = 'PASS_ENGINEERING'
         report['checks'] = ['public_pinned_source_prepare', 'git_proven_context', 'local_only_build',
-                            'four_registered_service_identities', 'uid10001', 'source_readonly',
+                            'four_registered_service_identities', 'four_actual_host_source_bindings', 'uid10001', 'source_readonly',
                             'network_none', 'linux_permission_negative_and_positive',
                             'nonzero_process_exit', 'owned_container_removal', 'output_after_removal']
         return 0

@@ -14,7 +14,7 @@ AI4OrgChem Runtime 帮助你在自己的电脑上进行分子计算，并复核�
 
 | 计算模块 | 输入 | 输出与支持范围 |
 | --- | --- | --- |
-| [RHF 单点能量、轨道与密度](docs/MOLECULAR_SINGLE_POINT_zh-CN.public.md) | 自己的 XYZ 结构与请求文件 | RHF/6-31G(d) 单点能量、正则轨道、自旋求和的 AO 电子密度矩阵。支持 H/C/N/O、中性闭壳层单重态，至多 20 个原子、80 个原子轨道。 |
+| [RHF 单点能量、轨道与密度](docs/CURRENT_MOLECULAR_SINGLE_POINT_zh-CN.md) | 自己的 XYZ 结构与请求文件 | RHF/6-31G(d) 单点能量、正则轨道、自旋求和的 AO 电子密度矩阵。支持 H/C/N/O、中性闭壳层单重态，至多 20 个原子、80 个原子轨道。 |
 
 这是目前接收自己分子的计算入口。用户分子的 DFT、离子、开壳层、几何优化、扫描与条件态比较仍需进一步开发和验证。
 
@@ -26,27 +26,27 @@ AI4OrgChem Runtime 帮助你在自己的电脑上进行分子计算，并复核�
 
 | 计算模块 | 可以计算或复核什么 | 使用指南 |
 | --- | --- | --- |
-| 轨道表示与密度对照 | 固定乙烯的轨道变换，核对密度与能量不变量。 | [查看使用指南](docs/REGISTERED_CASES_zh-CN.md) |
-| 结构与光谱表值统计 | 冻结出版表值的统计与回归，不产生新的光谱。 | [查看使用指南](docs/REGISTERED_CASES_zh-CN.md) |
-| 扭转构型端点与能量账本 | 复核保存的扭转端点账本，并计算登记的冻结几何单点。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) |
-| π–π条件态与轨道响应 | 固定两种条件态的直接项与轨道响应对照。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) |
-| π–σ条件能量对照 | 比较已有角度账本，并计算登记的固定角度条件能量单点。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) |
-| 片段条件能量组装 | 固定双片段 σ–σ 条件态的独立能量组装。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) |
-| 能量账本闭合校验 | 核对同一哈密顿量的保存账本，不产生新的量子计算。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) |
-| 局域化端点与参照能量 | 丁二烯固定局域化端点、参照热化学与固定几何计算。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) |
-| 条件态与稳定性诊断 | 环丁二烯固定几何的条件态与稳定性诊断。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) |
-| 键长交替与能量响应 | 苯的五点固定几何普通 DFT 能量响应。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) |
-| 多态约束结构优化 | 登记 17 个固定状态，目前仅苯 G 先导完成验收。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH3_zh-CN.public.md) |
-| 环状体系尺寸与状态对照 | 登记 61 个固定状态，目前仅 N12-G 先导完成验收。 | [查看使用指南](docs/PROTOCOL_CASES_BATCH3_zh-CN.public.md) |
-| 共轭图规则与能量账本 | 固定图案例与 ESE/CESE 算术账本，不产生新的量子能量。 | [查看使用指南](docs/REGISTERED_CASES_zh-CN.md) |
-| 条件能量与结构响应复核 | 固定协议的能量与约束结构计算、实现对照及联合复核。 | [查看使用指南](docs/RUN_zh-CN.md) |
+| 轨道表示与密度对照 | 固定乙烯的轨道变换，核对密度与能量不变量。 | [查看使用指南](docs/CURRENT_REGISTERED_CASES_zh-CN.md) |
+| 结构与光谱表值统计 | 冻结出版表值的统计与回归，不产生新的光谱。 | [查看使用指南](docs/CURRENT_REGISTERED_CASES_zh-CN.md) |
+| 扭转构型端点与能量账本 | 复核保存的扭转端点账本，并计算登记的冻结几何单点。 | [查看使用指南](docs/CURRENT_PROTOCOL_CASES_zh-CN.md) |
+| π–π条件态与轨道响应 | 固定两种条件态的直接项与轨道响应对照。 | [查看使用指南](docs/CURRENT_PROTOCOL_CASES_zh-CN.md) |
+| π–σ条件能量对照 | 比较已有角度账本，并计算登记的固定角度条件能量单点。 | [查看使用指南](docs/CURRENT_PROTOCOL_CASES_zh-CN.md) |
+| 片段条件能量组装 | 固定双片段 σ–σ 条件态的独立能量组装。 | [查看使用指南](docs/CURRENT_PROTOCOL_CASES_zh-CN.md) |
+| 能量账本闭合校验 | 核对同一哈密顿量的保存账本，不产生新的量子计算。 | [查看使用指南](docs/CURRENT_PROTOCOL_CASES_zh-CN.md) |
+| 局域化端点与参照能量 | 丁二烯固定局域化端点、参照热化学与固定几何计算。 | [查看使用指南](docs/CURRENT_PROTOCOL_CASES_zh-CN.md) |
+| 条件态与稳定性诊断 | 环丁二烯固定几何的条件态与稳定性诊断。 | [查看使用指南](docs/CURRENT_PROTOCOL_CASES_zh-CN.md) |
+| 键长交替与能量响应 | 苯的五点固定几何普通 DFT 能量响应。 | [查看使用指南](docs/CURRENT_PROTOCOL_CASES_zh-CN.md) |
+| 多态约束结构优化 | 登记 17 个固定状态，目前仅苯 G 先导完成验收。 | [查看使用指南](docs/CURRENT_HIGH_COST_CASES_zh-CN.md) |
+| 环状体系尺寸与状态对照 | 登记 61 个固定状态，目前仅 N12-G 先导完成验收。 | [查看使用指南](docs/CURRENT_HIGH_COST_CASES_zh-CN.md) |
+| 共轭图规则与能量账本 | 固定图案例与 ESE/CESE 算术账本，不产生新的量子能量。 | [查看使用指南](docs/CURRENT_REGISTERED_CASES_zh-CN.md) |
+| 条件能量与结构响应复核 | 固定协议的能量与约束结构计算、实现对照及联合复核。 | [查看使用指南](docs/CURRENT_P14_BUILD_RUN_zh-CN.md) |
 
 多态约束优化与环状体系对照合计登记 78 个状态；两个已验收先导不代表其他状态或完整多态结果已通过。各模块的输入、方法、资源与结果范围以对应指南为准。已有账本的算术复核与新的分子计算分别提供。
 
 ## 三步开始使用
 
 1. **准备本地 Runtime。** 按[源码安装指南](docs/SOURCE_INSTALLATION_zh-CN.md)准备、构建并登记本地 Docker 环境。源码已公开，项目未提供预构建镜像下载；新安装保存自己的验证记录。
-2. **选择输入与模块。** 自己的 XYZ 使用[用户分子单点指南](docs/MOLECULAR_SINGLE_POINT_zh-CN.public.md)；登记案例从[本地入口指南](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md)和上表对应的协议指南开始。
+2. **选择输入与模块。** 自己的 XYZ 使用[用户分子单点指南](docs/CURRENT_MOLECULAR_SINGLE_POINT_zh-CN.md)；登记案例从[本地入口指南](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md)和上表对应的协议指南开始。
 3. **运行并查看结果。** 按模块指南执行命令，保留生成的运行目录，再通过[结果判读指南](docs/REVIEW_RESULTS_zh-CN.public.md)查看本次计算范围与检查结果。
 
 组件许可与分发条件见[许可证审查](docs/LICENSE_REVIEW_zh-CN.md)及[公开边界](docs/PUBLICATION_BOUNDARIES_zh-CN.md)。详细开发、支持与历史验证记录保留在下方，按需展开。
@@ -54,7 +54,7 @@ AI4OrgChem Runtime 帮助你在自己的电脑上进行分子计算，并复核�
 <!-- CURRENT_CAPABILITIES_START -->
 当前服务的输入、方法、实际验收、成本及解释范围见[专业服务矩阵](docs/CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)，机器可读声明见[当前能力表](configs/runtime-capabilities-v2.json)。
 
-已记录 [86e29b47 的 3 个 CI job 成功](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857)；仅覆盖登记工程合同和旧入口 L0/L1，不认证本次修改或全部科学服务。
+已记录 [be51dcbb 的 2 个 CI job 成功](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38036972441)；仅覆盖登记工程合同和旧入口 L0/L1，不认证本次修改或全部科学服务。
 <!-- CURRENT_CAPABILITIES_END -->
 
 开发测试文件保留在本地，不随当前公开仓库或安装包分发。当前 CI 保留公开源码安装、容器权限与退出码、输出保留及旧入口 L0/L1 验证；Runtime 单元测试不再在公开 CI 中执行。此前测试通过记录保留其原提交与范围，详见[测试分发范围](docs/TEST_DISTRIBUTION_zh-CN.md)。
@@ -77,9 +77,9 @@ AI4OrgChem Runtime 帮助你在自己的电脑上进行分子计算，并复核�
 
 项目目标是面向用户分子的本地化学计算平台：按分子输入、单点能量、轨道/密度分析和结构优化等研究目标提供服务。用户无需先了解专著P01—P14；这些编号保留在“示例与验证”及来源详情。新增通用入口的拆分、实施顺序和验收要求见[面向用户分子的入口设计](docs/GENERAL_CHEMISTRY_ENTRY_DESIGN_zh-CN.md)。已交付首版用户自选分子普通RHF单点、canonical轨道与AO密度矩阵导出；首版范围为H/C/N/O、中性单重态、RHF/6-31G(d)、最多20原子且实际AO数≤80。三维结构可用，无需P编号或专有片段。DFT、开壳层、通用优化、扫描和网格密度仍待独立实施。
 
-普通分子计算从[四步使用指南](docs/MOLECULAR_SINGLE_POINT_zh-CN.public.md)开始，使用 `scripts/start-molecular-service.ps1` 和自己的XYZ/请求。四个分子实测及同库直接调用对照通过，候选镜像内114项工程测试通过；非root、只读源与输入、断网、退出码和删除容器后输出保留分别核验。见[2026-10-08验收报告](docs/MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)及[机器状态](validation/molecular-service/deployment-20261008.public.json)。同库对照不是独立科学引擎认证，波函数稳定性未执行。
+普通分子计算从[四步使用指南](docs/CURRENT_MOLECULAR_SINGLE_POINT_zh-CN.md)开始，使用 `scripts/start-molecular-service.ps1` 和自己的XYZ/请求。四个分子实测及同库直接调用对照通过，候选镜像内114项工程测试通过；非root、只读源与输入、断网、退出码和删除容器后输出保留分别核验。见[2026-10-08验收报告](docs/MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)及[机器状态](validation/molecular-service/deployment-20261008.public.json)。同库对照不是独立科学引擎认证，波函数稳定性未执行。
 
-示例与历史复核从 [本地Runtime入口](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md) 开始：查阅P01—P14既有证据、执行受限Check/Report，或选择三个新增[固定登记复算](docs/REGISTERED_CASES_zh-CN.md)：P02冻结表统计、P13图规则与账本、小体系P01乙烯占据表示控制。三个任务有独立来源锁、受控本地镜像和运行记录；实际部署状态见[部署边界](docs/REGISTERED_CASES_DEPLOYMENT_BOUNDARIES_zh-CN.md)。旧用户分子条件态比较Compute仍BLOCKED，与新普通单点分开。Git/项目ZIP提供来源可核对的源码，不包含完整安装环境；镜像分发及源码公开保持分别记录。
+示例与历史复核从 [本地Runtime入口](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md) 开始：查阅P01—P14既有证据、执行受限Check/Report，或选择三个新增[固定登记复算](docs/CURRENT_REGISTERED_CASES_zh-CN.md)：P02冻结表统计、P13图规则与账本、小体系P01乙烯占据表示控制。三个任务有独立来源锁、受控本地镜像和运行记录；实际部署状态见[部署边界](docs/REGISTERED_CASES_DEPLOYMENT_BOUNDARIES_zh-CN.md)。旧用户分子条件态比较Compute仍BLOCKED，与新普通单点分开。Git/项目ZIP提供来源可核对的源码，不包含完整安装环境；镜像分发及源码公开保持分别记录。
 
 以下带日期的工程、条件态失败和原七任务记录保留各自历史范围；其中GitHub CI未执行、源码公开待确认等表述属于对应日期的历史状态，当前首推与远端CI实绩见上方新记录。“Compute BLOCKED”指旧条件态比较服务，不撤销上方普通RHF入口的限定支持。
 
@@ -169,15 +169,15 @@ Runtime源码和指南现已公开同步，本轮以提交身份记录候选，�
 这是原七任务的Docker专用构建入口。自行构建会形成新的 runtime/镜像身份；既有验收结果只属于记录中的旧候选，不能直接作为新镜像的通过证明。普通启动器没有强制网络隔离。已有本地验证镜像可使用前述 PowerShell 5.1 启动入口。
 
 
-安装条件见 [安装指南](docs/INSTALL_zh-CN.md)，任务参数、输出和状态见 [运行指南](docs/RUN_zh-CN.md)，实际状态见 [验证报告](validation/REPORT_2026-10-02_zh-CN.public.md)。源码审查见 [审查报告](docs/SOURCE_AUDIT_zh-CN.public.md)。
+安装条件见 [安装指南](docs/INSTALL_zh-CN.md)，任务参数、输出和状态见 [运行指南](docs/CURRENT_P14_BUILD_RUN_zh-CN.md)，实际状态见 [验证报告](validation/REPORT_2026-10-02_zh-CN.public.md)。源码审查见 [审查报告](docs/SOURCE_AUDIT_zh-CN.public.md)。
 
 不纳入 GPU 训练、在线 Agent 服务、新命题、P09/P10 完整重优化、任意用户分子条件态或原著全文。第二批另提供固定协议的 P09 诊断与 P10 普通 DFT 扫描，范围见下方指南。运行任务不临时安装软件、更新源码或调用大模型 API。项目不新增科学判定，也不构成科学认证。
 
-专业复核阅读层见 [S1—S6 模块对应与服务卡片](docs/PROFESSIONAL_SERVICES_zh-CN.public.md)、[结果判读](docs/REVIEW_RESULTS_zh-CN.public.md)、[三类用户路径](docs/USER_PATHS_zh-CN.public.md)及[已有 Docker 记录示例](docs/examples/P14_REVIEW_20261002_zh-CN.public.md)。[复核报告](docs/templates/REVIEW_REPORT_zh-CN.public.md)与[反馈模板](docs/templates/FEEDBACK_zh-CN.public.md)供手工填写；自动汇总工具未实现，旧七任务入口保留；2026-10-08另增加三个固定P02/P13/P01入口，见上方指南。该文档增补与 `2460eef` 此前候选保留不同历史身份；两者现已纳入用户授权公开的完整历史。十一份YouMind Skill导出由用户延后，不作为已实现Skill交付。
+专业复核阅读层见 [S1—S6 模块对应与服务卡片](docs/PROFESSIONAL_SERVICES_zh-CN.public.md)、[结果判读](docs/REVIEW_RESULTS_zh-CN.public.md)、[三类用户路径](docs/CURRENT_USER_PATHS_zh-CN.md)及[已有 Docker 记录示例](docs/examples/P14_REVIEW_20261002_zh-CN.public.md)。[复核报告](docs/templates/REVIEW_REPORT_zh-CN.public.md)与[反馈模板](docs/templates/FEEDBACK_zh-CN.public.md)供手工填写；自动汇总工具未实现，旧七任务入口保留；2026-10-08另增加三个固定P02/P13/P01入口，见上方指南。该文档增补与 `2460eef` 此前候选保留不同历史身份；两者现已纳入用户授权公开的完整历史。十一份YouMind Skill导出由用户延后，不作为已实现Skill交付。
 
 获授权的首次推送已触发现有 GitHub Actions CI：[run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122)三个限定job均成功，执行构建／轻量测试并上传运行证据附件，保留七天；日志和附件已纳入用户授权公开范围。CI不推送镜像、不打正式标签、不发布Release。本次运行不替代历史科学验收，不执行高成本科学重放；本地工程CI旧记录继续单独保留。
 
-第二批按研究用途接入扭转路径账本、条件态直接响应、π–σ 比较、独立能量组装、路径闭合、丁二烯 GL 端点、环丁二烯条件态诊断及苯核排斥／普通 DFT 扫描。入口、固定输入及新计算范围见[第二批使用指南](docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md)，实际结果见[验证摘要](docs/PROTOCOL_CASES_BATCH2_VALIDATION_zh-CN.public.md)及[支持矩阵](validation/protocol-cases/support-matrix.public.json)。这是本地固定协议服务；任意用户小分子的普通 RHF 服务另有首批范围，任意用户分子的条件态 Compute 仍 BLOCKED。各次数值记录属于各自登记的镜像，不冒充最终候选镜像上全部重新执行的验收。
+第二批按研究用途接入扭转路径账本、条件态直接响应、π–σ 比较、独立能量组装、路径闭合、丁二烯 GL 端点、环丁二烯条件态诊断及苯核排斥／普通 DFT 扫描。入口、固定输入及新计算范围见[第二批使用指南](docs/CURRENT_PROTOCOL_CASES_zh-CN.md)，实际结果见[验证摘要](docs/PROTOCOL_CASES_BATCH2_VALIDATION_zh-CN.public.md)及[支持矩阵](validation/protocol-cases/support-matrix.public.json)。这是本地固定协议服务；任意用户小分子的普通 RHF 服务另有首批范围，任意用户分子的条件态 Compute 仍 BLOCKED。各次数值记录属于各自登记的镜像，不冒充最终候选镜像上全部重新执行的验收。
 
 第三方许可补充包与未解决的对应源码要求见 [源码交付方案](docs/CORRESPONDING_SOURCE_zh-CN.public.md)及[材料校验记录](validation/license-materials-review.json)。取得通知不等于 binary/source 对应关系已证明；**镜像分发BLOCKED；源码与用户提供的指南已按授权公开**。第三方许可和NOTICE边界继续适用。
 

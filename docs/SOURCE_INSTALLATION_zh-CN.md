@@ -42,7 +42,16 @@ python -B .\scripts\register-installation.py --service high-cost-cases --image <
 
 登记检查实际镜像 ID、基础层、平台、标签、非 root 用户、依赖版本和关键源码文件。`ENGINEERING_VALIDATED` 只表示这些工程身份检查通过，科学验收状态仍为 `UNKNOWN`。执行每个任务时，原科学协议、资源限制、离线运行、数值门槛与证据收集继续生效。历史候选记录不被改写。
 
-2026-10-10 使用闭合的安装来源合同 v3（不是软件发行版本）。原四份来源清单逐字保留，`prepare` 在独立安装上下文另存 `*.installation-baseline.json`。普通与固定服务各有一行监督器修订；专题清单含两行明确绑定的工程变化；高成本清单含五行、其余102行保持原字节。新增加的两份配置及高成本生成器变化只撤下未交付平台元数据，科学 case、状态、资源和阈值完全不变；具体允许路径及新旧哈希见 `scripts/installation_source_bindings.py`。新增共享监督辅助器及安装绑定器也进入 host/inventory 身份。旧镜像的科学 PASS 不会被转移到新构建。
+当前安装使用 `REVIEWED_PUBLIC_PAYLOAD_WITH_LOCAL_TESTS_V4`（工程来源合同，不是发行版本）。原四份来源清单逐字保留，独立安装上下文另存 `*.installation-baseline.json`；精确测试排除和允许工程覆盖分别登记，新宿主路径重新核对完整派生合同，科学文件不允许遗漏。
+
+| 家族 | 原清单 | 安装保留 | 测试排除 | 工程覆盖 | 其余不变 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| molecular-service | 20 | 20 | 0 | 3 | 17 |
+| registered-cases | 37 | 37 | 0 | 3 | 34 |
+| protocol-cases | 118 | 113 | 5 | 5 | 108 |
+| high-cost-cases | 107 | 100 | 7 | 7 | 93 |
+
+具体排除行、覆盖路径和精确新旧哈希见 [绑定实现](../scripts/installation_source_bindings.py)，每个 installation-record 的 source_catalog_binding 保留完整对应关系。共享宿主安全与绑定器另进入 host/inventory 身份。历史 V3／V4验收属于各自原提交，新宿主的预算与隔离修订不转授数值资格。
 
 更新后的启动器不能冒充历史候选镜像；应从干净已提交源码准备新的上下文、构建并独立登记。旧2026-10-09安装记录仍可审阅，本次合同不会修改或转授其数值结论。新公开安装CI只验证公开固定来源、构建、四类身份登记及标准库文件探针，不重算历史分子。
 
@@ -76,3 +85,5 @@ P03—P10 保留原 `ledger/preflight/live` 范围和预算检查；P07 仅支�
 P01—P14 历史证据的 Show/Review 是本机只读模块，无须新 Docker 身份，继续通过 `start-local-runtime.ps1` 使用。它不自动下载原始证据；未提供对应来源目录时，缺失项会如实记为 `MISSING`，不能称为完成 P14 复算。用户分子 Check 可通过原启动器显式提供新镜像 ID，须使用该入口自己的请求格式；这里的水分子请求仅用于普通单点服务。ResultReview/Report 继续读取实际记录。条件用户分子的 Compute 仍为 `BLOCKED`；普通 RHF 单点入口不改变这个结论。
 
 普通 Native WSL2 仍只有已记录的 Check 能力，未开放 Native Compute，不能继承 Docker 的计算验收。镜像分发保持 `BLOCKED`。[Actions run38003025857](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857)对86e29b47三个既有job成功，覆盖登记工程合同和旧L0/L1；不代表全部科学服务或本轮新安装路径已通过该次CI。L4可以保存检查点，仍不支持恢复运行。
+
+四家当前操作入口：[普通分子](CURRENT_MOLECULAR_SINGLE_POINT_zh-CN.md)、[固定案例](CURRENT_REGISTERED_CASES_zh-CN.md)、[专题](CURRENT_PROTOCOL_CASES_zh-CN.md)、[高成本](CURRENT_HIGH_COST_CASES_zh-CN.md)。原七任务／P14是[独立构建与身份合同](CURRENT_P14_BUILD_RUN_zh-CN.md)，不属于四家登记器。

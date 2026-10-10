@@ -69,21 +69,34 @@ def main():
         suite.addTests(group)
     all_ids=[identity for group in groups for identity in group['test_ids']]
     if len(all_ids)!=len(set(all_ids)): raise RuntimeError('Duplicate engineering test identities')
+    missing=[group['pattern'] for group in groups if group['discovered']==0]
+    if missing or not all_ids:
+        (args.output_root/'result.json').write_text(json.dumps({'status':'INCOMPLETE_DISCOVERY',
+            'executed':0,'missing_required_groups':missing,'groups':groups,'planned_test_ids':all_ids,
+            'scientific_execution':'NOT_EXECUTED'},indent=2)+'\n',encoding='utf-8')
+        return 2
     files=sorted({path for pattern in PATTERNS for path in (ROOT/'tests').glob(pattern)})
+    actual_ids=[]
+    class AuditedResult(unittest.TextTestResult):
+        def startTest(self,test):
+            actual_ids.append(test.id());super().startTest(test)
     with (args.output_root/'tests.log').open('w',encoding='utf-8') as log:
-        result=unittest.TextTestRunner(stream=log,verbosity=2).run(suite)
+        result=unittest.TextTestRunner(stream=log,verbosity=2,resultclass=AuditedResult).run(suite)
+    passed=result.testsRun-len(result.failures)-len(result.errors)-len(result.skipped)
+    complete=passed>0 and result.testsRun==len(all_ids) and len(actual_ids)==len(set(actual_ids)) and set(actual_ids)==set(all_ids)
     report={'schema':'local-services-engineering-ci-v1',
-            'status':'PASS_ENGINEERING_WITH_DECLARED_SKIPS' if result.wasSuccessful() and result.skipped else 'PASS_ENGINEERING' if result.wasSuccessful() else 'FAIL_ENGINEERING',
+            'status':'INCOMPLETE_EXECUTION' if not complete else 'PASS_ENGINEERING_WITH_DECLARED_SKIPS' if result.wasSuccessful() and result.skipped else 'PASS_ENGINEERING' if result.wasSuccessful() else 'FAIL_ENGINEERING',
             'scope':'Local services, exit qualification, current declaration/export, installation identity, lifecycle mocks and saved-array witnesses; no new SCF/optimization/platform acceptance',
             'executed':result.testsRun,'passed':result.testsRun-len(result.failures)-len(result.errors)-len(result.skipped),
             'skipped':[{'test':test.id(),'reason':reason} for test,reason in result.skipped],
             'failures':[{'test':test.id(),'traceback':trace} for test,trace in result.failures],
             'errors':[{'test':test.id(),'traceback':trace} for test,trace in result.errors],
             'discovered_unique':len(all_ids),'groups':groups,'real_quantum_imports':'BLOCKED',
+            'planned_test_ids':all_ids,'executed_test_ids':actual_ids,'required_groups_present':not missing,
             'scientific_tests_opted_in':False,**execution_context(),
             'test_source_files':{path.relative_to(ROOT).as_posix():hashlib.sha256(path.read_bytes()).hexdigest() for path in files}}
     (args.output_root/'result.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({key:report[key] for key in ['status','executed','passed','skipped','discovered_unique']},ensure_ascii=False))
-    return 0 if result.wasSuccessful() else 1
+    return 0 if result.wasSuccessful() and complete else 1
 
 if __name__=='__main__':raise SystemExit(main())

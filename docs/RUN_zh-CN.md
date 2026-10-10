@@ -1,8 +1,10 @@
 # 分层运行合同
 
-当前状态（2026-10-10）：源码和静态指南已公开；当前各类服务见[专业服务矩阵](CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)。本页说明原七任务的 Docker 运行合同。指定本地候选 L0—L4、等价性及联合分类的历史验收保留，严格断网仅覆盖 L0—L2、等价性和指定探针，L3/L4 严格断网未执行。[Actions run 38003025857](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857)对 `86e29b47` 三个既有 job 成功，仅覆盖工程合同及旧 L0/L1；不认证本轮新安装路径或全部科学服务。镜像分发仍受[公开边界](PUBLICATION_BOUNDARIES_zh-CN.md)中的独立阻塞约束。
+当前状态（2026-10-10）：源码和静态指南已公开；当前各类服务见[专业服务矩阵](CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)。本页说明原七任务的 Docker 运行合同。指定本地候选 L0—L4、等价性及联合分类的历史验收保留，严格断网仅覆盖 L0—L2、等价性和指定探针，L3/L4 严格断网未执行。[Actions run 38036972441](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38036972441)对 `be51dcb` 两个 job 成功，覆盖公开安装工程和旧 L0/L1；不认证本轮修复或全部科学服务。原 `86e29b47` 三 job 记录保留为历史。镜像分发仍受[公开边界](PUBLICATION_BOUNDARIES_zh-CN.md)中的独立阻塞约束。
 
-专业阅读入口：[模块与规则对应表](PROFESSIONAL_SERVICES_zh-CN.public.md)、[结果判读](REVIEW_RESULTS_zh-CN.public.md)、[三类用户路径](USER_PATHS_zh-CN.public.md)、[已有验收示例](examples/P14_REVIEW_20261002_zh-CN.public.md)。文档示例不自动启动新运行；本轮沿用已有结果。
+当前安装入口：[原七任务独立构建与运行](CURRENT_P14_BUILD_RUN_zh-CN.md)，四家服务见[当前三类用户路径](CURRENT_USER_PATHS_zh-CN.md)。以下固定候选标签示例仅适用于持有该历史镜像的原环境。
+
+历史七任务专业阅读入口：[模块与规则对应表](PROFESSIONAL_SERVICES_zh-CN.public.md)、[结果判读](REVIEW_RESULTS_zh-CN.public.md)、[三类用户路径](USER_PATHS_zh-CN.public.md)、[已有验收示例](examples/P14_REVIEW_20261002_zh-CN.public.md)。文档示例不自动启动新运行；本轮沿用已有结果。
 
 Windows 日常使用 `scripts/start-runtime.ps1`，可从 PowerShell 5.1 自动选择已有 7.3+，固定 Docker；底层 `scripts/run-docker.ps1` 需已有 PowerShell 7.3+。容器内稳定接口为 `python -m runtime.cli run TASK`，entrypoint 自动调用。任务白名单：evidence、core-tests、p14-smoke、p14-equivalence、p14-fixed、p14-optimize、p14-classify。未知 task/参数由 argparse/PowerShell 拒绝。新普通分子及三批案例使用各自入口，不套用原 P14 镜像身份。
 

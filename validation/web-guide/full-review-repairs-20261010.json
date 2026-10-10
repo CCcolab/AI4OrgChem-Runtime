@@ -1,0 +1,72 @@
+{
+  "schema": "full-review-web-downloads-v1",
+  "review_baseline": "be51dcbbd2e9ef519c55f9598faf18c567f76184",
+  "browser": "Codex in-app browser; localhost HTTP",
+  "html_sha256": "75244b638a0eb0817a1372505c4993f48ec6c57f4e9f1b8ad85797dcee30b555",
+  "html_bytes": 226104,
+  "zip_sha256": "4bd1f76d8dad2a6f6884381c978bf506ad9dcc7e8f7355d98e416c2d9cb59336",
+  "zip_bytes": 490999,
+  "crc": "PASS",
+  "member_count": 10,
+  "members": [
+    {
+      "path": "ai4orgchem-runtime-guide/docs/index.html",
+      "size_bytes": 226104,
+      "sha256": "75244b638a0eb0817a1372505c4993f48ec6c57f4e9f1b8ad85797dcee30b555"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/docs/.nojekyll",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/README.md",
+      "size_bytes": 37897,
+      "sha256": "4a4bbae6ab09c263c2d86c7449270393c03ccee5f8a700f39bd79192b2a984a3"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/content/guide_zh-CN.md",
+      "size_bytes": 123292,
+      "sha256": "90526a8ff05ffbd7c5bfb3050000299f77bf6247cc3ff07f07aa54af553a86d1"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/provenance/sources.md",
+      "size_bytes": 19401,
+      "sha256": "0f546c71c08ac5ae05ed97aabd987c21ba77dba16e4b771b81d4a76da449b68f"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/verification/checks.md",
+      "size_bytes": 39301,
+      "sha256": "b41fc97d295af0054d57f9a74f8bbd17a1e62959f46057cf15e982e6a5e8b55a"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/MIGRATION.md",
+      "size_bytes": 41040,
+      "sha256": "d18475838278221001299468ed45957d9df43726d6945321ddedbcde654d95de"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/MANIFEST.txt",
+      "size_bytes": 1844,
+      "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/templates/molecular-service/water/request.json",
+      "size_bytes": 277,
+      "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/templates/molecular-service/water/molecule.xyz",
+      "size_bytes": 123,
+      "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+    }
+  ],
+  "all_five_maintenance_downloads_equal_zip": true,
+  "all_code_id_texts_preserved": 82,
+  "water_templates_byte_identical": true,
+  "javascript_syntax": "PASS",
+  "contextual_markdown_links": "PASS",
+  "dynamic_html_and_zip": "PASS_THIS_LOCAL_BROWSER",
+  "original_external_review_browser": "NOT_RETESTED",
+  "head_guard": "PRESERVED_FROZEN_DOM_AND_EXACT_SERIALIZED_PREFIX",
+  "scientific_calls": 0
+}

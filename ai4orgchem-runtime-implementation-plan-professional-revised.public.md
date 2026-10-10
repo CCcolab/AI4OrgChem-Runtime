@@ -454,7 +454,6 @@ L3/L4 仅供有相应预算的用户选用，不是本次编辑需要执行的�
 - 公开环境：https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/reproducibility/environment.yml
 - 平台矩阵：https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/reproducibility/PLATFORM_MATRIX_zh-CN.md
 - 软件依赖：https://github.com/CCcolab/AI4OrgChem/blob/28511f3d84fa65707a107cde1e8121a7b4334ecb/software/pyproject.toml
-- 微软 WSL Containers 正式可用公告：https://blogs.windows.com/windowsdeveloper/2026/09/29/wsl-containers-now-generally-available/
 
 本方案上游文件链接已固定到科学提交；版本、参数和兼容性以实际源码、官方文档和目标主机运行结果为准。
 

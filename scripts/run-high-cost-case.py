@@ -4,6 +4,8 @@ import argparse, datetime, hashlib, importlib.util, json, os, re, shutil, stat, 
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from runtime.high_cost_cases import SOURCE_LOCK,DEPENDENCY_LOCK,PROFILE,read_json,save,digest,unit,units,limits,validate_contract
 from runtime.high_cost_cases.resources import host_memory,admission
+sys.path.insert(0,str(ROOT/'scripts'))
+from runtime_host_safety import recover_created_container,confirmed_absence,HostSafetyError
 LABEL='ai4orgchem.high-cost.execution-id'
 spec=importlib.util.spec_from_file_location('_preserved_batch2_path_helpers',ROOT/'scripts/run-protocol-case.py')
 helpers=importlib.util.module_from_spec(spec);spec.loader.exec_module(helpers)
@@ -178,8 +180,9 @@ def run(args):
     host_launcher=verify_source();root=validate_directory(args.output_root);root.mkdir(parents=True,exist_ok=True)
     identifier=uuid.uuid4().hex;run=root/(datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+(args.unit or args.task)+'-'+identifier);run.mkdir()
     out=run/'output';out.mkdir();scratch=run/'scratch';scratch.mkdir();(run/'contract').mkdir()
-    lock=root/'.high-cost-active.lock';locked=False;cid=None;docker=DockerJournal(args.docker_executable,run);start=None;reservation=None;code=40;c=None;create_attempted=False;absence_confirmed=False
-    probe_name='high-cost-resource-probe-'+identifier;probe_attempted=False
+    lock=root/'.high-cost-active.lock';locked=False;cid=None;docker=DockerJournal(args.docker_executable,run);start=None;reservation=None;code=40;c=None;create_attempted=False;quarantine=False
+    creation_name='high-cost-state-'+identifier
+    probe_name='high-cost-resource-probe-'+identifier;probe_attempted=False;probe_command_completed=False
     e={'schema':'high-cost-host-v1','execution_id':identifier,'case':args.task,'unit':args.unit,'mode':args.mode,'status':'NOT_EXECUTED','container_removed':False,'worker_started':False,'automatic_retry':False,'resume_supported':False,'host_launcher':host_launcher}
     try:
         with lock.open('x',encoding='utf-8') as f:json.dump({'execution_id':identifier},f)
@@ -192,6 +195,7 @@ def run(args):
         engine=json.loads(docker('info','--format','{{json .}}').stdout)
         probe_attempted=True
         probe=docker('run','--rm','--name',probe_name,'--label',LABEL+'=probe-'+identifier,'--network','none','--read-only','--user','10001:10001','--memory','134217728','--memory-swap','134217728','--cpus','1','--cap-drop','ALL','--security-opt','no-new-privileges','--entrypoint','/opt/venv/bin/python',record['image_id'],'-B','-c',"import json;d={l.split(':')[0]:int(l.split()[1])*1024 for l in open('/proc/meminfo')};print(json.dumps({'available_bytes':d['MemAvailable'],'total_bytes':d['MemTotal']}))")
+        probe_command_completed=True
         resource=limits(args.task,args.mode);guest=json.loads(probe.stdout);host=host_memory()
         admit=admission(resource,{'NCPU':engine.get('NCPU'),'MemTotal':engine.get('MemTotal')},guest,host,shutil.disk_usage(root).free,live=args.mode=='live');save(run/'admission.json',admit);e['admission']=admit
         if admit['status']!='PASS':e['status']=admit['status'];raise ValueError('Resource admission refused: '+','.join(admit['reasons']))
@@ -206,11 +210,12 @@ def run(args):
         c={'schema':'high-cost-state-execution-v1','case':args.task,'mode':args.mode,'unit':args.unit,'execution_id':identifier,'image_id':record['image_id'],'runtime_build_commit':record['runtime_build_commit'],'source_sha256':record['source_sha256'],'dependencies_sha256':record['dependencies_sha256'],'profile_sha256':record['profile_sha256'],'resources':resource,'started_epoch':now,'stop_deadline_epoch':now+resource['soft_wall_seconds'],'hard_deadline_epoch':now+resource['hard_wall_seconds'],'inputs':dependencies}
         validate_contract(c);contract=run/'contract/task-contract.json';save(contract,c);e.update(contract=c,image_id=c['image_id'],status='ADMITTED')
         paths={'/task-contract.json':(contract,False),'/output':(out,True),'/inputs':(run/'inputs',False),'/scratch':(scratch,True)}
-        cmd=['create','--name','high-cost-state-'+identifier,'--label',LABEL+'='+identifier,'--network','none','--read-only','--user','10001:10001','--cpus',str(resource['cpus']),'--memory',str(resource['memory_bytes']),'--memory-swap',str(resource['memory_bytes']),'--pids-limit','256','--cap-drop','ALL','--security-opt','no-new-privileges','--tmpfs','/tmp:rw,nosuid,nodev,size=268435456','--env','TMPDIR=/scratch']
+        cmd=['create','--name',creation_name,'--label',LABEL+'='+identifier,'--network','none','--read-only','--user','10001:10001','--cpus',str(resource['cpus']),'--memory',str(resource['memory_bytes']),'--memory-swap',str(resource['memory_bytes']),'--pids-limit','256','--cap-drop','ALL','--security-opt','no-new-privileges','--tmpfs','/tmp:rw,nosuid,nodev,size=268435456','--env','TMPDIR=/scratch']
         for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS']:cmd+=['--env',k+'='+str(resource['threads'])]
         cmd+=['--env','PYTHONDONTWRITEBYTECODE=1']
         for dest,(path,rw) in paths.items():cmd+=['--mount','type=bind,source='+str(path)+',target='+dest+('' if rw else ',readonly')]
         cmd+=['--entrypoint','/opt/venv/bin/python',c['image_id'],'-B','-m','runtime.high_cost_cases','--contract','/task-contract.json','--output-dir','/output'];save(run/'launch-command.json',[args.docker_executable,*cmd])
+        save(run/'create-intent.json',{'name':creation_name,'image_id':record['image_id'],'label_key':LABEL,'token':identifier})
         create_attempted=True;cid=docker(*cmd).stdout.decode().strip()
         if not re.fullmatch('[0-9a-f]{64}',cid):raise ValueError('Full created container ID required')
         e.update(container_id=cid,status='RUNNING');created=one(docker('inspect',cid));verify_container(created,c,cid,paths);save(run/'container-created.json',created)
@@ -234,13 +239,13 @@ def run(args):
         if not str(e['status']).startswith('BLOCKED_RESOURCE'):e['status']='REFUSED_OR_NOT_QUALIFIED'
         code=50 if isinstance(error,(TimeoutError,subprocess.TimeoutExpired,KeyboardInterrupt)) else 40
     finally:
-        if create_attempted and cid is None:
+        if create_attempted and (not cid or not re.fullmatch('[0-9a-f]{64}',cid)):
             try:
-                found=docker('ps','--all','--quiet','--no-trunc','--filter','label='+LABEL+'='+identifier,timeout=5).stdout.decode().split()
-                if len(found)>1:raise ValueError('Ambiguous owned create outcome')
-                if found:cid=found[0];e['container_id']=cid
-                else:absence_confirmed=True;e['creation_absence_confirmed_by_unique_label']=True
-            except BaseException as error:e['unknown_creation_error']=str(error)
+                cid=recover_created_container(docker,name=creation_name,image_id=record['image_id'],label_key=LABEL,token=identifier)
+                e.update(container_id=cid,create_recovery='OWNED_ID_RECOVERED' if cid else 'ABSENT_NOW_CREATE_COMPLETION_UNKNOWN')
+                if cid is None:quarantine=True;e['status']='FAILED_OR_UNKNOWN_CLEANUP'
+            except BaseException as error:
+                cid=None;quarantine=True;e.update(unknown_creation_error=str(error),status='FAILED_OR_UNKNOWN_CLEANUP',create_recovery='UNKNOWN_QUARANTINED')
         if cid:
             try:
                 current=one(docker('inspect',cid,timeout=5));ownership(current,c,cid)
@@ -251,29 +256,35 @@ def run(args):
                 if not e['logs_collected']:raise ValueError('Container logs not closed')
                 docker('rm',cid,timeout=10)
                 absent=docker('inspect',cid,timeout=5,allow_failure=True)
-                if absent.returncode!=1 or not any(s in absent.stderr.decode('utf-8','replace').lower() for s in ['no such object','no such container']):raise ValueError('Removal unconfirmed')
+                if not confirmed_absence(absent,cid):raise ValueError('Removal unconfirmed')
                 e['container_removed']=True
                 if code==0:
                     after=verify_outputs(out,c)
                     if after!=e['evidence_review']:raise ValueError('Output changed after deletion')
                     e['post_removal_evidence_review']=after;e['status']='PASS_SCOPED_HIGH_COST_'+args.mode.upper()
-            except BaseException as error:e.update(cleanup_error=type(error).__name__+': '+str(error),status='FAILED_OR_UNKNOWN_CLEANUP');code=50
+            except BaseException as error:quarantine=True;e.update(cleanup_error=type(error).__name__+': '+str(error),status='FAILED_OR_UNKNOWN_CLEANUP');code=50
         if probe_attempted:
             try:
                 old_deadline=docker.deadline;docker.deadline=None
                 inspected=docker('inspect',probe_name,timeout=5,allow_failure=True)
                 if inspected.returncode==0:
                     data=one(inspected)
-                    if data.get('Image')!=record['image_id'] or (data.get('Config',{}).get('Labels') or {}).get(LABEL)!='probe-'+identifier:raise ValueError('Probe ownership differs')
+                    if data.get('Image')!=record['image_id'] or data.get('Name')!='/'+probe_name or not re.fullmatch('[0-9a-f]{64}',str(data.get('Id'))) or (data.get('Config',{}).get('Labels') or {}).get(LABEL)!='probe-'+identifier:raise ValueError('Probe ownership differs')
                     docker('rm','--force',data['Id'],timeout=5)
-                elif inspected.returncode!=1 or not any(x in inspected.stderr.decode('utf-8','replace').lower() for x in ['no such object','no such container']):raise ValueError('Probe absence unknown')
+                    absent=docker('inspect',data['Id'],timeout=5,allow_failure=True)
+                    if not confirmed_absence(absent,data['Id']):raise ValueError('Probe removal unconfirmed')
+                elif not confirmed_absence(inspected,probe_name) or not probe_command_completed:raise ValueError('Probe absence cannot close an unfinished run/create request')
                 e['owned_capacity_probe_closed']=True;docker.deadline=old_deadline
-            except BaseException as error:e['probe_cleanup_error']=str(error);e.update(status='FAILED_OR_UNKNOWN_PROBE_CLEANUP',host_exit_code=40);code=40
-        if locked:
+            except BaseException as error:quarantine=True;e['probe_cleanup_error']=str(error);e.update(status='FAILED_OR_UNKNOWN_PROBE_CLEANUP',host_exit_code=40);code=40
+            finally:docker.deadline=old_deadline
+        if locked and not quarantine:
             try:
                 if read_json(lock).get('execution_id')!=identifier:raise ValueError('Active lock ownership differs')
                 lock.unlink();e['owned_lock_released']=True
             except BaseException as error:e.update(status='FAILED_LOCK_CLEANUP',host_exit_code=40,lock_cleanup_error=str(error));code=40
+        elif locked:
+            e.update(owned_lock_released=False,owned_lock_retained='UNCONFIRMED_CONTAINER_STATE',quarantine_lock=str(lock))
+        e.update(creation_attempted=create_attempted,cleanup_closed=not quarantine and (not create_attempted or e['container_removed'] is True))
         # Close every owned Docker operation before hashing the journal and its
         # stdout/stderr files. Probe cleanup also appends to commands.jsonl.
         # Scratch is retained but excluded from scientific output hashes.
@@ -284,7 +295,7 @@ def run(args):
         if reservation:
             try:
                 from runtime.high_cost_cases.budget import settle
-                e['budget']=settle(args.budget,identifier,elapsed,e['container_removed'] or absence_confirmed or not create_attempted,e['status'])
+                e['budget']=settle(args.budget,identifier,elapsed,e['cleanup_closed'] and e.get('owned_lock_released') is True,e['status'])
             except BaseException as error:e['budget_error']=str(error);code=40;e.update(host_exit_code=code,status='FAILED_BUDGET_CLOSURE')
         save(run/'host-execution.json',e)
         hashes['host-execution.json']=digest(run/'host-execution.json')

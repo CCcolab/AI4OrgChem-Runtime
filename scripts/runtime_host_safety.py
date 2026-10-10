@@ -12,6 +12,24 @@ CID = re.compile(r'[0-9a-f]{64}\Z')
 IMAGE = re.compile(r'sha256:[0-9a-f]{64}\Z')
 
 
+def ordinary_qualification_scope(case):
+    """Interpret frozen v1 booleans without certifying ungated virtual orbitals."""
+    return {
+        'schema': 'ordinary-rhf-qualification-interpretation-v1',
+        'qualification_scope': 'SPECIFIED_GEOMETRY_ORDINARY_RHF_V1_NUMERICAL_GATES_ONLY',
+        'endpoint_numerically_qualified': case.get('numerically_qualified') is True,
+        'orbital_export_qualification': {
+            'status': 'NOT_ESTABLISHED_FOR_ALL_CANONICAL_ORBITALS',
+            'qualified': False,
+            'occupied_scope': 'V1_OCCUPIED_ORTHONORMALITY_AND_DENSITY_RECONSTRUCTION_CHECKS',
+            'virtual_scope': 'OBSERVATIONAL_ONLY_NO_FULL_SPACE_OR_EIGEN_EQUATION_GATE',
+            'generalized_eigen_residual': case.get('diagnostics', {}).get('residuals', {}).get('generalized_mo_eigen_equation_frobenius_hartree'),
+            'new_full_orbital_gate_version': 'NOT_IMPLEMENTED'},
+        'closed_shell_single_determinant': 'USER_MODEL_ASSUMPTION_NOT_PHYSICAL_STATE_CERTIFICATION',
+        'wavefunction_stability': 'NOT_EXECUTED',
+        'scientific_certification': False}
+
+
 class HostSafetyError(RuntimeError):
     def __init__(self, message, *, cleanup_unknown=False):
         super().__init__(message)

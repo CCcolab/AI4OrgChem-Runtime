@@ -372,7 +372,8 @@ def verify_worker_evidence(output, contract, contract_sha256):
             raise ValueError("Worker manifest output hash differs")
     for file in ("resource-start.json", "resource-end.json"):
         read_json(output / file)
-    return {"status": "PASS_SCOPED_MOLECULAR_SINGLE_POINT_EVIDENCE", "worker_receipt_sha256": digest(output / "worker-receipt.json"), "guard_receipt_sha256": digest(guard_path), "result_sha256": receipt["result_sha256"], "actual_dispatch_counts": guard["counts"], "source_native_scope": "ORDINARY_RHF_SINGLE_POINT_ONLY_NOT_CONDITIONAL_COMPUTE"}
+    from runtime_host_safety import ordinary_qualification_scope
+    return {"status": "PASS_SCOPED_MOLECULAR_SINGLE_POINT_EVIDENCE", "worker_receipt_sha256": digest(output / "worker-receipt.json"), "guard_receipt_sha256": digest(guard_path), "result_sha256": receipt["result_sha256"], "actual_dispatch_counts": guard["counts"], "source_native_scope": "ORDINARY_RHF_SINGLE_POINT_ONLY_NOT_CONDITIONAL_COMPUTE", **ordinary_qualification_scope(case)}
 
 
 def stop_owned_container(docker, container_id, *, hard_deadline, clock=time.monotonic):

@@ -18,14 +18,18 @@
       "original_sha256": "157f65bdf2f70c8855274a35a907b7c584d6cff4bacacec666cab40d309f9911",
       "original_size_bytes": 54000,
       "projection_sha256_before_reference_updates": "dae76ee2693585bfc031af09e5623a136383406117dad6e75a53a9de03b7a79e",
-      "projection_sha256": "b1fc0feef953917a261c1778a998ed505c55c9be23233c9223d7ceec922e404a"
+      "projection_sha256": "19f13d67d8b324e67adca8a731fb37e140ef9c1abb32387ea1f497537e533e97",
+      "projection_sha256_before_review_reference_removal": "b1fc0feef953917a261c1778a998ed505c55c9be23233c9223d7ceec922e404a",
+      "review_revision": "20261010_REMOVE_RETIRED_PLATFORM_REFERENCE_ONLY"
     },
     {
       "path": "ai4orgchem-runtime-implementation-plan.public.md",
       "original_sha256": "6efc40ad3763687ffbdec1a3440dddf6c61657dfe10e2e3e191c5ce05a346204",
       "original_size_bytes": 22523,
       "projection_sha256_before_reference_updates": "dfcaaf3d16959e1baf788db5db8a965fbe59ec67e82e16a0d8ab9e25fa3dd93b",
-      "projection_sha256": "46d365cdcefba5ac2d1cb187e76ed57583e889fce765cab7446194224ab84da1"
+      "projection_sha256": "320c80d93c2009d32410583418329416be0073a0769779fd5a67aa642b0599d4",
+      "projection_sha256_before_review_reference_removal": "46d365cdcefba5ac2d1cb187e76ed57583e889fce765cab7446194224ab84da1",
+      "review_revision": "20261010_REMOVE_RETIRED_PLATFORM_REFERENCE_ONLY"
     },
     {
       "path": "docs/CORRESPONDING_SOURCE_zh-CN.public.md",

@@ -38,10 +38,18 @@ def adapt_launcher(launcher, record, preflight):
             identity.save_new(Path(output) / "INSTALLATION_PREFLIGHT.json", preflight)
     launcher.read_json = read
     if is_high_cost:
-        # The preserved host still validates all 107 rows. These two constants
-        # identify the independently validated new installation baseline only.
-        launcher.BASE_SOURCE_SHA256 = record["source_snapshot_sha256"]
-        launcher.BASE_IMAGE_ID = record["image_id"]
+        # Preserve the historical 107-row route. An independently registered
+        # installation must recheck the exact derived source contract instead.
+        def installed_source(candidate=None):
+            if candidate is not None and candidate != identity.legacy_record(record):
+                raise ValueError("Installed high-cost candidate identity differs")
+            _, binding = identity.source_bindings.bind(ROOT, "high-cost-cases")
+            if binding != record["source_catalog_binding"] or binding["source_sha256"] != record["source_snapshot_sha256"]:
+                raise ValueError("Installed high-cost source binding differs")
+            return {"schema": "high-cost-host-installation-source-v1",
+                    "scope": "EXACT_REGISTERED_INSTALLATION_SOURCE",
+                    "image_id": record["image_id"], "source_catalog_binding": binding}
+        launcher.verify_source = installed_source
         launcher.DockerJournal = InstalledDockerCommands
     else:
         launcher.DockerCommands = InstalledDockerCommands

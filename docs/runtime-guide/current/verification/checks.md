@@ -359,7 +359,7 @@ python -B .\scripts\run-installed-runtime.py --installation-record ..\installati
 
 prepare 下载固定公开来源591项、21 wheel + 1源码包；geomeTRIC 在镜像内构建，不升级宿主。build、installation identity 与科学证据分层，不互相代替。registered-cases / protocol-cases / high-cost-cases 分别登记自己的 installation-record，不继承历史PASS。
 
-水完成后，进入[自己的XYZ/request指南](content/guide_zh-CN.md#user-molecule)。普通H/C/N/O、电荷0、单重态、RHF/6-31G(d)、≤20原子、实际AO≤80保持；普通请求与旧条件态Check不能混用。
+水完成后，进入[自己的XYZ/request指南](../content/guide_zh-CN.md#user-molecule)。普通H/C/N/O、电荷0、单重态、RHF/6-31G(d)、≤20原子、实际AO≤80保持；普通请求与旧条件态Check不能混用。
 
 ### 安装候选身份与受限验收
 
