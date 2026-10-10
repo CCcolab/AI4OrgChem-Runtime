@@ -1,0 +1,254 @@
+{
+  "date": "2026-10-10",
+  "reviewed_prior_commit": "a2c071f8131bc4bd026aa6afd5900fe7b1f66f64",
+  "scope": "Static guide parsing compatibility, parameter prose and QA inventory only; no scientific computation, protocol change, Docker rebuild or WSL changes",
+  "reported_external_failure": {
+    "source": "User supplied review and screenshot",
+    "reviewed_commit": "a2c071f",
+    "error_stage": "EXPORT_SOURCE",
+    "error_code": "INCOMPLETE",
+    "issues": [
+      "owned_charset_invalid",
+      "owned_viewport_invalid",
+      "owned_title_invalid",
+      "owned_style_missing_or_empty"
+    ],
+    "parsed_owned_heads": 0,
+    "source_capture_in_that_environment": "UNKNOWN",
+    "original_review_browser_retest": "NOT_EXECUTED"
+  },
+  "historical_success_records_preserved": [
+    "validation/web-guide/current-delivery-20261010.json",
+    "validation/web-guide/export-followup-20261010.json"
+  ],
+  "current_local_iab_observation_of_prior_deployed_page": {
+    "html_download": "SUCCEEDED_THIS_ATTEMPT",
+    "not_a_reproduction_of_reporter_environment": true
+  },
+  "application_browser_tests": {
+    "normal_html_download": "PASS",
+    "normal_qa_download": "PASS",
+    "normal_inventory": {
+      "ledger": 8,
+      "preflight": 8,
+      "live": 7
+    },
+    "all_four_heads_removed_by_domparser": {
+      "fixture": "Synthetic parser mutation before the owned app script",
+      "html_download": "PASS",
+      "zip_download": "PASS",
+      "qa_download": "PASS",
+      "normal_vs_compatibility_html_byte_equal": true,
+      "diagnostics": {
+        "status": "PASS",
+        "capture": {
+          "head_present": true,
+          "owned_counts": {
+            "charset": 1,
+            "viewport": 1,
+            "title": 1,
+            "style": 1
+          }
+        },
+        "phases": [
+          {
+            "stage": "EXPORT_SOURCE",
+            "markup_head_present": true,
+            "serialized_owned_marker_count": 7,
+            "domparser": {
+              "head_present": true,
+              "owned_counts": {
+                "charset": 0,
+                "viewport": 0,
+                "title": 0,
+                "style": 0
+              }
+            },
+            "domparser_error": {
+              "stage": "EXPORT_SOURCE",
+              "code": "INCOMPLETE",
+              "details": {
+                "issues": [
+                  "owned_charset_invalid",
+                  "owned_viewport_invalid",
+                  "owned_title_invalid",
+                  "owned_style_missing_or_empty"
+                ],
+                "charset": "",
+                "viewport": "",
+                "title_present": false,
+                "owned_style_count": 0,
+                "owned_style_lengths": []
+              }
+            },
+            "html_root": {
+              "head_present": true,
+              "owned_counts": {
+                "charset": 1,
+                "viewport": 1,
+                "title": 1,
+                "style": 1
+              }
+            },
+            "method": "HTML_ROOT",
+            "status": "PASS"
+          },
+          {
+            "stage": "EXPORT_SERIALIZED",
+            "markup_head_present": true,
+            "serialized_owned_marker_count": 7,
+            "domparser": {
+              "head_present": true,
+              "owned_counts": {
+                "charset": 0,
+                "viewport": 0,
+                "title": 0,
+                "style": 0
+              }
+            },
+            "domparser_error": {
+              "stage": "EXPORT_SERIALIZED",
+              "code": "INCOMPLETE",
+              "details": {
+                "issues": [
+                  "owned_charset_invalid",
+                  "owned_viewport_invalid",
+                  "owned_title_invalid",
+                  "owned_style_missing_or_empty"
+                ],
+                "charset": "",
+                "viewport": "",
+                "title_present": false,
+                "owned_style_count": 0,
+                "owned_style_lengths": []
+              }
+            },
+            "html_root": {
+              "head_present": true,
+              "owned_counts": {
+                "charset": 1,
+                "viewport": 1,
+                "title": 1,
+                "style": 1
+              }
+            },
+            "method": "HTML_ROOT",
+            "status": "PASS"
+          }
+        ]
+      }
+    },
+    "both_parsers_damage_owned_head": {
+      "fixture": "DOMParser removes all heads and inactive HTML root loses owned style",
+      "status": "REFUSED",
+      "stage": "EXPORT_SOURCE",
+      "html_root_owned_counts": {
+        "charset": 1,
+        "viewport": 1,
+        "title": 1,
+        "style": 0
+      },
+      "missing_content_not_synthesized": true
+    },
+    "final_actual_zip_download": "PASS",
+    "original_external_review_browser": "NOT_RETESTED",
+    "true_200_percent_zoom": "NOT_EXECUTED",
+    "complete_keyboard": "NOT_EXECUTED"
+  },
+  "head_guard": {
+    "source_capture_checked_before_parsing": true,
+    "parsed_head_compared_with_capture": true,
+    "assembled_head_compared": true,
+    "serialized_head_compared": true,
+    "alternative_parser_uses_same_markup": true,
+    "does_not_restore_missing_head_from_expected": true,
+    "diagnostics_in_package_external_qa_json": true
+  },
+  "parameter_prose": {
+    "new_installation_python_flags": [
+      "--installation-record",
+      "--task",
+      "--mode",
+      "--output-root",
+      "--budget",
+      "--inputs",
+      "--docker-executable"
+    ],
+    "old_specialist_task_flags_remain_with_their_own_launcher": true
+  },
+  "inventory": {
+    "ledger": 8,
+    "preflight": 8,
+    "live": 7
+  },
+  "existing_id_code_targets_unchanged": 82,
+  "final_html": {
+    "path": "docs/index.html",
+    "bytes": 225780,
+    "sha256": "db0db3c7693ffb8087f6e123fedbe054811ed4331f40c764654034f5884874c7"
+  },
+  "final_actual_zip": {
+    "path": "docs/runtime-guide/current-guide.zip",
+    "bytes": 489895,
+    "sha256": "c382aecc36c966480b1febe6a772e71ff819667f0ff367fb09e6278a1d4b3ee4",
+    "crc": "PASS",
+    "members": [
+      {
+        "path": "docs/index.html",
+        "bytes": 225780,
+        "sha256": "db0db3c7693ffb8087f6e123fedbe054811ed4331f40c764654034f5884874c7"
+      },
+      {
+        "path": "docs/.nojekyll",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "README.md",
+        "bytes": 37897,
+        "sha256": "4a4bbae6ab09c263c2d86c7449270393c03ccee5f8a700f39bd79192b2a984a3"
+      },
+      {
+        "path": "content/guide_zh-CN.md",
+        "bytes": 122515,
+        "sha256": "08ef149de5df0ebed2598d0a59842b1a9a78298339ccea23a9e7de9011faa061"
+      },
+      {
+        "path": "provenance/sources.md",
+        "bytes": 19401,
+        "sha256": "0f546c71c08ac5ae05ed97aabd987c21ba77dba16e4b771b81d4a76da449b68f"
+      },
+      {
+        "path": "verification/checks.md",
+        "bytes": 39298,
+        "sha256": "3061f2939f70219aa65eaaba94256581902cccaddf63a2655fe0586d5383ce43"
+      },
+      {
+        "path": "MIGRATION.md",
+        "bytes": 41040,
+        "sha256": "d18475838278221001299468ed45957d9df43726d6945321ddedbcde654d95de"
+      },
+      {
+        "path": "MANIFEST.txt",
+        "bytes": 1844,
+        "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+      },
+      {
+        "path": "templates/molecular-service/water/request.json",
+        "bytes": 277,
+        "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+      },
+      {
+        "path": "templates/molecular-service/water/molecule.xyz",
+        "bytes": 123,
+        "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+      }
+    ]
+  },
+  "static_download_routes": [
+    "https://cccolab.github.io/AI4OrgChem-Runtime/runtime-guide/current-guide.zip",
+    "https://cccolab.github.io/AI4OrgChem-Runtime/runtime-guide/current/docs/index.html"
+  ],
+  "scientific_execution": "NOT_EXECUTED",
+  "ci_at_record_preparation": "NOT_EXECUTED_FOR_NEW_COMMIT"
+}

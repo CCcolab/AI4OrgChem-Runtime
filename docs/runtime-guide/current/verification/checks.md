@@ -1,5 +1,5 @@
 # 历史维护说明与本地实测范围
-以下原始维护登记中“当时”“原次”指YouMind提供材料时的状态；保留原失败与未执行清单，不把它们当作当前包外实测结论。当前网页及实际按钮产物分别登记于 Runtime validation/web-guide/export-followup-20261010.json，逐项核对对应对象；记录缺少、未执行或哈希不匹配时标未知，不自动继承 PASS。final-consistency-r2-20261009.json 仅为历史网页身份，不绑定本版 HTML 或浏览器 ZIP。本页手工QA初始未填写与包外实测是两种记录。真实200%缩放、完整键盘和多浏览器仍NOT_EXECUTED，不宣称完整网页认证；网页和CI均不授予新增科学资格。
+以下原始维护登记中“当时”“原次”指YouMind提供材料时的状态；保留原失败与未执行清单，不把它们当作当前包外实测结论。当前网页及实际按钮产物分别登记于 Runtime validation/web-guide/export-compatibility-round2-20261010.json，逐项核对对应对象；记录缺少、未执行或哈希不匹配时标未知，不自动继承 PASS。final-consistency-r2-20261009.json 仅为历史网页身份，不绑定本版 HTML 或浏览器 ZIP。本页手工QA初始未填写与包外实测是两种记录。真实200%缩放、完整键盘和多浏览器仍NOT_EXECUTED，不宣称完整网页认证；网页和CI均不授予新增科学资格。
 
 # verification/checks
 
@@ -67,7 +67,7 @@ v0.3.0-candidate · 第二批协议修订。研究用途入口与 Show/Review �
 
 禁止任意 XYZ/SMILES 替换、不加角度、不重优化、不混协议 Hartree。输出整目录保留：host-execution.json、output/case-result.json、output/guard-receipt.json 及资源记录。
 
-PS5.1 接口：-Task/-Mode/-OutputRoot/-Budget，可选 -PythonExe/-DockerExe。ledger/preflight：1CPU、1线程、1GiB、120s，不SCF（P07真实AO预检例外）；live：2CPU、2线程、4GiB、无swap，840s开始停止、900s硬限，串行每项一次，七项预留6300s。不覆盖普通100/120s合同。
+Python 新安装入口：` --installation-record `、` --task `、` --mode `、` --output-root `、` --budget `，可选 ` --docker-executable `。ledger/preflight：1CPU、1线程、1GiB、120s，不SCF（P07真实AO预检例外）；live：2CPU、2线程、4GiB、无swap，840s开始停止、900s硬限，串行每项一次，七项预留6300s。不覆盖普通100/120s合同。
 
 native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。hydrogen UHF1e 必须独立计数，不能只记 hf.kernel。Git缺失封装适配仅 unavailable，不改科学；失败保留，旧墙时计费继承，不重跑已通过五项。预算仅记账拒绝，非方法批准。
 
@@ -319,7 +319,7 @@ GitHub Pages静态指南已启用：https://cccolab.github.io/AI4OrgChem-Runtime
 ## 2026-10-09源码首次公开与远端CI记录（历史）
 2026-10-09已按项目负责人授权公开源码与指南：https://github.com/CCcolab/AI4OrgChem-Runtime 。06d5088首次CI三项job均成功，真实P11预检一项跳过；详见https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122 。Pages未启用；；未创建新版本/标签/Release。
 
-说明：下列状态是YouMind原提供时的登记，不是最新包外实测。当时网页与实际下载身份见 Runtime validation/web-guide/export-followup-20261010.json；final-consistency-r2-20261009.json 仅为历史身份；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
+说明：下列状态是YouMind原提供时的登记，不是最新包外实测。当时网页与实际下载身份见 Runtime validation/web-guide/export-compatibility-round2-20261010.json；final-consistency-r2-20261009.json 仅为历史身份；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
 
 ## 原YouMind v0.3.0-candidate交付登记（历史）
 候选非已验收；currentordinaryenabled / legacyconditionalblocked。物理顺序 overview、quick-start、user-molecule、results、tasks、help。10 members：原8文件，加 templates/molecular-service/water/request.json 与 molecule.xyz；277/123 bytes、LF结尾、代码textContent原文。14 evidence、7旧任务、3固定案例、1普通服务，12数值checks。原提供时新字节版本的复制核对、ZIP实物CRC/哈希、HTML一致性、重开再导出与迁移及完整WEB合同尚未完成；修订前下载实物与三宽度结构实测只作历史，原提供时QA不继承。新包大小和SHA-256须现场生成。
@@ -417,7 +417,7 @@ state list读取实际注册状态与Unit；ledger只读历史账本，不批准
 
 用create-high-cost-budget.py为所选Unit在全新、尚不存在的文件创建独立预算，单态ceiling为43200秒。新安装使用 run-installed-runtime.py，指定 high-cost-cases 的 --installation-record、--task P11 --mode live，并精确指定 --unit、--budget、--output-root；可选 --docker-executable。此处只有参数说明，没有可复制的虚构live命令。
 
-P11A呋喃按G→GL→GE，必须以-Inputs提供原轮合格前序output映射；P11B保留原独立初始化。科学规则固定，每态一次、失败计费；容器删除与证据闭合前不启动后续，不retry、不resume。
+P11A呋喃按G→GL→GE，必须以 ` --inputs ` 提供原轮合格前序output映射；P11B保留原独立初始化。科学规则固定，每态一次、失败计费；容器删除与证据闭合前不启动后续，不retry、不resume。
 
 资源合同：8GiB、8CPU、8线程，软43080／硬43200s，scratch20GiB；engine +1GiB、host +2GiB、disk +1GiB。新安装镜像高成本未重放，旧先导PASS不继承到新镜像。
 
@@ -440,7 +440,7 @@ python -B .\scripts\run-installed-runtime.py --installation-record ..\installati
 
 ### 高级：环状体系尺寸与状态对照 · 单状态live边界（仅说明，不安排执行）
 
-参见[已有N16-G单态live来源说明](#n16-live-details)。精确选择一个未执行Unit，工具create-high-cost-budget.py在全新不存在文件创建独立预算，单态43200s；不手写或复用预算。GL/GE前序须为原轮合格G，N16 GE额外需要原轮合格GL，以-Inputs提供output映射，历史PASS不能替代。
+参见[已有N16-G单态live来源说明](#n16-live-details)。精确选择一个未执行Unit，工具create-high-cost-budget.py在全新不存在文件创建独立预算，单态43200s；不手写或复用预算。GL/GE前序须为原轮合格G，N16 GE额外需要原轮合格GL，以 ` --inputs ` 提供output映射，历史PASS不能替代。
 
 14GiB、16CPU、16线程，软43080／硬43200s，scratch20GiB，engine +1GiB、host +2GiB、disk +1GiB；原资源合同不明或资源不足拒绝，分档尚未启用。不将15GiB作为所有用户日常默认，不恢复18GiB配置。每态一次、失败计费，容器删除及证据闭合前不后续，不retry/resume，不重复内存探针；新安装镜像未重放，旧先导PASS不继承。
 
@@ -498,7 +498,7 @@ YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点
 
 
 ## 2026-10-09本地模块名称修订（优先于历史命名）
-网页按实际计算功能命名十四个模块；主标题、选择提示和复制按钮说明无需先了解专著编号。内部P01—P14、任务键、命令参数、来源路径与科学规则保持。名称和编号对应表位于来源追溯折叠区。用户自己的分子目前仅支持普通RHF单点服务；这些模块采用固定案例或保存证据，不增加任意分子条件计算、优化或尺寸扫描的支持范围。多态约束优化和环状体系分别保持固定17态与61态，旧候选仅苯G、N12-G通过；新镜像不继承这些科学验收。2026-10-09已公开源码与指南，06d5088首次CI三项job成功；该源码同步日Pages仍未启用；模块改名轮的历史实测记录保存在Runtime validation/web-guide/module-names-20261009.public.json，绑定其当时HTML与归档ZIP；当时网页与实际按钮产物另见 validation/web-guide/export-followup-20261010.json；旧 final-consistency-r2-20261009.json 仅为历史证据，不继承其 SHA。
+网页按实际计算功能命名十四个模块；主标题、选择提示和复制按钮说明无需先了解专著编号。内部P01—P14、任务键、命令参数、来源路径与科学规则保持。名称和编号对应表位于来源追溯折叠区。用户自己的分子目前仅支持普通RHF单点服务；这些模块采用固定案例或保存证据，不增加任意分子条件计算、优化或尺寸扫描的支持范围。多态约束优化和环状体系分别保持固定17态与61态，旧候选仅苯G、N12-G通过；新镜像不继承这些科学验收。2026-10-09已公开源码与指南，06d5088首次CI三项job成功；该源码同步日Pages仍未启用；模块改名轮的历史实测记录保存在Runtime validation/web-guide/module-names-20261009.public.json，绑定其当时HTML与归档ZIP；当时网页与实际按钮产物另见 validation/web-guide/export-compatibility-round2-20261010.json；旧 final-consistency-r2-20261009.json 仅为历史证据，不继承其 SHA。
 <a id="module-protocol-map"></a>
 
 ### 模块名称与内部协议编号（来源追溯）

@@ -688,7 +688,7 @@ state list读取实际注册状态与Unit；ledger只读历史账本，不批准
 
 用create-high-cost-budget.py为所选Unit在全新、尚不存在的文件创建独立预算，单态ceiling为43200秒。新安装使用 run-installed-runtime.py，指定 high-cost-cases 的 --installation-record、--task P11 --mode live，并精确指定 --unit、--budget、--output-root；可选 --docker-executable。此处只有参数说明，没有可复制的虚构live命令。
 
-P11A呋喃按G→GL→GE，必须以-Inputs提供本轮合格前序output映射；P11B保留原独立初始化。科学规则固定，每态一次、失败计费；容器删除与证据闭合前不启动后续，不retry、不resume。
+P11A呋喃按G→GL→GE，必须以 ` --inputs ` 提供本轮合格前序output映射；P11B保留原独立初始化。科学规则固定，每态一次、失败计费；容器删除与证据闭合前不启动后续，不retry、不resume。
 
 资源合同：8GiB、8CPU、8线程，软43080／硬43200s，scratch20GiB；engine +1GiB、host +2GiB、disk +1GiB。新安装镜像高成本未重放，旧先导PASS不继承到新镜像。
 
@@ -711,7 +711,7 @@ python -B .\scripts\run-installed-runtime.py --installation-record ..\installati
 
 ### 高级：环状体系尺寸与状态对照 · 单状态live边界（仅说明，不安排执行）
 
-参见[已有N16-G单态live来源说明](#n16-live-details)。精确选择一个未执行Unit，工具create-high-cost-budget.py在全新不存在文件创建独立预算，单态43200s；不手写或复用预算。GL/GE前序须为本轮合格G，N16 GE额外需要本轮合格GL，以-Inputs提供output映射，历史PASS不能替代。
+参见[已有N16-G单态live来源说明](#n16-live-details)。精确选择一个未执行Unit，工具create-high-cost-budget.py在全新不存在文件创建独立预算，单态43200s；不手写或复用预算。GL/GE前序须为本轮合格G，N16 GE额外需要本轮合格GL，以 ` --inputs ` 提供output映射，历史PASS不能替代。
 
 14GiB、16CPU、16线程，软43080／硬43200s，scratch20GiB，engine +1GiB、host +2GiB、disk +1GiB；原资源合同不明或资源不足拒绝，分档尚未启用。不将15GiB作为所有用户日常默认，不恢复18GiB配置。每态一次、失败计费，容器删除及证据闭合前不后续，不retry/resume，不重复内存探针；新安装镜像未重放，旧先导PASS不继承。
 
@@ -761,7 +761,7 @@ v0.3.0-candidate · 第二批协议修订。研究用途入口与 Show/Review �
 
 禁止任意 XYZ/SMILES 替换、不加角度、不重优化、不混协议 Hartree。输出整目录保留：host-execution.json、output/case-result.json、output/guard-receipt.json 及资源记录。
 
-PS5.1 接口：-Task/-Mode/-OutputRoot/-Budget，可选 -PythonExe/-DockerExe。ledger/preflight：1CPU、1线程、1GiB、120s，不SCF（P07真实AO预检例外）；live：2CPU、2线程、4GiB、无swap，840s开始停止、900s硬限，串行每项一次，七项预留6300s。不覆盖普通100/120s合同。
+Python 新安装入口：` --installation-record `、` --task `、` --mode `、` --output-root `、` --budget `，可选 ` --docker-executable `。ledger/preflight：1CPU、1线程、1GiB、120s，不SCF（P07真实AO预检例外）；live：2CPU、2线程、4GiB、无swap，840s开始停止、900s硬限，串行每项一次，七项预留6300s。不覆盖普通100/120s合同。
 
 native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。hydrogen UHF1e 必须独立计数，不能只记 hf.kernel。Git缺失封装适配仅 unavailable，不改科学；失败保留，旧墙时计费继承，不重跑已通过五项。预算仅记账拒绝，非方法批准。
 
@@ -2617,6 +2617,8 @@ AI4OrgChem v0.3.2 · 固定提交：
 
 下列下载仅在你点击时发生，使用内嵌文本或初始化时保留的 HTML，通过本地 Blob 生成；不依赖当前页面 URL，不上传。
 
+如果当前浏览器的动态导出被完整性守卫拒绝，可下载已核验的部署文件：[静态指南 ZIP](https://cccolab.github.io/AI4OrgChem-Runtime/runtime-guide/current-guide.zip) · [静态指南 HTML](https://cccolab.github.io/AI4OrgChem-Runtime/runtime-guide/current/docs/index.html)。这些文件由实际下载产物核验后随仓库部署，不依赖当前浏览器的快照解析；身份与哈希见本轮导出验收记录。动态导出的守卫继续保留。
+
 静态指南由GitHub Pages托管；托管服务的访问记录由GitHub管理。网页不向计算后端提交分子或请求，复制与导出在本地浏览器完成；科学计算在用户本地Runtime执行。
 
 ## 静态指南网址与使用方式（2026-10-10）
@@ -2625,7 +2627,7 @@ GitHub Pages静态指南已启用：https://cccolab.github.io/AI4OrgChem-Runtime
 ## 2026-10-09源码首次公开与远端CI记录（历史）
 2026-10-09已按项目负责人授权公开源码与指南：https://github.com/CCcolab/AI4OrgChem-Runtime 。06d5088首次CI三项job均成功，真实P11预检一项跳过；详见https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122 。Pages未启用；；未创建新版本/标签/Release。
 
-说明：下列状态是YouMind原提供时的登记，不是最新包外实测。当前网页与实际下载身份见 Runtime validation/web-guide/export-followup-20261010.json；final-consistency-r2-20261009.json 仅为历史身份；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
+说明：下列状态是YouMind原提供时的登记，不是最新包外实测。当前网页与实际下载身份见 Runtime validation/web-guide/export-compatibility-round2-20261010.json；final-consistency-r2-20261009.json 仅为历史身份；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
 
 ## 原YouMind v0.3.0-candidate交付登记（历史）
 候选非已验收；currentordinaryenabled / legacyconditionalblocked。物理顺序 overview、quick-start、user-molecule、results、tasks、help。10 members：原8文件，加 templates/molecular-service/water/request.json 与 molecule.xyz；277/123 bytes、LF结尾、代码textContent原文。14 evidence、7旧任务、3固定案例、1普通服务，12数值checks。原提供时新字节版本的复制核对、ZIP实物CRC/哈希、HTML一致性、重开再导出与迁移及完整WEB合同尚未完成；修订前下载实物与三宽度结构实测只作历史，原提供时QA不继承。新包大小和SHA-256须现场生成。
