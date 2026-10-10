@@ -26,8 +26,12 @@ docs/index.html -text
 docs/runtime-guide/** -text
 validation/web-guide/** -text
 # Current declarations and selected numeric witnesses have explicit byte hashes.
-configs/runtime-capabilities-v2.json -text
-evidence/numerical-witnesses/** -text
+configs/runtime-capabilities-v2.json -text whitespace=cr-at-eol
+evidence/numerical-witnesses/** -text whitespace=cr-at-eol
 scripts/run-molecular-service.py -text
 scripts/run-registered-case.py -text
 scripts/runtime_host_safety.py -text
+# Windows test receipts retain their recorded bytes. Test source hash maps are
+# explicitly worktree identities; Git blob identities are recorded separately.
+validation/review-response-engineering-20261010.json -text whitespace=cr-at-eol
+docs/runtime-guide/capabilities-v2.json -text whitespace=cr-at-eol
