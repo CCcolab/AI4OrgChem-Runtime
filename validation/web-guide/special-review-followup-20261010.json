@@ -1,0 +1,195 @@
+{
+  "schema": "special-review-followup-v1",
+  "review_baseline": "70ad3d64aed263ac34329cfb0ee1ac3063ebbe21",
+  "browser": "Codex in-app browser localhost; not the external cloud profile",
+  "downloads": [
+    {
+      "fixture": "clean",
+      "status": "PASS_ACTUAL_HTML_ZIP_MANIFEST",
+      "html_bytes": 227890,
+      "html_sha256": "76e95a1682888b41521ee715250fbd4a5ab17a63d31f76b38f421d2c0e7b29d4",
+      "zip_bytes": 494481,
+      "zip_sha256": "b97380616eec8463c890d37e754d0bf75fa3799e14db5e9ee3db72985d5cda6e",
+      "crc": "PASS",
+      "members": [
+        {
+          "path": "docs/index.html",
+          "size": 227890,
+          "sha256": "76e95a1682888b41521ee715250fbd4a5ab17a63d31f76b38f421d2c0e7b29d4"
+        },
+        {
+          "path": "docs/.nojekyll",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "README.md",
+          "size": 38339,
+          "sha256": "60a3888a978badb61cf847b7f064d5c0bbda6b474d2a84ab8420a38d5461f94d"
+        },
+        {
+          "path": "content/guide_zh-CN.md",
+          "size": 123477,
+          "sha256": "f800dd714693d2d27dbc86883edfc5a96dcedf0514f78efe4e1307ea98ddc240"
+        },
+        {
+          "path": "provenance/sources.md",
+          "size": 19586,
+          "sha256": "57ab4769aa6d952dc8c212068c171481da9c4dfacc7415eca3aedbaab64fa0bf"
+        },
+        {
+          "path": "verification/checks.md",
+          "size": 39743,
+          "sha256": "6c476a917c6c6ed9d129c4932d3b7ee975ae51199e1f06a68785484cadf0da39"
+        },
+        {
+          "path": "MIGRATION.md",
+          "size": 41482,
+          "sha256": "4867720217e7b69fd81143400e72546723e9dae2dba210ae8015a60163744b43"
+        },
+        {
+          "path": "MANIFEST.txt",
+          "size": 1844,
+          "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+        },
+        {
+          "path": "templates/molecular-service/water/request.json",
+          "size": 277,
+          "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+        },
+        {
+          "path": "templates/molecular-service/water/molecule.xyz",
+          "size": 123,
+          "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+        }
+      ]
+    },
+    {
+      "fixture": "injected-root",
+      "status": "PASS_ACTUAL_HTML_ZIP_MANIFEST",
+      "html_bytes": 227890,
+      "html_sha256": "76e95a1682888b41521ee715250fbd4a5ab17a63d31f76b38f421d2c0e7b29d4",
+      "zip_bytes": 494481,
+      "zip_sha256": "b97380616eec8463c890d37e754d0bf75fa3799e14db5e9ee3db72985d5cda6e",
+      "crc": "PASS",
+      "members": [
+        {
+          "path": "docs/index.html",
+          "size": 227890,
+          "sha256": "76e95a1682888b41521ee715250fbd4a5ab17a63d31f76b38f421d2c0e7b29d4"
+        },
+        {
+          "path": "docs/.nojekyll",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "README.md",
+          "size": 38339,
+          "sha256": "60a3888a978badb61cf847b7f064d5c0bbda6b474d2a84ab8420a38d5461f94d"
+        },
+        {
+          "path": "content/guide_zh-CN.md",
+          "size": 123477,
+          "sha256": "f800dd714693d2d27dbc86883edfc5a96dcedf0514f78efe4e1307ea98ddc240"
+        },
+        {
+          "path": "provenance/sources.md",
+          "size": 19586,
+          "sha256": "57ab4769aa6d952dc8c212068c171481da9c4dfacc7415eca3aedbaab64fa0bf"
+        },
+        {
+          "path": "verification/checks.md",
+          "size": 39743,
+          "sha256": "6c476a917c6c6ed9d129c4932d3b7ee975ae51199e1f06a68785484cadf0da39"
+        },
+        {
+          "path": "MIGRATION.md",
+          "size": 41482,
+          "sha256": "4867720217e7b69fd81143400e72546723e9dae2dba210ae8015a60163744b43"
+        },
+        {
+          "path": "MANIFEST.txt",
+          "size": 1844,
+          "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+        },
+        {
+          "path": "templates/molecular-service/water/request.json",
+          "size": 277,
+          "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+        },
+        {
+          "path": "templates/molecular-service/water/molecule.xyz",
+          "size": 123,
+          "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+        }
+      ]
+    }
+  ],
+  "all_code_id_texts_unchanged_from_baseline": 82,
+  "injected_root_output_byte_equal_clean": true,
+  "guard": "UNIQUE_DIRECT_HEAD_BODY_AND_EXACT_HEAD_CONTENT_AND_SERIALIZED_PREFIX",
+  "external_original_browser": "NOT_RETESTED",
+  "scientific_calls": 0,
+  "local_engineering_tests": {
+    "executed": 22,
+    "pass": 22,
+    "initial_sandbox_attempt": "FAILED_TEMP_DIRECTORY_PERMISSION; normal host rerun passed"
+  },
+  "new_scientific_acceptance": false,
+  "browser_regressions": {
+    "prior_algorithm_injected_root": "REPRODUCED_HEAD_PREFIX_MISMATCH_ON_BOUNDED_FIXTURE",
+    "new_algorithm_injected_root": "PASS_ACTUAL_DOWNLOADS; frozen pre-capture DIV and cursor attribute excluded",
+    "source_missing_style": "REFUSED_EXPORT_SOURCE_CAPTURE_INCOMPLETE",
+    "source_duplicate_title": "REFUSED_EXPORT_SOURCE_CAPTURE_INCOMPLETE",
+    "root_observed_on_fixture": [
+      "DIV",
+      "HEAD",
+      "BODY",
+      "DIV"
+    ],
+    "root_attribute_observed": "data-browser-cursor=probe",
+    "external_root_cause": "COMPATIBLE_WITH_REVIEW_HYPOTHESIS; not proven from original frozen cloud snapshot"
+  },
+  "historical_receipts_unchanged": true,
+  "scope_limits": [
+    "Original cloud browser NOT_RETESTED",
+    "Full keyboard and true 200% zoom NOT_EXECUTED",
+    "Conditional Compute BLOCKED",
+    "Full canonical/virtual orbital gates NOT_IMPLEMENTED",
+    "No new scientific replay or acceptance",
+    "No public prebuilt image distribution"
+  ],
+  "static_checks": {
+    "readme_links": "PASS",
+    "current_package_receipt_reference": "PASS",
+    "P14_frozen_archive_identity": "PASS",
+    "scientific_source_and_locks_unchanged": "PASS",
+    "historical_web_receipts_byte_preserved": "PASS",
+    "public_root_tests_absent": "PASS",
+    "withdrawn_platform_absent_from_tracked_text": "PASS",
+    "python_and_browser_js_syntax": "PASS"
+  },
+  "four_family_source_derivations": {
+    "molecular-service": {
+      "status": "PASS_EXACT_SOURCE_DERIVATION_ZERO_SCIENCE",
+      "files": 20,
+      "unchanged_rows": 17
+    },
+    "registered-cases": {
+      "status": "PASS_EXACT_SOURCE_DERIVATION_ZERO_SCIENCE",
+      "files": 37,
+      "unchanged_rows": 34
+    },
+    "protocol-cases": {
+      "status": "PASS_EXACT_SOURCE_DERIVATION_ZERO_SCIENCE",
+      "files": 113,
+      "unchanged_rows": 108
+    },
+    "high-cost-cases": {
+      "status": "PASS_EXACT_SOURCE_DERIVATION_ZERO_SCIENCE",
+      "files": 100,
+      "unchanged_rows": 93
+    }
+  }
+}

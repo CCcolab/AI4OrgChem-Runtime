@@ -47,7 +47,7 @@ AI4OrgChem Runtime 帮助你在自己的电脑上进行分子计算，并复核�
 
 1. **准备本地 Runtime。** 按[源码安装指南](docs/SOURCE_INSTALLATION_zh-CN.md)准备、构建并登记本地 Docker 环境。源码已公开，项目未提供预构建镜像下载；新安装保存自己的验证记录。
 2. **选择输入与模块。** 自己的 XYZ 使用[用户分子单点指南](docs/CURRENT_MOLECULAR_SINGLE_POINT_zh-CN.md)；登记案例从[本地入口指南](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md)和上表对应的协议指南开始。
-3. **运行并查看结果。** 按模块指南执行命令，保留生成的运行目录，再通过[结果判读指南](docs/REVIEW_RESULTS_zh-CN.public.md)查看本次计算范围与检查结果。
+3. **运行并查看结果。** 按模块指南执行命令，保留生成的运行目录，再通过[当前专业服务矩阵](docs/CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)、对应模块指南的结果段和[服务复核模板](docs/templates/CURRENT_SERVICE_REVIEW_zh-CN.md)查看本次计算范围与检查结果。
 
 组件许可与分发条件见[许可证审查](docs/LICENSE_REVIEW_zh-CN.md)及[公开边界](docs/PUBLICATION_BOUNDARIES_zh-CN.md)。详细开发、支持与历史验证记录保留在下方，按需展开。
 
@@ -77,7 +77,7 @@ AI4OrgChem Runtime 帮助你在自己的电脑上进行分子计算，并复核�
 
 项目目标是面向用户分子的本地化学计算平台：按分子输入、单点能量、轨道/密度分析和结构优化等研究目标提供服务。用户无需先了解专著P01—P14；这些编号保留在“示例与验证”及来源详情。新增通用入口的拆分、实施顺序和验收要求见[面向用户分子的入口设计](docs/GENERAL_CHEMISTRY_ENTRY_DESIGN_zh-CN.md)。已交付首版用户自选分子普通RHF单点、canonical轨道与AO密度矩阵导出；首版范围为H/C/N/O、中性单重态、RHF/6-31G(d)、最多20原子且实际AO数≤80。三维结构可用，无需P编号或专有片段。DFT、开壳层、通用优化、扫描和网格密度仍待独立实施。
 
-普通分子计算从[四步使用指南](docs/CURRENT_MOLECULAR_SINGLE_POINT_zh-CN.md)开始，使用 `scripts/start-molecular-service.ps1` 和自己的XYZ/请求。四个分子实测及同库直接调用对照通过，候选镜像内114项工程测试通过；非root、只读源与输入、断网、退出码和删除容器后输出保留分别核验。见[2026-10-08验收报告](docs/MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)及[机器状态](validation/molecular-service/deployment-20261008.public.json)。同库对照不是独立科学引擎认证，波函数稳定性未执行。
+普通分子计算从[四步使用指南](docs/CURRENT_MOLECULAR_SINGLE_POINT_zh-CN.md)开始，使用 `scripts/run-installed-runtime.py`、普通分子家族的 installation record 和自己的XYZ/请求。以下验收属于历史候选，不继承到新安装：四个分子实测及同库直接调用对照通过，候选镜像内114项工程测试通过；非root、只读源与输入、断网、退出码和删除容器后输出保留分别核验。见[2026-10-08验收报告](docs/MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)及[机器状态](validation/molecular-service/deployment-20261008.public.json)。同库对照不是独立科学引擎认证，波函数稳定性未执行。
 
 示例与历史复核从 [本地Runtime入口](docs/LOCAL_RUNTIME_ENTRY_zh-CN.md) 开始：查阅P01—P14既有证据、执行受限Check/Report，或选择三个新增[固定登记复算](docs/CURRENT_REGISTERED_CASES_zh-CN.md)：P02冻结表统计、P13图规则与账本、小体系P01乙烯占据表示控制。三个任务有独立来源锁、受控本地镜像和运行记录；实际部署状态见[部署边界](docs/REGISTERED_CASES_DEPLOYMENT_BOUNDARIES_zh-CN.md)。旧用户分子条件态比较Compute仍BLOCKED，与新普通单点分开。Git/项目ZIP提供来源可核对的源码，不包含完整安装环境；镜像分发及源码公开保持分别记录。
 

@@ -15,15 +15,15 @@
 python -B scripts/audit-numerical-witnesses.py
 ```
 
-审计以 `allow_pickle=False` 读取 NPZ，递归检查成员的 shape、dtype 与 C-order 字节 SHA-256，先核对文件大小和哈希及仓库内公开父记录，再复核数值。导入守卫拒绝 `pyscf`、`ai4orgchem`、`rdkit` 和 `scipy`。已在 NumPy **2.4.6** 实测，原计算使用的版本保留在原 result／来源清单中。
+审计以 `allow_pickle=False` 读取 NPZ，递归检查成员的 shape、dtype 与 C-order 字节 SHA-256，先核对文件大小和哈希及仓库内公开父记录，再复核数值。导入守卫拒绝 `pyscf`、`ai4orgchem`、`rdkit` 和 `scipy`。下表保留 NumPy **2.4.6** 的历史复核值；链接的最新公共审计记录使用 **2.5.1**，两者均拒绝条件端点，不将两套末位数值混作同一次运行。原计算使用的版本保留在原 result／来源清单中。
 
 审计退出 **0** 表示保存见证与预期判读一致；条件见证的 `endpoint_qualification` 仍为 **REJECTED**。损坏或错配返回 **2**。这是只读证据复核动作的合同；不能把其退出 0 解释为条件 Compute 合格。负例只修改临时副本，覆盖文件损坏、成员 shape/dtype/hash、重写哈希后的密度/能量/算子错配、父记录错配、路径越界和对象数组拒绝。
 
 ## 已保存端点的判读
 
-本次只读观察见 [AUDIT_RESULT_PUBLIC_20261010.json](AUDIT_RESULT_PUBLIC_20261010.json)。不同 NumPy/BLAS 环境可能产生末位差异。占据空间与保存密度的复核不能自动认证全部 canonical／虚轨道资格；当前范围见[普通分子使用指南](../../docs/CURRENT_MOLECULAR_SINGLE_POINT_zh-CN.md)。
+NumPy 2.5.1 只读记录见 [AUDIT_RESULT_PUBLIC_20261010.json](AUDIT_RESULT_PUBLIC_20261010.json)。不同 NumPy/BLAS 环境可能产生末位差异。占据空间与保存密度的复核不能自动认证全部 canonical／虚轨道资格；当前范围见[普通分子使用指南](../../docs/CURRENT_MOLECULAR_SINGLE_POINT_zh-CN.md)。
 
-| 量 | 原保存值 | 本次 NumPy 复核 |
+| 量 | 原保存值 | 历史 NumPy 2.4.6 复核 |
 |---|---:|---:|
 | 普通水分子总能量 / Eh | −76.00909910859735 | −76.00909910859733 |
 | 条件密度 Tr(S̃D) | 15.999999999999977 | 15.999999999999977 |

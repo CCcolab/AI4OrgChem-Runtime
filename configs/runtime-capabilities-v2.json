@@ -1146,11 +1146,13 @@
         "baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
         "baseline_files": 588,
         "baseline_lock": "locks/source-files.sha256.json",
-        "adapter_context_commit": "cc7437901119e71ef7945a12813c021c383e7648",
-        "adapter_files": 3,
-        "adapter_materials": "assets/science-install-overlay/cc743790",
-        "installation_lock": "locks/source.installation.lock.json",
-        "authority": "FROZEN_BASELINE_AND_CAPTURED_ADAPTER_BYTES; upstream main is not a replacement"
+        "archive_lock": "locks/source.lock.json",
+        "archive_url": "https://codeload.github.com/CCcolab/AI4OrgChem/tar.gz/28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "archive_sha256": "f4a0a416c227218d0bc84bf597cb43f2ba0a32695566e131bdcc6b19ac3f207e",
+        "build_file": "container/Dockerfile",
+        "fetch_script": "scripts/fetch-source.py",
+        "adapter_files": 0,
+        "authority": "FROZEN_COMMIT_ARCHIVE_ONLY; independent legacy Docker build; no four-family installation overlay or installation lock"
       },
       "build": {
         "historical_image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",

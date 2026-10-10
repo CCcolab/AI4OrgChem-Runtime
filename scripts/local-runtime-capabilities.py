@@ -81,7 +81,7 @@ def main(argv=None):
         if not args.historical:
             print(f"源码：{record['publication']['source']['url']}")
             print(f"静态指南：{record['publication']['guide']['url']}")
-            print(f"GitHub Actions：已记录提交 {record['ci']['commit'][:8]} 的3个既有 job 成功；仅覆盖登记工程合同及L0/L1。")
+            print(f"GitHub Actions：已记录提交 {record['ci']['commit'][:8]} 的 {record['ci']['successful_jobs']} 个既有 job 成功；范围：{record['ci']['scope']}")
         for row in record['capabilities']:
             status=row['status'] if args.historical else STATUS_LABELS.get(row['status'],row['status'])
             print(f"{row['name']}: {status}")
