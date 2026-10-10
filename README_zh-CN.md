@@ -6,6 +6,8 @@
 
 **[直接打开 Runtime 用户指南网页](https://cccolab.github.io/AI4OrgChem-Runtime/)**
 
+**作者与维护者：** [Xiao Chen / CCcolab](https://github.com/CCcolab)。**AI 工程协助贡献者：OpenAI Codex**，在维护者指示下参与 Runtime 实现、输入与资源预检、工程测试、证据记录、文档与指南维护。详见[贡献与致谢](AUTHORS.md#codex-contributions--codex-贡献)。
+
 ## 项目目的与目标
 
 AI4OrgChem Runtime 帮助你在自己的电脑上进行分子计算，并复核项目登记的研究案例。项目通过固定科学源码与依赖、检查输入、共同保存输入、日志和结果，让计算过程可追溯、便于复核。

@@ -6,6 +6,8 @@
 
 **[Open the Runtime user guide](https://cccolab.github.io/AI4OrgChem-Runtime/)**
 
+**Author and maintainer:** [Xiao Chen / CCcolab](https://github.com/CCcolab). **AI-assisted engineering contributor: OpenAI Codex** — Runtime implementation, input and resource checks, engineering tests, evidence records, documentation and guide maintenance, under the maintainer's direction. See [contributions and acknowledgements](AUTHORS.md#codex-contributions--codex-贡献).
+
 ## Purpose and goals
 
 AI4OrgChem Runtime helps you run molecular calculations on your own computer and review the project's registered research examples. It packages fixed scientific sources and dependencies, checks inputs, and saves inputs, logs and results together so calculations can be traced and reviewed.
