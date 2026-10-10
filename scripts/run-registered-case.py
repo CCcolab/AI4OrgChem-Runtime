@@ -17,6 +17,8 @@ import uuid
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "scripts"))
+from runtime_host_safety import HostSafetyError, recover_created_container, probe_output_writable
 
 TASKS = ("p02-statistics", "p13-graph-ledger", "p01-orbital-density")
 LABEL = "ai4orgchem.registered.execution-id"
@@ -360,6 +362,8 @@ def supervise(args, *, clock=time.monotonic, sleep=time.sleep, executor=subproce
     execution = {"schema_version": "registered-case-host-execution-v1", "task": args.task, "execution_id": token, "status": "NOT_EXECUTED", "container_id": None, "worker_started": False, "container_removed": False, "wall_stop_requested": False, "automatic_retry": False, "old_root_diagnostic_budget_reused": False, "started_utc": utc(), "worker_output_directory": str(output), "scientific_actual_counts": None}
     lock, cid, docker, started = locks / "active.lock", None, None, None
     locked, code = False, 40
+    creation_attempted, quarantine = False, False
+    creation_name = "ai4orgchem-registered-" + token
     try:
         descriptor = os.open(lock, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
         with os.fdopen(descriptor, "w", encoding="utf-8") as handle:
@@ -382,7 +386,14 @@ def supervise(args, *, clock=time.monotonic, sleep=time.sleep, executor=subproce
         contract_sha = digest(contract_path)
         execution.update(contract_sha256=contract_sha, contract=contract, image_id=selected, source_check="PASS_CRITICAL_SOURCE_BYTES", host_identity={**local_git_context, "source_scope": "CURRENT_CHECKED_CRITICAL_SOURCE_NOT_IMAGE_BUILD_COMMIT", "runtime_source_directory": str(ROOT)})
         command = create_command(selected, contract, contract_path, output)
+        probe_output_writable(docker, image_id=selected, output_path=output, token=token,
+                              label_key=LABEL, timeout=10, python_executable="/opt/venv/bin/python")
+        execution["output_write_probe"] = "PASS_ZERO_SCIENCE_CONTAINER_IO"
+        command[1:1] = ["--name", creation_name]
+        save(run / "create-intent.json", {"name": creation_name, "image_id": selected,
+             "label_key": LABEL, "token": token, "scientific_worker_started": False})
         save(run / "launch-command.json", [args.docker_executable, *command])
+        creation_attempted = True
         cid = docker(*command, timeout=10).stdout.decode().strip()
         if not re.fullmatch(r"[0-9a-f]{64}", cid):
             raise ValueError("Complete owned container ID required")
@@ -430,6 +441,10 @@ def supervise(args, *, clock=time.monotonic, sleep=time.sleep, executor=subproce
             execution["evidence_review"] = verify_worker_evidence(output, contract, contract_sha)
             execution["status"] = "PASS_PENDING_OWNED_CLEANUP"
             code = 0
+    except HostSafetyError as error:
+        quarantine = error.cleanup_unknown
+        execution.update(status="REFUSED_OR_UNKNOWN_OUTPUT_PREFLIGHT", error=str(error))
+        code = 40
     except (TimeoutError, subprocess.TimeoutExpired) as error:
         execution.update(status="FAILED_OR_UNKNOWN_TIMEOUT", error=type(error).__name__ + ": " + str(error))
         code = 50
@@ -437,6 +452,19 @@ def supervise(args, *, clock=time.monotonic, sleep=time.sleep, executor=subproce
         execution.update(status="REFUSED_OR_FAILED_UNVERIFIED", error=type(error).__name__ + ": " + str(error))
         code = 40
     finally:
+        if creation_attempted and docker is not None and (not cid or not re.fullmatch(r"[0-9a-f]{64}", cid)):
+            try:
+                cid = recover_created_container(docker, name=creation_name, image_id=execution["image_id"],
+                                                label_key=LABEL, token=token)
+                execution.update(container_id=cid, create_recovery="OWNED_ID_RECOVERED" if cid else "ABSENT_NOW_CREATE_COMPLETION_UNKNOWN")
+                if cid is None:
+                    # A timed-out daemon create may complete after this query.
+                    quarantine = True
+                    execution["status"] = "FAILED_OR_UNKNOWN_CLEANUP"
+            except Exception as error:
+                quarantine = True
+                execution.update(create_recovery="UNKNOWN_QUARANTINED", cleanup_error=str(error), status="FAILED_OR_UNKNOWN_CLEANUP")
+                if code == 0: code = 40
         if cid and docker is not None:
             try:
                 current = _single_inspection(docker("inspect", cid, timeout=2))
@@ -461,11 +489,12 @@ def supervise(args, *, clock=time.monotonic, sleep=time.sleep, executor=subproce
                     execution["scientific_actual_counts"] = after["actual_dispatch_counts"]
                     execution["output_persistence_check"] = "PASS_AFTER_ACTUAL_CONTAINER_REMOVAL"
             except Exception as error:
+                quarantine = True
                 execution["cleanup_error"] = type(error).__name__ + ": " + str(error)
                 execution["status"] = "FAILED_OR_UNKNOWN_CLEANUP"
                 if code == 0:
                     code = 40
-        if locked:
+        if locked and not quarantine:
             try:
                 if read_json(lock).get("execution_id") != token:
                     raise ValueError("Owned lock identity changed")
@@ -476,6 +505,9 @@ def supervise(args, *, clock=time.monotonic, sleep=time.sleep, executor=subproce
                 if code == 0:
                     code = 40
                 execution["status"] = "FAILED_OR_UNKNOWN_LOCK_CLEANUP"
+        elif locked:
+            execution.update(owned_lock_released=False, owned_lock_retained="UNCONFIRMED_CONTAINER_STATE",
+                             quarantine_lock=str(lock))
         if started is not None:
             execution["through_cleanup_wall_seconds"] = clock() - started
             if clock() > started + WALL_SECONDS:

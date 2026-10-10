@@ -1,6 +1,10 @@
 # 用户分子入口：内部定义与验证流程
 
-最新 [单起点候选与零计算准备](USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md)已完成：150项专项工程测试（40新增、110回归）及实际缓存零F准备通过；新增真实F/NR/SCF为0。本版不允许真实根搜索、不创建科学预算，实际root runner未实现/未执行，Compute仍BLOCKED。原规则、门槛和旧数值记录保留。
+当前（2026-10-10）：V2与原生root runner已实现并真实诊断。[实际root运行](USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.md)有139次完成NR、138成功callback和一次截止失败，未正常返回root、未完成tails/正式端点；[合作停止工程](USER_MOLECULE_NATIVE_SHUTDOWN_ENGINEERING_20261007_zh-CN.md)另记录154项回归、零native闭合实例与强杀未知回执。原gap/映射/对易子等门槛保持，条件态Compute因无合格端点及完整实证继续BLOCKED。
+
+当前模块和解释边界见 [专业服务矩阵](CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)及 [能力注册表v2](../configs/runtime-capabilities-v2.json)。普通用户XYZ的RHF受限本地验收独立成立，不被条件Compute关闭覆盖。源码和静态指南已公开，Actions run38003025857对86e29b47三个既有job成功，仅限登记工程及旧L0/L1；下文当时的未实现、远端CI未执行和公开待确认属于历史，不覆盖当前记录。
+
+历史 [单起点候选与零计算准备](USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md)已完成：150项专项工程测试（40新增、110回归）及实际缓存零F准备通过；新增真实F/NR/SCF为0。当时不允许真实根搜索、不创建科学预算，root runner未实现/未执行，Compute仍BLOCKED。原规则、门槛和旧数值记录保留。
 
 此前 [十二点真实条件算子响应](USER_MOLECULE_OCCUPIED_SPACE_RESPONSE_20261007_zh-CN.md)已完成：129项专项工程测试、实际零F准备与12次真F/NR通过，8组同D子集通过；所有点gap通过但comm/map失败，无合格自洽根，Compute保持BLOCKED。SCF/根搜索/尾检未执行，新12槽预算关闭。
 
@@ -43,4 +47,4 @@
 
 [真实三路径诊断](USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.md)的初始化拒绝、零轨道迭代及全部失败记录保留。MDR-002修订0.1、0.2及旧专项外审包作为历史材料原样保存，其外部征询安排为**非当前执行流程**；不伪造意见、不回写旧包。
 
-当前Compute阻塞依据是实际数值验收尚未通过及新候选尚未实测，与取消的咨询流程分开。原P01—P14不自动重审；WSLc暂停、远端CI未执行、镜像分发及公开发布边界维持原记录。
+当前条件Compute阻塞依据是实际数值验收尚未通过、真实root诊断无正式合格端点及完整研究/资源证据未闭合，与取消的咨询流程分开。原P01—P14不自动重审；WSLc验收暂停、镜像分发仍阻塞。当前CI和源码/指南公开状态以本页顶部与能力注册表为准，各日期历史记录保持。

@@ -1,0 +1,68 @@
+{
+  "schema": "review-remediation-web-v1",
+  "scope": "CURRENT_REGISTRY_NAVIGATION_AND_BYTE_PRESERVING_COMMANDS",
+  "html_sha256": "d4064fae73626feff3920f160b3fa7035826c0818e8ddc2a2f937202d90f658e",
+  "browser_cases": 25,
+  "copy_targets": 79,
+  "calculation_text": "UNCHANGED_FROM_86e29b47",
+  "zip_crc": "PASS",
+  "zip_members": [
+    {
+      "path": "docs/index.html",
+      "bytes": 202414,
+      "sha256": "d4064fae73626feff3920f160b3fa7035826c0818e8ddc2a2f937202d90f658e"
+    },
+    {
+      "path": "docs/.nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "bytes": 34109,
+      "sha256": "50808756358315586339d365eab3a87f15edb4338eedb63581ff866cd2f61551"
+    },
+    {
+      "path": "content/guide_zh-CN.md",
+      "bytes": 108347,
+      "sha256": "362d100d2b03fdcc19a02264b523f942c4c5192011d328525822be63b4c8b479"
+    },
+    {
+      "path": "provenance/sources.md",
+      "bytes": 18660,
+      "sha256": "25a0ef1844807a7f28dc7f932bfe320d152492724ebf1d7be9d58313a5a8ce6c"
+    },
+    {
+      "path": "verification/checks.md",
+      "bytes": 35510,
+      "sha256": "d8164fa6e8635b6436367225592016abe8bcf2adcb9ae57d18955125bac1c79e"
+    },
+    {
+      "path": "MIGRATION.md",
+      "bytes": 37252,
+      "sha256": "bbccef4ae4e972b7f751d718424288cfb5a1d6f93d7b28da0a987fa93bb31cf2"
+    },
+    {
+      "path": "MANIFEST.txt",
+      "bytes": 1844,
+      "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+    },
+    {
+      "path": "templates/molecular-service/water/request.json",
+      "bytes": 277,
+      "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+    },
+    {
+      "path": "templates/molecular-service/water/molecule.xyz",
+      "bytes": 123,
+      "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+    }
+  ],
+  "new_scientific_calls": 0,
+  "not_executed": [
+    "true200percentzoom",
+    "full_keyboard_audit",
+    "multibrowser",
+    "platform_calculation"
+  ]
+}

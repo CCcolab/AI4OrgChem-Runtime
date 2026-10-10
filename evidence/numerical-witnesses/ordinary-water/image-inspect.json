@@ -1,0 +1,128 @@
+{
+  "Architecture": "amd64",
+  "Comment": "buildkit.dockerfile.v0",
+  "Config": {
+    "ArgsEscaped": true,
+    "Cmd": [
+      "--help"
+    ],
+    "Entrypoint": [
+      "/opt/venv/bin/python",
+      "-B",
+      "-m",
+      "runtime.molecular_service"
+    ],
+    "Env": [
+      "PATH=/opt/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "LANG=C.UTF-8",
+      "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+      "PYTHON_VERSION=3.12.13",
+      "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+      "PYTHONNOUSERSITE=1",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "AI4ORGCHEM_RUNTIME_COMMIT=1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
+      "AI4ORGCHEM_SOURCE=/opt/ai4orgchem",
+      "PYTHONPATH=/opt/ai4orgchem/software/src",
+      "AI4ORGCHEM_REGISTERED_SOURCE_SHA256=1bc64c322920671b9fe2335b13ea639619e960648422e7eb984c4001f2a481ca",
+      "AI4ORGCHEM_REGISTERED_DEPENDENCY_SHA256=511711d709508ff77fa995b120d5aeed3a9058984868a3a17f1d0604b788d393",
+      "OMP_NUM_THREADS=1",
+      "OPENBLAS_NUM_THREADS=1",
+      "MKL_NUM_THREADS=1",
+      "NUMEXPR_NUM_THREADS=1",
+      "AI4ORGCHEM_MOLECULAR_SOURCE_SHA256=0f1370a8ef1c5e1a8c7b58f310dc6ad2faa0c08e568e19b01cf8e02d7eff29ab",
+      "AI4ORGCHEM_MOLECULAR_DEPENDENCY_SHA256=954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd"
+    ],
+    "Labels": {
+      "ai4orgchem.dependency-lock.sha256": "a8dbe44d12930427ca1f377b17eba3fcdb17b6dd922737884b3b77d0d9c4ea71",
+      "ai4orgchem.molecular.base-image-id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+      "ai4orgchem.molecular.dependency-sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+      "ai4orgchem.molecular.distribution-status": "BLOCKED-local-only",
+      "ai4orgchem.molecular.runtime-commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
+      "ai4orgchem.molecular.schema": "molecular-single-point-v1",
+      "ai4orgchem.molecular.source-sha256": "0f1370a8ef1c5e1a8c7b58f310dc6ad2faa0c08e568e19b01cf8e02d7eff29ab",
+      "ai4orgchem.registered.base-image-id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+      "ai4orgchem.registered.dependency-sha256": "511711d709508ff77fa995b120d5aeed3a9058984868a3a17f1d0604b788d393",
+      "ai4orgchem.registered.distribution-status": "BLOCKED-local-only",
+      "ai4orgchem.registered.runtime-commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
+      "ai4orgchem.registered.schema": "fixed-registered-cases-v1",
+      "ai4orgchem.registered.source-sha256": "1bc64c322920671b9fe2335b13ea639619e960648422e7eb984c4001f2a481ca",
+      "ai4orgchem.source.baseline": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+      "ai4orgchem.source.commit": "cc7437901119e71ef7945a12813c021c383e7648",
+      "ai4orgchem.source.tag-status": "unpublished-local-commit-not-v0.3.2",
+      "ai4orgchem.user-molecule.status": "engineering-only-compute-gated",
+      "org.opencontainers.image.revision": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
+      "org.opencontainers.image.title": "AI4OrgChem ordinary user molecule RHF candidate"
+    },
+    "User": "10001:10001",
+    "WorkingDir": "/opt/runtime"
+  },
+  "Created": "2026-10-08T02:13:16.899387591Z",
+  "Descriptor": {
+    "digest": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
+    "mediaType": "application/vnd.oci.image.index.v1+json",
+    "size": 856
+  },
+  "Id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
+  "Identity": {
+    "Build": [
+      {
+        "CreatedAt": "2026-10-08T02:13:18.278956403Z",
+        "Ref": "3azhyj7w5h0dctgbi2smt37kg"
+      }
+    ]
+  },
+  "Metadata": {
+    "LastTagTime": "2026-10-08T02:13:17.858455982Z"
+  },
+  "Os": "linux",
+  "RepoDigests": [
+    "ai4orgchem-runtime@sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e"
+  ],
+  "RepoTags": [
+    "ai4orgchem-runtime:molecular-rhf-20261008-local"
+  ],
+  "RootFS": {
+    "Layers": [
+      "sha256:66462cc862fe2053b9863fefa3866e07bb5dfb06f6b3ce3177cc096e4021aabe",
+      "sha256:bbbb19fa59e928e9d2412742b476b97f157cd95304b1f9fd3a82d221f661acde",
+      "sha256:0632d0601fca2055c070f7382e63078c292b98d8fa4a5388ee04bd6b1ea0582e",
+      "sha256:da835b7922cb8503b751d1cd1a3ac2309a9608198554e43fdd225591a1ec16f4",
+      "sha256:8e5a63fab9d3baa1b10bbd67b331d85e8c7fc63da7d3eb28afc959f69cf62e4b",
+      "sha256:5906bea4eaeac8c4f3d043e280b48998322dde374ebb82b3c30fe6ffcb4b46fd",
+      "sha256:83cbd4a3c2925f87218b17b6b7c76da46bbd61624f688ceafbe5a3c85d6cc2b6",
+      "sha256:9b8a76549e4ae9ab76c57ccdb2a65265849bc9f47862beca48950897b98a2868",
+      "sha256:53bdd9dff781cf59a0a8ee6d45d8ef212bccace1a2f33f9d777481d17f0844fd",
+      "sha256:d9038f82a8f55a8575885073609821e539720d7fac6da8aec438dc2ec0e4697c",
+      "sha256:98f62584c2a9cf1fbc84e36dd3bfc34b2312b227ebf435b21aad2fcb605ef72b",
+      "sha256:99c9283c31f78e4c423f76ad6288b7d55b69066c5a80f74e390b76ea194da0ff",
+      "sha256:ddc8828d725c2ab911635e5295b4f80dc916e916e6234b082efab397ac853f7c",
+      "sha256:9e22002f522285024c9101353e1f7e453b166c1e1d4ae45e50b8fc020249be1e",
+      "sha256:5b3d670617bce6ef41fc745f31cac3174df69bf97abd841f9786b00ed15a5c59",
+      "sha256:963c32bee14cedfaffc7dad1e4cd6a34df70779587115d7e8861dbfd63b82971",
+      "sha256:4a5fe3afd1f6a7dc2321479099b643d4b44f0d8d86f95424f6476a1ff8506740",
+      "sha256:ce7a38485c96872b003dc23e0d6283964ae02a619f566b93e560aeb14a07c466",
+      "sha256:4903a1cd0b030790b8f8a2636399bde6f8249ead689878144d601ef1be069ad0",
+      "sha256:a9f9aebc7640144b41d1d66f891290126e1668c31829b05ee9ae538f0f0240a8",
+      "sha256:1ddfbee1c0974cdc14d9cb02decd46f3be79f1cc2c42e73896c1ee5b8aac5dd9",
+      "sha256:f2cca83beb46848fb08c589904858bd8507f343bcbd15858cbc67bec457c66e3",
+      "sha256:c3e220d37bdb82d31b68c1fb694058696753f85060b404c07497cd58b696ba69",
+      "sha256:4ca09658391d2a86eda0fbf8bc52360e3145f6f00a7fca779d62e45afb184d5e",
+      "sha256:b5e406a875bf035b34a28ce5e62bc23626e9666894997ed56406fed4abf82b19",
+      "sha256:6c60782562ac394eb5736a61ed4db6acd9b9b32c18c68405b54172cf4e4a8700",
+      "sha256:26794cc06537149b21152be98e1a39170932b64b0b1c5410be8bd206910d7a3b",
+      "sha256:ee4d2838df0d8f339257d0441268aba73bef48b8d9987978e70dd6c48f309f0a",
+      "sha256:7e7335dc44977cca862776c8235a2bce28353135a84935dd55095863abef094d",
+      "sha256:b004dc619e3933a981f71af990b2225ca86da2566db4fa941307e444b6679a7b",
+      "sha256:ccd09df239c0abbc2144a022842e434bacfe023347b3f12a8bf606ad2ea479e2",
+      "sha256:27ab3fb6f9125f867afd3a330e9d94c35d47c009674d759af2ba2c92ec054fcf",
+      "sha256:1ba33b9bcaa140b7037a2adbbe11148b4244f1ca95c1079fd4a3b1b0c76e9bf3",
+      "sha256:cf75a6fa7e9b175da716379bdaae0874bc0e1b03a9428edeed8be06825e5d1c4",
+      "sha256:f1c8cd6ae8e005580f98ccbf5352de8b3232e892c6baf545f1e4379ebb70b5d5",
+      "sha256:7bd925e79541e4af647009ab7e647a48449c07538bed2bb52a831921a888416d",
+      "sha256:51e5c00310b6fc9fec06e8d846054511d1d62039b76bd7defae3c1a086a24cf3",
+      "sha256:45e652a019c270e42ba0667fb8c7616b8f6848766a7ce005dd0a1fbe3bad0120"
+    ],
+    "Type": "layers"
+  },
+  "Size": 635734866
+}

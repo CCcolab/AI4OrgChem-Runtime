@@ -29,4 +29,6 @@ def test_tar_traversal_member_refused_before_write(tmp_path):
 
 def test_fixed_public_base_and_only_host_rebind():
     assert m.PUBLIC_BASE.endswith('@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2')
-    assert m.HOST_OVERRIDES == {'scripts/run-high-cost-case.py', 'tests/test_high_cost_supervisor.py'}
+    assert m.HOST_OVERRIDES == {'scripts/run-high-cost-case.py', 'tests/test_high_cost_supervisor.py',
+                               'scripts/run-molecular-service.py', 'scripts/run-registered-case.py',
+                               'scripts/run-protocol-case.py'}

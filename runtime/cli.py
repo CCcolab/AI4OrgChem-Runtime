@@ -32,6 +32,8 @@ TASKS = {
 PROTOCOL = 'configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml'
 CLASSES = 'configs/qm/p09_exchange_integral_classes_v0.1.yaml'
 PUBLIC_INPUTS = ['evidence/P01-P14/P14/inputs/source_proxy_G.xyz', 'evidence/P01-P14/P14/inputs/source_proxy_PLG.xyz']
+# A completed child process can still fail the task's required scientific gate.
+QUALIFICATION_EXIT_CODE = 4
 
 
 def digest(path):
@@ -187,7 +189,8 @@ def run_task(args):
               'image_digest': os.environ.get('AI4ORGCHEM_IMAGE_DIGEST', 'UNKNOWN'),
               'image_id': os.environ.get('AI4ORGCHEM_IMAGE_ID', 'UNKNOWN'),
               'platform': platform.system() + '/' + platform.machine(), 'python': platform.python_version(),
-              'status': 'RUNNING', 'process_exit_code': 'UNKNOWN', 'numerical_qualification': 'NOT_APPLICABLE',
+              'status': 'RUNNING', 'process_exit_code': 'UNKNOWN', 'subprocess_exit_code': 'UNKNOWN',
+              'numerical_qualification': 'NOT_APPLICABLE',
               'scientific_comparison': 'NOT_APPLICABLE', 'started_utc': datetime.now(timezone.utc).isoformat(),
               'output_sha256': {}, 'commands': [], 'resource_peak': 'UNKNOWN'}
     manifest = run / 'run-manifest.json'
@@ -229,17 +232,24 @@ def run_task(args):
                     if code != 0:
                         break
         record['process_exit_code'] = code
+        record['subprocess_exit_code'] = code
         record['status'] = 'PASS' if code == 0 else 'FAIL'
-        if (run / 'result.json').exists():
-            result = load(run / 'result.json')
-            gate = result.get(TASKS[args.task][1], 'UNKNOWN')
+        task_definition = TASKS[args.task]
+        if task_definition is not None:
+            # A missing result or gate cannot satisfy a scientific task. Tasks
+            # without a gate (evidence/core-tests) retain NOT_APPLICABLE.
+            gate = 'UNKNOWN'
+            if (run / 'result.json').exists():
+                result = load(run / 'result.json')
+                gate = result.get(task_definition[1], 'UNKNOWN')
+                record['scientific_comparison'] = result.get('classification', 'NOT_APPLICABLE')
+                record['quantitative_evidence'] = result.get('quantitative_evidence', {})
+                if 'peak_rss_mib' in result:
+                    record['resource_peak'] = {'peak_rss_mib': result['peak_rss_mib']}
             record['numerical_qualification'] = gate
-            record['scientific_comparison'] = result.get('classification', 'NOT_APPLICABLE')
-            record['quantitative_evidence'] = result.get('quantitative_evidence', {})
-            if 'peak_rss_mib' in result:
-                record['resource_peak'] = {'peak_rss_mib': result['peak_rss_mib']}
             if code == 0 and gate != 'PASS':
                 record['status'] = 'FAIL'
+                code = QUALIFICATION_EXIT_CODE
         if verify_source(args.source) != hashes:
             raise ValueError('source changed during execution')
     except MemoryError as exc:

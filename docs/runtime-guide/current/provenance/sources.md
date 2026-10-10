@@ -76,7 +76,7 @@ sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d
 
 cc7437901119e71ef7945a12813c021c383e7648
 
-Runtime本地工程候选未公开发布；任意用户分子的旧条件态比较 Compute BLOCKED；外部咨询CANCELLED\_BY\_USER，不是科学批准；首次Actions三项job已在06d5088通过，范围见当前同步记录；WSLc BLOCKED／NOT\_EXECUTED且升级实机暂停；镜像分发BLOCKED；源码与指南已公开，GitHub Pages静态指南已启用；本页没有在线计算，Colab暂缓。固定L3／L4严格断网未执行，L4不能恢复。
+Runtime源码与静态指南已公开；任意用户分子的旧条件态比较 Compute BLOCKED；外部咨询CANCELLED\_BY\_USER，不是科学批准；首次Actions三项job已在06d5088通过，范围见当前同步记录；WSLc BLOCKED／NOT\_EXECUTED且升级实机暂停；镜像分发BLOCKED；源码与指南已公开，GitHub Pages静态指南已启用；本页没有在线计算，Colab暂缓。固定L3／L4严格断网未执行，L4不能恢复。
 
 ### 原七任务科学来源
 

@@ -279,7 +279,9 @@ class RegisteredCaseSupervisorTests(unittest.TestCase):
             value = contract_fixture(task)
             value["execution_id"] = token
             return value
-        with patch.object(host, "ROOT", source), patch.object(host, "build_contract", side_effect=build), patch.object(host, "host_git_identity", return_value={"runtime_source_head": None, "status": "ENGINEERING_FIXTURE"}):
+        # Directory probing is verified separately; retain this fixture's full
+        # scientific receipt, resource, deadline and output persistence checks.
+        with patch.object(host, "probe_output_writable", return_value=None), patch.object(host, "ROOT", source), patch.object(host, "build_contract", side_effect=build), patch.object(host, "host_git_identity", return_value={"runtime_source_head": None, "status": "ENGINEERING_FIXTURE"}):
             code, run, execution = host.supervise(args, clock=clock, sleep=clock.sleep, executor=docker)
         return code, run, execution, docker
 

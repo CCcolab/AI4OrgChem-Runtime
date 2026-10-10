@@ -1,5 +1,7 @@
 # 专业复核服务与模块对应表
 
+当前服务入口见 [2026-10-10专业服务矩阵](CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)及 [能力注册表 v2](../configs/runtime-capabilities-v2.json)，覆盖普通分子、三个固定示例、八个专题、P11/P12、P14和研究诊断。下文为2026-10-03 P14/S1—S6历史范围，原七任务和证据记录保留；其中当时的CI/源码公开状态不代表当前状态。
+
 日期：2026-10-03。本轮补充文档与手工复核模板，计算接口仍为七个任务。科学来源固定为 AI4OrgChem `28511f3d84fa65707a107cde1e8121a7b4334ecb`（v0.3.2），runtime 文档基线为 `2460eef`。本文不新增计算能力或科学判据。
 
 入口：[三类用户路径](USER_PATHS_zh-CN.md)、[结果判读](REVIEW_RESULTS_zh-CN.md)、[已有运行示例](examples/P14_REVIEW_20261002_zh-CN.md)、[复核模板](templates/REVIEW_REPORT_zh-CN.md)、[反馈模板](templates/FEEDBACK_zh-CN.md)。实际使用参数见 [RUN](RUN_zh-CN.md)。

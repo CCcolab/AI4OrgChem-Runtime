@@ -19,12 +19,14 @@ import sys
 import time
 import uuid
 import zipfile
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import installation_source_bindings as source_bindings
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_RECEIPT = '.runtime-installation-source.json'
 PUBLIC_BASE = 'docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2'
 SERVICES = ('molecular-service', 'registered-cases', 'protocol-cases', 'high-cost-cases')
-HOST_OVERRIDES = {'scripts/run-high-cost-case.py', 'tests/test_high_cost_supervisor.py'}
+HOST_OVERRIDES = {name for spec in source_bindings.CATALOGS.values() for name in spec['overrides']}
 
 
 def sha(path):
@@ -296,24 +298,19 @@ def prepare(args):
             shutil.copyfile(item, copied/folder/item.name)
     # Repeat validation through the public preparation script's offline mode.
     logged([sys.executable, '-B', context/'scripts/prepare-install-dependencies.py', 'verify', '--input', copied], destination, 'dependency-verify')
-    baseline = context/'locks/high-cost-source.json'
-    baseline_bytes = baseline.read_bytes()
-    (context/'locks/high-cost-source.installation-baseline.json').write_bytes(baseline_bytes)
-    high = json.loads(baseline_bytes)
-    if len(high['files']) != 107:
-        raise ValueError('Original 107-file high-cost catalog required')
-    for row in high['files']:
-        path = context/row['path']
-        if row['path'] in HOST_OVERRIDES:
-            row['sha256'], row['size'] = sha(path), path.stat().st_size
-        elif sha(path) != row['sha256']:
-            raise ValueError('Frozen high-cost worker bytes differ: '+row['path'])
-    baseline.write_text(json.dumps(high, ensure_ascii=False, sort_keys=True, indent=2)+'\n', encoding='utf-8', newline='\n')
+    bindings = {}
+    for family, spec in source_bindings.CATALOGS.items():
+        baseline = context/spec['path']
+        baseline_bytes = baseline.read_bytes()
+        derived, _, binding = source_bindings.derive(family, baseline_bytes, lambda name: (context/name).read_bytes())
+        (context/source_bindings.baseline_path(family)).write_bytes(baseline_bytes)
+        baseline.write_bytes(derived)
+        bindings[family] = binding
     inventory = {str(p.relative_to(context)).replace('\\','/'): {'sha256': sha(p), 'size': p.stat().st_size}
                  for p in sorted(context.rglob('*')) if p.is_file()}
-    save(destination/'installation-context.json', {'schema': 'runtime-installation-context-v1',
+    save(destination/'installation-context.json', {'schema': 'runtime-installation-context-v2',
          'runtime_commit': source['runtime_commit'], 'runtime_source_zip_sha256': hashlib.sha256(raw).hexdigest(),
-         'public_base': PUBLIC_BASE, 'context_files': inventory,
+         'public_base': PUBLIC_BASE, 'context_files': inventory, 'source_catalog_bindings': bindings,
          'historical_scientific_acceptance': 'NOT_INHERITED',
          'high_cost_scientific_replay': 'NOT_EXECUTED', 'wslc': 'BLOCKED', 'image_distribution': 'BLOCKED'})
     print('Prepared '+str(destination), flush=True)
@@ -323,6 +320,8 @@ def verify_context(destination):
     destination = Path(destination).absolute()
     no_links(destination)
     receipt = json.loads((destination/'installation-context.json').read_text(encoding='utf-8'))
+    if receipt.get('schema') != 'runtime-installation-context-v2' or receipt.get('public_base') != PUBLIC_BASE:
+        raise ValueError('Current reviewed installation context required; old contexts stay historical')
     context = destination/'runtime'
     for path in context.rglob('*'):
         no_links(path)
@@ -349,23 +348,23 @@ def verify_context(destination):
             content = archive.read(name)
             if git_object('blob', content) != oid:
                 raise ValueError('Source ZIP Git blob mismatch: '+name)
-            if name != 'locks/high-cost-source.json' and (context/name).read_bytes() != content:
+            if name not in {spec['path'] for spec in source_bindings.CATALOGS.values()} and (context/name).read_bytes() != content:
                 raise ValueError('Context is not the declared Git source: '+name)
         if (context/SOURCE_RECEIPT).read_bytes() != archive.read(SOURCE_RECEIPT):
             raise ValueError('Source proof receipt changed')
-        old_high = archive.read('locks/high-cost-source.json')
-        if (context/'locks/high-cost-source.installation-baseline.json').read_bytes() != old_high:
-            raise ValueError('Original high-cost catalog must be preserved exactly')
-        high = json.loads(old_high)
-        for row in high['files']:
-            if row['path'] in HOST_OVERRIDES:
-                content = archive.read(row['path'])
-                row.update(sha256=hashlib.sha256(content).hexdigest(), size=len(content))
-        high_bytes = (json.dumps(high, ensure_ascii=False, sort_keys=True, indent=2)+'\n').encode()
-        if (context/'locks/high-cost-source.json').read_bytes() != high_bytes:
-            raise ValueError('Only the defined high-cost host rebind is allowed')
+        bindings = {}
+        for family, spec in source_bindings.CATALOGS.items():
+            baseline_bytes = archive.read(spec['path'])
+            if (context/source_bindings.baseline_path(family)).read_bytes() != baseline_bytes:
+                raise ValueError('Original catalog must be preserved exactly: '+family)
+            derived, _, binding = source_bindings.derive(family, baseline_bytes, archive.read)
+            if (context/spec['path']).read_bytes() != derived:
+                raise ValueError('Only the exact reviewed host rebind is allowed: '+family)
+            bindings[family] = binding
+        if receipt.get('source_catalog_bindings') != bindings:
+            raise ValueError('Installation catalog bindings differ from the Git-proven derivation')
     dependencies = read_json(context/'locks/installation-dependencies.json')
-    extras = {'build-inputs/science.tar', 'locks/high-cost-source.installation-baseline.json'}
+    extras = {'build-inputs/science.tar'} | {source_bindings.baseline_path(family) for family in source_bindings.CATALOGS}
     for item in dependencies['artifacts']:
         name = 'build-inputs/dependencies/'+('sources/' if item['packagetype']=='sdist' else 'wheels/')+item['filename']
         extras.add(name)

@@ -1,0 +1,1371 @@
+{
+  "schema_version": "runtime-capabilities-v2",
+  "date": "2026-10-10",
+  "reviewed_runtime_commit": "86e29b47b38fbd31717ff9aac653386d2e3f768d",
+  "declaration_grants_execution_authorization": false,
+  "declaration_scope": "Current capability navigation only; enabled rows still require actual installation/image/input/source/resource/budget admission. Historical acceptance identifies its own code and image, not this update.",
+  "historical_snapshot": "validation/local-runtime-capabilities-v1.json",
+  "source_authority": {
+    "baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+    "baseline_files": 588,
+    "baseline_lock": "locks/source-files.sha256.json",
+    "adapter_context_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+    "adapter_files": 3,
+    "adapter_materials": "assets/science-install-overlay/cc743790",
+    "installation_lock": "locks/source.installation.lock.json",
+    "authority": "FROZEN_BASELINE_AND_CAPTURED_ADAPTER_BYTES; upstream main is not a replacement"
+  },
+  "publication": {
+    "source": {
+      "status": "PUBLIC",
+      "url": "https://github.com/CCcolab/AI4OrgChem-Runtime"
+    },
+    "guide": {
+      "status": "PUBLIC_STATIC_GUIDE",
+      "url": "https://cccolab.github.io/AI4OrgChem-Runtime/",
+      "online_calculation": false
+    }
+  },
+  "ci": {
+    "status": "SUCCESS_RECORDED_COMMIT_ONLY",
+    "commit": "86e29b47b38fbd31717ff9aac653386d2e3f768d",
+    "run_id": 38003025857,
+    "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857",
+    "successful_jobs": 3,
+    "scope": "Existing engineering contracts and legacy L0/L1 jobs only; not all scientific services; does not certify later edits"
+  },
+  "platform": {
+    "docker": "SCOPED_LOCAL_ACCEPTANCE_RECORDS",
+    "wslc": "BLOCKED_PAUSED_NOT_EXECUTED"
+  },
+  "distribution": {
+    "public_prebuilt_image": "BLOCKED",
+    "source_installation": "PUBLIC_SOURCE_PATH_WITH_LOCAL_SCOPED_ACCEPTANCE",
+    "guide": "docs/SOURCE_INSTALLATION_zh-CN.md",
+    "new_image_science_acceptance": "Each new installation keeps its own identities and NOT_EXECUTED tasks"
+  },
+  "capabilities": [
+    {
+      "id": "ordinary-molecular-single-point",
+      "name": "自己的分子 RHF 单点能量、轨道与 AO 密度",
+      "status": "AVAILABLE_SCOPED_LOCAL_RHF",
+      "scope": "User XYZ H/C/N/O, neutral closed-shell singlet, <=20 atoms and actual AO<=80; RHF/6-31G(d); no stability/minimum certification",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "schema": "schemas/molecular-single-point-v1.json",
+        "user_xyz": true,
+        "elements": [
+          "H",
+          "C",
+          "N",
+          "O"
+        ],
+        "charge": 0,
+        "multiplicity": 1,
+        "max_atoms": 20,
+        "max_actual_ao": 80
+      },
+      "profile": "rhf-631gd-small-v1",
+      "protocol": "ORDINARY_MOLECULAR_SINGLE_POINT_V0.1",
+      "source": {
+        "source_lock": "locks/molecular-service-source.json",
+        "source_snapshot_sha256": "0f1370a8ef1c5e1a8c7b58f310dc6ad2faa0c08e568e19b01cf8e02d7eff29ab",
+        "authority": "CAPTURED_RUNTIME_WRAPPER_BYTES_AND_LOCKED_PYSCF; same-library reference is wrapper consistency"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "label": "ammonia",
+          "execution_id": "aacb9865f7f54c74b5a6d79ca50fe254",
+          "result_sha256": "0e62f7166705fc1567fa40fa9cbc6853060a8a4c14714c6eeb3d626f3a21f941",
+          "host_manifest_sha256": "da52d443a26ae7e53aec7e6bb177279a6648ba5399afef254b484222c1491505",
+          "host_launcher_commit": "a3f6ec7536c510f06b7d521bc09515eb451b9cff",
+          "image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
+          "image_build_runtime_commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
+          "record": {
+            "path": "validation/molecular-service/deployment-20261008.json",
+            "pointer": "/cases/ammonia"
+          }
+        },
+        {
+          "label": "ethene",
+          "execution_id": "e6f452e194724ecf83e011c2f83013ea",
+          "result_sha256": "dfdc2a20f40859ecd7f3c5c41893022d3264921ac1d467bb796540fb8686aef0",
+          "host_manifest_sha256": "b5a4b667cf583c4d490851a33ee4b67b0016d3649373fb97590875f96b6bf341",
+          "host_launcher_commit": "a3f6ec7536c510f06b7d521bc09515eb451b9cff",
+          "image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
+          "image_build_runtime_commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
+          "record": {
+            "path": "validation/molecular-service/deployment-20261008.json",
+            "pointer": "/cases/ethene"
+          }
+        },
+        {
+          "label": "methane",
+          "execution_id": "329b0e12808446099c2f4e6324c437fb",
+          "result_sha256": "5a7dd1121f1e3d76ba8b1e552d8c3cf06b3e150eaaf5e1ad97aaeb71316d8b5d",
+          "host_manifest_sha256": "bba43420af26c39f68e1cad493ce5c42754da83d973cce463af1369f9a161889",
+          "host_launcher_commit": "a3f6ec7536c510f06b7d521bc09515eb451b9cff",
+          "image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
+          "image_build_runtime_commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
+          "record": {
+            "path": "validation/molecular-service/deployment-20261008.json",
+            "pointer": "/cases/methane"
+          }
+        },
+        {
+          "label": "water",
+          "execution_id": "a95e7d0f4cb74b9585f1528b19162972",
+          "result_sha256": "91e95a9dfb0dd942cec0ab5c71463062fc7688c15ddbcd89bd0ad423715f8db1",
+          "host_manifest_sha256": "b4db8f14261adf9f87ccde4b5ca9ef37ed79fe6c879a9e0508d8c8c813c2d4be",
+          "host_launcher_commit": "a3f6ec7536c510f06b7d521bc09515eb451b9cff",
+          "image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
+          "image_build_runtime_commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
+          "record": {
+            "path": "validation/molecular-service/deployment-20261008.json",
+            "pointer": "/cases/water"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/MOLECULAR_SINGLE_POINT_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/molecular-service/deployment-20261008.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "114 locked-image engineering tests in recorded candidate",
+        "numerical": "Four ordinary RHF runs and four same-version PySCF direct wrapper controls; 12 recorded gates",
+        "science": "Teaching and specified-geometry baseline/wrapper consistency; stability NOT_EXECUTED; no independent program certification"
+      }
+    },
+    {
+      "id": "p02-statistics",
+      "name": "冻结表值统计示例",
+      "status": "AVAILABLE_FIXED_CASE",
+      "scope": "Frozen published table value recalculation; no PDF/CIF reauthentication, no quantum calculation",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "case_config": "configs/registered-cases-v1.json",
+        "task": "p02-statistics"
+      },
+      "profile": "registered-fixed-cases-v1",
+      "protocol": "P02_STRUCTURE_UV_SOURCE_FREEZE_V0.1",
+      "source": {
+        "source_lock": "locks/registered-cases-source.json",
+        "source_snapshot_sha256": "1bc64c322920671b9fe2335b13ea639619e960648422e7eb984c4001f2a481ca",
+        "science_baseline": {
+          "baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+          "baseline_files": 588,
+          "baseline_lock": "locks/source-files.sha256.json",
+          "adapter_context_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+          "adapter_files": 3,
+          "adapter_materials": "assets/science-install-overlay/cc743790",
+          "installation_lock": "locks/source.installation.lock.json",
+          "authority": "FROZEN_BASELINE_AND_CAPTURED_ADAPTER_BYTES; upstream main is not a replacement"
+        },
+        "authority": "REGISTERED_TASK_CAPTURED_BYTES_PLUS_FIXED_SCIENCE_SOURCE"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "execution_id": "291d6fa65ae1413a959739c902251e49",
+          "result_sha256": "4ccca2d1eb09305025e2489483fbedf33344ad7a6d2ecdbfecce56025665466c",
+          "host_manifest_sha256": "06beb94f1fb0b787d37daaf0690055549342002abd80e2bbef677ba9bc2248e7",
+          "host_launcher_commit": "e2e90e9bec3637c986d2b581b352730658677113",
+          "image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+          "image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
+          "record": {
+            "path": "validation/registered-cases/deployment-20261008.json",
+            "pointer": "/tasks/p02-statistics"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/REGISTERED_CASES_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/registered-cases/deployment-20261008.json",
+          "pointer": "/tasks/p02-statistics"
+        }
+      ],
+      "qualification": {
+        "engineering": "Recorded fixed candidate and guarded host routing",
+        "numerical": "One recorded fixed task; P02/P13 use saved arithmetic, P01 one RHF plus Boys/PM",
+        "science": "Fixed example only; no PDF/CIF authentication, new P13 QM or universal delocalization-energy claim"
+      }
+    },
+    {
+      "id": "p13-graph-ledger",
+      "name": "分子图规则与能量账本示例",
+      "status": "AVAILABLE_FIXED_CASE",
+      "scope": "Original graph/RDKit formula rules and frozen energy ledger arithmetic; no quantum calculation",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "case_config": "configs/registered-cases-v1.json",
+        "task": "p13-graph-ledger"
+      },
+      "profile": "registered-fixed-cases-v1",
+      "protocol": "p13-polycyclic-benzenoid/0.1",
+      "source": {
+        "source_lock": "locks/registered-cases-source.json",
+        "source_snapshot_sha256": "1bc64c322920671b9fe2335b13ea639619e960648422e7eb984c4001f2a481ca",
+        "science_baseline": {
+          "baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+          "baseline_files": 588,
+          "baseline_lock": "locks/source-files.sha256.json",
+          "adapter_context_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+          "adapter_files": 3,
+          "adapter_materials": "assets/science-install-overlay/cc743790",
+          "installation_lock": "locks/source.installation.lock.json",
+          "authority": "FROZEN_BASELINE_AND_CAPTURED_ADAPTER_BYTES; upstream main is not a replacement"
+        },
+        "authority": "REGISTERED_TASK_CAPTURED_BYTES_PLUS_FIXED_SCIENCE_SOURCE"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "execution_id": "77417d403dae4e659314351649c67d57",
+          "result_sha256": "ee525187b8da24e78f08678f91ec2a45566910a6129c7583e0068fd77da7c3fc",
+          "host_manifest_sha256": "5a56a72cde9313f53e976b76a9f781993f02580946fa15cbdd0080feff294697",
+          "host_launcher_commit": "e2e90e9bec3637c986d2b581b352730658677113",
+          "image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+          "image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
+          "record": {
+            "path": "validation/registered-cases/deployment-20261008.json",
+            "pointer": "/tasks/p13-graph-ledger"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/REGISTERED_CASES_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/registered-cases/deployment-20261008.json",
+          "pointer": "/tasks/p13-graph-ledger"
+        }
+      ],
+      "qualification": {
+        "engineering": "Recorded fixed candidate and guarded host routing",
+        "numerical": "One recorded fixed task; P02/P13 use saved arithmetic, P01 one RHF plus Boys/PM",
+        "science": "Fixed example only; no PDF/CIF authentication, new P13 QM or universal delocalization-energy claim"
+      }
+    },
+    {
+      "id": "p01-orbital-density",
+      "name": "乙烯占据轨道变换与密度不变性示例",
+      "status": "AVAILABLE_FIXED_CASE",
+      "scope": "One fixed ethene ordinary RHF/6-31G(d), one Boys and one Pipek-Mezey occupied rotation; density/energy invariance only",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "case_config": "configs/registered-cases-v1.json",
+        "task": "p01-orbital-density"
+      },
+      "profile": "registered-fixed-cases-v1",
+      "protocol": "P01_ETHENE_OCCUPIED_GAUGE_CONTROL_V0.1",
+      "source": {
+        "source_lock": "locks/registered-cases-source.json",
+        "source_snapshot_sha256": "1bc64c322920671b9fe2335b13ea639619e960648422e7eb984c4001f2a481ca",
+        "science_baseline": {
+          "baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+          "baseline_files": 588,
+          "baseline_lock": "locks/source-files.sha256.json",
+          "adapter_context_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+          "adapter_files": 3,
+          "adapter_materials": "assets/science-install-overlay/cc743790",
+          "installation_lock": "locks/source.installation.lock.json",
+          "authority": "FROZEN_BASELINE_AND_CAPTURED_ADAPTER_BYTES; upstream main is not a replacement"
+        },
+        "authority": "REGISTERED_TASK_CAPTURED_BYTES_PLUS_FIXED_SCIENCE_SOURCE"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "execution_id": "19a52778c099471fbacedcef0dc2e489",
+          "result_sha256": "a6208212983f35376718671482eb874cbb2e8b83a4e5447b5c51f535a0459ba2",
+          "host_manifest_sha256": "5c74a4d424a2dd77754770a804369b54e9fc37ae47014dac2c2494e8838e6b7a",
+          "host_launcher_commit": "e2e90e9bec3637c986d2b581b352730658677113",
+          "image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+          "image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
+          "record": {
+            "path": "validation/registered-cases/deployment-20261008.json",
+            "pointer": "/tasks/p01-orbital-density"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/REGISTERED_CASES_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/registered-cases/deployment-20261008.json",
+          "pointer": "/tasks/p01-orbital-density"
+        }
+      ],
+      "qualification": {
+        "engineering": "Recorded fixed candidate and guarded host routing",
+        "numerical": "One recorded fixed task; P02/P13 use saved arithmetic, P01 one RHF plus Boys/PM",
+        "science": "Fixed example only; no PDF/CIF authentication, new P13 QM or universal delocalization-energy claim"
+      }
+    },
+    {
+      "id": "P03",
+      "name": "约束扭转路径账本与固定端点 DFT",
+      "status": "AVAILABLE_FIXED_PROTOCOL",
+      "scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "case_config": "configs/protocol-cases-v1.json",
+        "case": "P03",
+        "modes": [
+          "ledger",
+          "preflight",
+          "live"
+        ]
+      },
+      "profile": "protocol-cases-v1",
+      "protocol": "runtime-p03-bounded/0.1",
+      "source": {
+        "source_lock": "locks/protocol-cases-source.json",
+        "source_protocol_context_id": "p03-parent-nba-relaxed-pes/0.1",
+        "authority": "PER_FILE_CAPTURED_BYTES_AND_CONTEXT_IDENTITIES; includes frozen upstream and disclosed original worktree drivers; not all files are baseline commit"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "mode": "live",
+          "result_sha256": "80c5ce3ccd591cb30bd6bbc35e051aff400c50ede00ad0c2a6980f0429d101cc",
+          "image_id": "sha256:6eeccf5ba4192f827986625fae238982ab162e6aadffe6ffc03e3ef642c34e12",
+          "image_build_runtime_commit": "0ee566397844d9885d50ca2a2d5ae5b974f19425",
+          "source_lock_sha256": "556d09fee4868aa375054700cc1cf6cc4ad6d1ec9f4a8def1d47f8f67ab5aec7",
+          "contract_sha256": "955258bd09e032135583b4597b5d95c0d2bb53b016366c0a65bc9ca898d70e20",
+          "execution_id": "f5a3e466468c4c75bb777ec668924ec8",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/all_native_attempts_including_failures/0"
+          }
+        },
+        {
+          "mode": "ledger",
+          "result_sha256": "c8bd8685c052a33e4781b4de7c4cc86ce116c7f21218dc926c19b1ebd47cf945",
+          "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+          "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+          "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+          "contract_sha256": "71397d11f24bb7a3a8f13c9f9fbe795a9cba81f04b54e1b7936ec25d83584c30",
+          "execution_id": "9bcc2110345f4417a75da500baac3806",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/controls/0"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/protocol-cases/batch2-verification.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "Recorded candidate guarded ledger/preflight/live controls; failures retained",
+        "numerical": "One fixed live point/scoped scan plus saved ledgers; P07 ledger only",
+        "science": "Original protocol operational comparison only; no arbitrary user conditional Compute or full scientific recertification"
+      }
+    },
+    {
+      "id": "P04",
+      "name": "源原生双状态直接响应",
+      "status": "AVAILABLE_FIXED_PROTOCOL",
+      "scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "case_config": "configs/protocol-cases-v1.json",
+        "case": "P04",
+        "modes": [
+          "ledger",
+          "preflight",
+          "live"
+        ]
+      },
+      "profile": "protocol-cases-v1",
+      "protocol": "runtime-p04-bounded/0.1",
+      "source": {
+        "source_lock": "locks/protocol-cases-source.json",
+        "source_protocol_context_id": "lfmo-sigma-pi/0.5-target-c-scoped-release",
+        "authority": "PER_FILE_CAPTURED_BYTES_AND_CONTEXT_IDENTITIES; includes frozen upstream and disclosed original worktree drivers; not all files are baseline commit"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "mode": "live",
+          "result_sha256": "c1dc737bdac374b4ecf72351f1aad993c6d7f52776ebb452f83a21ea7cfb2fbb",
+          "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+          "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+          "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+          "contract_sha256": "64d2b0e3a3a5ecdbd47980e56f3a7a336c55e13ed08facb1bccdfab36f9bb948",
+          "execution_id": "8992093ad3a44a4fbfdc570f82133b3f",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/all_native_attempts_including_failures/7"
+          }
+        },
+        {
+          "mode": "ledger",
+          "result_sha256": "a144325e258185983a965cb63fd98e7e9f0d382f879d1ad7934012d5340cdbbc",
+          "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+          "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+          "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+          "contract_sha256": "4f859d063d30c255ed5a572be6309bf07d8ec10884dbdd816a508607b5276adf",
+          "execution_id": "cd9ba51de3dd45509ad9985fd5620ac6",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/controls/1"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/protocol-cases/batch2-verification.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "Recorded candidate guarded ledger/preflight/live controls; failures retained",
+        "numerical": "One fixed live point/scoped scan plus saved ledgers; P07 ledger only",
+        "science": "Original protocol operational comparison only; no arbitrary user conditional Compute or full scientific recertification"
+      }
+    },
+    {
+      "id": "P05",
+      "name": "π–σ 条件能量单点",
+      "status": "AVAILABLE_FIXED_PROTOCOL",
+      "scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "case_config": "configs/protocol-cases-v1.json",
+        "case": "P05",
+        "modes": [
+          "ledger",
+          "preflight",
+          "live"
+        ]
+      },
+      "profile": "protocol-cases-v1",
+      "protocol": "runtime-p05-bounded/0.1",
+      "source": {
+        "source_lock": "locks/protocol-cases-source.json",
+        "source_protocol_context_id": "source-equivalent-reconstruction/table-5-15-seven-angle-continuation/0.2",
+        "authority": "PER_FILE_CAPTURED_BYTES_AND_CONTEXT_IDENTITIES; includes frozen upstream and disclosed original worktree drivers; not all files are baseline commit"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "mode": "live",
+          "result_sha256": "4ab5b911a02eecdb1066b7ac29bc183f170ad12cd6ee73e2f1e864a64367d5bf",
+          "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+          "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+          "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+          "contract_sha256": "f8c027cc593af0675fffa7d2c25c4948c8633b98f44032218cde6636fbd71c0a",
+          "execution_id": "2cd4a39240aa46409d9d96184b470f3d",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/all_native_attempts_including_failures/8"
+          }
+        },
+        {
+          "mode": "ledger",
+          "result_sha256": "2e924cb5b63a4c45dd88dcb13f93b15ddd7e6a886a1c2de6cd6203ca213de557",
+          "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+          "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+          "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+          "contract_sha256": "e3a07a0551d82b154fbf2c7401d4c155f826f0d4d3312778d8986a43649f0f5e",
+          "execution_id": "70c4baf7e04b4217bc003a36ebbd1f57",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/controls/2"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/protocol-cases/batch2-verification.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "Recorded candidate guarded ledger/preflight/live controls; failures retained",
+        "numerical": "One fixed live point/scoped scan plus saved ledgers; P07 ledger only",
+        "science": "Original protocol operational comparison only; no arbitrary user conditional Compute or full scientific recertification"
+      }
+    },
+    {
+      "id": "P06",
+      "name": "双片段条件能量独立组装",
+      "status": "AVAILABLE_FIXED_PROTOCOL",
+      "scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "case_config": "configs/protocol-cases-v1.json",
+        "case": "P06",
+        "modes": [
+          "ledger",
+          "preflight",
+          "live"
+        ]
+      },
+      "profile": "protocol-cases-v1",
+      "protocol": "runtime-p06-bounded/0.1",
+      "source": {
+        "source_lock": "locks/protocol-cases-source.json",
+        "source_protocol_context_id": "lfmo-sigma-pi/p06-target-b-table-5-19-scoped-release/0.1",
+        "authority": "PER_FILE_CAPTURED_BYTES_AND_CONTEXT_IDENTITIES; includes frozen upstream and disclosed original worktree drivers; not all files are baseline commit"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "mode": "live",
+          "result_sha256": "4c33bca0c5ae5ba76233f67bc78bf351e17e6fd4016527142d912f00af2107b0",
+          "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+          "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+          "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+          "contract_sha256": "f36f5990f978eeb2448ba05f836585c88bb0339186bf2703cae7c4b5c3b35b65",
+          "execution_id": "f12658e44d4e4a98b0d89765c8f49c95",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/all_native_attempts_including_failures/3"
+          }
+        },
+        {
+          "mode": "ledger",
+          "result_sha256": "ef913743a7b9db0e64823674456a19dc877341cf69609a969e7debd5a9549e90",
+          "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+          "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+          "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+          "contract_sha256": "cad737e356db187e5d2c0e3e7b5a0f3e7897c63afb4a0bf57c7ed97d2f501d6d",
+          "execution_id": "750f427676614edc937371b84947c3f3",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/controls/3"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/protocol-cases/batch2-verification.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "Recorded candidate guarded ledger/preflight/live controls; failures retained",
+        "numerical": "One fixed live point/scoped scan plus saved ledgers; P07 ledger only",
+        "science": "Original protocol operational comparison only; no arbitrary user conditional Compute or full scientific recertification"
+      }
+    },
+    {
+      "id": "P07",
+      "name": "同 Hamiltonian 路径闭合账本",
+      "status": "AVAILABLE_FIXED_PROTOCOL",
+      "scope": "Frozen same-Hamiltonian ledger only; no live mode",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "case_config": "configs/protocol-cases-v1.json",
+        "case": "P07",
+        "modes": [
+          "ledger",
+          "preflight"
+        ]
+      },
+      "profile": "protocol-cases-v1",
+      "protocol": "runtime-p07-bounded/0.1",
+      "source": {
+        "source_lock": "locks/protocol-cases-source.json",
+        "source_protocol_context_id": "p07-same-hamiltonian-path-audit/0.2",
+        "authority": "PER_FILE_CAPTURED_BYTES_AND_CONTEXT_IDENTITIES; includes frozen upstream and disclosed original worktree drivers; not all files are baseline commit"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "mode": "ledger",
+          "result_sha256": "820a8c0bb68c65267287f691453175eaff42e18dd549db0690f7af42d66bd533",
+          "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+          "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+          "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+          "contract_sha256": "58100a30878ecca90ee5a11b01777fa84df054010319bef2fd9443b3600e96f6",
+          "execution_id": "8b90daa1054d43c3b5ea371091c5414a",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/controls/4"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/protocol-cases/batch2-verification.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "Recorded candidate guarded ledger/preflight/live controls; failures retained",
+        "numerical": "One fixed live point/scoped scan plus saved ledgers; P07 ledger only",
+        "science": "Original protocol operational comparison only; no arbitrary user conditional Compute or full scientific recertification"
+      }
+    },
+    {
+      "id": "P08",
+      "name": "丁二烯 GL 固定端点与参照热化学",
+      "status": "AVAILABLE_FIXED_PROTOCOL",
+      "scope": "Fixed butadiene GL endpoint; same implementation initial-density comparison, no new optimization or full P08 replay",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "case_config": "configs/protocol-cases-v1.json",
+        "case": "P08",
+        "modes": [
+          "ledger",
+          "preflight",
+          "live"
+        ]
+      },
+      "profile": "protocol-cases-v1",
+      "protocol": "runtime-p08-bounded/0.1",
+      "source": {
+        "source_lock": "locks/protocol-cases-source.json",
+        "source_protocol_context_id": "p08-butadiene-gl2014-independent/0.1",
+        "authority": "PER_FILE_CAPTURED_BYTES_AND_CONTEXT_IDENTITIES; includes frozen upstream and disclosed original worktree drivers; not all files are baseline commit"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "mode": "live",
+          "result_sha256": "e3331a9e6568876c9424111bc9a3b4f45e9c524a6354a5036f3d885aded14595",
+          "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+          "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+          "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+          "contract_sha256": "14b44166d391f03a29ae3e1d9791b738d22bbdc4a2911ccbcad6d94371dfa4c1",
+          "execution_id": "762767c22da744d781278324b33b6a98",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/all_native_attempts_including_failures/4"
+          }
+        },
+        {
+          "mode": "ledger",
+          "result_sha256": "d5318429d4961b037cae27537b60b4eb641479b3d5bcc9391ed126fa21ccccfa",
+          "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+          "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+          "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+          "contract_sha256": "af0e4dc89baeedc76f8d4d167b5fca5b96a18cf5adc00f7db2302fe47c7a9adc",
+          "execution_id": "e7b10827f6044b35b68c10e851039e3a",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/controls/5"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/protocol-cases/batch2-verification.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "Recorded candidate guarded ledger/preflight/live controls; failures retained",
+        "numerical": "One fixed live point/scoped scan plus saved ledgers; P07 ledger only",
+        "science": "Original protocol operational comparison only; no arbitrary user conditional Compute or full scientific recertification"
+      }
+    },
+    {
+      "id": "P09",
+      "name": "环丁二烯固定几何条件态诊断",
+      "status": "AVAILABLE_FIXED_PROTOCOL",
+      "scope": "FIXED_GEOMETRY_CBD_G_LIKE_DSI_SMOKE_ONLY",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "case_config": "configs/protocol-cases-v1.json",
+        "case": "P09",
+        "modes": [
+          "ledger",
+          "preflight",
+          "live"
+        ]
+      },
+      "profile": "protocol-cases-v1",
+      "protocol": "runtime-p09-bounded/0.1",
+      "source": {
+        "source_lock": "locks/protocol-cases-source.json",
+        "source_protocol_context_id": "p09-benzene-cyclobutadiene-aromatic-energy/0.1",
+        "authority": "PER_FILE_CAPTURED_BYTES_AND_CONTEXT_IDENTITIES; includes frozen upstream and disclosed original worktree drivers; not all files are baseline commit"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "mode": "live",
+          "result_sha256": "70f50dfc4f1f3202774d8f737703c1d426d8d42281769809df88d70680bef950",
+          "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+          "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+          "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+          "contract_sha256": "c1ed15848e79a78938a47a429d5325adc2268da9851f8f833eb535a07bab9468",
+          "execution_id": "9b7a82eb9c584a6da354b3ffa862b092",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/all_native_attempts_including_failures/5"
+          }
+        },
+        {
+          "mode": "ledger",
+          "result_sha256": "f6d53dc2d776c5ef4fea2f952b752b83de9fdb5c21e2ce9a4033be4f992939d0",
+          "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+          "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+          "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+          "contract_sha256": "9486bef3a8ce48b83905ac2edcd8d62fa7b89eac51d1a1227866d7750e06805c",
+          "execution_id": "f38a8e048bcc493994ce6251e8067e76",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/controls/6"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/protocol-cases/batch2-verification.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "Recorded candidate guarded ledger/preflight/live controls; failures retained",
+        "numerical": "One fixed live point/scoped scan plus saved ledgers; P07 ledger only",
+        "science": "Original protocol operational comparison only; no arbitrary user conditional Compute or full scientific recertification"
+      }
+    },
+    {
+      "id": "P10",
+      "name": "苯核排斥与五点普通 DFT 扫描",
+      "status": "AVAILABLE_FIXED_PROTOCOL",
+      "scope": "FIVE_FROZEN_ORDINARY_RKS_BLA_POINTS_PLUS_REUSED_G_GL_LEDGER",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "case_config": "configs/protocol-cases-v1.json",
+        "case": "P10",
+        "modes": [
+          "ledger",
+          "preflight",
+          "live"
+        ]
+      },
+      "profile": "protocol-cases-v1",
+      "protocol": "runtime-p10-bounded/0.1",
+      "source": {
+        "source_lock": "locks/protocol-cases-source.json",
+        "source_protocol_context_id": "p10-benzene-nuclear-repulsion/0.1",
+        "authority": "PER_FILE_CAPTURED_BYTES_AND_CONTEXT_IDENTITIES; includes frozen upstream and disclosed original worktree drivers; not all files are baseline commit"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "mode": "live",
+          "result_sha256": "cccb100d1f5700a7766936805014edcffb44321c8056b7c42ad66cbd9f431bde",
+          "image_id": "sha256:e20591dd7ba3b50f4bd68fcbeaec51b415923da747711bb0f5675bb6df427dd9",
+          "image_build_runtime_commit": "647c7c5a42aa2acd98be388cd77aa1824243351c",
+          "source_lock_sha256": "44c42c92c7b862b5de185a1dc2c3428522e0b5c43042f99530432a261fd5e3f3",
+          "contract_sha256": "25db1371668d3754a1435ecdf4a6f9c059671deae0e1766b1ea1a4b335250005",
+          "execution_id": "961b3aefb0884811b83fc88f36b31b73",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/all_native_attempts_including_failures/6"
+          }
+        },
+        {
+          "mode": "ledger",
+          "result_sha256": "d1d85ef7f0afff7f8fcfc8e4e171fe4d26894e14ee147732164cc32976643884",
+          "image_id": "sha256:9482bf47bd504c816a8978a5686bc581dba9a06b2bd6c0c9a98b86d801471440",
+          "image_build_runtime_commit": "38cc11b02a978c03c3e2d69a41fc8a0d9886cc6e",
+          "source_lock_sha256": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+          "contract_sha256": "7bc661adb267c3c4ad045e03bb4fa578d316607001844ede6005da94bead5c52",
+          "execution_id": "c4daca40d34c4ce09a7f9b923bf8ddd9",
+          "record": {
+            "path": "validation/protocol-cases/batch2-verification.json",
+            "pointer": "/controls/7"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/protocol-cases/batch2-verification.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "Recorded candidate guarded ledger/preflight/live controls; failures retained",
+        "numerical": "One fixed live point/scoped scan plus saved ledgers; P07 ledger only",
+        "science": "Original protocol operational comparison only; no arbitrary user conditional Compute or full scientific recertification"
+      }
+    },
+    {
+      "id": "P11",
+      "name": "P11 固定多态几何优化",
+      "status": "PARTIAL_SINGLE_STATE_ACCEPTANCE",
+      "scope": "17 registered states; only P11B-benzene-G accepted; remaining states NOT_EXECUTED; no complete multistate assembly",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "case_config": "configs/high-cost-cases-v1.json",
+        "modes": [
+          "ledger",
+          "preflight",
+          "live"
+        ],
+        "live_one_unit": true
+      },
+      "profile": "high-cost-cases-v1",
+      "protocol": "See per-unit method_id/operator_id/source_protocol_id in configs/high-cost-cases-v1.json",
+      "source": {
+        "source_lock": "locks/high-cost-source.json",
+        "host_launcher_lock": "locks/high-cost-host-launcher.json",
+        "authority": "107 captured worker files; HOST_FINAL_EVIDENCE_ONLY patch is separate from unchanged scientific worker"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "05308a1872d769aaa85e39adbafe7020e36358e6",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "unit": "P11B-benzene-G",
+          "execution_id": "130390e0008e44d5b1105c7341fb516d",
+          "image_id": "sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc",
+          "image_build_runtime_commit": "05308a1872d769aaa85e39adbafe7020e36358e6",
+          "source_lock_sha256": "d8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322",
+          "status": "PASS_SCOPED_SINGLE_STATE_SCIENTIFIC_GATES_SUPPLEMENTED_HOST_EVIDENCE",
+          "record": {
+            "path": "validation/high-cost-cases/deployment-verification.json",
+            "pointer": "/p11_benzene_g_pilot"
+          },
+          "supplemental_manifest_sha256": "e8043ad367261c390f29ed2ad8a26bd297a2bc6a0d3ab7eece79823b4a713b47",
+          "host_evidence_note": "Original host manifest failed; saved supplemental evidence retained, not rewritten"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/high-cost-cases/deployment-verification.json",
+          "pointer": ""
+        },
+        {
+          "path": "validation/high-cost-cases/p12-n12-g-pilot-verification.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "Registered 78 units and per-unit resource/dependency contracts; current host patch distinct from worker build",
+        "numerical": "One single-state source gate per P11/P12; independent AO/component audit coverage incomplete",
+        "science": "No full P11/P12 acceptance, ESE/CE/IE/CESE assembly or stability/minimum proof"
+      }
+    },
+    {
+      "id": "P12",
+      "name": "P12 固定多态几何优化",
+      "status": "PARTIAL_SINGLE_STATE_ACCEPTANCE",
+      "scope": "61 registered states; only P12-N12-G accepted; remaining states NOT_EXECUTED; no complete multistate assembly",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "case_config": "configs/high-cost-cases-v1.json",
+        "modes": [
+          "ledger",
+          "preflight",
+          "live"
+        ],
+        "live_one_unit": true
+      },
+      "profile": "high-cost-cases-v1",
+      "protocol": "See per-unit method_id/operator_id/source_protocol_id in configs/high-cost-cases-v1.json",
+      "source": {
+        "source_lock": "locks/high-cost-source.json",
+        "host_launcher_lock": "locks/high-cost-host-launcher.json",
+        "authority": "107 captured worker files; HOST_FINAL_EVIDENCE_ONLY patch is separate from unchanged scientific worker"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "05308a1872d769aaa85e39adbafe7020e36358e6",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "unit": "P12-N12-G",
+          "execution_id": "a12ac23760ff48088c00133bd7fc2e2e",
+          "image_id": "sha256:18dcd1da2e634cf6ab8d49a7281ca853c0a393e140ac95c6ec00448a3fc934bc",
+          "image_build_runtime_commit": "05308a1872d769aaa85e39adbafe7020e36358e6",
+          "source_lock_sha256": "d8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322",
+          "status": "PASS_SCOPED_P12_N12_G_SAVED_EVIDENCE",
+          "record": {
+            "path": "validation/high-cost-cases/deployment-verification.json",
+            "pointer": "/p12_n12_g_pilot"
+          },
+          "host_launcher_commit": "03d2d9212d1280945462851e805d6d64218215a0",
+          "host_manifest_sha256": "a126f66ddf716c1bc835425198cb8305915bf5de7cf6c8f794c0b9254cbd4e62"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/high-cost-cases/deployment-verification.json",
+          "pointer": ""
+        },
+        {
+          "path": "validation/high-cost-cases/p12-n12-g-pilot-verification.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "Registered 78 units and per-unit resource/dependency contracts; current host patch distinct from worker build",
+        "numerical": "One single-state source gate per P11/P12; independent AO/component audit coverage incomplete",
+        "science": "No full P11/P12 acceptance, ESE/CE/IE/CESE assembly or stability/minimum proof"
+      }
+    },
+    {
+      "id": "p14-fixed-tasks",
+      "name": "P14 固定条件态、结构响应与联合分类",
+      "status": "HISTORICAL_LOCAL_DOCKER_ACCEPTANCE",
+      "scope": "Seven legacy tasks; fixed C12H6 source-proxy / D3h five-parameter protocol; checkpoints cannot resume",
+      "execution_enabled": true,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "tasks": [
+          "evidence",
+          "core-tests",
+          "p14-smoke",
+          "p14-equivalence",
+          "p14-fixed",
+          "p14-optimize",
+          "p14-classify"
+        ]
+      },
+      "profile": "Frozen P14 resource contracts",
+      "protocol": "p14-strained-aromatic-pi-distortivity/0.1",
+      "source": {
+        "baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "baseline_files": 588,
+        "baseline_lock": "locks/source-files.sha256.json",
+        "adapter_context_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+        "adapter_files": 3,
+        "adapter_materials": "assets/science-install-overlay/cc743790",
+        "installation_lock": "locks/source.installation.lock.json",
+        "authority": "FROZEN_BASELINE_AND_CAPTURED_ADAPTER_BYTES; upstream main is not a replacement"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true
+      },
+      "image": {
+        "historical_image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [
+        {
+          "task": "evidence",
+          "run_id": "20261002T111546Z-evidence-eb8faa387218",
+          "manifest_sha256": "773027593a0dd4c77365c69beb2e6e449fdc511934ed8f26d51e240b45927fac",
+          "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+          "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+          "record": {
+            "path": "validation/oci-summary.json",
+            "pointer": "/runs/0"
+          }
+        },
+        {
+          "task": "core-tests",
+          "run_id": "20261002T111548Z-core-tests-1651766c39cd",
+          "manifest_sha256": "9c69ff76b99e974d4797729e0cef28d25d0f4a63322cd82a3d43ba35ecc6acb2",
+          "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+          "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+          "record": {
+            "path": "validation/oci-summary.json",
+            "pointer": "/runs/1"
+          }
+        },
+        {
+          "task": "p14-smoke",
+          "run_id": "20261002T111549Z-p14-smoke-611ad4389dee",
+          "manifest_sha256": "5eae98643cfe4e7ddee612c53be1e5006ef5d1532bbca0e488aa98fd72f883a9",
+          "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+          "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+          "record": {
+            "path": "validation/oci-summary.json",
+            "pointer": "/runs/2"
+          }
+        },
+        {
+          "task": "p14-equivalence",
+          "run_id": "20261002T111600Z-p14-equivalence-a83e2e3a8f2f",
+          "manifest_sha256": "be87f5d1a2288f4adbee826966ca1062fedee3d83c1bcf330fa5c383c5e1c212",
+          "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+          "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+          "record": {
+            "path": "validation/oci-summary.json",
+            "pointer": "/runs/3"
+          }
+        },
+        {
+          "task": "p14-fixed",
+          "run_id": "20261002T123033Z-p14-fixed-d621c0cfab97",
+          "manifest_sha256": "26aaa26fe14a890305e2bff86dfedb300b48ef2334b6a1bb8679581f35e5c480",
+          "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+          "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+          "record": {
+            "path": "validation/l3-summary.json",
+            "pointer": ""
+          }
+        },
+        {
+          "task": "p14-optimize",
+          "run_id": "20261002T123346Z-p14-optimize-d7f348003891",
+          "manifest_sha256": "2d71c30e807efd42e1942a56d14fe4b400dd1969485bd6b0ea1402d9a6ba9ed6",
+          "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+          "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+          "record": {
+            "path": "validation/l4-summary.json",
+            "pointer": ""
+          }
+        },
+        {
+          "task": "p14-classify",
+          "run_id": "20261002T144015Z-p14-classify-675fab20a66f",
+          "manifest_sha256": "cdccd93ccc2f59d9478b1bac4b78a65b1db0115ee24ed20a34f6993ff7f48b2a",
+          "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+          "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+          "record": {
+            "path": "validation/classification-summary.json",
+            "pointer": ""
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/PROFESSIONAL_SERVICES_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/oci-summary.json",
+          "pointer": ""
+        },
+        {
+          "path": "validation/final-delivery-status.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "Historical Docker seven-task evidence; WSLc paused",
+        "numerical": "Recorded P14 gates and classification scoped to actual runs; L3/L4 strict offline NOT_EXECUTED",
+        "science": "Source-proxy protocol replay; no universal physical bond energy claim or full-coordinate minimum proof"
+      }
+    },
+    {
+      "id": "user-compute",
+      "name": "用户分子条件态 Compute",
+      "status": "BLOCKED",
+      "scope": "V2 implemented and diagnosed; no qualified final endpoint; original gap/mapping/commutator gates unchanged",
+      "execution_enabled": false,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": true,
+        "schema": "schemas/user-molecule-request-v1.json",
+        "scope": "Restricted conditional protocol; production Compute closed"
+      },
+      "profile": "user-molecule conditional V2",
+      "protocol": "USER_MOLECULE_NEAR_DEGENERACY_RULES_V2",
+      "source": {
+        "baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "baseline_files": 588,
+        "baseline_lock": "locks/source-files.sha256.json",
+        "adapter_context_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+        "adapter_files": 3,
+        "adapter_materials": "assets/science-install-overlay/cc743790",
+        "installation_lock": "locks/source.installation.lock.json",
+        "authority": "FROZEN_BASELINE_AND_CAPTURED_ADAPTER_BYTES; upstream main is not a replacement"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true,
+        "diagnostic_host_execution_commit": "73e8dfd8aef4881dec6b8cd30b21b2228f8b51ab",
+        "stop_engineering_tested_commit": "6eb356a0ebaa647bdf4aa6ea4b0f90cf69fc07f6"
+      },
+      "image": {
+        "historical_image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [],
+      "evidence": [
+        {
+          "path": "docs/USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/user-molecule/root-native-diagnostic-20261007.json",
+          "pointer": ""
+        },
+        {
+          "path": "validation/user-molecule/native-shutdown-engineering-20261007.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "V2, real-response/root diagnostic and separate zero-native stop engineering implemented",
+        "numerical": "No qualified root; real native attempt ended incomplete at wall stop",
+        "science": "Diagnostic evidence only; no approved research energy endpoint; external consultation cancelled, no consultation gate"
+      }
+    },
+    {
+      "id": "root-native-diagnostic",
+      "name": "条件态研究诊断与合作停止工程",
+      "status": "EXECUTED_INCOMPLETE_NO_FORMAL_ENDPOINT",
+      "scope": "Real root attempt: 139 completed NR / 138 callback success plus deadline failure; no returned root or formal tail/closure",
+      "execution_enabled": false,
+      "execution_enabled_scope": "REGISTERED_SERVICE_ONLY; current input/image/source/resource/budget admission still required",
+      "input": {
+        "user_xyz": false,
+        "scope": "Fixed ethene diagnostic only"
+      },
+      "profile": "Recorded single-start root contract",
+      "protocol": "occupied-space-root diagnostic",
+      "source": {
+        "baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "baseline_files": 588,
+        "baseline_lock": "locks/source-files.sha256.json",
+        "adapter_context_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+        "adapter_files": 3,
+        "adapter_materials": "assets/science-install-overlay/cc743790",
+        "installation_lock": "locks/source.installation.lock.json",
+        "authority": "FROZEN_BASELINE_AND_CAPTURED_ADAPTER_BYTES; upstream main is not a replacement"
+      },
+      "build": {
+        "historical_image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+        "current_host_launcher_commit": "CURRENT_WORKTREE_SEPARATE_FROM_HISTORICAL_BUILD",
+        "historical_acceptance_does_not_certify_current_code": true,
+        "diagnostic_host_execution_commit": "73e8dfd8aef4881dec6b8cd30b21b2228f8b51ab",
+        "stop_engineering_tested_commit": "6eb356a0ebaa647bdf4aa6ea4b0f90cf69fc07f6"
+      },
+      "image": {
+        "historical_image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+        "public_registry_digest": null,
+        "new_installation_requires_own_registration": true
+      },
+      "accepted_runs": [],
+      "evidence": [
+        {
+          "path": "docs/USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/user-molecule/root-native-diagnostic-20261007.json",
+          "pointer": ""
+        },
+        {
+          "path": "docs/USER_MOLECULE_NATIVE_SHUTDOWN_ENGINEERING_20261007_zh-CN.md",
+          "pointer": ""
+        },
+        {
+          "path": "validation/user-molecule/native-shutdown-engineering-20261007.json",
+          "pointer": ""
+        }
+      ],
+      "qualification": {
+        "engineering": "Real-root engineering and 154 scoped stop regressions separate; historical zero-F preparation retained",
+        "numerical": "No formal qualified endpoint; zero-native stop checks do not grant numerical qualification",
+        "science": "Failure does not prove qualified roots absent and does not refute P01-P14"
+      }
+    }
+  ]
+}

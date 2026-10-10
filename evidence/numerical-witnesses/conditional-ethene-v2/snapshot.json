@@ -1,0 +1,252 @@
+{
+  "schema": "conditional-rejected-endpoint-witness-v1",
+  "derivation": "SELECTED_FIELDS_AND_ARRAY_MEMBERS_FROM_FROZEN_ORIGINALS_NOT_AN_ORIGINAL_RESULT",
+  "method": {
+    "basis": "sto-3g",
+    "xc": "B3LYPG",
+    "grid_level_at_original_execution": 2,
+    "condition": "cross-fragment-pi-2011-v1"
+  },
+  "expected_electrons": 16,
+  "exact_exchange_fraction": 0.2,
+  "returned_density_binding": {
+    "solver_final_density_id": "2884d1bcee333850aa3ae1242ef7b709bd76a5dabfb6925a1dd90012ecfcfd81",
+    "returned_density_id": "2884d1bcee333850aa3ae1242ef7b709bd76a5dabfb6925a1dd90012ecfcfd81",
+    "requested_density_id": "2884d1bcee333850aa3ae1242ef7b709bd76a5dabfb6925a1dd90012ecfcfd81",
+    "value_density_id": "2884d1bcee333850aa3ae1242ef7b709bd76a5dabfb6925a1dd90012ecfcfd81",
+    "identity_method": "SHA256(domain AI4OrgChem-density-v1 + NUL + little-endian uint64 shape + little-endian binary64 C bytes)",
+    "result_density_member_sha256": "fb3f74ad69df5d70518cdfc0dcdb7ac02c060830b04bada085361f8da6fc8c5e",
+    "evaluation_requested_density_member_sha256": "fb3f74ad69df5d70518cdfc0dcdb7ac02c060830b04bada085361f8da6fc8c5e"
+  },
+  "operator_source": "TRUE_CONDITIONAL_AT_REQUESTED_DENSITY",
+  "energy_ledger": {
+    "one_electron_energy": -169.3114638904413,
+    "coulomb_energy": 70.99349788994229,
+    "exact_exchange_energy": -2.350232059144289,
+    "semilocal_xc_energy": -10.174126913449646,
+    "electronic_energy": -110.84232497309294,
+    "total_energy": -77.60960002409465,
+    "nuclear_repulsion": 33.23272494899829
+  },
+  "electron_counts": {
+    "masked_metric": 15.999999999999977,
+    "physical_metric": 16.47453645981215,
+    "grid": 16.47453733917221,
+    "grid_role": "SAVED_SCALAR_NOT_REINTEGRATED_NO_GRID_PAYLOAD"
+  },
+  "saved_endpoint_gate": {
+    "qualified": false,
+    "checks": {
+      "finite": true,
+      "overlap_positive": true,
+      "commutator": true,
+      "electron_count": true,
+      "idempotency": true,
+      "energy_closure": true,
+      "overlap_mask": true,
+      "fock_mask": true,
+      "mapped_density": false,
+      "raw_gap": false
+    },
+    "reasons": [
+      "MAPPED_DENSITY_FAILED",
+      "RAW_GAP_FAILED",
+      "ROOT_AMBIGUOUS"
+    ],
+    "operator_source": "RECOMPUTED_AT_RETURNED_DENSITY_NO_DIIS",
+    "thresholds": {
+      "commutator_frobenius": 1e-05,
+      "electron_count_abs": 1e-07,
+      "idempotency_relative": 1e-07,
+      "energy_closure_hartree": 1e-09,
+      "mask_max_abs": 1e-12,
+      "mapped_density_relative": 2e-08,
+      "final_non_diis_gap_minimum_hartree": 1e-06
+    },
+    "final_commutator_frobenius_norm": 1.8890195723410966e-09,
+    "masked_metric_electron_count": 15.999999999999977,
+    "closed_shell_idempotency_relative_residual": 4.477632515303005e-15,
+    "energy_component_closure_residual_hartree": 1.4210854715202004e-14,
+    "mapped_density_relative_residual": 0.42980285975005655,
+    "final_non_diis_gap_hartree": 2.67841304690819e-15,
+    "raw_map_absolute_frobenius": 1.9890267467484586,
+    "returned_density_energy_recheck_hartree": 0.0
+  },
+  "comparison_available": false,
+  "production_activation": false,
+  "research_acceptance": "NOT_ACCEPTED",
+  "stability_status": "NOT_EXECUTED",
+  "variational_status": "NOT_ESTABLISHED",
+  "stop_reason": "INSUFFICIENT_BUDGET_FOR_JACOBIAN_TRIAL_AND_FINAL_RECHECK",
+  "arrays": {
+    "density": {
+      "npz_member": "density",
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "sha256": "fb3f74ad69df5d70518cdfc0dcdb7ac02c060830b04bada085361f8da6fc8c5e",
+      "source": {
+        "source_file": "live-a1/output/production_copy/result.npz",
+        "source_record_path": "root.solver_result.density",
+        "source_npz_member": "array_0",
+        "original_member_sha256": "fb3f74ad69df5d70518cdfc0dcdb7ac02c060830b04bada085361f8da6fc8c5e"
+      }
+    },
+    "overlap_masked": {
+      "npz_member": "overlap_masked",
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "sha256": "b8b3f020e5ee76c663283aa3dc105d4e0b1e37edad07787515f5712fe85f68dd",
+      "source": {
+        "source_file": "live-a1/output/production_copy/evaluations.npz",
+        "source_record_path": "root.masked_overlap",
+        "source_npz_member": "array_19",
+        "original_member_sha256": "b8b3f020e5ee76c663283aa3dc105d4e0b1e37edad07787515f5712fe85f68dd"
+      }
+    },
+    "hcore_masked": {
+      "npz_member": "hcore_masked",
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "sha256": "c0ecf09a9a648f8f78cb983a4014db4db5d062388793a2434717e55063e8f720",
+      "source": {
+        "source_file": "live-a1/output/production_copy/evaluations.npz",
+        "source_record_path": "root.masked_hcore",
+        "source_npz_member": "array_20",
+        "original_member_sha256": "c0ecf09a9a648f8f78cb983a4014db4db5d062388793a2434717e55063e8f720"
+      }
+    },
+    "matrix_delete_mask": {
+      "npz_member": "matrix_delete_mask",
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "|b1",
+      "sha256": "2321aaac100093272651fe9a8092086c879819199793f5a22a2a1bd23f6a94ca",
+      "source": {
+        "source_file": "live-a1/output/production_copy/evaluations.npz",
+        "source_record_path": "root.matrix_mask",
+        "source_npz_member": "array_22",
+        "original_member_sha256": "2321aaac100093272651fe9a8092086c879819199793f5a22a2a1bd23f6a94ca"
+      }
+    },
+    "fock_masked": {
+      "npz_member": "fock_masked",
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "sha256": "0ab3fdaaddc622384ab24716f1427b77a921a9e7f28f003afe88c0d5b2f54ec3",
+      "source": {
+        "source_file": "live-a1/output/production_copy/evaluations.npz",
+        "source_record_path": "root.true_evaluation_at_returned_density.value.fock",
+        "source_npz_member": "array_8",
+        "original_member_sha256": "0ab3fdaaddc622384ab24716f1427b77a921a9e7f28f003afe88c0d5b2f54ec3"
+      }
+    },
+    "raw_fock": {
+      "npz_member": "raw_fock",
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "sha256": "1dc034cb7ad0c1aa56b25d1c5e696f943927a13f877b1006193b5237c21dd70e",
+      "source": {
+        "source_file": "live-a1/output/production_copy/evaluations.npz",
+        "source_record_path": "root.true_evaluation_at_returned_density.value.raw_fock",
+        "source_npz_member": "array_9",
+        "original_member_sha256": "1dc034cb7ad0c1aa56b25d1c5e696f943927a13f877b1006193b5237c21dd70e"
+      }
+    },
+    "coulomb": {
+      "npz_member": "coulomb",
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "sha256": "c2e3007d60b2699352b296f0b25e6fef3f763dc18f24b75f11530741e741d46d",
+      "source": {
+        "source_file": "live-a1/output/production_copy/evaluations.npz",
+        "source_record_path": "root.true_evaluation_at_returned_density.value.coulomb_matrix",
+        "source_npz_member": "array_10",
+        "original_member_sha256": "c2e3007d60b2699352b296f0b25e6fef3f763dc18f24b75f11530741e741d46d"
+      }
+    },
+    "exchange": {
+      "npz_member": "exchange",
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "sha256": "cfd90bc4be0cb9cf07209aa931cb80d2c7c0a14f255d3ded2f0b10ab24447b24",
+      "source": {
+        "source_file": "live-a1/output/production_copy/evaluations.npz",
+        "source_record_path": "root.true_evaluation_at_returned_density.value.exchange_matrix",
+        "source_npz_member": "array_11",
+        "original_member_sha256": "cfd90bc4be0cb9cf07209aa931cb80d2c7c0a14f255d3ded2f0b10ab24447b24"
+      }
+    },
+    "xc_potential": {
+      "npz_member": "xc_potential",
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "sha256": "b371129428d7d01b97867267283f80c595468aa135daf5e482a530a909d9f680",
+      "source": {
+        "source_file": "live-a1/output/production_copy/evaluations.npz",
+        "source_record_path": "root.true_evaluation_at_returned_density.value.xc_potential",
+        "source_npz_member": "array_12",
+        "original_member_sha256": "b371129428d7d01b97867267283f80c595468aa135daf5e482a530a909d9f680"
+      }
+    },
+    "overlap_physical": {
+      "npz_member": "overlap_physical",
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "sha256": "957372152a6fab1b90f084598f010f73aa8c09ce5ec3a1c383c6195a23732d78",
+      "source": {
+        "source_file": "20261005-user-molecule-solver-v2/numerical-a1/pilot-ethene/ordinary-reference.npz",
+        "source_npz_member": "overlap",
+        "original_member_sha256": "957372152a6fab1b90f084598f010f73aa8c09ce5ec3a1c383c6195a23732d78"
+      }
+    },
+    "hcore_physical": {
+      "npz_member": "hcore_physical",
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "sha256": "b626383143be0295b58aee4d7f553398f0df0cb54af8541e0795056525faaa1a",
+      "source": {
+        "source_file": "20261005-user-molecule-solver-v2/numerical-a1/pilot-ethene/ordinary-reference.npz",
+        "source_npz_member": "hcore",
+        "original_member_sha256": "b626383143be0295b58aee4d7f553398f0df0cb54af8541e0795056525faaa1a"
+      }
+    }
+  },
+  "missing_or_not_recomputed": [
+    "Semilocal XC energy/grid count saved scalars; no reintegration",
+    "ERI contractions not repeated; saved J/K retained",
+    "Original SciPy generalized eigenvectors/mapped density not retained; NumPy mapping is a distinct diagnostic",
+    "No root search, new F(D), wavefunction stability or physical bond-energy claim"
+  ]
+}

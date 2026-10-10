@@ -19,18 +19,18 @@ identity = runner.identity
 
 def record_fixture(service="molecular-service"):
     spec = identity.SERVICES[service]
-    binding = {"kind": "FROZEN_SOURCE_CATALOG", "baseline_sha256": spec["source_sha"],
-               "source_sha256": spec["source_sha"], "file_count": 20, "host_overrides": {}}
-    if service == "high-cost-cases":
-        binding.update(kind="EXACT_TWO_HOST_PATH_REBIND", file_count=107, unchanged_rows=105,
-                       host_overrides={name: {**row, "size": 100} for name, row in identity.HIGH_COST_HOST_OVERRIDES.items()})
+    reviewed = identity.source_bindings.CATALOGS[service]
+    binding = {"kind": identity.source_bindings.KIND, "baseline_sha256": spec["source_sha"],
+               "source_sha256": "7"*64, "file_count": reviewed['count'],
+               "unchanged_rows": reviewed['count']-len(reviewed['overrides']),
+               "host_overrides": {name: {**row, "size": 100} for name, row in reviewed['overrides'].items()}}
     return {"schema": identity.SCHEMA, "backend": "docker", "service": service,
             "tasks": list(spec["tasks"]), "modes": list(spec["modes"]), "platform": "linux/amd64",
             "status": "ENGINEERING_VALIDATED", "scientific_acceptance": "UNKNOWN",
             "capabilities": identity.capabilities(service), "image_id": "sha256:" + "1" * 64,
             "base_image_id": "sha256:" + "2" * 64, "dependency_lock_base_image_id": "sha256:" + "3" * 64,
             "local_tag": "ai4orgchem-runtime:installation-test", "image_build_runtime_commit": "4" * 40,
-            "source_snapshot_sha256": spec["source_sha"], "dependency_lock_sha256": spec["dependency_sha"],
+            "source_snapshot_sha256": binding['source_sha256'], "dependency_lock_sha256": spec["dependency_sha"],
             "profile_sha256": spec["profile_sha"], "host_files": {name: "5" * 64 for name in identity.HOST_FILES},
             "evidence": {name: "6" * 64 for name in identity.EVIDENCE_FILES},
             "source_catalog_binding": binding, "registered_utc": "2026-10-09T00:00:00+00:00"}
@@ -76,33 +76,33 @@ class InstallationIdentityTests(unittest.TestCase):
             record = record_fixture(family)
             record["source_snapshot_sha256"] = "a" * 64
             record["source_catalog_binding"]["source_sha256"] = "a" * 64
+            record["source_catalog_binding"]["host_overrides"][spec_name := next(iter(record['source_catalog_binding']['host_overrides']))]['sha256'] = 'b'*64
             with self.assertRaises(ValueError):
                 identity.validate_record(record)
 
-    def test_high_cost_cannot_add_a_third_host_or_scientific_override(self):
+    def test_high_cost_cannot_add_an_unreviewed_host_or_scientific_override(self):
         record = record_fixture("high-cost-cases")
         record["source_catalog_binding"]["host_overrides"]["runtime/high_cost_cases/p12.py"] = {"base_sha256": "a" * 64, "sha256": "b" * 64, "size": 10}
         with self.assertRaises(ValueError):
             identity.validate_record(record)
 
-    def test_high_cost_new_catalog_keeps_all_105_other_rows(self):
+    def test_high_cost_new_catalog_keeps_all_104_other_rows(self):
         original_path = ROOT / "locks/high-cost-source.json"
         original = identity.read_json(original_path)
         with tempfile.TemporaryDirectory() as directory:
             context = Path(directory)
             (context / "locks").mkdir()
             (context / identity.HIGH_COST_BASELINE).write_bytes(original_path.read_bytes())
-            catalog = deepcopy(original)
+            raw, catalog, expected_binding = identity.source_bindings.derive('high-cost-cases', original_path.read_bytes(), lambda name: (ROOT/name).read_bytes())
             for row in catalog["files"]:
                 target = context / row["path"]
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(ROOT / row["path"], target)
-                if row["path"] in identity.HIGH_COST_HOST_OVERRIDES:
-                    row.update(sha256=identity.digest(target), size=target.stat().st_size)
-            identity.save_new(context / "locks/high-cost-source.json", catalog)
+            (context / "locks/high-cost-source.json").write_bytes(raw)
             with patch.object(identity, "ROOT", context):
-                source, binding = identity.high_cost_source_binding()
-                self.assertEqual(binding["unchanged_rows"], 105)
+                source, binding = identity.source_bindings.bind(context, 'high-cost-cases')
+                self.assertEqual(binding["unchanged_rows"], 104)
+                self.assertEqual(binding, expected_binding)
                 self.assertEqual(source, catalog)
                 # Even an internally self-consistent updated catalog cannot alter science.
                 row = next(row for row in catalog["files"] if row["path"] == "runtime/high_cost_cases/p12.py")
@@ -111,17 +111,33 @@ class InstallationIdentityTests(unittest.TestCase):
                 row.update(sha256=identity.digest(target), size=target.stat().st_size)
                 (context / "locks/high-cost-source.json").write_text(json.dumps(catalog), encoding="utf-8")
                 with self.assertRaises(ValueError):
-                    identity.high_cost_source_binding()
+                    identity.source_bindings.bind(context, 'high-cost-cases')
         record = record_fixture("high-cost-cases")
         record["source_catalog_binding"]["host_overrides"]["scripts/run-high-cost-case.py"]["sha256"] = "a" * 64
         with self.assertRaises(ValueError):
             identity.validate_record(record)
 
-    def test_frozen_service_host_bytes_are_currently_intact(self):
+    def test_new_host_bytes_require_a_new_independently_registered_context(self):
         for family in ("molecular-service", "registered-cases", "protocol-cases"):
-            expected = identity.expected_host_identity(family)
-            self.assertEqual(expected["source_snapshot_sha256"], identity.SERVICES[family]["source_sha"])
-            self.assertGreater(len(expected["inventory"]["files"]), 1)
+            with self.assertRaises(ValueError):
+                identity.expected_host_identity(family)
+            spec = identity.SERVICES[family]
+            baseline = (ROOT/spec['source']).read_bytes()
+            raw, catalog, binding = identity.source_bindings.derive(family, baseline, lambda name: (ROOT/name).read_bytes())
+            with tempfile.TemporaryDirectory() as directory:
+                context = Path(directory)
+                names = set(identity.source_bindings.rows(catalog)) | set(identity.HOST_FILES) | {spec['dependency'], spec['profile']}
+                for name in names:
+                    target = context/name; target.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copyfile(ROOT/name, target)
+                (context/identity.source_bindings.baseline_path(family)).write_bytes(baseline)
+                (context/spec['source']).write_bytes(raw)
+                with patch.object(identity, 'ROOT', context):
+                    expected = identity.expected_host_identity(family)
+                self.assertEqual(expected['source_snapshot_sha256'], hashlib.sha256(raw).hexdigest())
+                self.assertEqual(expected['source_catalog_binding'], binding)
+                self.assertNotEqual(expected['source_snapshot_sha256'], spec['source_sha'])
+                self.assertGreater(len(expected['inventory']['files']), 1)
 
     def test_actual_image_labels_tag_platform_base_and_environment_are_required(self):
         for family in ("molecular-service", "registered-cases", "protocol-cases"):

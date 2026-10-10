@@ -27,7 +27,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for pattern in test_runtime.py test_process.py test_classifier_adapter.py; do
+          for pattern in test_runtime.py test_process.py test_classifier_adapter.py test_runtime_qualification_exit.py; do
             docker run --rm --network none --entrypoint python \
               --mount type=bind,source="$PWD/tests",target=/tests,readonly \
               ai4orgchem-runtime:ci -m unittest discover -s /tests -p "$pattern" -v \
@@ -54,6 +54,38 @@ jobs:
         with:
           name: candidate-validation-${{ github.run_id }}-${{ github.run_attempt }}
           path: ${{ runner.temp }}/ai4orgchem-runs
+          if-no-files-found: warn
+          retention-days: 7
+  public-installation-engineering:
+    # Public pinned source preparation, local-only build and stdlib file probes.
+    # No SCF, optimization, scientific replay, registry push, tag or Release.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - name: New public-source installation (zero science)
+        shell: bash
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+          AI4ORGCHEM_HIGH_COST_SCIENTIFIC_TESTS: '0'
+        run: |
+          set -euo pipefail
+          python3 -B scripts/ci-installation-engineering.py \
+            --output-root "$RUNNER_TEMP/public-installation-engineering"
+      - name: Preserve installation and file-I/O evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: public-installation-engineering-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/public-installation-engineering/*.json
+            ${{ runner.temp }}/public-installation-engineering/*.log
+            ${{ runner.temp }}/public-installation-engineering/identity-*/
+            ${{ runner.temp }}/public-installation-engineering/installation/*.json
+            ${{ runner.temp }}/public-installation-engineering/installation/*.log
+            ${{ runner.temp }}/public-installation-engineering/linux-output-*/
           if-no-files-found: warn
           retention-days: 7
   user-molecule-contracts:

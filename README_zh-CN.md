@@ -51,6 +51,12 @@ AI4OrgChem Runtime 帮助你在自己的电脑上进行分子计算，并复核�
 
 组件许可与分发条件见[许可证审查](docs/LICENSE_REVIEW_zh-CN.md)及[公开边界](docs/PUBLICATION_BOUNDARIES_zh-CN.md)。详细开发、支持与历史验证记录保留在下方，按需展开。
 
+<!-- CURRENT_CAPABILITIES_START -->
+当前服务的输入、方法、实际验收、成本及解释范围见[专业服务矩阵](docs/CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)，机器可读声明见[当前能力表](configs/runtime-capabilities-v2.json)。
+
+已记录 [86e29b47 的 3 个 CI job 成功](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857)；仅覆盖登记工程合同和旧入口 L0/L1，不认证本次修改或全部科学服务。
+<!-- CURRENT_CAPABILITIES_END -->
+
 <details>
 <summary>开发、支持与历史验证记录</summary>
 

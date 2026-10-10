@@ -1,6 +1,12 @@
 # 用户分子服务：当前实施文档入口
 
-最新 [单起点候选与零计算准备](USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md)已完成：150项专项工程测试（40新增、110回归）及实际缓存零F准备通过；新增真实F/NR/SCF为0。本版不允许真实根搜索、不创建科学预算，实际root runner未实现/未执行，Compute仍BLOCKED。原规则、门槛和旧数值记录保留。
+当前（2026-10-10）：普通用户 XYZ 的受限RHF入口见 [普通单点指南](MOLECULAR_SINGLE_POINT_zh-CN.md)；用户分子**条件态**Compute仍BLOCKED。全部服务范围见 [当前专业服务矩阵](CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)和 [能力注册表v2](../configs/runtime-capabilities-v2.json)。
+
+最新真实根记录为 [原生root诊断](USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.md)：139次完成NR、138成功callback与一次截止失败，墙钟停止、无正常返回root、无正式tails/端点。[后续合作停止工程](USER_MOLECULE_NATIVE_SHUTDOWN_ENGINEERING_20261007_zh-CN.md)的154项回归和两类零native闭合实例只验工程范围，不产生科学合格端点。root runner已实现且执行过；旧零F准备不是当前未执行声明。
+
+源码与静态指南已公开；Actions run38003025857对86e29b47的3个既有job成功，仅覆盖登记工程合同和旧L0/L1。下文各日期的“未执行/未实现/公开待确认”均属于历史轮次；科学失败、来源和实际验收记录保留，不回写PASS。
+
+历史 [单起点候选与零计算准备](USER_MOLECULE_OCCUPIED_SPACE_ROOT_PREPARATION_20261007_zh-CN.md)已完成：150项专项工程测试（40新增、110回归）及实际缓存零F准备通过；新增真实F/NR/SCF为0。当时不允许真实根搜索、不创建科学预算，root runner未实现/未执行，Compute仍BLOCKED。原规则、门槛和旧数值记录保留。
 
 此前 [十二点真实条件算子响应](USER_MOLECULE_OCCUPIED_SPACE_RESPONSE_20261007_zh-CN.md)已完成：129项专项工程测试、实际零F准备与12次真F/NR通过，8组同D子集通过；所有点gap通过但comm/map失败，无合格自洽根，Compute保持BLOCKED。SCF/根搜索/尾检未执行，新12槽预算关闭。
 

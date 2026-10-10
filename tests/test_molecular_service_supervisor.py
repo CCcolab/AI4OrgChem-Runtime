@@ -331,7 +331,10 @@ class MolecularServiceSupervisorTests(unittest.TestCase):
         docker = FakeDocker(image, clock, **options)
         args = host.argument_parser().parse_args(["--request", str(inputs / "request.json"), "--output-root", str(root / "runs")])
         def build(task, image_record, token, hashes, **kwargs): return {**contract_fixture(), **hashes, "execution_id": token}
-        with patch.object(host, "ROOT", source), patch.object(host, "build_contract", side_effect=build), \
+        # Bind permission has its own stdlib/mocked and actual CI probes. This
+        # existing fixture isolates the scientific worker receipt lifecycle.
+        with patch.object(host, "probe_output_writable", return_value=None), \
+             patch.object(host, "ROOT", source), patch.object(host, "build_contract", side_effect=build), \
              patch.object(host, "_parse_request", side_effect=parse_fixture), \
              patch.object(host, "_validate_case_result", return_value=True), \
              patch.object(host, "host_git_identity", return_value={"runtime_source_head": None, "status": "SYNTHETIC"}):

@@ -2308,6 +2308,36 @@ a44fa481af7c5a62d9d7b923f3b3f0d4947e682b
 
 来源记录称ZIP 36成员的实际CRC／size已验；这不是全Git源码认证。Git blob仅用户来源索引。旧独立HTTP／8项ZIP／reexport PASS保存为历史，不继承新版。下一批再做ZIP／QA，本页未执行。
 
+<a id="current-service-registry"></a>
+
+### 当前服务范围与验证依据
+
+按研究问题选择模块；具体输入、结果字段、成本及允许解释见[当前专业服务矩阵](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)。本表引用统一能力登记，不授予计算权限，也不将历史验收转移到新安装。
+
+[提交 86e29b47 的 3 个 CI job 成功](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857)，范围是工程合同与旧入口 L0/L1；后续修改另行验证。
+
+| 服务 | 输入与方法范围 | 已有数值验收 |
+| --- | --- | --- |
+| 自己的分子 RHF 单点能量、轨道与 AO 密度 | User XYZ H/C/N/O, neutral closed-shell singlet, <=20 atoms and actual AO<=80; RHF/6-31G(d); no stability/minimum certification | Four ordinary RHF runs and four same-version PySCF direct wrapper controls; 12 recorded gates |
+| 冻结表值统计示例 | Frozen published table value recalculation; no PDF/CIF reauthentication, no quantum calculation | One recorded fixed task; P02/P13 use saved arithmetic, P01 one RHF plus Boys/PM |
+| 分子图规则与能量账本示例 | Original graph/RDKit formula rules and frozen energy ledger arithmetic; no quantum calculation | One recorded fixed task; P02/P13 use saved arithmetic, P01 one RHF plus Boys/PM |
+| 乙烯占据轨道变换与密度不变性示例 | One fixed ethene ordinary RHF/6-31G(d), one Boys and one Pipek-Mezey occupied rotation; density/energy invariance only | One recorded fixed task; P02/P13 use saved arithmetic, P01 one RHF plus Boys/PM |
+| 约束扭转路径账本与固定端点 DFT | ONE\_FROZEN\_ORIGINAL\_PROTOCOL\_POINT | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
+| 源原生双状态直接响应 | ONE\_FROZEN\_ORIGINAL\_PROTOCOL\_POINT | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
+| π–σ 条件能量单点 | ONE\_FROZEN\_ORIGINAL\_PROTOCOL\_POINT | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
+| 双片段条件能量独立组装 | ONE\_FROZEN\_ORIGINAL\_PROTOCOL\_POINT | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
+| 同 Hamiltonian 路径闭合账本 | Frozen same-Hamiltonian ledger only; no live mode | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
+| 丁二烯 GL 固定端点与参照热化学 | Fixed butadiene GL endpoint; same implementation initial-density comparison, no new optimization or full P08 replay | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
+| 环丁二烯固定几何条件态诊断 | FIXED\_GEOMETRY\_CBD\_G\_LIKE\_DSI\_SMOKE\_ONLY | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
+| 苯核排斥与五点普通 DFT 扫描 | FIVE\_FROZEN\_ORDINARY\_RKS\_BLA\_POINTS\_PLUS\_REUSED\_G\_GL\_LEDGER | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
+| P11 固定多态几何优化 | 17 registered states; only P11B-benzene-G accepted; remaining states NOT\_EXECUTED; no complete multistate assembly | One single-state source gate per P11/P12; independent AO/component audit coverage incomplete |
+| P12 固定多态几何优化 | 61 registered states; only P12-N12-G accepted; remaining states NOT\_EXECUTED; no complete multistate assembly | One single-state source gate per P11/P12; independent AO/component audit coverage incomplete |
+| P14 固定条件态、结构响应与联合分类 | Seven legacy tasks; fixed C12H6 source-proxy / D3h five-parameter protocol; checkpoints cannot resume | Recorded P14 gates and classification scoped to actual runs; L3/L4 strict offline NOT\_EXECUTED |
+| 用户分子条件态 Compute | V2 implemented and diagnosed; no qualified final endpoint; original gap/mapping/commutator gates unchanged | No qualified root; real native attempt ended incomplete at wall stop |
+| 条件态研究诊断与合作停止工程 | Real root attempt: 139 completed NR / 138 callback success plus deadline failure; no returned root or formal tail/closure | No formal qualified endpoint; zero-native stop checks do not grant numerical qualification |
+
+[下载同源能力表 JSON](https://cccolab.github.io/AI4OrgChem-Runtime/runtime-guide/capabilities-v2.json)；[最小数值见证与只读复核](https://github.com/CCcolab/AI4OrgChem-Runtime/tree/main/evidence/numerical-witnesses)。声明文件 SHA-256：` 84f6a7c5c7c3b6593b21b5d3d7674d96ea2e2b4fbd9c5cf99be692c45d71fd3a `。
+
 ### 常见问题
 
 <a id="faq-current"></a>
@@ -2374,7 +2404,7 @@ a44fa481af7c5a62d9d7b923f3b3f0d4947e682b
 
 ### 16 同PySCF对照与历史PASS说明什么？
 
-同PySCF直接参考仅封装一致性，不是独立引擎认证。旧独立HTTP／8项ZIP／reexport PASS仅来源保存历史，不继承新版；Actions NOT\_EXECUTED，分发BLOCKED，源码待确认，Colab deferred，expert CANCELLED\_BY\_USER。
+同PySCF直接参考仅封装一致性，不是独立引擎认证。旧独立HTTP／8项ZIP／reexport PASS仅来源保存历史，不继承新版；当前源码与静态指南已公开；CI记录及范围见统一能力表，镜像分发仍受限制，Colab暂缓，外部咨询已取消。
 
 ### 是否需要同样的安装包？
 
@@ -2500,7 +2530,7 @@ sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d
 
 cc7437901119e71ef7945a12813c021c383e7648
 
-Runtime本地工程候选未公开发布；任意用户分子的旧条件态比较 Compute BLOCKED；外部咨询CANCELLED\_BY\_USER，不是科学批准；首次Actions三项job已在06d5088通过，范围见当前同步记录；WSLc BLOCKED／NOT\_EXECUTED且升级实机暂停；镜像分发BLOCKED；源码与指南已公开，GitHub Pages静态指南已启用；本页没有在线计算，Colab暂缓。固定L3／L4严格断网未执行，L4不能恢复。
+Runtime源码与静态指南已公开；任意用户分子的旧条件态比较 Compute BLOCKED；外部咨询CANCELLED\_BY\_USER，不是科学批准；首次Actions三项job已在06d5088通过，范围见当前同步记录；WSLc BLOCKED／NOT\_EXECUTED且升级实机暂停；镜像分发BLOCKED；源码与指南已公开，GitHub Pages静态指南已启用；本页没有在线计算，Colab暂缓。固定L3／L4严格断网未执行，L4不能恢复。
 
 ### 原七任务科学来源
 

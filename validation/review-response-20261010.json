@@ -1,0 +1,99 @@
+{
+  "schema": "review-response-20261010-v1",
+  "review": {
+    "file": "AI4OrgChem-Runtime_全面评审_20261010.md",
+    "sha256": "819e32afb3fc6f011d7998edd72a157ca0ad7d611c03779fecb9f3f2d68a4441",
+    "runtime_commit": "86e29b47b38fbd31717ff9aac653386d2e3f768d",
+    "science_reference": "02ea458881872f26be3e03fe8bf2de549f82b2a9"
+  },
+  "scope": "ENGINEERING_INTERPRETATION_CURRENT_NAVIGATION_SAVED_ARRAYS_AND_NEW_INSTALLATION_TESTS",
+  "local_engineering": {
+    "record": "validation/review-response-engineering-20261010.json",
+    "sha256": "b0037ae7dc66fb26eed123bf12ef9de086e01189448813595bddf4a79f795c76",
+    "executed": 515,
+    "passed": 513,
+    "skipped": [
+      {
+        "test": "test_high_cost_p11.P11ActualPreflightTests.test_all_registered_molecules_build_without_integrals_scf_or_nuclear_energy",
+        "reason": "Actual P11 preflight runs only in the opted-in scientific container"
+      },
+      {
+        "test": "test_molecular_service_input.MolecularServiceInputTests.test_symlink_request_structure_and_root_are_rejected_when_available",
+        "reason": "host does not permit symlink fixture; portable lstat test remains active"
+      }
+    ],
+    "scientific_opt_in": false,
+    "real_pyscf_imports": "BLOCKED",
+    "host_packages": {
+      "numpy": "2.5.1",
+      "scipy": "1.18.0",
+      "PyYAML": "6.0.3"
+    },
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "previous_attempts_preserved": [
+      {
+        "status": "FAIL_ENGINEERING",
+        "reason": "HOST_TEST_PYTHON_MISSING_PYYAML",
+        "executed": 514,
+        "passed": 490,
+        "result_sha256": "9877410816e97a67f0067e75215fb398c471661d730a54ee6b6522e584f76d2e"
+      },
+      {
+        "status": "FAIL_ENGINEERING",
+        "reason": "HOST_TEST_PYTHON_MISSING_SCIPY_FOR_FROZEN_IMPORTS",
+        "executed": 514,
+        "passed": 507,
+        "result_sha256": "bc4cc2187dbd2154d5be1cbebd242f0a4da74a8b36934f0286660d3b4de4ed7f"
+      }
+    ]
+  },
+  "witness": {
+    "record": "evidence/numerical-witnesses/AUDIT_RESULT_20261010.json",
+    "sha256": "a15eb40d22e3add5038b4f17d6a15fdaa2c05a19d9fa63e47bd5334760bc460d",
+    "payload_files": 8,
+    "payload_bytes": 61439,
+    "conditional_endpoint": "REJECTED",
+    "new_scf_integrals_grids_or_fock_evaluations": 0
+  },
+  "web": {
+    "record": "validation/web-guide/review-remediation-20261010.json",
+    "browser_cases": 25,
+    "unchanged_copy_targets": 79,
+    "crc_verified_members": 10,
+    "true200percentzoom": "NOT_EXECUTED"
+  },
+  "current_capabilities": {
+    "path": "configs/runtime-capabilities-v2.json",
+    "sha256": "84f6a7c5c7c3b6593b21b5d3d7674d96ea2e2b4fbd9c5cf99be692c45d71fd3a",
+    "declaration_is_authorization": false
+  },
+  "current_modified_host_files": {
+    "scripts/run-molecular-service.py": "a24f8bdf0fca7e0d46c45751c5dc7502ee5ffb4d915b4b0fd8d18712169ceaf9",
+    "scripts/run-registered-case.py": "8f1bb5f96f6a9b983ea8f12326bc2891736ecbdd2b58873445282bd1a5a7eda1",
+    "scripts/run-protocol-case.py": "cbeaaa362af88cfd6529d1785fb336c63f3c8bb514cec6945543f8d49ca0273b",
+    "scripts/runtime_host_safety.py": "ab862cd3870a463d5c417dee6501a23a6d6d92b84cdc252f1d3078b9e9a1b60e",
+    "scripts/installation_source_bindings.py": "980baa18069077f175456be432c3b323a16fdaa4cacb8ec553c5dfaa9b2858b5",
+    "runtime/cli.py": "7b6aa489f6e09651b12de7afa8dbd5d6dd0822654553ea2d4a542ca7cee9adf7"
+  },
+  "unchanged_old_catalogs": {
+    "locks/molecular-service-source.json": "0f1370a8ef1c5e1a8c7b58f310dc6ad2faa0c08e568e19b01cf8e02d7eff29ab",
+    "locks/registered-cases-source.json": "1bc64c322920671b9fe2335b13ea639619e960648422e7eb984c4001f2a481ca",
+    "locks/protocol-cases-source.json": "20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d",
+    "locks/high-cost-source.json": "d8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322",
+    "locks/source.installation.lock.json": "64119061d98d8cf99a254878bb3253696e67bbb57876d36e0956b64756859d8d"
+  },
+  "github_ci": {
+    "previous_real_success": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857",
+    "previous_success_commit": "86e29b47b38fbd31717ff9aac653386d2e3f768d",
+    "previous_successful_jobs": 3,
+    "this_update": "NOT_EXECUTED_AT_LOCAL_COMMIT_PREPARATION",
+    "new_installation_job": "IMPLEMENTED_STATICALLY_REVIEWED_NOT_EXECUTED"
+  },
+  "source_publication": "PREVIOUS_SOURCE_PUBLIC_NEW_COMMIT_PENDING",
+  "image_distribution": "BLOCKED",
+  "wslc": "BLOCKED_PAUSED_NOT_EXECUTED",
+  "conditional_compute": "BLOCKED",
+  "l4_resume": "UNSUPPORTED",
+  "scientific_rules_and_tolerances": "UNCHANGED",
+  "new_runtime_version_tag_release": "NONE"
+}

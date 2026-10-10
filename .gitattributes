@@ -25,3 +25,9 @@ container/Dockerfile.high-cost* -text
 docs/index.html -text
 docs/runtime-guide/** -text
 validation/web-guide/** -text
+# Current declarations and selected numeric witnesses have explicit byte hashes.
+configs/runtime-capabilities-v2.json -text
+evidence/numerical-witnesses/** -text
+scripts/run-molecular-service.py -text
+scripts/run-registered-case.py -text
+scripts/runtime_host_safety.py -text

@@ -18,14 +18,17 @@ import stat
 import subprocess
 import sys
 import uuid
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import installation_source_bindings as source_bindings
 
 ROOT = Path(__file__).resolve().parents[1]
-SCHEMA = "ai4orgchem-runtime-installation-v1"
+SCHEMA = "ai4orgchem-runtime-installation-v2"
 SHA = re.compile(r"[0-9a-f]{64}\Z")
 IMAGE_SHA = re.compile(r"sha256:[0-9a-f]{64}\Z")
 COMMIT = re.compile(r"[0-9a-f]{40}\Z")
 TAG = re.compile(r"[a-z0-9][a-z0-9._/-]*:[A-Za-z0-9_][A-Za-z0-9_.-]{0,127}\Z")
-HOST_FILES = ("scripts/register-installation.py", "scripts/run-installed-runtime.py")
+HOST_FILES = ("scripts/register-installation.py", "scripts/run-installed-runtime.py",
+              "scripts/installation_source_bindings.py", "scripts/runtime_host_safety.py")
 SERVICES = {
     "molecular-service": {
         "launcher": "scripts/run-molecular-service.py", "module": "runtime.molecular_service",
@@ -152,13 +155,17 @@ def expected_host_identity(service="molecular-service"):
     import importlib
     spec = service_spec(service)
     for name in ("source", "dependency", "profile"):
-        if service == "high-cost-cases" and name == "source":
+        if name == "source":
             continue
         if digest(checked_file(ROOT / spec[name])) != spec[name + "_sha"]:
             raise ValueError("Installation cannot replace the approved frozen lock/profile: " + name)
-    if service == "high-cost-cases":
-        source, binding = high_cost_source_binding()
+    if (ROOT / source_bindings.baseline_path(service)).is_file():
+        source, binding = source_bindings.bind(ROOT, service)
     else:
+        # A historical catalog is accepted only if every original byte still
+        # matches. New launchers cannot register themselves as an old image.
+        if digest(checked_file(ROOT / spec['source'])) != spec['source_sha']:
+            raise ValueError('Installation cannot replace the frozen source catalog')
         source = importlib.import_module(spec["module"]).verify_source()
         binding = {"kind": "FROZEN_SOURCE_CATALOG", "baseline_sha256": spec["source_sha"],
                    "source_sha256": spec["source_sha"], "file_count": len(source["files"]), "host_overrides": {}}
@@ -169,8 +176,10 @@ def expected_host_identity(service="molecular-service"):
         raise ValueError("Frozen dependency package versions required")
     files = dict(source["files"]) if isinstance(source["files"], dict) else {row["path"]: row["sha256"] for row in source["files"]}
     files[spec["source"]] = digest(ROOT / spec["source"])
-    if service == "high-cost-cases":
-        files[HIGH_COST_BASELINE] = spec["source_sha"]
+    if binding['kind'] == source_bindings.KIND:
+        files[source_bindings.baseline_path(service)] = spec["source_sha"]
+    for name in HOST_FILES:
+        files[name] = digest(checked_file(ROOT / name))
     # Each critical path is also checked against linked/reparse ancestry.
     for name in files:
         checked_file(ROOT / name)
@@ -252,12 +261,14 @@ def validate_record(record, *, expected=None):
         raise ValueError("UTC registration timestamp required")
     binding = record["source_catalog_binding"]
     common = {"kind", "baseline_sha256", "source_sha256", "file_count", "host_overrides"}
-    required_binding = common | ({"unchanged_rows"} if record["service"] == "high-cost-cases" else set())
+    required_binding = common | ({"unchanged_rows"} if binding.get('kind') in ('EXACT_TWO_HOST_PATH_REBIND', source_bindings.KIND) else set()) if isinstance(binding, dict) else common
     if not isinstance(binding, dict) or set(binding) != required_binding or binding.get("baseline_sha256") != spec["source_sha"] or binding.get("source_sha256") != record["source_snapshot_sha256"]:
         raise ValueError("Closed source catalog baseline binding required")
     if type(binding.get("file_count")) is not int or binding["file_count"] < 1:
         raise ValueError("Exact source catalog file count required")
-    if record["service"] == "high-cost-cases":
+    if binding['kind'] == source_bindings.KIND:
+        source_bindings.validate_binding(record['service'], binding, record['source_snapshot_sha256'])
+    elif record["service"] == "high-cost-cases":
         if binding["kind"] != "EXACT_TWO_HOST_PATH_REBIND" or binding["file_count"] != 107 or type(binding["unchanged_rows"]) is not int or binding["unchanged_rows"] != 105 or not isinstance(binding["host_overrides"], dict) or set(binding["host_overrides"]) != set(HIGH_COST_HOST_OVERRIDES):
             raise ValueError("Only the exact approved two-host-path installation scope is allowed")
         for name, row in binding["host_overrides"].items():

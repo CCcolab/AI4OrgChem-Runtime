@@ -51,6 +51,12 @@ The two high-cost modules list 78 states in total; the two accepted pilots do no
 
 For component licenses and distribution conditions, see the [license review](docs/LICENSE_REVIEW_zh-CN.md) and [publication boundaries](docs/PUBLICATION_BOUNDARIES_zh-CN.md). Detailed development and historical validation records remain available below.
 
+<!-- CURRENT_CAPABILITIES_START -->
+See the [current professional service matrix](docs/CURRENT_PROFESSIONAL_SERVICES_zh-CN.md) for inputs, methods, recorded acceptance, cost and interpretation; the [current capability registry](configs/runtime-capabilities-v2.json) is the machine-readable declaration.
+
+[3 CI jobs succeeded for 86e29b47](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857); this records engineering contracts and legacy L0/L1, not acceptance of later changes or all scientific services.
+<!-- CURRENT_CAPABILITIES_END -->
+
 <details>
 <summary>Development, support and historical validation records / 开发、支持与历史验证记录</summary>
 

@@ -1,0 +1,376 @@
+{
+  "actual_native_call_counts": null,
+  "ao_labels": [
+    "0 O 1s    ",
+    "0 O 2s    ",
+    "0 O 3s    ",
+    "0 O 2px   ",
+    "0 O 2py   ",
+    "0 O 2pz   ",
+    "0 O 3px   ",
+    "0 O 3py   ",
+    "0 O 3pz   ",
+    "0 O 3dxy  ",
+    "0 O 3dyz  ",
+    "0 O 3dz^2 ",
+    "0 O 3dxz  ",
+    "0 O 3dx2-y2",
+    "1 H 1s    ",
+    "1 H 2s    ",
+    "2 H 1s    ",
+    "2 H 2s    "
+  ],
+  "ao_precheck": {
+    "basis_function_count": 18,
+    "metric": {
+      "condition_number": 55.26640016971366,
+      "maximum_eigenvalue": 3.4566919997426515,
+      "minimum_eigenvalue": 0.06254599520011692,
+      "symmetry_max_absolute": 0.0
+    }
+  },
+  "array_artifact_sha256": "a26a28d072c8709303440e18dec05535d2f6789d8b39bd7588b8b0a4bb73e919",
+  "atom_ao_slices": [
+    {
+      "ao_start_0based": 0,
+      "ao_stop_exclusive": 14,
+      "atom_index_0based": 0,
+      "shell_start_0based": 0,
+      "shell_stop_exclusive": 6,
+      "symbol": "O"
+    },
+    {
+      "ao_start_0based": 14,
+      "ao_stop_exclusive": 16,
+      "atom_index_0based": 1,
+      "shell_start_0based": 6,
+      "shell_stop_exclusive": 8,
+      "symbol": "H"
+    },
+    {
+      "ao_start_0based": 16,
+      "ao_stop_exclusive": 18,
+      "atom_index_0based": 2,
+      "shell_start_0based": 8,
+      "shell_stop_exclusive": 10,
+      "symbol": "H"
+    }
+  ],
+  "atoms": [
+    {
+      "index_0based": 0,
+      "index_1based": 1,
+      "symbol": "O",
+      "xyz_angstrom": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "index_0based": 1,
+      "index_1based": 2,
+      "symbol": "H",
+      "xyz_angstrom": [
+        0.0,
+        -0.757,
+        0.587
+      ]
+    },
+    {
+      "index_0based": 2,
+      "index_1based": 3,
+      "symbol": "H",
+      "xyz_angstrom": [
+        0.0,
+        0.757,
+        0.587
+      ]
+    }
+  ],
+  "basis": "6-31G(d)",
+  "basis_function_count": 18,
+  "conditional_scf_executed": false,
+  "conditional_state_compute": "BLOCKED",
+  "density_semantics": "SPIN_SUMMED_AO_DENSITY_IN_ORIGINAL_AO_ORDER",
+  "diagnostics": {
+    "checks": {
+      "closed_shell_occupations": true,
+      "density_reconstruction": true,
+      "electron_number": true,
+      "energy_ledger_closure": true,
+      "finite_arrays_and_energy": true,
+      "occupied_orthonormality": true,
+      "ordinary_fock_equals_hcore_plus_veff": true,
+      "package_energy_ledger_closure": true,
+      "scf_converged": true,
+      "symmetric_ao_matrices": true,
+      "whitened_fock_projector_commutator": true,
+      "whitened_projector_idempotency": true
+    },
+    "electron_number": 10.000000000000002,
+    "energy_ledger": {
+      "closure_absolute": 0.0,
+      "definition": "Tr(D hcore) + 0.5 Tr(D Vhf) + nuclear_repulsion",
+      "electronic": -85.19735752634347,
+      "nuclear_repulsion": 9.188258417746113,
+      "one_electron": -123.05295724302984,
+      "reconstructed_total": -76.00909910859735,
+      "scf_total": -76.00909910859735,
+      "two_electron_coulomb_exchange": 37.85559971668637,
+      "unit": "hartree"
+    },
+    "metric": {
+      "condition_number": 55.26640016971366,
+      "maximum_eigenvalue": 3.4566919997426515,
+      "minimum_eigenvalue": 0.06254599520011692,
+      "symmetry_max_absolute": 0.0
+    },
+    "numerically_qualified": true,
+    "orbital_summary": {
+      "gap_acceptance_gate": false,
+      "homo_energy_hartree": -0.49757818641896945,
+      "homo_lumo_gap_hartree": 0.712108748275301,
+      "localization": "NOT_EXECUTED",
+      "lumo_energy_hartree": 0.21453056185633157,
+      "occupied_orbital_count": 5,
+      "stability": "NOT_EXECUTED",
+      "virtual_orbital_count": 13
+    },
+    "residuals": {
+      "density_reconstruction_relative_frobenius": 0.0,
+      "electron_number_absolute": 1.7763568394002505e-15,
+      "energy_ledger_closure_hartree": 0.0,
+      "generalized_mo_eigen_equation_frobenius_hartree": 5.406036685047802e-09,
+      "matrix_symmetry_max_absolute": {
+        "density": 0.0,
+        "fock": 0.0,
+        "hcore": 0.0,
+        "veff": 0.0
+      },
+      "occupied_orthonormality_frobenius": 2.237568745241635e-15,
+      "ordinary_fock_closure_max_absolute_hartree": 2.220446049250313e-16,
+      "package_electronic_energy_closure_hartree": 0.0,
+      "package_two_electron_energy_closure_hartree": 0.0,
+      "whitened_fock_projector_commutator_frobenius_hartree": 1.7424202994401097e-09,
+      "whitened_projector_idempotency_frobenius": 5.477353514947777e-15
+    }
+  },
+  "endpoint_energy_function_evaluations": 1,
+  "execution_id": "a95e7d0f4cb74b9585f1528b19162972",
+  "execution_identity": {
+    "boys_kernel_call_limit": 0,
+    "dependency_lock_sha256": "954b8d84d7d393388990303665b6d7416bd760e92fbed21d1148f7574144dbdd",
+    "execution_id": "a95e7d0f4cb74b9585f1528b19162972",
+    "hard_deadline_epoch": 1791426502.9767988,
+    "input_manifest_sha256": "2395bd911490ba5e4176c05b1de1b5946c289540b40be2b45d95815ae977d626",
+    "maximum_processes": 1,
+    "memory_limit_bytes": 1073741824,
+    "pipek_mezey_kernel_call_limit": 0,
+    "profile_id": "rhf-631gd-small-v1",
+    "profile_sha256": "40d9c5c16f35b7c90fad86ea771a4379a27b31856bd21785b1f75e313f703dfb",
+    "protocol_id": "ORDINARY_MOLECULAR_SINGLE_POINT_V0.1",
+    "request_sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92",
+    "runtime_commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
+    "scf_kernel_call_limit": 1,
+    "schema": "molecular-service-execution-v1",
+    "scientific_execution_authorized": true,
+    "source_snapshot_sha256": "0f1370a8ef1c5e1a8c7b58f310dc6ad2faa0c08e568e19b01cf8e02d7eff29ab",
+    "started_epoch": 1791426382.9767988,
+    "stop_after_seconds": 100,
+    "stop_deadline_epoch": 1791426482.9767988,
+    "structure_sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7",
+    "task": "single-point",
+    "threads": 1,
+    "wall_time_limit_seconds": 120
+  },
+  "execution_kind": "PINNED_PYSCF_ORDINARY_RHF",
+  "grid_density": "NOT_EXECUTED",
+  "index_convention": {
+    "atom_ao_slices": "zero-based atoms; half-open AO/shell intervals",
+    "matrix_ao_rows_and_columns": "zero-based original PySCF AO order",
+    "molecular_orbital_arrays": "zero-based returned PySCF MO order"
+  },
+  "input_identity": {
+    "normalized_sha256": "46c6500c89fd2bc75459983b38493fafb70224e4bf71ea080bcaebff09dfbc01",
+    "profile_sha256": "40d9c5c16f35b7c90fad86ea771a4379a27b31856bd21785b1f75e313f703dfb",
+    "request_sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92",
+    "structure_sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+  },
+  "localization": "NOT_EXECUTED",
+  "method": "RHF",
+  "molecule": {
+    "atom_count": 3,
+    "charge": 0,
+    "coordinate_unit": "angstrom",
+    "electron_count": 10,
+    "geometry_angstrom": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.757,
+        0.587
+      ],
+      [
+        0.0,
+        0.757,
+        0.587
+      ]
+    ],
+    "multiplicity": 1,
+    "symbols": [
+      "O",
+      "H",
+      "H"
+    ]
+  },
+  "native_count_evidence": "EXTERNAL_HELD_GUARD_RECEIPT_REQUIRED",
+  "normalized_sha256": "46c6500c89fd2bc75459983b38493fafb70224e4bf71ea080bcaebff09dfbc01",
+  "numerically_qualified": true,
+  "occupations": [
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "operation_ledger": {
+    "automatic_retry": false,
+    "closure_reason": "NUMERICALLY_QUALIFIED_ORDINARY_RHF",
+    "entry_evidence": "STARTED_IS_DURABLE_PRE_INVOKE_INTENT_NOT_CRASH_PROOF_OF_ENTRY",
+    "events": [
+      {
+        "charged": true,
+        "event": "SCF_KERNEL_STARTED"
+      },
+      {
+        "event": "SCF_KERNEL_CLOSED",
+        "status": "SUCCEEDED"
+      }
+    ],
+    "execution_id": "a95e7d0f4cb74b9585f1528b19162972",
+    "operations": {
+      "scf_kernel": {
+        "charged": 1,
+        "entered": 1,
+        "failed": 0,
+        "limit": 1,
+        "returned": 1,
+        "status": "SUCCEEDED"
+      }
+    },
+    "refund": false,
+    "schema": "molecular-single-point-operation-ledger-v1",
+    "status": "CLOSED",
+    "task": "single-point"
+  },
+  "operations_closed": true,
+  "orbital_energies_hartree": [
+    -20.55502136282213,
+    -1.3410674282152661,
+    -0.7061668227890543,
+    -0.571045112001773,
+    -0.49757818641896945,
+    0.21453056185633157,
+    0.30432971739350023,
+    1.0217194344177871,
+    1.1636064380310625,
+    1.1682678227292262,
+    1.1976067873803036,
+    1.3808951866320254,
+    1.6600440286433154,
+    2.020306302368147,
+    2.0337713363689645,
+    2.067599048902408,
+    2.629686949105494,
+    2.9457503213391525
+  ],
+  "profile_id": "rhf-631gd-small-v1",
+  "profile_sha256": "40d9c5c16f35b7c90fad86ea771a4379a27b31856bd21785b1f75e313f703dfb",
+  "protocol_id": "ORDINARY_MOLECULAR_SINGLE_POINT_V0.1",
+  "request": {
+    "basis": "6-31G(d)",
+    "charge": 0,
+    "method": "RHF",
+    "multiplicity": 1,
+    "profile": "rhf-631gd-small-v1",
+    "schema": "molecular-single-point-v1",
+    "structure": {
+      "file": "molecule.xyz",
+      "format": "xyz",
+      "unit": "angstrom"
+    },
+    "task": "single-point"
+  },
+  "request_sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92",
+  "requested_calls": {
+    "boys_kernel": 0,
+    "pipek_mezey_kernel": 0,
+    "scf_kernel": 1
+  },
+  "scf": {
+    "converged": true,
+    "cycles": 11
+  },
+  "schema": "molecular-single-point-result-v1",
+  "scientific_classification": null,
+  "scientific_qualified": true,
+  "scope": "SUPPORTED_USER_XYZ_ORDINARY_CLOSED_SHELL_RHF_SINGLE_POINT",
+  "settings": {
+    "automatic_retry": false,
+    "basis": "6-31G(d)",
+    "conv_tol": 1e-12,
+    "conv_tol_grad": 1e-08,
+    "max_ao": 80,
+    "max_cycle": 100,
+    "max_memory_mb": 768,
+    "method": "RHF",
+    "program": "pyscf",
+    "scf_kernel_call_limit": 1,
+    "symmetry": false
+  },
+  "software": {
+    "numpy": "2.5.1",
+    "pyscf": "2.14.0"
+  },
+  "stability": "NOT_EXECUTED",
+  "stability_status": "NOT_EXECUTED",
+  "status": "NUMERICALLY_QUALIFIED_ORDINARY_RHF",
+  "structure_sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7",
+  "task": "single-point",
+  "tolerances": {
+    "density_reconstruction_relative_frobenius": 1e-09,
+    "electron_number_absolute": 1e-08,
+    "energy_ledger_closure_hartree": 1e-09,
+    "matrix_symmetry_absolute": 1e-10,
+    "maximum_overlap_condition_number": 10000000000.0,
+    "minimum_overlap_eigenvalue": 1e-10,
+    "occupied_orthonormality_frobenius": 1e-08,
+    "whitened_fock_projector_commutator_frobenius_hartree": 1e-07,
+    "whitened_projector_idempotency_frobenius": 1e-08
+  },
+  "total_energy_hartree": -76.00909910859735,
+  "units": {
+    "density": "spin-summed AO density matrix",
+    "energy": "hartree",
+    "geometry": "angstrom",
+    "orbital_energy": "hartree"
+  }
+}

@@ -11,7 +11,11 @@ import unittest
 ROOT=Path(__file__).resolve().parents[1]
 PATTERNS=('test_registered_*.py','test_protocol_cases_*.py','test_high_cost_*.py',
           'test_molecular_service_*.py','test_native_wsl2_check.py',
-          'test_ci_local_services_context.py')
+          'test_ci_local_services_context.py', 'test_runtime_qualification_exit.py',
+          'test_current_capabilities.py', 'test_capability_exports.py',
+          'test_installation_identity.py', 'test_installation_source_bindings.py',
+          'test_runtime_host_safety.py', 'test_numerical_witnesses.py',
+          'test_public_installation_ci.py', 'test_runtime_host_supervision.py')
 
 def execution_context(environment=None):
     """Describe this job from runner declarations, never certify the whole CI."""
@@ -66,7 +70,7 @@ def main():
         result=unittest.TextTestRunner(stream=log,verbosity=2).run(suite)
     report={'schema':'local-services-engineering-ci-v1',
             'status':'PASS_ENGINEERING_WITH_DECLARED_SKIPS' if result.wasSuccessful() and result.skipped else 'PASS_ENGINEERING' if result.wasSuccessful() else 'FAIL_ENGINEERING',
-            'scope':'Registered cases, batch2/batch3, ordinary molecular service and native WSL2 Check engineering; no actual SCF/optimization/platform acceptance',
+            'scope':'Local services, exit qualification, current declaration/export, installation identity, lifecycle mocks and saved-array witnesses; no new SCF/optimization/platform acceptance',
             'executed':result.testsRun,'passed':result.testsRun-len(result.failures)-len(result.errors)-len(result.skipped),
             'skipped':[{'test':test.id(),'reason':reason} for test,reason in result.skipped],
             'failures':[{'test':test.id(),'traceback':trace} for test,trace in result.failures],

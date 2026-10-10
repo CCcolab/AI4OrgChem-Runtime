@@ -1,6 +1,6 @@
 # 安装与构建
 
-当前状态（2026-10-03）：本地 Docker L0—L4/等价性/联合分类已验证，WSLc 暂缓并保持 BLOCKED / NOT_EXECUTED；CI 静态审查完成、运行 NOT_EXECUTED；许可映射与对应源码提供未齐，公开发布仍阻塞。身份与范围以 validation/final-delivery-status.json 和 DELIVERY_REVIEW_2026-10-03_zh-CN.md 为准，既有备份为历史快照。
+当前状态（2026-10-10）以 [能力注册表v2](../configs/runtime-capabilities-v2.json)和 [专业服务矩阵](CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)为准。源码与静态指南已公开；[Actions run38003025857](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857)对86e29b47三个既有job成功，仅覆盖登记工程合同及旧L0/L1。新用户从 [公开源码安装](SOURCE_INSTALLATION_zh-CN.md)开始。公开预构建镜像分发仍阻塞，WSLc验收暂停；下文为历史候选构建和平台恢复路径，2026-10-03的 final-delivery-status/DELIVERY_REVIEW 与备份保持历史身份。
 
 当前无公开镜像。先阅读平台矩阵；本机 WSLc 验收 NOT_EXECUTED，不声明已支持。
 
