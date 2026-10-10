@@ -1,0 +1,180 @@
+{
+  "schema": "online-browser-followup-v1",
+  "tested_runtime_commit": "fa7b4ee725857e2760dd5fb5d264e70eaf21c382",
+  "tested_utc": "2026-10-10T11:44:39.605295+00:00",
+  "site_url": "https://cccolab.github.io/AI4OrgChem-Runtime/",
+  "deployed_html_byte_identity": "PASS",
+  "browsers": [
+    {
+      "browser": "Chrome",
+      "installed_executable_version": "154.0.8037.99",
+      "version_basis": "LOCAL_EXECUTABLE_PRODUCT_VERSION_NOT_USER_AGENT",
+      "status": "PASS_ACTUAL_ONLINE_DYNAMIC_DOWNLOADS",
+      "html": {
+        "bytes": 226104,
+        "sha256": "75244b638a0eb0817a1372505c4993f48ec6c57f4e9f1b8ad85797dcee30b555"
+      },
+      "zip": {
+        "bytes": 490999,
+        "sha256": "4bd1f76d8dad2a6f6884381c978bf506ad9dcc7e8f7355d98e416c2d9cb59336",
+        "crc": "PASS",
+        "member_count": 10
+      },
+      "manifest": {
+        "bytes": 2535,
+        "sha256": "b57f727be3591a2aab9ae58c43ccd9bf8b46caf6f6dfc1b6125c60a39837be3a",
+        "all_member_sizes_and_hashes": "PASS"
+      },
+      "members": [
+        {
+          "path": "docs/index.html",
+          "bytes": 226104,
+          "sha256": "75244b638a0eb0817a1372505c4993f48ec6c57f4e9f1b8ad85797dcee30b555"
+        },
+        {
+          "path": "docs/.nojekyll",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "README.md",
+          "bytes": 37897,
+          "sha256": "4a4bbae6ab09c263c2d86c7449270393c03ccee5f8a700f39bd79192b2a984a3"
+        },
+        {
+          "path": "content/guide_zh-CN.md",
+          "bytes": 123292,
+          "sha256": "90526a8ff05ffbd7c5bfb3050000299f77bf6247cc3ff07f07aa54af553a86d1"
+        },
+        {
+          "path": "provenance/sources.md",
+          "bytes": 19401,
+          "sha256": "0f546c71c08ac5ae05ed97aabd987c21ba77dba16e4b771b81d4a76da449b68f"
+        },
+        {
+          "path": "verification/checks.md",
+          "bytes": 39301,
+          "sha256": "b41fc97d295af0054d57f9a74f8bbd17a1e62959f46057cf15e982e6a5e8b55a"
+        },
+        {
+          "path": "MIGRATION.md",
+          "bytes": 41040,
+          "sha256": "d18475838278221001299468ed45957d9df43726d6945321ddedbcde654d95de"
+        },
+        {
+          "path": "MANIFEST.txt",
+          "bytes": 1844,
+          "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+        },
+        {
+          "path": "templates/molecular-service/water/request.json",
+          "bytes": 277,
+          "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+        },
+        {
+          "path": "templates/molecular-service/water/molecule.xyz",
+          "bytes": 123,
+          "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+        }
+      ]
+    },
+    {
+      "browser": "Edge",
+      "installed_executable_version": "154.0.4258.62",
+      "version_basis": "LOCAL_EXECUTABLE_PRODUCT_VERSION_NOT_USER_AGENT",
+      "status": "PASS_ACTUAL_ONLINE_DYNAMIC_DOWNLOADS",
+      "html": {
+        "bytes": 226104,
+        "sha256": "75244b638a0eb0817a1372505c4993f48ec6c57f4e9f1b8ad85797dcee30b555"
+      },
+      "zip": {
+        "bytes": 490999,
+        "sha256": "4bd1f76d8dad2a6f6884381c978bf506ad9dcc7e8f7355d98e416c2d9cb59336",
+        "crc": "PASS",
+        "member_count": 10
+      },
+      "manifest": {
+        "bytes": 2535,
+        "sha256": "a1681e14019bea4b414494a4051b8a9d690df8f146cd42b8e436fad0e4ad2973",
+        "all_member_sizes_and_hashes": "PASS"
+      },
+      "members": [
+        {
+          "path": "docs/index.html",
+          "bytes": 226104,
+          "sha256": "75244b638a0eb0817a1372505c4993f48ec6c57f4e9f1b8ad85797dcee30b555"
+        },
+        {
+          "path": "docs/.nojekyll",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "README.md",
+          "bytes": 37897,
+          "sha256": "4a4bbae6ab09c263c2d86c7449270393c03ccee5f8a700f39bd79192b2a984a3"
+        },
+        {
+          "path": "content/guide_zh-CN.md",
+          "bytes": 123292,
+          "sha256": "90526a8ff05ffbd7c5bfb3050000299f77bf6247cc3ff07f07aa54af553a86d1"
+        },
+        {
+          "path": "provenance/sources.md",
+          "bytes": 19401,
+          "sha256": "0f546c71c08ac5ae05ed97aabd987c21ba77dba16e4b771b81d4a76da449b68f"
+        },
+        {
+          "path": "verification/checks.md",
+          "bytes": 39301,
+          "sha256": "b41fc97d295af0054d57f9a74f8bbd17a1e62959f46057cf15e982e6a5e8b55a"
+        },
+        {
+          "path": "MIGRATION.md",
+          "bytes": 41040,
+          "sha256": "d18475838278221001299468ed45957d9df43726d6945321ddedbcde654d95de"
+        },
+        {
+          "path": "MANIFEST.txt",
+          "bytes": 1844,
+          "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+        },
+        {
+          "path": "templates/molecular-service/water/request.json",
+          "bytes": 277,
+          "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+        },
+        {
+          "path": "templates/molecular-service/water/molecule.xyz",
+          "bytes": 123,
+          "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+        }
+      ]
+    }
+  ],
+  "chrome_interaction_checks": {
+    "path_filter_molecule_evidence_p14_and_clear": "PASS_OBSERVED_UI",
+    "positive_search_single_point_20_hits": "PASS",
+    "no_match_search": "PASS",
+    "xyz_request_command_copy": "PASS_BYTE_EQUAL_AFTER_COMPLETED_COPY",
+    "first_xyz_read": "NOT_EQUAL_IMMEDIATE_READ_RETEST_EQUAL_123_CHARACTERS_NO_COPY_CODE_CHANGED",
+    "enter_key_request_copy": "PASS",
+    "full_keyboard_audit": "NOT_EXECUTED"
+  },
+  "remote_ci": {
+    "commit": "fa7b4ee725857e2760dd5fb5d264e70eaf21c382",
+    "run_id": 38048887083,
+    "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38048887083",
+    "conclusion": "success",
+    "successful_jobs": [
+      "public-installation-engineering",
+      "linux"
+    ],
+    "scope": "PUBLIC_INSTALLATION_ENGINEERING_AND_LEGACY_L0_L1_NOT_ALL_SCIENTIFIC_SERVICES"
+  },
+  "original_external_failure_environment": "NOT_PROVEN_SAME_BROWSER_PROFILE_OR_REVIEW_TOOL",
+  "true_200_percent_zoom": "NOT_EXECUTED",
+  "new_scientific_calls": 0,
+  "runtime_or_website_bytes_changed": false,
+  "historical_failure_records_preserved": true
+}
