@@ -98,7 +98,7 @@
     "sha256": "6c32f91f43caf8226e5a34d051b59e13d2469fc9949e07eb9ad3288cba0fad09",
     "preserved_bytes": true
   },
-  "execution_record": "validation/user-molecule/occupied-space-response-20261007.json",
+  "execution_record": "validation/user-molecule/occupied-space-response-20261007.public.json",
   "new_true_F_calls": 12,
   "new_SCF_iterations": 0,
   "new_scientific_budget": {

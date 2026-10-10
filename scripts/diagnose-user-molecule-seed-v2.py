@@ -96,7 +96,7 @@ def main():
         verified.append({'path':name,'git_blob_sha256':hashlib.sha256(blob).hexdigest(),
             'export_sha256':sha(source/name),'verification':transform})
     save(output/'source-export-verification.json',{'commit':commit,'file_count':len(verified),'files':verified})
-    proposal_path=source/'validation/user-molecule/residual-diagnostic/contract-v1.json'
+    proposal_path=source/'validation/user-molecule/residual-diagnostic/contract-v1.public.json'
     proposal_raw=proposal_path.read_bytes();proposal=json.loads(proposal_raw)
     cache=Path(proposal['ordinary_origin']['source_directory']).resolve()
     cache_verified=[]
@@ -185,8 +185,8 @@ def main():
         readiness_receipt_sha256=sha(readiness_path),implementation_runtime_commit=readiness['runtime_test_commit'],
         shared_seed_archive_sha256=sha(readiness_dir/'shared-seed.npz'),
         source_file_sha256=readiness['source_file_sha256'],
-        mdr002_record_sha256=sha(source/'validation/user-molecule/method-decisions/mdr-002/record.json'),
-        expert_cancellation_receipt_sha256=sha(source/'validation/user-molecule/method-decisions/mdr-002/external-review-cancellation.json'))
+        mdr002_record_sha256=sha(source/'validation/user-molecule/method-decisions/mdr-002/record.public.json'),
+        expert_cancellation_receipt_sha256=sha(source/'validation/user-molecule/method-decisions/mdr-002/external-review-cancellation.public.json'))
     validate_execution_contract(contract);validate_proposal_binding(contract,proposal_raw)
     contract_path=output/'execution-contract.json';save(contract_path,contract)
     identity=execution_identity(contract,sha(contract_path))

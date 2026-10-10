@@ -1,0 +1,43 @@
+{
+  "review_date": "2026-10-03",
+  "docker_tasks": {
+    "evidence": "PASS",
+    "core-tests": "PASS",
+    "p14-smoke": "PASS",
+    "p14-equivalence": "PASS",
+    "p14-fixed": "PASS",
+    "p14-optimize": "PASS",
+    "p14-classify": "PASS"
+  },
+  "scientific_classification": "consistent, fixed C12H6/planar D3h protocol only",
+  "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+  "build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+  "host_provenance": "provenance-review.json",
+  "CI_static_review": "COMPLETED",
+  "CI_execution": "NOT_EXECUTED",
+  "license_review": "COMPLETED_WITH_OPEN_ITEMS",
+  "public_release_readiness": "BLOCKED",
+  "published": false,
+  "L4_resume_supported": false,
+  "L3_L4_strict_network_isolation": "NOT_EXECUTED",
+  "L4_real_interruption": "NOT_EXECUTED",
+  "environment_restore_test": "NOT_EXECUTED",
+  "previous_backup_is_historical_snapshot": true,
+  "license_materials": "license-materials-review.json",
+  "debian_corresponding_sources": "73/73 ACQUIRED_SIGNED_INDEX_HASH_VERIFIED",
+  "python_parent_sources": "18/18 SDIST_ACQUIRED",
+  "vendor_source_mapping": "634/634 Python files MATCH; 52 environment component records",
+  "github_source_publication": "REVIEWABLE_SOURCE_ONLY_CANDIDATE; NOT_PUBLISHED; authorization and target repository unresolved",
+  "image_distribution": "BLOCKED_NATIVE_SOURCE_CORRESPONDENCE_AND_NOTICE_DELIVERY",
+  "current_local_candidate_directory": "D:/AI4Science/ai4orgchem-runtime-deliveries/20261003-final-candidate",
+  "current_package_integrity_evidence": "External package-manifest.json and package-verification.json in candidate directory",
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "000da4f902d9e0ff1a59a3ff8cbaeeb42b31d68c1dcd7e0a95a0a8b4988a80de",
+    "original_size_bytes": 1728,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

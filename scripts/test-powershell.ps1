@@ -22,4 +22,4 @@ foreach ($script in Get-ChildItem -LiteralPath $PSScriptRoot -Filter '*.ps1') {
 }
 if ($errors.Count) { throw ($errors | Out-String) }
 $count++
-@{status='PASS';checks=$count;scope='PowerShell AST and path safety; no WSLc native commands executed'} | ConvertTo-Json
+@{status='PASS';checks=$count;scope='PowerShell AST and path safety; no Docker or scientific commands executed'} | ConvertTo-Json

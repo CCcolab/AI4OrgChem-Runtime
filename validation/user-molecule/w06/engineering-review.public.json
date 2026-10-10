@@ -1,0 +1,194 @@
+{
+  "revision": "W06-ENGINEERING-1",
+  "date": "2026-10-05",
+  "implementation": "ARRAY_REFERENCE_AND_READONLY_ASSESSMENT_CANDIDATE",
+  "engineering_execution": "PASS_ENGINEERING_ONLY",
+  "unit_test_total": 54,
+  "unit_groups": [
+    {
+      "pattern": "test_user_molecule_*.py",
+      "tests": 32,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "pattern": "test_reference_user_molecule.py",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "pattern": "test_runtime.py",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "bounded_actions": {
+    "metadata_check": "PASS; nAO=14; no SCF/grid/ERI",
+    "compute_refusal": "PASS; BLOCKED/20; null comparison",
+    "report_readonly": "PASS; original Check bytes unchanged"
+  },
+  "host_research_unit_tests": "10 passed at pre-fingerprint engineering state; final 10 also passed in container",
+  "test_commit": "43e80de31140d8685b5087ac5ac56654c7e68e28",
+  "test_archive_sha256": "b06e8f81a77411ba66f44fb4b97d20b0d3ff71d0eac90676e263e0c719d7ebe7",
+  "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+  "image_runtime_build_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+  "image_science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "source_only_not_in_current_image": true,
+  "test_mode": "New clean Git export mounted read-only at /workspace; reuse old image; not a rebuilt W06 image",
+  "container_limits": {
+    "cpus": 1,
+    "memory_bytes": 536870912,
+    "memory_swap_bytes": 536870912,
+    "wall_seconds": 120,
+    "network": "none",
+    "user": "10001:10001",
+    "rootfs_readonly": true
+  },
+  "containers_removed": true,
+  "outputs_retained_and_manifest_files_verified": 13,
+  "guarded_operations": [
+    "SCF.kernel",
+    "hf.kernel",
+    "Grids.build",
+    "Mole.intor",
+    "Mole.intor_by_shell"
+  ],
+  "toy_scope": "2/3 AO analytical arrays, including nonorthogonal metric and nonzero ERI; not molecules",
+  "molecular_reference_execution": "NOT_EXECUTED",
+  "molecular_numerical_acceptance": "NOT_EXECUTED",
+  "scope_approval": "NOT_REVIEWED",
+  "D2_W05": "BLOCKED / NOT_EXECUTED",
+  "D3_W06": "BLOCKED / NOT_EXECUTED",
+  "compute_enabled": false,
+  "scientific_core_changed": false,
+  "profile_or_rule_changed": false,
+  "image_rebuild": "NOT_EXECUTED",
+  "github_actions": "NOT_EXECUTED",
+  "image_distribution": "BLOCKED",
+  "public_push_release": "NOT_AUTHORIZED / NOT_EXECUTED",
+  "earlier_attempt": {
+    "test_commit": "3500d0b04b514a14e279e8050f687c346cb91ec0",
+    "unit_tests": 53,
+    "status": "PASS_ENGINEERING_ONLY; historical before result-fingerprint binding/nonzero toy addition"
+  },
+  "remaining": [
+    "W05 B01-B06 review/freezes and ordinary/acceptance drivers",
+    "Bounded molecular resource calibration and D2 numerical acceptance",
+    "W06 reviewed two-new-system scope, complete independent molecular reference per research profile, method/interpretation responsibility and A01-A18",
+    "New-code image/source/schema activation validation; r3 remains old engineering candidate"
+  ],
+  "evidence_files": [
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\w06-engineering-tests.json",
+      "size_bytes": 987,
+      "sha256": "72ec94c34eadd5301efbd70129289a36a8e3dd7ba65272bdd5e34f0f185ce6fc"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\execution.json",
+      "size_bytes": 1601,
+      "sha256": "dab641c54b2f09af030f5899a60ed9f001cb27bdc85d3f41b9431e821c159f0a"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\container-inspect.json",
+      "size_bytes": 7835,
+      "sha256": "c5c22d7b6faf356bdb5f30d700e27ec9f565f3cd3b34d8eabca0134c8d2a477a"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\image-inspect.json",
+      "size_bytes": 3626,
+      "sha256": "df284b98b03357cdecf5532a02f499cf3f529d90824fb535d47a5de409b73008"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\docker-server.json",
+      "size_bytes": 1280,
+      "sha256": "239516d679311963484fd23e3e84cd84d4c672b63069b6dafc2c863a3bbd47de"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\test-source.json",
+      "size_bytes": 596,
+      "sha256": "c83a6279767acfeac8a346eb8d74e961dab9868f0a421879eccc909d003335fc"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\stdout.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\stderr.log",
+      "size_bytes": 8341,
+      "sha256": "0134d9e606e0e9ca8d6089d1610c5733b57d20712dcce1ec1881867c1b97d114"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\readonly-report.txt",
+      "size_bytes": 2196,
+      "sha256": "7b009a638735b261eff73d52231c481d187ae0392f2bafd08b542aec5efae863"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\metadata-check\\preflight.json",
+      "size_bytes": 6005,
+      "sha256": "06d65d4a43344e945812c1c445fb61f72e3d7b526934e8960fc766efc4c4d4f5"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\metadata-check\\report.md",
+      "size_bytes": 2195,
+      "sha256": "103c4cd5e11e74a280864b9e8e2794b1b8dccaab562acee37545a6fa25349bc9"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\metadata-check\\run-manifest.json",
+      "size_bytes": 2045,
+      "sha256": "68379f3727edc1851c9b721a18bef2bd0688486cb3c2501faefe24c785744d9c"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\blocked-compute\\result.json",
+      "size_bytes": 1383,
+      "sha256": "6a6c40abefa5a0320b5b4dc84fd2d00e5dea770148fcf3cfc2147bd9be7db617"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\blocked-compute\\report.md",
+      "size_bytes": 2237,
+      "sha256": "342b1c6da4fbcee982db61262a7dbf8a370d414ba6fa70f8b8fcd30bdf3287bd"
+    },
+    {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-w06-engineering\\attempt-2\\blocked-compute\\run-manifest.json",
+      "size_bytes": 2220,
+      "sha256": "2ffeddb6ca4818a8ec0cce769abba3d4400ee4a849fc69b288bee6dc13ec8e88"
+    }
+  ],
+  "preservation": {
+    "status": "PASS_SCOPED_PRESERVATION",
+    "original_workspaces": [
+      {
+        "root": "D:\\AI4Science\\ai4orgchem-runtime",
+        "files_checked": 108,
+        "status": "PASS"
+      },
+      {
+        "root": "D:\\AI4Science\\AI4OrgChem",
+        "files_checked": 5,
+        "status": "PASS"
+      }
+    ],
+    "original_status_unchanged": true,
+    "science_files_unchanged": 591,
+    "old_manifest_counts": {
+      "20261005-user-molecule-w01-w04": 145,
+      "20261005-user-molecule-w05-preparation": 100,
+      "20261005-user-molecule-ci": 553
+    },
+    "historical_archives_unchanged": 3
+  },
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "e83152ca55c093cb66f2c288bb4b0dd334f7d70d4870071ea3cb321538c16878",
+    "original_size_bytes": 7741,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

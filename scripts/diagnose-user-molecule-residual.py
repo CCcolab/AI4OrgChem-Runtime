@@ -95,7 +95,7 @@ def main():
         verified.append({'path':name,'git_blob_sha256':hashlib.sha256(blob).hexdigest(),
             'export_sha256':sha(source/name),'verification':transform})
     save(output/'source-export-verification.json',{'commit':commit,'file_count':len(verified),'files':verified})
-    proposal_path=source/'validation/user-molecule/residual-diagnostic/contract-v1.json'
+    proposal_path=source/'validation/user-molecule/residual-diagnostic/contract-v1.public.json'
     proposal_raw=proposal_path.read_bytes();proposal=json.loads(proposal_raw)
     cache=Path(proposal['ordinary_origin']['source_directory']).resolve()
     cache_verified=[]

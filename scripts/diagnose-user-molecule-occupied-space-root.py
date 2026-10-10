@@ -40,7 +40,7 @@ def host_memory():
 
 
 def build_contract(source,commit,inputs):
-    origin=copy.deepcopy(json.loads((source/'validation/user-molecule/residual-diagnostic/contract-v1.json').read_bytes())['ordinary_origin'])
+    origin=copy.deepcopy(json.loads((source/'validation/user-molecule/residual-diagnostic/contract-v1.public.json').read_bytes())['ordinary_origin'])
     cache=Path(origin['source_directory']).resolve();record=json.loads((cache/origin['record_file']).read_bytes())
     for name in ('mo_coefficients','mo_occupations'):origin['array_identities'][name]=copy.deepcopy(record['array_identities'][name])
     for kind in ('record','arrays'):

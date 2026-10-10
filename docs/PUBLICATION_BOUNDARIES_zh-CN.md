@@ -1,64 +1,37 @@
 # 源码公开、镜像分发与本地候选交付
 
-## 2026-10-10静态指南上线（最新状态）
+## 当前公开范围
 
-[直接打开Runtime用户指南](https://cccolab.github.io/AI4OrgChem-Runtime/)：GitHub Pages已按用户要求启用`main`的`/docs`分支发布源，使用GitHub默认域名和HTTPS。首次managed Pages部署[run 37998298990](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37998298990)成功，对应部署基线`99a52b8a992260cc7ee3e88f699da5454ffb87af`；实际HTTPS与页面验收范围见[指南上线记录](GITHUB_PAGES_GUIDE_20261010_zh-CN.md)。
+Runtime 源码和静态用户指南已按用户授权公开于[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。[用户指南](https://cccolab.github.io/AI4OrgChem-Runtime/)使用 GitHub Pages 的 `main` / `docs` 发布源；网页提供说明、输入准备和本地命令，不提供在线分子计算。
 
-网页是静态使用指南，阅读无需Docker／WSL；复制的命令在用户本地Runtime执行，不提供在线计算。`/docs`中的文档和已公开归档均属于分支发布范围。此次不分配新版本号、不打标签、不发布Release或镜像；WSLc、镜像分发、旧条件态Compute及L4不支持恢复运行的边界不变。以下2026-10-09及更早章节保留历史状态，其中Pages未启用的表述不代表当前状态。
+当前入口只展示 Docker 的实际计算能力及普通 WSL2 的已记录环境检查能力。普通 WSL2 Check 与 Docker 验收分别登记，不能互相授予科学资格。已撤下的平台候选入口及旧状态材料按原始字节保留于本地归档；当前文件树的撤下操作不消除既有 Git 历史，也不改写旧计算证据。
 
-## 2026-10-09公开同步实绩（历史状态）
+当前公开文件包括 Runtime 自有代码、固定来源与依赖锁、用户文档、测试、明确署名的第三方材料和限定的复核证据。不包含完整本机环境、Docker 镜像、下载的依赖源码归档、全部运行日志、检查点或原开发工作区。新增最小数值见证包用于对保存数据做矩阵与账本复核，不授权新科学调用；其原始、派生身份和缺失项分别记录。
 
-用户已授权公开本次候选的完整历史、源码材料及用户提供的网页指南，公开仓库为[CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。首推main为`06d50885bdccf31f83b89229c1513121542375d5`；[Actions run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122)三个限定job均成功，日志与证据附件属于授权公开范围。详见[公开同步记录](GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)。
+Git clone 提供源码和历史；项目制作的安装源码 ZIP 提供源码及 Git 对象证明，不能称为完整安装包。公开源码不意味着公开镜像，不意味着所有登记状态或任意用户分子都已验收。
 
-这是源码与指南公开同步，不是镜像分发或全部科学服务认证。Pages尚未启用，不提供在线计算；新版本号未确定，没有正式标签或Release。YouMind十一Skill导出由用户延后。公开授权不替第三方授予权利，根Apache-2.0和NOTICE的第三方材料边界继续适用。镜像分发仍BLOCKED_LOCAL_ONLY，WSLc仍BLOCKED／NOT_EXECUTED并暂停；旧用户分子条件态Compute仍BLOCKED，L4可保存检查点但不支持恢复运行。
+## CI 和科学服务声明
 
-下文2026-10-03及“同步准备增补”保留各自历史状态；其中未推送、公开待确认和远端CI NOT_EXECUTED不代表本段最新状态，不改写旧证据。
+[Actions run 38003025857](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857)对 `86e29b47` 的三个既有 job 均成功，覆盖工程合同和旧 L0/L1。该记录不能证明本轮修改、新安装 CI 或全部科学服务通过；新增 job 在取得真实执行记录前必须标明未执行。CI 构建和测试可以上传限定证据附件；流水线不推送镜像、创建正式标签或发布 Release。
 
-历史核对日期：2026-10-03。当轮仅完成本地材料和备份；未设置 remote、推送、改变可见性、打正式标签或发布 Release。
+当前普通分子服务限 H/C/N/O、中性闭壳层单重态、RHF/6-31G(d)、≤20 原子且实际 AO≤80。同版本 PySCF 对照是封装一致性核对，波函数稳定性未执行。固定案例按各自协议和实际镜像记录解释；高成本 78 个登记态仅两个先导态完成验收。用户分子条件态 Compute 仍缺合格端点，继续关闭；这些失败不自动重审原 P01—P14。L4 可保存检查点，不支持恢复运行。
 
-## 已闭合的本地材料
+## 镜像分发尚缺什么
 
-- 105 个 Debian binary 包映射到 73 组精确 source package/version；236 份 `.dsc`/上游归档/Debian 补丁归档取得并校验。三个官方 Sources 索引与 InRelease 签名验证通过，信任锚为固定候选镜像自带 Debian archive keyring。
-- 17 个锁定 Python 分发包加 pip 的 18 份精确版本 sdist，均与 PyPI 版本 JSON 声明的 SHA-256 一致。此校验不等于独立签名或原生 wheel 构建证明。
-- pip/setuptools 内嵌清单纠正为 52 条环境记录：原统计漏计 pip 缩进行的 5 个传递组件，每份 pip 各漏 5 条。634 个实际内嵌 Python 文件与精确父包 sdist 全部一致，原许可证和版权完整保留。setuptools 内嵌 autocommand 为 LGPLv3，不应随主体标为 MIT。
-- 原镜像 pip 内独立 vendor 许可证未找到；从匹配父包 sdist 补出 21 份通知，独立装入本地候选包，没有修改旧镜像。Libxc/HDF5/CPython/h5py 官方版本源码已取得；XCFun 固定提交及 PySCF 补丁、libcint v6.1.3 源码已保存。XCFun 补丁静态适用性检查通过，未应用到科学运行镜像。
+公开预构建镜像仍未提供，分发保持 `BLOCKED_LOCAL_ONLY`。以下材料问题独立保留，不能用源码公开或自行构建替代：
 
-版本匹配、签名、源码匹配、镜像支持是不同结论；实际记录见 validation/source-materials-final-review.json、source-verification.json、vendor-license-mapping.json 和 native-provenance.json。
+1. 部分 wheel 内嵌 libgfortran/libgomp/libquadmath 的准确源版本、补丁和构建记录尚未取得；Debian gcc-12 源码不能冒充其对应源码。
+2. SciPy OpenBLAS 开发提交及 NumPy/PySCF BLAS 的实际构建来源未闭合；父包 sdist 或文件名不能证明原生二进制对应。
+3. h5py wheel 的 HDF5 构建镜像不可变身份、libaec/libsz 的实际版本和补丁仍有未知项。
+4. PySCF 原生构建选项及 XCFun 补丁是否实际用于对应 wheel 缺构建记录；源码、补丁和静态适用检查不能替代二进制证明。
+5. 接收方可取得的完整通知、适用对应源码及 LGPL 修改/重新链接条件仍需闭合；本地补充材料路径不是公开交付路径。新增组件和字体事项见[组件附录](../compliance/HIGH_COST_COMPONENTS_20261009_zh-CN.md)。
 
-## GitHub 源码公开尚缺什么
+既有 Debian/Python 精确版本源码、签名、vendor 通知与许可材料已取得的事实保留；未知项不能扩大为“所有源码都缺失”。根 Apache-2.0 只覆盖 Runtime 自有代码，第三方文件按其原许可；见 [LICENSE](../LICENSE)、[NOTICE](../NOTICE)及[compliance README](../compliance/README.md)。
 
-限定公开内容为 runtime 自有源码、构建与锁、候选适配、如实记录的报告及已署名上游许可/构建配方/补丁；不把镜像、下载的依赖归档、运行日志、私有结果或原开发工作区加入 Git。compliance/README.md 明确第三方文件授权边界，根 Apache-2.0 不覆盖全部材料。
+镜像另需核对目标 registry、权限和可见性，取得明确分发授权，完成实际推送/拉取和 registry digest 登记。本轮不分配新 Runtime 版本号，不打正式标签，不发布 Release 或镜像。
 
-在此范围内，没有发现必须先完成所有原生库二进制来源调查才能公开 runtime 源码的技术条件。源码候选可审阅，**没有公开授权，仍未发布**。公开前仍须：确认目标仓库所有权/地址与可见性、取得明确源码公开授权、检查最终拟上传文件及报告中的本地路径披露范围，完成目标仓库推送操作。当前无 remote；实际 CI 运行 NOT_EXECUTED，可在获授权的目标仓库推送后执行，不伪造预先 PASS。
+## 本地归档与后续增强
 
-WSLc 暂停不妨碍如实公开“候选适配、尚未支持”的源代码，但阻止将该仓库宣传为已验收的 WSLc 产品。不能把仅公开源码与 v0.1.0 正式镜像 Release 合并为同一次默认授权。
+既有候选包、镜像导出、来源归档、记录和备份继续保留各自构建、源码、执行身份，不以本轮文档提交冒充历史镜像构建提交。同盘备份不等于完整环境恢复验收。
 
-## 容器镜像分发尚缺什么
-
-镜像保持原 ID sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54，构建 runtime 为 f30b2906794d14f9030daab779c0d6a7cd4bd6f7。新审查/材料提交不写成旧镜像构建提交。
-
-1. 各 wheel 内嵌 libgfortran/libgomp/libquadmath 的准确源版本、补丁和构建记录未取得。ELF `.comment` 在这些运行库中为空；其他库的 GCC/Clang 编译器标记不能反推运行库来源。Debian gcc-12 源码不能冒充这些 wheel 内嵌运行库的对应源码。
-2. SciPy OpenBLAS 开发提交、NumPy/PySCF BLAS 构建来源未闭合。父包 sdist 和文件名不是原生库精确来源证明。
-3. h5py Linux wheel 使用上游自建 manylinux HDF5 镜像；源码配方未提供本轮实际 wheel 所用构建镜像不可变身份。HDF5 2.0.0 API/版本源码已确认，但 libaec/libsz 版本、补丁和实际构建来源仍 UNKNOWN。
-4. PySCF 原生库实际构建选项、XCFun 补丁是否成功应用缺少 wheel 构建记录。保存原始源码和补丁并通过 apply --check，只闭合候选配方，不证明二进制对应。
-5. 最终分发形式须实际向接收方提供完整通知和适用对应源码，并核查 LGPL 修改/重新链接条件。当前本地补充包已形成，公开获取路径尚未启用；原镜像本身未装入新增通知。不能只推送旧镜像并把本地路径当作接收方能访问的来源。MPL 的源码与通知要求见[官方第 3 节](https://www.mozilla.org/en-US/MPL/2.0/)。
-
-16 个自由文本 Debian 版权文件的精确单一 SPDX 表达式仍未归一化；完整原文与精确源归档已保存。这是进一步文件级判读事项，不应再描述成“未取得 Debian 源码”，也不能只因未生成单一 SPDX 字符串就推断许可缺失。原始多许可和例外继续保留。
-
-除以上材料问题外，公开镜像还缺 GHCR 目标/权限/可见性核对、明确镜像发布授权、推送拉取实测和 registry digest。若仍按实施方案首发 WSLc，则还缺真实最低入口与 WSL2/WSLc 对照；当前全部暂停。Docker 已验证范围可独立如实描述，但不自动改变首发范围或解除发布阻塞。
-
-## 本地候选包与备份
-
-目录：D:\AI4Science\ai4orgchem-runtime-deliveries\20261003-final-candidate。包包含现有镜像导出、运行记录、当前 Git bundle 与源码快照、完整通知补充、取得的源码归档与校验/签名记录。package-manifest.json 记录实际候选源码提交和旧镜像构建提交；package-verification.json 是执行后的归档校验记录。旧 20261002 备份保留，不覆盖。
-
-这是本地候选交付和同盘备份，不是正式 Release，也不是已完成环境恢复的证明。镜像支持、来源 UNKNOWN、WSLc BLOCKED、CI NOT_EXECUTED 及 L4 无恢复能力均随包声明。
-
-## 只是后续增强的事项
-
-独立存储副本、真实恢复演练、镜像签名/供应链证明、机器可交换 SBOM、自动发布流水线属于后续增强，不扩展为通用合规平台。L3/L4 严格断网和完整 L4 中断实测不在本轮重复；低成本停止探针仍是尚缺的平台验收。WSLc L3/L4 可待最低入口恢复后按预算单独验证。L4 不支持恢复运行，实现 resume 不属于欠账。
-
-## 2026-10-09同步准备增补
-
-上文为2026-10-03历史材料范围，不替代新增普通分子服务、三批固定案例及网页的当前记录。现已形成完整本地候选和网页功能名修订；拟建CCcolab/AI4OrgChem-Runtime，仓库尚未创建／推送，Pages未启用。当前文件、125提交基线、有限凭证扫描、实施方案／评审材料及网站权属待确认范围见[同步准备](GITHUB_SYNC_PREPARATION_20261009_zh-CN.md)。完整历史公开需明确接受其正文；仅最新树无秘密不证明历史可公开。
-
-镜像分发的新增组件与字体问题见[2026-10-09组件附录](../compliance/HIGH_COST_COMPONENTS_20261009_zh-CN.md)，继续BLOCKED_LOCAL_ONLY。上文旧镜像身份仍是历史对象，不冒充最新构建。远端CI NOT_EXECUTED、WSLc BLOCKED／暂停及L4不支持恢复运行的限制继续保留；同步准备不重新计算或改写这些结论。
+独立存储副本、真实恢复演练、镜像签名/供应链证明、机器可交换 SBOM 与自动发布流水线属于后续增强；本轮不扩展为通用合规平台，不重算历史已通过任务、不重建镜像或修改原科研环境。L3/L4 严格断网和完整 L4 中断实测仍未执行；实现 resume 不属于当前合同。

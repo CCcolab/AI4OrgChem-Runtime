@@ -6,7 +6,7 @@
 
 本轮在隔离分支继续，基线`34f115723d8537759259bee7279a7cfb61ea54d2`，实际受测源码`029cd557f2a858051a4f98d34cadc981b932346c`。复用r3镜像`sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d`，镜像构建runtime提交`5098775c9cf40468ab92712447a3e5c7b1361a63`，science提交`cc7437901119e71ef7945a12813c021c383e7648`；当前源码以已提交的只读挂载执行，未重建镜像。原项目及原runtime工作区未切换、重置或清理。前轮九点诊断及原失败保持，最新真实数值记录仍为[九点响应](USER_MOLECULE_OCCUPATION_RESPONSE_20261007_zh-CN.md)。
 
-来源D是九点响应中`AO_ANCHOR_SYMMETRIC_SUM / production_copy`保存的单点密度，density-v1 ID为`bde824cc2957779325a8f8c2fb53fb626970c55b757285a1da4a69fdb92b4faf`。该D未通过科学固定点验收；其历史算子身份仅表示祖先，**不作为任何新D的F或能量**。来源JSON、NPZ、所有102个已读取response/mask成员及旧1471载荷清单先核对，导出仅含D、两种S、mask和两个anchor六个小数组，不携带网格/ERI到模拟容器。身份对应、每个新D和实际导出字节见[机器记录](../validation/user-molecule/occupied-space-admission-20261007.json)。
+来源D是九点响应中`AO_ANCHOR_SYMMETRIC_SUM / production_copy`保存的单点密度，density-v1 ID为`bde824cc2957779325a8f8c2fb53fb626970c55b757285a1da4a69fdb92b4faf`。该D未通过科学固定点验收；其历史算子身份仅表示祖先，**不作为任何新D的F或能量**。来源JSON、NPZ、所有102个已读取response/mask成员及旧1471载荷清单先核对，导出仅含D、两种S、mask和两个anchor六个小数组，不携带网格/ERI到模拟容器。身份对应、每个新D和实际导出字节见[机器记录](../validation/user-molecule/occupied-space-admission-20261007.public.json)。
 
 Profile需区分三种身份：执行导出LF原文件SHA-256为`18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9`；canonical JSON SHA-256为`5c78ef8e741b255421a465895524cdb7aa208ef90751a1524eff9c7f88e5d537`；当前工作区CRLF文件SHA-256为`c3359c80f2b292c14875335b8e14a22e37f35858581402b0b47e0f20c6884f45`。本轮保存的SOURCE和fake账本中`profile_sha256`是canonical JSON别名，已另存`PROFILE_IDENTITY_CLARIFICATION.json`澄清，原执行记录不回写。后续正式科学合同分别记录canonical和实际执行文件哈希。
 
@@ -53,6 +53,5 @@ Profile需区分三种身份：执行导出LF原文件SHA-256为`18bd594a8b606ef
 
 随后才根据真实单点记录设计受限根搜索，须显式initial-D包装器及预算感知求解器。每初值201F意味着单路径四初值804F、三路径2412F，不能直接复制旧201/603限额或自动多根扫算；须另冻预算并保留整Jacobian与返回/映射端点尾检费用。当前未知其他合格根是否存在、能否收敛、驻定性/稳定性，以及科研能差允许用途；不把本轮初值准入视为这些问题已解决。
 
-外部专家流程维持CANCELLED_BY_USER，不要求外部角色或意见，也不将缺少意见作为阻塞。Compute因缺合格端点、完整实现等价性及研究/资源范围保持BLOCKED，科学能差null。完整W01—W07本地CI本轮NOT_EXECUTED，远端GitHub Actions NOT_EXECUTED；WSLc暂停BLOCKED/NOT_EXECUTED，镜像分发BLOCKED，无WSL升级、镜像重建或公开推送。原P01—P14不重算、不自动重审；L4只支持保存检查点、不支持恢复运行。
 
 本轮结果、输入澄清、静态核查与备份在`D:\AI4Science\ai4orgchem-runtime-deliveries\20261007-user-molecule-occupied-space-admission`，独立本地增补提交供审阅，不改变此前源码公开候选。

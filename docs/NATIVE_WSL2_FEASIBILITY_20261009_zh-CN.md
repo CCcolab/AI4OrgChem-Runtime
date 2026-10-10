@@ -1,6 +1,5 @@
 # 普通WSL2原生Runtime路径的只读可行性核查
 
-日期：2026-10-09（Asia/Tokyo）。**可以将普通WSL2作为独立Runtime后端方向；它不等于WSLc，也不需要为了本轮方向升级WSL。** 本轮确认已有原项目环境可读取、主要科学库版本吻合，但没有部署或验收原生计算启动器，不能直接把Docker受测worker叫作WSL2受测worker。
 
 本轮新增QM、SCF、积分、优化、科学预算均0；不导入科研脚本或任何科学库，不安装/升级/修改环境，不修改原项目/冻结worker/profile，不关闭任何WSL发行版，不改全局内存上限。原`ai4orgchem`环境仅查询标准库包元数据，使用`-I -B`确认isolated=1、no_user_site=1、不写bytecode。
 
@@ -58,6 +57,5 @@
 5. 使用工程替身验证source/profile/native环境/前序绑定不匹配、预算重复/不足/未知、旧结果复用与resume均拒绝；容量充足也不自动批准未验证科学profile。
 6. 只有新worker的隔离、资源、预算、保存等工程测试完成后，另立一份尚未执行态的具体新科学验收范围/预算。普通WSL2可能适合原模型，但当前没有native Runtime科学执行记录，不赋予新的科学资格。
 
-本轮仅完成第1项。第2—5项为可直接执行的最小后续零QM工程工作，第6项不由本页自动授权。WSLc继续暂停/BLOCKED；两条平台路径明确区分。原项目曾长期在WSL2运行P12是有价值的工程经验，但本轮未把历史体验当作新平台封装、资源及全部状态科学验收通过。
 
 实际命令、原字节stdout/stderr、启动状态和包元数据见 `native-wsl2-readiness.json`、`complete-dependencies.json`。查询不输出环境变量、令牌或秘密。

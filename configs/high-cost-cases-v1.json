@@ -1,5 +1,4 @@
 {
-  "WSLc": "BLOCKED_PAUSED",
   "automatic_retry": false,
   "distribution": "BLOCKED_LOCAL_ONLY",
   "general_user_conditional_compute": "BLOCKED",

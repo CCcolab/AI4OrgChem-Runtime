@@ -3,7 +3,7 @@ param([Parameter(Mandatory)] [string] $OutputDirectory)
 $ErrorActionPreference = 'Continue'
 [IO.Directory]::CreateDirectory([IO.Path]::GetFullPath($OutputDirectory)) | Out-Null
 $checks = @()
-foreach ($name in @('wsl.exe','wslc.exe','container.exe','docker.exe','podman.exe','nerdctl.exe')) {
+foreach ($name in @('wsl.exe','docker.exe')) {
     $command = Get-Command $name -ErrorAction SilentlyContinue
     $checks += @{name=$name;accessible=[bool]$command;path=$(if($command){$command.Source}else{'UNKNOWN'})}
 }
@@ -27,7 +27,6 @@ if ($wslExe) {
     $checks += @{name='wsl-distributions';exit_code=$LASTEXITCODE}
 }
 $records = @{captured_utc=[DateTime]::UtcNow.ToString('o');checks=$checks;container_processes=$processes;
-    known_wslc_path_exists=(Test-Path -LiteralPath 'C:\Program Files\WSL\wslc.exe');
     docker_desktop_executable_exists=(Test-Path -LiteralPath 'C:\Program Files\Docker\Docker\Docker Desktop.exe');
     installed_wsl_packages=@(Get-AppxPackage '*WindowsSubsystemForLinux*' -ErrorAction SilentlyContinue | Select-Object Name,Version)}
 $records | ConvertTo-Json -Depth 10 | Set-Content (Join-Path $OutputDirectory 'tool-diagnostics.json') -Encoding utf8

@@ -1,6 +1,6 @@
 # 条件残差求解原型：工程实现与验收
 
-2026-10-06。原方程的隔离纯数组求解原型已实现，并通过 **28 个新用例 + 39 个针对性回归，共67个唯一用例**，无失败、错误或跳过。新增分子 SCF、格点、积分/完整 ERI 调用为0；未接入生产Compute。原v2失败、科学源码、profile、规则和所有原阈值保留。机器记录见 [残差原型验收](../validation/user-molecule/residual-prototype-20261006.json)。
+2026-10-06。原方程的隔离纯数组求解原型已实现，并通过 **28 个新用例 + 39 个针对性回归，共67个唯一用例**，无失败、错误或跳过。新增分子 SCF、格点、积分/完整 ERI 调用为0；未接入生产Compute。原v2失败、科学源码、profile、规则和所有原阈值保留。机器记录见 [残差原型验收](../validation/user-molecule/residual-prototype-20261006.public.json)。
 
 ## 已实际解决的工程问题
 
@@ -47,6 +47,5 @@
 
 分子算子回调桥、普通D0到流形的明确初始化、该策略的完整独立分子参考与新分子合同尚未完成。后续应先冻结这些身份/规则与新求值、进程、时间、内存预算，再做固定最小夹具诊断；旧v2额度与失败不重置。现有完整v2分子参考是已实现且执行失败，不写成“未实现”。方法目标、占据/能量解释、可比根与范围仍未真实审定，咨询继续按用户要求延期。
 
-科研Compute与科研W07仍BLOCKED；真人试用/反馈延期，不阻塞当前工程推进。WSLc暂停/BLOCKED，远端CI NOT_EXECUTED，Colab DEFERRED，镜像分发及r3完整组件许可问题单独保留；没有重建、WSL变更或公开推送/发布。原L4保存检查点但不支持恢复运行。
 
-完整命令、源归档、两次测试、只读矩阵检查、补充隔离探针和保留清单位于 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261006-user-molecule-residual-prototype`。原 [W01—W07完整CI](USER_MOLECULE_CI_W01_W07_20261006_zh-CN.md) 是此前44ad90e的176项记录，未把本轮新原型追加为那次已执行结果。
+完整命令、源归档、两次测试、只读矩阵检查、补充隔离探针和保留清单位于 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261006-user-molecule-residual-prototype`。原 [W01—W07完整CI](USER_MOLECULE_CI_W01_W07_20261006_zh-CN.public.md) 是此前44ad90e的176项记录，未把本轮新原型追加为那次已执行结果。

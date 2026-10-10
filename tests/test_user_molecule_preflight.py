@@ -22,7 +22,7 @@ class CpuHierarchyTests(unittest.TestCase):
         (self.proc / 'cgroup').write_text(memberships)
         (self.proc / 'mountinfo').write_text(
             f'1 0 0:1 / {self.mount.as_posix()} rw - {filesystem} none {controllers}\n')
-        with patch('os.sched_getaffinity', return_value={0, 1, 2, 3}):
+        with patch('os.sched_getaffinity', return_value={0, 1, 2, 3}, create=True):
             return cpu_snapshot(self.proc)
 
     def test_hybrid_inactive_v2_does_not_hide_v1_limit(self):

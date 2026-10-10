@@ -59,10 +59,10 @@ def main():
               'image_id':backup['image_id'],'image_runtime_commit':backup['image_runtime_commit'],
               'source_material_files':source_count,'notice_and_mapping_files':notice_count,
               'files':files,'public_source':'NOT_PUBLISHED','public_image':'BLOCKED',
-              'WSLc':'BLOCKED / NOT_EXECUTED','CI_execution':'NOT_EXECUTED',
+              'CI_execution':'NOT_EXECUTED',
               'L4_resume_supported':False,'scientific_runs_repeated':False,
               'restore_execution':'NOT_EXECUTED','independent_storage_copy':'NOT_EXECUTED',
-              'open_items':'runtime-source.zip: docs/PUBLICATION_BOUNDARIES_zh-CN.md and validation/source-materials-final-review.json'}
+              'open_items':'runtime-source.zip: docs/PUBLICATION_BOUNDARIES_zh-CN.md and validation/source-materials-final-review.public.json'}
     (destination/'package-manifest.json').write_text(json.dumps(record, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     (destination/'package-manifest.sha256.txt').write_text(digest(destination/'package-manifest.json')+'  package-manifest.json\n', encoding='utf-8')
     for file in files:

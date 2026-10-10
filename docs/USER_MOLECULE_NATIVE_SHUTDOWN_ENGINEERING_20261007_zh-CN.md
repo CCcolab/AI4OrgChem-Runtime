@@ -45,6 +45,5 @@ SIGTERM/SIGINT处理器只记录停止标志；同步检查点在收费、原生
 
 当前工程增补已收尾。剩余科学问题仍是原门槛下的合格固定点、最终独立验收/两生产路径等价、研究范围与资源资格；本轮没有解决它们。任何新科学运行需另有具体执行范围与预算，当前记录不授权新运行。无需重新启动已取消的外部专家流程。
 
-固定P14历史Docker验收、Check与Report保持各自记录；L4可保存检查点但不支持恢复，L3/L4严格断网未执行。WSLc仍BLOCKED/暂停，GitHub Actions仍NOT_EXECUTED，镜像分发仍BLOCKED，源码公开范围另行确认。未升级WSL、重建镜像或公开推送。
 
-详见[工程机器记录](../validation/user-molecule/native-shutdown-engineering-20261007.json)、[MDR-011](../validation/user-molecule/method-decisions/mdr-011/record.json)、[能力登记](../validation/local-runtime-capabilities-v1.json)及[旧139次诊断](USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.md)。完整实际命令、失败与成功日志、来源快照、护栏/账本、只读核验及本地备份在 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261007-user-molecule-native-shutdown-engineering`。
+详见[工程机器记录](../validation/user-molecule/native-shutdown-engineering-20261007.public.json)、[MDR-011](../validation/user-molecule/method-decisions/mdr-011/record.json)、[能力登记](../docs/LOCAL_HISTORY_ARCHIVE_zh-CN.md)及[旧139次诊断](USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.public.md)。完整实际命令、失败与成功日志、来源快照、护栏/账本、只读核验及本地备份在 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261007-user-molecule-native-shutdown-engineering`。

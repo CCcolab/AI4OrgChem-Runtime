@@ -11,12 +11,12 @@
   },
   {
     "git_blob": "35d63615a2a9aa49b3673fadc237d3558aedf85c",
-    "path": "ai4orgchem-runtime-implementation-plan-professional-revised.md",
+    "path": "ai4orgchem-runtime-implementation-plan-professional-revised.public.md",
     "archive_member": null
   },
   {
     "git_blob": "6b09abc07915a93420d2babde3bdc2621ebdefb2",
-    "path": "ai4orgchem-runtime-implementation-plan.md",
+    "path": "ai4orgchem-runtime-implementation-plan.public.md",
     "archive_member": null
   },
   {
@@ -31,12 +31,12 @@
   },
   {
     "git_blob": "bebb17adccb544c21ca335b593f9cf30488810ac",
-    "path": "docs/CORRESPONDING_SOURCE_zh-CN.md",
+    "path": "docs/CORRESPONDING_SOURCE_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "19375be78ff39af24978acee56b56c4dbb980089",
-    "path": "docs/DOCKER_STARTUP_RECOVERY_20261009_zh-CN.md",
+    "path": "docs/DOCKER_STARTUP_RECOVERY_20261009_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -46,7 +46,7 @@
   },
   {
     "git_blob": "4bba0aa60f1149c0ededd5dac1e301bd24dcea87",
-    "path": "docs/L3_PREPARATION_zh-CN.md",
+    "path": "docs/L3_PREPARATION_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -56,7 +56,7 @@
   },
   {
     "git_blob": "a62195629d5d71b81fcb528ed53c85920faafba0",
-    "path": "docs/LOCAL_DELIVERY_zh-CN.md",
+    "path": "docs/LOCAL_DELIVERY_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -66,7 +66,7 @@
   },
   {
     "git_blob": "5dcafdf883f43a913ed2f4b4dbf74bc2d7c405a0",
-    "path": "docs/LOCAL_RUNTIME_FRAMEWORK_20261007_zh-CN.md",
+    "path": "docs/LOCAL_RUNTIME_FRAMEWORK_20261007_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -81,7 +81,7 @@
   },
   {
     "git_blob": "8c9d0668241a06d9895eac854350a34a0d66ffed",
-    "path": "docs/MOLECULAR_SINGLE_POINT_zh-CN.md",
+    "path": "docs/MOLECULAR_SINGLE_POINT_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -96,17 +96,17 @@
   },
   {
     "git_blob": "a58992a98f679ca244121896e93bc57843448db3",
-    "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+    "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "84e024784ef9c536657065235e77556ea3a8c513",
-    "path": "docs/PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md",
+    "path": "docs/PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "3a07537b730a5c175dc16ef62dfac1a64b9b3397",
-    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -136,7 +136,7 @@
   },
   {
     "git_blob": "ed93bf028bf67500a5cb167340d5ba01c0d6b93e",
-    "path": "docs/RUNTIME_WEB_GUIDE_zh-CN.md",
+    "path": "docs/RUNTIME_WEB_GUIDE_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -146,32 +146,32 @@
   },
   {
     "git_blob": "d43031852c6827bf1b26ab93f02d5b9caa721660",
-    "path": "docs/SIX_ISSUE_REMEDIATION_20261009_zh-CN.md",
+    "path": "docs/SIX_ISSUE_REMEDIATION_20261009_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "15abf4301ca4b15e63174b46f7bb0d7c87dc4e9f",
-    "path": "docs/SOURCE_AUDIT_zh-CN.md",
+    "path": "docs/SOURCE_AUDIT_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "f7939d820f8b5e4aa4be020c77696f11a5f7304f",
-    "path": "docs/SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.md",
+    "path": "docs/SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "c131b2fd8b24f1bb7e304ddd7166d428c5ebf6e7",
-    "path": "docs/USER_MOLECULE_CI_20261005_zh-CN.md",
+    "path": "docs/USER_MOLECULE_CI_20261005_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "4966a903a3feb2859dbc5e92ba0200907807aaed",
-    "path": "docs/USER_MOLECULE_CI_W01_W06_20261005_zh-CN.md",
+    "path": "docs/USER_MOLECULE_CI_W01_W06_20261005_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "e8a8c5ee7d71cb09489ca76d7ecda88b4a3082a4",
-    "path": "docs/USER_MOLECULE_CI_W01_W07_20261006_zh-CN.md",
+    "path": "docs/USER_MOLECULE_CI_W01_W07_20261006_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -221,12 +221,12 @@
   },
   {
     "git_blob": "665cffcd88d8fce3fe5d5a0b5b2cdb4051c28e65",
-    "path": "docs/USER_MOLECULE_REPORT_20261006_zh-CN.md",
+    "path": "docs/USER_MOLECULE_REPORT_20261006_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "6bc8385ec6f108e6f1397b284e2912972749180b",
-    "path": "docs/USER_MOLECULE_RESIDUAL_BRIDGE_20261006_zh-CN.md",
+    "path": "docs/USER_MOLECULE_RESIDUAL_BRIDGE_20261006_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -236,47 +236,47 @@
   },
   {
     "git_blob": "c7c411242c12764cb604bc2844ece14a46db1ea1",
-    "path": "docs/USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.md",
+    "path": "docs/USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "6f3bbd48cc0f8d78499bd83f7f47b67b7023fd26",
-    "path": "docs/USER_MOLECULE_ROOT_NATIVE_ENGINEERING_20261007_zh-CN.md",
+    "path": "docs/USER_MOLECULE_ROOT_NATIVE_ENGINEERING_20261007_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "5d9a7f84c4a267fb7d3f37f66324b594ad2799e5",
-    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "cf4ade13027f01853f9d7f971efb2084ba247efa",
-    "path": "docs/USER_MOLECULE_SOLVER_V2_zh-CN.md",
+    "path": "docs/USER_MOLECULE_SOLVER_V2_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "00054c9f086f78d148d9ba8b50e7e8c2d50bcf67",
-    "path": "docs/USER_MOLECULE_TECHNICAL_PLAN_zh-CN.md",
+    "path": "docs/USER_MOLECULE_TECHNICAL_PLAN_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "f7cb2973c7e2fb668daacb625c26f96e9fb7398d",
-    "path": "docs/USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md",
+    "path": "docs/USER_MOLECULE_W01_W04_DELIVERY_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "aa614de8f0e081fea22a7515bd0bceed1ebcd115",
-    "path": "docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md",
+    "path": "docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "4edc88472d8b067e8437b4a3ccffab7c05e0b3f6",
-    "path": "docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md",
+    "path": "docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "0d2c1aeed5db87d720daf20df37818b0e1542af7",
-    "path": "docs/USER_MOLECULE_W07_SELFTEST_zh-CN.md",
+    "path": "docs/USER_MOLECULE_W07_SELFTEST_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -506,32 +506,32 @@
   },
   {
     "git_blob": "c6398f97df5ca4743a3b3b9157e28a0ed35a1dfa",
-    "path": "validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md",
+    "path": "validation/DELIVERY_REVIEW_2026-10-03_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "28901ebe38e7254e8b3b25868ac709ddc2e1b76d",
-    "path": "validation/PREPUBLICATION_REVISION_REVIEW_2026-10-03_zh-CN.md",
+    "path": "validation/PREPUBLICATION_REVISION_REVIEW_2026-10-03_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "4210be9f1824f4836e9b292e673e2c3ee79e451d",
-    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "path": "validation/REPORT_2026-10-02_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "76e6da11282e37f168c1c5dd99745e9ef2fa9f04",
-    "path": "validation/final-delivery-status.json",
+    "path": "validation/final-delivery-status.public.json",
     "archive_member": null
   },
   {
     "git_blob": "daa1e6063eb3e4c5d15b3456a7da4e9c265f2822",
-    "path": "validation/high-cost-cases/deployment-verification.json",
+    "path": "validation/high-cost-cases/deployment-verification.public.json",
     "archive_member": null
   },
   {
     "git_blob": "5641ca5212652705851cc23b911adb22a025d82c",
-    "path": "validation/high-cost-cases/support-matrix.json",
+    "path": "validation/high-cost-cases/support-matrix.public.json",
     "archive_member": null
   },
   {
@@ -546,7 +546,7 @@
   },
   {
     "git_blob": "b36083a9924945e3894d7d0977ef984421baefe4",
-    "path": "validation/local-delivery-summary.json",
+    "path": "validation/local-delivery-summary.public.json",
     "archive_member": null
   },
   {
@@ -556,7 +556,7 @@
   },
   {
     "git_blob": "e597a91de295b852db0fbe5124a4b4d3ec487e34",
-    "path": "validation/native-wsl2/environment-readiness-20261009.json",
+    "path": "validation/native-wsl2/environment-readiness-20261009.public.json",
     "archive_member": null
   },
   {
@@ -566,7 +566,7 @@
   },
   {
     "git_blob": "4c26a34306e8e5139edc1120ae08dc78671cbbe7",
-    "path": "docs/RUNTIME_WEB_GUIDE_zh-CN.md",
+    "path": "docs/RUNTIME_WEB_GUIDE_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -586,7 +586,7 @@
   },
   {
     "git_blob": "b8fc75c41c9c6cd8ae76e41b6d162c49f65ab401",
-    "path": "docs/SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.md",
+    "path": "docs/SOURCE_INSTALLATION_ACCEPTANCE_20261009_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -621,22 +621,22 @@
   },
   {
     "git_blob": "896a2a342cd611f77d8a5704703f24ac1be6abc1",
-    "path": "docs/PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md",
+    "path": "docs/PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "8ca618c5f126d9fd125c2055fc25f5a730f49014",
-    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "a3538af555702207ed955359cb4ff53d62829dd7",
-    "path": "validation/high-cost-cases/deployment-verification.json",
+    "path": "validation/high-cost-cases/deployment-verification.public.json",
     "archive_member": null
   },
   {
     "git_blob": "491a1dc0f84e5194a660e4cc1eecd7d5a72fe004",
-    "path": "validation/high-cost-cases/support-matrix.json",
+    "path": "validation/high-cost-cases/support-matrix.public.json",
     "archive_member": null
   },
   {
@@ -651,22 +651,22 @@
   },
   {
     "git_blob": "d4b3107dd1923c3903499f089b1b23da23ddc0d8",
-    "path": "docs/PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.md",
+    "path": "docs/PROTOCOL_CASES_BATCH3_VALIDATION_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "015f26c30a62a4266594d16994913f05dad79285",
-    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "87565c770b117ecd7fc852d895939ce7d369d0a0",
-    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "a43bb255615f3ae789de952547833ae95ada0ef8",
-    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+    "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -681,7 +681,7 @@
   },
   {
     "git_blob": "1dcf7556e4e019562083f8dac0cba8af696400d6",
-    "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+    "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -691,12 +691,12 @@
   },
   {
     "git_blob": "abfed678da049187785bd7ad77ab5271dcb06fb1",
-    "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+    "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "b3a84d1d59ef691e0d5dd38a420f111042a619a6",
-    "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+    "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -716,7 +716,7 @@
   },
   {
     "git_blob": "dff9669b05a2c1440b2947c293f039d37b2a77a2",
-    "path": "docs/MOLECULAR_SINGLE_POINT_zh-CN.md",
+    "path": "docs/MOLECULAR_SINGLE_POINT_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -951,7 +951,7 @@
   },
   {
     "git_blob": "ecc3c634c8044d19a137bc7759037d7be3386eef",
-    "path": "ai4orgchem-runtime-implementation-plan-professional-revised.md",
+    "path": "ai4orgchem-runtime-implementation-plan-professional-revised.public.md",
     "archive_member": null
   },
   {
@@ -961,7 +961,7 @@
   },
   {
     "git_blob": "5b869a1bd236d227f30750d863a5377da2e72d74",
-    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1091,7 +1091,7 @@
   },
   {
     "git_blob": "19ed4303478495ce3c5e2fad7ed5617e7db5e312",
-    "path": "docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md",
+    "path": "docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1111,7 +1111,7 @@
   },
   {
     "git_blob": "8eb9c50c6b516b2317ffd3a05707b4b6c5dea5f9",
-    "path": "docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.md",
+    "path": "docs/USER_MOLECULE_W07_ENGINEERING_TRIAL_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1131,7 +1131,7 @@
   },
   {
     "git_blob": "60ece49425170b7b888bc309d314a8bab4d7b45c",
-    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1151,7 +1151,7 @@
   },
   {
     "git_blob": "b4b3cec7562e2f747e507e46408958ce5745b0a9",
-    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1206,12 +1206,12 @@
   },
   {
     "git_blob": "ecea36d5afb27e22f3d3ae61674079c4b1cebb9f",
-    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "8d0e0b43f30b8ab4644a80dc443c66b2035b4ff4",
-    "path": "docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md",
+    "path": "docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1221,7 +1221,7 @@
   },
   {
     "git_blob": "702e54b8204b197f7f08ed09fdb69d48cdfbb618",
-    "path": "docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.md",
+    "path": "docs/USER_MOLECULE_W05_W06_NUMERICAL_REVIEW_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1241,7 +1241,7 @@
   },
   {
     "git_blob": "80a9c162b25d2f10aed165783bc602324f6006d7",
-    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1291,7 +1291,7 @@
   },
   {
     "git_blob": "8a2772f9ca74a36a607dfaa966d90d53cca94591",
-    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1311,7 +1311,7 @@
   },
   {
     "git_blob": "7632cc86fa1f853fd7726fc497c1d9c53aa7dd19",
-    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1331,7 +1331,7 @@
   },
   {
     "git_blob": "46e980386902fb555ffdda34de12134ad1f842ef",
-    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1356,12 +1356,12 @@
   },
   {
     "git_blob": "e4bca7f9e9fb76a0e813084f0569fd497276db71",
-    "path": "docs/USER_MOLECULE_RUN_zh-CN.md",
+    "path": "docs/USER_MOLECULE_RUN_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "a08123bc63b0090f73f15310dfa1415c06575db1",
-    "path": "docs/USER_MOLECULE_TECHNICAL_PLAN_zh-CN.md",
+    "path": "docs/USER_MOLECULE_TECHNICAL_PLAN_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1396,7 +1396,7 @@
   },
   {
     "git_blob": "edb9cb22ca9654bce79d6745bc588533ea6eb4fa",
-    "path": "docs/CORRESPONDING_SOURCE_zh-CN.md",
+    "path": "docs/CORRESPONDING_SOURCE_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1411,17 +1411,17 @@
   },
   {
     "git_blob": "3f94b0ba72cc2a9dcec654e077cf24f0f1b63059",
-    "path": "docs/LOCAL_DELIVERY_zh-CN.md",
+    "path": "docs/LOCAL_DELIVERY_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "febc6a7bae936b39f54bbaa031197f2f49fe97b2",
-    "path": "validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md",
+    "path": "validation/DELIVERY_REVIEW_2026-10-03_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "909c31cd65c92b390b943516a7ad7ccb9ebb24b8",
-    "path": "validation/local-delivery-summary.json",
+    "path": "validation/local-delivery-summary.public.json",
     "archive_member": null
   },
   {
@@ -1436,7 +1436,7 @@
   },
   {
     "git_blob": "16c25c2f2919657705e6d1d0f3ffe50e900f0062",
-    "path": "validation/DELIVERY_REVIEW_2026-10-03_zh-CN.md",
+    "path": "validation/DELIVERY_REVIEW_2026-10-03_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1451,7 +1451,7 @@
   },
   {
     "git_blob": "d55cd01474b9362b90e437a3355e721d27e68b38",
-    "path": "docs/LOCAL_DELIVERY_zh-CN.md",
+    "path": "docs/LOCAL_DELIVERY_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1461,42 +1461,42 @@
   },
   {
     "git_blob": "8d55b233ee2665c3ecbbd8a2de00007ab8d92468",
-    "path": "docs/SOURCE_AUDIT_zh-CN.md",
+    "path": "docs/SOURCE_AUDIT_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "1c418762c5492f8a65eed37911760eea35ae50de",
-    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "path": "validation/REPORT_2026-10-02_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "e38f24b446c9e75d4b3fd48b2b56eba0bf500b80",
-    "path": "docs/L3_PREPARATION_zh-CN.md",
+    "path": "docs/L3_PREPARATION_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "e9921d5826ed7f822381e6eb12e29b92d7fc87e2",
-    "path": "docs/LOCAL_DELIVERY_zh-CN.md",
+    "path": "docs/LOCAL_DELIVERY_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "353837a8247f98e1ff9bd0464824e3ee14ae6322",
-    "path": "docs/SOURCE_AUDIT_zh-CN.md",
+    "path": "docs/SOURCE_AUDIT_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "101db6e9de46cf251df82bbad75e336877732c25",
-    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "path": "validation/REPORT_2026-10-02_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "f7a023cba75483f6c214b8bdb8b8f9a50612e3dc",
-    "path": "docs/LOCAL_DELIVERY_zh-CN.md",
+    "path": "docs/LOCAL_DELIVERY_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "67730b5e895938351dcf784a47fa8acbc9a75ad6",
-    "path": "docs/LOCAL_DELIVERY_zh-CN.md",
+    "path": "docs/LOCAL_DELIVERY_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1516,7 +1516,7 @@
   },
   {
     "git_blob": "d8e8ce0d1260619f80f4f9a08e032565c38bd31b",
-    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "path": "validation/REPORT_2026-10-02_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1526,7 +1526,7 @@
   },
   {
     "git_blob": "8c68cfd01a62e07f80ee5e1fc330864d0086e466",
-    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "path": "validation/REPORT_2026-10-02_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1536,7 +1536,7 @@
   },
   {
     "git_blob": "268093a10d93d8f1013d78529975c208522122f5",
-    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "path": "validation/REPORT_2026-10-02_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1546,7 +1546,7 @@
   },
   {
     "git_blob": "76691fdb15a96955c09e32be20a7ad3f2e3a07e4",
-    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "path": "validation/REPORT_2026-10-02_zh-CN.public.md",
     "archive_member": null
   },
   {
@@ -1561,17 +1561,17 @@
   },
   {
     "git_blob": "766a472823b8916bf6a917ca33d79e6082e446c8",
-    "path": "docs/SOURCE_AUDIT_zh-CN.md",
+    "path": "docs/SOURCE_AUDIT_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "a14707080d2859c036f1236ec6b98e6d56a43c05",
-    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "path": "validation/REPORT_2026-10-02_zh-CN.public.md",
     "archive_member": null
   },
   {
     "git_blob": "e5b9d38d2cd2a87e18936b619277f5f8358aec6a",
-    "path": "validation/REPORT_2026-10-02_zh-CN.md",
+    "path": "validation/REPORT_2026-10-02_zh-CN.public.md",
     "archive_member": null
   }
 ]

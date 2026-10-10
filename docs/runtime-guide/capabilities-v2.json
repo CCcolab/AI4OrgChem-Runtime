@@ -4,7 +4,7 @@
   "reviewed_runtime_commit": "86e29b47b38fbd31717ff9aac653386d2e3f768d",
   "declaration_grants_execution_authorization": false,
   "declaration_scope": "Current capability navigation only; enabled rows still require actual installation/image/input/source/resource/budget admission. Historical acceptance identifies its own code and image, not this update.",
-  "historical_snapshot": "validation/local-runtime-capabilities-v1.json",
+  "historical_snapshot": "validation/local-runtime-capabilities-v1.public.json",
   "source_authority": {
     "baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
     "baseline_files": 588,
@@ -35,8 +35,7 @@
     "scope": "Existing engineering contracts and legacy L0/L1 jobs only; not all scientific services; does not certify later edits"
   },
   "platform": {
-    "docker": "SCOPED_LOCAL_ACCEPTANCE_RECORDS",
-    "wslc": "BLOCKED_PAUSED_NOT_EXECUTED"
+    "docker": "SCOPED_LOCAL_ACCEPTANCE_RECORDS"
   },
   "distribution": {
     "public_prebuilt_image": "BLOCKED",
@@ -93,7 +92,7 @@
           "image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
           "image_build_runtime_commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
           "record": {
-            "path": "validation/molecular-service/deployment-20261008.json",
+            "path": "validation/molecular-service/deployment-20261008.public.json",
             "pointer": "/cases/ammonia"
           }
         },
@@ -106,7 +105,7 @@
           "image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
           "image_build_runtime_commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
           "record": {
-            "path": "validation/molecular-service/deployment-20261008.json",
+            "path": "validation/molecular-service/deployment-20261008.public.json",
             "pointer": "/cases/ethene"
           }
         },
@@ -119,7 +118,7 @@
           "image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
           "image_build_runtime_commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
           "record": {
-            "path": "validation/molecular-service/deployment-20261008.json",
+            "path": "validation/molecular-service/deployment-20261008.public.json",
             "pointer": "/cases/methane"
           }
         },
@@ -132,18 +131,18 @@
           "image_id": "sha256:e7ffa6420e743a0db184897d21458d69ec90c113b9e3b3c0df7fd2a94a2e202e",
           "image_build_runtime_commit": "1f139aa87dbd1dca8e318b5e9d0226b2a7c8668b",
           "record": {
-            "path": "validation/molecular-service/deployment-20261008.json",
+            "path": "validation/molecular-service/deployment-20261008.public.json",
             "pointer": "/cases/water"
           }
         }
       ],
       "evidence": [
         {
-          "path": "docs/MOLECULAR_SINGLE_POINT_zh-CN.md",
+          "path": "docs/MOLECULAR_SINGLE_POINT_zh-CN.public.md",
           "pointer": ""
         },
         {
-          "path": "validation/molecular-service/deployment-20261008.json",
+          "path": "validation/molecular-service/deployment-20261008.public.json",
           "pointer": ""
         }
       ],
@@ -201,7 +200,7 @@
           "image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
           "image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
           "record": {
-            "path": "validation/registered-cases/deployment-20261008.json",
+            "path": "validation/registered-cases/deployment-20261008.public.json",
             "pointer": "/tasks/p02-statistics"
           }
         }
@@ -212,7 +211,7 @@
           "pointer": ""
         },
         {
-          "path": "validation/registered-cases/deployment-20261008.json",
+          "path": "validation/registered-cases/deployment-20261008.public.json",
           "pointer": "/tasks/p02-statistics"
         }
       ],
@@ -270,7 +269,7 @@
           "image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
           "image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
           "record": {
-            "path": "validation/registered-cases/deployment-20261008.json",
+            "path": "validation/registered-cases/deployment-20261008.public.json",
             "pointer": "/tasks/p13-graph-ledger"
           }
         }
@@ -281,7 +280,7 @@
           "pointer": ""
         },
         {
-          "path": "validation/registered-cases/deployment-20261008.json",
+          "path": "validation/registered-cases/deployment-20261008.public.json",
           "pointer": "/tasks/p13-graph-ledger"
         }
       ],
@@ -339,7 +338,7 @@
           "image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
           "image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
           "record": {
-            "path": "validation/registered-cases/deployment-20261008.json",
+            "path": "validation/registered-cases/deployment-20261008.public.json",
             "pointer": "/tasks/p01-orbital-density"
           }
         }
@@ -350,7 +349,7 @@
           "pointer": ""
         },
         {
-          "path": "validation/registered-cases/deployment-20261008.json",
+          "path": "validation/registered-cases/deployment-20261008.public.json",
           "pointer": "/tasks/p01-orbital-density"
         }
       ],
@@ -404,7 +403,7 @@
           "contract_sha256": "955258bd09e032135583b4597b5d95c0d2bb53b016366c0a65bc9ca898d70e20",
           "execution_id": "f5a3e466468c4c75bb777ec668924ec8",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/all_native_attempts_including_failures/0"
           }
         },
@@ -417,18 +416,18 @@
           "contract_sha256": "71397d11f24bb7a3a8f13c9f9fbe795a9cba81f04b54e1b7936ec25d83584c30",
           "execution_id": "9bcc2110345f4417a75da500baac3806",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/controls/0"
           }
         }
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
           "pointer": ""
         },
         {
-          "path": "validation/protocol-cases/batch2-verification.json",
+          "path": "validation/protocol-cases/batch2-verification.public.json",
           "pointer": ""
         }
       ],
@@ -482,7 +481,7 @@
           "contract_sha256": "64d2b0e3a3a5ecdbd47980e56f3a7a336c55e13ed08facb1bccdfab36f9bb948",
           "execution_id": "8992093ad3a44a4fbfdc570f82133b3f",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/all_native_attempts_including_failures/7"
           }
         },
@@ -495,18 +494,18 @@
           "contract_sha256": "4f859d063d30c255ed5a572be6309bf07d8ec10884dbdd816a508607b5276adf",
           "execution_id": "cd9ba51de3dd45509ad9985fd5620ac6",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/controls/1"
           }
         }
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
           "pointer": ""
         },
         {
-          "path": "validation/protocol-cases/batch2-verification.json",
+          "path": "validation/protocol-cases/batch2-verification.public.json",
           "pointer": ""
         }
       ],
@@ -560,7 +559,7 @@
           "contract_sha256": "f8c027cc593af0675fffa7d2c25c4948c8633b98f44032218cde6636fbd71c0a",
           "execution_id": "2cd4a39240aa46409d9d96184b470f3d",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/all_native_attempts_including_failures/8"
           }
         },
@@ -573,18 +572,18 @@
           "contract_sha256": "e3a07a0551d82b154fbf2c7401d4c155f826f0d4d3312778d8986a43649f0f5e",
           "execution_id": "70c4baf7e04b4217bc003a36ebbd1f57",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/controls/2"
           }
         }
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
           "pointer": ""
         },
         {
-          "path": "validation/protocol-cases/batch2-verification.json",
+          "path": "validation/protocol-cases/batch2-verification.public.json",
           "pointer": ""
         }
       ],
@@ -638,7 +637,7 @@
           "contract_sha256": "f36f5990f978eeb2448ba05f836585c88bb0339186bf2703cae7c4b5c3b35b65",
           "execution_id": "f12658e44d4e4a98b0d89765c8f49c95",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/all_native_attempts_including_failures/3"
           }
         },
@@ -651,18 +650,18 @@
           "contract_sha256": "cad737e356db187e5d2c0e3e7b5a0f3e7897c63afb4a0bf57c7ed97d2f501d6d",
           "execution_id": "750f427676614edc937371b84947c3f3",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/controls/3"
           }
         }
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
           "pointer": ""
         },
         {
-          "path": "validation/protocol-cases/batch2-verification.json",
+          "path": "validation/protocol-cases/batch2-verification.public.json",
           "pointer": ""
         }
       ],
@@ -715,18 +714,18 @@
           "contract_sha256": "58100a30878ecca90ee5a11b01777fa84df054010319bef2fd9443b3600e96f6",
           "execution_id": "8b90daa1054d43c3b5ea371091c5414a",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/controls/4"
           }
         }
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
           "pointer": ""
         },
         {
-          "path": "validation/protocol-cases/batch2-verification.json",
+          "path": "validation/protocol-cases/batch2-verification.public.json",
           "pointer": ""
         }
       ],
@@ -780,7 +779,7 @@
           "contract_sha256": "14b44166d391f03a29ae3e1d9791b738d22bbdc4a2911ccbcad6d94371dfa4c1",
           "execution_id": "762767c22da744d781278324b33b6a98",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/all_native_attempts_including_failures/4"
           }
         },
@@ -793,18 +792,18 @@
           "contract_sha256": "af0e4dc89baeedc76f8d4d167b5fca5b96a18cf5adc00f7db2302fe47c7a9adc",
           "execution_id": "e7b10827f6044b35b68c10e851039e3a",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/controls/5"
           }
         }
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
           "pointer": ""
         },
         {
-          "path": "validation/protocol-cases/batch2-verification.json",
+          "path": "validation/protocol-cases/batch2-verification.public.json",
           "pointer": ""
         }
       ],
@@ -858,7 +857,7 @@
           "contract_sha256": "c1ed15848e79a78938a47a429d5325adc2268da9851f8f833eb535a07bab9468",
           "execution_id": "9b7a82eb9c584a6da354b3ffa862b092",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/all_native_attempts_including_failures/5"
           }
         },
@@ -871,18 +870,18 @@
           "contract_sha256": "9486bef3a8ce48b83905ac2edcd8d62fa7b89eac51d1a1227866d7750e06805c",
           "execution_id": "f38a8e048bcc493994ce6251e8067e76",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/controls/6"
           }
         }
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
           "pointer": ""
         },
         {
-          "path": "validation/protocol-cases/batch2-verification.json",
+          "path": "validation/protocol-cases/batch2-verification.public.json",
           "pointer": ""
         }
       ],
@@ -936,7 +935,7 @@
           "contract_sha256": "25db1371668d3754a1435ecdf4a6f9c059671deae0e1766b1ea1a4b335250005",
           "execution_id": "961b3aefb0884811b83fc88f36b31b73",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/all_native_attempts_including_failures/6"
           }
         },
@@ -949,18 +948,18 @@
           "contract_sha256": "7bc661adb267c3c4ad045e03bb4fa578d316607001844ede6005da94bead5c52",
           "execution_id": "c4daca40d34c4ce09a7f9b923bf8ddd9",
           "record": {
-            "path": "validation/protocol-cases/batch2-verification.json",
+            "path": "validation/protocol-cases/batch2-verification.public.json",
             "pointer": "/controls/7"
           }
         }
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.md",
+          "path": "docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md",
           "pointer": ""
         },
         {
-          "path": "validation/protocol-cases/batch2-verification.json",
+          "path": "validation/protocol-cases/batch2-verification.public.json",
           "pointer": ""
         }
       ],
@@ -1013,7 +1012,7 @@
           "source_lock_sha256": "d8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322",
           "status": "PASS_SCOPED_SINGLE_STATE_SCIENTIFIC_GATES_SUPPLEMENTED_HOST_EVIDENCE",
           "record": {
-            "path": "validation/high-cost-cases/deployment-verification.json",
+            "path": "validation/high-cost-cases/deployment-verification.public.json",
             "pointer": "/p11_benzene_g_pilot"
           },
           "supplemental_manifest_sha256": "e8043ad367261c390f29ed2ad8a26bd297a2bc6a0d3ab7eece79823b4a713b47",
@@ -1022,15 +1021,15 @@
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+          "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.public.md",
           "pointer": ""
         },
         {
-          "path": "validation/high-cost-cases/deployment-verification.json",
+          "path": "validation/high-cost-cases/deployment-verification.public.json",
           "pointer": ""
         },
         {
-          "path": "validation/high-cost-cases/p12-n12-g-pilot-verification.json",
+          "path": "validation/high-cost-cases/p12-n12-g-pilot-verification.public.json",
           "pointer": ""
         }
       ],
@@ -1083,7 +1082,7 @@
           "source_lock_sha256": "d8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322",
           "status": "PASS_SCOPED_P12_N12_G_SAVED_EVIDENCE",
           "record": {
-            "path": "validation/high-cost-cases/deployment-verification.json",
+            "path": "validation/high-cost-cases/deployment-verification.public.json",
             "pointer": "/p12_n12_g_pilot"
           },
           "host_launcher_commit": "03d2d9212d1280945462851e805d6d64218215a0",
@@ -1092,15 +1091,15 @@
       ],
       "evidence": [
         {
-          "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.md",
+          "path": "docs/PROTOCOL_CASES_BATCH3_zh-CN.public.md",
           "pointer": ""
         },
         {
-          "path": "validation/high-cost-cases/deployment-verification.json",
+          "path": "validation/high-cost-cases/deployment-verification.public.json",
           "pointer": ""
         },
         {
-          "path": "validation/high-cost-cases/p12-n12-g-pilot-verification.json",
+          "path": "validation/high-cost-cases/p12-n12-g-pilot-verification.public.json",
           "pointer": ""
         }
       ],
@@ -1159,7 +1158,7 @@
           "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
           "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
           "record": {
-            "path": "validation/oci-summary.json",
+            "path": "validation/oci-summary.public.json",
             "pointer": "/runs/0"
           }
         },
@@ -1170,7 +1169,7 @@
           "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
           "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
           "record": {
-            "path": "validation/oci-summary.json",
+            "path": "validation/oci-summary.public.json",
             "pointer": "/runs/1"
           }
         },
@@ -1181,7 +1180,7 @@
           "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
           "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
           "record": {
-            "path": "validation/oci-summary.json",
+            "path": "validation/oci-summary.public.json",
             "pointer": "/runs/2"
           }
         },
@@ -1192,7 +1191,7 @@
           "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
           "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
           "record": {
-            "path": "validation/oci-summary.json",
+            "path": "validation/oci-summary.public.json",
             "pointer": "/runs/3"
           }
         },
@@ -1203,7 +1202,7 @@
           "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
           "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
           "record": {
-            "path": "validation/l3-summary.json",
+            "path": "validation/l3-summary.public.json",
             "pointer": ""
           }
         },
@@ -1214,7 +1213,7 @@
           "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
           "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
           "record": {
-            "path": "validation/l4-summary.json",
+            "path": "validation/l4-summary.public.json",
             "pointer": ""
           }
         },
@@ -1225,27 +1224,27 @@
           "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
           "image_build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
           "record": {
-            "path": "validation/classification-summary.json",
+            "path": "validation/classification-summary.public.json",
             "pointer": ""
           }
         }
       ],
       "evidence": [
         {
-          "path": "docs/PROFESSIONAL_SERVICES_zh-CN.md",
+          "path": "docs/PROFESSIONAL_SERVICES_zh-CN.public.md",
           "pointer": ""
         },
         {
-          "path": "validation/oci-summary.json",
+          "path": "validation/oci-summary.public.json",
           "pointer": ""
         },
         {
-          "path": "validation/final-delivery-status.json",
+          "path": "validation/final-delivery-status.public.json",
           "pointer": ""
         }
       ],
       "qualification": {
-        "engineering": "Historical Docker seven-task evidence; WSLc paused",
+        "engineering": "Historical Docker seven-task evidence;",
         "numerical": "Recorded P14 gates and classification scoped to actual runs; L3/L4 strict offline NOT_EXECUTED",
         "science": "Source-proxy protocol replay; no universal physical bond energy claim or full-coordinate minimum proof"
       }
@@ -1293,11 +1292,11 @@
           "pointer": ""
         },
         {
-          "path": "validation/user-molecule/root-native-diagnostic-20261007.json",
+          "path": "validation/user-molecule/root-native-diagnostic-20261007.public.json",
           "pointer": ""
         },
         {
-          "path": "validation/user-molecule/native-shutdown-engineering-20261007.json",
+          "path": "validation/user-molecule/native-shutdown-engineering-20261007.public.json",
           "pointer": ""
         }
       ],
@@ -1345,11 +1344,11 @@
       "accepted_runs": [],
       "evidence": [
         {
-          "path": "docs/USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.md",
+          "path": "docs/USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.public.md",
           "pointer": ""
         },
         {
-          "path": "validation/user-molecule/root-native-diagnostic-20261007.json",
+          "path": "validation/user-molecule/root-native-diagnostic-20261007.public.json",
           "pointer": ""
         },
         {
@@ -1357,7 +1356,7 @@
           "pointer": ""
         },
         {
-          "path": "validation/user-molecule/native-shutdown-engineering-20261007.json",
+          "path": "validation/user-molecule/native-shutdown-engineering-20261007.public.json",
           "pointer": ""
         }
       ],
@@ -1367,5 +1366,9 @@
         "science": "Failure does not prove qualified roots absent and does not refute P01-P14"
       }
     }
-  ]
+  ],
+  "platforms": {
+    "docker": "SCOPED_LOCAL_ACCEPTANCE_PER_SERVICE",
+    "ordinary_wsl2": "REGISTERED_NATIVE_READINESS_ONLY_NO_DOCKER_ACCEPTANCE_TRANSFER"
+  }
 }

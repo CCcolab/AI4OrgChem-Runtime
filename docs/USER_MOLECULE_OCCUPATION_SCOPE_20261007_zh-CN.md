@@ -75,8 +75,6 @@ A/B见证与原返回D的Frobenius差约2，对称和见证约5.22e-9。对冻�
 
 实际科学执行源码仍为`60d76de`、旧交付`afdde3d`；科学源码`cc743790`，r3镜像`sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d`的构建runtime提交仍为`5098775`。本轮基础runtime为`16a85a9`，新的分析/文档提交不冒充镜像构建或科学受测提交。
 
-[机器记录](../validation/user-molecule/occupation-scope-20261007.json)提供完整来源、门禁、数组及hash。执行脚本和原始派生JSON/NPZ保存在本地`D:\AI4Science\ai4orgchem-runtime-deliveries\20261007-user-molecule-occupation-scope`。此前科学、只读和预算工程三包共1709项载荷已核对并保留。
+[机器记录](../validation/user-molecule/occupation-scope-20261007.public.json)提供完整来源、门禁、数组及hash。执行脚本和原始派生JSON/NPZ保存在本地`D:\AI4Science\ai4orgchem-runtime-deliveries\20261007-user-molecule-occupation-scope`。此前科学、只读和预算工程三包共1709项载荷已核对并保留。
 
 本轮只增加四份范围/分析/提案文件，修订两份README、内部流程、文档索引及当前状态共五份文件；修正索引中把历史V2写为“尚未实现”和把已完成预算工程写为“仅设计”的过时表述，并纠正当前记录指针。runtime/reference/scientific worker/测试/CI配置未改。原P01—P14和L0—L4未重算；L4只保存检查点，不支持恢复。
-
-两个生产旧门禁的raw-map/gap失败、参考空最终gate和旧预算全部保留。完整本地CI本轮NOT_EXECUTED，GitHub Actions仍NOT_EXECUTED；WSLc继续暂停、BLOCKED / NOT_EXECUTED；镜像分发BLOCKED，未重建镜像、升级WSL、公开推送、创建正式标签或Release。

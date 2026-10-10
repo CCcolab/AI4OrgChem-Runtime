@@ -29,7 +29,7 @@ if(-not $selected){throw 'PowerShell 7.3+ not found. Supply -PowerShell7 with it
 Write-Host "PowerShell: $selected ($versionText)"
 Write-Host "Task: $Task; engine: Docker; output: $OutputRoot"
 if($CheckOnly){return}
-$arguments=@('-NoProfile','-File',(Join-Path $PSScriptRoot 'run-wslc.ps1'),'-Engine','docker',
+$arguments=@('-NoProfile','-File',(Join-Path $PSScriptRoot 'run-docker.ps1'),
     '-Task',$Task,'-Image',$Image,'-OutputRoot',$OutputRoot,'-Threads',"$Threads")
 foreach($name in @('SmokeRun','OptimizationRun','EquivalenceRun','SourceLevelRun')){
     $value=Get-Variable -Name $name -ValueOnly

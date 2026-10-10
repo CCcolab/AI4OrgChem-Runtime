@@ -1,0 +1,86 @@
+{
+  "schema": "runtime-guide-current-delivery-v1",
+  "date": "2026-10-10",
+  "source_html_sha256": "2e1fcfe923a9235d4371ad0f7b3b6bfdf2fddc4c185940d9f148a2c88cb177cb",
+  "source_html_bytes": 216663,
+  "actual_standalone_html_sha256": "2e1fcfe923a9235d4371ad0f7b3b6bfdf2fddc4c185940d9f148a2c88cb177cb",
+  "actual_standalone_equals_source": true,
+  "actual_zip_sha256": "ff711c95c9445aa7615f057b0fe741c44e2c5254643e2b8b657c1e528877c2af",
+  "actual_zip_bytes": 463991,
+  "actual_zip_html_equals_standalone": true,
+  "head_charset_viewport_title_style": "PASS_ACTUAL_DOWNLOAD_BYTES",
+  "all_seven_downloads_removed_platform_absent": true,
+  "zip_crc": "PASS",
+  "zip_member_count": 10,
+  "members": [
+    {
+      "path": "ai4orgchem-runtime-guide/docs/index.html",
+      "size_bytes": 216663,
+      "sha256": "2e1fcfe923a9235d4371ad0f7b3b6bfdf2fddc4c185940d9f148a2c88cb177cb"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/docs/.nojekyll",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/README.md",
+      "size_bytes": 34277,
+      "sha256": "a5d9fd78e3fbdaa19347f3898083f18f2373b78b756dfb0ee427e6103ea29c48"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/content/guide_zh-CN.md",
+      "size_bytes": 117519,
+      "sha256": "75f2b730ec4804e1c4c9b03f9ee93ca57ad676c03dd61350889eb6af1b922367"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/provenance/sources.md",
+      "size_bytes": 18470,
+      "sha256": "1478fcae305f0247672ed4adaea678914adc8406c3676001de8501105977905d"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/verification/checks.md",
+      "size_bytes": 35678,
+      "sha256": "95efadea5cb2d664d999845b7c895da09af2ebb09a46993d7143eb3f0098930b"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/MIGRATION.md",
+      "size_bytes": 37420,
+      "sha256": "aa2ab57a6fa61e5d98dad92d5dbb6fe9180428b171f17dd3904afb39b8a403ff"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/MANIFEST.txt",
+      "size_bytes": 1844,
+      "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/templates/molecular-service/water/request.json",
+      "size_bytes": 277,
+      "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+    },
+    {
+      "path": "ai4orgchem-runtime-guide/templates/molecular-service/water/molecule.xyz",
+      "size_bytes": 123,
+      "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+    }
+  ],
+  "reviewed_command_changes": [
+    "source-install-command",
+    "single-point-location-command",
+    "single-point-command",
+    "single-point-custom-command"
+  ],
+  "scientific_input_templates_unchanged": true,
+  "runtime_or_docker_execution": false,
+  "new_scientific_calls": 0,
+  "browser_detail_record": "validation/web-guide/current-browser-20261010.json",
+  "full_keyboard": "NOT_EXECUTED",
+  "true_200_percent_zoom": "NOT_EXECUTED",
+  "multiple_browsers": "NOT_EXECUTED",
+  "extracted_actual_zip_rendering": "PASS_ROOT_AND_REPOSITORY_SUBPATH",
+  "extracted_search_copy": "PASS",
+  "actual_reexport_html": "PASS_EXACT_SOURCE_BYTES",
+  "actual_reexport_zip": "PASS_EXACT_ORIGINAL_DOWNLOAD_BYTES_AND_CRC",
+  "missing_style_export_rejection": "PASS_BROWSER_NEGATIVE",
+  "reexport_record": "validation/web-guide/current-reexport-20261010.json"
+}

@@ -255,10 +255,10 @@ subprocess.run([p,'scripts/ci-unit-user-molecule.py','--output-root','/output/mi
     guarded = load(output/'w01-w07-guarded-engineering/w06-engineering-tests.json')
     assert guarded['status'] == 'PASS_ENGINEERING_ONLY'
     counts['w01-w07-guarded-engineering'] = guarded['unit_test_total']
-    packages = load(root/'validation/user-molecule/implementation-state.json')['work_packages']
+    packages = load(root/'validation/user-molecule/implementation-state.public.json')['work_packages']
     prior_science = packages['W05']['numerical_acceptance']
     assert not git('status', '--porcelain')
-    save(output/'summary.json', {'status': 'LOCAL_CI_ENGINEERING_PASS', 'runtime_test_commit': baseline['runtime_test_commit'],
+    save(output/'summary.public.json', {'status': 'LOCAL_CI_ENGINEERING_PASS', 'runtime_test_commit': baseline['runtime_test_commit'],
         'image_id': image, 'runtime_image_build_commit': inspect_image['Config']['Labels']['org.opencontainers.image.revision'],
         'science_commit': science_lock['source_commit'], 'unit_counts': counts, 'unit_test_total': sum(counts.values()),
         'unit_count_meaning': 'Test executions; minimal/full groups and legacy runtime intentionally overlap, not unique tests',
@@ -267,7 +267,7 @@ subprocess.run([p,'scripts/ci-unit-user-molecule.py','--output-root','/output/mi
         'W05_numerical_acceptance': prior_science,
         'W06_molecular_reference': packages['W06']['molecular_reference'],
         'numerical_acceptance_this_run': 'NOT_EXECUTED', 'production_compute_enabled': False,
-        'publication': 'NOT_EXECUTED', 'wslc': 'BLOCKED / NOT_EXECUTED; paused'})
+        'publication': 'NOT_EXECUTED'})
     print('Local CI completed: '+str(output), flush=True)
 
 

@@ -4,7 +4,7 @@
 
 全量逐组件清单见 [component-license-inventory.json](../validation/component-license-inventory.json)：105 Debian 包、虚拟环境 18 Python 分发包、基础环境另一份 pip，52 条内嵌依赖环境记录、191 共享库文件。原 42 条漏计 pip 缩进行的传递组件，现已修正。203 份首轮许可证/署名/版本文件全文与 SHA-256 保存在 `D:\AI4Science\ai4orgchem-runtime-runs\20261003-review\components.json`；追加 vendor-notices.json 和本地候选补充包记录后续材料。原始版权以全文为准，不用本表替代署名；不是完成所有文件级许可证判定的声明。
 
-最新续审：73/73 Debian 精确源版本的 236 份归档已取得，三个索引的签名与哈希链 PASS；18/18 Python 精确版本 sdist 已取得。634/634 内嵌 Python 文件与父包源码匹配，补出 pip 的 21 份通知。setuptools 内嵌 autocommand 为 LGPLv3。原生 wheel 来源和实际分发通知仍有具体阻塞，详见 [源码/镜像分发边界](PUBLICATION_BOUNDARIES_zh-CN.md)及 [最新材料结论](../validation/source-materials-final-review.json)。
+最新续审：73/73 Debian 精确源版本的 236 份归档已取得，三个索引的签名与哈希链 PASS；18/18 Python 精确版本 sdist 已取得。634/634 内嵌 Python 文件与父包源码匹配，补出 pip 的 21 份通知。setuptools 内嵌 autocommand 为 LGPLv3。原生 wheel 来源和实际分发通知仍有具体阻塞，详见 [源码/镜像分发边界](PUBLICATION_BOUNDARIES_zh-CN.md)及 [最新材料结论](../validation/source-materials-final-review.public.json)。
 
 ## 系统、Python 与署名
 

@@ -5,19 +5,28 @@
   "scientific_reexecution": false,
   "public_parent_records": [
     {
-      "path": "validation/molecular-service/deployment-20261008.json",
-      "size_bytes": 20915,
-      "sha256": "52be1862137bf60b805a52cdf35b4c85f327eb87891a32f9bd50020912575b98"
+      "path": "validation/molecular-service/deployment-20261008.public.json",
+      "size_bytes": 21330,
+      "sha256": "aadd55697712088fe85a53beacd22a7df45ba55e51fb34df71c96b2d2911f14a",
+      "original_sha256": "52be1862137bf60b805a52cdf35b4c85f327eb87891a32f9bd50020912575b98",
+      "original_size_bytes": 20915,
+      "kind": "PUBLIC_METADATA_PROJECTION_NOT_ORIGINAL_BYTES"
     },
     {
-      "path": "validation/user-molecule/seed-v2-20261007.json",
-      "size_bytes": 17509,
-      "sha256": "3c8c744a7ad9a93b3c34eded8dcdd84cba896e84cf76b262accce5907b783b48"
+      "path": "validation/user-molecule/seed-v2-20261007.public.json",
+      "size_bytes": 17916,
+      "sha256": "16aaccb1ccbf105a257e41ad098e0eb9da872b968843332ab2e07f5e3ec4e960",
+      "original_sha256": "3c8c744a7ad9a93b3c34eded8dcdd84cba896e84cf76b262accce5907b783b48",
+      "original_size_bytes": 17509,
+      "kind": "PUBLIC_METADATA_PROJECTION_NOT_ORIGINAL_BYTES"
     },
     {
-      "path": "validation/local-runtime-framework-20261007.json",
-      "size_bytes": 40298,
-      "sha256": "1b6d1824abb8d45e7a4336332e29d3aca532f137ab359aa0485ebc8fca81ab1d"
+      "path": "validation/local-runtime-framework-20261007.public.json",
+      "size_bytes": 40560,
+      "sha256": "960482ee80278075249a6e288556eb6ebe74b46a83d58fb6ea9440cf5fc97e29",
+      "original_sha256": "1b6d1824abb8d45e7a4336332e29d3aca532f137ab359aa0485ebc8fca81ab1d",
+      "original_size_bytes": 40298,
+      "kind": "PUBLIC_METADATA_PROJECTION_NOT_ORIGINAL_BYTES"
     }
   ],
   "witnesses": {
@@ -548,5 +557,6 @@
     "checked_original_file_count": 13,
     "all_original_sha256_unchanged": true,
     "new_scientific_calls": 0
-  }
+  },
+  "public_parent_byte_policy": "Public summaries have new byte identities; original SHA-256 and preserved local archive identities are separate. Numeric payloads unchanged."
 }

@@ -2,7 +2,7 @@
 
 ### 第二批来源身份与支持矩阵
 
-此前阅读记录：两个MD、candidate-image与support-matrix四个短文件已完整读取；大型batch2-verification仅已读取运行、镜像、工程测试、失败等相关段，非1967行全审，非原运行目录全审。准确五路径：docs/PROTOCOL\_CASES\_BATCH2\_zh-CN.md；docs/PROTOCOL\_CASES\_BATCH2\_VALIDATION\_zh-CN.md；validation/protocol-cases/batch2-verification.json；validation/protocol-cases/support-matrix.json；validation/protocol-cases/candidate-image.json。不虚造公开地址。
+此前阅读记录：两个MD、candidate-image与support-matrix四个短文件已完整读取；大型batch2-verification仅已读取运行、镜像、工程测试、失败等相关段，非1967行全审，非原运行目录全审。准确五路径：docs/PROTOCOL\_CASES\_BATCH2\_zh-CN.public.md；docs/PROTOCOL\_CASES\_BATCH2\_VALIDATION\_zh-CN.public.md；validation/protocol-cases/batch2-verification.public.json；validation/protocol-cases/support-matrix.public.json；validation/protocol-cases/candidate-image.json。不虚造公开地址。
 
 **第二批文档提交**
 
@@ -41,7 +41,7 @@ a44fa481af7c5a62d9d7b923f3b3f0d4947e682b
 | help | 来源与入口 | 索引／请求入口 | 本次资料 | SOURCE\_INDEX / START\_HERE | 主助手实读记录 | 来源导航 | 本地准备、资料 | 公开URL与可访问性 |
 | user-molecule | 乙烯请求 | 请求文件 | 工程候选 | examples/user-molecule/w05-candidates/ethene-planar-technical-v1/request-pilot.json | 主助手实读记录 | Check夹具，不是研究端点 | 四步流程 | JSON与XYZ原文已静态内联；逐字复制/导出/运行验证NOT\_EXECUTED |
 | user-molecule | 乙烯固定几何 | molecule.xyz | 本次上传 | examples/user-molecule/w05-candidates/ethene-planar-technical-v1/molecule.xyz | 本次上传原文静态读取 | 已有六原子乙烯工程夹具，非研究结果 | molecule-xyz-text | 未独立字节哈希/Runtime重运行；逐字复制/导出/运行验证NOT\_EXECUTED |
-| results | 既有consistent | P14摘录 | 2026-10-02 | docs/examples/P14\_REVIEW\_20261002\_zh-CN.md | 保存记录摘录已读 | 固定C12H6 source-proxy | 历史折叠 | 本轮未重运行 |
+| results | 既有consistent | P14摘录 | 2026-10-02 | docs/examples/P14\_REVIEW\_20261002\_zh-CN.public.md | 保存记录摘录已读 | 固定C12H6 source-proxy | 历史折叠 | 本轮未重运行 |
 | 全部 | 参考来源导航 | 29参考文件 | 索引记录 | SOURCE\_INDEX中所列29份 | 仅索引，非逐读 | 不冒充原文验证 | 来源说明 | 逐文件核对、独立哈希 |
 
 ### 身份与独立状态
@@ -76,7 +76,7 @@ sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d
 
 cc7437901119e71ef7945a12813c021c383e7648
 
-Runtime源码与静态指南已公开；任意用户分子的旧条件态比较 Compute BLOCKED；外部咨询CANCELLED\_BY\_USER，不是科学批准；首次Actions三项job已在06d5088通过，范围见当前同步记录；WSLc BLOCKED／NOT\_EXECUTED且升级实机暂停；镜像分发BLOCKED；源码与指南已公开，GitHub Pages静态指南已启用；本页没有在线计算，Colab暂缓。固定L3／L4严格断网未执行，L4不能恢复。
+Runtime源码与静态指南已公开；任意用户分子的旧条件态比较 Compute BLOCKED；外部咨询CANCELLED\_BY\_USER，不是科学批准；首次Actions三项job已在06d5088通过，范围见当前同步记录；；镜像分发BLOCKED；源码与指南已公开，GitHub Pages静态指南已启用；本页没有在线计算，Colab暂缓。固定L3／L4严格断网未执行，L4不能恢复。
 
 ### 原七任务科学来源
 
@@ -184,7 +184,7 @@ state list读取实际注册状态与Unit；ledger只读历史账本，不批准
 
 先用list-high-cost-cases.py读取实际注册Unit，从尚未执行的16态中选择恰一个Unit。已通过P11B-benzene-G保留PASS、不重算、不重复准入。不猜其他Unit ID，不用可运行占位命令冒充真实例子。
 
-用create-high-cost-budget.py为所选Unit在全新、尚不存在的文件创建独立预算，单态ceiling为43200秒。start-high-cost-case.ps1的-Task 多态约束结构优化 -Mode live必须精确指定-Unit、-Budget、-OutputRoot，可选-PythonExe/-DockerExe。此处只有参数说明，没有可复制的虚构live命令。
+用create-high-cost-budget.py为所选Unit在全新、尚不存在的文件创建独立预算，单态ceiling为43200秒。start-high-cost-case.ps1的-Task P11 -Mode live必须精确指定-Unit、-Budget、-OutputRoot，可选-PythonExe/-DockerExe。此处只有参数说明，没有可复制的虚构live命令。
 
 P11A呋喃按G→GL→GE，必须以-Inputs提供本轮合格前序output映射；P11B保留原独立初始化。科学规则固定，每态一次、失败计费；容器删除与证据闭合前不启动后续，不retry、不resume。
 
@@ -260,15 +260,15 @@ YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点
 
 维护：进入解压后的 ` ai4orgchem-runtime-guide/ ` 目录，运行 ` python -m http.server 8000 `，浏览 ` http://localhost:8000/docs/ `。仅静态指南维护，不启动Runtime；无真实托管。10成员共同顶层保持，包外清单／审计JSON和MD按当前字节动态生成。
 
-原YouMind提供时状态（历史）：条件Compute BLOCKED；WSLc BLOCKED / NOT\_EXECUTED；远CI NOT\_EXECUTED；镜像分发BLOCKED；外部专家咨询已取消非前置。该原包轮不运行Runtime/Docker/WSL/科学，不发布、不改权限；本次公开与实际CI另见当前同步记录。
+原YouMind提供时状态（历史）：条件Compute BLOCKED；；远CI NOT\_EXECUTED；镜像分发BLOCKED；外部专家咨询已取消非前置。该原包轮不运行Runtime/Docker/WSL/科学，不发布、不改权限；本次公开与实际CI另见当前同步记录。
 
 ## 静态指南网址与使用方式（2026-10-10）
-GitHub Pages静态指南已启用：https://cccolab.github.io/AI4OrgChem-Runtime/ 。可直接在浏览器阅读、搜索、复制命令和下载指南；网页不提供在线计算，计算命令仍由用户本地Runtime执行。整个已公开main/docs作为发布源。WSLc、镜像分发及旧条件态Compute限制保留，不分配新Runtime版本、标签或Release。
+GitHub Pages静态指南已启用：https://cccolab.github.io/AI4OrgChem-Runtime/ 。可直接在浏览器阅读、搜索、复制命令和下载指南；网页不提供在线计算，计算命令仍由用户本地Runtime执行。整个已公开main/docs作为发布源。
 
 ## 2026-10-09源码首次公开与远端CI记录（历史）
-2026-10-09已按项目负责人授权公开源码与指南：https://github.com/CCcolab/AI4OrgChem-Runtime 。06d5088首次CI三项job均成功，真实P11预检一项跳过；详见https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122 。Pages未启用；WSLc、镜像分发和旧条件态Compute限制保留，不是全科学验收；未创建新版本/标签/Release。
+2026-10-09已按项目负责人授权公开源码与指南：https://github.com/CCcolab/AI4OrgChem-Runtime 。06d5088首次CI三项job均成功，真实P11预检一项跳过；详见https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122 。Pages未启用；；未创建新版本/标签/Release。
 
-说明：下列状态是YouMind原提供时的登记，不是最新包外实测。最新局部网页身份与检查见Runtime validation/web-guide/final-consistency-r2-20261009.json；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
+说明：下列状态是YouMind原提供时的登记，不是最新包外实测。当前网页与实际下载身份见 Runtime validation/web-guide/current-delivery-20261010.json；final-consistency-r2-20261009.json 仅为历史身份；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
 
 ## 原YouMind v0.3.0-candidate交付登记（历史）
 候选非已验收；currentordinaryenabled / legacyconditionalblocked。物理顺序 overview、quick-start、user-molecule、results、tasks、help。10 members：原8文件，加 templates/molecular-service/water/request.json 与 molecule.xyz；277/123 bytes、LF结尾、代码textContent原文。14 evidence、7旧任务、3固定案例、1普通服务，12数值checks。原提供时新字节版本的复制核对、ZIP实物CRC/哈希、HTML一致性、重开再导出与迁移及完整WEB合同尚未完成；修订前下载实物与三宽度结构实测只作历史，原提供时QA不继承。新包大小和SHA-256须现场生成。

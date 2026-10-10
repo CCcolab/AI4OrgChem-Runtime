@@ -52,7 +52,7 @@ $snapshot=Join-Path $dest 'runtime-source.zip'
 if($LASTEXITCODE -ne 0){throw 'Source snapshot failed'}
 $record=[ordered]@{date_utc=[DateTime]::UtcNow.ToString('o');runtime_repository_commit=$revision;
     image_id=$identity.Id;image_repo_digests=$identity.RepoDigests;image_runtime_commit=$identity.Config.Labels.'org.opencontainers.image.revision';
-    image_tag_hint=$Image;runs_root=$runs;run_files=$fileHashes.Count;wslc='BLOCKED / NOT_EXECUTED';L4_resume_supported=$false;
+    image_tag_hint=$Image;runs_root=$runs;run_files=$fileHashes.Count;L4_resume_supported=$false;
     scope='Local backup only; upstream project and global scientific environments excluded';excluded_container_source_symlinks=$exclusions;files=@()}
 foreach($f in Get-ChildItem -LiteralPath $dest -File){$record.files+=@{name=$f.Name;bytes=$f.Length;sha256=(Get-FileHash -LiteralPath $f.FullName -Algorithm SHA256).Hash.ToLowerInvariant()}}
 $record|ConvertTo-Json -Depth 8|Set-Content (Join-Path $dest 'backup-manifest.json') -Encoding utf8

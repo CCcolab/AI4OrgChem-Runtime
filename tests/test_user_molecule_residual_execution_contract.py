@@ -13,7 +13,7 @@ from runtime.user_molecule import residual_execution_contract as execution
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PROPOSAL_PATH = ROOT / "validation/user-molecule/residual-diagnostic/contract-v1.json"
+PROPOSAL_PATH = ROOT / "validation/user-molecule/residual-diagnostic/contract-v1.public.json"
 PROFILE_PATH = ROOT / "profiles/user-molecule/pilot-b3lypg-sto3g-grid2-v1.json"
 MANIFEST_PATH = ROOT / "locks/source-user-molecule-files.sha256.json"
 GIB = 1024 ** 3

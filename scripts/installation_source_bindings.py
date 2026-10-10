@@ -1,4 +1,4 @@
-"""Exact host-only installation overlays; frozen scientific catalogs stay intact.
+"""Exact installation overlays; frozen scientific catalogs stay intact.
 
 This module is an engineering source contract, not a scientific protocol. The
 replacement bytes are explicitly reviewed Runtime bytes. A different launcher,
@@ -31,6 +31,9 @@ CATALOGS = {
         'path': 'locks/protocol-cases-source.json', 'count': 118,
         'sha256': '20708a08ecfa4d74327dd9d5689b20e4faecbbcdb271d962e798616dfc5baa6d',
         'overrides': {
+            'configs/protocol-cases-v1.json': {
+                'base_sha256': '64abfaa9090e72b893458f1fc261b9f0cc4efce9d95458997b9077a95da0d4a4',
+                'sha256': 'f88cc182bcaa9e57e44e8bab5410ac3efa24f3e2d1cec54053144b1d6c890c54'},
             'scripts/run-protocol-case.py': {
                 'base_sha256': 'bd38db248ae016bf4919e0eee4570363458ec0f7e540cd70c8577fed6a1247dd',
                 'sha256': 'cbeaaa362af88cfd6529d1785fb336c63f3c8bb514cec6945543f8d49ca0273b'},
@@ -39,6 +42,12 @@ CATALOGS = {
         'path': 'locks/high-cost-source.json', 'count': 107,
         'sha256': 'd8ee6bb0b7880db0f6d40dd38d93b633e1400ff6995f4e56e07042fddd6e7322',
         'overrides': {
+            'configs/high-cost-cases-v1.json': {
+                'base_sha256': '0fa3a9205eaec088f704bfc4139c15a01ec5a3b684300f37015b7aa464282308',
+                'sha256': '92186233f5d6dc1b44034ace1701e278316c317fbe25fc1a398de48a7585befd'},
+            'scripts/prepare-high-cost-cases.py': {
+                'base_sha256': '30d274473790e223622383013665a8c99946a1147d260d329724fb2a444677cd',
+                'sha256': 'adedb227b5096fa6de7247bff66aa0f37f6047c78d14a815d5ea3301dff32294'},
             'scripts/run-protocol-case.py': {
                 'base_sha256': 'bd38db248ae016bf4919e0eee4570363458ec0f7e540cd70c8577fed6a1247dd',
                 'sha256': 'cbeaaa362af88cfd6529d1785fb336c63f3c8bb514cec6945543f8d49ca0273b'},
@@ -50,7 +59,7 @@ CATALOGS = {
                 'sha256': '0a478092ac794c5979cde71772b353a06dc4498fcc41fc253cec3f71e4132b66'},
         }},
 }
-KIND = 'REVIEWED_ENGINEERING_HOST_REBIND_V2'
+KIND = 'REVIEWED_ENGINEERING_PLATFORM_METADATA_REBIND_V3'
 
 
 def digest(raw):

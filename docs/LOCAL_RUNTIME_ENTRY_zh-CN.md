@@ -6,7 +6,7 @@
 
 ## 计算自己的分子
 
-按[普通分子四步指南](MOLECULAR_SINGLE_POINT_zh-CN.md)准备同目录的XYZ与请求，在本轮runtime仓库中运行：
+按[普通分子四步指南](MOLECULAR_SINGLE_POINT_zh-CN.public.md)准备同目录的XYZ与请求，在本轮runtime仓库中运行：
 
 ```powershell
 .\scripts\start-molecular-service.ps1 -Request .\examples\molecular-service\water\request.json -OutputRoot D:\AI4Science\ai4orgchem-runtime-runs\molecular
@@ -91,7 +91,7 @@ python -B 'D:\your-work\runtime-prepared\scripts\prepare-runtime-source.py' veri
 PowerShell 7.3+可先验证旧固定Runtime构建入口，不接触引擎：
 
 ```powershell
-./scripts/build-wslc.ps1 -Engine docker -CheckOnly
+./scripts/build-docker.ps1 -CheckOnly
 ```
 
 此检查可在干净Git或已验证准备目录使用；准备目录需要现有Python，必要时`-PythonExecutable`。它只准备`container/Dockerfile`的旧固定Runtime构建身份；**不准备新的用户分子镜像、其science.tar或依赖wheel**，也不代表实际构建成功。移除`-CheckOnly`会实际构建新镜像，需要用户自己的引擎/依赖条件，必须另行验收。准备目录的构建记录写入相邻新目录，保持来源字节不变。该旧来源准备轮未重建镜像；2026-10-08三个登记固定任务已另建候选并验收，不属于此旧构建命令。
@@ -100,6 +100,6 @@ PowerShell 7.3+可先验证旧固定Runtime构建入口，不接触引擎：
 
 ## 当前交付边界
 
-普通单点实测见[最新机器状态](../validation/molecular-service/deployment-20261008.json)，[能力登记](../validation/local-runtime-capabilities-v1.json)将其与历史[宿主框架记录](../validation/local-runtime-framework-20261007.json)分开。GitHub CI仍NOT_EXECUTED，33份用户测试的分类不等于全部测试运行通过。WSLc BLOCKED/暂停；镜像分发BLOCKED；源码公开另行确认。外部专家咨询已取消，不是实施前置条件。旧条件态比较Compute缺少合格端点、独立对照及研究/资源资格；内部证据不足仍需解决。
+普通单点实测见[最新机器状态](../validation/molecular-service/deployment-20261008.public.json)，当前[能力注册表](../configs/runtime-capabilities-v2.json)及[专业服务矩阵](CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)分别登记历史和当前入口。[Actions run 38003025857](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857)对 `86e29b47` 三个既有 job 成功，仅覆盖工程合同及旧 L0/L1；不证明全部科学服务或新安装 CI 已通过。普通 WSL2 当前只提供[原生环境 Check](NATIVE_WSL2_RUNTIME_zh-CN.md)，不能等同 Docker 计算验收。镜像分发仍 BLOCKED；源码和静态指南已公开。外部专家咨询已取消，不是实施前置条件。旧条件态比较 Compute 缺少合格端点，继续关闭。
 
 固定任务可使用 `start-local-runtime.ps1 -Action Run -Proposition P02`（或P13/P01）并指定独立 `-OutputRoot`。Run不接收XYZ或协议参数：P02复算冻结表统计，P13复算图规则和账本，小体系P01仅一次固定乙烯普通RHF及Boys/PM占据表示控制。条件根诊断仍没有正式合格端点，其旧预算不能复用；新P01合同与原NR诊断分别登记。原科学规则、占据定义和容差保持。

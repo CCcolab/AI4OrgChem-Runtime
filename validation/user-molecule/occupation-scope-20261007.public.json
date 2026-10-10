@@ -1,0 +1,3083 @@
+{
+  "schema_version": "occupation-scope-internal-analysis-v1",
+  "date": "2026-10-07",
+  "status": "READONLY_SAVED_MATRIX_SCOPE_ANALYSIS_COMPLETE",
+  "base_runtime_commit": "16a85a9e63417955e2ac02c39b9694129dc8e16b",
+  "source_execution_commit": "60d76deeb468fdd2dc2c444b7cf60d95a9dd9290",
+  "source_delivery_commit": "afdde3dab6a31feb500dcc8f3b910ed429c6eeba",
+  "source_science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "source_image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+  "image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+  "analysis_environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "scientific_project_imports": "FORBIDDEN",
+    "scipy_import": "FORBIDDEN",
+    "pyscf_import": "FORBIDDEN",
+    "process_and_socket_creation": "AUDIT_HOOK_FORBIDDEN",
+    "guard_scope": "Scoped in-process guard, not a general security sandbox"
+  },
+  "source_paths": [
+    {
+      "path": "production_copy",
+      "snapshot_role": "SAVED_RETURNED_DENSITY_ONLY",
+      "original_density_id": "2884d1bcee333850aa3ae1242ef7b709bd76a5dabfb6925a1dd90012ecfcfd81",
+      "original_fock_identity": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "0ab3fdaaddc622384ab24716f1427b77a921a9e7f28f003afe88c0d5b2f54ec3",
+        "finite": true
+      },
+      "original_masked_overlap_identity": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "b8b3f020e5ee76c663283aa3dc105d4e0b1e37edad07787515f5712fe85f68dd",
+        "finite": true
+      },
+      "original_true_snapshot_density_binding_verified": true,
+      "original_gate_saved_verbatim": {
+        "qualified": false,
+        "checks": {
+          "finite": true,
+          "overlap_positive": true,
+          "commutator": true,
+          "electron_count": true,
+          "idempotency": true,
+          "energy_closure": true,
+          "overlap_mask": true,
+          "fock_mask": true,
+          "mapped_density": false,
+          "raw_gap": false
+        },
+        "reasons": [
+          "MAPPED_DENSITY_FAILED",
+          "RAW_GAP_FAILED",
+          "ROOT_AMBIGUOUS"
+        ],
+        "operator_source": "RECOMPUTED_AT_RETURNED_DENSITY_NO_DIIS",
+        "thresholds": {
+          "commutator_frobenius": 1e-05,
+          "electron_count_abs": 1e-07,
+          "idempotency_relative": 1e-07,
+          "energy_closure_hartree": 1e-09,
+          "mask_max_abs": 1e-12,
+          "mapped_density_relative": 2e-08,
+          "final_non_diis_gap_minimum_hartree": 1e-06
+        },
+        "final_commutator_frobenius_norm": 1.8890195723410966e-09,
+        "masked_metric_electron_count": 15.999999999999977,
+        "closed_shell_idempotency_relative_residual": 4.477632515303005e-15,
+        "energy_component_closure_residual_hartree": 1.4210854715202004e-14,
+        "mapped_density_relative_residual": 0.42980285975005655,
+        "final_non_diis_gap_hartree": 2.67841304690819e-15,
+        "raw_map_absolute_frobenius": 1.9890267467484586,
+        "returned_density_energy_recheck_hartree": 0.0
+      },
+      "original_gate_source": "SAVED_SCIPY_GATE_NOT_RECOMPUTED_OR_REPLACED_BY_NUMPY",
+      "original_gate_is_attached_to_any_new_witness": false,
+      "exact_window_center_hartree": {
+        "numerator": "-787652300606175",
+        "denominator": "9007199254740992",
+        "float_display_only": -0.08744697195319506
+      },
+      "exact_inertia_window": [
+        {
+          "side": "LOWER",
+          "shift_exact_rational": {
+            "numerator": "-7691917006903270756583",
+            "denominator": "87960930222080000000000",
+            "float_display_only": -0.08744697205319506
+          },
+          "full": {
+            "negative": 7,
+            "positive": 7,
+            "zero": 0,
+            "pivot_signs": [
+              -1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              1,
+              1
+            ],
+            "minimum_absolute_pivot_float_diagnostic": 9.99983901766143e-11,
+            "exact_LDL_reconstruction": true,
+            "arithmetic": "EXACT_FRACTION_OF_STORED_BINARY64",
+            "shift_numerator": "-7691917006903270756583",
+            "shift_denominator": "87960930222080000000000"
+          },
+          "sigma_principal_block": {
+            "negative": 7,
+            "positive": 5,
+            "zero": 0,
+            "pivot_signs": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              1,
+              1
+            ],
+            "minimum_absolute_pivot_float_diagnostic": 0.012048644809281308,
+            "exact_LDL_reconstruction": true,
+            "arithmetic": "EXACT_FRACTION_OF_STORED_BINARY64",
+            "shift_numerator": "-7691917006903270756583",
+            "shift_denominator": "87960930222080000000000"
+          }
+        },
+        {
+          "side": "UPPER",
+          "shift_exact_rational": {
+            "numerator": "-7691916989311084712167",
+            "denominator": "87960930222080000000000",
+            "float_display_only": -0.08744697185319507
+          },
+          "full": {
+            "negative": 9,
+            "positive": 5,
+            "zero": 0,
+            "pivot_signs": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1
+            ],
+            "minimum_absolute_pivot_float_diagnostic": 9.99983901766143e-11,
+            "exact_LDL_reconstruction": true,
+            "arithmetic": "EXACT_FRACTION_OF_STORED_BINARY64",
+            "shift_numerator": "-7691916989311084712167",
+            "shift_denominator": "87960930222080000000000"
+          },
+          "sigma_principal_block": {
+            "negative": 7,
+            "positive": 5,
+            "zero": 0,
+            "pivot_signs": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              1,
+              1
+            ],
+            "minimum_absolute_pivot_float_diagnostic": 0.012048644491194166,
+            "exact_LDL_reconstruction": true,
+            "arithmetic": "EXACT_FRACTION_OF_STORED_BINARY64",
+            "shift_numerator": "-7691916989311084712167",
+            "shift_denominator": "87960930222080000000000"
+          }
+        }
+      ],
+      "exact_frozen_operator_gap_and_change_theorem": {
+        "status": "EXACT_REPRESENTED_GENERALIZED_METRIC_THEOREM_FIXED_S_ONLY",
+        "represented_matrices": "Exact rational values of saved binary64 lower triangles, symmetrically mirrored",
+        "positive_definite_metric_certificate": {
+          "negative": 0,
+          "positive": 14,
+          "zero": 0,
+          "pivot_signs": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "minimum_absolute_pivot_float_diagnostic": 0.5348636567914821,
+          "exact_LDL_reconstruction": true,
+          "arithmetic": "EXACT_FRACTION_OF_STORED_BINARY64",
+          "shift_numerator": "0",
+          "shift_denominator": "1"
+        },
+        "global_occupied_boundary_indices_1based": [
+          8,
+          9
+        ],
+        "lambda_8_and_lambda_9_strictly_inside": {
+          "lower": {
+            "numerator": "-7691917006903270756583",
+            "denominator": "87960930222080000000000",
+            "float_display_only": -0.08744697205319506
+          },
+          "upper": {
+            "numerator": "-7691916989311084712167",
+            "denominator": "87960930222080000000000",
+            "float_display_only": -0.08744697185319507
+          }
+        },
+        "represented_global_boundary_gap": {
+          "relation": "0 <= gap < upper_bound",
+          "strict_upper_bound_hartree": {
+            "numerator": "1",
+            "denominator": "5000000000",
+            "float_display_only": 2e-10
+          }
+        },
+        "original_gap_gate_hartree": {
+          "numerator": "1",
+          "denominator": "1000000",
+          "float_display_only": 1e-06
+        },
+        "frozen_operator_occupation_change_can_pass_original_global_gap_gate": false,
+        "weyl_relation": "gap(A + DeltaA) <= gap(A) + 2 ||DeltaA||_2; A = S^(-1/2) F S^(-1/2)",
+        "necessary_operator_change": {
+          "relation": "||DeltaA||_2 > strict_lower_bound",
+          "strict_lower_bound_hartree": {
+            "numerator": "4999",
+            "denominator": "10000000000",
+            "float_display_only": 4.999e-07
+          },
+          "definition": "DeltaA = S^(-1/2) (Fnew - Fsaved) S^(-1/2), using the SAME fixed S",
+          "necessity_only": true,
+          "sufficiency": false
+        },
+        "Fnew_at_any_witness_D": "NOT_EXECUTED",
+        "numpy_whitening_is_an_exact_error_certificate": false,
+        "claim_limit": "Applies to this frozen represented F/S pair. Does not prove physical exact degeneracy, absence of other self-consistent roots, or an invariant spectrum for changed D."
+      },
+      "diagnostic_numpy_boundary_gap_hartree": 6.827871601444713e-15,
+      "diagnostic_numpy_spectrum_hartree": [
+        -9.968530669822112,
+        -9.968064444448204,
+        -0.7234313482238189,
+        -0.5320380126382956,
+        -0.4357106038975655,
+        -0.36816958870187627,
+        -0.3172462473558392,
+        -0.08744697195320036,
+        -0.08744697195319354,
+        0.39707884555214784,
+        0.43116413694538724,
+        0.44089559466868994,
+        0.6523866960708515,
+        0.6737622033315088
+      ],
+      "diagnostic_numpy_original_cluster_occupied_trace": 0.9999999999999991,
+      "diagnostic_numpy_original_cluster_occupied_eigenvalues": [
+        0.0,
+        0.9999999999999991
+      ],
+      "sigma_pi_stored_F_max_abs": 3.0727212226041536e-17,
+      "sigma_pi_stored_S_max_abs": 0.0,
+      "cross_fragment_pi_F_entry_saved": 0.0,
+      "saved_pi_diagonals_hartree": [
+        -0.08744697195319667,
+        -0.08744697195319345
+      ],
+      "matrix_convention": "Lower triangles symmetrically mirrored for exact inertia and NumPy spectral diagnostics",
+      "stored_F_asymmetry_max_abs": 1.7763568394002505e-15,
+      "stored_S_asymmetry_max_abs": 1.6653345369377348e-16,
+      "cached_symmetry_witnesses": {
+        "status": "CACHED_GEOMETRY_AND_LABELS_CHECKED_NUMERICAL_MATRIX_RESIDUALS_REPORTED",
+        "strict_symmetry_certification": "NOT_GRANTED",
+        "all_roots_symmetry_claim": false,
+        "plane_z_reflection": {
+          "definition": "Rz = diag(sigma:+1, pi:-1)",
+          "stored_matrix_residuals": {
+            "stored_masked_overlap": {
+              "max_abs": 0.0,
+              "frobenius": 0.0
+            },
+            "stored_conditional_F_at_returned_D": {
+              "max_abs": 6.145442445208307e-17,
+              "frobenius": 2.405067329639819e-16
+            },
+            "stored_returned_density": {
+              "max_abs": 1.8921918345209683e-15,
+              "frobenius": 6.6262132688656774e-15
+            }
+          }
+        },
+        "reflection_x_atom_exchange": {
+          "definition": "x -> -x; C1<->C2, H3<->H5, H4<->H6; px:-1, other AO:+1",
+          "coordinate_checks": [
+            {
+              "atom_0based": 0,
+              "mapped_atom_0based": 1,
+              "coordinate_max_abs_angstrom": 0.0,
+              "element_labels_match": true
+            },
+            {
+              "atom_0based": 1,
+              "mapped_atom_0based": 0,
+              "coordinate_max_abs_angstrom": 0.0,
+              "element_labels_match": true
+            },
+            {
+              "atom_0based": 2,
+              "mapped_atom_0based": 4,
+              "coordinate_max_abs_angstrom": 0.0,
+              "element_labels_match": true
+            },
+            {
+              "atom_0based": 3,
+              "mapped_atom_0based": 5,
+              "coordinate_max_abs_angstrom": 0.0,
+              "element_labels_match": true
+            },
+            {
+              "atom_0based": 4,
+              "mapped_atom_0based": 2,
+              "coordinate_max_abs_angstrom": 0.0,
+              "element_labels_match": true
+            },
+            {
+              "atom_0based": 5,
+              "mapped_atom_0based": 3,
+              "coordinate_max_abs_angstrom": 0.0,
+              "element_labels_match": true
+            }
+          ],
+          "AO_checks": [
+            {
+              "source_AO_0based": 0,
+              "target_AO_0based": 5,
+              "source_label": [
+                0,
+                "C",
+                "1s",
+                ""
+              ],
+              "target_label": [
+                1,
+                "C",
+                "1s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 1,
+              "target_AO_0based": 6,
+              "source_label": [
+                0,
+                "C",
+                "2s",
+                ""
+              ],
+              "target_label": [
+                1,
+                "C",
+                "2s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 2,
+              "target_AO_0based": 7,
+              "source_label": [
+                0,
+                "C",
+                "2p",
+                "x"
+              ],
+              "target_label": [
+                1,
+                "C",
+                "2p",
+                "x"
+              ],
+              "phase": -1.0
+            },
+            {
+              "source_AO_0based": 3,
+              "target_AO_0based": 8,
+              "source_label": [
+                0,
+                "C",
+                "2p",
+                "y"
+              ],
+              "target_label": [
+                1,
+                "C",
+                "2p",
+                "y"
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 4,
+              "target_AO_0based": 9,
+              "source_label": [
+                0,
+                "C",
+                "2p",
+                "z"
+              ],
+              "target_label": [
+                1,
+                "C",
+                "2p",
+                "z"
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 5,
+              "target_AO_0based": 0,
+              "source_label": [
+                1,
+                "C",
+                "1s",
+                ""
+              ],
+              "target_label": [
+                0,
+                "C",
+                "1s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 6,
+              "target_AO_0based": 1,
+              "source_label": [
+                1,
+                "C",
+                "2s",
+                ""
+              ],
+              "target_label": [
+                0,
+                "C",
+                "2s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 7,
+              "target_AO_0based": 2,
+              "source_label": [
+                1,
+                "C",
+                "2p",
+                "x"
+              ],
+              "target_label": [
+                0,
+                "C",
+                "2p",
+                "x"
+              ],
+              "phase": -1.0
+            },
+            {
+              "source_AO_0based": 8,
+              "target_AO_0based": 3,
+              "source_label": [
+                1,
+                "C",
+                "2p",
+                "y"
+              ],
+              "target_label": [
+                0,
+                "C",
+                "2p",
+                "y"
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 9,
+              "target_AO_0based": 4,
+              "source_label": [
+                1,
+                "C",
+                "2p",
+                "z"
+              ],
+              "target_label": [
+                0,
+                "C",
+                "2p",
+                "z"
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 10,
+              "target_AO_0based": 12,
+              "source_label": [
+                2,
+                "H",
+                "1s",
+                ""
+              ],
+              "target_label": [
+                4,
+                "H",
+                "1s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 11,
+              "target_AO_0based": 13,
+              "source_label": [
+                3,
+                "H",
+                "1s",
+                ""
+              ],
+              "target_label": [
+                5,
+                "H",
+                "1s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 12,
+              "target_AO_0based": 10,
+              "source_label": [
+                4,
+                "H",
+                "1s",
+                ""
+              ],
+              "target_label": [
+                2,
+                "H",
+                "1s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 13,
+              "target_AO_0based": 11,
+              "source_label": [
+                5,
+                "H",
+                "1s",
+                ""
+              ],
+              "target_label": [
+                3,
+                "H",
+                "1s",
+                ""
+              ],
+              "phase": 1.0
+            }
+          ],
+          "U_orthogonality_exact_binary64_check": true,
+          "stored_matrix_UMUT_minus_M": {
+            "stored_masked_overlap": {
+              "max_abs": 0.0,
+              "frobenius": 0.0
+            },
+            "stored_conditional_F_at_returned_D": {
+              "max_abs": 4.718447854656915e-15,
+              "frobenius": 1.228788976846742e-14
+            },
+            "stored_returned_density": {
+              "max_abs": 2.5202062658991053e-14,
+              "frobenius": 4.947576740190078e-14
+            }
+          }
+        },
+        "limit": "Saved endpoints only. The cross-fragment pi-pi mask does not enforce sigma-pi zeros or equal pi diagonals for arbitrary D."
+      },
+      "occupation_witnesses": [
+        {
+          "name": "anchor_A_AO4",
+          "density_id": "2103b26b9c349a5ab9953e4cc72fdd49fd3e997bf723f73979eaef866c675240",
+          "array_scope": "FROZEN_ARRAY_OCCUPATION_WITNESS_NOT_EXECUTABLE_SEED",
+          "AO_indices_0based": [
+            4
+          ],
+          "AO_anchor_coefficients": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "white_anchor_definition": "S_half @ AO_anchor; project with Qcluster and normalize",
+          "projected_white_anchor_norm": 1.0,
+          "numerical_array_checks": {
+            "status": "PASS_NUMERICAL_ARRAY_IDENTITIES_ONLY",
+            "observations": {
+              "rank_of_white_projector_numpy": 8,
+              "white_eigenvalues": [
+                -2.89421978301509e-16,
+                -7.416222189309171e-17,
+                4.489288291999629e-17,
+                1.4224732503009816e-16,
+                2.329595429972381e-16,
+                5.529706036401337e-16,
+                0.999999999999997,
+                0.999999999999998,
+                0.9999999999999981,
+                0.9999999999999989,
+                0.9999999999999991,
+                1.0000000000000002,
+                1.0000000000000004,
+                1.0000000000000036
+              ],
+              "masked_metric_electrons": 15.999999999999996,
+              "masked_metric_electrons_abs_error": 3.552713678800501e-15,
+              "closed_shell_DSD_minus_2D_frobenius": 1.213057024026829e-14,
+              "closed_shell_DSD_minus_2D_relative": 2.6212587579273995e-15,
+              "white_projector_trace": 7.999999999999994,
+              "white_trace_abs_error": 6.217248937900877e-15,
+              "white_idempotency_absolute_frobenius": 5.98792236437453e-15,
+              "production_density_reconstruction_relative_frobenius": 1.6260149324492341e-15,
+              "density_symmetry_max_abs": 3.885780586188048e-16,
+              "half_inverse_identity_frobenius": 4.930859805711868e-15
+            },
+            "checks": {
+              "rank": true,
+              "masked_electrons": true,
+              "DSD_2D_relative": true,
+              "white_trace": true,
+              "white_idempotency": true,
+              "production_reconstruction": true,
+              "density_symmetry": true
+            },
+            "thresholds": {
+              "masked_electrons_abs": 1e-07,
+              "DSD_2D_relative": 1e-07,
+              "white_trace_abs": 1e-10,
+              "white_idempotency_abs_frobenius": 1e-10,
+              "production_reconstruction_relative": 1e-10
+            },
+            "actual_solver_admission": "NOT_EXECUTED",
+            "executable_seed": false,
+            "initialization_policy_is_changed": false
+          },
+          "basis_invariance": {
+            "algebraic_identity": "(Qc R)(Qc R)^T = Qc Qc^T for every orthogonal R; Q(S_half a) is unchanged",
+            "float_tests": [
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 0.0,
+                "anchor_rank_one_projector_frobenius": 0.0,
+                "full_occupied_projector_frobenius": 0.0
+              },
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 1.1102263387407118e-16,
+                "anchor_rank_one_projector_frobenius": 2.7127155720121694e-19,
+                "full_occupied_projector_frobenius": 2.7127155720121694e-19
+              },
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 0.0,
+                "anchor_rank_one_projector_frobenius": 0.0,
+                "full_occupied_projector_frobenius": 0.0
+              },
+              {
+                "orthogonality_frobenius": 3.148795641120281e-17,
+                "cluster_projector_frobenius": 2.486880797124399e-16,
+                "anchor_rank_one_projector_frobenius": 1.4697032716480894e-17,
+                "full_occupied_projector_frobenius": 1.4697032716480894e-17
+              },
+              {
+                "orthogonality_frobenius": 1.110841821622119e-16,
+                "cluster_projector_frobenius": 2.5341437173479537e-16,
+                "anchor_rank_one_projector_frobenius": 5.0883057900931084e-17,
+                "full_occupied_projector_frobenius": 5.0883057900931084e-17
+              },
+              {
+                "orthogonality_frobenius": 1.5790963415938684e-16,
+                "cluster_projector_frobenius": 2.5579348427717555e-16,
+                "anchor_rank_one_projector_frobenius": 6.164858780431323e-17,
+                "full_occupied_projector_frobenius": 6.164858780431323e-17
+              }
+            ],
+            "number_of_transforms": 6,
+            "status": "PASS_FINITE_NUMERICAL_TESTS_AND_SYMBOLIC_PROJECTOR_IDENTITY",
+            "white_anchor_formula": "S_half @ AO_coefficient_anchor; not S_inverse_half @ anchor",
+            "no_choice_of_individual_cluster_eigenvector": true
+          },
+          "array_members": {
+            "AO_anchor": "production_copy__witness__anchor_A_AO4__AO_anchor",
+            "white_AO_anchor": "production_copy__witness__anchor_A_AO4__white_AO_anchor",
+            "rank_one_white_direction": "production_copy__witness__anchor_A_AO4__rank_one_white_direction",
+            "white_occupied_projector": "production_copy__witness__anchor_A_AO4__white_occupied_projector",
+            "density_NO_F_NO_ENERGY": "production_copy__witness__anchor_A_AO4__density_NO_F_NO_ENERGY"
+          },
+          "frozen_operator_diagnostic": {
+            "operator_bound_to_original_density_id": "2884d1bcee333850aa3ae1242ef7b709bd76a5dabfb6925a1dd90012ecfcfd81",
+            "operator_is_F_at_witness_density": false,
+            "commutator_frobenius": 4.639576499680635e-14,
+            "original_frozen_global_gap_gate_changes_with_occupation": false,
+            "same_exact_frozen_boundary_gap_theorem": "0 <= gap < 2e-10 Eh"
+          },
+          "distance_to_original_returned_D_frobenius": 2.0000000000000124,
+          "pi_density_AO_block": [
+            [
+              2.0000000000000018,
+              2.1714352609384772e-16
+            ],
+            [
+              2.551091104946982e-16,
+              8.387241309682292e-31
+            ]
+          ],
+          "F_at_this_new_density": "NOT_EXECUTED",
+          "energy_at_this_new_density": null,
+          "new_matched_operator_id": null,
+          "new_energy_binding": null,
+          "self_consistent_root": "NOT_ESTABLISHED",
+          "actual_solver_admission": "NOT_EXECUTED",
+          "scientific_qualification": "NOT_GRANTED",
+          "Compute": false
+        },
+        {
+          "name": "anchor_B_AO9",
+          "density_id": "c621616cf4bb9edddc9b94a1c6baf5b17958f27df80e73f04894fd6153c0a208",
+          "array_scope": "FROZEN_ARRAY_OCCUPATION_WITNESS_NOT_EXECUTABLE_SEED",
+          "AO_indices_0based": [
+            9
+          ],
+          "AO_anchor_coefficients": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "white_anchor_definition": "S_half @ AO_anchor; project with Qcluster and normalize",
+          "projected_white_anchor_norm": 1.0,
+          "numerical_array_checks": {
+            "status": "PASS_NUMERICAL_ARRAY_IDENTITIES_ONLY",
+            "observations": {
+              "rank_of_white_projector_numpy": 8,
+              "white_eigenvalues": [
+                -3.2889196258459364e-16,
+                -1.0271875746157828e-16,
+                2.134886105305289e-16,
+                3.875574486661078e-16,
+                5.155413930327622e-16,
+                5.638333335677274e-16,
+                0.9999999999999967,
+                0.999999999999997,
+                0.9999999999999974,
+                0.9999999999999976,
+                0.9999999999999986,
+                0.9999999999999998,
+                1.000000000000002,
+                1.000000000000003
+              ],
+              "masked_metric_electrons": 15.999999999999996,
+              "masked_metric_electrons_abs_error": 3.552713678800501e-15,
+              "closed_shell_DSD_minus_2D_frobenius": 1.2233834507195269e-14,
+              "closed_shell_DSD_minus_2D_relative": 2.6435728255022898e-15,
+              "white_projector_trace": 7.999999999999996,
+              "white_trace_abs_error": 4.440892098500626e-15,
+              "white_idempotency_absolute_frobenius": 6.2924589111840714e-15,
+              "production_density_reconstruction_relative_frobenius": 1.7961158275051876e-15,
+              "density_symmetry_max_abs": 3.885780586188048e-16,
+              "half_inverse_identity_frobenius": 4.930859805711868e-15
+            },
+            "checks": {
+              "rank": true,
+              "masked_electrons": true,
+              "DSD_2D_relative": true,
+              "white_trace": true,
+              "white_idempotency": true,
+              "production_reconstruction": true,
+              "density_symmetry": true
+            },
+            "thresholds": {
+              "masked_electrons_abs": 1e-07,
+              "DSD_2D_relative": 1e-07,
+              "white_trace_abs": 1e-10,
+              "white_idempotency_abs_frobenius": 1e-10,
+              "production_reconstruction_relative": 1e-10
+            },
+            "actual_solver_admission": "NOT_EXECUTED",
+            "executable_seed": false,
+            "initialization_policy_is_changed": false
+          },
+          "basis_invariance": {
+            "algebraic_identity": "(Qc R)(Qc R)^T = Qc Qc^T for every orthogonal R; Q(S_half a) is unchanged",
+            "float_tests": [
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 0.0,
+                "anchor_rank_one_projector_frobenius": 0.0,
+                "full_occupied_projector_frobenius": 0.0
+              },
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 1.1102263387407118e-16,
+                "anchor_rank_one_projector_frobenius": 2.7127155720121694e-19,
+                "full_occupied_projector_frobenius": 2.7127155720121694e-19
+              },
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 0.0,
+                "anchor_rank_one_projector_frobenius": 0.0,
+                "full_occupied_projector_frobenius": 0.0
+              },
+              {
+                "orthogonality_frobenius": 3.148795641120281e-17,
+                "cluster_projector_frobenius": 2.486880797124399e-16,
+                "anchor_rank_one_projector_frobenius": 1.4697032716480897e-17,
+                "full_occupied_projector_frobenius": 1.4697032716480897e-17
+              },
+              {
+                "orthogonality_frobenius": 1.110841821622119e-16,
+                "cluster_projector_frobenius": 2.5341437173479537e-16,
+                "anchor_rank_one_projector_frobenius": 5.088305790093111e-17,
+                "full_occupied_projector_frobenius": 5.088305790093111e-17
+              },
+              {
+                "orthogonality_frobenius": 1.5790963415938684e-16,
+                "cluster_projector_frobenius": 2.5579348427717555e-16,
+                "anchor_rank_one_projector_frobenius": 6.164858780431328e-17,
+                "full_occupied_projector_frobenius": 6.164858780431328e-17
+              }
+            ],
+            "number_of_transforms": 6,
+            "status": "PASS_FINITE_NUMERICAL_TESTS_AND_SYMBOLIC_PROJECTOR_IDENTITY",
+            "white_anchor_formula": "S_half @ AO_coefficient_anchor; not S_inverse_half @ anchor",
+            "no_choice_of_individual_cluster_eigenvector": true
+          },
+          "array_members": {
+            "AO_anchor": "production_copy__witness__anchor_B_AO9__AO_anchor",
+            "white_AO_anchor": "production_copy__witness__anchor_B_AO9__white_AO_anchor",
+            "rank_one_white_direction": "production_copy__witness__anchor_B_AO9__rank_one_white_direction",
+            "white_occupied_projector": "production_copy__witness__anchor_B_AO9__white_occupied_projector",
+            "density_NO_F_NO_ENERGY": "production_copy__witness__anchor_B_AO9__density_NO_F_NO_ENERGY"
+          },
+          "frozen_operator_diagnostic": {
+            "operator_bound_to_original_density_id": "2884d1bcee333850aa3ae1242ef7b709bd76a5dabfb6925a1dd90012ecfcfd81",
+            "operator_is_F_at_witness_density": false,
+            "commutator_frobenius": 4.816007401746144e-14,
+            "original_frozen_global_gap_gate_changes_with_occupation": false,
+            "same_exact_frozen_boundary_gap_theorem": "0 <= gap < 2e-10 Eh"
+          },
+          "distance_to_original_returned_D_frobenius": 1.9999999999999871,
+          "pi_density_AO_block": [
+            [
+              1.0267681421792152e-29,
+              2.551091104946993e-16
+            ],
+            [
+              2.930746948955497e-16,
+              2.0000000000000018
+            ]
+          ],
+          "F_at_this_new_density": "NOT_EXECUTED",
+          "energy_at_this_new_density": null,
+          "new_matched_operator_id": null,
+          "new_energy_binding": null,
+          "self_consistent_root": "NOT_ESTABLISHED",
+          "actual_solver_admission": "NOT_EXECUTED",
+          "scientific_qualification": "NOT_GRANTED",
+          "Compute": false
+        },
+        {
+          "name": "anchor_symmetric_AplusB",
+          "density_id": "bde824cc2957779325a8f8c2fb53fb626970c55b757285a1da4a69fdb92b4faf",
+          "array_scope": "FROZEN_ARRAY_OCCUPATION_WITNESS_NOT_EXECUTABLE_SEED",
+          "AO_indices_0based": [
+            4,
+            9
+          ],
+          "AO_anchor_coefficients": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "white_anchor_definition": "S_half @ AO_anchor; project with Qcluster and normalize",
+          "projected_white_anchor_norm": 1.4142135623730951,
+          "numerical_array_checks": {
+            "status": "PASS_NUMERICAL_ARRAY_IDENTITIES_ONLY",
+            "observations": {
+              "rank_of_white_projector_numpy": 8,
+              "white_eigenvalues": [
+                -6.941511426588038e-16,
+                -4.53053297295469e-16,
+                -3.2634916587622407e-16,
+                -7.888450985815578e-17,
+                2.276487902383606e-16,
+                4.216321230705067e-16,
+                0.9999999999999969,
+                0.9999999999999976,
+                0.9999999999999981,
+                0.9999999999999982,
+                0.9999999999999987,
+                0.9999999999999999,
+                1.0000000000000013,
+                1.0000000000000033
+              ],
+              "masked_metric_electrons": 15.999999999999998,
+              "masked_metric_electrons_abs_error": 1.7763568394002505e-15,
+              "closed_shell_DSD_minus_2D_frobenius": 1.2472780692968767e-14,
+              "closed_shell_DSD_minus_2D_relative": 2.6952059944074864e-15,
+              "white_projector_trace": 7.999999999999995,
+              "white_trace_abs_error": 5.329070518200751e-15,
+              "white_idempotency_absolute_frobenius": 6.328286139306554e-15,
+              "production_density_reconstruction_relative_frobenius": 1.6299172663656344e-15,
+              "density_symmetry_max_abs": 3.885780586188048e-16,
+              "half_inverse_identity_frobenius": 4.930859805711868e-15
+            },
+            "checks": {
+              "rank": true,
+              "masked_electrons": true,
+              "DSD_2D_relative": true,
+              "white_trace": true,
+              "white_idempotency": true,
+              "production_reconstruction": true,
+              "density_symmetry": true
+            },
+            "thresholds": {
+              "masked_electrons_abs": 1e-07,
+              "DSD_2D_relative": 1e-07,
+              "white_trace_abs": 1e-10,
+              "white_idempotency_abs_frobenius": 1e-10,
+              "production_reconstruction_relative": 1e-10
+            },
+            "actual_solver_admission": "NOT_EXECUTED",
+            "executable_seed": false,
+            "initialization_policy_is_changed": false
+          },
+          "basis_invariance": {
+            "algebraic_identity": "(Qc R)(Qc R)^T = Qc Qc^T for every orthogonal R; Q(S_half a) is unchanged",
+            "float_tests": [
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 0.0,
+                "anchor_rank_one_projector_frobenius": 0.0,
+                "full_occupied_projector_frobenius": 0.0
+              },
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 1.1102263387407118e-16,
+                "anchor_rank_one_projector_frobenius": 6.568703055910849e-31,
+                "full_occupied_projector_frobenius": 6.842846167194665e-31
+              },
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 0.0,
+                "anchor_rank_one_projector_frobenius": 0.0,
+                "full_occupied_projector_frobenius": 0.0
+              },
+              {
+                "orthogonality_frobenius": 3.148795641120281e-17,
+                "cluster_projector_frobenius": 2.486880797124399e-16,
+                "anchor_rank_one_projector_frobenius": 4.440892098500626e-16,
+                "full_occupied_projector_frobenius": 4.440892098500626e-16
+              },
+              {
+                "orthogonality_frobenius": 1.110841821622119e-16,
+                "cluster_projector_frobenius": 2.5341437173479537e-16,
+                "anchor_rank_one_projector_frobenius": 2.7194799110210365e-16,
+                "full_occupied_projector_frobenius": 2.7194799110210365e-16
+              },
+              {
+                "orthogonality_frobenius": 1.5790963415938684e-16,
+                "cluster_projector_frobenius": 2.5579348427717555e-16,
+                "anchor_rank_one_projector_frobenius": 4.577566798522237e-16,
+                "full_occupied_projector_frobenius": 4.577566798522237e-16
+              }
+            ],
+            "number_of_transforms": 6,
+            "status": "PASS_FINITE_NUMERICAL_TESTS_AND_SYMBOLIC_PROJECTOR_IDENTITY",
+            "white_anchor_formula": "S_half @ AO_coefficient_anchor; not S_inverse_half @ anchor",
+            "no_choice_of_individual_cluster_eigenvector": true
+          },
+          "array_members": {
+            "AO_anchor": "production_copy__witness__anchor_symmetric_AplusB__AO_anchor",
+            "white_AO_anchor": "production_copy__witness__anchor_symmetric_AplusB__white_AO_anchor",
+            "rank_one_white_direction": "production_copy__witness__anchor_symmetric_AplusB__rank_one_white_direction",
+            "white_occupied_projector": "production_copy__witness__anchor_symmetric_AplusB__white_occupied_projector",
+            "density_NO_F_NO_ENERGY": "production_copy__witness__anchor_symmetric_AplusB__density_NO_F_NO_ENERGY"
+          },
+          "frozen_operator_diagnostic": {
+            "operator_bound_to_original_density_id": "2884d1bcee333850aa3ae1242ef7b709bd76a5dabfb6925a1dd90012ecfcfd81",
+            "operator_is_F_at_witness_density": false,
+            "commutator_frobenius": 4.766312269705711e-14,
+            "original_frozen_global_gap_gate_changes_with_occupation": false,
+            "same_exact_frozen_boundary_gap_theorem": "0 <= gap < 2e-10 Eh"
+          },
+          "distance_to_original_returned_D_frobenius": 5.219468126268319e-09,
+          "pi_density_AO_block": [
+            [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            [
+              1.000000000000001,
+              1.000000000000001
+            ]
+          ],
+          "F_at_this_new_density": "NOT_EXECUTED",
+          "energy_at_this_new_density": null,
+          "new_matched_operator_id": null,
+          "new_energy_binding": null,
+          "self_consistent_root": "NOT_ESTABLISHED",
+          "actual_solver_admission": "NOT_EXECUTED",
+          "scientific_qualification": "NOT_GRANTED",
+          "Compute": false
+        }
+      ],
+      "limit": "Saved endpoint structure is not imposed by the pi-pi mask on arbitrary densities. No global root existence/nonexistence or all-roots symmetry claim."
+    },
+    {
+      "path": "production_owned",
+      "snapshot_role": "SAVED_RETURNED_DENSITY_ONLY",
+      "original_density_id": "c0775e32e931b396d33467f90296742c6a973c38a8f96b2ec847110cb667397c",
+      "original_fock_identity": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "521d29e8f7ad3bc9b2c8ae0c108203523fba181028f4a8ae6be8220810519f5b",
+        "finite": true
+      },
+      "original_masked_overlap_identity": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "b8b3f020e5ee76c663283aa3dc105d4e0b1e37edad07787515f5712fe85f68dd",
+        "finite": true
+      },
+      "original_true_snapshot_density_binding_verified": true,
+      "original_gate_saved_verbatim": {
+        "qualified": false,
+        "checks": {
+          "finite": true,
+          "overlap_positive": true,
+          "commutator": true,
+          "electron_count": true,
+          "idempotency": true,
+          "energy_closure": true,
+          "overlap_mask": true,
+          "fock_mask": true,
+          "mapped_density": false,
+          "raw_gap": false
+        },
+        "reasons": [
+          "MAPPED_DENSITY_FAILED",
+          "RAW_GAP_FAILED",
+          "ROOT_AMBIGUOUS"
+        ],
+        "operator_source": "RECOMPUTED_AT_RETURNED_DENSITY_NO_DIIS",
+        "thresholds": {
+          "commutator_frobenius": 1e-05,
+          "electron_count_abs": 1e-07,
+          "idempotency_relative": 1e-07,
+          "energy_closure_hartree": 1e-09,
+          "mask_max_abs": 1e-12,
+          "mapped_density_relative": 2e-08,
+          "final_non_diis_gap_minimum_hartree": 1e-06
+        },
+        "final_commutator_frobenius_norm": 1.889025561222797e-09,
+        "masked_metric_electron_count": 15.99999999999998,
+        "closed_shell_idempotency_relative_residual": 3.884024208730843e-15,
+        "energy_component_closure_residual_hartree": 1.4210854715202004e-14,
+        "mapped_density_relative_residual": 0.43357147297140336,
+        "final_non_diis_gap_hartree": 5.6343818499726694e-15,
+        "raw_map_absolute_frobenius": 2.0064670041254526,
+        "returned_density_energy_recheck_hartree": 0.0
+      },
+      "original_gate_source": "SAVED_SCIPY_GATE_NOT_RECOMPUTED_OR_REPLACED_BY_NUMPY",
+      "original_gate_is_attached_to_any_new_witness": false,
+      "exact_window_center_hartree": {
+        "numerator": "-1575304601212257",
+        "denominator": "18014398509481984",
+        "float_display_only": -0.0874469719531899
+      },
+      "exact_inertia_window": [
+        {
+          "side": "LOWER",
+          "shift_exact_rational": {
+            "numerator": "-15383834013805633310041",
+            "denominator": "175921860444160000000000",
+            "float_display_only": -0.0874469720531899
+          },
+          "full": {
+            "negative": 7,
+            "positive": 7,
+            "zero": 0,
+            "pivot_signs": [
+              -1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              1,
+              1
+            ],
+            "minimum_absolute_pivot_float_diagnostic": 9.99975019981946e-11,
+            "exact_LDL_reconstruction": true,
+            "arithmetic": "EXACT_FRACTION_OF_STORED_BINARY64",
+            "shift_numerator": "-15383834013805633310041",
+            "shift_denominator": "175921860444160000000000"
+          },
+          "sigma_principal_block": {
+            "negative": 7,
+            "positive": 5,
+            "zero": 0,
+            "pivot_signs": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              1,
+              1
+            ],
+            "minimum_absolute_pivot_float_diagnostic": 0.012048644809279817,
+            "exact_LDL_reconstruction": true,
+            "arithmetic": "EXACT_FRACTION_OF_STORED_BINARY64",
+            "shift_numerator": "-15383834013805633310041",
+            "shift_denominator": "175921860444160000000000"
+          }
+        },
+        {
+          "side": "UPPER",
+          "shift_exact_rational": {
+            "numerator": "-15383833978621261221209",
+            "denominator": "175921860444160000000000",
+            "float_display_only": -0.0874469718531899
+          },
+          "full": {
+            "negative": 9,
+            "positive": 5,
+            "zero": 0,
+            "pivot_signs": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1
+            ],
+            "minimum_absolute_pivot_float_diagnostic": 9.99975019981946e-11,
+            "exact_LDL_reconstruction": true,
+            "arithmetic": "EXACT_FRACTION_OF_STORED_BINARY64",
+            "shift_numerator": "-15383833978621261221209",
+            "shift_denominator": "175921860444160000000000"
+          },
+          "sigma_principal_block": {
+            "negative": 7,
+            "positive": 5,
+            "zero": 0,
+            "pivot_signs": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              1,
+              1
+            ],
+            "minimum_absolute_pivot_float_diagnostic": 0.012048644491192676,
+            "exact_LDL_reconstruction": true,
+            "arithmetic": "EXACT_FRACTION_OF_STORED_BINARY64",
+            "shift_numerator": "-15383833978621261221209",
+            "shift_denominator": "175921860444160000000000"
+          }
+        }
+      ],
+      "exact_frozen_operator_gap_and_change_theorem": {
+        "status": "EXACT_REPRESENTED_GENERALIZED_METRIC_THEOREM_FIXED_S_ONLY",
+        "represented_matrices": "Exact rational values of saved binary64 lower triangles, symmetrically mirrored",
+        "positive_definite_metric_certificate": {
+          "negative": 0,
+          "positive": 14,
+          "zero": 0,
+          "pivot_signs": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "minimum_absolute_pivot_float_diagnostic": 0.5348636567914821,
+          "exact_LDL_reconstruction": true,
+          "arithmetic": "EXACT_FRACTION_OF_STORED_BINARY64",
+          "shift_numerator": "0",
+          "shift_denominator": "1"
+        },
+        "global_occupied_boundary_indices_1based": [
+          8,
+          9
+        ],
+        "lambda_8_and_lambda_9_strictly_inside": {
+          "lower": {
+            "numerator": "-15383834013805633310041",
+            "denominator": "175921860444160000000000",
+            "float_display_only": -0.0874469720531899
+          },
+          "upper": {
+            "numerator": "-15383833978621261221209",
+            "denominator": "175921860444160000000000",
+            "float_display_only": -0.0874469718531899
+          }
+        },
+        "represented_global_boundary_gap": {
+          "relation": "0 <= gap < upper_bound",
+          "strict_upper_bound_hartree": {
+            "numerator": "1",
+            "denominator": "5000000000",
+            "float_display_only": 2e-10
+          }
+        },
+        "original_gap_gate_hartree": {
+          "numerator": "1",
+          "denominator": "1000000",
+          "float_display_only": 1e-06
+        },
+        "frozen_operator_occupation_change_can_pass_original_global_gap_gate": false,
+        "weyl_relation": "gap(A + DeltaA) <= gap(A) + 2 ||DeltaA||_2; A = S^(-1/2) F S^(-1/2)",
+        "necessary_operator_change": {
+          "relation": "||DeltaA||_2 > strict_lower_bound",
+          "strict_lower_bound_hartree": {
+            "numerator": "4999",
+            "denominator": "10000000000",
+            "float_display_only": 4.999e-07
+          },
+          "definition": "DeltaA = S^(-1/2) (Fnew - Fsaved) S^(-1/2), using the SAME fixed S",
+          "necessity_only": true,
+          "sufficiency": false
+        },
+        "Fnew_at_any_witness_D": "NOT_EXECUTED",
+        "numpy_whitening_is_an_exact_error_certificate": false,
+        "claim_limit": "Applies to this frozen represented F/S pair. Does not prove physical exact degeneracy, absence of other self-consistent roots, or an invariant spectrum for changed D."
+      },
+      "diagnostic_numpy_boundary_gap_hartree": 5.190292640122607e-15,
+      "diagnostic_numpy_spectrum_hartree": [
+        -9.968530669822103,
+        -9.9680644444482,
+        -0.7234313482238153,
+        -0.5320380126382928,
+        -0.43571060389756255,
+        -0.36816958870187355,
+        -0.3172462473558362,
+        -0.08744697195319262,
+        -0.08744697195318743,
+        0.3970788455521499,
+        0.43116413694539246,
+        0.4408955946686886,
+        0.6523866960708548,
+        0.6737622033315148
+      ],
+      "diagnostic_numpy_original_cluster_occupied_trace": 0.9999999999999993,
+      "diagnostic_numpy_original_cluster_occupied_eigenvalues": [
+        0.0,
+        0.9999999999999993
+      ],
+      "sigma_pi_stored_F_max_abs": 4.1228821348109105e-17,
+      "sigma_pi_stored_S_max_abs": 0.0,
+      "cross_fragment_pi_F_entry_saved": 0.0,
+      "saved_pi_diagonals_hartree": [
+        -0.0874469719531924,
+        -0.0874469719531874
+      ],
+      "matrix_convention": "Lower triangles symmetrically mirrored for exact inertia and NumPy spectral diagnostics",
+      "stored_F_asymmetry_max_abs": 1.7763568394002505e-15,
+      "stored_S_asymmetry_max_abs": 1.6653345369377348e-16,
+      "cached_symmetry_witnesses": {
+        "status": "CACHED_GEOMETRY_AND_LABELS_CHECKED_NUMERICAL_MATRIX_RESIDUALS_REPORTED",
+        "strict_symmetry_certification": "NOT_GRANTED",
+        "all_roots_symmetry_claim": false,
+        "plane_z_reflection": {
+          "definition": "Rz = diag(sigma:+1, pi:-1)",
+          "stored_matrix_residuals": {
+            "stored_masked_overlap": {
+              "max_abs": 0.0,
+              "frobenius": 0.0
+            },
+            "stored_conditional_F_at_returned_D": {
+              "max_abs": 8.245764269621821e-17,
+              "frobenius": 2.382157862978695e-16
+            },
+            "stored_returned_density": {
+              "max_abs": 2.2929369841423448e-15,
+              "frobenius": 7.0268006590983505e-15
+            }
+          }
+        },
+        "reflection_x_atom_exchange": {
+          "definition": "x -> -x; C1<->C2, H3<->H5, H4<->H6; px:-1, other AO:+1",
+          "coordinate_checks": [
+            {
+              "atom_0based": 0,
+              "mapped_atom_0based": 1,
+              "coordinate_max_abs_angstrom": 0.0,
+              "element_labels_match": true
+            },
+            {
+              "atom_0based": 1,
+              "mapped_atom_0based": 0,
+              "coordinate_max_abs_angstrom": 0.0,
+              "element_labels_match": true
+            },
+            {
+              "atom_0based": 2,
+              "mapped_atom_0based": 4,
+              "coordinate_max_abs_angstrom": 0.0,
+              "element_labels_match": true
+            },
+            {
+              "atom_0based": 3,
+              "mapped_atom_0based": 5,
+              "coordinate_max_abs_angstrom": 0.0,
+              "element_labels_match": true
+            },
+            {
+              "atom_0based": 4,
+              "mapped_atom_0based": 2,
+              "coordinate_max_abs_angstrom": 0.0,
+              "element_labels_match": true
+            },
+            {
+              "atom_0based": 5,
+              "mapped_atom_0based": 3,
+              "coordinate_max_abs_angstrom": 0.0,
+              "element_labels_match": true
+            }
+          ],
+          "AO_checks": [
+            {
+              "source_AO_0based": 0,
+              "target_AO_0based": 5,
+              "source_label": [
+                0,
+                "C",
+                "1s",
+                ""
+              ],
+              "target_label": [
+                1,
+                "C",
+                "1s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 1,
+              "target_AO_0based": 6,
+              "source_label": [
+                0,
+                "C",
+                "2s",
+                ""
+              ],
+              "target_label": [
+                1,
+                "C",
+                "2s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 2,
+              "target_AO_0based": 7,
+              "source_label": [
+                0,
+                "C",
+                "2p",
+                "x"
+              ],
+              "target_label": [
+                1,
+                "C",
+                "2p",
+                "x"
+              ],
+              "phase": -1.0
+            },
+            {
+              "source_AO_0based": 3,
+              "target_AO_0based": 8,
+              "source_label": [
+                0,
+                "C",
+                "2p",
+                "y"
+              ],
+              "target_label": [
+                1,
+                "C",
+                "2p",
+                "y"
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 4,
+              "target_AO_0based": 9,
+              "source_label": [
+                0,
+                "C",
+                "2p",
+                "z"
+              ],
+              "target_label": [
+                1,
+                "C",
+                "2p",
+                "z"
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 5,
+              "target_AO_0based": 0,
+              "source_label": [
+                1,
+                "C",
+                "1s",
+                ""
+              ],
+              "target_label": [
+                0,
+                "C",
+                "1s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 6,
+              "target_AO_0based": 1,
+              "source_label": [
+                1,
+                "C",
+                "2s",
+                ""
+              ],
+              "target_label": [
+                0,
+                "C",
+                "2s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 7,
+              "target_AO_0based": 2,
+              "source_label": [
+                1,
+                "C",
+                "2p",
+                "x"
+              ],
+              "target_label": [
+                0,
+                "C",
+                "2p",
+                "x"
+              ],
+              "phase": -1.0
+            },
+            {
+              "source_AO_0based": 8,
+              "target_AO_0based": 3,
+              "source_label": [
+                1,
+                "C",
+                "2p",
+                "y"
+              ],
+              "target_label": [
+                0,
+                "C",
+                "2p",
+                "y"
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 9,
+              "target_AO_0based": 4,
+              "source_label": [
+                1,
+                "C",
+                "2p",
+                "z"
+              ],
+              "target_label": [
+                0,
+                "C",
+                "2p",
+                "z"
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 10,
+              "target_AO_0based": 12,
+              "source_label": [
+                2,
+                "H",
+                "1s",
+                ""
+              ],
+              "target_label": [
+                4,
+                "H",
+                "1s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 11,
+              "target_AO_0based": 13,
+              "source_label": [
+                3,
+                "H",
+                "1s",
+                ""
+              ],
+              "target_label": [
+                5,
+                "H",
+                "1s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 12,
+              "target_AO_0based": 10,
+              "source_label": [
+                4,
+                "H",
+                "1s",
+                ""
+              ],
+              "target_label": [
+                2,
+                "H",
+                "1s",
+                ""
+              ],
+              "phase": 1.0
+            },
+            {
+              "source_AO_0based": 13,
+              "target_AO_0based": 11,
+              "source_label": [
+                5,
+                "H",
+                "1s",
+                ""
+              ],
+              "target_label": [
+                3,
+                "H",
+                "1s",
+                ""
+              ],
+              "phase": 1.0
+            }
+          ],
+          "U_orthogonality_exact_binary64_check": true,
+          "stored_matrix_UMUT_minus_M": {
+            "stored_masked_overlap": {
+              "max_abs": 0.0,
+              "frobenius": 0.0
+            },
+            "stored_conditional_F_at_returned_D": {
+              "max_abs": 7.271960811294775e-15,
+              "frobenius": 2.0419401239339228e-14
+            },
+            "stored_returned_density": {
+              "max_abs": 4.618527782440651e-14,
+              "frobenius": 9.213156637525168e-14
+            }
+          }
+        },
+        "limit": "Saved endpoints only. The cross-fragment pi-pi mask does not enforce sigma-pi zeros or equal pi diagonals for arbitrary D."
+      },
+      "occupation_witnesses": [
+        {
+          "name": "anchor_A_AO4",
+          "density_id": "cad3555642edd9f9eddc4261df96ba8c10a9f74e8c352683f85220e2fdd58658",
+          "array_scope": "FROZEN_ARRAY_OCCUPATION_WITNESS_NOT_EXECUTABLE_SEED",
+          "AO_indices_0based": [
+            4
+          ],
+          "AO_anchor_coefficients": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "white_anchor_definition": "S_half @ AO_anchor; project with Qcluster and normalize",
+          "projected_white_anchor_norm": 0.9999999999999998,
+          "numerical_array_checks": {
+            "status": "PASS_NUMERICAL_ARRAY_IDENTITIES_ONLY",
+            "observations": {
+              "rank_of_white_projector_numpy": 8,
+              "white_eigenvalues": [
+                -4.963569272103843e-16,
+                -1.458044532710863e-16,
+                -1.3877787807814481e-16,
+                -1.6234329979262123e-17,
+                3.1842778127776005e-16,
+                4.158827268578308e-16,
+                0.9999999999999968,
+                0.9999999999999973,
+                0.9999999999999974,
+                0.9999999999999983,
+                0.9999999999999986,
+                0.9999999999999998,
+                1.000000000000001,
+                1.000000000000004
+              ],
+              "masked_metric_electrons": 15.999999999999996,
+              "masked_metric_electrons_abs_error": 3.552713678800501e-15,
+              "closed_shell_DSD_minus_2D_frobenius": 1.507956575917495e-14,
+              "closed_shell_DSD_minus_2D_relative": 3.2584984076647377e-15,
+              "white_projector_trace": 7.999999999999993,
+              "white_trace_abs_error": 7.105427357601002e-15,
+              "white_idempotency_absolute_frobenius": 6.612997910697311e-15,
+              "production_density_reconstruction_relative_frobenius": 1.877763518155331e-15,
+              "density_symmetry_max_abs": 4.440892098500626e-16,
+              "half_inverse_identity_frobenius": 4.930859805711868e-15
+            },
+            "checks": {
+              "rank": true,
+              "masked_electrons": true,
+              "DSD_2D_relative": true,
+              "white_trace": true,
+              "white_idempotency": true,
+              "production_reconstruction": true,
+              "density_symmetry": true
+            },
+            "thresholds": {
+              "masked_electrons_abs": 1e-07,
+              "DSD_2D_relative": 1e-07,
+              "white_trace_abs": 1e-10,
+              "white_idempotency_abs_frobenius": 1e-10,
+              "production_reconstruction_relative": 1e-10
+            },
+            "actual_solver_admission": "NOT_EXECUTED",
+            "executable_seed": false,
+            "initialization_policy_is_changed": false
+          },
+          "basis_invariance": {
+            "algebraic_identity": "(Qc R)(Qc R)^T = Qc Qc^T for every orthogonal R; Q(S_half a) is unchanged",
+            "float_tests": [
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 0.0,
+                "anchor_rank_one_projector_frobenius": 0.0,
+                "full_occupied_projector_frobenius": 0.0
+              },
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 1.1102230420750398e-16,
+                "anchor_rank_one_projector_frobenius": 1.9684137002963195e-20,
+                "full_occupied_projector_frobenius": 1.9684137002963195e-20
+              },
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 0.0,
+                "anchor_rank_one_projector_frobenius": 0.0,
+                "full_occupied_projector_frobenius": 0.0
+              },
+              {
+                "orthogonality_frobenius": 3.148795641120281e-17,
+                "cluster_projector_frobenius": 3.165996666069737e-16,
+                "anchor_rank_one_projector_frobenius": 4.034520718772438e-17,
+                "full_occupied_projector_frobenius": 4.034520718772439e-17
+              },
+              {
+                "orthogonality_frobenius": 1.110841821622119e-16,
+                "cluster_projector_frobenius": 2.417800632009663e-16,
+                "anchor_rank_one_projector_frobenius": 9.56754534096913e-17,
+                "full_occupied_projector_frobenius": 9.567545340969131e-17
+              },
+              {
+                "orthogonality_frobenius": 1.5790963415938684e-16,
+                "cluster_projector_frobenius": 5.953893608731007e-17,
+                "anchor_rank_one_projector_frobenius": 5.953893608731006e-17,
+                "full_occupied_projector_frobenius": 5.953893608731006e-17
+              }
+            ],
+            "number_of_transforms": 6,
+            "status": "PASS_FINITE_NUMERICAL_TESTS_AND_SYMBOLIC_PROJECTOR_IDENTITY",
+            "white_anchor_formula": "S_half @ AO_coefficient_anchor; not S_inverse_half @ anchor",
+            "no_choice_of_individual_cluster_eigenvector": true
+          },
+          "array_members": {
+            "AO_anchor": "production_owned__witness__anchor_A_AO4__AO_anchor",
+            "white_AO_anchor": "production_owned__witness__anchor_A_AO4__white_AO_anchor",
+            "rank_one_white_direction": "production_owned__witness__anchor_A_AO4__rank_one_white_direction",
+            "white_occupied_projector": "production_owned__witness__anchor_A_AO4__white_occupied_projector",
+            "density_NO_F_NO_ENERGY": "production_owned__witness__anchor_A_AO4__density_NO_F_NO_ENERGY"
+          },
+          "frozen_operator_diagnostic": {
+            "operator_bound_to_original_density_id": "c0775e32e931b396d33467f90296742c6a973c38a8f96b2ec847110cb667397c",
+            "operator_is_F_at_witness_density": false,
+            "commutator_frobenius": 6.574486917814647e-14,
+            "original_frozen_global_gap_gate_changes_with_occupation": false,
+            "same_exact_frozen_boundary_gap_theorem": "0 <= gap < 2e-10 Eh"
+          },
+          "distance_to_original_returned_D_frobenius": 2.0000000000000235,
+          "pi_density_AO_block": [
+            [
+              2.0000000000000018,
+              1.3588212123086735e-16
+            ],
+            [
+              1.738477056317179e-16,
+              1.3315938531152075e-30
+            ]
+          ],
+          "F_at_this_new_density": "NOT_EXECUTED",
+          "energy_at_this_new_density": null,
+          "new_matched_operator_id": null,
+          "new_energy_binding": null,
+          "self_consistent_root": "NOT_ESTABLISHED",
+          "actual_solver_admission": "NOT_EXECUTED",
+          "scientific_qualification": "NOT_GRANTED",
+          "Compute": false
+        },
+        {
+          "name": "anchor_B_AO9",
+          "density_id": "89e7f5c7443ff51108b78384accc0a16220d5c71bdb28a05bfb8bb77c53f8015",
+          "array_scope": "FROZEN_ARRAY_OCCUPATION_WITNESS_NOT_EXECUTABLE_SEED",
+          "AO_indices_0based": [
+            9
+          ],
+          "AO_anchor_coefficients": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "white_anchor_definition": "S_half @ AO_anchor; project with Qcluster and normalize",
+          "projected_white_anchor_norm": 1.0,
+          "numerical_array_checks": {
+            "status": "PASS_NUMERICAL_ARRAY_IDENTITIES_ONLY",
+            "observations": {
+              "rank_of_white_projector_numpy": 8,
+              "white_eigenvalues": [
+                -1.6659674941722203e-16,
+                -8.621213492817977e-17,
+                6.944550126250703e-18,
+                2.6714740402076106e-16,
+                3.271326730071929e-16,
+                6.667070352724354e-16,
+                0.9999999999999967,
+                0.9999999999999974,
+                0.9999999999999979,
+                0.9999999999999979,
+                0.9999999999999984,
+                0.9999999999999993,
+                1.0000000000000018,
+                1.000000000000004
+              ],
+              "masked_metric_electrons": 15.999999999999996,
+              "masked_metric_electrons_abs_error": 3.552713678800501e-15,
+              "closed_shell_DSD_minus_2D_frobenius": 1.5042286220284435e-14,
+              "closed_shell_DSD_minus_2D_relative": 3.2504427832486762e-15,
+              "white_projector_trace": 7.999999999999995,
+              "white_trace_abs_error": 5.329070518200751e-15,
+              "white_idempotency_absolute_frobenius": 6.763904510232349e-15,
+              "production_density_reconstruction_relative_frobenius": 1.7324338714841175e-15,
+              "density_symmetry_max_abs": 4.440892098500626e-16,
+              "half_inverse_identity_frobenius": 4.930859805711868e-15
+            },
+            "checks": {
+              "rank": true,
+              "masked_electrons": true,
+              "DSD_2D_relative": true,
+              "white_trace": true,
+              "white_idempotency": true,
+              "production_reconstruction": true,
+              "density_symmetry": true
+            },
+            "thresholds": {
+              "masked_electrons_abs": 1e-07,
+              "DSD_2D_relative": 1e-07,
+              "white_trace_abs": 1e-10,
+              "white_idempotency_abs_frobenius": 1e-10,
+              "production_reconstruction_relative": 1e-10
+            },
+            "actual_solver_admission": "NOT_EXECUTED",
+            "executable_seed": false,
+            "initialization_policy_is_changed": false
+          },
+          "basis_invariance": {
+            "algebraic_identity": "(Qc R)(Qc R)^T = Qc Qc^T for every orthogonal R; Q(S_half a) is unchanged",
+            "float_tests": [
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 0.0,
+                "anchor_rank_one_projector_frobenius": 0.0,
+                "full_occupied_projector_frobenius": 0.0
+              },
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 1.1102230420750398e-16,
+                "anchor_rank_one_projector_frobenius": 1.9684137002963195e-20,
+                "full_occupied_projector_frobenius": 1.9684137002963195e-20
+              },
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 0.0,
+                "anchor_rank_one_projector_frobenius": 0.0,
+                "full_occupied_projector_frobenius": 0.0
+              },
+              {
+                "orthogonality_frobenius": 3.148795641120281e-17,
+                "cluster_projector_frobenius": 3.165996666069737e-16,
+                "anchor_rank_one_projector_frobenius": 4.03452071877244e-17,
+                "full_occupied_projector_frobenius": 4.03452071877244e-17
+              },
+              {
+                "orthogonality_frobenius": 1.110841821622119e-16,
+                "cluster_projector_frobenius": 2.417800632009663e-16,
+                "anchor_rank_one_projector_frobenius": 9.567545340969134e-17,
+                "full_occupied_projector_frobenius": 9.567545340969134e-17
+              },
+              {
+                "orthogonality_frobenius": 1.5790963415938684e-16,
+                "cluster_projector_frobenius": 5.953893608731007e-17,
+                "anchor_rank_one_projector_frobenius": 5.953893608731009e-17,
+                "full_occupied_projector_frobenius": 5.953893608731008e-17
+              }
+            ],
+            "number_of_transforms": 6,
+            "status": "PASS_FINITE_NUMERICAL_TESTS_AND_SYMBOLIC_PROJECTOR_IDENTITY",
+            "white_anchor_formula": "S_half @ AO_coefficient_anchor; not S_inverse_half @ anchor",
+            "no_choice_of_individual_cluster_eigenvector": true
+          },
+          "array_members": {
+            "AO_anchor": "production_owned__witness__anchor_B_AO9__AO_anchor",
+            "white_AO_anchor": "production_owned__witness__anchor_B_AO9__white_AO_anchor",
+            "rank_one_white_direction": "production_owned__witness__anchor_B_AO9__rank_one_white_direction",
+            "white_occupied_projector": "production_owned__witness__anchor_B_AO9__white_occupied_projector",
+            "density_NO_F_NO_ENERGY": "production_owned__witness__anchor_B_AO9__density_NO_F_NO_ENERGY"
+          },
+          "frozen_operator_diagnostic": {
+            "operator_bound_to_original_density_id": "c0775e32e931b396d33467f90296742c6a973c38a8f96b2ec847110cb667397c",
+            "operator_is_F_at_witness_density": false,
+            "commutator_frobenius": 6.551521788799917e-14,
+            "original_frozen_global_gap_gate_changes_with_occupation": false,
+            "same_exact_frozen_boundary_gap_theorem": "0 <= gap < 2e-10 Eh"
+          },
+          "distance_to_original_returned_D_frobenius": 1.9999999999999771,
+          "pi_density_AO_block": [
+            [
+              5.2913378341437814e-30,
+              1.7384770563171762e-16
+            ],
+            [
+              2.1181329003256816e-16,
+              2.0000000000000018
+            ]
+          ],
+          "F_at_this_new_density": "NOT_EXECUTED",
+          "energy_at_this_new_density": null,
+          "new_matched_operator_id": null,
+          "new_energy_binding": null,
+          "self_consistent_root": "NOT_ESTABLISHED",
+          "actual_solver_admission": "NOT_EXECUTED",
+          "scientific_qualification": "NOT_GRANTED",
+          "Compute": false
+        },
+        {
+          "name": "anchor_symmetric_AplusB",
+          "density_id": "4171f085a6d8b6026373d2650d1ae1837ae6dd8d4cdb465a59035f3af65f32a6",
+          "array_scope": "FROZEN_ARRAY_OCCUPATION_WITNESS_NOT_EXECUTABLE_SEED",
+          "AO_indices_0based": [
+            4,
+            9
+          ],
+          "AO_anchor_coefficients": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "white_anchor_definition": "S_half @ AO_anchor; project with Qcluster and normalize",
+          "projected_white_anchor_norm": 1.4142135623730947,
+          "numerical_array_checks": {
+            "status": "PASS_NUMERICAL_ARRAY_IDENTITIES_ONLY",
+            "observations": {
+              "rank_of_white_projector_numpy": 8,
+              "white_eigenvalues": [
+                -5.701929849024164e-16,
+                -4.918318698366668e-16,
+                -4.0110568780776344e-16,
+                -3.8618406462467453e-16,
+                2.884568963845953e-16,
+                4.904933357001744e-16,
+                0.9999999999999967,
+                0.9999999999999976,
+                0.9999999999999976,
+                0.999999999999998,
+                0.9999999999999987,
+                1.0,
+                1.0000000000000022,
+                1.0000000000000044
+              ],
+              "masked_metric_electrons": 15.999999999999998,
+              "masked_metric_electrons_abs_error": 1.7763568394002505e-15,
+              "closed_shell_DSD_minus_2D_frobenius": 1.5689087870128883e-14,
+              "closed_shell_DSD_minus_2D_relative": 3.390208223431244e-15,
+              "white_projector_trace": 7.999999999999995,
+              "white_trace_abs_error": 5.329070518200751e-15,
+              "white_idempotency_absolute_frobenius": 6.958305713388143e-15,
+              "production_density_reconstruction_relative_frobenius": 1.763928092039992e-15,
+              "density_symmetry_max_abs": 4.440892098500626e-16,
+              "half_inverse_identity_frobenius": 4.930859805711868e-15
+            },
+            "checks": {
+              "rank": true,
+              "masked_electrons": true,
+              "DSD_2D_relative": true,
+              "white_trace": true,
+              "white_idempotency": true,
+              "production_reconstruction": true,
+              "density_symmetry": true
+            },
+            "thresholds": {
+              "masked_electrons_abs": 1e-07,
+              "DSD_2D_relative": 1e-07,
+              "white_trace_abs": 1e-10,
+              "white_idempotency_abs_frobenius": 1e-10,
+              "production_reconstruction_relative": 1e-10
+            },
+            "actual_solver_admission": "NOT_EXECUTED",
+            "executable_seed": false,
+            "initialization_policy_is_changed": false
+          },
+          "basis_invariance": {
+            "algebraic_identity": "(Qc R)(Qc R)^T = Qc Qc^T for every orthogonal R; Q(S_half a) is unchanged",
+            "float_tests": [
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 0.0,
+                "anchor_rank_one_projector_frobenius": 0.0,
+                "full_occupied_projector_frobenius": 0.0
+              },
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 1.1102230420750398e-16,
+                "anchor_rank_one_projector_frobenius": 9.93749991476236e-32,
+                "full_occupied_projector_frobenius": 9.93749991476236e-32
+              },
+              {
+                "orthogonality_frobenius": 0.0,
+                "cluster_projector_frobenius": 0.0,
+                "anchor_rank_one_projector_frobenius": 0.0,
+                "full_occupied_projector_frobenius": 0.0
+              },
+              {
+                "orthogonality_frobenius": 3.148795641120281e-17,
+                "cluster_projector_frobenius": 3.165996666069737e-16,
+                "anchor_rank_one_projector_frobenius": 1.9229626863835638e-16,
+                "full_occupied_projector_frobenius": 1.9229626863835638e-16
+              },
+              {
+                "orthogonality_frobenius": 1.110841821622119e-16,
+                "cluster_projector_frobenius": 2.417800632009663e-16,
+                "anchor_rank_one_projector_frobenius": 1.5700924586837752e-16,
+                "full_occupied_projector_frobenius": 1.5700924586837752e-16
+              },
+              {
+                "orthogonality_frobenius": 1.5790963415938684e-16,
+                "cluster_projector_frobenius": 5.953893608731007e-17,
+                "anchor_rank_one_projector_frobenius": 6.340236260755426e-31,
+                "full_occupied_projector_frobenius": 6.162284855937545e-31
+              }
+            ],
+            "number_of_transforms": 6,
+            "status": "PASS_FINITE_NUMERICAL_TESTS_AND_SYMBOLIC_PROJECTOR_IDENTITY",
+            "white_anchor_formula": "S_half @ AO_coefficient_anchor; not S_inverse_half @ anchor",
+            "no_choice_of_individual_cluster_eigenvector": true
+          },
+          "array_members": {
+            "AO_anchor": "production_owned__witness__anchor_symmetric_AplusB__AO_anchor",
+            "white_AO_anchor": "production_owned__witness__anchor_symmetric_AplusB__white_AO_anchor",
+            "rank_one_white_direction": "production_owned__witness__anchor_symmetric_AplusB__rank_one_white_direction",
+            "white_occupied_projector": "production_owned__witness__anchor_symmetric_AplusB__white_occupied_projector",
+            "density_NO_F_NO_ENERGY": "production_owned__witness__anchor_symmetric_AplusB__density_NO_F_NO_ENERGY"
+          },
+          "frozen_operator_diagnostic": {
+            "operator_bound_to_original_density_id": "c0775e32e931b396d33467f90296742c6a973c38a8f96b2ec847110cb667397c",
+            "operator_is_F_at_witness_density": false,
+            "commutator_frobenius": 6.595452009913207e-14,
+            "original_frozen_global_gap_gate_changes_with_occupation": false,
+            "same_exact_frozen_boundary_gap_theorem": "0 <= gap < 2e-10 Eh"
+          },
+          "distance_to_original_returned_D_frobenius": 5.219484554159949e-09,
+          "pi_density_AO_block": [
+            [
+              1.000000000000001,
+              1.0000000000000013
+            ],
+            [
+              1.0000000000000013,
+              1.0000000000000016
+            ]
+          ],
+          "F_at_this_new_density": "NOT_EXECUTED",
+          "energy_at_this_new_density": null,
+          "new_matched_operator_id": null,
+          "new_energy_binding": null,
+          "self_consistent_root": "NOT_ESTABLISHED",
+          "actual_solver_admission": "NOT_EXECUTED",
+          "scientific_qualification": "NOT_GRANTED",
+          "Compute": false
+        }
+      ],
+      "limit": "Saved endpoint structure is not imposed by the pi-pi mask on arbitrary densities. No global root existence/nonexistence or all-roots symmetry claim."
+    }
+  ],
+  "synthetic_array_selfchecks": [
+    {
+      "case": "synthetic_repeated_identity_metric",
+      "scope": "SYNTHETIC_ARRAY_FORMULA_ONLY",
+      "repeated_white_eigenvalue": 0.0,
+      "metric_minimum_eigenvalue_numpy": 1.0,
+      "projected_white_anchor_norm": 1.4142135623730951,
+      "checks": {
+        "status": "PASS_NUMERICAL_ARRAY_IDENTITIES_ONLY",
+        "observations": {
+          "rank_of_white_projector_numpy": 3,
+          "white_eigenvalues": [
+            0.0,
+            0.0,
+            0.9999999999999998,
+            1.0,
+            1.0
+          ],
+          "masked_metric_electrons": 6.0,
+          "masked_metric_electrons_abs_error": 0.0,
+          "closed_shell_DSD_minus_2D_frobenius": 8.881784197001252e-16,
+          "closed_shell_DSD_minus_2D_relative": 2.563950248511419e-16,
+          "white_projector_trace": 3.0,
+          "white_trace_abs_error": 0.0,
+          "white_idempotency_absolute_frobenius": 2.220446049250313e-16,
+          "production_density_reconstruction_relative_frobenius": 0.0,
+          "density_symmetry_max_abs": 0.0,
+          "half_inverse_identity_frobenius": 0.0
+        },
+        "checks": {
+          "rank": true,
+          "masked_electrons": true,
+          "DSD_2D_relative": true,
+          "white_trace": true,
+          "white_idempotency": true,
+          "production_reconstruction": true,
+          "density_symmetry": true
+        },
+        "thresholds": {
+          "masked_electrons_abs": 1e-07,
+          "DSD_2D_relative": 1e-07,
+          "white_trace_abs": 1e-10,
+          "white_idempotency_abs_frobenius": 1e-10,
+          "production_reconstruction_relative": 1e-10
+        },
+        "actual_solver_admission": "NOT_EXECUTED",
+        "executable_seed": false,
+        "initialization_policy_is_changed": false
+      },
+      "basis_invariance": {
+        "algebraic_identity": "(Qc R)(Qc R)^T = Qc Qc^T for every orthogonal R; Q(S_half a) is unchanged",
+        "float_tests": [
+          {
+            "orthogonality_frobenius": 0.0,
+            "cluster_projector_frobenius": 0.0,
+            "anchor_rank_one_projector_frobenius": 0.0,
+            "full_occupied_projector_frobenius": 0.0
+          },
+          {
+            "orthogonality_frobenius": 0.0,
+            "cluster_projector_frobenius": 0.0,
+            "anchor_rank_one_projector_frobenius": 0.0,
+            "full_occupied_projector_frobenius": 0.0
+          },
+          {
+            "orthogonality_frobenius": 0.0,
+            "cluster_projector_frobenius": 0.0,
+            "anchor_rank_one_projector_frobenius": 0.0,
+            "full_occupied_projector_frobenius": 0.0
+          },
+          {
+            "orthogonality_frobenius": 3.148795641120281e-17,
+            "cluster_projector_frobenius": 3.148795641120281e-17,
+            "anchor_rank_one_projector_frobenius": 0.0,
+            "full_occupied_projector_frobenius": 0.0
+          },
+          {
+            "orthogonality_frobenius": 1.110841821622119e-16,
+            "cluster_projector_frobenius": 1.110841821622119e-16,
+            "anchor_rank_one_projector_frobenius": 2.7194799110210365e-16,
+            "full_occupied_projector_frobenius": 2.7194799110210365e-16
+          },
+          {
+            "orthogonality_frobenius": 1.5790963415938684e-16,
+            "cluster_projector_frobenius": 1.5790963415938684e-16,
+            "anchor_rank_one_projector_frobenius": 0.0,
+            "full_occupied_projector_frobenius": 0.0
+          }
+        ],
+        "number_of_transforms": 6,
+        "status": "PASS_FINITE_NUMERICAL_TESTS_AND_SYMBOLIC_PROJECTOR_IDENTITY",
+        "white_anchor_formula": "S_half @ AO_coefficient_anchor; not S_inverse_half @ anchor",
+        "no_choice_of_individual_cluster_eigenvector": true
+      },
+      "raw_density_divided_by_two_vs_white_projector_frobenius": 0.0,
+      "general_relation": "P = 0.5 S_half D S_half; D/2 is not generally the white projector",
+      "molecular_F_calls": 0,
+      "F_at_this_new_density": "NOT_EXECUTED",
+      "energy": null,
+      "self_consistent_root": "NOT_ESTABLISHED",
+      "executable_seed": false,
+      "Compute": false
+    },
+    {
+      "case": "synthetic_repeated_nonorthogonal_metric",
+      "scope": "SYNTHETIC_ARRAY_FORMULA_ONLY",
+      "repeated_white_eigenvalue": 0.0,
+      "metric_minimum_eigenvalue_numpy": 1.4846721039770803,
+      "projected_white_anchor_norm": 2.1845045402762144,
+      "checks": {
+        "status": "PASS_NUMERICAL_ARRAY_IDENTITIES_ONLY",
+        "observations": {
+          "rank_of_white_projector_numpy": 3,
+          "white_eigenvalues": [
+            -4.1837613143371985e-16,
+            2.979807281491504e-17,
+            0.9999999999999987,
+            1.0000000000000002,
+            1.000000000000001
+          ],
+          "masked_metric_electrons": 6.0,
+          "masked_metric_electrons_abs_error": 0.0,
+          "closed_shell_DSD_minus_2D_frobenius": 1.7444772929385658e-15,
+          "closed_shell_DSD_minus_2D_relative": 1.0048230512220097e-15,
+          "white_projector_trace": 3.0,
+          "white_trace_abs_error": 0.0,
+          "white_idempotency_absolute_frobenius": 1.4417777490492423e-15,
+          "production_density_reconstruction_relative_frobenius": 8.263307647644704e-16,
+          "density_symmetry_max_abs": 1.1102230246251565e-16,
+          "half_inverse_identity_frobenius": 2.6032973741897215e-15
+        },
+        "checks": {
+          "rank": true,
+          "masked_electrons": true,
+          "DSD_2D_relative": true,
+          "white_trace": true,
+          "white_idempotency": true,
+          "production_reconstruction": true,
+          "density_symmetry": true
+        },
+        "thresholds": {
+          "masked_electrons_abs": 1e-07,
+          "DSD_2D_relative": 1e-07,
+          "white_trace_abs": 1e-10,
+          "white_idempotency_abs_frobenius": 1e-10,
+          "production_reconstruction_relative": 1e-10
+        },
+        "actual_solver_admission": "NOT_EXECUTED",
+        "executable_seed": false,
+        "initialization_policy_is_changed": false
+      },
+      "basis_invariance": {
+        "algebraic_identity": "(Qc R)(Qc R)^T = Qc Qc^T for every orthogonal R; Q(S_half a) is unchanged",
+        "float_tests": [
+          {
+            "orthogonality_frobenius": 0.0,
+            "cluster_projector_frobenius": 0.0,
+            "anchor_rank_one_projector_frobenius": 0.0,
+            "full_occupied_projector_frobenius": 0.0
+          },
+          {
+            "orthogonality_frobenius": 0.0,
+            "cluster_projector_frobenius": 0.0,
+            "anchor_rank_one_projector_frobenius": 0.0,
+            "full_occupied_projector_frobenius": 0.0
+          },
+          {
+            "orthogonality_frobenius": 0.0,
+            "cluster_projector_frobenius": 0.0,
+            "anchor_rank_one_projector_frobenius": 0.0,
+            "full_occupied_projector_frobenius": 0.0
+          },
+          {
+            "orthogonality_frobenius": 3.148795641120281e-17,
+            "cluster_projector_frobenius": 3.148795641120281e-17,
+            "anchor_rank_one_projector_frobenius": 0.0,
+            "full_occupied_projector_frobenius": 0.0
+          },
+          {
+            "orthogonality_frobenius": 1.110841821622119e-16,
+            "cluster_projector_frobenius": 1.110841821622119e-16,
+            "anchor_rank_one_projector_frobenius": 3.090730095650652e-16,
+            "full_occupied_projector_frobenius": 3.090730095650652e-16
+          },
+          {
+            "orthogonality_frobenius": 1.5790963415938684e-16,
+            "cluster_projector_frobenius": 1.5790963415938684e-16,
+            "anchor_rank_one_projector_frobenius": 1.3597399555105182e-16,
+            "full_occupied_projector_frobenius": 1.3597399555105182e-16
+          }
+        ],
+        "number_of_transforms": 6,
+        "status": "PASS_FINITE_NUMERICAL_TESTS_AND_SYMBOLIC_PROJECTOR_IDENTITY",
+        "white_anchor_formula": "S_half @ AO_coefficient_anchor; not S_inverse_half @ anchor",
+        "no_choice_of_individual_cluster_eigenvector": true
+      },
+      "raw_density_divided_by_two_vs_white_projector_frobenius": 0.9068705903236106,
+      "general_relation": "P = 0.5 S_half D S_half; D/2 is not generally the white projector",
+      "molecular_F_calls": 0,
+      "F_at_this_new_density": "NOT_EXECUTED",
+      "energy": null,
+      "self_consistent_root": "NOT_ESTABLISHED",
+      "executable_seed": false,
+      "Compute": false
+    }
+  ],
+  "array_archive": {
+    "file": "frozen-occupation-witnesses.npz",
+    "size_bytes": 49568,
+    "sha256": "be26e3e60fea689798cf9c2b590888bc36ace453c69149367596950384ea1d0c",
+    "member_count": 70,
+    "members": {
+      "synthetic_repeated_identity_metric__metric": {
+        "shape": [
+          5,
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "1a8475b42f5782e9280d02712bd9acec235c386883c34c8a0f00bf7c38c72b2d",
+        "finite": true
+      },
+      "synthetic_repeated_identity_metric__half": {
+        "shape": [
+          5,
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "1a8475b42f5782e9280d02712bd9acec235c386883c34c8a0f00bf7c38c72b2d",
+        "finite": true
+      },
+      "synthetic_repeated_identity_metric__inverse_half": {
+        "shape": [
+          5,
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "1a8475b42f5782e9280d02712bd9acec235c386883c34c8a0f00bf7c38c72b2d",
+        "finite": true
+      },
+      "synthetic_repeated_identity_metric__cluster_projector": {
+        "shape": [
+          5,
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "17bafd95c835d368e0486224f628c9f7e239e939be64dd6f9e9d55691e0f2ba0",
+        "finite": true
+      },
+      "synthetic_repeated_identity_metric__AO_anchor": {
+        "shape": [
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "d41334df54eb812b7add4680209703dc0da8b82d66bd9bf0f0c59021a24fc2c2",
+        "finite": true
+      },
+      "synthetic_repeated_identity_metric__white_anchor": {
+        "shape": [
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "d41334df54eb812b7add4680209703dc0da8b82d66bd9bf0f0c59021a24fc2c2",
+        "finite": true
+      },
+      "synthetic_repeated_identity_metric__rank_one_direction": {
+        "shape": [
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "5bfaa4494d9cca8e6930cdd0ae6ddddc0e237a1a43667e24106d8431a3c8091c",
+        "finite": true
+      },
+      "synthetic_repeated_identity_metric__white_occupied_projector": {
+        "shape": [
+          5,
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "57fb6cab14a23b410ebe0f0b810c4879ac5eba9badea1f0f604366cd634b2d49",
+        "finite": true
+      },
+      "synthetic_repeated_identity_metric__witness_density": {
+        "shape": [
+          5,
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "6c1bd6e24ad7b440749c0ec72fdd311b500ad78ea5dd433200d742eb4f9338ed",
+        "finite": true
+      },
+      "synthetic_repeated_nonorthogonal_metric__metric": {
+        "shape": [
+          5,
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "54e91011119b07f95a28b81244e645c8f16f9446989f810b79f7918a3f31aba4",
+        "finite": true
+      },
+      "synthetic_repeated_nonorthogonal_metric__half": {
+        "shape": [
+          5,
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "92e65a6400b1d95b957e39ead484a917f874e8fac2a41a07c5a8ac2cb2f36fcb",
+        "finite": true
+      },
+      "synthetic_repeated_nonorthogonal_metric__inverse_half": {
+        "shape": [
+          5,
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "006373de795bbb3d5c6365afe259689d73cf6641fe992ad39e6b69f1e594575c",
+        "finite": true
+      },
+      "synthetic_repeated_nonorthogonal_metric__cluster_projector": {
+        "shape": [
+          5,
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "17bafd95c835d368e0486224f628c9f7e239e939be64dd6f9e9d55691e0f2ba0",
+        "finite": true
+      },
+      "synthetic_repeated_nonorthogonal_metric__AO_anchor": {
+        "shape": [
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "d41334df54eb812b7add4680209703dc0da8b82d66bd9bf0f0c59021a24fc2c2",
+        "finite": true
+      },
+      "synthetic_repeated_nonorthogonal_metric__white_anchor": {
+        "shape": [
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "4b0f1f0187c11629007e17986e349200471a2d9aac1d10eb45657f9d364dea73",
+        "finite": true
+      },
+      "synthetic_repeated_nonorthogonal_metric__rank_one_direction": {
+        "shape": [
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "1d757404828ed673f78fc86c86ae004542b81096833c609427d8d77492f07648",
+        "finite": true
+      },
+      "synthetic_repeated_nonorthogonal_metric__white_occupied_projector": {
+        "shape": [
+          5,
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "6e7f2241403e7809e719be310eddfab5c830f1c6dad5c77952395907422cbbbd",
+        "finite": true
+      },
+      "synthetic_repeated_nonorthogonal_metric__witness_density": {
+        "shape": [
+          5,
+          5
+        ],
+        "dtype": "<f8",
+        "sha256": "88e6923e90b8bc8fa7a5b883fa84c2b9553fe810bb0c40830259d0a63595bf77",
+        "finite": true
+      },
+      "production_copy__source__original_returned_density": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "fb3f74ad69df5d70518cdfc0dcdb7ac02c060830b04bada085361f8da6fc8c5e",
+        "finite": true
+      },
+      "production_copy__source__original_conditional_F_bound_to_original_D": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "0ab3fdaaddc622384ab24716f1427b77a921a9e7f28f003afe88c0d5b2f54ec3",
+        "finite": true
+      },
+      "production_copy__source__original_masked_overlap": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "b8b3f020e5ee76c663283aa3dc105d4e0b1e37edad07787515f5712fe85f68dd",
+        "finite": true
+      },
+      "production_copy__source__numerical_inverse_half": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "3d1074111766e6abf1b2491a0049714106460c4f04470cba9f7eda04c5f3b836",
+        "finite": true
+      },
+      "production_copy__source__numerical_half": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "53162c5864ff6817d7aae65467bc82cf99d614ee3cd9e4f3823415aa5ceed185",
+        "finite": true
+      },
+      "production_copy__source__numerical_white_frozen_operator": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "297777c997c5b331f78d501004d744c5ae5cfd03fca2358c4736250ebe692191",
+        "finite": true
+      },
+      "production_copy__source__cluster_projector": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "4137ae6d8625801b2b51899421366105f5187dc0d82c93b6733eeb33551848e1",
+        "finite": true
+      },
+      "production_copy__source__below_cluster_projector": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "91cf571058bf3ddd72ce3e3461eb94f7adc3c365ab1806bf0fad169d99efdb6e",
+        "finite": true
+      },
+      "production_copy__source__original_white_density": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "ca4339dfadb5da033066c8f89b48c8ad702911db79a6bc52631bbb1b7a97e2ec",
+        "finite": true
+      },
+      "production_copy__source__plane_z_reflection": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "9e50a3f9863bd78ea684cf4bede4e5cf89a2b5eb970040b5504f757bb54c1e06",
+        "finite": true
+      },
+      "production_copy__source__reflection_x_AO_exchange": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "7183e7c5513f10b89ff4a2ae637ba55adcf50db318589ccce227338227f78e0d",
+        "finite": true
+      },
+      "production_copy__witness__anchor_A_AO4__AO_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "f1c7ee1555617bc2e60191f8c45ffc68747d4a9dd4ced6dc1941399331f1c528",
+        "finite": true
+      },
+      "production_copy__witness__anchor_A_AO4__white_AO_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "129a65297de5ef8037c954d4fc003c8939dab100f65f85138c4f5e567abd2e1a",
+        "finite": true
+      },
+      "production_copy__witness__anchor_A_AO4__rank_one_white_direction": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "83f5c8bbbfaba36d05d25024db5cccd4c7eadd5197baea9d9a217a24d0c399cc",
+        "finite": true
+      },
+      "production_copy__witness__anchor_A_AO4__white_occupied_projector": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "c8d632d04f1d944406f79675c14e26b608e3ee6d6386dbd4f36d1f8429f2dc13",
+        "finite": true
+      },
+      "production_copy__witness__anchor_A_AO4__density_NO_F_NO_ENERGY": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "cf55f964e7f0eddf33519f29387dd3ff2fcb3afc31cbbab8975d2a3942fa905d",
+        "finite": true
+      },
+      "production_copy__witness__anchor_B_AO9__AO_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "0c9b5275501dfa8bd998fbeccc148ba1d62f55c03f88d834e27fd2a33e4b9cfb",
+        "finite": true
+      },
+      "production_copy__witness__anchor_B_AO9__white_AO_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "da92185ef79286ac21b86afe46a3d37b7447c381024872454dd38dee42b2a873",
+        "finite": true
+      },
+      "production_copy__witness__anchor_B_AO9__rank_one_white_direction": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "44e278f28153200068fa46607ef8096b7338a4f97b358e833d0ec9c0b2b6c89d",
+        "finite": true
+      },
+      "production_copy__witness__anchor_B_AO9__white_occupied_projector": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "f43668ff45671fe1590146e288101a44f89f3c02f07d9bb342dc225eaa8ea532",
+        "finite": true
+      },
+      "production_copy__witness__anchor_B_AO9__density_NO_F_NO_ENERGY": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "440c884f32e21043fe8f3190342bcf3ac120df12667f55ade28c5ef66867ad3a",
+        "finite": true
+      },
+      "production_copy__witness__anchor_symmetric_AplusB__AO_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "bb0117ba3c5963bde66d3b4c457675dc64a6d8292aacae7dc8a832f09b512042",
+        "finite": true
+      },
+      "production_copy__witness__anchor_symmetric_AplusB__white_AO_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "4c75400808f7f0ceb9507f8e97d25b1d574e3eecb0e032ad1fb2d996e7159fc6",
+        "finite": true
+      },
+      "production_copy__witness__anchor_symmetric_AplusB__rank_one_white_direction": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "ad9c238296ba91dbd947f93a700f8e1cdedb97d6bae4df830a801b1a82eb1ed2",
+        "finite": true
+      },
+      "production_copy__witness__anchor_symmetric_AplusB__white_occupied_projector": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "1b3e180ff407257b6d46980213ebfad3aa09a3b1536b4a03e826f0e59fb99b9c",
+        "finite": true
+      },
+      "production_copy__witness__anchor_symmetric_AplusB__density_NO_F_NO_ENERGY": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "ddff9b616924c43274effe40513f6d235d07752a3bf18b49745f851263559edc",
+        "finite": true
+      },
+      "production_owned__source__original_returned_density": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "98e3579022c561d42795cf06612926c290ca938d420832946fcb1afcb6b7fa07",
+        "finite": true
+      },
+      "production_owned__source__original_conditional_F_bound_to_original_D": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "521d29e8f7ad3bc9b2c8ae0c108203523fba181028f4a8ae6be8220810519f5b",
+        "finite": true
+      },
+      "production_owned__source__original_masked_overlap": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "b8b3f020e5ee76c663283aa3dc105d4e0b1e37edad07787515f5712fe85f68dd",
+        "finite": true
+      },
+      "production_owned__source__numerical_inverse_half": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "3d1074111766e6abf1b2491a0049714106460c4f04470cba9f7eda04c5f3b836",
+        "finite": true
+      },
+      "production_owned__source__numerical_half": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "53162c5864ff6817d7aae65467bc82cf99d614ee3cd9e4f3823415aa5ceed185",
+        "finite": true
+      },
+      "production_owned__source__numerical_white_frozen_operator": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "abc8518bb91711b760dfa66157269633d4b37185d87feff12eb9bc73ba2ef01b",
+        "finite": true
+      },
+      "production_owned__source__cluster_projector": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "0cae4c32e399c74e7f99426ad424c2c62cba5ffa2a658d7b0b03889ce53e2e04",
+        "finite": true
+      },
+      "production_owned__source__below_cluster_projector": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "0934da8449543971f233ba49e304a6197e4b98b51e115e8fe45e128974347370",
+        "finite": true
+      },
+      "production_owned__source__original_white_density": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "9de6deeb6812116945ebb72004f7cafcd11c00475d56dc7bc0573e800141e9b2",
+        "finite": true
+      },
+      "production_owned__source__plane_z_reflection": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "9e50a3f9863bd78ea684cf4bede4e5cf89a2b5eb970040b5504f757bb54c1e06",
+        "finite": true
+      },
+      "production_owned__source__reflection_x_AO_exchange": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "7183e7c5513f10b89ff4a2ae637ba55adcf50db318589ccce227338227f78e0d",
+        "finite": true
+      },
+      "production_owned__witness__anchor_A_AO4__AO_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "f1c7ee1555617bc2e60191f8c45ffc68747d4a9dd4ced6dc1941399331f1c528",
+        "finite": true
+      },
+      "production_owned__witness__anchor_A_AO4__white_AO_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "129a65297de5ef8037c954d4fc003c8939dab100f65f85138c4f5e567abd2e1a",
+        "finite": true
+      },
+      "production_owned__witness__anchor_A_AO4__rank_one_white_direction": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "b9d58454ca00aad1afcd2d42fbc370019499f24828a85351a5e0d22eec6c9243",
+        "finite": true
+      },
+      "production_owned__witness__anchor_A_AO4__white_occupied_projector": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "4d1b478f250a0174f6d35c7b68a31b3ffc4f3c5d1555a1e938e16142ed7d0f8e",
+        "finite": true
+      },
+      "production_owned__witness__anchor_A_AO4__density_NO_F_NO_ENERGY": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "a27a92fa37fa97c28085c44196100eaa9d68b419d56683dcf67f4bc632ccabf9",
+        "finite": true
+      },
+      "production_owned__witness__anchor_B_AO9__AO_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "0c9b5275501dfa8bd998fbeccc148ba1d62f55c03f88d834e27fd2a33e4b9cfb",
+        "finite": true
+      },
+      "production_owned__witness__anchor_B_AO9__white_AO_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "da92185ef79286ac21b86afe46a3d37b7447c381024872454dd38dee42b2a873",
+        "finite": true
+      },
+      "production_owned__witness__anchor_B_AO9__rank_one_white_direction": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "69f4210e86c81360cbc26118a587e26c8670b2b09fbdd815526b5697fd0affda",
+        "finite": true
+      },
+      "production_owned__witness__anchor_B_AO9__white_occupied_projector": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "5e332e59a3b270f3193b814d05f8d100f9e179fa2e4a0c8fdd345b3feffe6d0c",
+        "finite": true
+      },
+      "production_owned__witness__anchor_B_AO9__density_NO_F_NO_ENERGY": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "7c14a03f1c9378aebd440f233e546a66ba029a2f9e4d91dc17dff68099a37e1f",
+        "finite": true
+      },
+      "production_owned__witness__anchor_symmetric_AplusB__AO_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "bb0117ba3c5963bde66d3b4c457675dc64a6d8292aacae7dc8a832f09b512042",
+        "finite": true
+      },
+      "production_owned__witness__anchor_symmetric_AplusB__white_AO_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "4c75400808f7f0ceb9507f8e97d25b1d574e3eecb0e032ad1fb2d996e7159fc6",
+        "finite": true
+      },
+      "production_owned__witness__anchor_symmetric_AplusB__rank_one_white_direction": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "577d433bb9a6bf3a6ff4764fa7775811d22e3195e8176c4be765be854168cb36",
+        "finite": true
+      },
+      "production_owned__witness__anchor_symmetric_AplusB__white_occupied_projector": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "abb74d31e24951cad08d1125073b5348814df9d03cb2570639b6e42f9f5260f1",
+        "finite": true
+      },
+      "production_owned__witness__anchor_symmetric_AplusB__density_NO_F_NO_ENERGY": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "13d8fc50740b9837d864b27e17c5c1e63d9e14989a7cebdfa41889d8e6193970",
+        "finite": true
+      }
+    },
+    "independent_reload_verification": "PASS_ALL_MEMBER_IDENTITIES_AND_EXACT_ARRAY_EQUALITY",
+    "scope": "Saved source matrices and synthetic/frozen occupation witnesses only; no F or energy evaluated for witness D",
+    "absolute_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupation-scope\\frozen-occupation-witnesses.npz"
+  },
+  "evidence": {
+    "analyze_frozen_occupation.py": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupation-scope\\analyze_frozen_occupation.py",
+      "size_bytes": 34465,
+      "sha256": "3e53f50607bcb005acab99dc0417761f5f0ca0caf5857ef05f43c10a020f4e52"
+    },
+    "frozen-occupation-review.json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupation-scope\\frozen-occupation-review.json",
+      "size_bytes": 108510,
+      "sha256": "def1c3618a437fe192888906297379483377906ebb06289565540fb149ca537a"
+    },
+    "frozen-occupation-witnesses.npz": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupation-scope\\frozen-occupation-witnesses.npz",
+      "size_bytes": 49568,
+      "sha256": "be26e3e60fea689798cf9c2b590888bc36ace453c69149367596950384ea1d0c"
+    },
+    "input-verification.json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupation-scope\\input-verification.json",
+      "size_bytes": 238034,
+      "sha256": "f0626adeb15494fa7e6bfd1eef95440489a30f005c7180a4ed3f9a5ed94ef60c"
+    },
+    "ANALYSIS_EXECUTION.log": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupation-scope\\ANALYSIS_EXECUTION.log",
+      "size_bytes": 943,
+      "sha256": "26e5ddfb5cf9535c7de68378d8b923b6fbf2cf744afc2967618cf8f943f5cae4"
+    }
+  },
+  "source_locations": {
+    "global_aufbau_and_endpoint_gate": "runtime/user_molecule/solver_candidate.py:43-135",
+    "strict_entry": "runtime/user_molecule/residual_candidate.py:80-121",
+    "reference_entry_and_gate": "reference/residual_candidate.py:59-91;114-153",
+    "V2_initial_gap_is_diagnostic": "runtime/user_molecule/residual_seed_v2.py:174-193;230-234",
+    "matrix_mask": "science/software/src/ai4orgchem/qm/p09_ao_classification.py:79-104; reference/user_molecule.py:128-136"
+  },
+  "verified_prior_payloads": 1010,
+  "source_NPZ_archives_verified": 4,
+  "frozen_witness_count": 6,
+  "new_array_members_verified": 70,
+  "new_F_SCF_NR_grid_integral_calls": 0,
+  "new_containers": 0,
+  "new_scientific_budget": null,
+  "old_budgets_reopened": false,
+  "current_gate_thresholds_changed": false,
+  "scientific_protocol_approved": false,
+  "Compute": false,
+  "scientific_delta_hartree": null,
+  "external_expert_process": "CANCELLED_BY_USER",
+  "next_candidate": "validation/user-molecule/occupation-response/proposal-v1.json",
+  "new_live_probe_implementation": "NOT_IMPLEMENTED",
+  "new_live_probe_execution": "NOT_EXECUTED",
+  "full_local_CI_this_round": "NOT_EXECUTED",
+  "GitHub_Actions": "NOT_EXECUTED",
+  "image_distribution": "BLOCKED",
+  "public_push_release": "NOT_AUTHORIZED_NOT_PERFORMED",
+  "legacy_L4_resume": "UNSUPPORTED_CHECKPOINT_SAVE_ONLY",
+  "limitations": [
+    "Frozen F/S occupation witnesses are not new self-consistent states, executable seeds or energies.",
+    "Every witness has its own density identity; no old F(D) or energy is relabelled as belonging to a new D.",
+    "Exact inertia and the strict gap bound concern represented binary64 lower-triangle matrices.",
+    "The Weyl necessary-change bound assumes exactly the same fixed positive definite S; it is not sufficient to ensure an accepted root.",
+    "Approximate NumPy whitening/eigenvectors have no exact numerical error certificate and never replace saved SciPy gate values.",
+    "Saved symmetry residuals do not prove exact physical symmetry, symmetry of all roots or arbitrary-D sigma/pi decoupling.",
+    "Passing pure-array trace/idempotency/reconstruction checks does not execute either solver admission contract.",
+    "No method approval, numerical endpoint qualification, stability, research result or Compute activation is granted."
+  ],
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "9793208fbb21eb3659998290153289f1707947a97f0f28865f9960ebf7be64ea",
+    "original_size_bytes": 110486,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

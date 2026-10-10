@@ -12,7 +12,7 @@
     "preserved_bytes": true
   },
   "runtime_code_commit": "aad7c5b51168a2364cc6c88081c981afea50a200",
-  "execution_record": "validation/user-molecule/root-native-engineering-20261007.json",
+  "execution_record": "validation/user-molecule/root-native-engineering-20261007.public.json",
   "scientific_target_changed": false,
   "scientific_operators_changed": false,
   "final_thresholds_changed": false,

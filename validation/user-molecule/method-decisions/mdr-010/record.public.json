@@ -1,0 +1,45 @@
+{
+  "id": "MDR-010",
+  "revision": "0.1",
+  "date": "2026-10-07",
+  "status": "EXECUTED_INCOMPLETE_WALL_STOP_NO_FORMAL_ROOT_ENDPOINT",
+  "parent": {
+    "id": "MDR-009",
+    "sha256": "e3b2f6dfbf0826819e0bf1d145d44ef39e1ae0af21280834258bae206a12c94f",
+    "preserved_bytes": true
+  },
+  "scope": "ONE_AUTHORIZED201_CALL300_SECOND_SOURCE_NATIVE_ATTEMPT_AND_READONLY_FORENSIC_AUDIT",
+  "user_reply_verbatim": "请继续",
+  "approval_context": "Direct reply to immediately preceding one-run201/300 approval question, preserved with speaker roles",
+  "runtime_execution_commit": "73e8dfd8aef4881dec6b8cd30b21b2228f8b51ab",
+  "execution_record": "validation/user-molecule/root-native-diagnostic-20261007.public.json",
+  "scientific_processes": 1,
+  "actual_NR_completed": 139,
+  "callback_succeeded": 138,
+  "callback_failed": 1,
+  "formal_root_result": "UNAVAILABLE",
+  "final_gates_and_tails": "NOT_EXECUTED",
+  "Compute": false,
+  "scientific_equations_changed": false,
+  "thresholds_changed": false,
+  "automatic_retry": false,
+  "decisions": [
+    "Preserve interrupted OPEN callback journal; external forensic termination does not fake a normal close or refill62 slots.",
+    "139saved points fail the combined original9gates; no formal endpoint, no root-nonexistence inference.",
+    "A returned NR and captured wire are separate from callback success; the deadline-failed slot is not promoted.",
+    "Record mixed timing only; no NR pure-time or CPU bottleneck assertion without instrumentation.",
+    "Next engineering work is cooperative shutdown/publication and zero-native timing diagnosis under unchanged scientific scope."
+  ],
+  "external_review_required": false,
+  "external_expert_process": "CANCELLED_BY_USER",
+  "research_delta_hartree": null,
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "67b468b3f7d8a8953554c0ba1cc380b08528d3e8ebe2a9f70be58ff31552372c",
+    "original_size_bytes": 1866,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

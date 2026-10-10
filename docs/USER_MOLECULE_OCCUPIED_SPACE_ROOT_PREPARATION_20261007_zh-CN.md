@@ -38,6 +38,5 @@ host只接受`--prepare-only`，不存在`--execute`；worker同样先拒绝非�
 
 最近真实科学记录仍为[十二点响应](USER_MOLECULE_OCCUPIED_SPACE_RESPONSE_20261007_zh-CN.md)：12个点gap通过、comm/map失败，没有合格自洽端点。旧完整W01—W07本地CI不自动覆盖本次增补；本轮完整CI和GitHub Actions均NOT_EXECUTED。外部专家流程CANCELLED_BY_USER，具体科学/资源证据尚缺与取消咨询分开。
 
-不扩展分子、方法、科研用途或工具平台；不放宽门槛、启用生产Compute、重算原P01—P14、恢复WSLc验收、升级WSL或更改全局配置/重启。不构建或分发镜像，不推送/创建公开标签或Release。WSLc暂停BLOCKED/NOT_EXECUTED，镜像分发BLOCKED；r3完整组件许可审计仍NOT_EXECUTED，新分支公开范围另行确认。L4仅可保存检查点，不支持恢复运行。原工作区与此前候选保留。
 
-[机器记录](../validation/user-molecule/occupied-space-root-preparation-20261007.json)与[MDR-008](../validation/user-molecule/method-decisions/mdr-008/record.json)给出详细身份。本地记录和备份在`D:\AI4Science\ai4orgchem-runtime-deliveries\20261007-user-molecule-occupied-space-root`。
+[机器记录](../validation/user-molecule/occupied-space-root-preparation-20261007.public.json)与[MDR-008](../validation/user-molecule/method-decisions/mdr-008/record.json)给出详细身份。本地记录和备份在`D:\AI4Science\ai4orgchem-runtime-deliveries\20261007-user-molecule-occupied-space-root`。

@@ -1,0 +1,278 @@
+{
+  "schema": "runtime-user-oriented-home-v1",
+  "client_date": "2026-10-10",
+  "base_commit": "706de9e8c30d8c2fa50d25f3e7e6575374a2ac49",
+  "purpose": "Project goal, own-molecule RHF and six groups of fourteen fixed-protocol modules first",
+  "presentation_scope": "ONLY_HOME_README_NAVIGATION_AND_DISCLOSURES",
+  "active_html": {
+    "path": "docs/index.html",
+    "bytes": 197042,
+    "sha256": "c5380b0b9655a7f096a35056ff0ca9aac65c6ed5c1ba3f90ea2cddd2d2b88931"
+  },
+  "current_export": "docs/runtime-guide/current",
+  "archive": {
+    "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-user-home-20261010.zip",
+    "bytes": 430323,
+    "sha256": "b6ad53a2b36a1c02243115b9356401c1f213f9a6b5041aaecc205f7dea06ef6d",
+    "crc": "PASS",
+    "members": [
+      {
+        "path": "docs/index.html",
+        "bytes": 197042,
+        "sha256": "c5380b0b9655a7f096a35056ff0ca9aac65c6ed5c1ba3f90ea2cddd2d2b88931"
+      },
+      {
+        "path": "docs/.nojekyll",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "README.md",
+        "bytes": 34109,
+        "sha256": "50808756358315586339d365eab3a87f15edb4338eedb63581ff866cd2f61551"
+      },
+      {
+        "path": "content/guide_zh-CN.md",
+        "bytes": 103783,
+        "sha256": "d3f17f00c57a636ec821a8a5d05dee26e6cd87dc8ef01ec555daebc9cbd0e4a7"
+      },
+      {
+        "path": "provenance/sources.md",
+        "bytes": 18663,
+        "sha256": "0ac1404ca35ef0b4c27a472c1791e9ee3f60af1f9ef5126cad06658a007c3fbe"
+      },
+      {
+        "path": "verification/checks.md",
+        "bytes": 35510,
+        "sha256": "d8164fa6e8635b6436367225592016abe8bcf2adcb9ae57d18955125bac1c79e"
+      },
+      {
+        "path": "MIGRATION.md",
+        "bytes": 37252,
+        "sha256": "bbccef4ae4e972b7f751d718424288cfb5a1d6f93d7b28da0a987fa93bb31cf2"
+      },
+      {
+        "path": "MANIFEST.txt",
+        "bytes": 1844,
+        "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+      },
+      {
+        "path": "templates/molecular-service/water/request.json",
+        "bytes": 277,
+        "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+      },
+      {
+        "path": "templates/molecular-service/water/molecule.xyz",
+        "bytes": 123,
+        "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+      }
+    ]
+  },
+  "browser_record": "validation/web-guide/browser-user-home-20261010.json",
+  "home_UI_checks": {
+    "scope": "Homepage UI presentation only",
+    "results": [
+      {
+        "name": "Purpose and all scoped modules in default view",
+        "status": "PASS",
+        "home": "01 / PROJECT\n本地分子计算与结果复核\n\nAI4OrgChem Runtime 面向化学研究用户，将分子输入、计算执行和结果记录组织为可复用的本地工作流程。\n\n项目目标是帮助你获得分子能量、轨道与密度信息，开展固定协议对照，并保存可追溯的研究记录。网页负责选择模块和指导操作，计算在你的本地环境执行。\n\n自己的分子\nRHF 单点能量、轨道与密度矩阵\n\n提交XYZ结构与计算请求，获得总能量、canonical轨道、AO密度矩阵、占据数和完整运行记录。\n\n当前适用：H/C/N/O，中性单重态，RHF/6-31G(d)，最多20原子且AO数不超过80。\n\n查看四步计算指南 →\n按研究目标选择分析与复算模块\n\n以下14个模块使用随项目提供的固定案例和协议；点击模块名称查看输入、运行方式和结果解释。\n\n轨道与密度对照\n轨道表示与密度对照\n乙烯固定案例：轨道表示变化与密度、能量不变量\n局域化端点与参照能量\n丁二烯固定案例：局域化端点与参照能量\n结构数据与图规则\n结构与光谱表值统计\n已提供表值：统计、拟合与残差分析\n共轭图规则与能量账本\n固定分子图：图规则检查与能量账本\n条件能量与片段分析\nπ–π条件态与轨道响应\n固定双状态：直接项与轨道响应\nπ–σ条件能量对照\n固定角度：条件能量比较\n片段条件能量组装\n固定双片段：条件能量独立组装\n构型与能量响应\n扭转构型端点与能量账本\n固定扭转端点：单点能量与账本对照\n键长交替与能量响应\n苯固定五点几何：普通DFT能量响应\n条件能量与结构响应复核\n固定应变体系：条件能量与结构端点联合复核\n能量闭合与状态诊断\n能量账本闭合校验\n保存账本：同一哈密顿量下的路径闭合校验\n条件态与稳定性诊断\n环丁二烯固定几何：条件态诊断\n固定体系多态与尺寸对照\n多态约束结构优化\n固定多态任务；从苯G先导示例开始\n环状体系尺寸与状态对照\n固定环状尺寸与状态任务；从N12-G先导示例开始\n\n这组是高成本固定任务：当前验收起点为上述两个先导，完整状态集合需按预算分态执行。\n\n从这里开始\n计算自己的分子\n\n准备XYZ → 运行单点 → 读取报告\n\n学习与复算示例\n\n选择固定案例模块与运行步骤\n\n查阅已有证据\n\n按模块读取结果与来源\n\n清除路径／查看全部\n\n选择研究目标查看使用步骤；也可直接浏览全部模块。\n\n第一次使用可先运行水分子示例。查看本地安装与环境准备，或了解结果与记录的保存方式。\n\n需要深入复核？查看专业阅读路径",
+        "header": "DOCUMENTATION / 使用与复核\nAI4OrgChem Runtime 用户指南\n\n面向分子研究的本地计算与可追溯复核\n\n自己的XYZ分子\n固定案例分析模块\n完整结果与运行记录",
+        "scope": false,
+        "catalog": [
+          {
+            "name": "轨道表示与密度对照",
+            "href": "#case-p01-orbital-density",
+            "exists": true
+          },
+          {
+            "name": "局域化端点与参照能量",
+            "href": "#case-protocol-p08",
+            "exists": true
+          },
+          {
+            "name": "结构与光谱表值统计",
+            "href": "#case-p02-statistics",
+            "exists": true
+          },
+          {
+            "name": "共轭图规则与能量账本",
+            "href": "#case-p13-graph-ledger",
+            "exists": true
+          },
+          {
+            "name": "π–π条件态与轨道响应",
+            "href": "#case-protocol-p04",
+            "exists": true
+          },
+          {
+            "name": "π–σ条件能量对照",
+            "href": "#case-protocol-p05",
+            "exists": true
+          },
+          {
+            "name": "片段条件能量组装",
+            "href": "#case-protocol-p06",
+            "exists": true
+          },
+          {
+            "name": "扭转构型端点与能量账本",
+            "href": "#case-protocol-p03",
+            "exists": true
+          },
+          {
+            "name": "键长交替与能量响应",
+            "href": "#case-protocol-p10",
+            "exists": true
+          },
+          {
+            "name": "条件能量与结构响应复核",
+            "href": "#p14-tasks",
+            "exists": true
+          },
+          {
+            "name": "能量账本闭合校验",
+            "href": "#case-protocol-p07",
+            "exists": true
+          },
+          {
+            "name": "条件态与稳定性诊断",
+            "href": "#case-protocol-p09",
+            "exists": true
+          },
+          {
+            "name": "多态约束结构优化",
+            "href": "#case-p11-high-cost",
+            "exists": true
+          },
+          {
+            "name": "环状体系尺寸与状态对照",
+            "href": "#case-p12-high-cost",
+            "exists": true
+          }
+        ]
+      },
+      {
+        "name": "Technical records initially folded",
+        "status": "PASS"
+      },
+      {
+        "name": "All fourteen links reach actual case instructions",
+        "status": "PASS",
+        "targets": [
+          {
+            "href": "#case-p01-orbital-density",
+            "visible": true,
+            "id": "case-p01-orbital-density"
+          },
+          {
+            "href": "#case-protocol-p08",
+            "visible": true,
+            "id": "case-protocol-p08"
+          },
+          {
+            "href": "#case-p02-statistics",
+            "visible": true,
+            "id": "case-p02-statistics"
+          },
+          {
+            "href": "#case-p13-graph-ledger",
+            "visible": true,
+            "id": "case-p13-graph-ledger"
+          },
+          {
+            "href": "#case-protocol-p04",
+            "visible": true,
+            "id": "case-protocol-p04"
+          },
+          {
+            "href": "#case-protocol-p05",
+            "visible": true,
+            "id": "case-protocol-p05"
+          },
+          {
+            "href": "#case-protocol-p06",
+            "visible": true,
+            "id": "case-protocol-p06"
+          },
+          {
+            "href": "#case-protocol-p03",
+            "visible": true,
+            "id": "case-protocol-p03"
+          },
+          {
+            "href": "#case-protocol-p10",
+            "visible": true,
+            "id": "case-protocol-p10"
+          },
+          {
+            "href": "#p14-tasks",
+            "visible": true,
+            "id": "p14-tasks"
+          },
+          {
+            "href": "#case-protocol-p07",
+            "visible": true,
+            "id": "case-protocol-p07"
+          },
+          {
+            "href": "#case-protocol-p09",
+            "visible": true,
+            "id": "case-protocol-p09"
+          },
+          {
+            "href": "#case-p11-high-cost",
+            "visible": true,
+            "id": "case-p11-high-cost"
+          },
+          {
+            "href": "#case-p12-high-cost",
+            "visible": true,
+            "id": "case-p12-high-cost"
+          }
+        ]
+      },
+      {
+        "name": "Records remain readable on demand",
+        "status": "PASS"
+      }
+    ]
+  },
+  "readme_history_preservation": [
+    {
+      "path": "README.md",
+      "history_body_bytes": 25848,
+      "history_body_sha256": "65b3a3dde6d3b16f08ee8771cf108490137216bb9e24f4cabd67034360926ce7",
+      "original_body": "PRESERVED_BYTE_FOR_BYTE_IN_DEFAULT_CLOSED_DETAILS",
+      "current_sha256": "4deb46a6c2ba07f9583876e975f614f8228d8b2db5bc8a35d4f08489f9a7099a"
+    },
+    {
+      "path": "README_zh-CN.md",
+      "history_body_bytes": 22952,
+      "history_body_sha256": "e10d6335ea52047b4ffdf8867d182154d8397a57bd143933039a9d49cf52fc83",
+      "original_body": "PRESERVED_BYTE_FOR_BYTE_IN_DEFAULT_CLOSED_DETAILS",
+      "current_sha256": "2d4609af64141f363163b6567375b690a1c7a4088257a0b8e1efff8eb509f388"
+    }
+  ],
+  "scientific_contracts_source_locks_runtime_code_and_CI": "UNCHANGED",
+  "calculation_inputs_and_copied_commands": "ALL79_EXPECTED_TEXT_HASHES_AND_ALL_PRE_CODE_IDENTICAL_TO_BASE",
+  "QA_shortcut": "Preserves ?qa=1 using existing reveal so record disclosure opens",
+  "scope_copy": "Own XYZ supports H/C/N/O neutral singlet RHF/6-31G(d) <=20atoms and AO<=80; fourteen additional modules use fixed protocols; high-cost has only benzeneG/N12-G accepted pilots",
+  "historical_records_and_original_YouMind_package": "PRESERVED",
+  "new_version_tag_Release_image_or_online_compute": "NONE",
+  "final_live_deployment": "NOT_EXECUTED_AT_RECORD_CREATION; verify source-specific Pages run after push",
+  "not_executed": [
+    "true200-percent zoom",
+    "full keyboard audit",
+    "multi-browser audit",
+    "new scientific computation"
+  ],
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "9721d909a3cc8ec06a5c498b2fcb9e69775ca33f81b0f8005aa7526ee08b68e3",
+    "original_size_bytes": 11706,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

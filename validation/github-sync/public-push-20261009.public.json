@@ -1,0 +1,553 @@
+{
+  "schema": "runtime-github-public-push-v1",
+  "recorded_at": "2026-10-09T13:05:36.469389+00:00",
+  "repository": {
+    "name": "CCcolab/AI4OrgChem-Runtime",
+    "url": "https://github.com/CCcolab/AI4OrgChem-Runtime",
+    "visibility": "PUBLIC",
+    "default_branch": "main"
+  },
+  "authorization": "User instructed to confirm and push the reviewed source/guide scope on 2026-10-09; no Pages/tag/Release/image publishing authorized",
+  "source_push": {
+    "sha": "06d50885bdccf31f83b89229c1513121542375d5",
+    "source_branch": "implementation/protocol-cases-batch3",
+    "remote_ref": "refs/heads/main",
+    "full_reachable_history_commits": 128,
+    "tracked_files": 836,
+    "remote_sha_match": "PASS",
+    "previous_local_main_preserved": "0288eb8455a85c2082142dbdc62b7c018adb2e56"
+  },
+  "workflow": {
+    "path": ".github/workflows/validate.yml",
+    "git_blob": "2cf2941ceb9d3f88edc7c1c411e47e9a27bee749",
+    "run": {
+      "conclusion": "success",
+      "createdAt": "2026-10-09T12:58:43Z",
+      "databaseId": 37933616122,
+      "event": "push",
+      "headBranch": "main",
+      "headSha": "06d50885bdccf31f83b89229c1513121542375d5",
+      "jobs": [
+        {
+          "completedAt": "2026-10-09T12:59:14Z",
+          "conclusion": "success",
+          "databaseId": 113830120083,
+          "name": "local-service-contracts",
+          "startedAt": "2026-10-09T12:58:46Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-10-09T12:58:48Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-10-09T12:58:47Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:58:50Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+              "number": 2,
+              "startedAt": "2026-10-09T12:58:48Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:59:11Z",
+              "conclusion": "success",
+              "name": "Locked local-service engineering tests (no science)",
+              "number": 3,
+              "startedAt": "2026-10-09T12:58:50Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:59:12Z",
+              "conclusion": "success",
+              "name": "Preserve engineering evidence (including failures)",
+              "number": 4,
+              "startedAt": "2026-10-09T12:59:11Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:59:12Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+              "number": 8,
+              "startedAt": "2026-10-09T12:59:12Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:59:13Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "startedAt": "2026-10-09T12:59:12Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122/job/113830120083"
+        },
+        {
+          "completedAt": "2026-10-09T12:59:33Z",
+          "conclusion": "success",
+          "databaseId": 113830120196,
+          "name": "linux",
+          "startedAt": "2026-10-09T12:58:46Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-10-09T12:58:47Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-10-09T12:58:46Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:58:48Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+              "number": 2,
+              "startedAt": "2026-10-09T12:58:47Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:59:25Z",
+              "conclusion": "success",
+              "name": "Build identified local image (no registry push)",
+              "number": 3,
+              "startedAt": "2026-10-09T12:58:48Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:59:27Z",
+              "conclusion": "success",
+              "name": "Legacy wrapper tests (user-molecule contracts have a separate job)",
+              "number": 4,
+              "startedAt": "2026-10-09T12:59:25Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:59:29Z",
+              "conclusion": "success",
+              "name": "L0 and L1 offline with persistent output",
+              "number": 5,
+              "startedAt": "2026-10-09T12:59:27Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:59:30Z",
+              "conclusion": "success",
+              "name": "Container permissions and persistence",
+              "number": 6,
+              "startedAt": "2026-10-09T12:59:29Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:59:31Z",
+              "conclusion": "success",
+              "name": "Preserve execution evidence (including failures; no release publication)",
+              "number": 7,
+              "startedAt": "2026-10-09T12:59:30Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:59:31Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+              "number": 14,
+              "startedAt": "2026-10-09T12:59:31Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:59:31Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 15,
+              "startedAt": "2026-10-09T12:59:31Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122/job/113830120196"
+        },
+        {
+          "completedAt": "2026-10-09T12:58:58Z",
+          "conclusion": "success",
+          "databaseId": 113830120269,
+          "name": "user-molecule-contracts",
+          "startedAt": "2026-10-09T12:58:46Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-10-09T12:58:47Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-10-09T12:58:46Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:58:48Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+              "number": 2,
+              "startedAt": "2026-10-09T12:58:47Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:58:54Z",
+              "conclusion": "success",
+              "name": "Strict input, resource, fixture and W07 report contracts (no science)",
+              "number": 3,
+              "startedAt": "2026-10-09T12:58:48Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:58:55Z",
+              "conclusion": "success",
+              "name": "Local evidence and source snapshot engineering (no molecular computation)",
+              "number": 4,
+              "startedAt": "2026-10-09T12:58:54Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:58:56Z",
+              "conclusion": "success",
+              "name": "Preserve contract evidence",
+              "number": 5,
+              "startedAt": "2026-10-09T12:58:55Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:58:56Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+              "number": 10,
+              "startedAt": "2026-10-09T12:58:56Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-09T12:58:56Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 11,
+              "startedAt": "2026-10-09T12:58:56Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122/job/113830120269"
+        }
+      ],
+      "status": "completed",
+      "updatedAt": "2026-10-09T12:59:34Z",
+      "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122"
+    },
+    "scope": "Only these three jobs. Does not execute all Runtime/scientific services or high-cost acceptance."
+  },
+  "artifacts": [
+    {
+      "id": 11617530477,
+      "name": "candidate-validation-37933616122-1",
+      "api_bytes": 12779,
+      "download_bytes": 12779,
+      "api_digest": "sha256:ea6a13f29419c1e25679ff60e98bd1918ea308a77ddb50126c9f08faa94457ca",
+      "sha256": "ea6a13f29419c1e25679ff60e98bd1918ea308a77ddb50126c9f08faa94457ca",
+      "digest_and_crc": "PASS",
+      "extracted_bytes": "ALL_MATCH",
+      "expires_at": "2026-10-16T12:59:30Z",
+      "member_count": 18,
+      "members": [
+        {
+          "path": "20261009T125928Z-core-tests-78f8a9e48fd7/00-stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "20261009T125928Z-core-tests-78f8a9e48fd7/run-manifest.json",
+          "bytes": 2747,
+          "sha256": "0ed68360c209aa6b89ec9ddd9200c3b29c35d73acfe9cf37a16ca944e7bd92ca"
+        },
+        {
+          "path": "20261009T125928Z-core-tests-78f8a9e48fd7/00-stdout.log",
+          "bytes": 545,
+          "sha256": "4ff0014aacd1275bc1783727a400b8042fd58be0869990686c1420d635d27e02"
+        },
+        {
+          "path": "20261009T125928Z-evidence-de5d5fcbcea3/00-stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "20261009T125928Z-evidence-de5d5fcbcea3/00-stdout.log",
+          "bytes": 147,
+          "sha256": "83f9eae01afe93adbfea0ff7a89d5c70f8feece05a450c699ae960b41b1ab0c2"
+        },
+        {
+          "path": "20261009T125928Z-evidence-de5d5fcbcea3/01-stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "20261009T125928Z-evidence-de5d5fcbcea3/01-stdout.log",
+          "bytes": 152,
+          "sha256": "56515be80a062b930ce5dfa475ca3942838480ba05efa1a7f3dd94f226c88232"
+        },
+        {
+          "path": "20261009T125928Z-evidence-de5d5fcbcea3/02-stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "20261009T125928Z-evidence-de5d5fcbcea3/02-stdout.log",
+          "bytes": 329,
+          "sha256": "e9d5a3e4731ecfae628eed67ba0ff0616da72ff2280185ccb9e72280b1060d97"
+        },
+        {
+          "path": "20261009T125928Z-evidence-de5d5fcbcea3/03-stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "20261009T125928Z-evidence-de5d5fcbcea3/03-stdout.log",
+          "bytes": 202,
+          "sha256": "8390faeae7d569664846c366cdda4ad53bc622871a269075de2c44b5ae6bf9ab"
+        },
+        {
+          "path": "20261009T125928Z-evidence-de5d5fcbcea3/run-manifest.json",
+          "bytes": 3385,
+          "sha256": "a782413ccf339b31bb75caafc871318a6560b943eef3ec3ee5bbc2fd12b57a04"
+        },
+        {
+          "path": "build.log",
+          "bytes": 14039,
+          "sha256": "be5b55a234ad1cc8001878e2e4fce20328e0309311c5cd78ae100b3bd33209e8"
+        },
+        {
+          "path": "image-inspect.json",
+          "bytes": 4843,
+          "sha256": "91f3aa5cce955727af2844b4a1092c8ceb6f2a03c19ddf184b259afa5f24ac6c"
+        },
+        {
+          "path": "platform-probe-97d88d27a6ad4e129a58f8ad7dbe398a.json",
+          "bytes": 403,
+          "sha256": "22ff8ade4d4e305d61ba2561613bb2a5af1792cda67f68f293f8fdc3b5393e51"
+        },
+        {
+          "path": "wrapper-test_process.py.log",
+          "bytes": 447,
+          "sha256": "334b06fb4c9a935dece69ff6c33ca399a742417e8826c77cab5bd8bb95d7a6ae"
+        },
+        {
+          "path": "wrapper-test_classifier_adapter.py.log",
+          "bytes": 398,
+          "sha256": "cb18464ab09cfd294f81acb99f05486f2e638d0e5704c1720811e63ce0d841df"
+        },
+        {
+          "path": "wrapper-test_runtime.py.log",
+          "bytes": 793,
+          "sha256": "130c9b8a2ab125d89be9be954c980cbce770cb72afabc4d3f64f39e5bb8e301f"
+        }
+      ]
+    },
+    {
+      "id": 11617446906,
+      "name": "local-services-contracts-37933616122-1",
+      "api_bytes": 25559,
+      "download_bytes": 25559,
+      "api_digest": "sha256:41de846dd372aefaa2c43d868278abbb98e042453fe7afd5e1ae85e225fa6909",
+      "sha256": "41de846dd372aefaa2c43d868278abbb98e042453fe7afd5e1ae85e225fa6909",
+      "digest_and_crc": "PASS",
+      "extracted_bytes": "ALL_MATCH",
+      "expires_at": "2026-10-16T12:59:11Z",
+      "member_count": 5,
+      "members": [
+        {
+          "path": "dependencies.txt",
+          "bytes": 174,
+          "sha256": "e1c00ada342b0f88839a16addc092b75fb9949ed29cb628676c3db3e20883ad2"
+        },
+        {
+          "path": "summary.log",
+          "bytes": 3093,
+          "sha256": "dc1e3348ce4fbf5f6240b5917fbb529ca1855c1ecf07a0566ea684126c44fc23"
+        },
+        {
+          "path": "install.log",
+          "bytes": 2972,
+          "sha256": "33f3b48eebade3d0be207d04f8a8b489200a88386124cf083b9e09811e461eed"
+        },
+        {
+          "path": "tests/result.json",
+          "bytes": 55682,
+          "sha256": "4a5a295a055b0a6bc5a33d1b02c06270806f7f5f40e0392203f491188ba91a46"
+        },
+        {
+          "path": "tests/tests.log",
+          "bytes": 74584,
+          "sha256": "f064555d8212a46c0a6e58ae8fc98df5189957f24b270278124dd4d2758d2f0e"
+        }
+      ]
+    },
+    {
+      "id": 11616234240,
+      "name": "user-molecule-contracts-37933616122-1",
+      "api_bytes": 23701,
+      "download_bytes": 23701,
+      "api_digest": "sha256:78ca155e930a7546b05673bf966af29622183a18e9a319f14446ac2374382e79",
+      "sha256": "78ca155e930a7546b05673bf966af29622183a18e9a319f14446ac2374382e79",
+      "digest_and_crc": "PASS",
+      "extracted_bytes": "ALL_MATCH",
+      "expires_at": "2026-10-16T12:58:56Z",
+      "member_count": 20,
+      "members": [
+        {
+          "path": "dependencies.txt",
+          "bytes": 133,
+          "sha256": "8908b8dde5f6a9d0cfb025ef464134e3b40197e4a2757ac573917e4ec7643a2c"
+        },
+        {
+          "path": "framework-test_ci_user_molecule_classification.py.log",
+          "bytes": 2577,
+          "sha256": "5e1943228c4558ef97bca6024b47fa95a8a12682fe6fe3ceee3cd33b0531d633"
+        },
+        {
+          "path": "framework-test_distribution.py.log",
+          "bytes": 4263,
+          "sha256": "33b4ee22eec16c5a9c58ff7cd7c5c2e617d5b03afd85f0710c13cf90ec0aaa68"
+        },
+        {
+          "path": "framework-test_historical_source_materials.py.log",
+          "bytes": 2597,
+          "sha256": "a0064e2885f6012a9ed87d440b414f7e35b6e6be15a56a7c1ae325131336faf2"
+        },
+        {
+          "path": "framework-test_propositions.py.log",
+          "bytes": 4365,
+          "sha256": "e41987d9924512d09d3aaf1c05cf3453f5d2a0c1f91643ff14b456a45ceba1ab"
+        },
+        {
+          "path": "install.log",
+          "bytes": 1863,
+          "sha256": "4dd18b107486579a4517acc722b307f00c77d5c8d2b150d65d9d831d01f2f901"
+        },
+        {
+          "path": "minimal-units/group-00.log",
+          "bytes": 1674,
+          "sha256": "8acfb505b465d9ed0d7540967f5c3728b078b854ef8e1978d0a1abfb232d7cde"
+        },
+        {
+          "path": "minimal-units/group-01.log",
+          "bytes": 688,
+          "sha256": "b1dae6e49381be6107dc7af4f9eec395f52e3476c2fc0b9d739fc7576ca92ece"
+        },
+        {
+          "path": "minimal-units/group-02.log",
+          "bytes": 1430,
+          "sha256": "d66e30415817d4259314382aba84e2a8ca9c3b72007b007670c280bb4dba3f01"
+        },
+        {
+          "path": "minimal-units/group-03.log",
+          "bytes": 4896,
+          "sha256": "b7a6253cf42f66b5f57fdec440d11f4863c314be0dc0c4a0d4f101b3915d59e2"
+        },
+        {
+          "path": "minimal-units/group-04.log",
+          "bytes": 996,
+          "sha256": "66dfd02b58d1d731a69b9b89dbca64ea947ee964951484bee0d25ef0ebf6914b"
+        },
+        {
+          "path": "minimal-units/group-05.log",
+          "bytes": 1605,
+          "sha256": "8a7a31a3b4bb3db3607b088077b913ceccca7494fb837109c6c93ba15806ebb7"
+        },
+        {
+          "path": "minimal-units/group-06.log",
+          "bytes": 1955,
+          "sha256": "ce2ca55215d2550ef72a46269a5a8ec4d31af3055d27a4f55d86709ea28411fd"
+        },
+        {
+          "path": "minimal-units/group-07.log",
+          "bytes": 3915,
+          "sha256": "1a0163bfc9073261fdba4d741ee0d2c66094a5ccde77e8e8b07c7244a98ceee7"
+        },
+        {
+          "path": "minimal-units/group-08.log",
+          "bytes": 1532,
+          "sha256": "4ab3f4c3751cf077f6bd1d3143be83ee19a63a7dc3a5ba4a2a0b2b3e04086df5"
+        },
+        {
+          "path": "minimal-units/group-09.log",
+          "bytes": 2213,
+          "sha256": "91d17606585520afdd97ee76ce95956ad1af68f32fdf5c7d70a285e80e065be2"
+        },
+        {
+          "path": "minimal-units/group-10.log",
+          "bytes": 4186,
+          "sha256": "4d440bb3aaefcd91811e0264382cb448df16a01031185a0f3c46fefbec7c4103"
+        },
+        {
+          "path": "minimal-units/group-11.log",
+          "bytes": 5769,
+          "sha256": "cef25cc0c182a2b87e4cdea9586bb7db7155771e8b855e1f381d904c45787017"
+        },
+        {
+          "path": "minimal-units/summary.json",
+          "bytes": 105382,
+          "sha256": "0ff7a8175e927cc818cade19e8a370ad56504af806cc78703f30a34466347e3a"
+        },
+        {
+          "path": "tests.log",
+          "bytes": 84,
+          "sha256": "f81a9437a6a895c1c3f2d7a6449b2c4cd6585fff7f2eca44256b5010740db599"
+        }
+      ]
+    }
+  ],
+  "actual_scoped_results": {
+    "linux": {
+      "wrapper_tests_passed": 12,
+      "L0_evidence_validators_passed": 4,
+      "L1_core_tests_passed": 11,
+      "evidence_and_core_manifests": "PASS/exit0; scientific and numerical qualification NOT_APPLICABLE",
+      "container_probe": "NONROOT_READONLY_SOURCE_AND_EVIDENCE_HASH_PASS"
+    },
+    "user-molecule-contracts": {
+      "minimal_tests_passed": 157,
+      "additional_framework_tests_passed": 74,
+      "guarded_or_local_only_test_files_deferred": 21,
+      "new_molecular_compute": "NONE"
+    },
+    "local-service-contracts": {
+      "discovered": 444,
+      "passed": 443,
+      "skipped": 1,
+      "skip_scope": "Actual P11 scientific preflight intentionally requires a separately opted-in scientific container",
+      "failures": 0,
+      "errors": 0,
+      "runner_context": "Matches actual repository/SHA/run_id/job; declaration only, independently bound here to API run"
+    }
+  },
+  "saved_local_records": "D:/AI4Science/ai4orgchem-runtime-deliveries/20261009-github-public-push",
+  "publication_states": {
+    "source_and_guide": "PUSHED_PUBLIC",
+    "Pages": "NOT_ENABLED",
+    "tags": "NONE",
+    "Release": "NONE",
+    "new_Runtime_version": "NOT_ASSIGNED",
+    "OCI_distribution": "BLOCKED_LOCAL_ONLY",
+    "legacy_condition_Compute": "BLOCKED",
+    "native_WSL2_Compute": "NOT_IMPLEMENTED",
+    "L4": "CHECKPOINT_SAVE_ONLY_NO_RESUME"
+  },
+  "historical_NOT_EXECUTED_records": "PRESERVED; not rewritten to PASS",
+  "local_scientific_computation_or_Docker_WSL_changes": "NONE",
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "08e0ee5b95f1f0f0f496c2748dd5203f9e7e1a3f2f01e3a4b8d51d27358ba9e5",
+    "original_size_bytes": 20544,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

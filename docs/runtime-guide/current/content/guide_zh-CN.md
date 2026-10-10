@@ -96,7 +96,7 @@ AI4OrgChem Runtime 面向化学研究用户，将分子输入、计算执行和�
 
 S1—S6提供协议查阅、实现审查、运行资格、固定几何、结构响应及联合复核的专业材料。
 
-[打开专业服务指南](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROFESSIONAL_SERVICES_zh-CN.md)
+[打开专业服务指南](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROFESSIONAL_SERVICES_zh-CN.public.md)
 
 <a id="quick-start"></a>
 
@@ -115,7 +115,12 @@ S1—S6提供协议查阅、实现审查、运行资格、固定几何、结构�
 <a id="source-install-command"></a>
 
 ```powershell
-# 在取得的 Runtime 源码目录执行
+# 取得源码：使用全新的独立目录，记录所选提交
+New-Item -ItemType Directory -Path D:\chem-work -Force
+git clone https://github.com/CCcolab/AI4OrgChem-Runtime.git D:\chem-work\runtime-source
+Set-Location D:\chem-work\runtime-source
+git rev-parse HEAD
+
 python -B .\scripts\install-local-runtime.py prepare --destination D:\chem-work\runtime-install
 python -B .\scripts\install-local-runtime.py build --destination D:\chem-work\runtime-install
 
@@ -138,15 +143,15 @@ prepare 下载固定公开来源591项、21 wheel + 1源码包；geomeTRIC 在�
 
 来源记录：45项工程PASS + 水单点 / P02统计 / P13图账本 / P07账本。不是全部科学任务认证；高成本新镜像重放 NOT\_EXECUTED。公开分发 BLOCKED，但支持从固定公开来源自行本地构建。
 
-以下旧普通／固定启动命令保留：历史候选镜像与candidate-image前提；新安装使用run-installed-runtime，不把新镜像直接塞入仅接受旧身份启动器。
+新安装的普通、固定、专题和高成本服务均使用各自登记的 installation record。旧候选启动器只用于原环境复核，不把新镜像直接交给只接受旧身份的入口。
 
 先选择目标，不统一要求Docker。进入实际Runtime源码根目录后，在自己的本地终端操作；网页不检测电脑、不安装工具、不启用WSL功能。
 
 | 用户要做什么 | 本地所需条件 |
 | --- | --- |
 | Capabilities／List／Show／Review | Runtime源码；Windows PowerShell 5.1或可用PowerShell；已有Python3.12+。Review另需自己持有的固定科学源码目录。 |
-| 普通RHF单点 | Python3.12+；Windows PowerShell 5.1或PowerShell 7；Docker Linux/amd64与` molecular-service/candidate-image `登记的匹配镜像。不要求pwsh。源码、网页与镜像分别准备；无公开安装镜像地址。 |
-| 3项固定服务 | Python3.12+；Windows PowerShell 5.1或PowerShell 7；Docker Linux/amd64与` registered-cases/candidate-image `登记的匹配镜像。不要求pwsh；不与普通服务混用镜像。 |
+| 普通RHF单点 | Python3.12+；Windows PowerShell 5.1或PowerShell 7；Docker Linux/amd64与本次 ` molecular-service/installation-record.json ` 登记的镜像。不要求pwsh。源码、网页与镜像分别准备；无公开安装镜像地址。 |
+| 3项固定服务 | Python3.12+；Windows PowerShell 5.1或PowerShell 7；Docker Linux/amd64与本次 ` registered-cases/installation-record.json ` 登记的镜像。不要求pwsh；不与普通服务混用镜像。 |
 | 旧固定七任务／条件能量与结构响应复核（独立环境） | 可用Docker Linux/amd64引擎；旧任务匹配镜像；已有PowerShell7.3+；持久输出与有效资源。入口可从PS5.1寻找已有PS7。不与普通服务共用环境合同。 |
 | 用户分子Check | 本地源码、请求及XYZ；用户分子r3候选或独立验收的匹配环境；Docker、已有PS7.3+。 |
 | 用户服务Report | 既有服务运行目录；基础Report需已有PS7.3+；高级只读／导出另需Python3.12+。Report不需要Docker。 |
@@ -155,7 +160,7 @@ prepare 下载固定公开来源591项、21 wheel + 1源码包；geomeTRIC 在�
 
 ### 源码、网页与环境不是同一种交付
 
-网页ZIP只是网页；Runtime Git／带manifest的项目来源ZIP是源码；Docker镜像与依赖是另外的环境条件。普通GitHub ZIP不替代项目来源ZIP，也不存在下载即用的完整Runtime安装包。公开来源地址及镜像分发未确认，不提供虚构下载入口。
+网页ZIP只是网页；Runtime Git／带manifest的项目来源ZIP是源码；Docker镜像与依赖是另外的环境条件。普通GitHub ZIP不替代项目来源ZIP，也不存在下载即用的完整Runtime安装包。源码地址已公开；公开预构建镜像分发仍受限制。用户可从固定来源自行构建，不能把网页 ZIP 当作安装包。
 
 可显式指定 ` -PythonExecutable `、` -PowerShell7 `；占位路径必须替换为本机已有的真实可执行文件。不要把Codex工具目录当成外部用户必有路径。
 
@@ -167,11 +172,11 @@ prepare 下载固定公开来源591项、21 wheel + 1源码包；geomeTRIC 在�
 
 **普通RHF单点**
 
-核对源码、Python3.12+、PowerShell 5.1或7、Docker Linux/amd64与molecular-service/candidate-image登记的匹配镜像；不要求pwsh。
+核对源码、Python3.12+、PowerShell 5.1或7、Docker Linux/amd64与本次 molecular-service installation record 登记的镜像；不要求pwsh。
 
 **3项固定服务**
 
-核对源码、Python3.12+、PowerShell 5.1或7、Docker Linux/amd64与registered-cases/candidate-image登记的匹配镜像；不要求pwsh。
+核对源码、Python3.12+、PowerShell 5.1或7、Docker Linux/amd64与本次 registered-cases installation record 登记的镜像；不要求pwsh。
 
 **旧专项条件**
 
@@ -183,7 +188,7 @@ prepare 下载固定公开来源591项、21 wheel + 1源码包；geomeTRIC 在�
 
 ### 普通RHF单点手工核对（与旧条件态r3分开）
 
-Runtime源码、Python3.12+、PS5.1或7、Docker Linux/amd64与molecular-service/candidate-image登记的匹配镜像；不要求pwshrequest.json与XYZ同一真实目录、basename匹配；全新外部输出目录
+Runtime源码、Python3.12+、PS5.1或7、Docker Linux/amd64与本次 molecular-service installation record 登记的镜像；不要求pwshrequest.json与XYZ同一真实目录、basename匹配；全新外部输出目录
 
 <a id="checks-evidence"></a>
 
@@ -195,7 +200,7 @@ Runtime源码、Python3.12+、PS5.1或7、Docker Linux/amd64与molecular-service
 
 ### 3项固定服务手工核对
 
-Runtime源码、Python3.12+、PowerShell 5.1或7、Docker Linux/amd64与registered-cases/candidate-image登记的匹配镜像；不要求pwsh保留固定输入与容差，使用全新外部输出目录
+Runtime源码、Python3.12+、PowerShell 5.1或7、Docker Linux/amd64与本次 registered-cases installation record 登记的镜像；不要求pwsh保留固定输入与容差，使用全新外部输出目录
 
 <a id="legacy-p14-checks"></a>
 
@@ -262,14 +267,14 @@ H/C/N/O；charge 0；multiplicity 1；正偶电子；RHF / 6-31G(d)；1–20原�
 
 坐标分量绝对值≤10000 Å，核距≥0.5 Å。输入是工程几何，不认证实验结构；不优化、不补氢、不重排原子。
 
-### 步骤1 · 进入Runtime源码根目录
+### 步骤1 · 进入已登记的安装工作目录
 
-将示例路径替换为本机实际源码目录。
+先完成上方源码安装并登记普通分子服务，再进入同一个安装工作目录；按自己的实际安装位置替换示例路径。
 
 <a id="single-point-location-command"></a>
 
 ```powershell
-Set-Location 'D:\your-work\ai4orgchem-runtime'
+Set-Location 'D:\chem-work\runtime-install\runtime'
 
 ```
 
@@ -312,25 +317,21 @@ UTF-8原文：请求277 bytes，水XYZ 123 bytes；保留LF结尾换行。复制
 
 ### 步骤3 · 在本地运行普通单点
 
-先跑源码中已有水示例；使用匹配普通服务镜像。输出选择源码、输入与历史记录之外的全新目录，不覆盖旧记录。
+先运行安装目录中已有的水示例，沿用安装时登记的同一份普通分子 installation record。输出选择源码、输入与历史记录之外的全新目录，不覆盖旧记录。
 
 <a id="single-point-command"></a>
 
 ```powershell
-.\scripts\start-molecular-service.ps1 `
-  -Request .\examples\molecular-service\water\request.json `
-  -OutputRoot 'D:\your-work\runtime-runs\single-point'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\molecular-service\installation-record.json --task single-point --request .\examples\molecular-service\water\request.json --output-root ..\runs\water-followup
 
 ```
 
-自己的request.json与XYZ同放在my-molecule实际目录；下列路径需替换为真实路径，OutputRoot仍使用全新外部目录。
+自己的 request.json 与 XYZ 同放在 my-molecule 实际目录。structure.file 按请求文件所在目录解析，填写 XYZ basename；下面只替换请求和全新输出目录，installation record 保持相同。
 
 <a id="single-point-custom-command"></a>
 
 ```powershell
-.\scripts\start-molecular-service.ps1 `
-  -Request 'D:\your-work\my-molecule\request.json' `
-  -OutputRoot 'D:\your-work\runtime-runs\single-point'
+python -B .\scripts\run-installed-runtime.py --installation-record ..\installations\molecular-service\installation-record.json --task single-point --request D:\chem-work\my-molecule\request.json --output-root ..\runs\my-molecule
 
 ```
 
@@ -345,6 +346,12 @@ $records = '<终端 records 的实际路径>'
 Get-Content -LiteralPath (Join-Path $records 'output\calculation\report.md') -Encoding UTF8
 
 ```
+
+<a id="ordinary-candidate-history"></a>
+
+### 历史普通分子候选环境入口（新安装不使用）
+
+原 start-molecular-service.ps1 仅接受旧 candidate-image 登记的镜像身份。其历史验收见普通分子结果记录；不得用该入口运行新安装镜像，也不取消镜像身份核对。
 
 <a id="conditional-state-history"></a>
 
@@ -592,7 +599,7 @@ result SHA256：` 91e95a9dfb0dd942cec0ab5c71463062fc7688c15ddbcd89bd0ad423715f8d
 
 ### 既有固定协议复核保存摘录 · 2026-10-02
 
-来源docs/examples/P14\_REVIEW\_20261002\_zh-CN.md保存摘录；固定C12H6 source-proxy协议的既有consistent，不是新复算或本页实测。使用历史指定本地镜像，不能移用任意XYZ或当前用户分子环境。
+来源docs/examples/P14\_REVIEW\_20261002\_zh-CN.public.md保存摘录；固定C12H6 source-proxy协议的既有consistent，不是新复算或本页实测。使用历史指定本地镜像，不能移用任意XYZ或当前用户分子环境。
 
 原L2验收smoke：20261002T111549Z-p14-smoke-611ad4389dee；分类父smoke：20261002T115757Z-p14-smoke-5edcc0ade184。用途不同，不能互换run\_id。四份旧processed含非标准Infinity，本页不解析数值；不展示能量值。
 
@@ -668,7 +675,7 @@ state list读取实际注册状态与Unit；ledger只读历史账本，不批准
 
 先用list-high-cost-cases.py读取实际注册Unit，从尚未执行的16态中选择恰一个Unit。已通过P11B-benzene-G保留PASS、不重算、不重复准入。不猜其他Unit ID，不用可运行占位命令冒充真实例子。
 
-用create-high-cost-budget.py为所选Unit在全新、尚不存在的文件创建独立预算，单态ceiling为43200秒。start-high-cost-case.ps1的-Task 多态约束结构优化 -Mode live必须精确指定-Unit、-Budget、-OutputRoot，可选-PythonExe/-DockerExe。此处只有参数说明，没有可复制的虚构live命令。
+用create-high-cost-budget.py为所选Unit在全新、尚不存在的文件创建独立预算，单态ceiling为43200秒。start-high-cost-case.ps1的-Task P11 -Mode live必须精确指定-Unit、-Budget、-OutputRoot，可选-PythonExe/-DockerExe。此处只有参数说明，没有可复制的虚构live命令。
 
 P11A呋喃按G→GL→GE，必须以-Inputs提供本轮合格前序output映射；P11B保留原独立初始化。科学规则固定，每态一次、失败计费；容器删除与证据闭合前不启动后续，不retry、不resume。
 
@@ -738,7 +745,7 @@ native-admission-pause 存在时，在新预留或容器前拒绝，不绕过。
 
 ### 先另存全新外部预算文件
 
-来源 docs/PROTOCOL\_CASES\_BATCH2\_zh-CN.md；保存为 D:\\your-work\\batch-budget-new.json（UTF8无BOM、LF末LF）。禁止覆盖、清空或复用已有验收预算。若文件已存在，取消保存并选择新的外部文件名，同时修改命令；本页不能检查本机文件。
+来源 docs/PROTOCOL\_CASES\_BATCH2\_zh-CN.public.md；保存为 D:\\your-work\\batch-budget-new.json（UTF8无BOM、LF末LF）。禁止覆盖、清空或复用已有验收预算。若文件已存在，取消保存并选择新的外部文件名，同时修改命令；本页不能检查本机文件。
 
 <a id="batch2-budget-json"></a>
 
@@ -2128,21 +2135,21 @@ Runtime核对任务、退出码、身份、哈希、依赖与协议；上游part
 
 ### 平台 × 任务：历史记录，不是现场测试
 
-Docker 各项均有各自范围的 PASS 记录。独立 WSL2 前四项有 PASS，后三项未执行。WSLc 七项未执行，整体 BLOCKED，升级实机验收暂停，不推荐首次路径。网页未执行测试，不证明新镜像、新环境或新输入通过。
+Docker 各项均有各自范围的 PASS 记录。独立 WSL2 前四项有 PASS，后三项未执行。网页未执行测试，不证明新镜像、新环境或新输入通过。
 
 <a id="history-registry"></a>
 
 唯一历史状态登记 · 附件转述
 
-| 任务 | Docker | 独立 WSL2 | WSLc |
-| --- | --- | --- | --- |
-| evidence | PASS · L0 完整性 | PASS · 登记范围 | NOT\_EXECUTED · BLOCKED |
-| core-tests | PASS · L1 实现测试 | PASS · 登记范围 | NOT\_EXECUTED · BLOCKED |
-| p14-smoke | PASS · L2 技术检查 | PASS · 登记范围 | NOT\_EXECUTED · BLOCKED |
-| p14-equivalence | PASS · 受测实现比较 | PASS · 受测范围；另有一次预检 FAIL | NOT\_EXECUTED · BLOCKED |
-| p14-fixed | PASS · 固定几何anchor资格 | NOT\_EXECUTED | NOT\_EXECUTED · BLOCKED |
-| p14-optimize | PASS · 登记约束优化资格 | NOT\_EXECUTED | NOT\_EXECUTED · BLOCKED |
-| p14-classify | PASS、consistent · 限定固定协议 | NOT\_EXECUTED | NOT\_EXECUTED · BLOCKED |
+| 任务 | Docker | 独立 WSL2 |
+| --- | --- | --- |
+| evidence | PASS · L0 完整性 | PASS · 登记范围 |
+| core-tests | PASS · L1 实现测试 | PASS · 登记范围 |
+| p14-smoke | PASS · L2 技术检查 | PASS · 登记范围 |
+| p14-equivalence | PASS · 受测实现比较 | PASS · 受测范围；另有一次预检 FAIL |
+| p14-fixed | PASS · 固定几何anchor资格 | NOT\_EXECUTED |
+| p14-optimize | PASS · 登记约束优化资格 | NOT\_EXECUTED |
+| p14-classify | PASS、consistent · 限定固定协议 | NOT\_EXECUTED |
 
 <a id="help"></a>
 
@@ -2170,7 +2177,7 @@ YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点
 
 维护：进入解压后的 ` ai4orgchem-runtime-guide/ ` 目录，运行 ` python -m http.server 8000 `，浏览 ` http://localhost:8000/docs/ `。仅静态指南维护，不启动Runtime；无真实托管。10成员共同顶层保持，包外清单／审计JSON和MD按当前字节动态生成。
 
-原YouMind提供时状态（历史）：条件Compute BLOCKED；WSLc BLOCKED / NOT\_EXECUTED；远CI NOT\_EXECUTED；镜像分发BLOCKED；外部专家咨询已取消非前置。该原包轮不运行Runtime/Docker/WSL/科学，不发布、不改权限；本次公开与实际CI另见当前同步记录。
+原YouMind提供时状态（历史）：条件Compute BLOCKED；；远CI NOT\_EXECUTED；镜像分发BLOCKED；外部专家咨询已取消非前置。该原包轮不运行Runtime/Docker/WSL/科学，不发布、不改权限；本次公开与实际CI另见当前同步记录。
 
 <a id="home-support-records"></a>
 
@@ -2182,7 +2189,7 @@ YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点
 
 2026-10-09 已按项目负责人授权公开到 [CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。首个候选提交 **06d5088** 的 [首次远端 CI](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122) 三项 job 均成功：Linux 构建、L0/L1、容器探针及限定工程测试；真实 P11 预检保留一项跳过。不是全部科学任务验收。网页文件已随源码同步，GitHub Pages 已于2026-10-10启用，可[直接打开静态指南](https://cccolab.github.io/AI4OrgChem-Runtime/)；本页不提供在线计算，复制的计算命令在用户本地执行。
 
-WSLc 暂停并保持 BLOCKED / NOT\_EXECUTED；镜像分发 BLOCKED；旧条件态 Compute BLOCKED；L4 仅保存检查点、不能恢复运行。下面原提供时及既有版本的状态记录保留历史范围，当前公开与 CI 记录见 [本次同步记录](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.md)。未创建新 Runtime 版本、标签或 Release。
+；镜像分发 BLOCKED；旧条件态 Compute BLOCKED；L4 仅保存检查点、不能恢复运行。下面原提供时及既有版本的状态记录保留历史范围，当前公开与 CI 记录见 [本次同步记录](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.public.md)。未创建新 Runtime 版本、标签或 Release。
 
 ### 原提供时的项目与阅读状态（历史）
 
@@ -2198,7 +2205,6 @@ AI4OrgChem Runtime 通过固定源码与依赖、分层启动和持久输出，�
 - 原七任务：Docker 候选历史记录仅限固定协议与登记范围，见唯一平台矩阵；不意味着所有比较判据全通过。
 - 用户分子 Check / Report：登记工程范围，不继承原七任务科学验收。
 - 普通RHF首版限定范围内可用；旧条件态生产Compute：BLOCKED。
-- WSLc：升级实机验收暂停。
 
 ### 需要深入复核？查看专业阅读路径 S1—S6
 
@@ -2211,7 +2217,7 @@ AI4OrgChem Runtime 通过固定源码与依赖、分层启动和持久输出，�
 5. S5 登记约束结构响应与优化资格复核
 6. S6 联合分类与独立复核交付
 
-最新 PROFESSIONAL\_SERVICES 待核对；阶段完整名称仍须对照规划与最新原文确认。以上仅为阅读导航，不新增 Runtime 任务。
+原 S1—S6 指南只描述原七任务及 P14。当前普通分子、固定服务、专题协议和高成本模块的输入、方法、门槛、结果与解释按下方统一服务登记及专业矩阵查阅；不把旧指南范围扩大成所有服务。
 
 <a id="verification-records"></a>
 
@@ -2235,7 +2241,7 @@ NOT_EXECUTED
 
 ### 第二批来源身份与支持矩阵
 
-此前阅读记录：两个MD、candidate-image与support-matrix四个短文件已完整读取；大型batch2-verification仅已读取运行、镜像、工程测试、失败等相关段，非1967行全审，非原运行目录全审。准确五路径：docs/PROTOCOL\_CASES\_BATCH2\_zh-CN.md；docs/PROTOCOL\_CASES\_BATCH2\_VALIDATION\_zh-CN.md；validation/protocol-cases/batch2-verification.json；validation/protocol-cases/support-matrix.json；validation/protocol-cases/candidate-image.json。不虚造公开地址。
+此前阅读记录：两个MD、candidate-image与support-matrix四个短文件已完整读取；大型batch2-verification仅已读取运行、镜像、工程测试、失败等相关段，非1967行全审，非原运行目录全审。准确五路径：docs/PROTOCOL\_CASES\_BATCH2\_zh-CN.public.md；docs/PROTOCOL\_CASES\_BATCH2\_VALIDATION\_zh-CN.public.md；validation/protocol-cases/batch2-verification.public.json；validation/protocol-cases/support-matrix.public.json；validation/protocol-cases/candidate-image.json。不虚造公开地址。
 
 **第二批文档提交**
 
@@ -2316,27 +2322,27 @@ a44fa481af7c5a62d9d7b923f3b3f0d4947e682b
 
 [提交 86e29b47 的 3 个 CI job 成功](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857)，范围是工程合同与旧入口 L0/L1；后续修改另行验证。
 
-| 服务 | 输入与方法范围 | 已有数值验收 |
-| --- | --- | --- |
-| 自己的分子 RHF 单点能量、轨道与 AO 密度 | User XYZ H/C/N/O, neutral closed-shell singlet, <=20 atoms and actual AO<=80; RHF/6-31G(d); no stability/minimum certification | Four ordinary RHF runs and four same-version PySCF direct wrapper controls; 12 recorded gates |
-| 冻结表值统计示例 | Frozen published table value recalculation; no PDF/CIF reauthentication, no quantum calculation | One recorded fixed task; P02/P13 use saved arithmetic, P01 one RHF plus Boys/PM |
-| 分子图规则与能量账本示例 | Original graph/RDKit formula rules and frozen energy ledger arithmetic; no quantum calculation | One recorded fixed task; P02/P13 use saved arithmetic, P01 one RHF plus Boys/PM |
-| 乙烯占据轨道变换与密度不变性示例 | One fixed ethene ordinary RHF/6-31G(d), one Boys and one Pipek-Mezey occupied rotation; density/energy invariance only | One recorded fixed task; P02/P13 use saved arithmetic, P01 one RHF plus Boys/PM |
-| 约束扭转路径账本与固定端点 DFT | ONE\_FROZEN\_ORIGINAL\_PROTOCOL\_POINT | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
-| 源原生双状态直接响应 | ONE\_FROZEN\_ORIGINAL\_PROTOCOL\_POINT | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
-| π–σ 条件能量单点 | ONE\_FROZEN\_ORIGINAL\_PROTOCOL\_POINT | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
-| 双片段条件能量独立组装 | ONE\_FROZEN\_ORIGINAL\_PROTOCOL\_POINT | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
-| 同 Hamiltonian 路径闭合账本 | Frozen same-Hamiltonian ledger only; no live mode | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
-| 丁二烯 GL 固定端点与参照热化学 | Fixed butadiene GL endpoint; same implementation initial-density comparison, no new optimization or full P08 replay | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
-| 环丁二烯固定几何条件态诊断 | FIXED\_GEOMETRY\_CBD\_G\_LIKE\_DSI\_SMOKE\_ONLY | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
-| 苯核排斥与五点普通 DFT 扫描 | FIVE\_FROZEN\_ORDINARY\_RKS\_BLA\_POINTS\_PLUS\_REUSED\_G\_GL\_LEDGER | One fixed live point/scoped scan plus saved ledgers; P07 ledger only |
-| P11 固定多态几何优化 | 17 registered states; only P11B-benzene-G accepted; remaining states NOT\_EXECUTED; no complete multistate assembly | One single-state source gate per P11/P12; independent AO/component audit coverage incomplete |
-| P12 固定多态几何优化 | 61 registered states; only P12-N12-G accepted; remaining states NOT\_EXECUTED; no complete multistate assembly | One single-state source gate per P11/P12; independent AO/component audit coverage incomplete |
-| P14 固定条件态、结构响应与联合分类 | Seven legacy tasks; fixed C12H6 source-proxy / D3h five-parameter protocol; checkpoints cannot resume | Recorded P14 gates and classification scoped to actual runs; L3/L4 strict offline NOT\_EXECUTED |
-| 用户分子条件态 Compute | V2 implemented and diagnosed; no qualified final endpoint; original gap/mapping/commutator gates unchanged | No qualified root; real native attempt ended incomplete at wall stop |
-| 条件态研究诊断与合作停止工程 | Real root attempt: 139 completed NR / 138 callback success plus deadline failure; no returned root or formal tail/closure | No formal qualified endpoint; zero-native stop checks do not grant numerical qualification |
+| 服务 | 输入与方法范围 | 已有数值验收 | 输入、协议、结果与入口 |
+| --- | --- | --- | --- |
+| 自己的分子 RHF 单点能量、轨道与 AO 密度 | User XYZ H/C/N/O, neutral closed-shell singlet, <=20 atoms and actual AO<=80; RHF/6-31G(d); no stability/minimum certification | Four ordinary RHF runs and four same-version PySCF direct wrapper controls; 12 recorded gates | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/schemas/molecular-single-point-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/MOLECULAR_SINGLE_POINT_zh-CN.public.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/molecular-service/deployment-20261008.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| 冻结表值统计示例 | Frozen published table value recalculation; no PDF/CIF reauthentication, no quantum calculation | One recorded fixed task; P02/P13 use saved arithmetic, P01 one RHF plus Boys/PM | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/configs/registered-cases-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/REGISTERED_CASES_zh-CN.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/registered-cases/deployment-20261008.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| 分子图规则与能量账本示例 | Original graph/RDKit formula rules and frozen energy ledger arithmetic; no quantum calculation | One recorded fixed task; P02/P13 use saved arithmetic, P01 one RHF plus Boys/PM | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/configs/registered-cases-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/REGISTERED_CASES_zh-CN.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/registered-cases/deployment-20261008.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| 乙烯占据轨道变换与密度不变性示例 | One fixed ethene ordinary RHF/6-31G(d), one Boys and one Pipek-Mezey occupied rotation; density/energy invariance only | One recorded fixed task; P02/P13 use saved arithmetic, P01 one RHF plus Boys/PM | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/configs/registered-cases-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/REGISTERED_CASES_zh-CN.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/registered-cases/deployment-20261008.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| 约束扭转路径账本与固定端点 DFT | ONE\_FROZEN\_ORIGINAL\_PROTOCOL\_POINT | One fixed live point/scoped scan plus saved ledgers; P07 ledger only | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/configs/protocol-cases-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/protocol-cases/batch2-verification.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| 源原生双状态直接响应 | ONE\_FROZEN\_ORIGINAL\_PROTOCOL\_POINT | One fixed live point/scoped scan plus saved ledgers; P07 ledger only | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/configs/protocol-cases-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/protocol-cases/batch2-verification.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| π–σ 条件能量单点 | ONE\_FROZEN\_ORIGINAL\_PROTOCOL\_POINT | One fixed live point/scoped scan plus saved ledgers; P07 ledger only | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/configs/protocol-cases-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/protocol-cases/batch2-verification.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| 双片段条件能量独立组装 | ONE\_FROZEN\_ORIGINAL\_PROTOCOL\_POINT | One fixed live point/scoped scan plus saved ledgers; P07 ledger only | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/configs/protocol-cases-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/protocol-cases/batch2-verification.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| 同 Hamiltonian 路径闭合账本 | Frozen same-Hamiltonian ledger only; no live mode | One fixed live point/scoped scan plus saved ledgers; P07 ledger only | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/configs/protocol-cases-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/protocol-cases/batch2-verification.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| 丁二烯 GL 固定端点与参照热化学 | Fixed butadiene GL endpoint; same implementation initial-density comparison, no new optimization or full P08 replay | One fixed live point/scoped scan plus saved ledgers; P07 ledger only | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/configs/protocol-cases-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/protocol-cases/batch2-verification.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| 环丁二烯固定几何条件态诊断 | FIXED\_GEOMETRY\_CBD\_G\_LIKE\_DSI\_SMOKE\_ONLY | One fixed live point/scoped scan plus saved ledgers; P07 ledger only | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/configs/protocol-cases-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/protocol-cases/batch2-verification.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| 苯核排斥与五点普通 DFT 扫描 | FIVE\_FROZEN\_ORDINARY\_RKS\_BLA\_POINTS\_PLUS\_REUSED\_G\_GL\_LEDGER | One fixed live point/scoped scan plus saved ledgers; P07 ledger only | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/configs/protocol-cases-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROTOCOL_CASES_BATCH2_zh-CN.public.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/protocol-cases/batch2-verification.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| P11 固定多态几何优化 | 17 registered states; only P11B-benzene-G accepted; remaining states NOT\_EXECUTED; no complete multistate assembly | One single-state source gate per P11/P12; independent AO/component audit coverage incomplete | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/configs/high-cost-cases-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROTOCOL_CASES_BATCH3_zh-CN.public.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/high-cost-cases/deployment-verification.public.json) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/high-cost-cases/p12-n12-g-pilot-verification.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| P12 固定多态几何优化 | 61 registered states; only P12-N12-G accepted; remaining states NOT\_EXECUTED; no complete multistate assembly | One single-state source gate per P11/P12; independent AO/component audit coverage incomplete | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/configs/high-cost-cases-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROTOCOL_CASES_BATCH3_zh-CN.public.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/high-cost-cases/deployment-verification.public.json) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/high-cost-cases/p12-n12-g-pilot-verification.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/scripts/run-installed-runtime.py) |
+| P14 固定条件态、结构响应与联合分类 | Seven legacy tasks; fixed C12H6 source-proxy / D3h five-parameter protocol; checkpoints cannot resume | Recorded P14 gates and classification scoped to actual runs; L3/L4 strict offline NOT\_EXECUTED | [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/PROFESSIONAL_SERVICES_zh-CN.public.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/oci-summary.public.json) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/final-delivery-status.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/runtime/cli.py) |
+| 用户分子条件态 Compute | V2 implemented and diagnosed; no qualified final endpoint; original gap/mapping/commutator gates unchanged | No qualified root; real native attempt ended incomplete at wall stop | [输入合同](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/schemas/user-molecule-request-v1.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/user-molecule/root-native-diagnostic-20261007.public.json) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/user-molecule/native-shutdown-engineering-20261007.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/USER_MOLECULE_INTERNAL_VALIDATION_zh-CN.md) |
+| 条件态研究诊断与合作停止工程 | Real root attempt: 139 completed NR / 138 callback success plus deadline failure; no returned root or formal tail/closure | No formal qualified endpoint; zero-native stop checks do not grant numerical qualification | [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.public.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/user-molecule/root-native-diagnostic-20261007.public.json) · [协议与判读](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/USER_MOLECULE_NATIVE_SHUTDOWN_ENGINEERING_20261007_zh-CN.md) · [保存结果](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/validation/user-molecule/native-shutdown-engineering-20261007.public.json) · [执行边界与入口](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.public.md) |
 
-[下载同源能力表 JSON](https://cccolab.github.io/AI4OrgChem-Runtime/runtime-guide/capabilities-v2.json)；[最小数值见证与只读复核](https://github.com/CCcolab/AI4OrgChem-Runtime/tree/main/evidence/numerical-witnesses)。声明文件 SHA-256：` 84f6a7c5c7c3b6593b21b5d3d7674d96ea2e2b4fbd9c5cf99be692c45d71fd3a `。
+[下载同源能力表 JSON](https://cccolab.github.io/AI4OrgChem-Runtime/runtime-guide/capabilities-v2.json)；[最小数值见证与只读复核](https://github.com/CCcolab/AI4OrgChem-Runtime/tree/main/evidence/numerical-witnesses)。声明文件 SHA-256：` 6600f6afac7f8df4c1c36ed4af3fbe834534ceec79438b683fa03d855e033fab `。
 
 ### 常见问题
 
@@ -2364,7 +2370,7 @@ a44fa481af7c5a62d9d7b923f3b3f0d4947e682b
 
 ### 06 WSL失败要reset吗？
 
-不要reset、删除发行版或恢复出厂。保存错误；WSLc升级验收BLOCKED／NOT\_EXECUTED。
+不要reset、删除发行版或恢复出厂。保存错误；
 
 ### 07 AO超限可改基组重试吗？
 
@@ -2440,7 +2446,7 @@ Show/Review只查阅证据及核对所选材料；固定协议使用本区独立
 
 ### 本地工程CI与GitHub CI相同？
 
-不同，历史专项与远端 job 范围分别记录。2026-10-09 提交06d5088的首次 Actions 三项 job 成功，真实P11预检一项跳过；这不验收全部科学任务或WSLc。网页验收另列，见[当前同步状态](#github-public-status)及[来源](#sources)。
+不同，历史专项与远端 job 范围分别记录。2026-10-09 提交06d5088的首次 Actions 三项 job 成功，真实P11预检一项跳过；网页验收另列，见[当前同步状态](#github-public-status)及[来源](#sources)。
 
 ### 缺失、历史FAIL／NOT\_EXECUTED怎么处理？
 
@@ -2448,7 +2454,7 @@ Show/Review只查阅证据及核对所选材料；固定协议使用本区独立
 
 ### 维护与开发入口
 
-[core-tests](#core-tests)／[smoke](#p14-smoke)／[equivalence](#p14-equivalence)仅登记维护范围。build-wslc.ps1 -Engine docker -CheckOnly不访问引擎、不构建、不证明r3就绪。源码准备不安装依赖或构建镜像。见[来源](#sources)；下批接线、维护文本同步与验收。
+[core-tests](#core-tests)／[smoke](#p14-smoke)／[equivalence](#p14-equivalence)仅登记维护范围。build-docker.ps1 -CheckOnly不访问引擎、不构建、不证明r3就绪。源码准备不安装依赖或构建镜像。见[来源](#sources)；下批接线、维护文本同步与验收。
 
 ### 路径怎么选？
 
@@ -2457,10 +2463,6 @@ Show/Review只查阅证据及核对所选材料；固定协议使用本区独立
 ### 命令在哪里运行？
 
 在本地 Runtime 项目目录中的终端运行，不在浏览器运行。先确认本地条件，再使用首次使用区登记的命令。
-
-### Docker 与 WSLc 有什么区别？
-
-历史记录见[逐任务平台矩阵](#history-registry)。WSLc 升级实机验收暂停，不推荐首次路径；不能把 Docker 的记录移用到另一环境。
 
 ### 输出在哪里？
 
@@ -2495,7 +2497,7 @@ Show/Review只查阅证据及核对所选材料；固定协议使用本区独立
 | help | 来源与入口 | 索引／请求入口 | 本次资料 | SOURCE\_INDEX / START\_HERE | 主助手实读记录 | 来源导航 | 本地准备、资料 | 公开URL与可访问性 |
 | user-molecule | 乙烯请求 | 请求文件 | 工程候选 | examples/user-molecule/w05-candidates/ethene-planar-technical-v1/request-pilot.json | 主助手实读记录 | Check夹具，不是研究端点 | 四步流程 | JSON与XYZ原文已静态内联；逐字复制/导出/运行验证NOT\_EXECUTED |
 | user-molecule | 乙烯固定几何 | molecule.xyz | 本次上传 | examples/user-molecule/w05-candidates/ethene-planar-technical-v1/molecule.xyz | 本次上传原文静态读取 | 已有六原子乙烯工程夹具，非研究结果 | molecule-xyz-text | 未独立字节哈希/Runtime重运行；逐字复制/导出/运行验证NOT\_EXECUTED |
-| results | 既有consistent | P14摘录 | 2026-10-02 | docs/examples/P14\_REVIEW\_20261002\_zh-CN.md | 保存记录摘录已读 | 固定C12H6 source-proxy | 历史折叠 | 本轮未重运行 |
+| results | 既有consistent | P14摘录 | 2026-10-02 | docs/examples/P14\_REVIEW\_20261002\_zh-CN.public.md | 保存记录摘录已读 | 固定C12H6 source-proxy | 历史折叠 | 本轮未重运行 |
 | 全部 | 参考来源导航 | 29参考文件 | 索引记录 | SOURCE\_INDEX中所列29份 | 仅索引，非逐读 | 不冒充原文验证 | 来源说明 | 逐文件核对、独立哈希 |
 
 ### 身份与独立状态
@@ -2530,7 +2532,7 @@ sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d
 
 cc7437901119e71ef7945a12813c021c383e7648
 
-Runtime源码与静态指南已公开；任意用户分子的旧条件态比较 Compute BLOCKED；外部咨询CANCELLED\_BY\_USER，不是科学批准；首次Actions三项job已在06d5088通过，范围见当前同步记录；WSLc BLOCKED／NOT\_EXECUTED且升级实机暂停；镜像分发BLOCKED；源码与指南已公开，GitHub Pages静态指南已启用；本页没有在线计算，Colab暂缓。固定L3／L4严格断网未执行，L4不能恢复。
+Runtime源码与静态指南已公开；任意用户分子的旧条件态比较 Compute BLOCKED；外部咨询CANCELLED\_BY\_USER，不是科学批准；首次Actions三项job已在06d5088通过，范围见当前同步记录；；镜像分发BLOCKED；源码与指南已公开，GitHub Pages静态指南已启用；本页没有在线计算，Colab暂缓。固定L3／L4严格断网未执行，L4不能恢复。
 
 ### 原七任务科学来源
 
@@ -2585,12 +2587,12 @@ AI4OrgChem v0.3.2 · 固定提交：
 静态指南由GitHub Pages托管；托管服务的访问记录由GitHub管理。网页不向计算后端提交分子或请求，复制与导出在本地浏览器完成；科学计算在用户本地Runtime执行。
 
 ## 静态指南网址与使用方式（2026-10-10）
-GitHub Pages静态指南已启用：https://cccolab.github.io/AI4OrgChem-Runtime/ 。可直接在浏览器阅读、搜索、复制命令和下载指南；网页不提供在线计算，计算命令仍由用户本地Runtime执行。整个已公开main/docs作为发布源。WSLc、镜像分发及旧条件态Compute限制保留，不分配新Runtime版本、标签或Release。
+GitHub Pages静态指南已启用：https://cccolab.github.io/AI4OrgChem-Runtime/ 。可直接在浏览器阅读、搜索、复制命令和下载指南；网页不提供在线计算，计算命令仍由用户本地Runtime执行。整个已公开main/docs作为发布源。
 
 ## 2026-10-09源码首次公开与远端CI记录（历史）
-2026-10-09已按项目负责人授权公开源码与指南：https://github.com/CCcolab/AI4OrgChem-Runtime 。06d5088首次CI三项job均成功，真实P11预检一项跳过；详见https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122 。Pages未启用；WSLc、镜像分发和旧条件态Compute限制保留，不是全科学验收；未创建新版本/标签/Release。
+2026-10-09已按项目负责人授权公开源码与指南：https://github.com/CCcolab/AI4OrgChem-Runtime 。06d5088首次CI三项job均成功，真实P11预检一项跳过；详见https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122 。Pages未启用；；未创建新版本/标签/Release。
 
-说明：下列状态是YouMind原提供时的登记，不是最新包外实测。最新局部网页身份与检查见Runtime validation/web-guide/final-consistency-r2-20261009.json；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
+说明：下列状态是YouMind原提供时的登记，不是最新包外实测。当前网页与实际下载身份见 Runtime validation/web-guide/current-delivery-20261010.json；final-consistency-r2-20261009.json 仅为历史身份；手工QA默认未填写及200%缩放／完整键盘／多浏览器NOT_EXECUTED单独保留。
 
 ## 原YouMind v0.3.0-candidate交付登记（历史）
 候选非已验收；currentordinaryenabled / legacyconditionalblocked。物理顺序 overview、quick-start、user-molecule、results、tasks、help。10 members：原8文件，加 templates/molecular-service/water/request.json 与 molecule.xyz；277/123 bytes、LF结尾、代码textContent原文。14 evidence、7旧任务、3固定案例、1普通服务，12数值checks。原提供时新字节版本的复制核对、ZIP实物CRC/哈希、HTML一致性、重开再导出与迁移及完整WEB合同尚未完成；修订前下载实物与三宽度结构实测只作历史，原提供时QA不继承。新包大小和SHA-256须现场生成。

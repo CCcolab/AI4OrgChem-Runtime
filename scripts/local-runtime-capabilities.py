@@ -6,7 +6,6 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 CURRENT=ROOT/'configs/runtime-capabilities-v2.json'
-HISTORICAL=ROOT/'validation/local-runtime-capabilities-v1.json'
 STATUS_LABELS={
     'AVAILABLE_SCOPED_LOCAL_RHF':'可用：受限本地RHF服务',
     'AVAILABLE_FIXED_CASE':'可用：登记固定示例',
@@ -57,14 +56,24 @@ def load_capabilities(path):
     return record
 
 
-def main():
+def main(argv=None):
     for stream in (sys.stdout,sys.stderr):
         if hasattr(stream,'reconfigure'):stream.reconfigure(encoding='utf-8')
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--json',action='store_true')
-    parser.add_argument('--historical',action='store_true',help='Read the unchanged 2026-10-08 v1 snapshot')
-    args=parser.parse_args()
-    record=load_capabilities(HISTORICAL if args.historical else CURRENT)
+    parser.add_argument('--historical',action='store_true',help='Read an explicitly supplied local historical v1 snapshot')
+    parser.add_argument('--historical-file',type=Path,help='Local archive JSON path; required together with --historical')
+    args=parser.parse_args(argv)
+    if args.historical and args.historical_file is None:
+        parser.error('LOCAL_ARCHIVE_ONLY: --historical requires an explicit --historical-file local archive path')
+    if args.historical_file is not None and not args.historical:
+        parser.error('LOCAL_ARCHIVE_ONLY: --historical-file requires --historical')
+    try:
+        record=load_capabilities(args.historical_file if args.historical else CURRENT)
+    except (OSError,ValueError) as exc:
+        parser.error(str(exc))
+    if args.historical and record['schema_version']!='local-runtime-capabilities-v1':
+        parser.error('LOCAL_ARCHIVE_ONLY: historical mode requires the original local v1 schema, not a public projection')
     if args.json:print(json.dumps(record,ensure_ascii=False,indent=2,allow_nan=False))
     else:
         print('AI4OrgChem Runtime：历史能力快照' if args.historical else 'AI4OrgChem Runtime：当前计算与复核服务')

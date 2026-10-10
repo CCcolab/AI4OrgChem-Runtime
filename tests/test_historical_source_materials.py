@@ -1,6 +1,9 @@
-"""Portable stdlib protection of two exact W05 historical source bindings."""
-from copy import deepcopy
-import hashlib
+"""Public archive-access refusal contracts, never historical-byte acceptance.
+
+The original byte-acceptance suite belongs to the retained local archive. These
+tests exercise missing/corrupt explicit archives and prove that the public
+distribution neither substitutes current documents nor repairs old materials.
+"""
 import json
 from pathlib import Path
 import tempfile
@@ -10,130 +13,103 @@ from unittest.mock import patch
 from runtime import historical_materials as history
 
 
-class HistoricalSourceMaterialTests(unittest.TestCase):
+class HistoricalArchiveAccessTests(unittest.TestCase):
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory()
         self.addCleanup(self.temporary.cleanup)
-        self.base = Path(self.temporary.name)
-        self.counter = 0
+        self.root = Path(self.temporary.name)
 
-    def fixture(self):
-        self.counter += 1
-        root = self.base/str(self.counter); root.mkdir()
-        for name in (history.MANIFEST_PATH, history.SOURCE_INDEX_PATH,
-                     *(row['snapshot_path'] for row in history.MATERIALS)):
-            target = root/name; target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_bytes((history.ROOT/name).read_bytes())
-        return root
+    def original_source_row(self):
+        item = history.MATERIALS[0]
+        return {'owner': item['owner'], 'path': item['original_path'],
+                'commit': item['source_commit'], 'sha256': item['sha256']}
 
-    def change_manifest(self, root, mutation):
-        value = json.loads((root/history.MANIFEST_PATH).read_bytes())
-        mutation(value)
-        (root/history.MANIFEST_PATH).write_bytes(json.dumps(value, ensure_ascii=False).encode('utf-8'))
+    def write_mapping(self):
+        path = self.root/history.MANIFEST_PATH
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(history.expected_mapping(), ensure_ascii=False), encoding='utf-8')
+        return path
 
-    def test_both_real_retained_snapshots_have_exact_original_sha_blob_size_and_index_bindings(self):
-        contents = history.load_historical_source_materials()
-        receipt = history.verify_historical_source_materials()
-        self.assertEqual(receipt['status'], 'PASS_EXACT_HISTORICAL_SOURCE_BYTES_ONLY')
-        self.assertEqual(receipt['material_count'], 2)
+    def bytes_before(self):
+        return {path.relative_to(self.root).as_posix(): path.read_bytes()
+                for path in self.root.rglob('*') if path.is_file()}
+
+    def test_all_default_readers_refuse_before_reading_files(self):
+        calls = (lambda: history.load_historical_source_materials(),
+                 lambda: history.verify_historical_source_materials(),
+                 lambda: history.read_historical_source_material(self.original_source_row()))
+        with patch.object(history, '_read', side_effect=AssertionError('Default reader accessed files')):
+            for call in calls:
+                with self.subTest(call=call), self.assertRaisesRegex(
+                        history.HistoricalMaterialError, '^HISTORICAL_MATERIALS_LOCAL_ARCHIVE_ONLY$'):
+                    call()
+
+    def test_missing_explicit_archive_is_refused_without_creating_files(self):
+        for call in (history.load_historical_source_materials,
+                     history.verify_historical_source_materials):
+            with self.subTest(call=call), self.assertRaises(history.HistoricalMaterialError):
+                call(self.root)
+        self.assertEqual(self.bytes_before(), {})
+
+    def test_current_documents_are_not_substituted_for_archive_snapshots(self):
+        self.write_mapping()
         for item in history.MATERIALS:
-            raw = contents[item['original_path']]
-            self.assertEqual(len(raw), item['size_bytes'])
-            self.assertEqual(hashlib.sha256(raw).hexdigest(), item['sha256'])
-            self.assertEqual(history._blob_id(raw), item['git_blob_id'])
-        self.assertEqual(receipt['source_index_blob_id'], history.INDEX_BLOB)
+            path = self.root/item['original_path']
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text('Current public guidance.\n', encoding='utf-8')
+        before = self.bytes_before()
+        with self.assertRaises(history.HistoricalMaterialError):
+            history.verify_historical_source_materials(self.root)
+        self.assertEqual(before, self.bytes_before())
+        self.assertTrue(all(not (self.root/item['snapshot_path']).exists()
+                            for item in history.MATERIALS))
 
-    def test_git_free_fixture_ignores_updated_current_docs_without_restoring_old_policy(self):
-        root = self.fixture()
+    def test_corrupt_mapping_or_redirection_is_rejected_without_repair(self):
+        path = self.write_mapping()
+        for change in (lambda value: value['materials'][0].update(sha256='0'*64),
+                       lambda value: value['materials'][0].update(snapshot_path='../../outside.md'),
+                       lambda value: value.update(scientific_approval_granted=True)):
+            value = history.expected_mapping()
+            change(value)
+            path.write_text(json.dumps(value), encoding='utf-8')
+            before = self.bytes_before()
+            with self.subTest(change=change), self.assertRaises(history.HistoricalMaterialError):
+                history.verify_historical_source_materials(self.root)
+            self.assertEqual(before, self.bytes_before())
+
+    def test_corrupt_index_cannot_be_rebound_by_a_valid_mapping(self):
+        self.write_mapping()
+        path = self.root/history.SOURCE_INDEX_PATH
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(b'{"local_sources": []}\n')
+        before = self.bytes_before()
+        with self.assertRaisesRegex(history.HistoricalMaterialError, 'source-index Git blob binding differs'):
+            history.verify_historical_source_materials(self.root)
+        self.assertEqual(before, self.bytes_before())
+
+    def test_reduced_snapshot_is_not_accepted_as_original_bytes(self):
+        self.write_mapping()
+        index = self.root/history.SOURCE_INDEX_PATH
+        index.parent.mkdir(parents=True, exist_ok=True)
+        index.write_bytes((history.ROOT/history.SOURCE_INDEX_PATH).read_bytes())
         for item in history.MATERIALS:
-            current = root/item['original_path']; current.parent.mkdir(parents=True, exist_ok=True)
-            current.write_text('Current guidance: consultation CANCELLED_BY_USER.\n', encoding='utf-8')
-        before = {item['original_path']:(root/item['original_path']).read_bytes() for item in history.MATERIALS}
-        contents = history.load_historical_source_materials(root)
-        self.assertFalse((root/'.git').exists())
-        self.assertNotEqual(contents, before)
-        self.assertEqual(before, {name:(root/name).read_bytes() for name in before})
-        receipt = history.verify_historical_source_materials(root)
-        self.assertFalse(receipt['current_documents_replaced'])
-        self.assertFalse(receipt['scientific_execution_authorized'])
-        self.assertFalse(receipt['scientific_approval_granted'])
-        self.assertEqual(receipt['current_process_status'], 'EXTERNAL_EXPERT_CONSULTATION_CANCELLED_BY_USER')
+            path = self.root/item['snapshot_path']
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(b'Reduced public description is not the original archive.\n')
+        before = self.bytes_before()
+        with self.assertRaisesRegex(history.HistoricalMaterialError, 'Historical snapshot bytes differ'):
+            history.verify_historical_source_materials(self.root)
+        self.assertEqual(before, self.bytes_before())
 
-    def test_missing_manifest_index_or_snapshot_is_rejected_without_repair(self):
-        for name in (history.MANIFEST_PATH, history.SOURCE_INDEX_PATH,
-                     *(row['snapshot_path'] for row in history.MATERIALS)):
-            with self.subTest(name=name):
-                root = self.fixture(); path = root/name; path.unlink()
-                with self.assertRaises(history.HistoricalMaterialError): history.verify_historical_source_materials(root)
-                self.assertFalse(path.exists())
-
-    def test_snapshot_same_length_tamper_is_rejected(self):
-        for item in history.MATERIALS:
-            with self.subTest(path=item['original_path']):
-                root = self.fixture(); path = root/item['snapshot_path']; raw = path.read_bytes()
-                path.write_bytes(bytes([raw[0]^1])+raw[1:])
-                with self.assertRaises(history.HistoricalMaterialError): history.load_historical_source_materials(root)
-
-    def test_snapshot_bom_or_eol_transform_is_not_accepted_as_exact_historical_bytes(self):
-        for transform in (lambda raw:b'\xef\xbb\xbf'+raw, lambda raw:raw.replace(b'\n', b'\r\n')):
-            root = self.fixture(); path = root/history.MATERIALS[0]['snapshot_path']
-            path.write_bytes(transform(path.read_bytes()))
-            with self.assertRaises(history.HistoricalMaterialError): history.verify_historical_source_materials(root)
-
-    def test_original_path_or_snapshot_redirection_is_rejected(self):
-        for key, wrong in (('original_path','docs/OTHER.md'), ('snapshot_path','../../outside.md')):
-            root = self.fixture()
-            self.change_manifest(root, lambda value:value['materials'][0].__setitem__(key, wrong))
-            with self.assertRaises(history.HistoricalMaterialError): history.verify_historical_source_materials(root)
-
-    def test_source_commit_and_git_blob_mismatch_are_rejected(self):
-        for key, wrong in (('source_commit','1'*40), ('git_blob_id','2'*40), ('sha256','3'*64)):
-            root = self.fixture()
-            self.change_manifest(root, lambda value:value['materials'][0].__setitem__(key, wrong))
-            with self.assertRaises(history.HistoricalMaterialError): history.verify_historical_source_materials(root)
-
-    def test_mapping_source_index_path_commit_or_object_mismatch_are_rejected(self):
-        for key, wrong in (('path','validation/OTHER.json'), ('record_commit','1'*40),
-                           ('git_blob_id','2'*40), ('canonical_sha256','3'*64)):
-            root = self.fixture()
-            self.change_manifest(root, lambda value:value['source_index'].__setitem__(key, wrong))
-            with self.assertRaises(history.HistoricalMaterialError): history.verify_historical_source_materials(root)
-
-    def test_old_index_path_commit_or_hash_rebinding_is_rejected(self):
-        for key, wrong in (('path','docs/OTHER.md'), ('commit','1'*40), ('sha256','2'*64)):
-            root = self.fixture(); path = root/history.SOURCE_INDEX_PATH
-            value = json.loads(path.read_bytes()); value['local_sources'][0][key] = wrong
-            path.write_bytes(json.dumps(value, ensure_ascii=False, indent=2).encode('utf-8'))
-            with self.assertRaises(history.HistoricalMaterialError): history.verify_historical_source_materials(root)
-
-    def test_caller_source_row_cannot_replace_old_owner_path_commit_hash_or_fields(self):
-        source = {'owner':'runtime', 'path':history.MATERIALS[0]['original_path'],
-                  'commit':history.SOURCE_COMMIT, 'sha256':history.MATERIALS[0]['sha256']}
-        expected = history.load_historical_source_materials()[source['path']]
-        self.assertEqual(history.read_historical_source_material(source), expected)
-        for key, wrong in (('owner','science'), ('path','../outside.md'), ('commit','1'*40),
-                           ('sha256','2'*64), ('extra',True)):
-            changed = deepcopy(source); changed[key] = wrong
-            with self.assertRaises(history.HistoricalMaterialError): history.read_historical_source_material(changed)
-
-    def test_duplicate_json_nonfinite_type_confusion_or_approval_claim_is_rejected(self):
-        for raw in (b'{"schema_version":"x","schema_version":"x"}', b'{"value":NaN}'):
-            root = self.fixture(); (root/history.MANIFEST_PATH).write_bytes(raw)
-            with self.assertRaises(history.HistoricalMaterialError): history.verify_historical_source_materials(root)
-        for mutation in (lambda value:value['materials'][0].__setitem__('size_bytes',27759.),
-                         lambda value:value.__setitem__('scientific_execution_authorized',True),
-                         lambda value:value.__setitem__('scientific_approval_granted',0)):
-            root = self.fixture(); self.change_manifest(root, mutation)
-            with self.assertRaises(history.HistoricalMaterialError): history.verify_historical_source_materials(root)
-
-    def test_linked_snapshot_or_parent_is_rejected_using_portable_filesystem_probe(self):
-        root = self.fixture(); blocked = root/history.MATERIALS[0]['snapshot_path']
+    def test_linked_archive_component_is_refused_without_following_it(self):
+        mapping = self.write_mapping()
+        before = self.bytes_before()
         original = Path.is_symlink
-        with patch.object(Path, 'is_symlink', lambda path:path==blocked or original(path)):
-            with self.assertRaises(history.HistoricalMaterialError): history.verify_historical_source_materials(root)
-        blocked = blocked.parent
-        with patch.object(Path, 'is_symlink', lambda path:path==blocked or original(path)):
-            with self.assertRaises(history.HistoricalMaterialError): history.verify_historical_source_materials(root)
+        with patch.object(Path, 'is_symlink', lambda path: path == mapping or original(path)):
+            with self.assertRaisesRegex(history.HistoricalMaterialError, 'contains a link'):
+                history.verify_historical_source_materials(self.root)
+        self.assertEqual(before, self.bytes_before())
 
 
-if __name__=='__main__': unittest.main()
+if __name__ == '__main__':
+    unittest.main()

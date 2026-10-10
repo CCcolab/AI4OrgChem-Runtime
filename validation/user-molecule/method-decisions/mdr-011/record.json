@@ -13,7 +13,7 @@
     "exact_CRLF_to_LF_match": true
   },
   "runtime_code_commit": "6eb356a0ebaa647bdf4aa6ea4b0f90cf69fc07f6",
-  "engineering_record": "validation/user-molecule/native-shutdown-engineering-20261007.json",
+  "engineering_record": "validation/user-molecule/native-shutdown-engineering-20261007.public.json",
   "new_scientific_processes": 0,
   "scientific_grant": null,
   "scientific_budget": null,

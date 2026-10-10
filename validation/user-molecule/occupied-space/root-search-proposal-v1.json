@@ -3,7 +3,7 @@
   "revision": "0.2",
   "date": "2026-10-07",
   "status": "IMPLEMENTED_FAKE_ONLY_AND_ZERO_F_PREPARED_NO_REAL_ROOT_RUNNER_OR_SCIENTIFIC_RESERVATION",
-  "parent_response_record": "validation/user-molecule/occupied-space-response-20261007.json",
+  "parent_response_record": "validation/user-molecule/occupied-space-response-20261007.public.json",
   "source_code_commit": "63dc6f64a683682fbdcbfc0debcece4f6c40d3c6",
   "target": "UNCHANGED_GLOBAL_MASKED_2_0_TRUE_F_AUFBAU_POSITIVE_GAP_FIXED_POINT",
   "technical_initial_candidate": {
@@ -55,7 +55,7 @@
   "Compute": false,
   "scientific_method_approval": false,
   "research_delta_hartree": null,
-  "current_implementation_record": "validation/user-molecule/occupied-space-root-preparation-20261007.json",
+  "current_implementation_record": "validation/user-molecule/occupied-space-root-preparation-20261007.public.json",
   "runtime_implementation_commit": "7530595c71c0395c37f2e0e8669db14de5e14342",
   "prior_revision": {
     "path": "revisions/root-search-proposal-v1-design-0.1.json",

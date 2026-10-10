@@ -1,6 +1,6 @@
 # 最小分子准备、独立参考与持久化预算
 
-2026-10-06。本轮补齐固定 pilot 乙烯的准备映射、独立残差参考和持久化资源记账。**97 个唯一用例形成按版本核对的通过覆盖**，其中 72 项新增、25 项既有资源回归；它们来自三份源码版本的实际记录，不是一次 97 项完整 CI。真实 PySCF 缓存对象与既有普通态记录的映射通过；新的普通/条件 SCF、积分、格点、真实 XC 和核能求值均为 0。机器记录见 [本轮验收](../validation/user-molecule/preparation-reference-20261006.json)。
+2026-10-06。本轮补齐固定 pilot 乙烯的准备映射、独立残差参考和持久化资源记账。**97 个唯一用例形成按版本核对的通过覆盖**，其中 72 项新增、25 项既有资源回归；它们来自三份源码版本的实际记录，不是一次 97 项完整 CI。真实 PySCF 缓存对象与既有普通态记录的映射通过；新的普通/条件 SCF、积分、格点、真实 XC 和核能求值均为 0。机器记录见 [本轮验收](../validation/user-molecule/preparation-reference-20261006.public.json)。
 
 ## 准备入口已补齐什么
 
@@ -26,7 +26,7 @@
 
 初始化必须显式指定，初始 2/0 流形、首次 raw 全局 Aufbau 和近简并拒绝同属候选工程定义。真正 nr_rks、差分、试步、失败以及返回/映射密度重查全部纳入每路径 ≤201 次上限，不能用 SciPy 的 nfev 代替真实回调数。结清后不可再 run 或 evaluate。原子/基组/单位缓存、原数组、格点和方法设置在回调前后冻结。
 
-参考共享 PySCF 原始积分、XC 和 NumPy/SciPy；这部分没有独立验证。不同策略不要求轨迹、MO 符号或 SciPy 终止文案相同；各端态必须先通过原 commutator、电子数、幂等、mask、闭合、raw-Aufbau 与 gap 门槛，再核对密度/占据态和能量。旧 T05、T06、P12/P13 阈值完整保留在 [候选合同](../validation/user-molecule/residual-diagnostic/contract-v1.json)。
+参考共享 PySCF 原始积分、XC 和 NumPy/SciPy；这部分没有独立验证。不同策略不要求轨迹、MO 符号或 SciPy 终止文案相同；各端态必须先通过原 commutator、电子数、幂等、mask、闭合、raw-Aufbau 与 gap 门槛，再核对密度/占据态和能量。旧 T05、T06、P12/P13 阈值完整保留在 [候选合同](../validation/user-molecule/residual-diagnostic/contract-v1.public.json)。
 
 **已验证一个明确算法限制**：取 `F=[[0,1],[1,0]]`、`D=2u(θ)u(θ)ᵀ`，占虚残差为 `cos(2θ)`。θ=0 时残差为 1，而残差平方的一阶导数为 0；TRF 可满足 gtol 后停住。实际记录 nfev=1/njev=1，但回调为 5 次；AO commutator≈2.8284、raw-map 相对残差≈1，原门禁拒绝，不能标合格根。它不证明固定点不存在，也不是乙烯实测反例。另从 θ=-0.1 出发仍超出初始 .25 图范围，验证多图重定位到已知合格 toy 根。
 
@@ -76,6 +76,5 @@ INPLACE_OWNED 仍保留物理 ERI 与自有工作副本，不称为真正整个�
 
 本轮已补齐准备映射、独立参考及资源记账工程，和具体受限诊断候选合同。下一步才是绑定新的受测源码/实际 image/旧缓存身份，执行实时资源准入，建立新鲜科学预约，再进行单次候选条件诊断；不得把当前工程或缓存结果升级为科研资格。方法定义/外部一致性咨询仍按用户指示延期。
 
-科研 Compute/W07 BLOCKED，比较关闭、delta=null；真人反馈延期不阻塞工程。WSLc暂停/BLOCKED，镜像分发阻塞，Colab延后，未公开推送、标签或 Release；未升级WSL。原L4可保存检查点但不能恢复运行。
 
 所有初次失败、来源归档、持久化账本、兼容证明和最终核查保存在 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261006-user-molecule-preparation-reference`。

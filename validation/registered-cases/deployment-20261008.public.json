@@ -1,0 +1,437 @@
+{
+  "GitHub_CI": "NOT_EXECUTED",
+  "P01_full_recertification": "NOT_EXECUTED",
+  "P02_primary_PDF_CIF_verification": "NOT_EXECUTED",
+  "P13_original_quantum_optimization": "NOT_EXECUTED",
+  "automatic_retry": false,
+  "current_host_launcher_commit": "e2e90e9bec3637c986d2b581b352730658677113",
+  "date": "2026-10-08",
+  "engineering_tests": {
+    "ci_closure_correction_file": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-registered-p02-p13-p01\\CI_CLOSURE_CORRECTION.json",
+    "host_missing_yaml_integration_completed_in_locked_image": true,
+    "host_not_executed": 1,
+    "host_pass": 95,
+    "host_tests": 96,
+    "locked_image_tests": 96,
+    "new_scientific_calls": 0,
+    "public_entry_PS51_PS7_process_checks": 8,
+    "source_reader_regressions": 50,
+    "status": "PASS_SCOPED_ZERO_NATIVE_ENGINEERING"
+  },
+  "entry_policy_probe": "First sandbox process policy refused scripts, NOT an application result; outside-sandbox actual user policy tests passed. No execution policy changed.",
+  "general_user_compute": "BLOCKED",
+  "image": {
+    "base_image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+    "build_network": "none",
+    "build_source_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-registered-p02-p13-p01\\build-source",
+    "dependency_lock_sha256": "511711d709508ff77fa995b120d5aeed3a9058984868a3a17f1d0604b788d393",
+    "image_build_runtime_commit": "e572787b11bbfc3b9e95779a5166ae413040c50d",
+    "image_distribution": "BLOCKED",
+    "image_id": "sha256:e5dde3bd5f426815b5940a193bbe1ef351a23e940d055a2c8cc1ea9ca5a8cfd2",
+    "local_tag": "ai4orgchem-runtime:registered-cases-20261008-local",
+    "public_registry_manifest_digest": null,
+    "schema": "registered-case-local-image-v1",
+    "source_snapshot_sha256": "1bc64c322920671b9fe2335b13ea639619e960648422e7eb984c4001f2a481ca",
+    "through_inspection_seconds": 100.8729145526886
+  },
+  "image_distribution": "BLOCKED; prior gaps plus new RDKit/Pillow bundled-component review not closed",
+  "new_actual_boys_kernels": 1,
+  "new_actual_pipek_mezey_kernels": 1,
+  "new_actual_quantum_acceptance_processes": 1,
+  "new_actual_scf_kernels": 1,
+  "new_conditional_NR_calls": 0,
+  "old_NR_registry_and_budget": "PRESERVED; not reused, retried or closed",
+  "public_push_or_release": "NOT_EXECUTED",
+  "runtime_baseline_commit": "1eed31c4ab8ae224f0df86b9eb0b26bd28388d1e",
+  "schema": "registered-cases-deployment-v1",
+  "scientific_threshold_changes": false,
+  "source_ZIP_is_complete_installer": false,
+  "source_publication": "SEPARATE_CONFIRMATION_REQUIRED; current new branch/files outside prior reviewed candidates",
+  "source_worktree_materials": "Original untracked development files retained by exact bytes; old HEAD is context only, not public-release blob identity",
+  "status": "PASS_THREE_FIXED_LOCAL_DOCKER_CASES_ONLY",
+  "tasks": {
+    "p01-orbital-density": {
+      "actual_boys_kernel_calls": 1,
+      "actual_pipek_mezey_kernel_calls": 1,
+      "actual_scf_kernel_calls": 1,
+      "case_result_sha256": "a6208212983f35376718671482eb874cbb2e8b83a4e5447b5c51f535a0459ba2",
+      "case_status": "P01_FIXED_CONTROL_PASSED",
+      "cgroup_source": "CGROUP_V1",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "control_findings": {
+        "all_representations_span_same_occupied_subspace": true,
+        "ao_density_invariant": true,
+        "chemical_stabilization_label_authorized": false,
+        "electron_number_invariant": true,
+        "orbital_fragment_support_changes": true,
+        "rhf_energy_invariant": true,
+        "same_state_orbital_representation_is_not_electron_state_delocalization": true,
+        "scf_converged": true
+      },
+      "cpu_period_us": 100000,
+      "cpu_quota_us": 100000,
+      "execution_id": "19a52778c099471fbacedcef0dc2e489",
+      "host_exit_code": 0,
+      "host_launcher_identity": {
+        "runtime_source_directory": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime",
+        "runtime_source_head": "e2e90e9bec3637c986d2b581b352730658677113",
+        "source_scope": "CURRENT_CHECKED_CRITICAL_SOURCE_NOT_IMAGE_BUILD_COMMIT",
+        "status": "READ_ONLY_CURRENT_HEAD_NOT_IMAGE_BUILD_IDENTITY"
+      },
+      "host_manifest_sha256": "5c74a4d424a2dd77754770a804369b54e9fc37ae47014dac2c2494e8838e6b7a",
+      "host_record_sha256": "442c7e7e3714f9ae9cebdcad60dd957095422f449f8947ebfb4016aba5e13f1b",
+      "memory_current_start_bytes": 35737600,
+      "memory_limit_bytes": 1073741824,
+      "memory_peak_bytes": 192159744,
+      "network_interfaces": [
+        "lo"
+      ],
+      "new_conditional_NR_calls": 0,
+      "output_preservation_after_removal": "PASS",
+      "protocol_id": "P01_ETHENE_OCCUPIED_GAUGE_CONTROL_V0.1",
+      "representation_diagnostics": [
+        {
+          "coefficient_sha256": "26ed78174116902fff81d8dddc1c2208cb620b9d910713cf7715bb01a0d17821",
+          "density_frobenius_residual_from_canonical": 0.0,
+          "density_relative_frobenius_residual_from_canonical": 0.0,
+          "density_sha256": "c98eba708dcfd4fba4e9a2d1b4819126462353c33325d9e2991d54be87951307",
+          "electron_number": 15.999999999999996,
+          "electron_number_residual_from_canonical": 0.0,
+          "energy_residual_from_canonical_hartree": 0.0,
+          "maximum_binary_support_entropy": 1.0,
+          "mean_binary_support_entropy": 1.0,
+          "minimum_binary_support_entropy": 1.0,
+          "name": "canonical",
+          "occupied_orbital_count": 8,
+          "occupied_subspace_unitarity_residual": 1.0627912414307884e-14,
+          "orbital_support": [
+            {
+              "binary_support_entropy": 1.0,
+              "left_ch2_weight": 0.49999999999586214,
+              "occupied_orbital_index": 0,
+              "right_ch2_weight": 0.5000000000041379
+            },
+            {
+              "binary_support_entropy": 1.0,
+              "left_ch2_weight": 0.5000000000041359,
+              "occupied_orbital_index": 1,
+              "right_ch2_weight": 0.4999999999958641
+            },
+            {
+              "binary_support_entropy": 1.0,
+              "left_ch2_weight": 0.5000000000000029,
+              "occupied_orbital_index": 2,
+              "right_ch2_weight": 0.4999999999999971
+            },
+            {
+              "binary_support_entropy": 1.0,
+              "left_ch2_weight": 0.49999999999999634,
+              "occupied_orbital_index": 3,
+              "right_ch2_weight": 0.5000000000000036
+            },
+            {
+              "binary_support_entropy": 1.0,
+              "left_ch2_weight": 0.5000000000000082,
+              "occupied_orbital_index": 4,
+              "right_ch2_weight": 0.4999999999999918
+            },
+            {
+              "binary_support_entropy": 1.0,
+              "left_ch2_weight": 0.5000000000000085,
+              "occupied_orbital_index": 5,
+              "right_ch2_weight": 0.4999999999999914
+            },
+            {
+              "binary_support_entropy": 1.0,
+              "left_ch2_weight": 0.49999999999999195,
+              "occupied_orbital_index": 6,
+              "right_ch2_weight": 0.5000000000000081
+            },
+            {
+              "binary_support_entropy": 1.0,
+              "left_ch2_weight": 0.5000000000000004,
+              "occupied_orbital_index": 7,
+              "right_ch2_weight": 0.49999999999999956
+            }
+          ],
+          "rhf_total_energy_hartree": -78.03040520373344
+        },
+        {
+          "coefficient_sha256": "2297584cdd2d9975401ebd63b587cc1db0baedcd58c97ae003907c38c649dd7a",
+          "density_frobenius_residual_from_canonical": 2.670731770814998e-15,
+          "density_relative_frobenius_residual_from_canonical": 7.325225373874381e-16,
+          "density_sha256": "0486e891ab125cd1575b713299973caf7129774a856a862246824e449ce5282a",
+          "electron_number": 16.0,
+          "electron_number_residual_from_canonical": 3.552713678800501e-15,
+          "energy_residual_from_canonical_hartree": 0.0,
+          "maximum_binary_support_entropy": 1.0,
+          "mean_binary_support_entropy": 0.32467509243716974,
+          "minimum_binary_support_entropy": 0.015497993944287728,
+          "name": "boys",
+          "occupied_orbital_count": 8,
+          "occupied_subspace_unitarity_residual": 1.0211297369697584e-14,
+          "orbital_support": [
+            {
+              "binary_support_entropy": 0.015497993944287844,
+              "left_ch2_weight": 0.0014218794382553275,
+              "occupied_orbital_index": 0,
+              "right_ch2_weight": 0.9985781205617447
+            },
+            {
+              "binary_support_entropy": 0.015497993944287728,
+              "left_ch2_weight": 0.9985781205617447,
+              "occupied_orbital_index": 1,
+              "right_ch2_weight": 0.001421879438255313
+            },
+            {
+              "binary_support_entropy": 1.0,
+              "left_ch2_weight": 0.49999999999954803,
+              "occupied_orbital_index": 2,
+              "right_ch2_weight": 0.5000000000004521
+            },
+            {
+              "binary_support_entropy": 0.17100639139170526,
+              "left_ch2_weight": 0.025444863599145447,
+              "occupied_orbital_index": 3,
+              "right_ch2_weight": 0.9745551364008546
+            },
+            {
+              "binary_support_entropy": 0.11219598441268551,
+              "left_ch2_weight": 0.9850272795918688,
+              "occupied_orbital_index": 4,
+              "right_ch2_weight": 0.01497272040813127
+            },
+            {
+              "binary_support_entropy": 0.17100639139170465,
+              "left_ch2_weight": 0.9745551364008547,
+              "occupied_orbital_index": 5,
+              "right_ch2_weight": 0.025444863599145332
+            },
+            {
+              "binary_support_entropy": 0.112195984412687,
+              "left_ch2_weight": 0.014972720408131525,
+              "occupied_orbital_index": 6,
+              "right_ch2_weight": 0.9850272795918685
+            },
+            {
+              "binary_support_entropy": 1.0,
+              "left_ch2_weight": 0.5000000000004594,
+              "occupied_orbital_index": 7,
+              "right_ch2_weight": 0.4999999999995406
+            }
+          ],
+          "rhf_total_energy_hartree": -78.03040520373344
+        },
+        {
+          "coefficient_sha256": "6ca2c5f919dff3249bc432e63a8b02952be71b9d09e209c85ad0e69ad4a6f4fd",
+          "density_frobenius_residual_from_canonical": 2.8172782087436663e-15,
+          "density_relative_frobenius_residual_from_canonical": 7.727169776265042e-16,
+          "density_sha256": "793f4ae79b1a9e0895a09a2d4165a41890a1200441a5b41c752e574211a3810a",
+          "electron_number": 15.999999999999995,
+          "electron_number_residual_from_canonical": 1.7763568394002505e-15,
+          "energy_residual_from_canonical_hartree": 2.842170943040401e-14,
+          "maximum_binary_support_entropy": 1.0,
+          "mean_binary_support_entropy": 0.3279310774269494,
+          "minimum_binary_support_entropy": 0.03254498115015018,
+          "name": "pipek_mezey",
+          "occupied_orbital_count": 8,
+          "occupied_subspace_unitarity_residual": 1.0504979784948473e-14,
+          "orbital_support": [
+            {
+              "binary_support_entropy": 0.032544981150150254,
+              "left_ch2_weight": 0.0033716289432233326,
+              "occupied_orbital_index": 0,
+              "right_ch2_weight": 0.9966283710567767
+            },
+            {
+              "binary_support_entropy": 0.03254498115015018,
+              "left_ch2_weight": 0.9966283710567767,
+              "occupied_orbital_index": 1,
+              "right_ch2_weight": 0.003371628943223321
+            },
+            {
+              "binary_support_entropy": 1.0,
+              "left_ch2_weight": 0.49999999812302814,
+              "occupied_orbital_index": 2,
+              "right_ch2_weight": 0.5000000018769719
+            },
+            {
+              "binary_support_entropy": 0.166983344144987,
+              "left_ch2_weight": 0.024683164268004563,
+              "occupied_orbital_index": 3,
+              "right_ch2_weight": 0.9753168357319955
+            },
+            {
+              "binary_support_entropy": 0.11219598441268555,
+              "left_ch2_weight": 0.9850272795918688,
+              "occupied_orbital_index": 4,
+              "right_ch2_weight": 0.014972720408131279
+            },
+            {
+              "binary_support_entropy": 0.1669833441449347,
+              "left_ch2_weight": 0.9753168357320053,
+              "occupied_orbital_index": 5,
+              "right_ch2_weight": 0.02468316426799471
+            },
+            {
+              "binary_support_entropy": 0.112195984412687,
+              "left_ch2_weight": 0.014972720408131522,
+              "occupied_orbital_index": 6,
+              "right_ch2_weight": 0.9850272795918685
+            },
+            {
+              "binary_support_entropy": 1.0,
+              "left_ch2_weight": 0.5000000018769692,
+              "occupied_orbital_index": 7,
+              "right_ch2_weight": 0.49999999812303064
+            }
+          ],
+          "rhf_total_energy_hartree": -78.03040520373341
+        }
+      ],
+      "run_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-registered-p02-p13-p01\\actual-runs\\20261008T004900Z-p01-orbital-density-19a52778c099471fbacedcef0dc2e489",
+      "scf": {
+        "basis_function_count": 36,
+        "converged": true,
+        "cycles": 9,
+        "electron_number": 15.999999999999996,
+        "nuclear_repulsion_hartree": 33.26509048118921,
+        "occupied_orbital_count": 8,
+        "total_energy_hartree": -78.03040520373344
+      },
+      "source_readonly": {
+        "/opt/ai4orgchem": true,
+        "/opt/runtime": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_FIXED_CASE",
+      "swap_limit_bytes": 0,
+      "through_cleanup_wall_seconds": 7.75,
+      "uid": 10001,
+      "worker_record_sha256": "844e6ac06bc7ed2f248c29bb4d0a73f502d7146d3c1e8abcad1443a2f5003bb2"
+    },
+    "p02-statistics": {
+      "acceptance_checks": {
+        "all_target_group_rules_consistent": true,
+        "aromatic_reference_line_reproduced": true,
+        "both_structure_observables_oppose_traditional_direction": true,
+        "polyenal_reference_line_reproduced": true,
+        "printed_polyenal_cc_is_outside_correlation_range": true,
+        "ten_target_compounds_frozen": true,
+        "uv_pair_order_supports_stronger_aromatic_participation_in_1_1_1_1": true
+      },
+      "actual_boys_kernel_calls": 0,
+      "actual_pipek_mezey_kernel_calls": 0,
+      "actual_scf_kernel_calls": 0,
+      "case_result_sha256": "4ccca2d1eb09305025e2489483fbedf33344ad7a6d2ecdbfecce56025665466c",
+      "case_status": "PASS",
+      "cgroup_source": "CGROUP_V1",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "cpu_period_us": 100000,
+      "cpu_quota_us": 100000,
+      "execution_id": "291d6fa65ae1413a959739c902251e49",
+      "host_exit_code": 0,
+      "host_launcher_identity": {
+        "runtime_source_directory": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime",
+        "runtime_source_head": "e2e90e9bec3637c986d2b581b352730658677113",
+        "source_scope": "CURRENT_CHECKED_CRITICAL_SOURCE_NOT_IMAGE_BUILD_COMMIT",
+        "status": "READ_ONLY_CURRENT_HEAD_NOT_IMAGE_BUILD_IDENTITY"
+      },
+      "host_manifest_sha256": "06beb94f1fb0b787d37daaf0690055549342002abd80e2bbef677ba9bc2248e7",
+      "host_record_sha256": "7838174ca848dc5a518c5c4d33f95a0951bfa674fb75c8166b043f016fb1aa12",
+      "memory_current_start_bytes": 36114432,
+      "memory_limit_bytes": 1073741824,
+      "memory_peak_bytes": 154726400,
+      "network_interfaces": [
+        "lo"
+      ],
+      "new_conditional_NR_calls": 0,
+      "output_preservation_after_removal": "PASS",
+      "protocol_id": "P02_STRUCTURE_UV_SOURCE_FREEZE_V0.1",
+      "run_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-registered-p02-p13-p01\\actual-runs\\20261008T004734Z-p02-statistics-291d6fa65ae1413a959739c902251e49",
+      "source_readonly": {
+        "/opt/ai4orgchem": true,
+        "/opt/runtime": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_FIXED_CASE",
+      "swap_limit_bytes": 0,
+      "through_cleanup_wall_seconds": 6.51500000001397,
+      "uid": 10001,
+      "worker_record_sha256": "b37437da18802d103ce393e990c426e6dbce2d0bb5dbc5c4fbb963f6c390967a"
+    },
+    "p13-graph-ledger": {
+      "acceptance_checks": {
+        "AI_training_disabled": true,
+        "acene_CESE_per_pi_matches_printed_values": true,
+        "acene_absolute_CESE_per_pi_decreases_with_size": true,
+        "all_scoped_CESE_per_pi_below_benzene_reference": true,
+        "all_scoped_adjacent_increment_sums_destabilizing": true,
+        "historical_quantum_program_not_claimed": true,
+        "holdout_detects_energy_rule_without_GL_filter_failure": true,
+        "holdout_source_selection_is_highest_energy_after_GL_filter": true,
+        "independent_RDKit_formulas_match": true,
+        "independent_graph_GL_qualified_counts_match": true,
+        "independent_graph_kekule_counts_match": true,
+        "production_label_disabled": true,
+        "published_CESE_identities_close": true,
+        "published_ESE_identities_close": true,
+        "source_selected_acene_candidates_obey_filtered_energy_rule": true
+      },
+      "actual_boys_kernel_calls": 0,
+      "actual_pipek_mezey_kernel_calls": 0,
+      "actual_scf_kernel_calls": 0,
+      "case_result_sha256": "ee525187b8da24e78f08678f91ec2a45566910a6129c7583e0068fd77da7c3fc",
+      "case_status": "PASS",
+      "cgroup_source": "CGROUP_V1",
+      "container_exit_code": 0,
+      "container_removed": true,
+      "cpu_period_us": 100000,
+      "cpu_quota_us": 100000,
+      "execution_id": "77417d403dae4e659314351649c67d57",
+      "host_exit_code": 0,
+      "host_launcher_identity": {
+        "runtime_source_directory": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime",
+        "runtime_source_head": "e2e90e9bec3637c986d2b581b352730658677113",
+        "source_scope": "CURRENT_CHECKED_CRITICAL_SOURCE_NOT_IMAGE_BUILD_COMMIT",
+        "status": "READ_ONLY_CURRENT_HEAD_NOT_IMAGE_BUILD_IDENTITY"
+      },
+      "host_manifest_sha256": "5a56a72cde9313f53e976b76a9f781993f02580946fa15cbdd0080feff294697",
+      "host_record_sha256": "63f9553161602921365d2bba4f196019741cb0e7b2aa63370dedd110fdae40e0",
+      "memory_current_start_bytes": 17813504,
+      "memory_limit_bytes": 1073741824,
+      "memory_peak_bytes": 115621888,
+      "network_interfaces": [
+        "lo"
+      ],
+      "new_conditional_NR_calls": 0,
+      "output_preservation_after_removal": "PASS",
+      "protocol_id": "p13-polycyclic-benzenoid/0.1",
+      "run_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-registered-p02-p13-p01\\actual-runs\\20261008T004755Z-p13-graph-ledger-77417d403dae4e659314351649c67d57",
+      "source_readonly": {
+        "/opt/ai4orgchem": true,
+        "/opt/runtime": true,
+        "/opt/venv": true,
+        "/task-contract.json": true
+      },
+      "status": "PASS_SCOPED_FIXED_CASE",
+      "swap_limit_bytes": 0,
+      "through_cleanup_wall_seconds": 6.48399999999674,
+      "uid": 10001,
+      "worker_record_sha256": "8b3513e2a1ebf0186e560b11c3eb64a4c9114cd33b5e83728ee27e0b34f6e594"
+    }
+  },
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "e02d36e8bcb0d4602bcf93a5a50f4a58fd1b8a2214012b370e46a77210ade102",
+    "original_size_bytes": 19563,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

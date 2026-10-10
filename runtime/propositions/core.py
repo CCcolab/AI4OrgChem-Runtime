@@ -317,8 +317,8 @@ def review_proposition(proposition_id, *, source_dir=None, output_dir, runtime_r
     observed_count = sum(row['actual_sha256'] is not None for row in record['files'])
     record['observed_selected_file_count'] = observed_count
     record['source_selected_files_unchanged_at_export'] = True if observed_count else None
-    record['export_files'] = ['review.json', 'summary.md']
-    with (output / 'review.json').open('x', encoding='utf-8', newline='\n') as stream:
+    record['export_files'] = ['review.public.json', 'summary.md']
+    with (output / 'review.public.json').open('x', encoding='utf-8', newline='\n') as stream:
         stream.write(json.dumps(record, ensure_ascii=False, indent=2, allow_nan=False) + '\n')
     with (output / 'summary.md').open('x', encoding='utf-8', newline='\n') as stream:
         stream.write(_summary(record, output_dir=output))

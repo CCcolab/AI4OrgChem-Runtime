@@ -26,4 +26,4 @@ guide materials under `docs/runtime-guide` preserve their recorded provenance
 and pending rights status. The root Apache-2.0 does not automatically relicense
 them. Public inclusion is part of the project owner's final synchronization
 scope confirmation, distinct from OCI image distribution. See
-[the synchronization preparation](../docs/GITHUB_SYNC_PREPARATION_20261009_zh-CN.md).
+[the synchronization preparation](../docs/GITHUB_SYNC_PREPARATION_20261009_zh-CN.public.md).

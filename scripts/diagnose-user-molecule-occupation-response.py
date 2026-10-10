@@ -49,7 +49,7 @@ def host_memory():
 
 def build_contract(source, commit, probe_dir, execute):
     proposal_path = source / 'validation/user-molecule/occupation-response/proposal-v1.json'
-    origin = copy.deepcopy(json.loads((source / 'validation/user-molecule/residual-diagnostic/contract-v1.json').read_bytes())['ordinary_origin'])
+    origin = copy.deepcopy(json.loads((source / 'validation/user-molecule/residual-diagnostic/contract-v1.public.json').read_bytes())['ordinary_origin'])
     cache = Path(origin['source_directory']).resolve()
     cache_record = json.loads((cache / origin['record_file']).read_bytes())
     for name in ('mo_coefficients', 'mo_occupations'):

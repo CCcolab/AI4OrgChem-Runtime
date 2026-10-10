@@ -1,0 +1,37 @@
+{
+  "review_date": "2026-10-03",
+  "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+  "debian_sources": 73,
+  "debian_source_archives": 236,
+  "debian_signature_and_hashes": "PASS",
+  "python_parent_sdists": 18,
+  "native_upstream_candidates_acquired": 4,
+  "vendor_components": 52,
+  "vendor_python_source_files": 634,
+  "vendor_python_source_match": "PASS",
+  "pip_supplemental_notice_files": 21,
+  "pip_notices_in_original_image": "NOT_FOUND",
+  "remaining_image_blockers": [
+    "Exact wheel-vendored GCC runtime source versions/patches absent; ELF comments missing in these binaries",
+    "SciPy OpenBLAS development commit and NumPy/PySCF BLAS build provenance absent",
+    "HDF5/libaec/libsz exact wheel build image/versions/patches not established",
+    "PySCF XCFun actual patch application and native build records absent",
+    "Supplemental pip/native notices and complete source availability not yet provided in a validated distribution"
+  ],
+  "source_only_scope": "Runtime code, locks, candidate adapters, reports, unmodified upstream license texts and attributed build recipe/patch; no image or downloaded dependency archives in Git",
+  "scientific_runs_repeated": false,
+  "CI_execution": "NOT_EXECUTED",
+  "public_release": false,
+  "XCFun_patch_applicability": "PASS (git apply --check; original source not modified)",
+  "scientific_archive_matches_existing_lock": "PASS",
+  "debian_freeform_license_note": "16 exact SPDX expressions unnormalized; original notices and matching source archives retained; this alone is not evidence of absent licenses",
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "f5cdd4e38f3a29c2a3269257ff9b5a6a95e40f97acaa42d7dd2134eaa6d9ae86",
+    "original_size_bytes": 1645,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

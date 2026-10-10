@@ -312,7 +312,7 @@ def prepare(args):
          'runtime_commit': source['runtime_commit'], 'runtime_source_zip_sha256': hashlib.sha256(raw).hexdigest(),
          'public_base': PUBLIC_BASE, 'context_files': inventory, 'source_catalog_bindings': bindings,
          'historical_scientific_acceptance': 'NOT_INHERITED',
-         'high_cost_scientific_replay': 'NOT_EXECUTED', 'wslc': 'BLOCKED', 'image_distribution': 'BLOCKED'})
+         'high_cost_scientific_replay': 'NOT_EXECUTED', 'image_distribution': 'BLOCKED'})
     print('Prepared '+str(destination), flush=True)
 
 
@@ -408,7 +408,7 @@ def build(args):
     inspection = json.loads(capture([docker, 'image', 'inspect', candidate]))[0]
     save(destination/'built-image.json', {'schema': 'runtime-source-built-image-v1', 'image_id': inspection['Id'],
          'local_tag': candidate, 'base_image_id': base, 'runtime_build_commit': receipt['runtime_commit'],
-         'scientific_acceptance': 'NOT_INHERITED', 'wslc': 'BLOCKED', 'image_distribution': 'BLOCKED'})
+         'scientific_acceptance': 'NOT_INHERITED', 'image_distribution': 'BLOCKED'})
     print('Built '+inspection['Id']+'. Register each service with scripts/register-installation.py.', flush=True)
 
 

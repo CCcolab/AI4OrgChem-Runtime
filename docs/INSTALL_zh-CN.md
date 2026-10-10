@@ -1,69 +1,68 @@
 # 安装与构建
 
-当前状态（2026-10-10）以 [能力注册表v2](../configs/runtime-capabilities-v2.json)和 [专业服务矩阵](CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)为准。源码与静态指南已公开；[Actions run38003025857](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857)对86e29b47三个既有job成功，仅覆盖登记工程合同及旧L0/L1。新用户从 [公开源码安装](SOURCE_INSTALLATION_zh-CN.md)开始。公开预构建镜像分发仍阻塞，WSLc验收暂停；下文为历史候选构建和平台恢复路径，2026-10-03的 final-delivery-status/DELIVERY_REVIEW 与备份保持历史身份。
+当前服务、输入和实际验收范围见[能力注册表](../configs/runtime-capabilities-v2.json)及[专业服务矩阵](CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)。源码与静态指南已公开；项目没有公开预构建镜像。新用户按[源码安装指南](SOURCE_INSTALLATION_zh-CN.md)准备、构建并登记自己的 Docker 环境。
 
-当前无公开镜像。先阅读平台矩阵；本机 WSLc 验收 NOT_EXECUTED，不声明已支持。
+## 1. 选择入口
 
-Windows 目标主机使用 PowerShell 7.3+（启动器固定 Standard 原生命令参数传递，保护空格/引号路径），需要微软官方文档要求的 WSL/WSLc，并能运行 `wslc version`、`wslc --help`。现有本机 WSL 2.3.26.0 不满足核查日文档所述 WSL 2.9.3+。更新 WSL 会改变全局运行环境，由用户在准备目标主机时明确执行；脚本不自动更新。无需安装 Compose。
+- 仅阅读网页、协议或已有报告：不需要启动 Docker 或 WSL2。
+- 执行本地计算：需要可用的 Linux/amd64 Docker 引擎及所选服务的输入、资源和安装身份。
+- 检查已有普通 WSL2 科研环境：使用[原生 WSL2 只读 Check](NATIVE_WSL2_RUNTIME_zh-CN.md)。该入口记录环境身份和资源，不是原生计算后端，也不继承 Docker 科学验收。
 
-## 本机工具诊断与恢复步骤
+Windows 可复用已有 Docker Desktop；Linux 可使用已有 Docker 引擎。本项目不自动安装系统功能、升级 WSL、修改 WSL 全局配置或重启电脑。Docker Desktop 在 Windows 上使用 WSL2 时会启动相应后台环境并占用主机资源；不用计算时可退出，磁盘上的镜像不需要全部运行。
 
-以下为启动前历史诊断，当前引擎状态见本节末更新。沙箱外只读诊断确认：WSL 已安装且可执行，但版本 2.3.26.0 尚不包含已要求的 WSLc；wslc/container 别名不在 PATH，已知 Program Files 路径亦无 wslc。不能简单称整个 WSL 未安装。Docker Desktop 可执行文件已安装，客户端 29.5.3 可运行；没有 Desktop/backend 进程，默认与 desktop-linux 两个引擎管道均不存在，沙箱外 Desktop status 仍报告未运行。podman/nerdctl 未在 PATH 找到，不声称已全面扫描所有磁盘安装。沙箱内的 WSL ACCESS_DENIED/ Docker 日志目录拒绝已与沙箱外实测区分，原始命令/错误保存在运行根 tool-diagnostics 目录。
+## 2. 确认已有 Docker 引擎
 
-优先复用已有 Docker Desktop；用户选择恢复时可在正常 PowerShell 7 执行：
+在正常终端执行：
+
+```powershell
+docker version
+docker info
+```
+
+应同时取得客户端和 Linux 服务端信息。只有客户端、服务端未响应或权限错误都不算引擎可用；保留实际错误并解决现有引擎的启动或访问问题。已有 Docker Desktop 且用户决定启动时，可执行：
 
 ```powershell
 docker desktop start
 docker desktop status
 docker version
-./scripts/build-wslc.ps1 -Engine docker -Tag ai4orgchem-runtime:candidate
 ```
 
-这会启动已有 Desktop 后台进程及其 WSL2 引擎/发行版，并消耗主机内存，不需要重新安装。2026-10-02 已按用户授权执行启动，Docker 29.5.3 Linux/amd64 服务端可用并完成本地候选验收。如果它提示系统功能/安装升级/重启，先保留提示并评估，不自动接受。
-
-选择恢复 WSLc 时，由用户在正常终端执行微软官方更新步骤：
+若提示系统功能、升级或重启要求，先评估，不自动接受。当前项目不依赖 Compose。可用已有 PowerShell 7.3+ 执行 Docker 专用探测，它只记录平台状态，不执行分子计算：
 
 ```powershell
-wsl --version
-wsl --update
-wsl --version
-wslc version
-wslc --help
+./scripts/probe-docker.ps1 -OutputDirectory D:\your-work\runtime-runs\platform-probe
 ```
 
-该操作更新全局 WSL 包，可能影响既有发行版运行条件；遇到重启或功能启用要求时暂停，由用户决定。无需为本项目自动修改 .wslconfig，也不自动执行 wsl --shutdown。恢复后先 probe、再构建、再 acceptance，按实跑记录更新支持矩阵。
+## 3. 新安装从公开源码开始
 
-从 runtime 独立仓库构建，不需要同级 AI4OrgChem。构建需网络访问 Docker Hub、GitHub codeload 和 PyPI；下载按固定摘要/归档与 wheel SHA-256 校验。运行阶段不需要网络。
+按[源码安装指南](SOURCE_INSTALLATION_zh-CN.md)使用已有 Python 3.12+，从干净、已提交的源码准备全新目录，构建并分别登记所需服务。该路径取得固定公开科学源码和锁定依赖，不需要原 AI4OrgChem 开发工作区或旧私有基础镜像。
+
+Git 克隆包含源码和历史；本项目制作的安装源码 ZIP 还带 Git 对象证明。二者都不包含已安装环境、容器镜像或完整运行缓存。普通 GitHub 自动源码 ZIP 缺少安装证明，不能冒充已验证的安装 ZIP。
+
+构建需要访问固定来源和软件仓库；执行阶段按服务合同使用已安装依赖。新镜像保存新的构建、安装与任务记录，不能套用旧候选的科学 PASS。遇到来源或 wheel 哈希差异应拒绝并保留日志，不替换来源锁或使用浮动依赖绕过。
+
+## 4. 原七任务的 Docker 构建入口
+
+此入口仅构建 `container/Dockerfile` 对应的原七任务环境，不替代新普通分子及三批案例的源码安装流程。在干净 Runtime 源码中，使用已有 PowerShell 7.3+ 和可用 Docker Linux/amd64 引擎：
 
 ```powershell
-./scripts/probe-wslc.ps1 -OutputDirectory D:\AI4Science\ai4orgchem-runtime-runs\platform-probe
-./scripts/build-wslc.ps1 -Tag ai4orgchem-runtime:candidate
+./scripts/build-docker.ps1 -CheckOnly
+./scripts/build-docker.ps1 -Tag ai4orgchem-runtime:local-source-candidate
+./scripts/run-docker.ps1 -Task evidence -Image ai4orgchem-runtime:local-source-candidate -OutputRoot D:\your-work\runtime-runs\evidence
 ```
 
-Docker 可用于独立通用 OCI 候选验收（不能替代 WSLc）：
+`-CheckOnly` 只核对来源并准备构建身份，不访问引擎，不表示构建或计算通过。构建注入 Runtime 提交和依赖锁摘要，完成后核对镜像身份、平台与非 root 用户；原依赖和科学规则不变。
+
+已有本地 P14 候选可经 `./scripts/start-runtime.ps1 -Task evidence` 从 Windows PowerShell 5.1 调用已有 PowerShell 7.3+。该启动器固定使用 Docker；参数和输出见[运行合同](RUN_zh-CN.md)。
+
+## 5. 验收与边界
+
+对自己选择的镜像和全新输出根，可显式运行低成本 Docker 验收：
 
 ```powershell
-./scripts/build-wslc.ps1 -Engine docker -Tag ai4orgchem-runtime:candidate
-./scripts/run-wslc.ps1 -Engine docker -Task evidence -Image ai4orgchem-runtime:candidate
+./scripts/acceptance-docker.ps1 -Image ai4orgchem-runtime:local-source-candidate -OutputRoot D:\your-work\runtime-runs\docker-recheck
 ```
 
-构建脚本要求 reviewed commit 与干净 runtime 工作区，注入 runtime commit 和依赖锁摘要，完成后核查镜像标签和非 root 用户。工作目录的 .build 被忽略，只保存本地构建材料。Dockerfile 默认 linux/amd64、Python 3.12.13 官方 Debian slim 固定索引摘要，镜像内 /opt/venv 使用离线哈希安装；不会创建或修改用户原有 conda/micromamba 环境。
+脚本以实际不可变镜像 ID 运行并保留命令、stdout/stderr、退出码和验收记录；它不启动 L3/L4。历史本地 Docker 候选已验收的 L0—L4、等价性和联合分类只属于各自记录中的镜像、协议与输入。L0—L2、等价性和指定探针有断网记录；L3/L4 严格断网未执行。L4 可保存检查点，不支持恢复运行。
 
-本地镜像已成功构建，下载校验、L0—L2 动态库运行、非 root 挂载和离线运行已实测；组件清单与 Debian/Python 源码材料已补齐，原生 wheel 来源/通知交付与 WSLc 验收仍待完成。build 失败保留日志，不通过现场 pip install 或更换浮动依赖绕过。
-
-## 本地 Docker 验收复用
-
-```powershell
-./scripts/acceptance-docker.ps1 -Image ai4orgchem-runtime:oci-candidate-20261002 -OutputRoot 'D:\AI4Science\ai4orgchem-runtime-runs\docker-recheck'
-```
-
-OutputRoot 应使用新的目录。脚本以检查到的不可变镜像 ID 运行，记录实际命令、stdout/stderr、退出码和 acceptance.json；所有运行断网，不启动 L3/L4。构建需网络，运行不需要网络。原始本轮日志在 `D:\AI4Science\ai4orgchem-runtime-runs\20261002-oci`。
-
-## WSLc 升级与验收条件（独立待办）
-
-2026-10-02 用户已明确暂缓本节操作，以优先保护原项目科研运行环境。本节仅保留未来恢复条件，本轮不执行；恢复须用户明确授权。WSLc 保持 BLOCKED / NOT_EXECUTED。
-
-1. 本机 WSL 2.3.26.0 不满足核查日官方 2.9.3+ 前提。须另获升级授权后执行上述官方更新步骤；当前轮未升级。
-2. 确认 wslc version/help 可用，并记录实际版本、挂载、内存、停止命令支持；如要求功能启用或重启，另行决定。
-3. 在目标主机执行 probe-wslc.ps1、干净构建/经核实的镜像导入与 acceptance-wslc.ps1；单独验证中文/空格路径、非 root、只读、离线、退出码、持久输出、资源限制及停止语义。
-4. 完成 WSL2/WSLc 同输入同依赖技术对照后更新矩阵；不得用 Docker 的 PASS 补写 WSLc。L3/L4 必须另行授权预算；L4 可保存检查点，但不支持恢复运行。
+[Actions run 38003025857](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857)对 `86e29b47` 三个既有 job 成功，覆盖工程合同和旧 L0/L1；不代表全部科学服务或本轮新安装 CI 已通过。普通用户条件态 Compute 仍缺合格端点，高成本 78 个登记态中仅两个先导态完成验收。公开镜像分发的材料与授权阻塞见[公开边界](PUBLICATION_BOUNDARIES_zh-CN.md)。

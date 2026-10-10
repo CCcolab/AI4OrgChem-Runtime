@@ -1,0 +1,97 @@
+{
+  "GitHub_Actions": "NOT_EXECUTED",
+  "cases": [
+    {
+      "case": "P03",
+      "ledger": "PASS_SCOPED_PROTOCOL_CASE",
+      "native": "PASS_SCOPED_PROTOCOL_CASE",
+      "native_memory_peak_bytes": 1110310912,
+      "native_wall_seconds": 613.8439999999828,
+      "preflight": "PASS_SCOPED_PROTOCOL_CASE",
+      "scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT"
+    },
+    {
+      "case": "P04",
+      "ledger": "PASS_SCOPED_PROTOCOL_CASE",
+      "native": "PASS_SCOPED_PROTOCOL_CASE",
+      "native_memory_peak_bytes": 2618384384,
+      "native_wall_seconds": 476.0470000000205,
+      "preflight": "PASS_SCOPED_PROTOCOL_CASE",
+      "scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT"
+    },
+    {
+      "case": "P05",
+      "ledger": "PASS_SCOPED_PROTOCOL_CASE",
+      "native": "PASS_SCOPED_PROTOCOL_CASE",
+      "native_memory_peak_bytes": 2499915776,
+      "native_wall_seconds": 303.030999999959,
+      "preflight": "PASS_SCOPED_PROTOCOL_CASE",
+      "scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT"
+    },
+    {
+      "case": "P06",
+      "ledger": "PASS_SCOPED_PROTOCOL_CASE",
+      "native": "PASS_SCOPED_PROTOCOL_CASE",
+      "native_memory_peak_bytes": 140439552,
+      "native_wall_seconds": 25.48399999999674,
+      "preflight": "PASS_SCOPED_PROTOCOL_CASE",
+      "scope": "ONE_FROZEN_ORIGINAL_PROTOCOL_POINT"
+    },
+    {
+      "case": "P07",
+      "ledger": "PASS_SCOPED_PROTOCOL_CASE",
+      "native": "NOT_REQUIRED_ZERO_NEW_QM_PROTOCOL",
+      "native_memory_peak_bytes": null,
+      "native_wall_seconds": null,
+      "preflight": "PASS_SCOPED_PROTOCOL_CASE",
+      "scope": "SAME_HAMILTONIAN_FROZEN_LEDGER_REPLAY"
+    },
+    {
+      "case": "P08",
+      "ledger": "PASS_SCOPED_PROTOCOL_CASE",
+      "native": "PASS_SCOPED_PROTOCOL_CASE",
+      "native_memory_peak_bytes": 359501824,
+      "native_wall_seconds": 31.54700000002049,
+      "preflight": "PASS_SCOPED_PROTOCOL_CASE",
+      "scope": {
+        "full_P08_replay": false,
+        "new_P08_scientific_verdict": false,
+        "new_optimization": false,
+        "ordinary_general_compute_or_old_conditional_compute_enablement": false,
+        "production_label": false,
+        "same_implementation_initial_density_check": true,
+        "second_program_replication": false,
+        "training_eligible": false
+      }
+    },
+    {
+      "case": "P09",
+      "ledger": "PASS_SCOPED_PROTOCOL_CASE",
+      "native": "PASS_SCOPED_PROTOCOL_CASE",
+      "native_memory_peak_bytes": 450781184,
+      "native_wall_seconds": 49.75,
+      "preflight": "PASS_SCOPED_PROTOCOL_CASE",
+      "scope": "FIXED_GEOMETRY_CBD_G_LIKE_DSI_SMOKE_ONLY"
+    },
+    {
+      "case": "P10",
+      "ledger": "PASS_SCOPED_PROTOCOL_CASE",
+      "native": "PASS_SCOPED_PROTOCOL_CASE",
+      "native_memory_peak_bytes": 483254272,
+      "native_wall_seconds": 71.73499999998603,
+      "preflight": "PASS_SCOPED_PROTOCOL_CASE",
+      "scope": "FIVE_FROZEN_ORDINARY_RKS_BLA_POINTS_PLUS_REUSED_G_GL_LEDGER"
+    }
+  ],
+  "image_distribution": "BLOCKED_LOCAL_ONLY",
+  "schema": "protocol-cases-support-matrix-v1",
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "41a946b5b2fc2cd6823c07d321d5f34bdfbd44479b352a1334c5b2f1fe45270a",
+    "original_size_bytes": 3070,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

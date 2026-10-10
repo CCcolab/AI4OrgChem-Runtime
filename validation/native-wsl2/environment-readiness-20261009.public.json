@@ -1,0 +1,192 @@
+{
+  "schema": "native-wsl2-readonly-feasibility-v1",
+  "date": "2026-10-09",
+  "created_utc": "2026-10-08T22:54:19.689920+00:00",
+  "scope": "READONLY_COMMAND_PATHS_ENV_NAMES_AND_METADATA_ONLY",
+  "distribution": "Ubuntu-24.04",
+  "original_environment_modified": false,
+  "package_install_upgrade": false,
+  "scientific_script_imports": 0,
+  "QM_calls": 0,
+  "new_scientific_budget": null,
+  "native_service_qualified": false,
+  "before": {
+    "label": "wsl-list-before",
+    "argv": [
+      "wsl.exe",
+      "--list",
+      "--verbose"
+    ],
+    "exit_code": 0,
+    "stdout": "  NAME              STATE           VERSION\r\n* Ubuntu-24.04      Stopped         2\r\n  Ubuntu            Stopped         2\r\n  docker-desktop    Running         2\r\n",
+    "stderr": ""
+  },
+  "inventory": {
+    "canonical_environment_python_exists": true,
+    "cgroup_membership": "15:name=systemd:/init.scope\n14:misc:/\n13:rdma:/\n12:pids:/init.scope\n11:hugetlb:/\n10:net_prio:/\n9:perf_event:/\n8:net_cls:/\n7:freezer:/\n6:devices:/init.scope\n5:memory:/init.scope\n4:blkio:/\n3:cpuacct:/\n2:cpu:/\n1:cpuset:/\n0::/init.scope\n",
+    "cgroup_v2": false,
+    "cpu_count": 22,
+    "environment_names_only": {
+      "/home/cascade/anaconda3/envs": null,
+      "/home/cascade/micromamba/envs": [
+        "ai4orgchem",
+        "ai4orgchem-nequip",
+        "ai4orgchem-v02-cipsi",
+        "ai4orgchem-v02-qm-open",
+        "ai4orgchem-v02-wp2",
+        "cascade-qc-linux"
+      ],
+      "/home/cascade/miniconda3/envs": null
+    },
+    "gid": 1000,
+    "memory": {
+      "MemAvailable": 15415652352,
+      "MemTotal": 16565334016,
+      "SwapFree": 4294967296,
+      "SwapTotal": 4294967296
+    },
+    "native_scratch_exists": true,
+    "pid1": "systemd",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "tools": {
+      "bwrap": null,
+      "conda": null,
+      "flock": "/usr/bin/flock",
+      "micromamba": null,
+      "prlimit": "/usr/bin/prlimit",
+      "python3": "/usr/bin/python3",
+      "setsid": "/usr/bin/setsid",
+      "systemctl": "/usr/bin/systemctl",
+      "systemd-run": "/usr/bin/systemd-run",
+      "taskset": "/usr/bin/taskset",
+      "timeout": "/usr/bin/timeout",
+      "unshare": "/usr/bin/unshare"
+    },
+    "uid": 1000
+  },
+  "package_metadata": {
+    "dont_write_bytecode": true,
+    "isolated": 1,
+    "no_user_site": 1,
+    "package_metadata": {
+      "Pillow": {
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages",
+        "version": "12.3.0"
+      },
+      "PyYAML": {
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages",
+        "version": "6.0.3"
+      },
+      "geometric": {
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages",
+        "version": "1.1.1"
+      },
+      "jsonschema": {
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages",
+        "version": "4.26.0"
+      },
+      "numpy": {
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages",
+        "version": "2.5.1"
+      },
+      "pyscf": {
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages",
+        "version": "2.14.0"
+      },
+      "rdkit": {
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages",
+        "version": "2026.3.4"
+      },
+      "scipy": {
+        "location": "/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages",
+        "version": "1.18.0"
+      }
+    },
+    "prefix": "/home/cascade/micromamba/envs/ai4orgchem",
+    "python_executable": "/home/cascade/micromamba/envs/ai4orgchem/bin/python",
+    "python_version": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+    "scientific_packages_imported": false
+  },
+  "after": {
+    "label": "wsl-list-after",
+    "argv": [
+      "wsl.exe",
+      "--list",
+      "--verbose"
+    ],
+    "exit_code": 0,
+    "stdout": "  NAME              STATE           VERSION\r\n* Ubuntu-24.04      Running         2\r\n  Ubuntu            Stopped         2\r\n  docker-desktop    Running         2\r\n",
+    "stderr": ""
+  },
+  "commands": [
+    {
+      "label": "wsl-list-before",
+      "argv": [
+        "wsl.exe",
+        "--list",
+        "--verbose"
+      ],
+      "exit_code": 0,
+      "stdout": "  NAME              STATE           VERSION\r\n* Ubuntu-24.04      Stopped         2\r\n  Ubuntu            Stopped         2\r\n  docker-desktop    Running         2\r\n",
+      "stderr": ""
+    },
+    {
+      "label": "ubuntu2404-inventory",
+      "argv": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-c",
+        "\nimport json, os, pathlib, shutil, sys\nP=pathlib.Path\ntools={name:shutil.which(name) for name in ('python3','micromamba','conda','systemd-run','systemctl','prlimit','bwrap','unshare','timeout','taskset','flock','setsid')}\nroots=['/home/cascade/micromamba/envs','/home/cascade/miniconda3/envs','/home/cascade/anaconda3/envs']\nenvs={path:sorted(p.name for p in P(path).iterdir() if p.is_dir()) if P(path).is_dir() else None for path in roots}\nmem={line.split(':')[0]:int(line.split()[1])*1024 for line in P('/proc/meminfo').read_text().splitlines() if line.startswith(('MemTotal:','MemAvailable:','SwapTotal:','SwapFree:'))}\nrows={'uid':os.getuid(),'gid':os.getgid(),'python':sys.version,'tools':tools,'environment_names_only':envs,'memory':mem,'pid1':P('/proc/1/comm').read_text().strip(),'cpu_count':os.cpu_count(),'cgroup_membership':P('/proc/self/cgroup').read_text(),'cgroup_v2':P('/sys/fs/cgroup/cgroup.controllers').exists(),'canonical_environment_python_exists':P('/home/cascade/micromamba/envs/ai4orgchem/bin/python').is_file(),'native_scratch_exists':P('/home/cascade/ai4orgchem-scratch').is_dir()}\nprint(json.dumps(rows,sort_keys=True))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"canonical_environment_python_exists\": true, \"cgroup_membership\": \"15:name=systemd:/init.scope\\n14:misc:/\\n13:rdma:/\\n12:pids:/init.scope\\n11:hugetlb:/\\n10:net_prio:/\\n9:perf_event:/\\n8:net_cls:/\\n7:freezer:/\\n6:devices:/init.scope\\n5:memory:/init.scope\\n4:blkio:/\\n3:cpuacct:/\\n2:cpu:/\\n1:cpuset:/\\n0::/init.scope\\n\", \"cgroup_v2\": false, \"cpu_count\": 22, \"environment_names_only\": {\"/home/cascade/anaconda3/envs\": null, \"/home/cascade/micromamba/envs\": [\"ai4orgchem\", \"ai4orgchem-nequip\", \"ai4orgchem-v02-cipsi\", \"ai4orgchem-v02-qm-open\", \"ai4orgchem-v02-wp2\", \"cascade-qc-linux\"], \"/home/cascade/miniconda3/envs\": null}, \"gid\": 1000, \"memory\": {\"MemAvailable\": 15415652352, \"MemTotal\": 16565334016, \"SwapFree\": 4294967296, \"SwapTotal\": 4294967296}, \"native_scratch_exists\": true, \"pid1\": \"systemd\", \"python\": \"3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]\", \"tools\": {\"bwrap\": null, \"conda\": null, \"flock\": \"/usr/bin/flock\", \"micromamba\": null, \"prlimit\": \"/usr/bin/prlimit\", \"python3\": \"/usr/bin/python3\", \"setsid\": \"/usr/bin/setsid\", \"systemctl\": \"/usr/bin/systemctl\", \"systemd-run\": \"/usr/bin/systemd-run\", \"taskset\": \"/usr/bin/taskset\", \"timeout\": \"/usr/bin/timeout\", \"unshare\": \"/usr/bin/unshare\"}, \"uid\": 1000}\n",
+      "stderr": ""
+    },
+    {
+      "label": "ai4orgchem-package-metadata",
+      "argv": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/home/cascade/micromamba/envs/ai4orgchem/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "\nimport importlib.metadata as m, json, pathlib, sys\nnames=['pyscf','geometric','numpy','scipy','PyYAML','jsonschema','rdkit','Pillow']\nrows={}\nfor name in names:\n    try:\n        distribution=m.distribution(name)\n        rows[name]={'version':distribution.version,'location':str(distribution.locate_file(''))}\n    except m.PackageNotFoundError: rows[name]={'version':None,'status':'NOT_INSTALLED_IN_SELECTED_ENVIRONMENT'}\nprint(json.dumps({'python_version':sys.version,'python_executable':sys.executable,'prefix':sys.prefix,'isolated':sys.flags.isolated,'no_user_site':sys.flags.no_user_site,'dont_write_bytecode':sys.dont_write_bytecode,'package_metadata':rows,'scientific_packages_imported':False},sort_keys=True))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"dont_write_bytecode\": true, \"isolated\": 1, \"no_user_site\": 1, \"package_metadata\": {\"Pillow\": {\"location\": \"/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages\", \"version\": \"12.3.0\"}, \"PyYAML\": {\"location\": \"/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages\", \"version\": \"6.0.3\"}, \"geometric\": {\"location\": \"/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages\", \"version\": \"1.1.1\"}, \"jsonschema\": {\"location\": \"/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages\", \"version\": \"4.26.0\"}, \"numpy\": {\"location\": \"/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages\", \"version\": \"2.5.1\"}, \"pyscf\": {\"location\": \"/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages\", \"version\": \"2.14.0\"}, \"rdkit\": {\"location\": \"/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages\", \"version\": \"2026.3.4\"}, \"scipy\": {\"location\": \"/home/cascade/micromamba/envs/ai4orgchem/lib/python3.12/site-packages\", \"version\": \"1.18.0\"}}, \"prefix\": \"/home/cascade/micromamba/envs/ai4orgchem\", \"python_executable\": \"/home/cascade/micromamba/envs/ai4orgchem/bin/python\", \"python_version\": \"3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]\", \"scientific_packages_imported\": false}\n",
+      "stderr": ""
+    },
+    {
+      "label": "wsl-list-after",
+      "argv": [
+        "wsl.exe",
+        "--list",
+        "--verbose"
+      ],
+      "exit_code": 0,
+      "stdout": "  NAME              STATE           VERSION\r\n* Ubuntu-24.04      Running         2\r\n  Ubuntu            Stopped         2\r\n  docker-desktop    Running         2\r\n",
+      "stderr": ""
+    }
+  ],
+  "distribution_start_may_have_occurred": true,
+  "distribution_shutdown_performed": false,
+  "no_environment_variables_or_secrets_dumped": true,
+  "dependency_versions_are_metadata_not_import_or_binary_compatibility_validation": true,
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "684b63290c91ce7e8cba43bf23db8fdd0f28aca7f343d7c2b0a1a8163d417edd",
+    "original_size_bytes": 10522,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

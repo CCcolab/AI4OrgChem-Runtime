@@ -101,7 +101,7 @@ class InstallationIdentityTests(unittest.TestCase):
             (context / "locks/high-cost-source.json").write_bytes(raw)
             with patch.object(identity, "ROOT", context):
                 source, binding = identity.source_bindings.bind(context, 'high-cost-cases')
-                self.assertEqual(binding["unchanged_rows"], 104)
+                self.assertEqual(binding["unchanged_rows"], 102)
                 self.assertEqual(binding, expected_binding)
                 self.assertEqual(source, catalog)
                 # Even an internally self-consistent updated catalog cannot alter science.

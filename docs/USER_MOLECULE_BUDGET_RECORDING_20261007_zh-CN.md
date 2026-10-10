@@ -49,6 +49,5 @@ prepared账本同步Jac组、chart和差分编号并核对D/F身份。数量或�
 
 完整W01—W07本地CI本轮未重跑，远端Actions仍NOT_EXECUTED；原全量CI与此前239项专项记录保留。旧591次真实诊断及其占据映射/正能隙失败、参考空最终gate原样保留；本改进没有真实分子结果，科研δ为空。内部方法问题和一般用户Compute准入尚未解决。
 
-外部专家流程已取消。WSLc暂停/BLOCKED，WSL未升级，镜像分发仍BLOCKED，未公开推送/发布；原P01—P14、L0—L4未重算。L4仍只保存检查点，不支持恢复。
 
-[工程机器记录](../validation/user-molecule/budget-recording-20261007.json)提供测试、示例、身份及文件hash；[候选合同0.2](../validation/user-molecule/residual-diagnostic/budget-recording-candidate-v1.json)记录实施状态，原设计字节单独保留。下一步应针对既有近简并占据证据继续内部方法/服务范围设计；不自动进行新的分子计算，不把新工程候选接入现有科学worker。
+[工程机器记录](../validation/user-molecule/budget-recording-20261007.public.json)提供测试、示例、身份及文件hash；[候选合同0.2](../validation/user-molecule/residual-diagnostic/budget-recording-candidate-v1.public.json)记录实施状态，原设计字节单独保留。下一步应针对既有近简并占据证据继续内部方法/服务范围设计；不自动进行新的分子计算，不把新工程候选接入现有科学worker。

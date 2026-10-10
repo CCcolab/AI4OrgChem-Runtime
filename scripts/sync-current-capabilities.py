@@ -47,13 +47,31 @@ def targets(root=ROOT):
             anchor = '<details>'
         result[name] = replace_block(text, block, before=anchor).encode('utf-8')
     page = (root/'docs/index.html').read_text(encoding='utf-8')
-    rows = ''.join('<tr><td>'+html.escape(row['name'], quote=False)+'</td><td>'+html.escape(row['scope'], quote=False)+'</td><td>'+html.escape(row['qualification']['numerical'], quote=False)+'</td></tr>' for row in registry['capabilities'])
+    def link(path, label):
+        return ('<a href="https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/'
+                +html.escape(path,quote=True)+'" target="_blank" rel="noopener noreferrer">'
+                +html.escape(label,quote=False)+'</a>')
+    def service_links(row):
+        paths = []
+        for key in ('schema', 'case_config'):
+            if isinstance(row['input'].get(key),str):
+                paths.append(link(row['input'][key],'输入合同'))
+        for evidence in row['evidence']:
+            paths.append(link(evidence['path'],'协议与判读' if evidence['path'].endswith('.md') else '保存结果'))
+        entry = ('runtime/cli.py' if row['id']=='p14-fixed-tasks' else
+                 next((item['path'] for item in row['evidence'] if item['path'].endswith('.md')),
+                      'docs/CURRENT_PROFESSIONAL_SERVICES_zh-CN.md')
+                 if row['id'] in ('user-compute','root-native-diagnostic') else
+                 'scripts/run-installed-runtime.py')
+        paths.append(link(entry,'执行边界与入口'))
+        return ' · '.join(paths)
+    rows = ''.join('<tr><td>'+html.escape(row['name'], quote=False)+'</td><td>'+html.escape(row['scope'], quote=False)+'</td><td>'+html.escape(row['qualification']['numerical'], quote=False)+'</td><td>'+service_links(row)+'</td></tr>' for row in registry['capabilities'])
     block = (START+'<details id="current-service-registry"><summary>当前服务范围与验证依据</summary>'
              '<p>按研究问题选择模块；具体输入、结果字段、成本及允许解释见'
              '<a href="https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/CURRENT_PROFESSIONAL_SERVICES_zh-CN.md" target="_blank" rel="noopener noreferrer">当前专业服务矩阵</a>。'
              '本表引用统一能力登记，不授予计算权限，也不将历史验收转移到新安装。</p>'
              f'<p><a href="{html.escape(ci["url"])}" target="_blank" rel="noopener noreferrer">提交 {ci["commit"][:8]} 的 {ci["successful_jobs"]} 个 CI job 成功</a>，范围是工程合同与旧入口 L0/L1；后续修改另行验证。</p>'
-             '<div class="table-scroll"><table><thead><tr><th>服务</th><th>输入与方法范围</th><th>已有数值验收</th></tr></thead><tbody>'+rows+'</tbody></table></div>'
+             '<div class="table-scroll"><table><thead><tr><th>服务</th><th>输入与方法范围</th><th>已有数值验收</th><th>输入、协议、结果与入口</th></tr></thead><tbody>'+rows+'</tbody></table></div>'
              '<p><a href="https://cccolab.github.io/AI4OrgChem-Runtime/runtime-guide/capabilities-v2.json" target="_blank" rel="noopener noreferrer">下载同源能力表 JSON</a>；'
              '<a href="https://github.com/CCcolab/AI4OrgChem-Runtime/tree/main/evidence/numerical-witnesses" target="_blank" rel="noopener noreferrer">最小数值见证与只读复核</a>。'
              f'声明文件 SHA-256：<code>{sha}</code>。</p></details>'+END)

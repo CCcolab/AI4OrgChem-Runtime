@@ -1,0 +1,120 @@
+{
+  "run_id": "20261002T144015Z-p14-classify-675fab20a66f",
+  "task": "p14-classify",
+  "status": "PASS",
+  "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+  "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+  "process_exit_code": 0,
+  "runtime_exit_code": 0,
+  "scientific_comparison": "consistent",
+  "parent_runs": [
+    {
+      "task": "p14-smoke",
+      "run_id": "20261002T115757Z-p14-smoke-5edcc0ade184",
+      "sha256": "a05ea503afba62cd147aec5b3030780ff8203dfeae218347af8c0a8ba2fa2771"
+    },
+    {
+      "task": "p14-optimize",
+      "run_id": "20261002T123346Z-p14-optimize-d7f348003891",
+      "sha256": "0a1e89ed6cbd47f8ae1be768149baa0aeebd9f72bbcbb0d8046d234a8ac66929"
+    },
+    {
+      "task": "p14-equivalence",
+      "run_id": "20261002T111600Z-p14-equivalence-a83e2e3a8f2f",
+      "sha256": "effbc7a24ddaaf6d9b9bae9309430b63fe8333c7457d6bf275ee5bd371bd83d1"
+    },
+    {
+      "task": "p14-fixed",
+      "run_id": "20261002T123033Z-p14-fixed-d621c0cfab97",
+      "sha256": "6408a5317a6f83186dc540069ba1f0308d51721ef87a7a4317e423bf28d03257"
+    }
+  ],
+  "platform": "Linux/x86_64",
+  "raw_directory": "D:\\AI4Science\\ai4orgchem-runtime-runs\\20261002T144015Z-p14-classify-675fab20a66f",
+  "output_hashes_verified": true,
+  "manifest_sha256": "cdccd93ccc2f59d9478b1bac4b78a65b1db0115ee24ed20a34f6993ff7f48b2a",
+  "result": {
+    "classification": "consistent",
+    "classification_zh": "与原著一致",
+    "decision_verdict": "PASS",
+    "scope": "benzotricyclobutadiene_10_12_C12H6_frozen_source_proxy_protocol",
+    "quantitative_evidence": {
+      "source_G_delta_r_angstrom": 0.177,
+      "source_PLG_delta_r_angstrom": -0.002,
+      "source_d_delta_r_GP_angstrom": 0.179,
+      "optimization_G_delta_r_angstrom": 0.17724028577397366,
+      "optimization_PLG_delta_r_angstrom": 0.005036650109448759,
+      "optimization_d_delta_r_GP_angstrom": 0.1722036356645249,
+      "optimization_d_delta_r_residual_angstrom": -0.006796364335475091,
+      "optimization_endpoint_kcal_mol": 67.67971905631804,
+      "optimization_endpoint_residual_kcal_mol": 0.5997190563180368,
+      "source_level_endpoint_kcal_mol": 67.08689934803395,
+      "source_endpoint_kcal_mol": 67.08,
+      "source_level_endpoint_residual_kcal_mol": 0.006899348033954311,
+      "memory_implementation_energy_difference_hartree": 2.2737367544323206e-13
+    },
+    "decision_checks": {
+      "fixed_geometry_operator_smoke_passed": true,
+      "five_parameter_optimization_record_passed_its_gate": true,
+      "five_parameter_production_optimization_qualified": true,
+      "memory_controlled_operator_equivalent": true,
+      "source_level_fixed_geometry_anchor_passed": true,
+      "source_PLG_near_equal_bonds": true,
+      "optimization_reduces_bond_alternation": true,
+      "optimization_response_same_direction": true,
+      "optimization_d_delta_within_bond_tolerance": true,
+      "optimization_endpoint_same_sign": true,
+      "optimization_endpoint_within_energy_tolerance": true,
+      "source_level_endpoint_same_sign": true,
+      "source_level_endpoint_within_energy_tolerance": true
+    },
+    "optimization_eligibility_checks": {
+      "optimization_scientific_classification_allowed": true,
+      "optimization_protocol_id_matches": true,
+      "optimization_protocol_authorized": true,
+      "optimization_stage_is_production": true,
+      "optimization_method_matches": true,
+      "optimization_basis_matches": true,
+      "optimization_grid_matches": true,
+      "G_optimizer_success": true,
+      "G_gradient_within_tolerance": true,
+      "G_termination_qualified": true,
+      "G_no_active_bound": true,
+      "G_state_converged": true,
+      "G_78_electrons": true,
+      "PLG_optimizer_success": true,
+      "PLG_gradient_within_tolerance": true,
+      "PLG_termination_qualified": true,
+      "PLG_no_active_bound": true,
+      "PLG_state_converged": true,
+      "PLG_78_electrons": true
+    },
+    "evidence_sha256": {
+      "smoke.json": "a05ea503afba62cd147aec5b3030780ff8203dfeae218347af8c0a8ba2fa2771",
+      "optimization.json": "0a1e89ed6cbd47f8ae1be768149baa0aeebd9f72bbcbb0d8046d234a8ac66929",
+      "equivalence.json": "effbc7a24ddaaf6d9b9bae9309430b63fe8333c7457d6bf275ee5bd371bd83d1",
+      "source-level.json": "6408a5317a6f83186dc540069ba1f0308d51721ef87a7a4317e423bf28d03257"
+    },
+    "limitations": [
+      "source_full_Cartesian_coordinates_not_public",
+      "CH_distance_fixed_at_1.080_angstrom_proxy",
+      "production_optimization_limited_to_five_parameter_planar_D3h_subspace",
+      "no_full_Cartesian_frequency_or_wider_symmetry_optimization_claimed",
+      "STO3G_technical_pilot_is_not_scientific_classification_evidence",
+      "single_C12H6_system_does_not_establish_universal_19_molecule_law"
+    ],
+    "production_label": false,
+    "training_eligible": false
+  },
+  "provenance_note": "result.runtime_provenance and source_calculation_git_commit are unchanged upstream historical metadata; actual current execution provenance is run-manifest.json",
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "0cc5fdeba586417240ef206d5e3196a5a99b2162a1dd5a38c522f4c117d45448",
+    "original_size_bytes": 5154,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

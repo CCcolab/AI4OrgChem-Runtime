@@ -1,6 +1,6 @@
 # W05 验收准备决策单
 
-2026-10-05 / W05-PREPARATION-1。此表是具体科学/验收审阅材料；空白、待审、讨论或文件存在不代表批准。当前 approver=null、approved_at=null、SCF 预算未批准、Compute disabled。来源为 [准备记录](../USER_MOLECULE_W05_PREPARATION_zh-CN.md) 和 [机器可读未决项](../../validation/user-molecule/w05/pending-decisions.json)。
+2026-10-05 / W05-PREPARATION-1。此表是具体科学/验收审阅材料；空白、待审、讨论或文件存在不代表批准。当前 approver=null、approved_at=null、SCF 预算未批准、Compute disabled。来源为 [准备记录](../USER_MOLECULE_W05_PREPARATION_zh-CN.public.md) 和 [机器可读未决项](../../validation/user-molecule/w05/pending-decisions.json)。
 
 | ID | 需要决定或补齐的事项 | 应留存的证据 | 当前状态 |
 |---|---|---|---|

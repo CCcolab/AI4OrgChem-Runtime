@@ -15,7 +15,7 @@ python -I -B scripts/check-wsl2-runtime.py --action Check --distribution Ubuntu-
 
 记录目录必须是新的绝对主机路径，入口不会覆盖已有目录。省略 `--record-dir` 仅输出 JSON。需要来源身份时，可显式增加 `--source-file /mnt/d/AI4Science/AI4OrgChem/src/ai4orgchem/qm/p12_source2011_rks.py` 等参数；这只读取文件哈希，不运行P12。参数可重复，不扫描来源目录或凭证。环境默认值只适用于当前机器，可通过 argv 指定。全部进程参数以 argv 传递，不通过 shell 插值；worker 内容通过 stdin 传递。本轮验收记录独立保存在文末的新交付根，示例使用另一个新运行目录。
 
-Check 首先读取 WSL 版本、发行版版本及正在运行的列表，并记录检查前运行状态。随后正常调用指定发行版的 `--exec`，以 `PYTHONNOUSERSITE=1`、`-I -B` 运行独立 stdlib worker；WSL 可能按其正常行为启动已停止的指定发行版。加 `--require-running` 可在发行版未运行时拒绝。入口不会关闭任何发行版。单次命令超时默认 30 秒，可设大于 0 且不超过 60 秒，超时或不合法 JSON、缺失环境/包、root 用户、身份不匹配均失败关闭。不会安装、升级、下载、改变 `.wslconfig`、原环境、全局设置或旧 launcher。
+Check 首先读取 WSL 版本、发行版版本及正在运行的列表，并记录检查前运行状态。随后正常调用指定发行版的 `--exec`，以 `PYTHONNOUSERSITE=1`、`-I -B` 运行独立 stdlib worker；WSL 可能按其正常行为启动已停止的指定发行版。加 `--require-running` 可在发行版未运行时拒绝。入口不会关闭任何发行版。单次命令超时默认 30 秒，可设大于 0 且不超过 60 秒，超时或不合法 JSON、缺失环境/包、root 用户、身份不匹配均失败关闭。不会安装、升级、下载、改变 WSL 全局配置、原环境、全局设置或旧 launcher。
 
 ## 身份与资源观测的范围
 
@@ -31,7 +31,7 @@ Check 首先读取 WSL 版本、发行版版本及正在运行的列表，并记
 4. **原生资源分档**：结合实际 WSL2 可用内存、swap、CPU/亲和/cgroup 委派能力制定独立的 native profiles；定义预算、预检、运行时限制和峰值证据。原环境长期 P12 成功运行是有价值的基线，但不能替代新封装的资源合同。
 5. **科学验收**：上述工程门通过后，再取得针对原生候选任务的计算授权，依次做低成本对照与目标 P12 来源、参数、方法和结果验收。此次 0 QM Check 不提供能量、轨道或优化结论。
 
-当前可用范围是普通 WSL2 **只读环境 Check**。原生 P12 任务封装、隔离、日志终止、资源分档和科学验收尚未实现/未执行。WSL 升级、WSLc 实测和公开发布仍按既有暂停边界处理。
+当前可用范围是普通 WSL2 **只读环境 Check**。原生 P12 任务封装、隔离、日志终止、资源分档和科学验收尚未实现/未执行。原科研环境和 WSL 全局设置保持；该入口不要求升级。源码与静态指南已经公开，镜像分发仍受独立材料和授权条件约束。
 
 ## 零 QM 测试
 
@@ -52,4 +52,4 @@ python -I -B -m unittest discover -s tests -p test_native_wsl2_check.py -v
 | `check-002/check.json` | PASS，exit 0 | 显式原生 Check 正常调用 stdlib worker；启动前 false、完成后 true，0 QM |
 | `compute-refused-001/check.json` | REFUSED，exit 2 | Compute 在发现或启动 WSL 前拒绝，0 QM |
 
-实际观测为 WSL 2.3.26.0、WSL2 kernel 5.15.167.4、UID 1000、Python 3.12.13；七项包 metadata 版本均在 JSON 中记录。两个显式 P12 来源文件仅被读取哈希。`check-002` 的平台资源数据不对已通过的 P12 新增门槛或改判。没有 WSL 升级、WSLc 实测、依赖安装、环境修改、原科研脚本导入、SCF/F/优化或公开发布。
+实际观测为 WSL 2.3.26.0、WSL2 kernel 5.15.167.4、UID 1000、Python 3.12.13；七项包 metadata 版本均在 JSON 中记录。两个显式 P12 来源文件仅被读取哈希。`check-002` 的平台资源数据不对已通过的 P12 新增门槛或改判。该次 Check 没有升级、依赖安装、环境修改、原科研脚本导入或 SCF/F/优化。

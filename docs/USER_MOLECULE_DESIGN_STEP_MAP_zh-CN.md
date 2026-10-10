@@ -1,6 +1,6 @@
 # 技术设计与七步实施的对应关系
 
-日期：2026-10-05；LOCAL-SETUP-1。保存此前沟通的技术分工与实施顺序，作为后续工程入口。完整接口/科学/执行要求见 [技术方案](USER_MOLECULE_TECHNICAL_PLAN_zh-CN.md)，本地位置见 [目录说明](USER_MOLECULE_DIRECTORY_LAYOUT_zh-CN.md)。
+日期：2026-10-05；LOCAL-SETUP-1。保存此前沟通的技术分工与实施顺序，作为后续工程入口。完整接口/科学/执行要求见 [技术方案](USER_MOLECULE_TECHNICAL_PLAN_zh-CN.public.md)，本地位置见 [目录说明](USER_MOLECULE_DIRECTORY_LAYOUT_zh-CN.md)。
 
 技术设计说明要建设哪些部件；W01—W07 说明如何依次实现、验证和交付。一项设计通常跨越几个工作包，各包完成情况由实际代码/记录决定。
 
@@ -42,6 +42,6 @@ Compute： W02 复核回执 → W04 执行监督 → W03 两态计算 → 资格
 
 ## 4. 本轮所处位置
 
-LOCAL-SETUP-1 当时仅建立目录；后续 W01—W04 工程批次已建立隔离 Git 工作区、严格检查、inspect/compute 适配器、专用新候选和宿主监督。Check/Report、计算门禁拒绝与受限容器探针已有实际记录，见 [本轮交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md)。
+LOCAL-SETUP-1 当时仅建立目录；后续 W01—W04 工程批次已建立隔离 Git 工作区、严格检查、inspect/compute 适配器、专用新候选和宿主监督。Check/Report、计算门禁拒绝与受限容器探针已有实际记录，见 [本轮交付](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.public.md)。
 
 Compute profile 仍禁用；W03 compute 数值运行、W05/W06 参考/校准/研究验收 NOT_EXECUTED，D1 的科学判据也未全部冻结。不得将 W01—W04 工程实现表述为全部科学或 D1—D3 验收通过。W07 完整用户科研样例未开始，已提供当前工程入口指南。

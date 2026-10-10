@@ -129,7 +129,7 @@ def main(argv=None):
               'scope': 'PINNED_PUBLIC_SOURCE_INSTALLATION_AND_STDLIB_IO_ONLY',
               'runtime_commit': os.environ.get('GITHUB_SHA'), 'run_id': os.environ.get('GITHUB_RUN_ID'),
               'run_attempt': os.environ.get('GITHUB_RUN_ATTEMPT'), 'scientific_calls': 0,
-              'scientific_acceptance': 'NOT_INHERITED', 'wslc': 'NOT_EXECUTED',
+              'scientific_acceptance': 'NOT_INHERITED',
               'registry_push': False, 'release_publication': False}
     try:
         install = output/'installation'

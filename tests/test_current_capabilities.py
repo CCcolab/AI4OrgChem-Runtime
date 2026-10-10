@@ -1,6 +1,5 @@
 """Current navigation declarations remain separate from execution and historical evidence."""
 import copy
-import hashlib
 import importlib.util
 import json
 from pathlib import Path
@@ -35,17 +34,50 @@ class CurrentCapabilitiesTests(unittest.TestCase):
         self.assertEqual(self.rows['user-compute']['status'],'BLOCKED')
         self.assertNotIn('compute_enabled',self.record)
 
-    def test_historical_v1_is_explicitly_accessible(self):
-        self.assertEqual(hashlib.sha256(MODULE.HISTORICAL.read_bytes()).hexdigest(),'649e19db88c8da48cd0e4db332075a900cc1ee706bf71d2d53cacc9120f79b67')
-        historical=MODULE.load_capabilities(MODULE.HISTORICAL)
-        self.assertEqual(historical['schema_version'],'local-runtime-capabilities-v1')
-        self.assertFalse(historical['compute_enabled'])
-        self.assertEqual(next(r for r in historical['capabilities'] if r['id']=='github-ci')['status'],'NOT_EXECUTED')
+    def run_cli(self,*extra):
+        return subprocess.run([sys.executable,'-B',str(ROOT/'scripts/local-runtime-capabilities.py'),'--json',*extra],capture_output=True,text=True,encoding='utf-8')
 
-    def test_cli_defaults_to_current_and_can_show_history(self):
-        for extra,schema in [([], 'runtime-capabilities-v2'),(['--historical'],'local-runtime-capabilities-v1')]:
-            result=subprocess.run([sys.executable,'-B',str(ROOT/'scripts/local-runtime-capabilities.py'),'--json',*extra],capture_output=True,text=True,encoding='utf-8',check=True)
-            self.assertEqual(json.loads(result.stdout)['schema_version'],schema)
+    def test_history_requires_an_explicit_local_archive(self):
+        result=self.run_cli('--historical')
+        self.assertEqual(result.returncode,2)
+        self.assertIn('LOCAL_ARCHIVE_ONLY',result.stderr)
+        self.assertEqual(result.stdout,'')
+        self.assertFalse(hasattr(MODULE,'HISTORICAL'))
+        result=self.run_cli('--historical-file','unused-local-file.json')
+        self.assertEqual(result.returncode,2)
+        self.assertIn('LOCAL_ARCHIVE_ONLY',result.stderr)
+
+    def test_explicit_synthetic_v1_local_archive_is_read_without_modification(self):
+        historical={
+            'schema_version':'local-runtime-capabilities-v1',
+            'declaration_grants_execution_authorization':False,
+            'compute_enabled':False,
+            'capabilities':[{'id':'local-test','name':'Synthetic local archive',
+                             'status':'NOT_EXECUTED','scope':'A historical test fixture, not current service acceptance'}],
+        }
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/'historical.json'
+            original=(json.dumps(historical,ensure_ascii=False,indent=2)+'\r\n').encode('utf-8')
+            path.write_bytes(original)
+            self.assertEqual(MODULE.load_capabilities(path),historical)
+            result=self.run_cli('--historical','--historical-file',str(path))
+            self.assertEqual(result.returncode,0,result.stderr)
+            self.assertEqual(json.loads(result.stdout),historical)
+            self.assertEqual(path.read_bytes(),original)
+
+    def test_current_registry_and_public_projection_do_not_become_historical_originals(self):
+        result=self.run_cli()
+        self.assertEqual(result.returncode,0,result.stderr)
+        self.assertEqual(json.loads(result.stdout)['schema_version'],'runtime-capabilities-v2')
+        result=self.run_cli('--historical','--historical-file',str(MODULE.CURRENT))
+        self.assertEqual(result.returncode,2)
+        self.assertIn('LOCAL_ARCHIVE_ONLY',result.stderr)
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/'projection.json'
+            path.write_text(json.dumps({'schema_version':'local-runtime-capabilities-v1-public-projection'}),encoding='utf-8')
+            result=self.run_cli('--historical','--historical-file',str(path))
+            self.assertEqual(result.returncode,2)
+            self.assertEqual(result.stdout,'')
 
     def test_ci_and_publication_are_scoped_to_recorded_commit(self):
         self.assertEqual(self.record['publication']['source']['status'],'PUBLIC')

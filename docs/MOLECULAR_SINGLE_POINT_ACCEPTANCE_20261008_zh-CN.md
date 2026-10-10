@@ -1,6 +1,6 @@
 # 用户分子普通RHF单点本地验收报告
 
-2026-10-08。首版profile内的用户XYZ普通单点、canonical轨道和AO密度导出已完成实现、干净构建与本地Docker验收。不是全部化学方法或整个Runtime科学功能已通过。用户操作见[四步指南](MOLECULAR_SINGLE_POINT_zh-CN.md)，冻结门槛见[首版合同](MOLECULAR_SINGLE_POINT_ACCEPTANCE_CONTRACT_zh-CN.md)，机器字段见[本轮状态](../validation/molecular-service/deployment-20261008.json)。
+2026-10-08。首版profile内的用户XYZ普通单点、canonical轨道和AO密度导出已完成实现、干净构建与本地Docker验收。不是全部化学方法或整个Runtime科学功能已通过。用户操作见[四步指南](MOLECULAR_SINGLE_POINT_zh-CN.public.md)，冻结门槛见[首版合同](MOLECULAR_SINGLE_POINT_ACCEPTANCE_CONTRACT_zh-CN.md)，机器字段见[本轮状态](../validation/molecular-service/deployment-20261008.public.json)。
 
 ## 支持范围与方法
 
@@ -49,5 +49,3 @@ AO探针外层工具Shell退出1曾被误当应用退出码。直接子进程采
 ## 交付与保留边界
 
 本轮证据目录：`D:\AI4Science\ai4orgchem-runtime-deliveries\20261008-general-molecular-single-point`。ACTUAL_DELIVERY.json、CI_EXECUTION.json、WRAPPER_COMPARISON.json、原始命令/日志、输入快照、完整合同、NPZ、账本、guard/resource/run manifests及失败更正均保留。审查只读取存量记录，不重复计算。
-
-原科研/runtime工作区、固定案例封存、旧139次OPEN预算保留且不复用。普通入口独立启用；旧条件态Compute继续BLOCKED。WSLc为BLOCKED / NOT_EXECUTED，升级与实测暂停；GitHub CI为NOT_EXECUTED；镜像分发BLOCKED，源码公开另行确认。没有公开推送、标签、Release、在线计算或外部咨询。L4仍仅保存检查点，不支持恢复。

@@ -4,7 +4,7 @@
 
 ## 1. 用户路径与现有范围
 
-**准备自己的分子 → 选择受支持任务与方法 → 输入和资源准入 → 本地执行 → 查看并保存记录**。普通计算无需专有两片段、xy定向、条件态确认或P编号。[四步指南](MOLECULAR_SINGLE_POINT_zh-CN.md)为当前主要操作入口，[首版合同](MOLECULAR_SINGLE_POINT_ACCEPTANCE_CONTRACT_zh-CN.md)给出完整门槛。
+**准备自己的分子 → 选择受支持任务与方法 → 输入和资源准入 → 本地执行 → 查看并保存记录**。普通计算无需专有两片段、xy定向、条件态确认或P编号。[四步指南](MOLECULAR_SINGLE_POINT_zh-CN.public.md)为当前主要操作入口，[首版合同](MOLECULAR_SINGLE_POINT_ACCEPTANCE_CONTRACT_zh-CN.md)给出完整门槛。
 
 “通用”指用户可提交支持范围内的自选结构，逐profile扩大任务；不表示所有元素、方法、分子规模均已支持。当前profile为 `rhf-631gd-small-v1`：H/C/N/O、中性单重态、正偶电子、1—20原子、实际AO≤80、严格XYZ/Å、RHF/6-31G(d)。三维非平面结构可用，输入原字节、原子顺序和坐标保持。几何检查不是化学合理性认证。
 
@@ -57,8 +57,6 @@ QCSchema字段适配仍为后续增强。首版保持项目JSON与明确单位/�
 
 ## 5. 交付、发布与历史材料
 
-`35a1817`固定案例交付和镜像保留；新普通候选基于干净 `1f139aa` 构建，实际宿主运行身份为 `a3f6ec7`，完整镜像ID和结果哈希见[机器状态](../validation/molecular-service/deployment-20261008.json)。后续文档提交与构建/受测身份分开，不冒充镜像重建。
+`35a1817`固定案例交付和镜像保留；新普通候选基于干净 `1f139aa` 构建，实际宿主运行身份为 `a3f6ec7`，完整镜像ID和结果哈希见[机器状态](../validation/molecular-service/deployment-20261008.public.json)。后续文档提交与构建/受测身份分开，不冒充镜像重建。
 
 P01—P14继续作为示例、验证及来源详情，不是新普通服务的必读目录。Git/项目ZIP是源码材料，不含Docker镜像和完整依赖安装环境。本机已具备受测候选，不等于其他机器仅下载源码即可运行。
-
-保持本地执行。WSLc升级和实测暂停，BLOCKED / NOT_EXECUTED；GitHub CI运行NOT_EXECUTED；镜像分发BLOCKED，来源和许可证缺口继承保留；源码公开另行确认。外部专家咨询已取消。本轮无公开推送、正式标签、Release或在线计算。

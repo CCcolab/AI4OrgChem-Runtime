@@ -192,7 +192,7 @@
   },
   "evidence": {
     "method_review": "validation/user-molecule/method-review-20261006/review.json",
-    "proposed_solver_design": "validation/user-molecule/method-review-20261006/solver-next-design.json",
+    "proposed_solver_design": "validation/user-molecule/method-review-20261006/solver-next-design.public.json",
     "prior_review_package_sha256": "b6013f05df06d3988484b2d5b76075ef6888b9fa67af5d7c54bf638a065e8186"
   },
   "legacy_P01_P14": {

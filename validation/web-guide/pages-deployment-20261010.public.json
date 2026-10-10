@@ -1,0 +1,122 @@
+{
+  "schema": "runtime-static-guide-pages-v1",
+  "client_date": "2026-10-10",
+  "url": "https://cccolab.github.io/AI4OrgChem-Runtime/",
+  "source": {
+    "branch": "main",
+    "path": "/docs"
+  },
+  "build_type": "legacy",
+  "https_enforced": true,
+  "scope": "Entire already-public main/docs static content; no online compute",
+  "first_deployment": {
+    "source_commit": "99a52b8a992260cc7ee3e88f699da5454ffb87af",
+    "run_id": 37998298990,
+    "run_url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37998298990",
+    "run_status": "completed",
+    "run_conclusion": "success",
+    "HTTPS_body": {
+      "sha256": "2d36e3af14108defeab5c1f58cdb746569a13bcdec26d50d0f92c1815ff59659",
+      "content_type": [
+        "text/html; charset=utf-8"
+      ],
+      "url": "https://cccolab.github.io/AI4OrgChem-Runtime/",
+      "status": 200,
+      "local_byte_identity": "PASS",
+      "deployed_source": "99a52b8a992260cc7ee3e88f699da5454ffb87af"
+    }
+  },
+  "state_increment": {
+    "base_commit": "99a52b8a992260cc7ee3e88f699da5454ffb87af",
+    "active_html": {
+      "path": "docs/index.html",
+      "bytes": 192796,
+      "sha256": "496219580692e03576cb31ee30a6b4f776d4e9816e469bb673053bc28d4fa692"
+    },
+    "current_export": "docs/runtime-guide/current",
+    "archive": {
+      "path": "docs/runtime-guide/archive/ai4orgchem-runtime-guide-pages-20261010.zip",
+      "bytes": 422394,
+      "sha256": "2e9ce3f0983eb88838c7344ef3634914d01179ddb9e0fd2209d1cd8f789e37fe",
+      "crc": "PASS",
+      "members": [
+        {
+          "path": "docs/index.html",
+          "bytes": 192796,
+          "sha256": "496219580692e03576cb31ee30a6b4f776d4e9816e469bb673053bc28d4fa692"
+        },
+        {
+          "path": "docs/.nojekyll",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "README.md",
+          "bytes": 33846,
+          "sha256": "0ffb8766a26f3d16190e782ddf69816168855e472f790e285dd6a3d6e6005ab3"
+        },
+        {
+          "path": "content/guide_zh-CN.md",
+          "bytes": 100889,
+          "sha256": "c1053e01f3174a614fd0b99dc19eb26ad81916535df03aa07b8f4cb2512ff1f1"
+        },
+        {
+          "path": "provenance/sources.md",
+          "bytes": 18663,
+          "sha256": "0ac1404ca35ef0b4c27a472c1791e9ee3f60af1f9ef5126cad06658a007c3fbe"
+        },
+        {
+          "path": "verification/checks.md",
+          "bytes": 35247,
+          "sha256": "e0691e2fb44c6dea293a9b1c72136ecc105e1b84ba05649d6446f35f44839d9c"
+        },
+        {
+          "path": "MIGRATION.md",
+          "bytes": 36989,
+          "sha256": "ee94da01951b4af154bc3d189c5b6c54f8b73304d5b10dd15de05ec76723b920"
+        },
+        {
+          "path": "MANIFEST.txt",
+          "bytes": 1844,
+          "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6"
+        },
+        {
+          "path": "templates/molecular-service/water/request.json",
+          "bytes": 277,
+          "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92"
+        },
+        {
+          "path": "templates/molecular-service/water/molecule.xyz",
+          "bytes": 123,
+          "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7"
+        }
+      ]
+    },
+    "local_browser_record": "validation/web-guide/browser-pages-state-20261010.json",
+    "commands_and_inputs": "ALL_79_COPY_TARGETS_AND_PRE_CODE_FRAGMENTS_UNCHANGED",
+    "final_increment_live_HTTP": "NOT_EXECUTED_AT_THIS_RECORD_CREATION; bind subsequent Pages run and local deployment receipt, do not inherit first-body hash"
+  },
+  "old_records_and_archives": "PRESERVED_AS_HISTORICAL",
+  "online_compute": "NOT_PROVIDED",
+  "scientific_rules_thresholds_source_locks_code_and_CI_workflow": "UNCHANGED",
+  "OCI_distribution": "BLOCKED_LOCAL_ONLY",
+  "legacy_condition_Compute": "BLOCKED",
+  "L4": "CHECKPOINT_SAVE_ONLY_NO_RESUME",
+  "version_tag_Release_image_publication": "NONE",
+  "not_executed": [
+    "true 200-percent browser zoom",
+    "full keyboard audit",
+    "multi-browser audit",
+    "new scientific calculation",
+    "Docker/WSL acceptance"
+  ],
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "078480ac850c8322bf365510f06464276f37b07316709593f11f5a0fba4ace81",
+    "original_size_bytes": 4217,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

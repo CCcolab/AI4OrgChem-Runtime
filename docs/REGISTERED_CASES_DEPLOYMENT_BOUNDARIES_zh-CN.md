@@ -1,6 +1,6 @@
 # 登记固定案例的部署边界
 
-本轮在隔离runtime工作区新增三个固定案例入口，复用原开发树已经存在的驱动和冻结协议。2026-10-08的三个固定案例已实际执行，并通过本地Docker候选的限定范围验收；工程和真实数值记录分开保存，见[验收报告](REGISTERED_CASES_ACCEPTANCE_20261008_zh-CN.md)及[机器状态](../validation/registered-cases/deployment-20261008.json)。
+本轮在隔离runtime工作区新增三个固定案例入口，复用原开发树已经存在的驱动和冻结协议。2026-10-08的三个固定案例已实际执行，并通过本地Docker候选的限定范围验收；工程和真实数值记录分开保存，见[验收报告](REGISTERED_CASES_ACCEPTANCE_20261008_zh-CN.md)及[机器状态](../validation/registered-cases/deployment-20261008.public.json)。
 
 ## 本轮服务范围
 
@@ -41,9 +41,6 @@ P01/P13保留资产目录增加局部 `.gitattributes` 的 `-text` 规则，避�
 - 原P14七任务继续独立保留：`evidence`、`core-tests`、`p14-smoke`、`p14-equivalence`、`p14-fixed`、`p14-optimize`、`p14-classify`。本轮新增入口不替代这些任务或扩大它们的科学支持声明。
 - L4可保存检查点，**不支持恢复运行**；没有resume，重新运行应另建新目录。
 - 用户分子Compute继续 **BLOCKED**；本轮没有改变其条件SCF、占据、根搜索或最终验收门槛。
-- WSLc继续暂停，状态 **BLOCKED / NOT_EXECUTED**；不升级WSL、不修改全局配置。
 - GitHub CI运行 **NOT_EXECUTED**。本地工程测试或Docker验收不能命名为GitHub CI已通过。
 - 新本地候选镜像新增RDKit/Pillow，其版本和wheel来源已锁定，完整许可、署名及对应源码的分发审查仍未闭合；**镜像分发BLOCKED**。本地受控运行验收与公开分发是不同决定。
 - 新增驱动、适配器及保留资产的Git/ZIP范围需要另行确认；此前源码候选不自动包含本轮新文件。当前不推送、不发布镜像、标签或Release。
-
-具体使用步骤见 [固定案例使用指南](REGISTERED_CASES_zh-CN.md)。原P14支持和限制仍见 [分层运行合同](RUN_zh-CN.md)；这些历史验收不能外推为新候选或WSLc的已验收记录。

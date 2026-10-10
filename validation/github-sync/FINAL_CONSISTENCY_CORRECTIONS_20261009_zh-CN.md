@@ -7,6 +7,5 @@
 
 验收见validation/web-guide/final-consistency-20261009.json与browser-final-consistency-20261009.json，以及ci-context-test-20261009.json。新源码提交将在本地形成，之后重新封包与历史扫描；旧68ab316源码包／备份／审阅包继续保留，不冒充最终新候选。
 
-本轮无新增计算模块、科学重算、资源探针、Docker／WSL操作、Skill安装、在线服务、仓库创建、推送、Pages、版本／tag／Release。源码及指南同步条件与公开范围确认继续分开；镜像分发、WSLc和旧条件Compute阻塞不变。
 
 补核后的当前网页记录为final-consistency-r2-20261009.json：定点保留原否定句含义，正文与来源下载附加的旧交付说明均明确历史。旧阶段归档和记录保留；必要局部浏览器检查再次通过。CI代码与4项上下文测试未再次修改或重复运行；真实远端状态仍NOT_EXECUTED。

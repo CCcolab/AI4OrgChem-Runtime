@@ -1,15 +1,15 @@
 # 分层运行合同
 
-当前状态（2026-10-03）：指定本地 Docker 候选 L0—L4/等价性/联合分类已验证；严格断网仅覆盖 L0—L2、等价性与指定探针，L3/L4 严格断网未执行。WSLc 暂缓并保持 BLOCKED / NOT_EXECUTED；CI 静态审查完成、运行 NOT_EXECUTED。镜像分发 BLOCKED；源码公开另行确认。身份与范围以 validation/final-delivery-status.json 和 DELIVERY_REVIEW_2026-10-03_zh-CN.md 为准，既有备份为历史快照。
+当前状态（2026-10-10）：源码和静态指南已公开；当前各类服务见[专业服务矩阵](CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)。本页说明原七任务的 Docker 运行合同。指定本地候选 L0—L4、等价性及联合分类的历史验收保留，严格断网仅覆盖 L0—L2、等价性和指定探针，L3/L4 严格断网未执行。[Actions run 38003025857](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38003025857)对 `86e29b47` 三个既有 job 成功，仅覆盖工程合同及旧 L0/L1；不认证本轮新安装路径或全部科学服务。镜像分发仍受[公开边界](PUBLICATION_BOUNDARIES_zh-CN.md)中的独立阻塞约束。
 
-专业阅读入口：[模块与规则对应表](PROFESSIONAL_SERVICES_zh-CN.md)、[结果判读](REVIEW_RESULTS_zh-CN.md)、[三类用户路径](USER_PATHS_zh-CN.md)、[已有验收示例](examples/P14_REVIEW_20261002_zh-CN.md)。文档示例不自动启动新运行；本轮沿用已有结果。
+专业阅读入口：[模块与规则对应表](PROFESSIONAL_SERVICES_zh-CN.public.md)、[结果判读](REVIEW_RESULTS_zh-CN.public.md)、[三类用户路径](USER_PATHS_zh-CN.public.md)、[已有验收示例](examples/P14_REVIEW_20261002_zh-CN.public.md)。文档示例不自动启动新运行；本轮沿用已有结果。
 
-Windows 日常使用 scripts/start-runtime.ps1，可从 PowerShell 5.1 自动选择已有 7.3+，固定 Docker；底层 scripts/run-wslc.ps1 仍需 PowerShell 7.3+，默认 WSLc 仅为待验收候选。当前 Docker 用法和备份见 LOCAL_DELIVERY_zh-CN.md。容器内稳定接口为 `python -m runtime.cli run TASK`，entrypoint 自动调用。任务白名单：evidence、core-tests、p14-smoke、p14-equivalence、p14-fixed、p14-optimize、p14-classify。未知 task/参数由 argparse/PowerShell 拒绝。
+Windows 日常使用 `scripts/start-runtime.ps1`，可从 PowerShell 5.1 自动选择已有 7.3+，固定 Docker；底层 `scripts/run-docker.ps1` 需已有 PowerShell 7.3+。容器内稳定接口为 `python -m runtime.cli run TASK`，entrypoint 自动调用。任务白名单：evidence、core-tests、p14-smoke、p14-equivalence、p14-fixed、p14-optimize、p14-classify。未知 task/参数由 argparse/PowerShell 拒绝。新普通分子及三批案例使用各自入口，不套用原 P14 镜像身份。
 
 ```powershell
-./scripts/run-wslc.ps1 -Engine docker -Task evidence -Image ai4orgchem-runtime:oci-candidate-20261002 -OutputRoot 'D:\AI4Science\ai4orgchem-runtime-runs\我的复核 output'
-./scripts/run-wslc.ps1 -Engine docker -Task core-tests -Image ai4orgchem-runtime:oci-candidate-20261002
-./scripts/run-wslc.ps1 -Engine docker -Task p14-smoke -Image ai4orgchem-runtime:oci-candidate-20261002 -Threads 8
+./scripts/run-docker.ps1 -Task evidence -Image ai4orgchem-runtime:oci-candidate-20261002 -OutputRoot 'D:\AI4Science\ai4orgchem-runtime-runs\我的复核 output'
+./scripts/run-docker.ps1 -Task core-tests -Image ai4orgchem-runtime:oci-candidate-20261002
+./scripts/run-docker.ps1 -Task p14-smoke -Image ai4orgchem-runtime:oci-candidate-20261002 -Threads 8
 ```
 
 每次自动建立唯一 UTC 时间+task+随机 ID 目录；不复用 runs/reproduction，不读取旧输出，不清理历史结果。包含 run-manifest.json、各子程序 stdout/stderr、P14 原输出 result.json/report.md 和适用的 checkpoint.json。日志不主动输出全部环境变量、令牌或用户目录。
@@ -33,7 +33,7 @@ L4 检查点持久保存；源码无恢复能力，不提供 resume。重新开�
 必须先获得本次 smoke、optimization、equivalence、source-level 四个完整运行目录，每份 manifest 的 task、PASS/原退出码、源 commit、输入哈希、依赖版本、协议及输出哈希需匹配。允许分阶段运行，不要求同一时间。不能传冻结 JSON 或缺 manifest 的历史文件。
 
 ```powershell
-./scripts/run-wslc.ps1 -Engine docker -Task p14-classify -Image ai4orgchem-runtime:oci-candidate-20261002 `
+./scripts/run-docker.ps1 -Task p14-classify -Image ai4orgchem-runtime:oci-candidate-20261002 `
   -OutputRoot D:\AI4Science\ai4orgchem-runtime-runs\my-reproduction `
   -SmokeRun D:\AI4Science\ai4orgchem-runtime-runs\my-reproduction\SMOKE_RUN `
   -OptimizationRun D:\AI4Science\ai4orgchem-runtime-runs\my-reproduction\OPTIMIZE_RUN `
@@ -41,8 +41,8 @@ L4 检查点持久保存；源码无恢复能力，不提供 resume。重新开�
   -SourceLevelRun D:\AI4Science\ai4orgchem-runtime-runs\my-reproduction\FIXED_RUN
 ```
 
-上游分类器 partial/disagreement 可以退出 0；manifest 保留原退出码并将联合资格非 PASS 记为 FAIL，不把科学分歧伪造为程序异常或 PASS。完整新四结果分类已在本机 Docker 执行，PASS/consistent；来源和限制见 validation/classification-summary.json。WSLc 尚未执行。
+上游子程序可能在数值资格未通过时返回 0。本轮 Runtime 修订保留真实子程序退出码；对五个带资格门槛的 P14 任务，子程序退出 0 但门槛为 `FAIL`、`UNKNOWN` 或缺失时，Runtime 返回 4，并在 manifest 记录不合格状态。真实子程序非零退出仍保留其错误码。只看子程序 0 不能判定成功。历史镜像内尚未包含该修订时，应同时核对 manifest，不把新行为倒写到旧记录。完整四结果分类曾在本地 Docker 执行，PASS/consistent；该结论限于保存记录的固定协议。
 
-## 独立 WSL2 验收
+## 独立普通 WSL2 记录
 
-新 candidate venv、固定归档提取的只读源码和持久目录由操作者准备。用 validate-wsl2.sh 依次检查依赖、runtime 测试及 L0—L2。该脚本接受 Python/source/output/共享锁绝对路径，不安装软件、不读取同级开发仓库。归档取得用 scripts/fetch-source.py；它拒绝已有目的目录，避免覆盖。
+早期独立 WSL2 candidate venv 曾验收原入口 L0—L2 与 STO-3G 等价性；这些记录只属于当时的环境与源码，不授予新增服务原生计算资格。当前[普通 WSL2 原生入口](NATIVE_WSL2_RUNTIME_zh-CN.md)只有只读环境 Check。`validate-wsl2.sh` 的显式 Python/source/output/共享锁参数不安装软件，不读取同级开发仓库；使用者必须自行准备独立候选目录。不要把该历史辅助脚本当成所有服务的原生计算入口。

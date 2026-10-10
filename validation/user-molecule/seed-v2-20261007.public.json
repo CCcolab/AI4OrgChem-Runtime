@@ -1,0 +1,426 @@
+{
+  "schema_version": "user-molecule-seed-v2-review-v1",
+  "date": "2026-10-07",
+  "status": "IMPLEMENTED_EXECUTED_DIAGNOSTIC_UNQUALIFIED",
+  "runtime_execution_commit": "60d76deeb468fdd2dc2c444b7cf60d95a9dd9290",
+  "identity": {
+    "geometry_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+    "profile_sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9",
+    "dependencies_sha256": "5c355f34ff1199b82da60da9d49d1e7e138af86db18b356a49ffceb71980743b",
+    "mode": "LIVE_CONDITIONAL_SEED_V2_DIAGNOSTIC",
+    "execution_contract_sha256": "6e2341303481093dca053c273a5a529c1e200643ecd488748ed67e126dc3307b",
+    "runtime_test_commit": "60d76deeb468fdd2dc2c444b7cf60d95a9dd9290",
+    "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+    "image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+    "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+    "science_baseline_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+    "ordinary_record_sha256": "b0a9fd8a2487d725668823b75966176e98eb25551f40b9f177b485141ecb9663",
+    "ordinary_arrays_sha256": "2a0318c42ee47001e2774ea6b4fec8317b1887c744a2720e71033a75b18f6051",
+    "initialization_policy": "MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2",
+    "seed_parent_ordinary_record_sha256": "b0a9fd8a2487d725668823b75966176e98eb25551f40b9f177b485141ecb9663",
+    "seed_parent_ordinary_arrays_sha256": "2a0318c42ee47001e2774ea6b4fec8317b1887c744a2720e71033a75b18f6051",
+    "shared_seed_archive_sha256": "da6bb4f367ff0f0c4a787a909908bdf961cf9ccebe2145ef25f9ce4977d4dac8",
+    "seed_readiness_receipt_sha256": "dbdafa14aa5959bd9a8c3952e737cdd1f51aa9a2df2526ad92587f18b8d2eea4",
+    "seed_implementation_runtime_commit": "60d76deeb468fdd2dc2c444b7cf60d95a9dd9290",
+    "seed_source_files_sha256": "434268579e185bdaf4dd8ae79368ec17490fe95cdc112e540f2e201030d3c39d",
+    "seed_source_file_sha256": {
+      "runtime/user_molecule/seed_v2.py": "fe266fd7174c9d7be896d4eb5ee19f265bc3cfd1b0cb201eb042d07c42ccfaba",
+      "reference/seed_v2.py": "6ef546b7ac7500225e013f23211b20206d2578f17e129779323d1cb6b3ea2f6f",
+      "runtime/user_molecule/residual_seed_v2.py": "0e906e8b2b8eefb9c827747d0e213089d26267c10b4019b90e3503adb3d3303c",
+      "reference/residual_seed_v2.py": "5aa7fc773db6c425f9812467b07c979c6e95016bab68203437d66aae025a049e",
+      "runtime/user_molecule/residual_seed_preparation.py": "e2a6f8ca1486f67e9f1026b43cb321b01abd3812a2b8b9564967a8924a7341d4"
+    },
+    "ordinary_D0_identity": {
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "order": "C",
+      "sha256": "9dc813178f17be82f7c231c7b9d0a0494e8d4bcd2acea05ac2605bf3bf268f8a"
+    },
+    "ordinary_mo_coefficients_identity": {
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "order": "C",
+      "sha256": "c4ebf474d3dc13e14bd08bbaaff09797805da345877b220b6dc9a5ecea0ba42e"
+    },
+    "ordinary_mo_occupations_identity": {
+      "shape": [
+        14
+      ],
+      "dtype": "<f8",
+      "order": "C",
+      "sha256": "425b2c4fbffb758896a2c8bb66fe2387cf784b2911147d2d48a195ee29a5bb9e"
+    },
+    "seed_density_identity": {
+      "shape": [
+        14,
+        14
+      ],
+      "dtype": "<f8",
+      "order": "C",
+      "sha256": "d04e9444bbe8b171476ed8324817781ff541ed6e178b5a736e83013c9e5e89e8"
+    },
+    "mdr002_record_sha256": "11e528ccc43eea7f8af9665621bb8c9afea08d241abc18b7f6a1dbb7aba9a248",
+    "expert_cancellation_receipt_sha256": "2821fdc2c487f76277cfe3a2348729b65303ef4f15f4d74b35e5b368d501a342",
+    "external_review_status": "CANCELLED",
+    "external_review_required": false,
+    "production_activation": false,
+    "method_approval": false
+  },
+  "engineering_status": "PASS_TARGETED_ENGINEERING_ONLY",
+  "unique_engineering_tests": 239,
+  "new_tests": 86,
+  "regression_tests": 153,
+  "full_local_W01_W07_CI_this_round": "NOT_EXECUTED",
+  "github_actions": "NOT_EXECUTED",
+  "seed_definition_and_entry_status": "PASS_SEED_V2_CACHED_PREPARATION_ONLY",
+  "reference_constructed_seed_relative_difference": 1.107567855404479e-15,
+  "seed_masked_electrons": 15.999999999999996,
+  "seed_physical_electrons": 16.47453645981217,
+  "scientific_processes": 1,
+  "source_callbacks": 591,
+  "nr_rks_entered": 591,
+  "nr_rks_completed": 591,
+  "nr_rks_failed": 0,
+  "precharged_slots": 591,
+  "pending_slots": 0,
+  "ordinary_scf_grid_integral_calls": 0,
+  "wall_through_cleanup_seconds": 289.1720000000205,
+  "resource_status": "RESOURCE_CANDIDATE_EXACT_FIXTURE",
+  "resource_peak_bytes": 241770496,
+  "resource_scope": "EXACT_ETHENE_14AO_PILOT_CACHE_PROFILE_V2_THREE_SERIAL_PATHS_ONLY",
+  "container_exit_code": 0,
+  "container_removed": true,
+  "output_retention": {
+    "container_removed": true,
+    "retained_file_count": 29,
+    "output_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-seed-v2\\live-a1\\output"
+  },
+  "endpoints": {
+    "production_copy": {
+      "stop_reason": "INSUFFICIENT_BUDGET_FOR_JACOBIAN_TRIAL_AND_FINAL_RECHECK",
+      "engine_qualified": false,
+      "endpoint_gate": {
+        "qualified": false,
+        "checks": {
+          "finite": true,
+          "overlap_positive": true,
+          "commutator": true,
+          "electron_count": true,
+          "idempotency": true,
+          "energy_closure": true,
+          "overlap_mask": true,
+          "fock_mask": true,
+          "mapped_density": false,
+          "raw_gap": false
+        },
+        "reasons": [
+          "MAPPED_DENSITY_FAILED",
+          "RAW_GAP_FAILED",
+          "ROOT_AMBIGUOUS"
+        ],
+        "operator_source": "RECOMPUTED_AT_RETURNED_DENSITY_NO_DIIS",
+        "thresholds": {
+          "commutator_frobenius": 1e-05,
+          "electron_count_abs": 1e-07,
+          "idempotency_relative": 1e-07,
+          "energy_closure_hartree": 1e-09,
+          "mask_max_abs": 1e-12,
+          "mapped_density_relative": 2e-08,
+          "final_non_diis_gap_minimum_hartree": 1e-06
+        },
+        "final_commutator_frobenius_norm": 1.8890195723410966e-09,
+        "masked_metric_electron_count": 15.999999999999977,
+        "closed_shell_idempotency_relative_residual": 4.477632515303005e-15,
+        "energy_component_closure_residual_hartree": 1.4210854715202004e-14,
+        "mapped_density_relative_residual": 0.42980285975005655,
+        "final_non_diis_gap_hartree": 2.67841304690819e-15,
+        "raw_map_absolute_frobenius": 1.9890267467484586,
+        "returned_density_energy_recheck_hartree": 0.0
+      },
+      "mapped_endpoint_gate": null,
+      "source_callback_attempts": 196,
+      "initialization": {
+        "policy": "MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2",
+        "status": "PREPARED_ENGINEERING_V2_SEED",
+        "ordinary_density_id": "e284e99d83d2784ab9a6bdcc0c5106b951105d198a150d118a5506f6d47ea0b6",
+        "seed_density_id": null,
+        "initial_density_id": "2d588e9906a1ea3ad78caad032646a01b5a66856c98778120a144a7c79f9ec33",
+        "raw_aufbau_gap_hartree": 4.135580766728708e-15
+      },
+      "scientific_delta": null,
+      "raw_result_sha256": "743004bb21747f473997145b642bb3412ba63439eb93ebe6cf8e0b2e205e2feb"
+    },
+    "production_owned": {
+      "stop_reason": "INSUFFICIENT_BUDGET_FOR_JACOBIAN_TRIAL_AND_FINAL_RECHECK",
+      "engine_qualified": false,
+      "endpoint_gate": {
+        "qualified": false,
+        "checks": {
+          "finite": true,
+          "overlap_positive": true,
+          "commutator": true,
+          "electron_count": true,
+          "idempotency": true,
+          "energy_closure": true,
+          "overlap_mask": true,
+          "fock_mask": true,
+          "mapped_density": false,
+          "raw_gap": false
+        },
+        "reasons": [
+          "MAPPED_DENSITY_FAILED",
+          "RAW_GAP_FAILED",
+          "ROOT_AMBIGUOUS"
+        ],
+        "operator_source": "RECOMPUTED_AT_RETURNED_DENSITY_NO_DIIS",
+        "thresholds": {
+          "commutator_frobenius": 1e-05,
+          "electron_count_abs": 1e-07,
+          "idempotency_relative": 1e-07,
+          "energy_closure_hartree": 1e-09,
+          "mask_max_abs": 1e-12,
+          "mapped_density_relative": 2e-08,
+          "final_non_diis_gap_minimum_hartree": 1e-06
+        },
+        "final_commutator_frobenius_norm": 1.889025561222797e-09,
+        "masked_metric_electron_count": 15.99999999999998,
+        "closed_shell_idempotency_relative_residual": 3.884024208730843e-15,
+        "energy_component_closure_residual_hartree": 1.4210854715202004e-14,
+        "mapped_density_relative_residual": 0.43357147297140336,
+        "final_non_diis_gap_hartree": 5.6343818499726694e-15,
+        "raw_map_absolute_frobenius": 2.0064670041254526,
+        "returned_density_energy_recheck_hartree": 0.0
+      },
+      "mapped_endpoint_gate": null,
+      "source_callback_attempts": 196,
+      "initialization": {
+        "policy": "MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2",
+        "status": "PREPARED_ENGINEERING_V2_SEED",
+        "ordinary_density_id": "e284e99d83d2784ab9a6bdcc0c5106b951105d198a150d118a5506f6d47ea0b6",
+        "seed_density_id": null,
+        "initial_density_id": "2d588e9906a1ea3ad78caad032646a01b5a66856c98778120a144a7c79f9ec33",
+        "raw_aufbau_gap_hartree": 6.897260540483785e-15
+      },
+      "scientific_delta": null,
+      "raw_result_sha256": "80ede1dfea999907f798e512535267590cbeea4d7426e16639b166449a2a7daa"
+    },
+    "independent_reference": {
+      "stop_reason": "EVALUATION_BUDGET_EXHAUSTED",
+      "engine_qualified": false,
+      "endpoint_gate": null,
+      "mapped_endpoint_gate": null,
+      "source_callback_attempts": 199,
+      "initialization": {
+        "policy": "MASKED_METRIC_OCCUPIED_SUBSPACE_SEED_V2",
+        "status": "PREPARED_ENGINEERING_INITIALIZATION",
+        "ordinary_density_id": "e284e99d83d2784ab9a6bdcc0c5106b951105d198a150d118a5506f6d47ea0b6",
+        "seed_density_id": "2d588e9906a1ea3ad78caad032646a01b5a66856c98778120a144a7c79f9ec33",
+        "initial_density_id": "2d588e9906a1ea3ad78caad032646a01b5a66856c98778120a144a7c79f9ec33",
+        "raw_aufbau_gap_hartree": null
+      },
+      "scientific_delta": null,
+      "raw_result_sha256": "d99fceda9c17391857e564f0743d323dbe5f88948f9bf7ae372e2f1c414e0b06"
+    }
+  },
+  "comparisons": {
+    "T05_initial_same_density": {
+      "status": "PASS_SCOPED_OPERATOR_ENERGY_MASK_EQUIVALENCE_SUBSET",
+      "full_T05": "NOT_EXECUTED_COMPLETE_MASK_ZERO_ITEMS",
+      "scope": "INITIAL_F_DSEED_OPERATOR_ENERGY_PREPARED_MASK_EQUIVALENCE_SUBSET_NOT_QUALIFIED_CONDITIONAL_ENDPOINT",
+      "T05_operator_energy_subset": "PASS",
+      "rows": [
+        {
+          "path": "production_copy",
+          "matrices": {
+            "fock": {
+              "max_abs": 1.7763568394002505e-15,
+              "frobenius": 1.7857021559257928e-15
+            },
+            "raw_fock": {
+              "max_abs": 1.7763568394002505e-15,
+              "frobenius": 1.7857021559257928e-15
+            },
+            "coulomb_matrix": {
+              "max_abs": 0.0,
+              "frobenius": 0.0
+            },
+            "exchange_matrix": {
+              "max_abs": 3.552713678800501e-15,
+              "frobenius": 3.942977190627075e-15
+            },
+            "xc_potential": {
+              "max_abs": 0.0,
+              "frobenius": 0.0
+            }
+          },
+          "component_abs_hartree": {
+            "one_electron_energy": 2.842170943040401e-14,
+            "coulomb_energy": 1.4210854715202004e-14,
+            "exact_exchange_energy": 4.440892098500626e-16,
+            "semilocal_xc_energy": 0.0,
+            "nuclear_repulsion": 0.0
+          },
+          "mask_max_abs": {
+            "masked_overlap": 0.0,
+            "masked_hcore": 0.0,
+            "masked_eri": 0.0,
+            "conditional_fock_deleted_blocks_max_abs": 0.0
+          },
+          "deleted_eri_count_equal": true,
+          "total_energy_abs_hartree": 2.842170943040401e-14,
+          "grid_electrons_abs": 0.0,
+          "pass_original_tolerance": true
+        },
+        {
+          "path": "production_owned",
+          "matrices": {
+            "fock": {
+              "max_abs": 3.552713678800501e-15,
+              "frobenius": 7.372831856405895e-15
+            },
+            "raw_fock": {
+              "max_abs": 3.552713678800501e-15,
+              "frobenius": 7.372831856405895e-15
+            },
+            "coulomb_matrix": {
+              "max_abs": 3.552713678800501e-15,
+              "frobenius": 7.379254317252428e-15
+            },
+            "exchange_matrix": {
+              "max_abs": 8.881784197001252e-16,
+              "frobenius": 1.6751704911271687e-15
+            },
+            "xc_potential": {
+              "max_abs": 0.0,
+              "frobenius": 0.0
+            }
+          },
+          "component_abs_hartree": {
+            "one_electron_energy": 2.842170943040401e-14,
+            "coulomb_energy": 0.0,
+            "exact_exchange_energy": 0.0,
+            "semilocal_xc_energy": 0.0,
+            "nuclear_repulsion": 0.0
+          },
+          "mask_max_abs": {
+            "masked_overlap": 0.0,
+            "masked_hcore": 0.0,
+            "masked_eri": 0.0,
+            "conditional_fock_deleted_blocks_max_abs": 0.0
+          },
+          "deleted_eri_count_equal": true,
+          "total_energy_abs_hartree": 2.842170943040401e-14,
+          "grid_electrons_abs": 0.0,
+          "pass_original_tolerance": true
+        }
+      ],
+      "density_id": "2d588e9906a1ea3ad78caad032646a01b5a66856c98778120a144a7c79f9ec33"
+    },
+    "terminal_endpoints": {
+      "status": "NOT_EXECUTED_UNQUALIFIED_ENDPOINTS",
+      "P12": "NOT_EXECUTED",
+      "P13": "NOT_EXECUTED",
+      "T06": "NOT_EXECUTED"
+    },
+    "raw_endpoint_differences": [
+      {
+        "left": "production_copy",
+        "right": "production_owned",
+        "role": "RAW_CODE_DIAGNOSTIC_NOT_SCIENTIFIC_ACCEPTANCE",
+        "density_frobenius": 3.0380426465981454e-14,
+        "energy_abs_hartree": 2.842170943040401e-14,
+        "fock_frobenius": 1.6296389470297703e-14,
+        "missing_value_reason": null
+      },
+      {
+        "left": "production_copy",
+        "right": "independent_reference",
+        "role": "RAW_CODE_DIAGNOSTIC_NOT_SCIENTIFIC_ACCEPTANCE",
+        "density_frobenius": 0.04233164680349011,
+        "energy_abs_hartree": 0.0002138884680675801,
+        "fock_frobenius": 0.003811918606477364,
+        "missing_value_reason": null
+      },
+      {
+        "left": "production_owned",
+        "right": "independent_reference",
+        "role": "RAW_CODE_DIAGNOSTIC_NOT_SCIENTIFIC_ACCEPTANCE",
+        "density_frobenius": 0.04233164680349162,
+        "energy_abs_hartree": 0.00021388846809600182,
+        "fock_frobenius": 0.003811918606473907,
+        "missing_value_reason": null
+      }
+    ],
+    "research_classification": "NOT_GRANTED",
+    "extra_operator_calls": 0
+  },
+  "reference_final_gate_status": "NOT_EXECUTED_BUDGET_STOP; DO_NOT_INFER_PRODUCTION_GAP_FAILURE",
+  "production_final_gate_status": "FAILED_MAPPED_DENSITY_AND_FINAL_POSITIVE_GAP",
+  "delta_hartree": null,
+  "delta_kcal_mol": null,
+  "compute_enabled": false,
+  "production_activation": false,
+  "scientific_protocol_approved": false,
+  "energy_stationarity": "NOT_ESTABLISHED",
+  "stability": "NOT_EXECUTED",
+  "external_review_status": "CANCELLED_BY_USER",
+  "external_review_required": false,
+  "public_push_release": "NOT_AUTHORIZED",
+  "image_distribution": "BLOCKED",
+  "old_original_P01_P14_rerun": false,
+  "old_L0_L4_rerun": false,
+  "image_rebuild": false,
+  "new_scientific_retry": false,
+  "evidence": {
+    "execution": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-seed-v2\\live-a1\\EXECUTION.json",
+      "size_bytes": 4206,
+      "sha256": "373bc9417addee5ee4a0b938112aef5f2fff1b31445f488dcccfb37c237ef22a"
+    },
+    "contract": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-seed-v2\\live-a1\\execution-contract.json",
+      "size_bytes": 9604,
+      "sha256": "6e2341303481093dca053c273a5a529c1e200643ecd488748ed67e126dc3307b"
+    },
+    "resource": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-seed-v2\\live-a1\\resource-qualification.json",
+      "size_bytes": 4639,
+      "sha256": "0255a1ff2a6b42d544e547bb41740a314b7610a9d5dd020718c0ca8515bdf1db"
+    },
+    "diagnostic": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-seed-v2\\live-a1\\output\\diagnostic-result.json",
+      "size_bytes": 296836,
+      "sha256": "0b5d0454a6b4c337ecad9729651700790f1d8004a276b455f325ceb18436a205"
+    },
+    "engineering": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-seed-v2\\engineering-a1\\output\\seed-v2-engineering-tests.json",
+      "size_bytes": 98823,
+      "sha256": "01b93e37fe7fc2eecd9edfa2b12ddf4a817ae76ec465a169d1892d208556403e"
+    },
+    "readiness": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-seed-v2\\readiness-a1\\output\\seed-readiness.json",
+      "size_bytes": 35430,
+      "sha256": "dbdafa14aa5959bd9a8c3952e737cdd1f51aa9a2df2526ad92587f18b8d2eea4"
+    },
+    "wall": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-seed-v2\\live-a1\\WALL_SETTLEMENT.json",
+      "size_bytes": 5039,
+      "sha256": "9f6bcccc512a834a36aadac8a9bfab08901eac193e30cf7973667da9dfbced4a"
+    }
+  },
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "3c8c744a7ad9a93b3c34eded8dcdd84cba896e84cf76b262accce5907b783b48",
+    "original_size_bytes": 17509,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

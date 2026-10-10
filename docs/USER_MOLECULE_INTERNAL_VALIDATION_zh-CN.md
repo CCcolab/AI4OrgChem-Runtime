@@ -1,6 +1,6 @@
 # 用户分子入口：内部定义与验证流程
 
-当前（2026-10-10）：V2与原生root runner已实现并真实诊断。[实际root运行](USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.md)有139次完成NR、138成功callback和一次截止失败，未正常返回root、未完成tails/正式端点；[合作停止工程](USER_MOLECULE_NATIVE_SHUTDOWN_ENGINEERING_20261007_zh-CN.md)另记录154项回归、零native闭合实例与强杀未知回执。原gap/映射/对易子等门槛保持，条件态Compute因无合格端点及完整实证继续BLOCKED。
+当前（2026-10-10）：V2与原生root runner已实现并真实诊断。[实际root运行](USER_MOLECULE_ROOT_NATIVE_DIAGNOSTIC_20261007_zh-CN.public.md)有139次完成NR、138成功callback和一次截止失败，未正常返回root、未完成tails/正式端点；[合作停止工程](USER_MOLECULE_NATIVE_SHUTDOWN_ENGINEERING_20261007_zh-CN.md)另记录154项回归、零native闭合实例与强杀未知回执。原gap/映射/对易子等门槛保持，条件态Compute因无合格端点及完整实证继续BLOCKED。
 
 当前模块和解释边界见 [专业服务矩阵](CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)及 [能力注册表v2](../configs/runtime-capabilities-v2.json)。普通用户XYZ的RHF受限本地验收独立成立，不被条件Compute关闭覆盖。源码和静态指南已公开，Actions run38003025857对86e29b47三个既有job成功，仅限登记工程及旧L0/L1；下文当时的未实现、远端CI未执行和公开待确认属于历史，不覆盖当前记录。
 
@@ -18,9 +18,9 @@
 
 此前 [V2存量矩阵内部分析](USER_MOLECULE_SEED_V2_INTERNAL_ANALYSIS_20261007_zh-CN.md)已确认窄π谱空间中的秩一占据和参考预算返回语义，并澄清能量导数关系。新增F/SCF/容器为0，原门槛及Compute BLOCKED保留；该轮提出的预算记录候选现已另行实现并通过模拟工程验证，真实分子路径未切换。
 
-2026-10-07状态补充：[V2实施与诊断](USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.md)已记录种子实现、239项专项测试、一次真实数值未合格及资源范围。下文设计/取消轮次中的“未实现/未执行”是其当时状态，不是当前状态；原科学定义和门槛保持。外部专家流程已取消。
+2026-10-07状态补充：[V2实施与诊断](USER_MOLECULE_SEED_V2_DIAGNOSTIC_20261007_zh-CN.public.md)已记录种子实现、239项专项测试、一次真实数值未合格及资源范围。下文设计/取消轮次中的“未实现/未执行”是其当时状态，不是当前状态；原科学定义和门槛保持。外部专家流程已取消。
 
-2026-10-06。当前流程依据用户直接指示：“外部专家本身对本项目也不了解，所以这一过程需要明确取消”。外部专家咨询、征询意见及签署流程记为 **CANCELLED_BY_USER**；不要求外部角色、外部意见或另找人员替代，也不将缺少这些材料作为实现或计算的阻塞原因。[取消决定](../validation/user-molecule/method-decisions/mdr-002/external-review-cancellation.json)记录直接授权及其范围。
+2026-10-06。当前流程依据用户直接指示：“外部专家本身对本项目也不了解，所以这一过程需要明确取消”。外部专家咨询、征询意见及签署流程记为 **CANCELLED_BY_USER**；不要求外部角色、外部意见或另找人员替代，也不将缺少这些材料作为实现或计算的阻塞原因。[取消决定](../validation/user-molecule/method-decisions/mdr-002/external-review-cancellation.public.json)记录直接授权及其范围。
 
 项目与 Codex 继续完成内部定义、推导、代码核查和实证。取消咨询不等于科学方法已获批准，不改变实际失败或资源限制；本轮仅调整流程，V2仍未实现、未开展新科学计算，科研批准为false，生产Compute仍关闭。
 
@@ -34,7 +34,7 @@
 
 ## 实施及验收顺序
 
-1. **冻结定义**：沿用[近简并候选V2](USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.md)和[当前MDR-002记录](../validation/user-molecule/method-decisions/mdr-002/record.json)，登记种子来源、允许变化、用途和未建立的解释。内部实现可以先推进，研究适用性单独记录。
+1. **冻结定义**：沿用[近简并候选V2](USER_MOLECULE_NEAR_DEGENERACY_RULES_V2_zh-CN.public.md)和[当前MDR-002记录](../validation/user-molecule/method-decisions/mdr-002/record.public.json)，登记种子来源、允许变化、用途和未建立的解释。内部实现可以先推进，研究适用性单独记录。
 2. **推导与独立核查**：生产路径和同一数学定义下的独立参考分别核验种子公式、占据列空间、度量及重构。已有BLW、ALMO、NBO、cDFT资料继续作为方法对照，不用数值接近证明方法等价。
 3. **先做低成本测试**：执行数组与病态输入测试。A02分别记录种子电子数误差≤1e-7、白化投影迹误差及绝对幂等缺陷≤1e-10；生产路径另验密度重构≤1e-10。失败如实拒绝，不能互相替代或放宽门槛。
 4. **另冻科学预算**：准备明确的源码、镜像、旧普通态缓存、夹具、profile、比较阈值、单进程及累计资源预算；实际运行前核验宿主和容器资源。旧预算不自动续用，本次流程变更不启动新计算。
@@ -45,6 +45,4 @@
 
 [研究资格代码](../runtime/user_molecule/research.py)要求可追溯的责任、允许解释、参考、验收和资源记录，没有硬编码“必须外部专家”。内部项目记录可以承担这些职责；无需另设签署平台。取消咨询不删除这些实证要求，也不将空范围登记或未执行项目改为通过。
 
-[真实三路径诊断](USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.md)的初始化拒绝、零轨道迭代及全部失败记录保留。MDR-002修订0.1、0.2及旧专项外审包作为历史材料原样保存，其外部征询安排为**非当前执行流程**；不伪造意见、不回写旧包。
-
-当前条件Compute阻塞依据是实际数值验收尚未通过、真实root诊断无正式合格端点及完整研究/资源证据未闭合，与取消的咨询流程分开。原P01—P14不自动重审；WSLc验收暂停、镜像分发仍阻塞。当前CI和源码/指南公开状态以本页顶部与能力注册表为准，各日期历史记录保持。
+[真实三路径诊断](USER_MOLECULE_RESIDUAL_LIVE_DIAGNOSTIC_20261006_zh-CN.public.md)的初始化拒绝、零轨道迭代及全部失败记录保留。MDR-002修订0.1、0.2及旧专项外审包作为历史材料原样保存，其外部征询安排为**非当前执行流程**；不伪造意见、不回写旧包。

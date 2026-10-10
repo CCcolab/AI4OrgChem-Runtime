@@ -290,8 +290,7 @@ def main():
                              and summary['protected_sources_unchanged'] and not summary.get('setup_or_fixture_error')
                              else 'FAIL_W07_HOST_REPORT_ENGINEERING')
         summary['research_w07_and_production_compute'] = 'BLOCKED_UNCHANGED'
-        summary['wslc'] = 'BLOCKED_PAUSED'
-        save(output / 'summary.json', summary)
+        save(output / 'summary.public.json', summary)
         print(json.dumps({'status': summary['status'], 'counts': summary['counts'],
                           'output_directory': str(output), 'host_source_commit': commit},
                          ensure_ascii=False))

@@ -101,7 +101,7 @@ class CiClassificationTests(unittest.TestCase):
         output, loader = self.stage/'classification-failed', FixedLoader(unittest.TestSuite())
         with self.assertRaises(ci.ClassificationError):
             ci.run_minimal_ci(output, root=root, classifications=entries[:1], loader=loader)
-        record = json.loads((output/'summary.json').read_text(encoding='utf-8'))
+        record = json.loads((output/'summary.public.json').read_text(encoding='utf-8'))
         self.assertEqual(record['status'], 'FAIL_ENGINEERING_ONLY')
         self.assertEqual(record['classification']['status'], 'FAIL')
         self.assertEqual(record['unit_test_ids'], [])
@@ -112,7 +112,7 @@ class CiClassificationTests(unittest.TestCase):
     def test_existing_output_is_preserved_and_source_output_is_forbidden(self):
         root, entries = self.fixture_root()
         output = self.stage/'old-output'; output.mkdir()
-        sentinel = output/'summary.json'; sentinel.write_bytes(b'original record')
+        sentinel = output/'summary.public.json'; sentinel.write_bytes(b'original record')
         for target in (output, root/'output'):
             with self.assertRaises(ValueError): ci.run_minimal_ci(target, root=root, classifications=entries)
         self.assertEqual(sentinel.read_bytes(), b'original record')
@@ -128,7 +128,7 @@ class CiClassificationTests(unittest.TestCase):
         output = self.stage/'setup-failed'
         loader = FixedLoader(unittest.defaultTestLoader.loadTestsFromTestCase(BeforeTestsFail))
         with self.assertRaises(RuntimeError): ci.run_minimal_ci(output, root=root, classifications=entries, loader=loader)
-        record = json.loads((output/'summary.json').read_text(encoding='utf-8'))
+        record = json.loads((output/'summary.public.json').read_text(encoding='utf-8'))
         self.assertEqual(len(record['planned_test_ids']), 2)
         self.assertEqual(record['unit_test_ids'], [])
         self.assertEqual(record['unit_test_total'], 0)
@@ -143,7 +143,7 @@ class CiClassificationTests(unittest.TestCase):
         output = self.stage/'interrupted'
         loader = FixedLoader(unittest.defaultTestLoader.loadTestsFromTestCase(Interrupted))
         with self.assertRaises(KeyboardInterrupt): ci.run_minimal_ci(output, root=root, classifications=entries, loader=loader)
-        record = json.loads((output/'summary.json').read_text(encoding='utf-8'))
+        record = json.loads((output/'summary.public.json').read_text(encoding='utf-8'))
         self.assertEqual(record['status'], 'FAIL_ENGINEERING_ONLY')
         self.assertEqual(len(record['planned_test_ids']), 2)
         self.assertEqual(record['unit_test_total'], 1)

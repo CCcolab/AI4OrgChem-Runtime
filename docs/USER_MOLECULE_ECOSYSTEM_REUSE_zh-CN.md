@@ -1,8 +1,8 @@
 # 用户分子入口：生态复用与数据对应
 
-日期：2026-10-05；DRAFT-3 / DESIGN_ONLY。本轮仅核查资料、设计字段映射，不安装依赖、不更改锁或构建文件。与 [主合同](USER_MOLECULE_ENTRY_DESIGN_zh-CN.md)和 [方法对照](USER_MOLECULE_METHOD_COMPARISON_zh-CN.md)共同审阅。
+日期：2026-10-05；DRAFT-3 / DESIGN_ONLY。本轮仅核查资料、设计字段映射，不安装依赖、不更改锁或构建文件。与 [主合同](USER_MOLECULE_ENTRY_DESIGN_zh-CN.public.md)和 [方法对照](USER_MOLECULE_METHOD_COMPARISON_zh-CN.md)共同审阅。
 
-COLAB-ADDENDUM-2：本地 Docker 与启动器为首版主入口；Colab 设计保留为后续可选增强，详见 [阶段与验收补充](USER_MOLECULE_COLAB_ENTRY_zh-CN.md)。当前不要求实现或实测 Notebook，不把其缺失作为本地交付阻塞；未来启用时仍独立验收。
+COLAB-ADDENDUM-2：本地 Docker 与启动器为首版主入口；Colab 设计保留为后续可选增强，详见 [阶段与验收补充](USER_MOLECULE_COLAB_ENTRY_zh-CN.public.md)。当前不要求实现或实测 Notebook，不把其缺失作为本地交付阻塞；未来启用时仍独立验收。
 
 ## 1. 复用选择
 

@@ -51,7 +51,7 @@ try {
     $completed=$true
 } finally {
     $summary=@{status=$(if($completed -and -not @($checks | Where-Object {$_.status -ne 'PASS'}).Count){'PASS'}else{'FAIL'});image_id=$identity.Id;image_digest=$digest;repo_digests=$identity.RepoDigests;runtime_commit=$identity.Config.Labels.'org.opencontainers.image.revision';
-        network='none';checks=$checks;run_directory=$runs;scope='Docker OCI only; WSLc NOT_EXECUTED; no L3/L4'}
+        network='none';checks=$checks;run_directory=$runs;scope='Docker OCI only; no L3/L4'}
     $summary | ConvertTo-Json -Depth 20 | Set-Content (Join-Path $output 'acceptance.json') -Encoding utf8
 }
 $summary | ConvertTo-Json -Depth 4

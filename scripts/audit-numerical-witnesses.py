@@ -279,7 +279,16 @@ def audit_package(package, repository=REPOSITORY):
         parents = {}
         for entry in manifest['public_parent_records']:
             path = payload_path(Path(repository), entry)
-            parents[entry['path']] = strict_json(path)
+            parent = strict_json(path)
+            require(entry.get('kind') == 'PUBLIC_METADATA_PROJECTION_NOT_ORIGINAL_BYTES',
+                    'Explicit public parent byte policy required')
+            projection = parent.get('_public_projection', {})
+            require(projection.get('original_sha256') == entry.get('original_sha256')
+                    and projection.get('original_size_bytes') == entry.get('original_size_bytes')
+                    and projection.get('scientific_numeric_values_changed') is False
+                    and projection.get('acceptance_transferred_to_current_code') is False,
+                    'Original/public parent identity binding mismatch')
+            parents[entry['path']] = parent
         rows = {}
         for name, witness in manifest['witnesses'].items():
             files = {key: payload_path(package, entry) for key, entry in witness['files'].items()}
@@ -288,7 +297,7 @@ def audit_package(package, repository=REPOSITORY):
                 require(set(archive.files) == set(witness['array_members']), 'NPZ member inventory mismatch')
                 arrays = decode_arrays(witness['array_members'], archive)
             if witness['kind'] == 'ordinary-rhf':
-                deployment = parents['validation/molecular-service/deployment-20261008.json']
+                deployment = parents['validation/molecular-service/deployment-20261008.public.json']
                 require(deployment['cases']['water']['result_sha256'] == sha256(files['record']), 'Public ordinary result binding mismatch')
                 require(deployment['cases']['water']['host_manifest_sha256'] == sha256(files['host_manifest']), 'Public ordinary host binding mismatch')
                 host = strict_json(files['host_manifest'])
@@ -302,11 +311,11 @@ def audit_package(package, repository=REPOSITORY):
             elif witness['kind'] == 'conditional-rejected-endpoint':
                 require(record['arrays'] == witness['array_members'], 'Conditional descriptor binding mismatch')
                 provenance = witness['provenance']
-                published = parents['validation/user-molecule/seed-v2-20261007.json']
+                published = parents['validation/user-molecule/seed-v2-20261007.public.json']
                 matches = matching_records(published, 'raw_result_sha256', provenance['original_result_sha256'])
                 require(len(matches) == 1 and matches[0]['endpoint_gate'] == record['saved_endpoint_gate'],
                         'Public conditional result/gate binding mismatch')
-                framework = parents['validation/local-runtime-framework-20261007.json']
+                framework = parents['validation/local-runtime-framework-20261007.public.json']
                 sealed = matching_records(framework, 'directory', provenance['sealed_delivery_directory'])
                 require(len(sealed) == 1 and sealed[0]['manifest_sha256'] == provenance['sealed_manifest_sha256'],
                         'Public conditional sealed-manifest binding mismatch')

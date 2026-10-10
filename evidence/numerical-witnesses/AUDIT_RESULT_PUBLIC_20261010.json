@@ -1,0 +1,74 @@
+{
+  "schema": "numerical-witness-audit-v1",
+  "audit_status": "PASS_READ_ONLY_NUMPY_AUDIT",
+  "numpy_version": "2.5.1",
+  "witnesses": {
+    "ordinary-water": {
+      "audit_status": "PASS_SAVED_ARRAY_WITNESS",
+      "saved_numerical_status": "NUMERICALLY_QUALIFIED_ORDINARY_RHF",
+      "electron_number": 10.000000000000004,
+      "reconstructed_total_energy_hartree": -76.00909910859733,
+      "homo_lumo_gap_hartree": 0.712108748275301,
+      "gap_role": "DIAGNOSTIC_NOT_ORDINARY_ACCEPTANCE_GATE",
+      "residuals": {
+        "electron_number_absolute": 3.552713678800501e-15,
+        "density_reconstruction_relative_frobenius": 0.0,
+        "occupied_orthonormality_frobenius": 2.237568745241635e-15,
+        "whitened_projector_idempotency_frobenius": 3.990336497728425e-15,
+        "whitened_fock_projector_commutator_frobenius_hartree": 1.7424190885868624e-09,
+        "energy_ledger_closure_hartree": 2.842170943040401e-14,
+        "ordinary_fock_closure_max_absolute_hartree": 2.220446049250313e-16,
+        "generalized_mo_eigen_equation_frobenius_hartree": 5.4060391564040305e-09
+      },
+      "stability": "NOT_EXECUTED",
+      "interpretation": "Specified-geometry RHF witness; stable minimum and general method validity not established"
+    },
+    "conditional-ethene-v2": {
+      "audit_status": "PASS_SAVED_ARRAY_WITNESS",
+      "endpoint_qualification": "REJECTED",
+      "returned_density_id": "2884d1bcee333850aa3ae1242ef7b709bd76a5dabfb6925a1dd90012ecfcfd81",
+      "electron_counts": {
+        "masked_metric_recomputed": 15.999999999999977,
+        "physical_metric_recomputed": 16.47453645981215,
+        "grid_saved_scalar": 16.47453733917221,
+        "grid_status": "NOT_RECOMPUTED_NO_GRID_PAYLOAD"
+      },
+      "reconstructed_total_energy_hartree": -77.60960002409465,
+      "energy_closure_hartree": 0.0,
+      "commutator_frobenius": 1.8890195723410966e-09,
+      "idempotency_relative": 4.477632515303005e-15,
+      "saved_scipy_endpoint": {
+        "raw_gap_hartree": 2.67841304690819e-15,
+        "mapped_density_relative": 0.42980285975005655
+      },
+      "numpy_array_diagnostic": {
+        "raw_gap_hartree": 9.298117831235686e-16,
+        "mapped_density_relative": 0.40505686173960526,
+        "checks": {
+          "commutator": true,
+          "electron_count": true,
+          "idempotency": true,
+          "energy_closure": true,
+          "mapped_density_numpy": false,
+          "raw_gap_numpy": false
+        },
+        "exact_scipy_subspace_reproduction_claimed": false
+      },
+      "semilocal_xc_energy_status": "SAVED_SCALAR_NOT_REINTEGRATED",
+      "interpretation": "Rejected saved endpoint; no claim about nonexistence of roots, physical bond energy, stationarity or stability"
+    }
+  },
+  "new_scientific_calls": {
+    "scf": 0,
+    "integrals": 0,
+    "grids": 0,
+    "fock_evaluations": 0
+  },
+  "forbidden_imports": [
+    "ai4orgchem",
+    "pyscf",
+    "rdkit",
+    "scipy"
+  ],
+  "provenance_limit": "Hashes bind bytes to declared evidence; they do not authenticate a scientific engine or establish method validity"
+}

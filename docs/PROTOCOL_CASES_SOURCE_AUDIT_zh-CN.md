@@ -94,7 +94,6 @@ NBA各路径静态AO范围约为318／218／81，超首批用户RHF的20原子�
 
 本批使用新 `runtime-p03-bounded/0.1` 至 `runtime-p10-bounded/0.1` 运行合同，同时保存原科学协议context。原科研已关闭的调度flag保留为历史源字节，不回写为新执行授权。通用的任意用户分子条件态Compute继续BLOCKED；首批普通RHF支持范围与这些封闭案例各自独立。没有在线计算、通用优化、属性预测、反应预测或机器学习训练功能被本批启用。
 
-本静态核查初稿写入时，真实新运行结果尚待主执行流程核验，不以静态核查标科学PASS。主流程随后完成限定实测，实际结论见[验证摘要](PROTOCOL_CASES_BATCH2_VALIDATION_zh-CN.md)及逐项身份记录；不将静态审计或最终镜像身份替代历史实际计算。WSLc继续BLOCKED／NOT_EXECUTED且暂停，WSL升级／全局配置／重启不在本轮范围。GitHub CI执行状态保持原记录，不能把本地CI叫作GitHub已执行。本轮没有推送、镜像分发、正式标签或Release。
 
 ## 7. 许可证材料与未闭合事项
 
@@ -102,7 +101,7 @@ NBA各路径静态AO范围约为318／218／81，超首批用户RHF的20原子�
 
 上游NOTICE说明项目自有代码／文档及第三方许可分别适用，保留Zhong-Heng Yu著作的科学来源署名和其报告的CC BY4.0。未复制著作完整PDF、原历史程序或新下载第三方软件。已抽取表值、协议与研究输出的公开范围及来源署名，仍须与最终拟公开文件一起确认；本地来源锁不自动授予公开权限。
 
-镜像分发继续BLOCKED。既有 [第三方材料说明](../compliance/README.md) 和 [来源闭合审查](../validation/source-materials-final-review.json) 仍保留GCC运行库确切源码／patch、NumPy/PySCF BLAS构建来源、SciPy OpenBLAS开发提交、HDF5/libaec/libsz构建来源、XCFun实际补丁应用以及通知／对应源码交付等未闭合项。该历史审查针对其登记镜像，不冒充本批候选的逐组件重新验收；复用相同依赖也不能宣称这些阻塞自动消失。
+镜像分发继续BLOCKED。既有 [第三方材料说明](../compliance/README.md) 和 [来源闭合审查](../validation/source-materials-final-review.public.json) 仍保留GCC运行库确切源码／patch、NumPy/PySCF BLAS构建来源、SciPy OpenBLAS开发提交、HDF5/libaec/libsz构建来源、XCFun实际补丁应用以及通知／对应源码交付等未闭合项。该历史审查针对其登记镜像，不冒充本批候选的逐组件重新验收；复用相同依赖也不能宣称这些阻塞自动消失。
 
 本轮没有建设通用合规平台。新增来源锁、静态核查、隔离复制与已有许可材料用于支撑当前本地候选的审阅；实际数值结论、最终候选身份以及是否公开，分别依赖后续主执行核验和用户授权。
 

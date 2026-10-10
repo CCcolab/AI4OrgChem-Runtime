@@ -45,7 +45,7 @@
 
 ## 单点结果说明了什么
 
-以COPY数值作紧凑展示，完整三路径及每个谓词见[机器记录](../validation/user-molecule/occupation-response-20261007.json)：
+以COPY数值作紧凑展示，完整三路径及每个谓词见[机器记录](../validation/user-molecule/occupation-response-20261007.public.json)：
 
 | 固定密度 | 真F gap / Eh | 对易Frobenius残差 | raw-map相对残差 | 结果 |
 | --- | ---: | ---: | ---: | --- |
@@ -72,5 +72,3 @@
 [MDR-005](../validation/user-molecule/method-decisions/mdr-005/record.json)保留原正gap全局Aufbau目标，明确本轮仅排除了把这三份probe直接当作合格端点的做法。其他根存在性、不同初始占据空间的收敛、稳定性及研究适用性仍未知。**下一步是依据现有证据开展内部占据/固定点搜索准入设计；本轮9槽预算已关闭，不自动追加F或SCF，不以改占据规则或降低门槛补通过。** 如另提科学目标，须独立版本，不覆盖本轮失败。
 
 全部材料保存于`D:\AI4Science\ai4orgchem-runtime-deliveries\20261007-user-molecule-occupation-response`；此前四包1729项载荷和132份既有代码/配置分别核验保留。当前新增入口不接入生产Compute profile。
-
-本轮共四个容器（首轮失败工程、复验工程、零F准备、唯一科学诊断）全部删除；首轮退出1，其余退出0，日志输出保留。完整本地W01—W07 CI本轮NOT_EXECUTED，远端Actions仍NOT_EXECUTED；WSLc继续暂停/BLOCKED，WSL未升级、全局配置未改、电脑未重启；镜像分发BLOCKED，未推送、打正式标签或发布Release。外部专家流程保持CANCELLED_BY_USER，原P01—P14及L0—L4未重算；L4仍只保存检查点，不支持恢复。

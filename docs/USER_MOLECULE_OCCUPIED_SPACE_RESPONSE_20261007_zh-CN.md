@@ -6,7 +6,7 @@
 
 本地代码提交`63dc6f64a683682fbdcbfc0debcece4f6c40d3c6`，前序候选`9faf794244f0959b3d3528cb1ced3126b75b9b53`保留。镜像为`sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d`，镜像构建runtime提交`5098775c9cf40468ab92712447a3e5c7b1361a63`；science提交`cc7437901119e71ef7945a12813c021c383e7648`，基线`28511f3d84fa65707a107cde1e8121a7b4334ecb`。新代码从干净提交导出、只读挂载到旧r3镜像执行，未重建镜像。三个阶段使用相同源码：工程、真实缓存零F准备、唯一科学批次；当前文档增补提交不冒充镜像构建或科学执行提交。
 
-执行合同SHA-256为`151b2839a199384f34da3fa7d8ebc9f0666506c832a2401598c079a1c8792dc1`，模式`PREPARED_OCCUPIED_SPACE_SINGLE_RESPONSE_DIAGNOSTIC`，独立schema。授权依据是用户直接要求“请继续下一步”；这只授权本批受限诊断，不授予科学方法、通用Compute或发布批准。[机器记录](../validation/user-molecule/occupied-space-response-20261007.json)绑定完整来源、合同、源捕获与实际计数。
+执行合同SHA-256为`151b2839a199384f34da3fa7d8ebc9f0666506c832a2401598c079a1c8792dc1`，模式`PREPARED_OCCUPIED_SPACE_SINGLE_RESPONSE_DIAGNOSTIC`，独立schema。授权依据是用户直接要求“请继续下一步”；这只授权本批受限诊断，不授予科学方法、通用Compute或发布批准。[机器记录](../validation/user-molecule/occupied-space-response-20261007.public.json)绑定完整来源、合同、源捕获与实际计数。
 
 四个密度继续使用[上一轮保存的初值](USER_MOLECULE_OCCUPIED_SPACE_ADMISSION_20261007_zh-CN.md)，角度−0.25/−0.10/+0.10/+0.25 rad。SOURCE六个数组与prepared十个数组逐字节核验，再基于来源D/S/anchors重生成完整配方，精确匹配原数组和派生记录；核验见证不替换实际D。实际缓存基组表示、坐标/AO/片段标签、三路径S̃及mask均一致，原算子和十五类ERI规则不变。新初值改变原占据空间，不冒称V2保留普通态占据空间。
 
@@ -53,6 +53,5 @@ COPY_MASK/优化True、INPLACE_OWNED/优化False及独立方程参考均在同D�
 
 整三点Jacobian需96F，另预留返回/映射真F尾检；旧201槽路径在其它开销前最多容纳两次完整Jacobian，不自动批准足够收敛预算。先冻结单起点/单路径的算法与确切callback/墙钟/CPU/内存边界，再开展独立科学批次；根是否存在、能否收敛、最终gap、驻定性/稳定性与科研解释保持未知。本轮没有新根搜索预算或生产启用，也不直接扫四初值×三路径。
 
-Compute因无合格固定点、完整同根实现比较及研究/资源范围保持BLOCKED，与已取消的外部咨询分开。原P01—P14未重算/不自动重审；完整本地W01—W07本轮NOT_EXECUTED，GitHub Actions NOT_EXECUTED；WSLc暂停BLOCKED/NOT_EXECUTED，镜像分发BLOCKED。无WSL升级、全局配置修改、重启、镜像重建或公开推送/标签/Release。L4仍只支持保存检查点、不支持恢复运行。
 
 完整本地记录和备份在`D:\AI4Science\ai4orgchem-runtime-deliveries\20261007-user-molecule-occupied-space-response`。新分支/提交的公开范围需另行确认，不改变此前源码公开候选。

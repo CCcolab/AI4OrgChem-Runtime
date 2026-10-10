@@ -29,7 +29,7 @@ def main():
     from runtime.user_molecule.residual_bridge import array_identity
     from runtime.user_molecule.residual_seed_preparation import prepare_cached_context, create_seed_bridge_preparation
     from runtime.user_molecule.seed_v2 import POLICY_ID
-    proposal = json.loads((ROOT/'validation/user-molecule/residual-diagnostic/contract-v1.json').read_bytes())
+    proposal = json.loads((ROOT/'validation/user-molecule/residual-diagnostic/contract-v1.public.json').read_bytes())
     identity = dict(proposal, profile_sha256=hashlib.sha256((ROOT/'profiles/user-molecule/pilot-b3lypg-sto3g-grid2-v1.json').read_bytes()).hexdigest(),
         source_manifest_sha256=hashlib.sha256((ROOT/'locks/source-user-molecule-files.sha256.json').read_bytes()).hexdigest())
     cached = prepare_cached_context(runtime_root=ROOT, science_root=Path('/opt/ai4orgchem'), ordinary_dir=Path('/saved-ordinary'), identity=identity)

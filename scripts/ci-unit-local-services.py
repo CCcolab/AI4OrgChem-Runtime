@@ -15,7 +15,9 @@ PATTERNS=('test_registered_*.py','test_protocol_cases_*.py','test_high_cost_*.py
           'test_current_capabilities.py', 'test_capability_exports.py',
           'test_installation_identity.py', 'test_installation_source_bindings.py',
           'test_runtime_host_safety.py', 'test_numerical_witnesses.py',
-          'test_public_installation_ci.py', 'test_runtime_host_supervision.py')
+          'test_public_installation_ci.py', 'test_runtime_host_supervision.py',
+          'test_docker_powershell_entrypoints.py', 'test_public_platform_scope.py',
+          'test_web_delivery_contract.py')
 
 def execution_context(environment=None):
     """Describe this job from runner declarations, never certify the whole CI."""

@@ -1,0 +1,365 @@
+{
+  "version": "SOLVER-V2-FINAL-REVIEW-1",
+  "runtime_test_commit": "c8a580f70d7dba721758b77c0c534c31b50953b8",
+  "identity": {
+    "geometry_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+    "source_request_sha256": "a348a5a63631c5d394d034e6b3538f5fc4229b3d50c79d9134a3726c842f07f9",
+    "acceptance_request_sha256": "3463f17a893c50a938cf180b4bdb37bd4cd0cbc5c53c3c6787b7f429db5c60d8",
+    "profile_sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9",
+    "rules_sha256": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+    "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+    "runtime_test_commit": "c8a580f70d7dba721758b77c0c534c31b50953b8",
+    "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+    "contract_sha256": "00e1cb3cb2241e0bb549b8e220e099951e5dc5d54e7aa8c146b1eb5df82559bd",
+    "dependencies": {
+      "pyscf": "2.14.0",
+      "numpy": "2.5.1",
+      "scipy": "1.18.0"
+    },
+    "mode": "SEQUENTIAL_SOLVER_V2_DIAGNOSTIC"
+  },
+  "engineering": {
+    "unique_tests": 122,
+    "status": "PASS",
+    "scientific_work": "FORBIDDEN",
+    "historical_a1": {
+      "executions": 119,
+      "failures": 1,
+      "errors": 1,
+      "supervisor_status": "FAIL_NO_RESULT",
+      "actual_unit_status": "FAIL"
+    },
+    "historical_a2": {
+      "executions": 122,
+      "failures": 0,
+      "errors": 1,
+      "status": "FAIL"
+    }
+  },
+  "status": "FAIL_NUMERICAL_GATES",
+  "production_activation": false,
+  "comparison_available": false,
+  "delta_hartree": null,
+  "research_status": "NOT_QUALIFIED",
+  "method_review_status": "PENDING_REAL_REVIEW",
+  "fixture": "pilot-ethene",
+  "nao": 14,
+  "grid_points": 43904,
+  "same_D0_as_previous_numerical_a3": true,
+  "numerical_gates": {
+    "T04.": {
+      "passed": 13,
+      "total": 13,
+      "failed": []
+    },
+    "T05.": {
+      "passed": 40,
+      "total": 40,
+      "failed": []
+    },
+    "P12.": {
+      "passed": 0,
+      "total": 1,
+      "failed": [
+        {
+          "metric_id": "P12.storage_energy",
+          "value": 0.06539324131719582,
+          "threshold": 1e-10,
+          "threshold_version": "SOLVER-V2-ACCEPTANCE-ONLY-2",
+          "formula_version": "ABS_TOTAL_ENERGY_DIFFERENCE_V1",
+          "units": "Eh",
+          "required": true,
+          "operator_source": "NOT_APPLICABLE",
+          "pass": false
+        }
+      ]
+    },
+    "P13.": {
+      "passed": 0,
+      "total": 1,
+      "failed": [
+        {
+          "metric_id": "P13.storage_density",
+          "value": 0.26472089218369177,
+          "threshold": 1e-09,
+          "threshold_version": "SOLVER-V2-ACCEPTANCE-ONLY-2",
+          "formula_version": "FROBENIUS_DIFFERENCE_V1",
+          "units": "density_AO",
+          "required": true,
+          "operator_source": "NOT_APPLICABLE",
+          "pass": false
+        }
+      ]
+    },
+    "T06.": {
+      "passed": 1,
+      "total": 8,
+      "failed": [
+        {
+          "metric_id": "T06.energy",
+          "value": 0.06663507650775102,
+          "threshold": 1e-08,
+          "threshold_version": "SOLVER-V2-ACCEPTANCE-ONLY-2",
+          "formula_version": "ABS_TOTAL_ENERGY_DIFFERENCE_V1",
+          "units": "Eh",
+          "required": true,
+          "operator_source": "NOT_APPLICABLE",
+          "pass": false
+        },
+        {
+          "metric_id": "T06.components.one_electron",
+          "value": 0.0009954714153650457,
+          "threshold": 1e-06,
+          "threshold_version": "SOLVER-V2-ACCEPTANCE-ONLY-2",
+          "formula_version": "ABS_COMPONENT_DIFFERENCE_V1",
+          "units": "Eh",
+          "required": true,
+          "operator_source": "NOT_APPLICABLE",
+          "pass": false
+        },
+        {
+          "metric_id": "T06.components.coulomb",
+          "value": 0.07771728584310722,
+          "threshold": 1e-06,
+          "threshold_version": "SOLVER-V2-ACCEPTANCE-ONLY-2",
+          "formula_version": "ABS_COMPONENT_DIFFERENCE_V1",
+          "units": "Eh",
+          "required": true,
+          "operator_source": "NOT_APPLICABLE",
+          "pass": false
+        },
+        {
+          "metric_id": "T06.components.exact_exchange",
+          "value": 0.0023824344746108395,
+          "threshold": 1e-06,
+          "threshold_version": "SOLVER-V2-ACCEPTANCE-ONLY-2",
+          "formula_version": "ABS_COMPONENT_DIFFERENCE_V1",
+          "units": "Eh",
+          "required": true,
+          "operator_source": "NOT_APPLICABLE",
+          "pass": false
+        },
+        {
+          "metric_id": "T06.components.semilocal_xc",
+          "value": 0.007704303445395411,
+          "threshold": 1e-06,
+          "threshold_version": "SOLVER-V2-ACCEPTANCE-ONLY-2",
+          "formula_version": "ABS_COMPONENT_DIFFERENCE_V1",
+          "units": "Eh",
+          "required": true,
+          "operator_source": "NOT_APPLICABLE",
+          "pass": false
+        },
+        {
+          "metric_id": "T06.density",
+          "value": 2.8413563635063515,
+          "threshold": 1e-06,
+          "threshold_version": "SOLVER-V2-ACCEPTANCE-ONLY-2",
+          "formula_version": "FROBENIUS_DIFFERENCE_V1",
+          "units": "density_AO",
+          "required": true,
+          "operator_source": "NOT_APPLICABLE",
+          "pass": false
+        },
+        {
+          "metric_id": "T06.fock",
+          "value": 2.3634454496129202,
+          "threshold": 1e-06,
+          "threshold_version": "SOLVER-V2-ACCEPTANCE-ONLY-2",
+          "formula_version": "FROBENIUS_DIFFERENCE_V1",
+          "units": "Eh_AO",
+          "required": true,
+          "operator_source": "NOT_APPLICABLE",
+          "pass": false
+        }
+      ]
+    }
+  },
+  "conditional_endpoints": [
+    {
+      "mode": "single",
+      "record_sha256": "4724edb329044f548e105c72ce5d1132c52c247723860277bd36c9712032f8aa",
+      "converged": false,
+      "cycles": 100,
+      "evaluation_count": 201,
+      "false_plateau_resets": 1,
+      "arithmetic_resets": 0,
+      "commutator_frobenius": 0.6297030110884442,
+      "raw_map_relative": 0.6710455918443633,
+      "final_non_diis_gap_hartree": 0.3139697129530013,
+      "stop_reason": "MAXIMUM_CYCLES_EXHAUSTED",
+      "qualification_tests": {
+        "finite": true,
+        "overlap_positive": true,
+        "commutator": false,
+        "electron_count": true,
+        "idempotency": true,
+        "energy_closure": true,
+        "overlap_mask": true,
+        "fock_mask": true,
+        "mapped_density": false,
+        "raw_gap": true,
+        "converged": false,
+        "final_energy_recheck": false
+      }
+    },
+    {
+      "mode": "copy",
+      "record_sha256": "b3485fbf5a0cd774d03933ed7f5f8fcd7ab7cf41364ee437030810516b15b6f1",
+      "converged": false,
+      "cycles": 100,
+      "evaluation_count": 201,
+      "false_plateau_resets": 1,
+      "arithmetic_resets": 0,
+      "commutator_frobenius": 0.47451186958699637,
+      "raw_map_relative": 0.6425298971713378,
+      "final_non_diis_gap_hartree": 0.30134807916375084,
+      "stop_reason": "MAXIMUM_CYCLES_EXHAUSTED",
+      "qualification_tests": {
+        "finite": true,
+        "overlap_positive": true,
+        "commutator": false,
+        "electron_count": true,
+        "idempotency": true,
+        "energy_closure": true,
+        "overlap_mask": true,
+        "fock_mask": true,
+        "mapped_density": false,
+        "raw_gap": true,
+        "converged": false,
+        "final_energy_recheck": false
+      }
+    },
+    {
+      "mode": "reference",
+      "record_sha256": "cd2b97a98625a19e0bea3d1e46fb2f03ae3342689f8b56f1655d3eee5b4e2a43",
+      "converged": false,
+      "cycles": 100,
+      "evaluation_count": 201,
+      "false_plateau_resets": 2,
+      "arithmetic_resets": 0,
+      "commutator_frobenius": 0.47105066974860593,
+      "raw_map_relative": 0.6419638205402348,
+      "final_non_diis_gap_hartree": 0.30107414196307497,
+      "stop_reason": "MAXIMUM_CYCLES",
+      "qualification_tests": {
+        "commutator": false,
+        "electron_count": true,
+        "idempotency": true,
+        "energy_closure": true,
+        "mask": true,
+        "raw_aufbau_density": false,
+        "final_non_diis_gap": true,
+        "final_energy_recheck": true,
+        "converged": false,
+        "energy_finite": true,
+        "masked_overlap_positive": true,
+        "overlap_mask": true,
+        "fock_mask": true,
+        "occupation_electron_count": true,
+        "closed_shell_occupation": true
+      }
+    }
+  ],
+  "resource_candidate": {
+    "schema_version": "acceptance-resource-candidate-v1",
+    "status": "RESOURCE_CANDIDATE_EXACT_FIXTURE",
+    "identity": {
+      "contract_sha256": "00e1cb3cb2241e0bb549b8e220e099951e5dc5d54e7aa8c146b1eb5df82559bd",
+      "dependencies_sha256": "cc7a2f4540c75b0b336c14dbccc89cccbaa5a9d205c14cf83187df526a91f537",
+      "geometry_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+      "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+      "mode": "SEQUENTIAL_SOLVER_V2_DIAGNOSTIC",
+      "profile_sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9",
+      "rules_sha256": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+      "runtime_test_commit": "c8a580f70d7dba721758b77c0c534c31b50953b8"
+    },
+    "identity_sha256": "23e1dc60cbc2a13f27ff40190f647f53f7cce3ccba6c34f8a2d42f8f58e36bb3",
+    "tested_n_ao": 14,
+    "observed_peak_bytes": 131080192,
+    "configured_memory_limit_bytes": 1073741824,
+    "observed_headroom_bytes": 942661632,
+    "threads": 1,
+    "swap_allowed": false,
+    "reasons": [],
+    "scope": "EXACT_GEOMETRY_PROFILE_DEPENDENCIES_AND_MODE_ONLY",
+    "n_ao_extrapolation_allowed": false,
+    "production_activation": false,
+    "scientific_qualification": "NOT_REVIEWED",
+    "external_oom_evidence": {
+      "source": "DOCKER_INSPECT",
+      "container_id": "ab4cce9ad5349d187ab964a4d0a62bcb42ca78a0c4a600c2d52ae773f14f2f2b",
+      "oom_killed": false,
+      "state_finished_at": "2026-10-05T12:31:33.38174358Z",
+      "evidence_sha256": "63d9aff50bbd643ae023ecbf427bdda9f9618123e79a6de962c82956602b5bfb",
+      "resource_identity_sha256": "23e1dc60cbc2a13f27ff40190f647f53f7cce3ccba6c34f8a2d42f8f58e36bb3"
+    },
+    "oom_claim": "NO_OBSERVED_LIMIT_FAILURE_CURRENT_OOM_OR_RECORDED_OOM_KILL; NOT_PROOF_OOM_NEVER_OCCURRED"
+  },
+  "container_execution": {
+    "container_removed": true,
+    "container_exit_code": 30,
+    "oom_killed": false,
+    "elapsed_seconds": 29.155999999988126,
+    "budget_state": "SETTLED",
+    "cleanup_errors": []
+  },
+  "budget": {
+    "new_runs": 4,
+    "scientific_attempts": 1,
+    "consumed_seconds": 40.34299999999348,
+    "maximum_scientific_attempts": 1,
+    "all_settled": true,
+    "old_budget_reset": false
+  },
+  "W07": "BLOCKED",
+  "resource_generalization": "NOT_ACCEPTED",
+  "remote_ci": "NOT_EXECUTED",
+  "public_push_release": false,
+  "new_image_build": false,
+  "scientific_snapshot": {
+    "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-solver-v2\\SOLVER_V2_REVIEW.json",
+    "sha256": "1e0bdfa9c05775bf50d3b39d4304ee0ba8d8f829dd99977850f6b7fe437e4dc5",
+    "scope": "Immutable snapshot created after molecular run and before the final metadata-only engineering test; its budget includes 4 runs"
+  },
+  "final_engineering": {
+    "status": "PASS",
+    "unique_tests": 122,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "runtime_test_commit": "8d05ecf89329f0738a61d0955576bfb430ba11d6",
+    "unit_report_sha256": "2e85fae2ff9d9a12768299a93581aebaf5800524854fe18d5c3dbad7bff789ac",
+    "change_after_numerical_test": "Status metadata and assertions only; no new SCF or algorithm change"
+  },
+  "final_budget": {
+    "new_runs": 5,
+    "scientific_attempts": 1,
+    "all_settled": true,
+    "consumed_seconds": 44.21799999999348,
+    "scientific_attempt_ceiling_reached": true,
+    "old_budget_unchanged": true
+  },
+  "stored_array_review": {
+    "script_sha256": "884e93931ce477c1e37dfc7d0baf5266f0b1d0b8432b2158c793df2b603a771a",
+    "receipt_sha256": "41a8fd31006df87d45a7e8d52c857bccab97e91dac3fdeeebd09c98967fd5ba3",
+    "raw_payloads_verified": 31,
+    "SCF_executed": false,
+    "status": "PASS_READONLY_RECOMPUTATION"
+  },
+  "raw_record_notes": [
+    "c8 production molecular_acceptance=NOT_EXECUTED is an initialization label; actual batch executed and failed; future metadata is corrected in final engineering code.",
+    "c8 production final_candidate_energy_recheck=null means no qualified stop candidate; false qualification does not establish observed energy nonreproducibility.",
+    "c8 reference COMPARABLE_CANDIDATE checked gap only; all endpoints are NOT_QUALIFIED in this review. Future metadata accounts for convergence and all qualification checks.",
+    "Resource candidate scientific_qualification=NOT_REVIEWED is a generic envelope field; numerical research qualification is NOT_QUALIFIED, method responsibility is separately PENDING_REAL_REVIEW."
+  ],
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "7fd605f5ad22e0cb4e3694a52488cc39cad38ddd6de67802b867bebb70c33bc9",
+    "original_size_bytes": 13021,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

@@ -220,7 +220,7 @@ def run_minimal_ci(output_root,*,root=ROOT,classifications=TEST_CLASSIFICATIONS,
             'array_groups':list(ARRAY_PATTERNS),'array_execution':'NOT_EXECUTED_HERE',
             'reference_v1_v2':'SEPARATE_LOCAL_GUARDED_GROUP; NOT_EXECUTED_HERE',
             'scientific_adapter':'UNPUBLISHED_SOURCE; SEPARATE_LOCAL_GROUP'}
-    summary=output/'summary.json'; _save(summary,record)
+    summary=output/'summary.public.json'; _save(summary,record)
     guard,added_path,previous_env=RejectScientificImports(),False,{}
     try:
         record['classification']=classify_test_files(root,classifications)

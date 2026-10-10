@@ -1,9 +1,10 @@
 """Explicit new-installation entrypoint for one frozen supported service task.
 
-The original launcher and candidate records remain byte-for-byte untouched.
-The adapter changes only the single candidate-record lookup after full live
-installation verification. All worker contracts, guards, resource limits,
-input snapshots, numerical gates and owned cleanup use the frozen launcher.
+Frozen scientific catalogs and candidate-image records remain separate from the
+reviewed engineering overlays. The adapter changes candidate-record lookup only
+after full installation verification. Worker protocols, resource limits, input
+snapshots and numerical gates retain their scientific definitions; reviewed
+host supervision and platform metadata have their own exact source binding.
 """
 from __future__ import annotations
 import argparse

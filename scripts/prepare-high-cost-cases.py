@@ -28,7 +28,7 @@ def capture(origin):
     profile=write_profile()
     print(json.dumps({'assets':len(rows),'units':len(profile['units'])}))
 def write_profile():
-    profile={'schema':'high-cost-cases-v1','units':units(),'resource_profiles':{c:{m:limits(c,m) for m in ['ledger','preflight','live']} for c in CASE_MODULES},'general_user_conditional_compute':'BLOCKED','automatic_retry':False,'resume':False,'scientific_thresholds_changed':False,'WSLc':'BLOCKED_PAUSED','distribution':'BLOCKED_LOCAL_ONLY'}
+    profile={'schema':'high-cost-cases-v1','units':units(),'resource_profiles':{c:{m:limits(c,m) for m in ['ledger','preflight','live']} for c in CASE_MODULES},'general_user_conditional_compute':'BLOCKED','automatic_retry':False,'resume':False,'scientific_thresholds_changed':False,'distribution':'BLOCKED_LOCAL_ONLY'}
     save(ROOT/'configs/high-cost-cases-v1.json',profile)
     return profile
 def lock():

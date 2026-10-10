@@ -2,7 +2,7 @@
 
 2026-10-08，合同0.1。任务 `single-point`，profile `rhf-631gd-small-v1`，协议 `ORDINARY_MOLECULAR_SINGLE_POINT_V0.1`。本合同对应用户授权的“用户 XYZ → 普通单点 → 轨道／AO密度 → 本地报告与导出”，与旧条件态比较的科研规则及执行预算分开。
 
-本文建立时：候选代码和宿主测试已形成；容器工程验收、真实分子执行和同版本 PySCF 直接调用对照均 **NOT_EXECUTED**。本文冻结目标及门槛，不提供尚未发生的 PASS。该建立时状态保留为执行前事实；2026-10-08实际验收已完成，未改变下列门槛与8次SCF总预算。实际完成状态、代码提交、镜像 ID、原始证据和失败在[本轮验收报告](MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)及[机器状态](../validation/molecular-service/deployment-20261008.json)中登记。
+本文建立时：候选代码和宿主测试已形成；容器工程验收、真实分子执行和同版本 PySCF 直接调用对照均 **NOT_EXECUTED**。本文冻结目标及门槛，不提供尚未发生的 PASS。该建立时状态保留为执行前事实；2026-10-08实际验收已完成，未改变下列门槛与8次SCF总预算。实际完成状态、代码提交、镜像 ID、原始证据和失败在[本轮验收报告](MOLECULAR_SINGLE_POINT_ACCEPTANCE_20261008_zh-CN.md)及[机器状态](../validation/molecular-service/deployment-20261008.public.json)中登记。
 
 ## 1. 输入与支持范围
 
@@ -88,10 +88,7 @@
 
 宿主和镜像内工程测试使用明确fake／禁止科学dispatch路径，不计入这8次真实预算，也不能把fake运行记成科学PASS。Windows不能创建真实symlink测试fixture时应标SKIP，并在Linux候选镜像补执行，不能以mock测试替代真实fixture记录。
 
-旧原生条件核账本、既有失败记录和固定案例预算原样保留。本轮不用旧科研预算，不重新执行专著全部计算，不恢复条件态或WSLc验收。
 
 ## 6. 状态边界与后续扩展
 
 本合同通过实际验收后，只开放本profile内的用户自选分子普通单点与所列轨道／AO密度导出。离子、开壳层、DFT、其他元素、局域化、几何优化、扫描、网格可视化或性质预测分别属于后续待办，不因底层库有接口而宣称已部署。
-
-旧用户条件态 Compute继续 **BLOCKED**。WSLc升级／实机验收暂停，GitHub CI **NOT_EXECUTED**，镜像分发 **BLOCKED**，源码公开另行确认；不恢复外部专家咨询，不公开推送或发布。既有研究和固定案例交付的身份与结论不因新增普通入口而重写。

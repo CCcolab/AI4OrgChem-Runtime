@@ -202,7 +202,7 @@ class PropositionReaderTests(unittest.TestCase):
     def test_review_missing_source_creates_fresh_external_failure_receipt(self):
         output = self.base/'new-review'
         result = core.review_proposition('P01', output_dir=output)
-        saved = json.loads((output/'review.json').read_bytes())
+        saved = json.loads((output/'review.public.json').read_bytes())
         self.assertEqual(saved, result)
         self.assertEqual(result['exit_code'], 20)
         self.assertEqual(result['scientific_validation'], 'NOT_EXECUTED')
@@ -212,7 +212,7 @@ class PropositionReaderTests(unittest.TestCase):
     def test_existing_output_is_never_overwritten(self):
         output = self.base/'prior'
         output.mkdir()
-        sentinel = output/'review.json'
+        sentinel = output/'review.public.json'
         sentinel.write_bytes(b'prior')
         with self.assertRaises(core.CatalogError):
             core.review_proposition('P01', output_dir=output)

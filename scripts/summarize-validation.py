@@ -34,10 +34,10 @@ for manifest_path in sorted(args.run_root.glob('*/run-manifest.json')):
     if manifest['task'] == 'p14-equivalence' and (manifest_path.parent / 'result.json').exists():
         row['differences'] = load(manifest_path.parent / 'result.json')['differences']
     rows.append(row)
-summary = {'date':'2026-10-02','scope':'independent WSL2 candidate, not OCI/WSLc acceptance',
+summary = {'date':'2026-10-02','scope':'independent WSL2 candidate, not OCI acceptance',
            'raw_logs_relative_location':'../ai4orgchem-runtime-runs/20261002-wsl2',
-           'oci_build':'BLOCKED','oci_tests':'NOT_EXECUTED','wslc_acceptance':'BLOCKED','wslc_tests':'NOT_EXECUTED',
+           'oci_build':'BLOCKED','oci_tests':'NOT_EXECUTED',
            'p14_fixed':'NOT_EXECUTED','p14_optimize':'NOT_EXECUTED','new_four_input_classification':'NOT_EXECUTED',
            'runs':rows}
-save(root / 'validation/summary.json', summary)
+save(root / 'validation/summary.public.json', summary)
 print(json.dumps({'summarized_runs':len(rows),'all_listed_output_hashes_verified':True}))

@@ -186,7 +186,7 @@ def scientific_worker(args, output, contract, contract_sha):
     gto.Mole.intor_by_shell = forbid("INTEGRAL")
 
     root, science = args.runtime_root.resolve(), args.science_root.resolve()
-    proposal_raw = (root/"validation/user-molecule/residual-diagnostic/contract-v1.json").read_bytes()
+    proposal_raw = (root/"validation/user-molecule/residual-diagnostic/contract-v1.public.json").read_bytes()
     validate_proposal_binding(contract, proposal_raw)
     lock = verify_source(root, science)
     if (lock["source_commit"] != contract["science_commit"] or

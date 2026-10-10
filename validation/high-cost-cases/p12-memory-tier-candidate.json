@@ -297,7 +297,7 @@
       "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime\\validation\\high-cost-cases\\p12-n12-g-pilot-verification.json",
       "size": 3038,
       "sha256": "09d9b1c0e2f4354f2f85446e36a2452ca8a9ff9a21797866aba4bf952d18ab69",
-      "snapshot_path": "resource-source-snapshots/validation/high-cost-cases/p12-n12-g-pilot-verification.json"
+      "snapshot_path": "resource-source-snapshots/validation/high-cost-cases/p12-n12-g-pilot-verification.public.json"
     },
     {
       "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261008-p12-n12-g-pilot\\runs\\20261008T144220Z-P12-N12-G-a12ac23760ff48088c00133bd7fc2e2e\\output\\resource-end.json",

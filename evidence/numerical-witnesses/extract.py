@@ -52,15 +52,15 @@ def extract(water, seed, ordinary, package):
             'Selected witnesses do not establish all scientific services, roots, variational stationarity, wavefunction stability or physical bond energies.',
             'Derived subsets have their own hashes; omitted source file hashes are not the derived payload hashes.',
             'Saved semilocal XC energy and grid counts are not reintegrated; no ERI or grid payload is included.']}
-    for rel in ('validation/molecular-service/deployment-20261008.json', 'validation/user-molecule/seed-v2-20261007.json',
-                'validation/local-runtime-framework-20261007.json'):
+    for rel in ('validation/molecular-service/deployment-20261008.public.json', 'validation/user-molecule/seed-v2-20261007.public.json',
+                'validation/local-runtime-framework-20261007.public.json'):
         path = REPOSITORY/rel
         manifest['public_parent_records'].append({'path': rel, 'size_bytes': path.stat().st_size, 'sha256': audit.sha256(path)})
     result = audit.strict_json(water/'output/calculation/result.json')
     host = audit.strict_json(water/'host-run-manifest.json')
     execution = audit.strict_json(water/'host-execution.json')
     image = audit.strict_json(water/'image-inspect.json')
-    deployment = audit.strict_json(REPOSITORY/'validation/molecular-service/deployment-20261008.json')
+    deployment = audit.strict_json(REPOSITORY/'validation/molecular-service/deployment-20261008.public.json')
     assert audit.sha256(water/'output/calculation/result.json') == deployment['cases']['water']['result_sha256']
     assert audit.sha256(water/'host-run-manifest.json') == deployment['cases']['water']['host_manifest_sha256']
     files = {}

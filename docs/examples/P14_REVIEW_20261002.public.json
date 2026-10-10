@@ -1,0 +1,2496 @@
+{
+  "schema_version": 1,
+  "documentary_example": true,
+  "review_date": "2026-10-03",
+  "baseline_document_commit": "2460eef636be9a143d3bbb81daf8f66fc7e70959",
+  "scientific_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "build_runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+  "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+  "registry_publication_status": "NOT_PUBLISHED; historical image_digest retained verbatim, remote registry manifest not newly verified",
+  "host_launcher_records_source": "validation/provenance-review.public.json; historical file identities, not per-run host HEAD attestation",
+  "source_file_hash_checks": {
+    "count": 588,
+    "status": "PASS"
+  },
+  "manifest_and_output_hash_checks": "PASS; read-only, no recomputation",
+  "classification_parents": [
+    {
+      "task": "p14-smoke",
+      "run_id": "20261002T115757Z-p14-smoke-5edcc0ade184",
+      "result_sha256": "a05ea503afba62cd147aec5b3030780ff8203dfeae218347af8c0a8ba2fa2771",
+      "manifest_sha256": "17f6f6cce41089057bccd4918d00006860f82bc6ad3fec9db2a1fd551babb7ed"
+    },
+    {
+      "task": "p14-optimize",
+      "run_id": "20261002T123346Z-p14-optimize-d7f348003891",
+      "result_sha256": "0a1e89ed6cbd47f8ae1be768149baa0aeebd9f72bbcbb0d8046d234a8ac66929",
+      "manifest_sha256": "2d71c30e807efd42e1942a56d14fe4b400dd1969485bd6b0ea1402d9a6ba9ed6"
+    },
+    {
+      "task": "p14-equivalence",
+      "run_id": "20261002T111600Z-p14-equivalence-a83e2e3a8f2f",
+      "result_sha256": "effbc7a24ddaaf6d9b9bae9309430b63fe8333c7457d6bf275ee5bd371bd83d1",
+      "manifest_sha256": "be87f5d1a2288f4adbee826966ca1062fedee3d83c1bcf330fa5c383c5e1c212"
+    },
+    {
+      "task": "p14-fixed",
+      "run_id": "20261002T123033Z-p14-fixed-d621c0cfab97",
+      "result_sha256": "6408a5317a6f83186dc540069ba1f0308d51721ef87a7a4317e423bf28d03257",
+      "manifest_sha256": "26aaa26fe14a890305e2bff86dfedb300b48ef2334b6a1bb8679581f35e5c480"
+    }
+  ],
+  "runs": [
+    {
+      "role": "final_acceptance",
+      "original_manifest_path": "D:\\AI4Science\\ai4orgchem-runtime-runs\\20261002-oci\\acceptance-03\\离线 runs with spaces\\20261002T111546Z-evidence-eb8faa387218\\run-manifest.json",
+      "manifest_sha256": "773027593a0dd4c77365c69beb2e6e449fdc511934ed8f26d51e240b45927fac",
+      "manifest": {
+        "schema_version": 1,
+        "run_id": "20261002T111546Z-evidence-eb8faa387218",
+        "task": "evidence",
+        "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+        "runtime_code_sha256": "2bd8d97648c0a13b68f301ab88bff3d6595d269606f21b0c1c2374b9ce7cea95",
+        "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "platform": "Linux/x86_64",
+        "python": "3.12.13",
+        "status": "PASS",
+        "process_exit_code": 0,
+        "numerical_qualification": "NOT_APPLICABLE",
+        "scientific_comparison": "NOT_APPLICABLE",
+        "started_utc": "2026-10-02T11:15:46.637234+00:00",
+        "output_sha256": {
+          "00-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "00-stdout.log": "83f9eae01afe93adbfea0ff7a89d5c70f8feece05a450c699ae960b41b1ab0c2",
+          "01-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "01-stdout.log": "56515be80a062b930ce5dfa475ca3942838480ba05efa1a7f3dd94f226c88232",
+          "02-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "02-stdout.log": "e9d5a3e4731ecfae628eed67ba0ff0616da72ff2280185ccb9e72280b1060d97",
+          "03-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "03-stdout.log": "8390faeae7d569664846c366cdda4ad53bc622871a269075de2c44b5ae6bf9ab"
+        },
+        "commands": [
+          [
+            "/opt/venv/bin/python",
+            "/opt/ai4orgchem/software/scripts/validate_public_evidence.py"
+          ],
+          [
+            "/opt/venv/bin/python",
+            "/opt/ai4orgchem/software/scripts/validate_p12_evidence.py"
+          ],
+          [
+            "/opt/venv/bin/python",
+            "/opt/ai4orgchem/software/scripts/validate_evidence_navigation.py"
+          ],
+          [
+            "/opt/venv/bin/python",
+            "/opt/ai4orgchem/software/scripts/validate_p14_evidence.py"
+          ]
+        ],
+        "resource_peak": "UNKNOWN",
+        "dependencies": {
+          "attrs": "26.1.0",
+          "h5py": "3.16.0",
+          "iniconfig": "2.3.0",
+          "jsonschema": "4.26.0",
+          "jsonschema-specifications": "2025.9.1",
+          "numpy": "2.5.1",
+          "packaging": "26.3",
+          "pluggy": "1.6.0",
+          "Pygments": "2.21.0",
+          "pyscf": "2.14.0",
+          "pytest": "8.4.2",
+          "PyYAML": "6.0.3",
+          "referencing": "0.37.0",
+          "rpds-py": "2026.6.3",
+          "scipy": "1.18.0",
+          "setuptools": "78.1.0",
+          "typing_extensions": "4.16.0"
+        },
+        "input_sha256": {
+          "configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml": "f64fed4aeb172deaf5c71e637af367656e24b867570061987a5311fdbe48e06b",
+          "configs/qm/p09_exchange_integral_classes_v0.1.yaml": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+          "evidence/P01-P14/P14/inputs/source_proxy_G.xyz": "fa2b0a1c88d467bd51fec6e140a07a65f74a64ad7e63fbf550d611b3b60c571c",
+          "evidence/P01-P14/P14/inputs/source_proxy_PLG.xyz": "0fd8593ebdf93b59642abbb8b9a84336e30de74d5fc3f4a8721cb2412d3fbcc7"
+        },
+        "threads": 8,
+        "dependency_lock_sha256": "a8dbe44d12930427ca1f377b17eba3fcdb17b6dd922737884b3b77d0d9c4ea71",
+        "memory": {
+          "host_available_bytes": 15364415488,
+          "cgroup_remaining_bytes": [
+            "unlimited"
+          ],
+          "effective_available_bytes": 15364415488,
+          "errors": []
+        },
+        "source_readonly": true,
+        "parent_runs": [],
+        "wall_time_seconds": 0.7347341690000349,
+        "finished_utc": "2026-10-02T11:15:47.375759+00:00",
+        "runtime_exit_code": 0
+      },
+      "result_sha256": "unavailable",
+      "result_excerpt": "unavailable; use stdout/stderr logs"
+    },
+    {
+      "role": "final_acceptance",
+      "original_manifest_path": "D:\\AI4Science\\ai4orgchem-runtime-runs\\20261002-oci\\acceptance-03\\离线 runs with spaces\\20261002T111548Z-core-tests-1651766c39cd\\run-manifest.json",
+      "manifest_sha256": "9c69ff76b99e974d4797729e0cef28d25d0f4a63322cd82a3d43ba35ecc6acb2",
+      "manifest": {
+        "schema_version": 1,
+        "run_id": "20261002T111548Z-core-tests-1651766c39cd",
+        "task": "core-tests",
+        "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+        "runtime_code_sha256": "2bd8d97648c0a13b68f301ab88bff3d6595d269606f21b0c1c2374b9ce7cea95",
+        "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "platform": "Linux/x86_64",
+        "python": "3.12.13",
+        "status": "PASS",
+        "process_exit_code": 0,
+        "numerical_qualification": "NOT_APPLICABLE",
+        "scientific_comparison": "NOT_APPLICABLE",
+        "started_utc": "2026-10-02T11:15:48.215494+00:00",
+        "output_sha256": {
+          "00-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "00-stdout.log": "a600e30df3359105ced5ed0443ad371aeff1ac326da1a61be90f06b0fdf088f1"
+        },
+        "commands": [
+          [
+            "/opt/venv/bin/python",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "--import-mode=importlib",
+            "/opt/ai4orgchem/software/tests/test_p09_conditional_scf.py",
+            "/opt/ai4orgchem/software/tests/test_p09_energy_assembly.py",
+            "/opt/ai4orgchem/software/tests/test_p09_eri_mask.py"
+          ]
+        ],
+        "resource_peak": "UNKNOWN",
+        "dependencies": {
+          "attrs": "26.1.0",
+          "h5py": "3.16.0",
+          "iniconfig": "2.3.0",
+          "jsonschema": "4.26.0",
+          "jsonschema-specifications": "2025.9.1",
+          "numpy": "2.5.1",
+          "packaging": "26.3",
+          "pluggy": "1.6.0",
+          "Pygments": "2.21.0",
+          "pyscf": "2.14.0",
+          "pytest": "8.4.2",
+          "PyYAML": "6.0.3",
+          "referencing": "0.37.0",
+          "rpds-py": "2026.6.3",
+          "scipy": "1.18.0",
+          "setuptools": "78.1.0",
+          "typing_extensions": "4.16.0"
+        },
+        "input_sha256": {
+          "configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml": "f64fed4aeb172deaf5c71e637af367656e24b867570061987a5311fdbe48e06b",
+          "configs/qm/p09_exchange_integral_classes_v0.1.yaml": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+          "evidence/P01-P14/P14/inputs/source_proxy_G.xyz": "fa2b0a1c88d467bd51fec6e140a07a65f74a64ad7e63fbf550d611b3b60c571c",
+          "evidence/P01-P14/P14/inputs/source_proxy_PLG.xyz": "0fd8593ebdf93b59642abbb8b9a84336e30de74d5fc3f4a8721cb2412d3fbcc7"
+        },
+        "threads": 8,
+        "dependency_lock_sha256": "a8dbe44d12930427ca1f377b17eba3fcdb17b6dd922737884b3b77d0d9c4ea71",
+        "memory": {
+          "host_available_bytes": 15369584640,
+          "cgroup_remaining_bytes": [
+            "unlimited"
+          ],
+          "effective_available_bytes": 15369584640,
+          "errors": []
+        },
+        "source_readonly": true,
+        "parent_runs": [],
+        "wall_time_seconds": 0.8072691539999823,
+        "finished_utc": "2026-10-02T11:15:49.025382+00:00",
+        "runtime_exit_code": 0
+      },
+      "result_sha256": "unavailable",
+      "result_excerpt": "unavailable; use stdout/stderr logs"
+    },
+    {
+      "role": "final_acceptance",
+      "original_manifest_path": "D:\\AI4Science\\ai4orgchem-runtime-runs\\20261002-oci\\acceptance-03\\离线 runs with spaces\\20261002T111549Z-p14-smoke-611ad4389dee\\run-manifest.json",
+      "manifest_sha256": "5eae98643cfe4e7ddee612c53be1e5006ef5d1532bbca0e488aa98fd72f883a9",
+      "manifest": {
+        "schema_version": 1,
+        "run_id": "20261002T111549Z-p14-smoke-611ad4389dee",
+        "task": "p14-smoke",
+        "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+        "runtime_code_sha256": "2bd8d97648c0a13b68f301ab88bff3d6595d269606f21b0c1c2374b9ce7cea95",
+        "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "platform": "Linux/x86_64",
+        "python": "3.12.13",
+        "status": "PASS",
+        "process_exit_code": 0,
+        "numerical_qualification": "PASS",
+        "scientific_comparison": "NOT_APPLICABLE",
+        "started_utc": "2026-10-02T11:15:49.843551+00:00",
+        "output_sha256": {
+          "00-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "00-stdout.log": "35ce9eb9dfc16146ae69792e222a827dc91e9cfaa61669462dd05c194c16459e",
+          "report.md": "63e69fb98d989e10f8367d74104dbcd55b1e3647b8fa83633b933d04a734a11b",
+          "result.json": "b91dfb4d73382a6ae6348deea18ad378d3fd83ad081495237e86c39e41f6c530"
+        },
+        "commands": [
+          [
+            "/opt/venv/bin/python",
+            "/opt/ai4orgchem/software/scripts/run_p14_benzotricyclobutadiene_smoke.py",
+            "--protocol",
+            "/opt/ai4orgchem/configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml",
+            "--output",
+            "/work/20261002T111549Z-p14-smoke-611ad4389dee/result.json",
+            "--report",
+            "/work/20261002T111549Z-p14-smoke-611ad4389dee/report.md",
+            "--classes",
+            "/opt/ai4orgchem/configs/qm/p09_exchange_integral_classes_v0.1.yaml"
+          ]
+        ],
+        "resource_peak": {
+          "peak_rss_mib": 549.9375
+        },
+        "dependencies": {
+          "attrs": "26.1.0",
+          "h5py": "3.16.0",
+          "iniconfig": "2.3.0",
+          "jsonschema": "4.26.0",
+          "jsonschema-specifications": "2025.9.1",
+          "numpy": "2.5.1",
+          "packaging": "26.3",
+          "pluggy": "1.6.0",
+          "Pygments": "2.21.0",
+          "pyscf": "2.14.0",
+          "pytest": "8.4.2",
+          "PyYAML": "6.0.3",
+          "referencing": "0.37.0",
+          "rpds-py": "2026.6.3",
+          "scipy": "1.18.0",
+          "setuptools": "78.1.0",
+          "typing_extensions": "4.16.0"
+        },
+        "input_sha256": {
+          "configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml": "f64fed4aeb172deaf5c71e637af367656e24b867570061987a5311fdbe48e06b",
+          "configs/qm/p09_exchange_integral_classes_v0.1.yaml": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+          "evidence/P01-P14/P14/inputs/source_proxy_G.xyz": "fa2b0a1c88d467bd51fec6e140a07a65f74a64ad7e63fbf550d611b3b60c571c",
+          "evidence/P01-P14/P14/inputs/source_proxy_PLG.xyz": "0fd8593ebdf93b59642abbb8b9a84336e30de74d5fc3f4a8721cb2412d3fbcc7"
+        },
+        "threads": 8,
+        "dependency_lock_sha256": "a8dbe44d12930427ca1f377b17eba3fcdb17b6dd922737884b3b77d0d9c4ea71",
+        "memory": {
+          "host_available_bytes": 15379185664,
+          "cgroup_remaining_bytes": [
+            "unlimited"
+          ],
+          "effective_available_bytes": 15379185664,
+          "errors": []
+        },
+        "source_readonly": true,
+        "parent_runs": [],
+        "quantitative_evidence": {},
+        "wall_time_seconds": 9.73829970099996,
+        "finished_utc": "2026-10-02T11:15:59.587115+00:00",
+        "runtime_exit_code": 0
+      },
+      "result_sha256": "b91dfb4d73382a6ae6348deea18ad378d3fd83ad081495237e86c39e41f6c530",
+      "result_excerpt": {
+        "stage": "fixed_source_geometry_STO3G_technical_smoke",
+        "scientific_classification_allowed": false,
+        "smoke_gate_verdict": "PASS",
+        "ordinary_G": {
+          "converged": true,
+          "total_energy_hartree": -454.9514538258486,
+          "electronic_energy_hartree": -1030.8705371903734,
+          "nuclear_repulsion_hartree": 575.9190833645248,
+          "physical_metric_electron_count": 78.00000000000013
+        },
+        "ordinary_at_PLG": {
+          "converged": true,
+          "total_energy_hartree": -454.89185497298513,
+          "electronic_energy_hartree": -1040.3727167736606,
+          "nuclear_repulsion_hartree": 585.4808618006755,
+          "physical_metric_electron_count": 77.99999999999991
+        },
+        "conditional_PLG": {
+          "converged": true,
+          "cycles": 12,
+          "total_energy_hartree": -454.99363901415245,
+          "electronic_energy_hartree": -1040.474500814828,
+          "nuclear_repulsion_hartree": 585.4808618006755,
+          "one_electron_energy_hartree": -1776.8561912718353,
+          "coulomb_energy_hartree": 803.7783537272377,
+          "exact_exchange_energy_hartree": -12.89664269343495,
+          "semilocal_xc_energy_hartree": -54.50002057679528,
+          "energy_component_closure_residual_hartree": 0.0,
+          "grid_electron_count": 78.00004027767628,
+          "masked_metric_electron_count": 78.0,
+          "physical_metric_electron_count": 78.00000000000001,
+          "masked_overlap_minimum_eigenvalue": 0.14850737697177363,
+          "masked_overlap_condition_number": 18.26963771039215,
+          "masked_overlap_cross_pi_max_abs": 0.0,
+          "conditional_fock_cross_pi_max_abs": 0.0,
+          "deleted_eri_count": 1275264,
+          "total_eri_count": 18974736,
+          "deleted_eri_fraction": 0.06720852400792296,
+          "eri_storage_mode": "reference_copy_plus_boolean_mask",
+          "exact_exchange_fraction": 0.2,
+          "final_commutator_frobenius_norm": 1.7864538368223773e-09,
+          "closed_shell_idempotency_relative_residual": 2.897216537214521e-15,
+          "occupied_virtual_gap_hartree": 0.2884614478413292
+        },
+        "technical_endpoint_kcal_mol": 26.47160532579993,
+        "acceptance_checks": {
+          "ordinary_G_converged": true,
+          "ordinary_at_PLG_converged": true,
+          "conditional_PLG_converged": true,
+          "ordinary_G_78_electrons": true,
+          "ordinary_at_PLG_78_electrons": true,
+          "conditional_PLG_78_electrons": true,
+          "G_source_geometry_reconstructed": true,
+          "PLG_source_geometry_reconstructed": true,
+          "interfragment_pi_overlap_zero": true,
+          "interfragment_pi_fock_zero": true,
+          "exchange_integrals_deleted": true,
+          "energy_components_close": true,
+          "commutator_closed": true,
+          "density_idempotent": true,
+          "scientific_classification_disabled": true
+        }
+      }
+    },
+    {
+      "role": "final_acceptance",
+      "original_manifest_path": "D:\\AI4Science\\ai4orgchem-runtime-runs\\20261002-oci\\acceptance-03\\离线 runs with spaces\\20261002T111600Z-p14-equivalence-a83e2e3a8f2f\\run-manifest.json",
+      "manifest_sha256": "be87f5d1a2288f4adbee826966ca1062fedee3d83c1bcf330fa5c383c5e1c212",
+      "manifest": {
+        "schema_version": 1,
+        "run_id": "20261002T111600Z-p14-equivalence-a83e2e3a8f2f",
+        "task": "p14-equivalence",
+        "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+        "runtime_code_sha256": "2bd8d97648c0a13b68f301ab88bff3d6595d269606f21b0c1c2374b9ce7cea95",
+        "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "platform": "Linux/x86_64",
+        "python": "3.12.13",
+        "status": "PASS",
+        "process_exit_code": 0,
+        "numerical_qualification": "PASS",
+        "scientific_comparison": "NOT_APPLICABLE",
+        "started_utc": "2026-10-02T11:16:00.458595+00:00",
+        "output_sha256": {
+          "00-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "00-stdout.log": "8ed80fead7fa4dd5d3d758e01332758c34f868cbf3b07a3f353afbb74a124e04",
+          "report.md": "abc6b7e3ff6f427373b693ad0b507d2feb8ddf7bcf0813c6d19df63f77f4cc42",
+          "result.json": "effbc7a24ddaaf6d9b9bae9309430b63fe8333c7457d6bf275ee5bd371bd83d1"
+        },
+        "commands": [
+          [
+            "/opt/venv/bin/python",
+            "/opt/ai4orgchem/software/scripts/validate_p14_memory_controlled_conditional_scf.py",
+            "--protocol",
+            "/opt/ai4orgchem/configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml",
+            "--output",
+            "/work/20261002T111600Z-p14-equivalence-a83e2e3a8f2f/result.json",
+            "--report",
+            "/work/20261002T111600Z-p14-equivalence-a83e2e3a8f2f/report.md",
+            "--classes",
+            "/opt/ai4orgchem/configs/qm/p09_exchange_integral_classes_v0.1.yaml"
+          ]
+        ],
+        "resource_peak": {
+          "peak_rss_mib": 551.37890625
+        },
+        "dependencies": {
+          "attrs": "26.1.0",
+          "h5py": "3.16.0",
+          "iniconfig": "2.3.0",
+          "jsonschema": "4.26.0",
+          "jsonschema-specifications": "2025.9.1",
+          "numpy": "2.5.1",
+          "packaging": "26.3",
+          "pluggy": "1.6.0",
+          "Pygments": "2.21.0",
+          "pyscf": "2.14.0",
+          "pytest": "8.4.2",
+          "PyYAML": "6.0.3",
+          "referencing": "0.37.0",
+          "rpds-py": "2026.6.3",
+          "scipy": "1.18.0",
+          "setuptools": "78.1.0",
+          "typing_extensions": "4.16.0"
+        },
+        "input_sha256": {
+          "configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml": "f64fed4aeb172deaf5c71e637af367656e24b867570061987a5311fdbe48e06b",
+          "configs/qm/p09_exchange_integral_classes_v0.1.yaml": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+          "evidence/P01-P14/P14/inputs/source_proxy_G.xyz": "fa2b0a1c88d467bd51fec6e140a07a65f74a64ad7e63fbf550d611b3b60c571c",
+          "evidence/P01-P14/P14/inputs/source_proxy_PLG.xyz": "0fd8593ebdf93b59642abbb8b9a84336e30de74d5fc3f4a8721cb2412d3fbcc7"
+        },
+        "threads": 8,
+        "dependency_lock_sha256": "a8dbe44d12930427ca1f377b17eba3fcdb17b6dd922737884b3b77d0d9c4ea71",
+        "memory": {
+          "host_available_bytes": 15375343616,
+          "cgroup_remaining_bytes": [
+            "unlimited"
+          ],
+          "effective_available_bytes": 15375343616,
+          "errors": []
+        },
+        "source_readonly": true,
+        "parent_runs": [],
+        "quantitative_evidence": {},
+        "wall_time_seconds": 11.675013456999977,
+        "finished_utc": "2026-10-02T11:16:12.136661+00:00",
+        "runtime_exit_code": 0
+      },
+      "result_sha256": "effbc7a24ddaaf6d9b9bae9309430b63fe8333c7457d6bf275ee5bd371bd83d1",
+      "result_excerpt": {
+        "stage": "memory_controlled_eri_equivalence",
+        "verdict": "PASS",
+        "reference": {
+          "converged": true,
+          "cycles": 12,
+          "total_energy_hartree": -454.9936390141522,
+          "electronic_energy_hartree": -1040.4745008148277,
+          "nuclear_repulsion_hartree": 585.4808618006755,
+          "one_electron_energy_hartree": -1776.8561912718349,
+          "coulomb_energy_hartree": 803.7783537272375,
+          "exact_exchange_energy_hartree": -12.896642693434949,
+          "semilocal_xc_energy_hartree": -54.500020576795265,
+          "energy_component_closure_residual_hartree": 0.0,
+          "grid_electron_count": 78.00004027767628,
+          "masked_metric_electron_count": 78.0,
+          "physical_metric_electron_count": 78.0,
+          "masked_overlap_minimum_eigenvalue": 0.14850737697177363,
+          "masked_overlap_condition_number": 18.26963771039215,
+          "masked_overlap_cross_pi_max_abs": 0.0,
+          "conditional_fock_cross_pi_max_abs": 0.0,
+          "deleted_eri_count": 1275264,
+          "total_eri_count": 18974736,
+          "deleted_eri_fraction": 0.06720852400792296,
+          "eri_storage_mode": "reference_copy_plus_boolean_mask",
+          "exact_exchange_fraction": 0.2,
+          "final_commutator_frobenius_norm": 1.7864513733194345e-09,
+          "closed_shell_idempotency_relative_residual": 2.7422862575334774e-15,
+          "occupied_virtual_gap_hartree": 0.2884614478413322
+        },
+        "memory_controlled": {
+          "converged": true,
+          "cycles": 12,
+          "total_energy_hartree": -454.993639014152,
+          "electronic_energy_hartree": -1040.4745008148275,
+          "nuclear_repulsion_hartree": 585.4808618006755,
+          "one_electron_energy_hartree": -1776.8561912718349,
+          "coulomb_energy_hartree": 803.7783537272377,
+          "exact_exchange_energy_hartree": -12.896642693434956,
+          "semilocal_xc_energy_hartree": -54.50002057679527,
+          "energy_component_closure_residual_hartree": 0.0,
+          "grid_electron_count": 78.00004027767628,
+          "masked_metric_electron_count": 78.0,
+          "physical_metric_electron_count": 78.00000000000001,
+          "masked_overlap_minimum_eigenvalue": 0.14850737697177363,
+          "masked_overlap_condition_number": 18.26963771039215,
+          "masked_overlap_cross_pi_max_abs": 0.0,
+          "conditional_fock_cross_pi_max_abs": 0.0,
+          "deleted_eri_count": 1275264,
+          "total_eri_count": 18974736,
+          "deleted_eri_fraction": 0.06720852400792296,
+          "eri_storage_mode": "single_tensor_inplace_category_mask",
+          "exact_exchange_fraction": 0.2,
+          "final_commutator_frobenius_norm": 1.7864202961072862e-09,
+          "closed_shell_idempotency_relative_residual": 2.265219401481192e-15,
+          "occupied_virtual_gap_hartree": 0.2884614478413099
+        },
+        "differences": {
+          "total_energy_hartree": 2.2737367544323206e-13,
+          "density_frobenius_norm": 6.226066644162052e-13,
+          "deleted_eri_count": 0,
+          "deleted_eri_fraction": 0.0,
+          "one_electron_energy_hartree": 0.0,
+          "coulomb_energy_hartree": 2.2737367544323206e-13,
+          "exact_exchange_energy_hartree": 7.105427357601002e-15
+        },
+        "acceptance_checks": {
+          "reference_converged": true,
+          "memory_controlled_converged": true,
+          "total_energy_equal": true,
+          "density_equal": true,
+          "deleted_count_equal": true,
+          "deleted_fraction_equal": true,
+          "one_electron_equal": true,
+          "coulomb_equal": true,
+          "exact_exchange_equal": true,
+          "single_tensor_mode_reported": true
+        },
+        "scientific_classification_allowed": false
+      }
+    },
+    {
+      "role": "final_acceptance",
+      "original_manifest_path": "D:\\AI4Science\\ai4orgchem-runtime-runs\\20261002-l3\\20261002T123033Z-p14-fixed-d621c0cfab97\\run-manifest.json",
+      "manifest_sha256": "26aaa26fe14a890305e2bff86dfedb300b48ef2334b6a1bb8679581f35e5c480",
+      "manifest": {
+        "schema_version": 1,
+        "run_id": "20261002T123033Z-p14-fixed-d621c0cfab97",
+        "task": "p14-fixed",
+        "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+        "runtime_code_sha256": "2bd8d97648c0a13b68f301ab88bff3d6595d269606f21b0c1c2374b9ce7cea95",
+        "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "platform": "Linux/x86_64",
+        "python": "3.12.13",
+        "status": "PASS",
+        "process_exit_code": 0,
+        "numerical_qualification": "PASS",
+        "scientific_comparison": "NOT_APPLICABLE",
+        "started_utc": "2026-10-02T12:30:33.809953+00:00",
+        "output_sha256": {
+          "00-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "00-stdout.log": "f21330adb48fad8c9a38c1f92fd475d4b03af1d743155037fdc87e7012a8a502",
+          "checkpoint.json": "6408a5317a6f83186dc540069ba1f0308d51721ef87a7a4317e423bf28d03257",
+          "report.md": "2554ec5ae578ce5271566b0aaa505f1b6421ca6c0ff0240fbd0f3096cedb238f",
+          "result.json": "6408a5317a6f83186dc540069ba1f0308d51721ef87a7a4317e423bf28d03257"
+        },
+        "commands": [
+          [
+            "/opt/venv/bin/python",
+            "/opt/ai4orgchem/software/scripts/run_p14_benzotricyclobutadiene_source_level_fixed_geometry.py",
+            "--protocol",
+            "/opt/ai4orgchem/configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml",
+            "--output",
+            "/work/20261002T123033Z-p14-fixed-d621c0cfab97/result.json",
+            "--report",
+            "/work/20261002T123033Z-p14-fixed-d621c0cfab97/report.md",
+            "--classes",
+            "/opt/ai4orgchem/configs/qm/p09_exchange_integral_classes_v0.1.yaml",
+            "--checkpoint",
+            "/work/20261002T123033Z-p14-fixed-d621c0cfab97/checkpoint.json"
+          ]
+        ],
+        "resource_peak": {
+          "peak_rss_mib": 8800.86328125
+        },
+        "dependencies": {
+          "attrs": "26.1.0",
+          "h5py": "3.16.0",
+          "iniconfig": "2.3.0",
+          "jsonschema": "4.26.0",
+          "jsonschema-specifications": "2025.9.1",
+          "numpy": "2.5.1",
+          "packaging": "26.3",
+          "pluggy": "1.6.0",
+          "Pygments": "2.21.0",
+          "pyscf": "2.14.0",
+          "pytest": "8.4.2",
+          "PyYAML": "6.0.3",
+          "referencing": "0.37.0",
+          "rpds-py": "2026.6.3",
+          "scipy": "1.18.0",
+          "setuptools": "78.1.0",
+          "typing_extensions": "4.16.0"
+        },
+        "input_sha256": {
+          "configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml": "f64fed4aeb172deaf5c71e637af367656e24b867570061987a5311fdbe48e06b",
+          "configs/qm/p09_exchange_integral_classes_v0.1.yaml": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+          "evidence/P01-P14/P14/inputs/source_proxy_G.xyz": "fa2b0a1c88d467bd51fec6e140a07a65f74a64ad7e63fbf550d611b3b60c571c",
+          "evidence/P01-P14/P14/inputs/source_proxy_PLG.xyz": "0fd8593ebdf93b59642abbb8b9a84336e30de74d5fc3f4a8721cb2412d3fbcc7"
+        },
+        "threads": 8,
+        "dependency_lock_sha256": "a8dbe44d12930427ca1f377b17eba3fcdb17b6dd922737884b3b77d0d9c4ea71",
+        "memory": {
+          "host_available_bytes": 15394168832,
+          "cgroup_remaining_bytes": [
+            "unlimited"
+          ],
+          "effective_available_bytes": 15394168832,
+          "errors": []
+        },
+        "source_readonly": true,
+        "parent_runs": [],
+        "quantitative_evidence": {},
+        "wall_time_seconds": 55.125142688999404,
+        "finished_utc": "2026-10-02T12:31:28.935652+00:00",
+        "runtime_exit_code": 0
+      },
+      "result_sha256": "6408a5317a6f83186dc540069ba1f0308d51721ef87a7a4317e423bf28d03257",
+      "result_excerpt": {
+        "method": {
+          "engine": "PySCF",
+          "pyscf_xc": "B3LYPG",
+          "basis": "6-31g(d)",
+          "grid_level": 3,
+          "original_program_code_used": false,
+          "fit_to_published_values": false
+        },
+        "anchor_gate_verdict": "PASS",
+        "geometry_contract": {
+          "G": {
+            "atoms_angstrom": [
+              [
+                "C",
+                1.4264999999999999,
+                -0.051095498823282424,
+                0.0
+              ],
+              [
+                "C",
+                0.6690000000000003,
+                1.2609329879101423,
+                0.0
+              ],
+              [
+                "C",
+                -0.6689999999999996,
+                1.2609329879101425,
+                0.0
+              ],
+              [
+                "C",
+                -1.4265000000000003,
+                -0.051095498823281536,
+                0.0
+              ],
+              [
+                "C",
+                -0.7575000000000003,
+                -1.2098374890868604,
+                0.0
+              ],
+              [
+                "C",
+                0.7574999999999996,
+                -1.2098374890868604,
+                0.0
+              ],
+              [
+                "C",
+                2.665443494921395,
+                0.7456152494360577,
+                0.0
+              ],
+              [
+                "C",
+                1.9784434949213956,
+                1.9355341542358768,
+                0.0
+              ],
+              [
+                "C",
+                -1.9784434949213952,
+                1.9355341542358775,
+                0.0
+              ],
+              [
+                "C",
+                -2.665443494921396,
+                0.7456152494360592,
+                0.0
+              ],
+              [
+                "C",
+                -0.6870000000000008,
+                -2.681149403671936,
+                0.0
+              ],
+              [
+                "C",
+                0.6869999999999993,
+                -2.681149403671936,
+                0.0
+              ],
+              [
+                "H",
+                3.7150356137522538,
+                0.491142492371282,
+                0.0
+              ],
+              [
+                "H",
+                2.282859682147664,
+                2.971743971287723,
+                0.0
+              ],
+              [
+                "H",
+                -2.282859682147663,
+                2.9717439712877245,
+                0.0
+              ],
+              [
+                "H",
+                -3.715035613752255,
+                0.49114249237128427,
+                0.0
+              ],
+              [
+                "H",
+                -1.432175931604592,
+                -3.4628864636590073,
+                0.0
+              ],
+              [
+                "H",
+                1.4321759316045901,
+                -3.4628864636590073,
+                0.0
+              ]
+            ],
+            "metrics": {
+              "rendo_angstrom": 1.515,
+              "rexo_angstrom": 1.3379999999999999,
+              "delta_r_angstrom": 0.17700000000000005,
+              "rside_angstrom": 1.473,
+              "router_angstrom": 1.3739999999999999,
+              "maximum_out_of_plane_angstrom": 0.0
+            }
+          },
+          "PLG": {
+            "atoms_angstrom": [
+              [
+                "C",
+                1.3940000000000001,
+                0.0005773502691891844,
+                0.0
+              ],
+              [
+                "C",
+                0.6975000000000005,
+                1.2069507377409123,
+                0.0
+              ],
+              [
+                "C",
+                -0.6974999999999998,
+                1.2069507377409125,
+                0.0
+              ],
+              [
+                "C",
+                -1.3940000000000006,
+                0.0005773502691898506,
+                0.0
+              ],
+              [
+                "C",
+                -0.6965000000000003,
+                -1.207528088010102,
+                0.0
+              ],
+              [
+                "C",
+                0.6964999999999997,
+                -1.207528088010102,
+                0.0
+              ],
+              [
+                "C",
+                2.6334912087603257,
+                0.7433333959570494,
+                0.0
+              ],
+              [
+                "C",
+                1.9604912087603257,
+                1.909003589450904,
+                0.0
+              ],
+              [
+                "C",
+                -1.9604912087603252,
+                1.9090035894509048,
+                0.0
+              ],
+              [
+                "C",
+                -2.633491208760326,
+                0.7433333959570506,
+                0.0
+              ],
+              [
+                "C",
+                -0.6730000000000008,
+                -2.6523369854079553,
+                0.0
+              ],
+              [
+                "C",
+                0.6729999999999993,
+                -2.6523369854079553,
+                0.0
+              ],
+              [
+                "H",
+                3.678929635340748,
+                0.4723011170140222,
+                0.0
+              ],
+              [
+                "H",
+                2.2484895832402856,
+                2.9498959644334963,
+                0.0
+              ],
+              [
+                "H",
+                -2.2484895832402847,
+                2.949895964433497,
+                0.0
+              ],
+              [
+                "H",
+                -3.6789296353407486,
+                0.47230111701402405,
+                0.0
+              ],
+              [
+                "H",
+                -1.4304400521004637,
+                -3.4221970814475204,
+                0.0
+              ],
+              [
+                "H",
+                1.4304400521004617,
+                -3.4221970814475204,
+                0.0
+              ]
+            ],
+            "metrics": {
+              "rendo_angstrom": 1.3929999999999998,
+              "rexo_angstrom": 1.3950000000000002,
+              "delta_r_angstrom": -0.002000000000000446,
+              "rside_angstrom": 1.445,
+              "router_angstrom": 1.346,
+              "maximum_out_of_plane_angstrom": 0.0
+            }
+          },
+          "fixed_CH_angstrom": 1.08,
+          "CH_coordinate_status": "source_table_not_reported_fixed_proxy"
+        },
+        "ordinary_G": {
+          "converged": true,
+          "total_energy_hartree": -460.6207689426276,
+          "electronic_energy_hartree": -1036.5398523071524,
+          "nuclear_repulsion_hartree": 575.9190833645248,
+          "physical_metric_electron_count": 78.0000000000001,
+          "nao": 180
+        },
+        "ordinary_at_PLG": {
+          "converged": true,
+          "total_energy_hartree": -460.58416955797225,
+          "electronic_energy_hartree": -1046.0650313586477,
+          "nuclear_repulsion_hartree": 585.4808618006755,
+          "physical_metric_electron_count": 78.00000000000006,
+          "nao": 180
+        },
+        "conditional_PLG": {
+          "converged": true,
+          "cycles": 13,
+          "total_energy_hartree": -460.72767872187546,
+          "electronic_energy_hartree": -1046.208540522551,
+          "nuclear_repulsion_hartree": 585.4808618006755,
+          "one_electron_energy_hartree": -1781.0910286224855,
+          "coulomb_energy_hartree": 802.3411811963462,
+          "exact_exchange_energy_hartree": -12.888113202511162,
+          "semilocal_xc_energy_hartree": -54.57057989390052,
+          "energy_component_closure_residual_hartree": 0.0,
+          "grid_electron_count": 78.0001073264902,
+          "masked_metric_electron_count": 78.0,
+          "physical_metric_electron_count": 78.0,
+          "masked_overlap_minimum_eigenvalue": 7.325421478038995e-05,
+          "masked_overlap_condition_number": 83317.99824671936,
+          "masked_overlap_cross_pi_max_abs": 0.0,
+          "conditional_fock_cross_pi_max_abs": 0.0,
+          "deleted_eri_count": 124416000,
+          "total_eri_count": 1049760000,
+          "deleted_eri_fraction": 0.11851851851851852,
+          "eri_storage_mode": "single_tensor_inplace_category_mask",
+          "exact_exchange_fraction": 0.2,
+          "final_commutator_frobenius_norm": 3.2107519868034144e-08,
+          "closed_shell_idempotency_relative_residual": 3.361294944237049e-15,
+          "occupied_virtual_gap_hartree": 0.24657454451494898
+        },
+        "fixed_geometry_endpoint_kcal_mol": 67.08689934803395,
+        "source_comparison": {
+          "G_source_energy_hartree": -460.6304,
+          "G_energy_residual_hartree": 0.009631057372416763,
+          "PLG_source_energy_hartree": -460.7373,
+          "PLG_energy_residual_hartree": 0.009621278124541277,
+          "source_delta_E_GP_kcal_mol": 67.08,
+          "fixed_endpoint_residual_kcal_mol": 0.006899348033954311
+        },
+        "acceptance_checks": {
+          "ordinary_G_converged": true,
+          "ordinary_at_PLG_converged": true,
+          "conditional_PLG_converged": true,
+          "ordinary_G_78_electrons": true,
+          "ordinary_at_PLG_78_electrons": true,
+          "conditional_PLG_78_electrons": true,
+          "single_tensor_memory_mode": true,
+          "energy_components_close": true,
+          "commutator_closed": true,
+          "density_idempotent": true,
+          "endpoint_positive": true,
+          "scientific_classification_deferred": true
+        },
+        "peak_rss_mib": 8800.86328125,
+        "wall_time_seconds": 54.36957464700026
+      }
+    },
+    {
+      "role": "final_acceptance",
+      "original_manifest_path": "D:\\AI4Science\\ai4orgchem-runtime-runs\\20261002-l4\\20261002T123346Z-p14-optimize-d7f348003891\\run-manifest.json",
+      "manifest_sha256": "2d71c30e807efd42e1942a56d14fe4b400dd1969485bd6b0ea1402d9a6ba9ed6",
+      "manifest": {
+        "schema_version": 1,
+        "run_id": "20261002T123346Z-p14-optimize-d7f348003891",
+        "task": "p14-optimize",
+        "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+        "runtime_code_sha256": "2bd8d97648c0a13b68f301ab88bff3d6595d269606f21b0c1c2374b9ce7cea95",
+        "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "platform": "Linux/x86_64",
+        "python": "3.12.13",
+        "status": "PASS",
+        "process_exit_code": 0,
+        "numerical_qualification": "PASS",
+        "scientific_comparison": "NOT_APPLICABLE",
+        "started_utc": "2026-10-02T12:33:46.203948+00:00",
+        "output_sha256": {
+          "00-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "00-stdout.log": "60ef70b5d76989f5ce02af24c554238d653f95adbc243fadc337f839b39a7c62",
+          "checkpoint.json": "0a1e89ed6cbd47f8ae1be768149baa0aeebd9f72bbcbb0d8046d234a8ac66929",
+          "report.md": "71fa33e55d5b05fbe8b4f4fe7f1416ee549f04562f4ecd0a82ac32d6a3bb246d",
+          "result.json": "0a1e89ed6cbd47f8ae1be768149baa0aeebd9f72bbcbb0d8046d234a8ac66929"
+        },
+        "commands": [
+          [
+            "/opt/venv/bin/python",
+            "/opt/ai4orgchem/software/scripts/run_p14_benzotricyclobutadiene_production_optimization.py",
+            "--protocol",
+            "/opt/ai4orgchem/configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml",
+            "--output",
+            "/work/20261002T123346Z-p14-optimize-d7f348003891/result.json",
+            "--report",
+            "/work/20261002T123346Z-p14-optimize-d7f348003891/report.md",
+            "--classes",
+            "/opt/ai4orgchem/configs/qm/p09_exchange_integral_classes_v0.1.yaml",
+            "--checkpoint",
+            "/work/20261002T123346Z-p14-optimize-d7f348003891/checkpoint.json"
+          ]
+        ],
+        "resource_peak": {
+          "peak_rss_mib": 8801.19921875
+        },
+        "dependencies": {
+          "attrs": "26.1.0",
+          "h5py": "3.16.0",
+          "iniconfig": "2.3.0",
+          "jsonschema": "4.26.0",
+          "jsonschema-specifications": "2025.9.1",
+          "numpy": "2.5.1",
+          "packaging": "26.3",
+          "pluggy": "1.6.0",
+          "Pygments": "2.21.0",
+          "pyscf": "2.14.0",
+          "pytest": "8.4.2",
+          "PyYAML": "6.0.3",
+          "referencing": "0.37.0",
+          "rpds-py": "2026.6.3",
+          "scipy": "1.18.0",
+          "setuptools": "78.1.0",
+          "typing_extensions": "4.16.0"
+        },
+        "input_sha256": {
+          "configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml": "f64fed4aeb172deaf5c71e637af367656e24b867570061987a5311fdbe48e06b",
+          "configs/qm/p09_exchange_integral_classes_v0.1.yaml": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+          "evidence/P01-P14/P14/inputs/source_proxy_G.xyz": "fa2b0a1c88d467bd51fec6e140a07a65f74a64ad7e63fbf550d611b3b60c571c",
+          "evidence/P01-P14/P14/inputs/source_proxy_PLG.xyz": "0fd8593ebdf93b59642abbb8b9a84336e30de74d5fc3f4a8721cb2412d3fbcc7"
+        },
+        "threads": 8,
+        "dependency_lock_sha256": "a8dbe44d12930427ca1f377b17eba3fcdb17b6dd922737884b3b77d0d9c4ea71",
+        "memory": {
+          "host_available_bytes": 15381778432,
+          "cgroup_remaining_bytes": [
+            "unlimited"
+          ],
+          "effective_available_bytes": 15381778432,
+          "errors": []
+        },
+        "source_readonly": true,
+        "parent_runs": [],
+        "quantitative_evidence": {},
+        "wall_time_seconds": 1272.6989635990003,
+        "finished_utc": "2026-10-02T12:54:58.844428+00:00",
+        "runtime_exit_code": 0
+      },
+      "result_sha256": "0a1e89ed6cbd47f8ae1be768149baa0aeebd9f72bbcbb0d8046d234a8ac66929",
+      "result_excerpt": {
+        "method": {
+          "engine": "PySCF_plus_SciPy",
+          "pyscf_xc": "B3LYPG",
+          "basis": "6-31g(d)",
+          "grid_level": 3,
+          "parameter_order": [
+            "rendo_angstrom",
+            "rexo_angstrom",
+            "rside_angstrom",
+            "router_angstrom",
+            "rCH_angstrom"
+          ],
+          "original_program_code_used": false,
+          "fit_to_published_values": false
+        },
+        "production_gate_verdict": "PASS",
+        "G_optimizer": {
+          "success": true,
+          "status": 0,
+          "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+          "iterations": 1,
+          "function_evaluations": 18,
+          "gradient_hartree_per_angstrom": [
+            5.035862158518403e-05,
+            0.0003959022587293484,
+            0.0011395680683200667,
+            -0.0006762810807918974,
+            0.001462869559316535
+          ],
+          "gradient_max_abs_hartree_per_angstrom": 0.001462869559316535,
+          "active_bounds": [],
+          "bounds_angstrom": [
+            [
+              1.2,
+              1.7
+            ],
+            [
+              1.2,
+              1.7
+            ],
+            [
+              1.25,
+              1.7
+            ],
+            [
+              1.2,
+              1.55
+            ],
+            [
+              0.95,
+              1.2
+            ]
+          ],
+          "evaluations": [
+            {
+              "evaluation": 1,
+              "parameters_angstrom": [
+                1.515,
+                1.338,
+                1.473,
+                1.374,
+                1.08
+              ],
+              "delta_r_angstrom": 0.17699999999999982,
+              "energy_hartree": -460.6207689426278,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.00000000000014
+            },
+            {
+              "evaluation": 2,
+              "parameters_angstrom": [
+                1.5157574999999999,
+                1.338,
+                1.473,
+                1.374,
+                1.08
+              ],
+              "delta_r_angstrom": 0.1777574999999998,
+              "energy_hartree": -460.62076824777137,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.00000000000003
+            },
+            {
+              "evaluation": 3,
+              "parameters_angstrom": [
+                1.515,
+                1.338669,
+                1.473,
+                1.374,
+                1.08
+              ],
+              "delta_r_angstrom": 0.1763309999999998,
+              "energy_hartree": -460.6207670980939,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.00000000000001
+            },
+            {
+              "evaluation": 4,
+              "parameters_angstrom": [
+                1.515,
+                1.338,
+                1.4737365,
+                1.374,
+                1.08
+              ],
+              "delta_r_angstrom": 0.17699999999999982,
+              "energy_hartree": -460.62076702702234,
+              "scf_cycles": 0,
+              "metric_electron_count": 77.99999999999999
+            },
+            {
+              "evaluation": 5,
+              "parameters_angstrom": [
+                1.515,
+                1.338,
+                1.473,
+                1.3746870000000002,
+                1.08
+              ],
+              "delta_r_angstrom": 0.17699999999999982,
+              "energy_hartree": -460.6207708921287,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 6,
+              "parameters_angstrom": [
+                1.515,
+                1.338,
+                1.473,
+                1.374,
+                1.08054
+              ],
+              "delta_r_angstrom": 0.17699999999999982,
+              "energy_hartree": -460.6207858421669,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 7,
+              "parameters_angstrom": [
+                1.5140826977514652,
+                1.3352428491382855,
+                1.470399042117498,
+                1.3768377014120357,
+                1.1112954427870334
+              ],
+              "delta_r_angstrom": 0.1788398486131797,
+              "energy_hartree": -460.6180201324853,
+              "scf_cycles": 0,
+              "metric_electron_count": 77.99999999999993
+            },
+            {
+              "evaluation": 8,
+              "parameters_angstrom": [
+                1.514839739100341,
+                1.3352428491382855,
+                1.470399042117498,
+                1.3768377014120357,
+                1.1112954427870334
+              ],
+              "delta_r_angstrom": 0.17959688996205547,
+              "energy_hartree": -460.61802448327273,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.00000000000004
+            },
+            {
+              "evaluation": 9,
+              "parameters_angstrom": [
+                1.5140826977514652,
+                1.3359104705628546,
+                1.470399042117498,
+                1.3768377014120357,
+                1.1112954427870334
+              ],
+              "delta_r_angstrom": 0.1781722271886106,
+              "energy_hartree": -460.6180304371187,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.00000000000011
+            },
+            {
+              "evaluation": 10,
+              "parameters_angstrom": [
+                1.5140826977514652,
+                1.3352428491382855,
+                1.4711342416385567,
+                1.3768377014120357,
+                1.1112954427870334
+              ],
+              "delta_r_angstrom": 0.1788398486131797,
+              "energy_hartree": -460.61802645499733,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.00000000000009
+            },
+            {
+              "evaluation": 11,
+              "parameters_angstrom": [
+                1.5140826977514652,
+                1.3352428491382855,
+                1.470399042117498,
+                1.3775261202627416,
+                1.1112954427870334
+              ],
+              "delta_r_angstrom": 0.1788398486131797,
+              "energy_hartree": -460.61801069792887,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.00000000000004
+            },
+            {
+              "evaluation": 12,
+              "parameters_angstrom": [
+                1.5140826977514652,
+                1.3352428491382855,
+                1.470399042117498,
+                1.3768377014120357,
+                1.111851090508427
+              ],
+              "delta_r_angstrom": 0.1788398486131797,
+              "energy_hartree": -460.6179085824748,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.00000000000009
+            },
+            {
+              "evaluation": 13,
+              "parameters_angstrom": [
+                1.514880199555997,
+                1.3376399137820236,
+                1.4726603127162785,
+                1.3743706061874943,
+                1.0840872111096878
+              ],
+              "delta_r_angstrom": 0.17724028577397344,
+              "energy_hartree": -460.62083946551957,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.0000000000001
+            },
+            {
+              "evaluation": 14,
+              "parameters_angstrom": [
+                1.5156376396557751,
+                1.3376399137820236,
+                1.4726603127162785,
+                1.3743706061874943,
+                1.0840872111096878
+              ],
+              "delta_r_angstrom": 0.1779977258737515,
+              "energy_hartree": -460.6208394273759,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.00000000000011
+            },
+            {
+              "evaluation": 15,
+              "parameters_angstrom": [
+                1.514880199555997,
+                1.3383087337389146,
+                1.4726603127162785,
+                1.3743706061874943,
+                1.0840872111096878
+              ],
+              "delta_r_angstrom": 0.1765714658170825,
+              "energy_hartree": -460.62083920073223,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 16,
+              "parameters_angstrom": [
+                1.514880199555997,
+                1.3376399137820236,
+                1.4733966428726366,
+                1.3743706061874943,
+                1.0840872111096878
+              ],
+              "delta_r_angstrom": 0.17724028577397344,
+              "energy_hartree": -460.62083862642123,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.00000000000006
+            },
+            {
+              "evaluation": 17,
+              "parameters_angstrom": [
+                1.514880199555997,
+                1.3376399137820236,
+                1.4726603127162785,
+                1.375057791490588,
+                1.0840872111096878
+              ],
+              "delta_r_angstrom": 0.17724028577397344,
+              "energy_hartree": -460.62083993025,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.00000000000014
+            },
+            {
+              "evaluation": 18,
+              "parameters_angstrom": [
+                1.514880199555997,
+                1.3376399137820236,
+                1.4726603127162785,
+                1.3743706061874943,
+                1.0846292547152425
+              ],
+              "delta_r_angstrom": 0.17724028577397344,
+              "energy_hartree": -460.6208386725805,
+              "scf_cycles": 0,
+              "metric_electron_count": 78.0
+            }
+          ],
+          "termination_reason": "gradient_tolerance_satisfied"
+        },
+        "PLG_optimizer": {
+          "success": true,
+          "status": 0,
+          "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+          "iterations": 3,
+          "function_evaluations": 30,
+          "gradient_hartree_per_angstrom": [
+            9.925151482563007e-05,
+            0.00030617626710174276,
+            -0.0011655667251974366,
+            -0.00010094414206688513,
+            0.000664403424358001
+          ],
+          "gradient_max_abs_hartree_per_angstrom": 0.0011655667251974366,
+          "active_bounds": [],
+          "bounds_angstrom": [
+            [
+              1.2,
+              1.7
+            ],
+            [
+              1.2,
+              1.7
+            ],
+            [
+              1.25,
+              1.7
+            ],
+            [
+              1.2,
+              1.55
+            ],
+            [
+              0.95,
+              1.2
+            ]
+          ],
+          "evaluations": [
+            {
+              "evaluation": 1,
+              "parameters_angstrom": [
+                1.393,
+                1.395,
+                1.445,
+                1.346,
+                1.08
+              ],
+              "delta_r_angstrom": -0.0020000000000000018,
+              "energy_hartree": -460.7276787218757,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.00000000000001
+            },
+            {
+              "evaluation": 2,
+              "parameters_angstrom": [
+                1.3936965000000001,
+                1.395,
+                1.445,
+                1.346,
+                1.08
+              ],
+              "delta_r_angstrom": -0.001303499999999902,
+              "energy_hartree": -460.72769058450695,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 3,
+              "parameters_angstrom": [
+                1.393,
+                1.3956975,
+                1.445,
+                1.346,
+                1.08
+              ],
+              "delta_r_angstrom": -0.0026975000000000193,
+              "energy_hartree": -460.7276795356403,
+              "scf_cycles": 13,
+              "metric_electron_count": 77.99999999999999
+            },
+            {
+              "evaluation": 4,
+              "parameters_angstrom": [
+                1.393,
+                1.395,
+                1.4457225,
+                1.346,
+                1.08
+              ],
+              "delta_r_angstrom": -0.0020000000000000018,
+              "energy_hartree": -460.72776016201794,
+              "scf_cycles": 13,
+              "metric_electron_count": 77.99999999999999
+            },
+            {
+              "evaluation": 5,
+              "parameters_angstrom": [
+                1.393,
+                1.395,
+                1.445,
+                1.346673,
+                1.08
+              ],
+              "delta_r_angstrom": -0.0020000000000000018,
+              "energy_hartree": -460.72769209866294,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 6,
+              "parameters_angstrom": [
+                1.393,
+                1.395,
+                1.445,
+                1.346,
+                1.08054
+              ],
+              "delta_r_angstrom": -0.0020000000000000018,
+              "energy_hartree": -460.7276943802208,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 7,
+              "parameters_angstrom": [
+                1.4100317749521716,
+                1.396166687579043,
+                1.5577199200734824,
+                1.3658763554995834,
+                1.108996935354911
+              ],
+              "delta_r_angstrom": 0.013865087373128526,
+              "energy_hartree": -460.69608812641775,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.00000000000001
+            },
+            {
+              "evaluation": 8,
+              "parameters_angstrom": [
+                1.4107367908396478,
+                1.396166687579043,
+                1.5577199200734824,
+                1.3658763554995834,
+                1.108996935354911
+              ],
+              "delta_r_angstrom": 0.014570103260604705,
+              "energy_hartree": -460.69605831906665,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 9,
+              "parameters_angstrom": [
+                1.4100317749521716,
+                1.3968647709228326,
+                1.5577199200734824,
+                1.3658763554995834,
+                1.108996935354911
+              ],
+              "delta_r_angstrom": 0.013167004029339013,
+              "energy_hartree": -460.6960539995307,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 10,
+              "parameters_angstrom": [
+                1.4100317749521716,
+                1.396166687579043,
+                1.558498780033519,
+                1.3658763554995834,
+                1.108996935354911
+              ],
+              "delta_r_angstrom": 0.013865087373128526,
+              "energy_hartree": -460.69566623137416,
+              "scf_cycles": 13,
+              "metric_electron_count": 77.99999999999996
+            },
+            {
+              "evaluation": 11,
+              "parameters_angstrom": [
+                1.4100317749521716,
+                1.396166687579043,
+                1.5577199200734824,
+                1.3665592936773332,
+                1.108996935354911
+              ],
+              "delta_r_angstrom": 0.013865087373128526,
+              "energy_hartree": -460.69600297381965,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.00000000000003
+            },
+            {
+              "evaluation": 12,
+              "parameters_angstrom": [
+                1.4100317749521716,
+                1.396166687579043,
+                1.5577199200734824,
+                1.3658763554995834,
+                1.1095514338225885
+              ],
+              "delta_r_angstrom": 0.013865087373128526,
+              "energy_hartree": -460.6959787304139,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.00000000000003
+            },
+            {
+              "evaluation": 13,
+              "parameters_angstrom": [
+                1.3953453913811997,
+                1.3951606608236737,
+                1.4605223005102101,
+                1.3487371094914828,
+                1.0839930754400877
+              ],
+              "delta_r_angstrom": 0.00018473055752599166,
+              "energy_hartree": -460.7286749536387,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 14,
+              "parameters_angstrom": [
+                1.3960430640768904,
+                1.3951606608236737,
+                1.4605223005102101,
+                1.3487371094914828,
+                1.0839930754400877
+              ],
+              "delta_r_angstrom": 0.0008824032532166459,
+              "energy_hartree": -460.72868117513224,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 15,
+              "parameters_angstrom": [
+                1.3953453913811997,
+                1.3958582411540856,
+                1.4605223005102101,
+                1.3487371094914828,
+                1.0839930754400877
+              ],
+              "delta_r_angstrom": -0.0005128497728859038,
+              "energy_hartree": -460.7286707781302,
+              "scf_cycles": 13,
+              "metric_electron_count": 77.99999999999999
+            },
+            {
+              "evaluation": 16,
+              "parameters_angstrom": [
+                1.3953453913811997,
+                1.3951606608236737,
+                1.4612525616604652,
+                1.3487371094914828,
+                1.0839930754400877
+              ],
+              "delta_r_angstrom": 0.00018473055752599166,
+              "energy_hartree": -460.72867205586397,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.00000000000001
+            },
+            {
+              "evaluation": 17,
+              "parameters_angstrom": [
+                1.3953453913811997,
+                1.3951606608236737,
+                1.4605223005102101,
+                1.3494114780462285,
+                1.0839930754400877
+              ],
+              "delta_r_angstrom": 0.00018473055752599166,
+              "energy_hartree": -460.7286745555833,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 18,
+              "parameters_angstrom": [
+                1.3953453913811997,
+                1.3951606608236737,
+                1.4605223005102101,
+                1.3487371094914828,
+                1.0845350719778077
+              ],
+              "delta_r_angstrom": 0.00018473055752599166,
+              "energy_hartree": -460.72867236687034,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 19,
+              "parameters_angstrom": [
+                1.3965062501228327,
+                1.3943947109546764,
+                1.4601322998386022,
+                1.348682367552364,
+                1.0834118775990933
+              ],
+              "delta_r_angstrom": 0.002111539168156318,
+              "energy_hartree": -460.7286874145914,
+              "scf_cycles": 13,
+              "metric_electron_count": 77.99999999999999
+            },
+            {
+              "evaluation": 20,
+              "parameters_angstrom": [
+                1.3972045032478941,
+                1.3943947109546764,
+                1.4601322998386022,
+                1.348682367552364,
+                1.0834118775990933
+              ],
+              "delta_r_angstrom": 0.002809792293217761,
+              "energy_hartree": -460.72869075160816,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.00000000000001
+            },
+            {
+              "evaluation": 21,
+              "parameters_angstrom": [
+                1.3965062501228327,
+                1.3950919083101536,
+                1.4601322998386022,
+                1.348682367552364,
+                1.0834118775990933
+              ],
+              "delta_r_angstrom": 0.0014143418126790763,
+              "energy_hartree": -460.7286844938453,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 22,
+              "parameters_angstrom": [
+                1.3965062501228327,
+                1.3943947109546764,
+                1.4608623659885214,
+                1.348682367552364,
+                1.0834118775990933
+              ],
+              "delta_r_angstrom": 0.002111539168156318,
+              "energy_hartree": -460.72868684630635,
+              "scf_cycles": 13,
+              "metric_electron_count": 77.99999999999999
+            },
+            {
+              "evaluation": 23,
+              "parameters_angstrom": [
+                1.3965062501228327,
+                1.3943947109546764,
+                1.4601322998386022,
+                1.3493567087361402,
+                1.0834118775990933
+              ],
+              "delta_r_angstrom": 0.002111539168156318,
+              "energy_hartree": -460.72868735381735,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 24,
+              "parameters_angstrom": [
+                1.3965062501228327,
+                1.3943947109546764,
+                1.4601322998386022,
+                1.348682367552364,
+                1.0839535835378928
+              ],
+              "delta_r_angstrom": 0.002111539168156318,
+              "energy_hartree": -460.72868737189845,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.00000000000003
+            },
+            {
+              "evaluation": 25,
+              "parameters_angstrom": [
+                1.3980415466784573,
+                1.3930048965690087,
+                1.459933998682969,
+                1.3486620485028509,
+                1.0834932905507706
+              ],
+              "delta_r_angstrom": 0.005036650109448537,
+              "energy_hartree": -460.7286939631068,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 26,
+              "parameters_angstrom": [
+                1.3987405674517965,
+                1.3930048965690087,
+                1.459933998682969,
+                1.3486620485028509,
+                1.0834932905507706
+              ],
+              "delta_r_angstrom": 0.005735670882787813,
+              "energy_hartree": -460.72869389372795,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.00000000000001
+            },
+            {
+              "evaluation": 27,
+              "parameters_angstrom": [
+                1.3980415466784573,
+                1.3937013990172933,
+                1.459933998682969,
+                1.3486620485028509,
+                1.0834932905507706
+              ],
+              "delta_r_angstrom": 0.004340147661163973,
+              "energy_hartree": -460.7286937498543,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.00000000000001
+            },
+            {
+              "evaluation": 28,
+              "parameters_angstrom": [
+                1.3980415466784573,
+                1.3930048965690087,
+                1.4606639656823104,
+                1.3486620485028509,
+                1.0834932905507706
+              ],
+              "delta_r_angstrom": 0.005036650109448537,
+              "energy_hartree": -460.72869481393207,
+              "scf_cycles": 13,
+              "metric_electron_count": 78.0
+            },
+            {
+              "evaluation": 29,
+              "parameters_angstrom": [
+                1.3980415466784573,
+                1.3930048965690087,
+                1.459933998682969,
+                1.3493363795271023,
+                1.0834932905507706
+              ],
+              "delta_r_angstrom": 0.005036650109448537,
+              "energy_hartree": -460.7286940311766,
+              "scf_cycles": 13,
+              "metric_electron_count": 77.99999999999999
+            },
+            {
+              "evaluation": 30,
+              "parameters_angstrom": [
+                1.3980415466784573,
+                1.3930048965690087,
+                1.459933998682969,
+                1.3486620485028509,
+                1.0840350371960459
+              ],
+              "delta_r_angstrom": 0.005036650109448537,
+              "energy_hartree": -460.7286936031685,
+              "scf_cycles": 13,
+              "metric_electron_count": 77.99999999999997
+            }
+          ],
+          "termination_reason": "gradient_tolerance_satisfied"
+        },
+        "G_state": {
+          "converged": true,
+          "total_energy_hartree": -460.62083946552,
+          "electronic_energy_hartree": -1036.493494688481,
+          "nuclear_repulsion_hartree": 575.8726552229609,
+          "physical_metric_electron_count": 78.00000000000009,
+          "nao": 180
+        },
+        "PLG_state": {
+          "converged": true,
+          "cycles": 13,
+          "total_energy_hartree": -460.7286939631073,
+          "electronic_energy_hartree": -1043.5965610252374,
+          "nuclear_repulsion_hartree": 582.8678670621301,
+          "one_electron_energy_hartree": -1775.9452685878146,
+          "coulomb_energy_hartree": 799.7502401314,
+          "exact_exchange_energy_hartree": -12.876401348030715,
+          "semilocal_xc_energy_hartree": -54.52513122079217,
+          "energy_component_closure_residual_hartree": 0.0,
+          "grid_electron_count": 78.00010366510982,
+          "masked_metric_electron_count": 78.0,
+          "physical_metric_electron_count": 78.0,
+          "masked_overlap_minimum_eigenvalue": 7.679490212582318e-05,
+          "masked_overlap_condition_number": 79038.36821526448,
+          "masked_overlap_cross_pi_max_abs": 0.0,
+          "conditional_fock_cross_pi_max_abs": 0.0,
+          "deleted_eri_count": 124416000,
+          "total_eri_count": 1049760000,
+          "deleted_eri_fraction": 0.11851851851851852,
+          "eri_storage_mode": "single_tensor_inplace_category_mask",
+          "exact_exchange_fraction": 0.2,
+          "final_commutator_frobenius_norm": 4.3053045328153315e-08,
+          "closed_shell_idempotency_relative_residual": 2.7113688929314414e-15,
+          "occupied_virtual_gap_hartree": 0.24610430508004721
+        },
+        "optimized_G_geometry": {
+          "parameters_angstrom": [
+            1.514880199555997,
+            1.3376399137820236,
+            1.4726603127162785,
+            1.3743706061874943,
+            1.0840872111096878
+          ],
+          "atoms_angstrom": [
+            [
+              "C",
+              1.4262600566690102,
+              -0.05116486335142545,
+              0.0
+            ],
+            [
+              "C",
+              0.668819956891012,
+              1.260759873154108,
+              0.0
+            ],
+            [
+              "C",
+              -0.6688199568910116,
+              1.2607598731541083,
+              0.0
+            ],
+            [
+              "C",
+              -1.4262600566690107,
+              -0.05116486335142456,
+              0.0
+            ],
+            [
+              "C",
+              -0.7574400997779989,
+              -1.2095950098026833,
+              0.0
+            ],
+            [
+              "C",
+              0.7574400997779982,
+              -1.2095950098026833,
+              0.0
+            ],
+            [
+              "C",
+              2.665041797608155,
+              0.7451693598020122,
+              0.0
+            ],
+            [
+              "C",
+              1.9778564945144081,
+              1.935409218975001,
+              0.0
+            ],
+            [
+              "C",
+              -1.9778564945144073,
+              1.9354092189750016,
+              0.0
+            ],
+            [
+              "C",
+              -2.665041797608155,
+              0.7451693598020136,
+              0.0
+            ],
+            [
+              "C",
+              -0.6871853030937479,
+              -2.6805785787770144,
+              0.0
+            ],
+            [
+              "C",
+              0.6871853030937464,
+              -2.6805785787770144,
+              0.0
+            ],
+            [
+              "H",
+              3.7185861688918225,
+              0.48965157367336953,
+              0.0
+            ],
+            [
+              "H",
+              2.283343786250079,
+              2.9755643015850826,
+              0.0
+            ],
+            [
+              "H",
+              -2.2833437862500774,
+              2.9755643015850834,
+              0.0
+            ],
+            [
+              "H",
+              -3.7185861688918225,
+              0.48965157367337164,
+              0.0
+            ],
+            [
+              "H",
+              -1.435242382641745,
+              -3.465215875258454,
+              0.0
+            ],
+            [
+              "H",
+              1.4352423826417433,
+              -3.4652158752584543,
+              0.0
+            ]
+          ],
+          "metrics": {
+            "rendo_angstrom": 1.514880199555997,
+            "rexo_angstrom": 1.3376399137820234,
+            "delta_r_angstrom": 0.17724028577397366,
+            "rside_angstrom": 1.4726603127162783,
+            "router_angstrom": 1.3743706061874945,
+            "maximum_out_of_plane_angstrom": 0.0,
+            "rCH_angstrom": 1.0840872111096878
+          }
+        },
+        "optimized_PLG_geometry": {
+          "parameters_angstrom": [
+            1.3980415466784573,
+            1.3930048965690087,
+            1.459933998682969,
+            1.3486620485028509,
+            1.0834932905507706
+          ],
+          "atoms_angstrom": [
+            [
+              "C",
+              1.3955232216237328,
+              -0.0014539556482524585,
+              0.0
+            ],
+            [
+              "C",
+              0.6965024482845045,
+              1.2092855393213797,
+              0.0
+            ],
+            [
+              "C",
+              -0.6965024482845041,
+              1.20928553932138,
+              0.0
+            ],
+            [
+              "C",
+              -1.3955232216237332,
+              -0.0014539556482517924,
+              0.0
+            ],
+            [
+              "C",
+              -0.6990207733392289,
+              -1.2078315836731277,
+              0.0
+            ],
+            [
+              "C",
+              0.6990207733392284,
+              -1.2078315836731277,
+              0.0
+            ],
+            [
+              "C",
+              2.6473374638844835,
+              0.749790600660534,
+              0.0
+            ],
+            [
+              "C",
+              1.9730064396330582,
+              1.9177661957839636,
+              0.0
+            ],
+            [
+              "C",
+              -1.973006439633058,
+              1.917766195783964,
+              0.0
+            ],
+            [
+              "C",
+              -2.647337463884484,
+              0.7497906006605349,
+              0.0
+            ],
+            [
+              "C",
+              -0.6743310242514259,
+              -2.6675567964444986,
+              0.0
+            ],
+            [
+              "C",
+              0.674331024251425,
+              -2.6675567964444986,
+              0.0
+            ],
+            [
+              "H",
+              3.696245524374448,
+              0.47822184084505376,
+              0.0
+            ],
+            [
+              "H",
+              2.2622750250036,
+              2.961931602310277,
+              0.0
+            ],
+            [
+              "H",
+              -2.2622750250035994,
+              2.961931602310278,
+              0.0
+            ],
+            [
+              "H",
+              -3.696245524374448,
+              0.47822184084505504,
+              0.0
+            ],
+            [
+              "H",
+              -1.4339704993708486,
+              -3.4401534431553324,
+              0.0
+            ],
+            [
+              "H",
+              1.4339704993708478,
+              -3.4401534431553324,
+              0.0
+            ]
+          ],
+          "metrics": {
+            "rendo_angstrom": 1.3980415466784573,
+            "rexo_angstrom": 1.3930048965690085,
+            "delta_r_angstrom": 0.005036650109448759,
+            "rside_angstrom": 1.4599339986829687,
+            "router_angstrom": 1.3486620485028507,
+            "maximum_out_of_plane_angstrom": 0.0,
+            "rCH_angstrom": 1.0834932905507706
+          }
+        },
+        "d_delta_r_GP_angstrom": 0.1722036356645249,
+        "optimized_endpoint_kcal_mol": 67.67971905631804,
+        "acceptance_checks": {
+          "scientific_classification_allowed": true,
+          "production_optimization_authorized": true,
+          "method_is_B3LYPG": true,
+          "basis_is_6_31Gd": true,
+          "G_optimizer_success": true,
+          "G_gradient_within_tolerance": true,
+          "G_no_active_bound": true,
+          "G_state_converged": true,
+          "G_78_electrons": true,
+          "PLG_optimizer_success": true,
+          "PLG_gradient_within_tolerance": true,
+          "PLG_no_active_bound": true,
+          "PLG_state_converged": true,
+          "PLG_78_electrons": true,
+          "PLG_energy_components_close": true,
+          "PLG_commutator_closed": true,
+          "PLG_density_idempotent": true,
+          "memory_within_limit": true
+        },
+        "peak_rss_mib": 8801.19921875,
+        "wall_time_seconds": 1272.1777341440002
+      }
+    },
+    {
+      "role": "final_acceptance",
+      "original_manifest_path": "D:\\AI4Science\\ai4orgchem-runtime-runs\\20261002T144015Z-p14-classify-675fab20a66f\\run-manifest.json",
+      "manifest_sha256": "cdccd93ccc2f59d9478b1bac4b78a65b1db0115ee24ed20a34f6993ff7f48b2a",
+      "manifest": {
+        "schema_version": 1,
+        "run_id": "20261002T144015Z-p14-classify-675fab20a66f",
+        "task": "p14-classify",
+        "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+        "runtime_code_sha256": "2bd8d97648c0a13b68f301ab88bff3d6595d269606f21b0c1c2374b9ce7cea95",
+        "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "platform": "Linux/x86_64",
+        "python": "3.12.13",
+        "status": "PASS",
+        "process_exit_code": 0,
+        "numerical_qualification": "PASS",
+        "scientific_comparison": "consistent",
+        "started_utc": "2026-10-02T14:40:15.919830+00:00",
+        "output_sha256": {
+          "00-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "00-stdout.log": "8e3ee73bca3b3963dffdecf9d24218716b75d41c172417bf40837651e23fec23",
+          "report.md": "df7caa0c4b68b4c3e2eaea3e9149b202357a14a815c3816332186fb594285f24",
+          "result.json": "01934eb69cde0d9b976f6be9fe8a6bbff07b628e4b2422e5dfca1e4cdaa5eff3"
+        },
+        "commands": [
+          [
+            "/opt/venv/bin/python",
+            "/opt/runtime/runtime/classify.py",
+            "--source",
+            "/opt/ai4orgchem",
+            "--view",
+            "/work/20261002T144015Z-p14-classify-675fab20a66f/classifier-view",
+            "--protocol",
+            "/opt/ai4orgchem/configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml",
+            "--output",
+            "/work/20261002T144015Z-p14-classify-675fab20a66f/result.json",
+            "--report",
+            "/work/20261002T144015Z-p14-classify-675fab20a66f/report.md",
+            "--smoke",
+            "/work/20261002T144015Z-p14-classify-675fab20a66f/classifier-view/smoke.json",
+            "--optimization",
+            "/work/20261002T144015Z-p14-classify-675fab20a66f/classifier-view/optimization.json",
+            "--equivalence",
+            "/work/20261002T144015Z-p14-classify-675fab20a66f/classifier-view/equivalence.json",
+            "--source-level",
+            "/work/20261002T144015Z-p14-classify-675fab20a66f/classifier-view/source-level.json"
+          ]
+        ],
+        "resource_peak": "UNKNOWN",
+        "dependencies": {
+          "attrs": "26.1.0",
+          "h5py": "3.16.0",
+          "iniconfig": "2.3.0",
+          "jsonschema": "4.26.0",
+          "jsonschema-specifications": "2025.9.1",
+          "numpy": "2.5.1",
+          "packaging": "26.3",
+          "pluggy": "1.6.0",
+          "Pygments": "2.21.0",
+          "pyscf": "2.14.0",
+          "pytest": "8.4.2",
+          "PyYAML": "6.0.3",
+          "referencing": "0.37.0",
+          "rpds-py": "2026.6.3",
+          "scipy": "1.18.0",
+          "setuptools": "78.1.0",
+          "typing_extensions": "4.16.0"
+        },
+        "input_sha256": {
+          "configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml": "f64fed4aeb172deaf5c71e637af367656e24b867570061987a5311fdbe48e06b",
+          "configs/qm/p09_exchange_integral_classes_v0.1.yaml": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+          "evidence/P01-P14/P14/inputs/source_proxy_G.xyz": "fa2b0a1c88d467bd51fec6e140a07a65f74a64ad7e63fbf550d611b3b60c571c",
+          "evidence/P01-P14/P14/inputs/source_proxy_PLG.xyz": "0fd8593ebdf93b59642abbb8b9a84336e30de74d5fc3f4a8721cb2412d3fbcc7"
+        },
+        "threads": 8,
+        "dependency_lock_sha256": "a8dbe44d12930427ca1f377b17eba3fcdb17b6dd922737884b3b77d0d9c4ea71",
+        "memory": {
+          "host_available_bytes": 15396818944,
+          "cgroup_remaining_bytes": [
+            "unlimited"
+          ],
+          "effective_available_bytes": 15396818944,
+          "errors": []
+        },
+        "source_readonly": true,
+        "parent_runs": [
+          {
+            "task": "p14-smoke",
+            "run_id": "20261002T115757Z-p14-smoke-5edcc0ade184",
+            "sha256": "a05ea503afba62cd147aec5b3030780ff8203dfeae218347af8c0a8ba2fa2771"
+          },
+          {
+            "task": "p14-optimize",
+            "run_id": "20261002T123346Z-p14-optimize-d7f348003891",
+            "sha256": "0a1e89ed6cbd47f8ae1be768149baa0aeebd9f72bbcbb0d8046d234a8ac66929"
+          },
+          {
+            "task": "p14-equivalence",
+            "run_id": "20261002T111600Z-p14-equivalence-a83e2e3a8f2f",
+            "sha256": "effbc7a24ddaaf6d9b9bae9309430b63fe8333c7457d6bf275ee5bd371bd83d1"
+          },
+          {
+            "task": "p14-fixed",
+            "run_id": "20261002T123033Z-p14-fixed-d621c0cfab97",
+            "sha256": "6408a5317a6f83186dc540069ba1f0308d51721ef87a7a4317e423bf28d03257"
+          }
+        ],
+        "quantitative_evidence": {
+          "source_G_delta_r_angstrom": 0.177,
+          "source_PLG_delta_r_angstrom": -0.002,
+          "source_d_delta_r_GP_angstrom": 0.179,
+          "optimization_G_delta_r_angstrom": 0.17724028577397366,
+          "optimization_PLG_delta_r_angstrom": 0.005036650109448759,
+          "optimization_d_delta_r_GP_angstrom": 0.1722036356645249,
+          "optimization_d_delta_r_residual_angstrom": -0.006796364335475091,
+          "optimization_endpoint_kcal_mol": 67.67971905631804,
+          "optimization_endpoint_residual_kcal_mol": 0.5997190563180368,
+          "source_level_endpoint_kcal_mol": 67.08689934803395,
+          "source_endpoint_kcal_mol": 67.08,
+          "source_level_endpoint_residual_kcal_mol": 0.006899348033954311,
+          "memory_implementation_energy_difference_hartree": 2.2737367544323206e-13
+        },
+        "wall_time_seconds": 0.5575626009995176,
+        "finished_utc": "2026-10-02T14:40:16.480852+00:00",
+        "runtime_exit_code": 0
+      },
+      "result_sha256": "01934eb69cde0d9b976f6be9fe8a6bbff07b628e4b2422e5dfca1e4cdaa5eff3",
+      "result_excerpt": {
+        "decision_verdict": "PASS",
+        "classification": "consistent",
+        "scope": "benzotricyclobutadiene_10_12_C12H6_frozen_source_proxy_protocol",
+        "quantitative_evidence": {
+          "source_G_delta_r_angstrom": 0.177,
+          "source_PLG_delta_r_angstrom": -0.002,
+          "source_d_delta_r_GP_angstrom": 0.179,
+          "optimization_G_delta_r_angstrom": 0.17724028577397366,
+          "optimization_PLG_delta_r_angstrom": 0.005036650109448759,
+          "optimization_d_delta_r_GP_angstrom": 0.1722036356645249,
+          "optimization_d_delta_r_residual_angstrom": -0.006796364335475091,
+          "optimization_endpoint_kcal_mol": 67.67971905631804,
+          "optimization_endpoint_residual_kcal_mol": 0.5997190563180368,
+          "source_level_endpoint_kcal_mol": 67.08689934803395,
+          "source_endpoint_kcal_mol": 67.08,
+          "source_level_endpoint_residual_kcal_mol": 0.006899348033954311,
+          "memory_implementation_energy_difference_hartree": 2.2737367544323206e-13
+        },
+        "decision_checks": {
+          "fixed_geometry_operator_smoke_passed": true,
+          "five_parameter_optimization_record_passed_its_gate": true,
+          "five_parameter_production_optimization_qualified": true,
+          "memory_controlled_operator_equivalent": true,
+          "source_level_fixed_geometry_anchor_passed": true,
+          "source_PLG_near_equal_bonds": true,
+          "optimization_reduces_bond_alternation": true,
+          "optimization_response_same_direction": true,
+          "optimization_d_delta_within_bond_tolerance": true,
+          "optimization_endpoint_same_sign": true,
+          "optimization_endpoint_within_energy_tolerance": true,
+          "source_level_endpoint_same_sign": true,
+          "source_level_endpoint_within_energy_tolerance": true
+        },
+        "optimization_eligibility_checks": {
+          "optimization_scientific_classification_allowed": true,
+          "optimization_protocol_id_matches": true,
+          "optimization_protocol_authorized": true,
+          "optimization_stage_is_production": true,
+          "optimization_method_matches": true,
+          "optimization_basis_matches": true,
+          "optimization_grid_matches": true,
+          "G_optimizer_success": true,
+          "G_gradient_within_tolerance": true,
+          "G_termination_qualified": true,
+          "G_no_active_bound": true,
+          "G_state_converged": true,
+          "G_78_electrons": true,
+          "PLG_optimizer_success": true,
+          "PLG_gradient_within_tolerance": true,
+          "PLG_termination_qualified": true,
+          "PLG_no_active_bound": true,
+          "PLG_state_converged": true,
+          "PLG_78_electrons": true
+        },
+        "evidence_sha256": {
+          "smoke.json": "a05ea503afba62cd147aec5b3030780ff8203dfeae218347af8c0a8ba2fa2771",
+          "optimization.json": "0a1e89ed6cbd47f8ae1be768149baa0aeebd9f72bbcbb0d8046d234a8ac66929",
+          "equivalence.json": "effbc7a24ddaaf6d9b9bae9309430b63fe8333c7457d6bf275ee5bd371bd83d1",
+          "source-level.json": "6408a5317a6f83186dc540069ba1f0308d51721ef87a7a4317e423bf28d03257"
+        },
+        "limitations": [
+          "source_full_Cartesian_coordinates_not_public",
+          "CH_distance_fixed_at_1.080_angstrom_proxy",
+          "production_optimization_limited_to_five_parameter_planar_D3h_subspace",
+          "no_full_Cartesian_frequency_or_wider_symmetry_optimization_claimed",
+          "STO3G_technical_pilot_is_not_scientific_classification_evidence",
+          "single_C12H6_system_does_not_establish_universal_19_molecule_law"
+        ],
+        "production_label": false,
+        "training_eligible": false
+      }
+    },
+    {
+      "role": "classification_parent_only",
+      "original_manifest_path": "D:\\AI4Science\\ai4orgchem-runtime-runs\\我的首次使用\\20261002T115757Z-p14-smoke-5edcc0ade184\\run-manifest.json",
+      "manifest_sha256": "17f6f6cce41089057bccd4918d00006860f82bc6ad3fec9db2a1fd551babb7ed",
+      "manifest": {
+        "schema_version": 1,
+        "run_id": "20261002T115757Z-p14-smoke-5edcc0ade184",
+        "task": "p14-smoke",
+        "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+        "runtime_commit": "f30b2906794d14f9030daab779c0d6a7cd4bd6f7",
+        "runtime_code_sha256": "2bd8d97648c0a13b68f301ab88bff3d6595d269606f21b0c1c2374b9ce7cea95",
+        "image_digest": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "image_id": "sha256:ddc45b1fe500ed3d5ed30520eb4e49f3969cb69f02121f28e2ff851f7a724f54",
+        "platform": "Linux/x86_64",
+        "python": "3.12.13",
+        "status": "PASS",
+        "process_exit_code": 0,
+        "numerical_qualification": "PASS",
+        "scientific_comparison": "NOT_APPLICABLE",
+        "started_utc": "2026-10-02T11:57:57.159544+00:00",
+        "output_sha256": {
+          "00-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "00-stdout.log": "1424798639cd4456a1126c4ece20cc16f2d311675377bd62dd1fa832d150664a",
+          "report.md": "63e69fb98d989e10f8367d74104dbcd55b1e3647b8fa83633b933d04a734a11b",
+          "result.json": "a05ea503afba62cd147aec5b3030780ff8203dfeae218347af8c0a8ba2fa2771"
+        },
+        "commands": [
+          [
+            "/opt/venv/bin/python",
+            "/opt/ai4orgchem/software/scripts/run_p14_benzotricyclobutadiene_smoke.py",
+            "--protocol",
+            "/opt/ai4orgchem/configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml",
+            "--output",
+            "/work/20261002T115757Z-p14-smoke-5edcc0ade184/result.json",
+            "--report",
+            "/work/20261002T115757Z-p14-smoke-5edcc0ade184/report.md",
+            "--classes",
+            "/opt/ai4orgchem/configs/qm/p09_exchange_integral_classes_v0.1.yaml"
+          ]
+        ],
+        "resource_peak": {
+          "peak_rss_mib": 551.75
+        },
+        "dependencies": {
+          "attrs": "26.1.0",
+          "h5py": "3.16.0",
+          "iniconfig": "2.3.0",
+          "jsonschema": "4.26.0",
+          "jsonschema-specifications": "2025.9.1",
+          "numpy": "2.5.1",
+          "packaging": "26.3",
+          "pluggy": "1.6.0",
+          "Pygments": "2.21.0",
+          "pyscf": "2.14.0",
+          "pytest": "8.4.2",
+          "PyYAML": "6.0.3",
+          "referencing": "0.37.0",
+          "rpds-py": "2026.6.3",
+          "scipy": "1.18.0",
+          "setuptools": "78.1.0",
+          "typing_extensions": "4.16.0"
+        },
+        "input_sha256": {
+          "configs/qm/p14_strained_aromatic_pi_distortivity_v0.1.yaml": "f64fed4aeb172deaf5c71e637af367656e24b867570061987a5311fdbe48e06b",
+          "configs/qm/p09_exchange_integral_classes_v0.1.yaml": "324c2e7988be48ed8898a5e9b04a87d40386ca8a8f7eb603d9a697d3ac6a6ee2",
+          "evidence/P01-P14/P14/inputs/source_proxy_G.xyz": "fa2b0a1c88d467bd51fec6e140a07a65f74a64ad7e63fbf550d611b3b60c571c",
+          "evidence/P01-P14/P14/inputs/source_proxy_PLG.xyz": "0fd8593ebdf93b59642abbb8b9a84336e30de74d5fc3f4a8721cb2412d3fbcc7"
+        },
+        "threads": 8,
+        "dependency_lock_sha256": "a8dbe44d12930427ca1f377b17eba3fcdb17b6dd922737884b3b77d0d9c4ea71",
+        "memory": {
+          "host_available_bytes": 15387029504,
+          "cgroup_remaining_bytes": [
+            "unlimited"
+          ],
+          "effective_available_bytes": 15387029504,
+          "errors": []
+        },
+        "source_readonly": true,
+        "parent_runs": [],
+        "quantitative_evidence": {},
+        "wall_time_seconds": 9.328987502000018,
+        "finished_utc": "2026-10-02T11:58:06.494173+00:00",
+        "runtime_exit_code": 0
+      },
+      "result_sha256": "a05ea503afba62cd147aec5b3030780ff8203dfeae218347af8c0a8ba2fa2771",
+      "result_excerpt": {
+        "stage": "fixed_source_geometry_STO3G_technical_smoke",
+        "scientific_classification_allowed": false,
+        "smoke_gate_verdict": "PASS",
+        "ordinary_G": {
+          "converged": true,
+          "total_energy_hartree": -454.9514538258459,
+          "electronic_energy_hartree": -1030.8705371903707,
+          "nuclear_repulsion_hartree": 575.9190833645248,
+          "physical_metric_electron_count": 78.00000000000017
+        },
+        "ordinary_at_PLG": {
+          "converged": true,
+          "total_energy_hartree": -454.8918549729856,
+          "electronic_energy_hartree": -1040.372716773661,
+          "nuclear_repulsion_hartree": 585.4808618006755,
+          "physical_metric_electron_count": 77.99999999999986
+        },
+        "conditional_PLG": {
+          "converged": true,
+          "cycles": 12,
+          "total_energy_hartree": -454.9936390141527,
+          "electronic_energy_hartree": -1040.4745008148282,
+          "nuclear_repulsion_hartree": 585.4808618006755,
+          "one_electron_energy_hartree": -1776.8561912718362,
+          "coulomb_energy_hartree": 803.7783537272384,
+          "exact_exchange_energy_hartree": -12.89664269343497,
+          "semilocal_xc_energy_hartree": -54.50002057679533,
+          "energy_component_closure_residual_hartree": 0.0,
+          "grid_electron_count": 78.00004027767633,
+          "masked_metric_electron_count": 78.00000000000004,
+          "physical_metric_electron_count": 78.00000000000004,
+          "masked_overlap_minimum_eigenvalue": 0.14850737697177363,
+          "masked_overlap_condition_number": 18.26963771039215,
+          "masked_overlap_cross_pi_max_abs": 0.0,
+          "conditional_fock_cross_pi_max_abs": 0.0,
+          "deleted_eri_count": 1275264,
+          "total_eri_count": 18974736,
+          "deleted_eri_fraction": 0.06720852400792296,
+          "eri_storage_mode": "reference_copy_plus_boolean_mask",
+          "exact_exchange_fraction": 0.2,
+          "final_commutator_frobenius_norm": 1.7864542559355746e-09,
+          "closed_shell_idempotency_relative_residual": 2.672559407264125e-15,
+          "occupied_virtual_gap_hartree": 0.2884614478413286
+        },
+        "technical_endpoint_kcal_mol": 26.47160532765476,
+        "acceptance_checks": {
+          "ordinary_G_converged": true,
+          "ordinary_at_PLG_converged": true,
+          "conditional_PLG_converged": true,
+          "ordinary_G_78_electrons": true,
+          "ordinary_at_PLG_78_electrons": true,
+          "conditional_PLG_78_electrons": true,
+          "G_source_geometry_reconstructed": true,
+          "PLG_source_geometry_reconstructed": true,
+          "interfragment_pi_overlap_zero": true,
+          "interfragment_pi_fock_zero": true,
+          "exchange_integrals_deleted": true,
+          "energy_components_close": true,
+          "commutator_closed": true,
+          "density_idempotent": true,
+          "scientific_classification_disabled": true
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Historical 2026-10-02 Docker runs; excerpts do not replace raw records",
+    "; CI execution NOT_EXECUTED",
+    "L3/L4 strict offline and real interruption NOT_EXECUTED; resume unsupported",
+    "Source and image publication not authorized"
+  ],
+  "excerpt_policy": "Selected result fields only; iterative history omitted. Raw result files and their hashes are unchanged.",
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "d8172381ba24d65e3117bbd4503b28dcc0f13c4e9e879be7d9a2b11b7f910b8c",
+    "original_size_bytes": 95092,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

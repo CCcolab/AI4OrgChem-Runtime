@@ -1,0 +1,78 @@
+{
+  "schema_version": "budget-recording-engineering-candidate-v1",
+  "status": "IMPLEMENTED_SCOPED_ENGINEERING_PASS; MOLECULAR_NOT_EXECUTED",
+  "scope": "Independent reference diagnostic budget and snapshots; unchanged target/evaluator/gates",
+  "source_runtime_execution_commit": "60d76deeb468fdd2dc2c444b7cf60d95a9dd9290",
+  "scientific_authorization": false,
+  "scientific_budget": null,
+  "production_activation": false,
+  "maximum_callbacks_per_path": 201,
+  "global_serial_slots": 603,
+  "automatic_retry": false,
+  "variables_example": 48,
+  "central_difference_full_J_cost": 96,
+  "tail_eligible_rechecks_reserved": 2,
+  "acceptance": [
+    {
+      "id": "BR01",
+      "requirement": "Whole Jacobian call-cost admission before an incomplete96-call group begins; insufficient remainder preserves actual counts and explicit refusal, no native/F invocation after refusal."
+    },
+    {
+      "id": "BR02",
+      "requirement": "Separate complete optimizer base, finite-difference samples, best diagnostic sample, returnedD and lastF; save matched densityID/F/energy snapshots without changing accepted-return semantics."
+    },
+    {
+      "id": "BR03",
+      "requirement": "Every actual callback precharged; native entered/completed/failed separately counted; no hidden FD/final operator queries, refunds, borrowing or closed-budget reopen."
+    },
+    {
+      "id": "BR04",
+      "requirement": "Any final gate after budget refusal must have independent actual callback provenance/charges and unqualified status until every original gate and same-root comparison passes; do not amend historical null gates."
+    },
+    {
+      "id": "BR05",
+      "requirement": "Fake-array tests cover2nvar costs, exact boundary, failure before/insideJ, nonfinite callback, density mismatch, final-tail refusal and immutable previous records. No molecularSCF/grid/integral/NR during engineering tests."
+    },
+    {
+      "id": "BR06",
+      "requirement": "Unqualified/error outputs keep Compute disabled, delta null, UM-P12/P13/T06 notaccepted; original tolerance/policy/hash maintained; local logs retained."
+    }
+  ],
+  "explicitly_excluded": [
+    "New molecularF calls",
+    "Budget increase",
+    "Changing projectedF toG",
+    "MOM/IMOM/fractions/fragmentquotas",
+    "New near-degenerate occupation rule",
+    "Energy-minimum claims",
+    "Publication"
+  ],
+  "revision": "0.2",
+  "engineering_record": "../budget-recording-20261007.json",
+  "original_design": {
+    "path": "revisions/budget-recording-candidate-v1-design.json",
+    "sha256": "243f159346b402b19343b83b9c1a05021107fdc0bc5f67c49a2ba9e800ab960f",
+    "preserved_bytes": true
+  },
+  "implementation": {
+    "pure_reference": "reference/residual_budgeted_candidate.py",
+    "fake_prepared_adapter": "reference/residual_budgeted_seed.py",
+    "default_scientific_route_changed": false,
+    "unit_tests": 31,
+    "regressions": 91,
+    "synthetic_examples": 3
+  },
+  "refusal_tail_policy": "NO_AUTOMATIC_CALLBACK_AFTER_BUDGET_REFUSAL",
+  "normal_tail_policy": "TWO_RESERVED_ORIGINAL_GATES_WHEN_ADMITTED; ALL_ACTUAL_CALLBACKS_CHARGED",
+  "private_scipy_api_version": "1.18.0",
+  "new_molecular_F_calls": 0,
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "7a73f040b5123d00d7abd6ecf23ce6355483f541acf1703d686b1ca9f91c64dd",
+    "original_size_bytes": 3194,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

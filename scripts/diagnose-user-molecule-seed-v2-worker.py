@@ -187,7 +187,7 @@ def scientific_worker(args, output, contract, contract_sha):
     gto.Mole.intor_by_shell = forbid("INTEGRAL")
 
     root, science = args.runtime_root.resolve(), args.science_root.resolve()
-    proposal_raw = (root/"validation/user-molecule/residual-diagnostic/contract-v1.json").read_bytes()
+    proposal_raw = (root/"validation/user-molecule/residual-diagnostic/contract-v1.public.json").read_bytes()
     validate_proposal_binding(contract, proposal_raw)
     lock = verify_source(root, science)
     if (lock["source_commit"] != contract["science_commit"] or
@@ -281,8 +281,8 @@ def scientific_worker(args, output, contract, contract_sha):
     for name, expected in seed_binding["source_file_sha256"].items():
         if sha((root/name).read_bytes()) != expected or readiness["source_file_sha256"].get(name) != expected:
             raise ValueError("Tested V2 source bytes differ: "+name)
-    for relative, key in (("validation/user-molecule/method-decisions/mdr-002/record.json", "mdr002_record_sha256"),
-            ("validation/user-molecule/method-decisions/mdr-002/external-review-cancellation.json", "expert_cancellation_receipt_sha256")):
+    for relative, key in (("validation/user-molecule/method-decisions/mdr-002/record.public.json", "mdr002_record_sha256"),
+            ("validation/user-molecule/method-decisions/mdr-002/external-review-cancellation.public.json", "expert_cancellation_receipt_sha256")):
         if sha((root/relative).read_bytes()) != seed_binding[key]:
             raise ValueError("Internal policy/cancellation receipt differs")
     if sha((args.seed_readiness_dir/"shared-seed.npz").read_bytes()) != seed_binding["shared_seed_archive_sha256"]:

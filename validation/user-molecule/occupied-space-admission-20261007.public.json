@@ -1,0 +1,1028 @@
+{
+  "schema_version": "occupied-space-admission-local-review-v1",
+  "date": "2026-10-07",
+  "status": "PURE_ARRAY_SEEDS_AND_FAKE_ADMISSION_VERIFIED_REAL_RESPONSE_NOT_EXECUTED",
+  "parent_delivery_commit": "34f115723d8537759259bee7279a7cfb61ea54d2",
+  "runtime_code_commit": "029cd557f2a858051a4f98d34cadc981b932346c",
+  "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+  "image_build_runtime_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+  "science_commit": "cc7437901119e71ef7945a12813c021c383e7648",
+  "delivery_directory": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission",
+  "source": {
+    "schema_version": "occupied-space-source-input-v1",
+    "status": "VERIFIED_RETAINED_BYTES_ONLY",
+    "parent_delivery_commit": "34f115723d8537759259bee7279a7cfb61ea54d2",
+    "parent_manifest_sha256": "00bde5f55716d3bcdb084773483175b419e5c8f184226edb415b2c52348667d4",
+    "parent_verified_payloads": 1471,
+    "source_records": [
+      {
+        "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupation-response\\response-a1\\output\\response-result.json",
+        "sha256": "8423da194c16a7eb2db37a12e88604ae879ac20e075a889a36cc41b4b86b7bf1",
+        "archive": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupation-response\\response-a1\\output\\response-result.npz",
+        "archive_sha256": "414d7ebc0765d7bc9ad6e7292aff30782c68c7c81623bc39da0b1fd40db282d4",
+        "members_verified": 90
+      },
+      {
+        "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupation-response\\response-a1\\output\\prepared-masks.json",
+        "sha256": "5110d543ad6dcb2a2a935db65475df7b3858a7a40bf1d0d8eba1cf5603ba4dd0",
+        "archive": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupation-response\\response-a1\\output\\prepared-masks.npz",
+        "archive_sha256": "dcde49b128f57a3ecfc10735292da4d2399fa201ac1153ac6d4247e9c83c65df",
+        "members_verified": 12
+      }
+    ],
+    "source_mapping": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupation-response\\response-a1\\output\\prepared-mapping.json",
+      "sha256": "eb8f8ea66d15e03b7d31b5ff6f1058b74939b726ab5a8c5c577ca1326d4f5485",
+      "ao_labels": [
+        [
+          0,
+          "C",
+          "1s",
+          ""
+        ],
+        [
+          0,
+          "C",
+          "2s",
+          ""
+        ],
+        [
+          0,
+          "C",
+          "2p",
+          "x"
+        ],
+        [
+          0,
+          "C",
+          "2p",
+          "y"
+        ],
+        [
+          0,
+          "C",
+          "2p",
+          "z"
+        ],
+        [
+          1,
+          "C",
+          "1s",
+          ""
+        ],
+        [
+          1,
+          "C",
+          "2s",
+          ""
+        ],
+        [
+          1,
+          "C",
+          "2p",
+          "x"
+        ],
+        [
+          1,
+          "C",
+          "2p",
+          "y"
+        ],
+        [
+          1,
+          "C",
+          "2p",
+          "z"
+        ],
+        [
+          2,
+          "H",
+          "1s",
+          ""
+        ],
+        [
+          3,
+          "H",
+          "1s",
+          ""
+        ],
+        [
+          4,
+          "H",
+          "1s",
+          ""
+        ],
+        [
+          5,
+          "H",
+          "1s",
+          ""
+        ]
+      ],
+      "ao_descriptors": [
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "pi",
+          "fragment": "A"
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "pi",
+          "fragment": "B"
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        },
+        {
+          "kind": "sigma",
+          "fragment": null
+        }
+      ],
+      "atom_mapping": [
+        {
+          "index_1based": 1,
+          "index_0based": 0,
+          "element": "C",
+          "coordinates_angstrom": [
+            -0.67,
+            0.0,
+            0.0
+          ],
+          "pi_group": "A"
+        },
+        {
+          "index_1based": 2,
+          "index_0based": 1,
+          "element": "C",
+          "coordinates_angstrom": [
+            0.67,
+            0.0,
+            0.0
+          ],
+          "pi_group": "B"
+        },
+        {
+          "index_1based": 3,
+          "index_0based": 2,
+          "element": "H",
+          "coordinates_angstrom": [
+            -1.215,
+            0.9439676901250381,
+            0.0
+          ],
+          "pi_group": null
+        },
+        {
+          "index_1based": 4,
+          "index_0based": 3,
+          "element": "H",
+          "coordinates_angstrom": [
+            -1.215,
+            -0.9439676901250381,
+            0.0
+          ],
+          "pi_group": null
+        },
+        {
+          "index_1based": 5,
+          "index_0based": 4,
+          "element": "H",
+          "coordinates_angstrom": [
+            1.215,
+            0.9439676901250381,
+            0.0
+          ],
+          "pi_group": null
+        },
+        {
+          "index_1based": 6,
+          "index_0based": 5,
+          "element": "H",
+          "coordinates_angstrom": [
+            1.215,
+            -0.9439676901250381,
+            0.0
+          ],
+          "pi_group": null
+        }
+      ],
+      "geometry_sha256": "69f55725834dfa8419dfc6019ae56dd564f9a0ae18ec28e706245b785bfac80d",
+      "profile_sha256": "5c78ef8e741b255421a465895524cdb7aa208ef90751a1524eff9c7f88e5d537"
+    },
+    "physical_overlap_origin": {
+      "record_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-solver-v2\\numerical-a1\\pilot-ethene\\ordinary-reference.json",
+      "record_sha256": "b0a9fd8a2487d725668823b75966176e98eb25551f40b9f177b485141ecb9663",
+      "archive_path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261005-user-molecule-solver-v2\\numerical-a1\\pilot-ethene\\ordinary-reference.npz",
+      "archive_sha256": "2a0318c42ee47001e2774ea6b4fec8317b1887c744a2720e71033a75b18f6051",
+      "member": "overlap"
+    },
+    "base_density_id": "bde824cc2957779325a8f8c2fb53fb626970c55b757285a1da4a69fdb92b4faf",
+    "base_status": "UNQUALIFIED_SINGLE_POINT_NOT_ORDINARY_V2_SEED",
+    "ancestor_operator": {
+      "operator_id": "0c2a5b5c5c488dbc3791a8aeed0c8552d5ac18bc48d6b50dd19fd88833484166",
+      "runtime_source_commit": "616be48fb841d4711da42b07793f4bfa90ba40c6",
+      "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+      "role": "ANCESTOR_ONLY_NOT_F_AT_ROTATED_DENSITIES"
+    },
+    "recipe": {
+      "electrons": 16,
+      "angles_rad": [
+        -0.25,
+        -0.1,
+        0.1,
+        0.25
+      ],
+      "occupied_ao_anchor_0based": [
+        4,
+        9
+      ],
+      "virtual_ao_anchor_0based": [
+        2,
+        7
+      ],
+      "selection": "FIXED_LABEL_BASED_SUM_NO_F_ENERGY_SELECTION_NO_FALLBACK",
+      "direction": "PI_OCCUPIED_TO_SIGMA_VIRTUAL_FOR_THIS_EXACT_FIXTURE"
+    },
+    "arrays": {
+      "base_density": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "ddff9b616924c43274effe40513f6d235d07752a3bf18b49745f851263559edc"
+      },
+      "masked_overlap": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "b8b3f020e5ee76c663283aa3dc105d4e0b1e37edad07787515f5712fe85f68dd"
+      },
+      "physical_overlap": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "957372152a6fab1b90f084598f010f73aa8c09ce5ec3a1c383c6195a23732d78"
+      },
+      "matrix_delete_mask": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "|b1",
+        "sha256": "2321aaac100093272651fe9a8092086c879819199793f5a22a2a1bd23f6a94ca"
+      },
+      "occupied_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "bb0117ba3c5963bde66d3b4c457675dc64a6d8292aacae7dc8a832f09b512042"
+      },
+      "virtual_anchor": {
+        "shape": [
+          14
+        ],
+        "dtype": "<f8",
+        "sha256": "8df3a02bea102e93ee0bbbf845b9f136bafb3db917b123a22392928025af6d87"
+      }
+    },
+    "archive": {
+      "file": "source-arrays.npz",
+      "sha256": "4a0cdf07d6007aa16234dcb6dd55f3f587fd74322c1e67244afc9ab736e046da",
+      "size_bytes": 6716
+    },
+    "new_F_SCF_NR_grid_integral_calls": 0,
+    "scientific_budget": null,
+    "Compute": false
+  },
+  "profile_identity_clarification": {
+    "status": "CLARIFIED_WITHOUT_REWRITING_EXECUTED_INPUT_OR_LEDGER",
+    "scope": "THIS_ENGINEERING_FAKE_INPUT_AND_JOURNAL_ONLY_NOT_A_SCIENTIFIC_CONTRACT",
+    "source_json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\seed-input\\SOURCE.json",
+      "size_bytes": 7852,
+      "sha256": "f3e9be814ee844606bdb6bd13980007ba11d9965d70cd167e2521e980483646b"
+    },
+    "legacy_aliases": {
+      "SOURCE.source_mapping.profile_sha256": "CANONICAL_JSON_SHA256",
+      "fake-callbacks.identity.profile_sha256": "CANONICAL_JSON_SHA256"
+    },
+    "profile_canonical_sha256": "5c78ef8e741b255421a465895524cdb7aa208ef90751a1524eff9c7f88e5d537",
+    "canonical_encoding": "UTF8 JSON sort_keys=True separators=(comma,colon) ensure_ascii=False allow_nan=False",
+    "executed_raw_profile_file": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a2\\runtime-source\\profiles\\user-molecule\\pilot-b3lypg-sto3g-grid2-v1.json",
+      "size_bytes": 1804,
+      "sha256": "18bd594a8b606ef2c90db4390243155031035cd98fbe72dfc2e9367aeadce2e9"
+    },
+    "executed_line_endings": "LF",
+    "current_worktree_raw_profile_file": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\user-molecule\\runtime\\profiles\\user-molecule\\pilot-b3lypg-sto3g-grid2-v1.json",
+      "size_bytes": 1873,
+      "sha256": "c3359c80f2b292c14875335b8e14a22e37f35858581402b0b47e0f20c6884f45"
+    },
+    "worktree_line_endings": "CRLF",
+    "scientific_future_contract_rule": "Record canonical JSON identity and executed raw file identity separately; do not replace executed identity with working-tree CRLF bytes",
+    "new_scientific_calls": 0
+  },
+  "initialization_policy": "MASKED_GLOBAL_OCCUPIED_VIRTUAL_ANCHOR_ROTATION_DIAGNOSTIC_V1",
+  "seeds": [
+    {
+      "seed_index": 1,
+      "angle_rad": -0.25,
+      "density_id": "987b007d2d30c295efcdacffcdfb17ef47d89617c8db80cb30f23455a5dfe521",
+      "density_identity": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "033d31fb863bc8e38882b1b272ff3042ec456dbbfee318fda9ef1f2705c67948"
+      },
+      "admission": {
+        "masked_metric_electron_count": 15.999999999999963,
+        "whitened_trace_error": 3.108624468950438e-14,
+        "whitened_absolute_idempotency": 1.623421592352529e-14,
+        "whitened_minimum_eigenvalue": -2.8495366293217893e-16,
+        "production_density_reconstruction_relative": 3.2830998582640178e-15,
+        "repairs_performed": false
+      },
+      "column_space_change": {
+        "whitened_projector_difference_frobenius": 0.3498820345625461,
+        "largest_projector_difference_singular_value": 0.24740395925452244,
+        "observed_changed": true,
+        "base_occupied_column_space_preserved": false,
+        "occupied_direction_weight": 0.9387912809451873,
+        "occupied_virtual_cross_weight": -0.23971276930210086,
+        "meaning": "MEASURED_BASE_OCCUPIED_PROJECTOR_CHANGE_NOT_ORDINARY_MO_SPACE_PRESERVATION"
+      },
+      "array_audit": {
+        "seed_index": 1,
+        "angle_rad": -0.25,
+        "density_id": "987b007d2d30c295efcdacffcdfb17ef47d89617c8db80cb30f23455a5dfe521",
+        "source_algebra_agreement": {
+          "projector_frobenius": 9.749636556339752e-15,
+          "density_relative": 8.031225927536842e-16,
+          "scope": "RANK_TWO_RODRIGUES_ARRAY_CHECK_NOT_INDEPENDENT_SCIENTIFIC_SOLVER"
+        },
+        "whitened_eigenvalues": [
+          -3.8928404529581993e-16,
+          -3.240678238037634e-16,
+          -8.06543988917935e-17,
+          1.3252309108333208e-17,
+          2.163750663695309e-16,
+          3.4233428758848135e-16,
+          0.9999999999999882,
+          0.9999999999999911,
+          0.9999999999999944,
+          0.9999999999999961,
+          0.9999999999999983,
+          0.9999999999999991,
+          0.9999999999999993,
+          1.0000000000000013
+        ],
+        "binary_projector_max_eigenvalue_defect": 1.176836406102666e-14,
+        "occupied_rank": 8,
+        "masked_electrons": 15.999999999999963,
+        "physical_AO_electrons": 16.445490690962224,
+        "grid_electrons": null,
+        "grid_electron_evaluation": "NOT_EXECUTED",
+        "density_sigma_pi_block_frobenius": 0.9082573192361915,
+        "z_reflection_density_difference_frobenius": 2.568939637976903,
+        "opposite_angle_reflection_difference_frobenius": 2.0309519856289932e-14,
+        "reflection_scope": "NUMERICAL_DENSITY_RELATION_NOT_SAME_ROOT_OR_SAME_ENERGY",
+        "new_molecular_F": null,
+        "new_molecular_energy": null,
+        "scientific_operator_id": null,
+        "endpoint_qualification": "NOT_EXECUTED"
+      }
+    },
+    {
+      "seed_index": 2,
+      "angle_rad": -0.1,
+      "density_id": "6b0d501aba96ac5c53ca633491e105d7c5dab13836350bd6d7350437f91bd7c0",
+      "density_identity": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "d1a6206219fcbbb8863ccc95d5cc0644f817f3b234fedd662689fde0c5c8828c"
+      },
+      "admission": {
+        "masked_metric_electron_count": 15.999999999999956,
+        "whitened_trace_error": 3.108624468950438e-14,
+        "whitened_absolute_idempotency": 1.6136962359088404e-14,
+        "whitened_minimum_eigenvalue": -2.7609588790879816e-16,
+        "production_density_reconstruction_relative": 3.1703760534840026e-15,
+        "repairs_performed": false
+      },
+      "column_space_change": {
+        "whitened_projector_difference_frobenius": 0.14118577179998773,
+        "largest_projector_difference_singular_value": 0.09983341664682774,
+        "observed_changed": true,
+        "base_occupied_column_space_preserved": false,
+        "occupied_direction_weight": 0.9900332889206223,
+        "occupied_virtual_cross_weight": -0.09933466539753019,
+        "meaning": "MEASURED_BASE_OCCUPIED_PROJECTOR_CHANGE_NOT_ORDINARY_MO_SPACE_PRESERVATION"
+      },
+      "array_audit": {
+        "seed_index": 2,
+        "angle_rad": -0.1,
+        "density_id": "6b0d501aba96ac5c53ca633491e105d7c5dab13836350bd6d7350437f91bd7c0",
+        "source_algebra_agreement": {
+          "projector_frobenius": 9.568263109082439e-15,
+          "density_relative": 5.160798878891536e-16,
+          "scope": "RANK_TWO_RODRIGUES_ARRAY_CHECK_NOT_INDEPENDENT_SCIENTIFIC_SOLVER"
+        },
+        "whitened_eigenvalues": [
+          -3.0779982677055834e-16,
+          -2.4662806103870265e-16,
+          -1.8210690663157153e-16,
+          1.2053519447996653e-16,
+          3.4977059089077124e-16,
+          4.88273613995126e-16,
+          0.9999999999999886,
+          0.9999999999999911,
+          0.9999999999999944,
+          0.999999999999996,
+          0.9999999999999979,
+          0.9999999999999991,
+          0.9999999999999994,
+          1.0000000000000013
+        ],
+        "binary_projector_max_eigenvalue_defect": 1.1435297153639112e-14,
+        "occupied_rank": 8,
+        "masked_electrons": 15.999999999999956,
+        "physical_AO_electrons": 16.469806892020554,
+        "grid_electrons": null,
+        "grid_electron_evaluation": "NOT_EXECUTED",
+        "density_sigma_pi_block_frobenius": 0.3763730950330931,
+        "z_reflection_density_difference_frobenius": 1.0645438710162762,
+        "opposite_angle_reflection_difference_frobenius": 1.9400605308246026e-14,
+        "reflection_scope": "NUMERICAL_DENSITY_RELATION_NOT_SAME_ROOT_OR_SAME_ENERGY",
+        "new_molecular_F": null,
+        "new_molecular_energy": null,
+        "scientific_operator_id": null,
+        "endpoint_qualification": "NOT_EXECUTED"
+      }
+    },
+    {
+      "seed_index": 3,
+      "angle_rad": 0.1,
+      "density_id": "d8be75fe06f0827aaa1214c8b83156bf596cf80a12407fc489e43dfbe9d94218",
+      "density_identity": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "574f07352a33b63da496b743bb8016c3e770b3d33f8e61d6d9a9fc88fce26b49"
+      },
+      "admission": {
+        "masked_metric_electron_count": 15.99999999999996,
+        "whitened_trace_error": 2.930988785010413e-14,
+        "whitened_absolute_idempotency": 1.600974228954905e-14,
+        "whitened_minimum_eigenvalue": -3.2343530503935316e-16,
+        "production_density_reconstruction_relative": 3.4887080397454813e-15,
+        "repairs_performed": false
+      },
+      "column_space_change": {
+        "whitened_projector_difference_frobenius": 0.14118577179998845,
+        "largest_projector_difference_singular_value": 0.09983341664682825,
+        "observed_changed": true,
+        "base_occupied_column_space_preserved": false,
+        "occupied_direction_weight": 0.9900332889206223,
+        "occupied_virtual_cross_weight": 0.0993346653975307,
+        "meaning": "MEASURED_BASE_OCCUPIED_PROJECTOR_CHANGE_NOT_ORDINARY_MO_SPACE_PRESERVATION"
+      },
+      "array_audit": {
+        "seed_index": 3,
+        "angle_rad": 0.1,
+        "density_id": "d8be75fe06f0827aaa1214c8b83156bf596cf80a12407fc489e43dfbe9d94218",
+        "source_algebra_agreement": {
+          "projector_frobenius": 9.496683095925388e-15,
+          "density_relative": 6.479833899859184e-16,
+          "scope": "RANK_TWO_RODRIGUES_ARRAY_CHECK_NOT_INDEPENDENT_SCIENTIFIC_SOLVER"
+        },
+        "whitened_eigenvalues": [
+          -2.0413014345912455e-16,
+          -1.0195971729037381e-16,
+          -1.6037561557744844e-17,
+          1.3458966287973086e-16,
+          2.0803434848672737e-16,
+          4.235926207908476e-16,
+          0.999999999999989,
+          0.9999999999999912,
+          0.9999999999999948,
+          0.9999999999999959,
+          0.999999999999998,
+          0.9999999999999989,
+          0.9999999999999993,
+          1.0000000000000018
+        ],
+        "binary_projector_max_eigenvalue_defect": 1.099120794378905e-14,
+        "occupied_rank": 8,
+        "masked_electrons": 15.99999999999996,
+        "physical_AO_electrons": 16.469806892020554,
+        "grid_electrons": null,
+        "grid_electron_evaluation": "NOT_EXECUTED",
+        "density_sigma_pi_block_frobenius": 0.37637309503308575,
+        "z_reflection_density_difference_frobenius": 1.0645438710162551,
+        "opposite_angle_reflection_difference_frobenius": 1.9400605308246026e-14,
+        "reflection_scope": "NUMERICAL_DENSITY_RELATION_NOT_SAME_ROOT_OR_SAME_ENERGY",
+        "new_molecular_F": null,
+        "new_molecular_energy": null,
+        "scientific_operator_id": null,
+        "endpoint_qualification": "NOT_EXECUTED"
+      }
+    },
+    {
+      "seed_index": 4,
+      "angle_rad": 0.25,
+      "density_id": "cfc94a243ea486db1e49b142c407529f9389919ddb5fae2282c489a214fb90e3",
+      "density_identity": {
+        "shape": [
+          14,
+          14
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "sha256": "32c51caf3ca3b58029d256008153fe487e4d34a20bd5f7477bfca940120ca8b6"
+      },
+      "admission": {
+        "masked_metric_electron_count": 15.999999999999961,
+        "whitened_trace_error": 3.108624468950438e-14,
+        "whitened_absolute_idempotency": 1.6179997540607894e-14,
+        "whitened_minimum_eigenvalue": -4.983027747748896e-16,
+        "production_density_reconstruction_relative": 3.385705026723196e-15,
+        "repairs_performed": false
+      },
+      "column_space_change": {
+        "whitened_projector_difference_frobenius": 0.34988203456254685,
+        "largest_projector_difference_singular_value": 0.24740395925452285,
+        "observed_changed": true,
+        "base_occupied_column_space_preserved": false,
+        "occupied_direction_weight": 0.9387912809451879,
+        "occupied_virtual_cross_weight": 0.23971276930210142,
+        "meaning": "MEASURED_BASE_OCCUPIED_PROJECTOR_CHANGE_NOT_ORDINARY_MO_SPACE_PRESERVATION"
+      },
+      "array_audit": {
+        "seed_index": 4,
+        "angle_rad": 0.25,
+        "density_id": "cfc94a243ea486db1e49b142c407529f9389919ddb5fae2282c489a214fb90e3",
+        "source_algebra_agreement": {
+          "projector_frobenius": 9.51854216388232e-15,
+          "density_relative": 7.984494640203534e-16,
+          "scope": "RANK_TWO_RODRIGUES_ARRAY_CHECK_NOT_INDEPENDENT_SCIENTIFIC_SOLVER"
+        },
+        "whitened_eigenvalues": [
+          -2.4019158675046975e-16,
+          -8.558707716848989e-17,
+          1.0026818409325104e-16,
+          1.1566082633967422e-16,
+          1.294705820767174e-16,
+          4.2446828125937964e-16,
+          0.9999999999999883,
+          0.9999999999999906,
+          0.999999999999995,
+          0.9999999999999966,
+          0.9999999999999976,
+          0.9999999999999997,
+          1.0000000000000007,
+          1.0000000000000013
+        ],
+        "binary_projector_max_eigenvalue_defect": 1.1657341758564144e-14,
+        "occupied_rank": 8,
+        "masked_electrons": 15.999999999999961,
+        "physical_AO_electrons": 16.445490690962227,
+        "grid_electrons": null,
+        "grid_electron_evaluation": "NOT_EXECUTED",
+        "density_sigma_pi_block_frobenius": 0.9082573192361847,
+        "z_reflection_density_difference_frobenius": 2.5689396379768845,
+        "opposite_angle_reflection_difference_frobenius": 2.0309519856289932e-14,
+        "reflection_scope": "NUMERICAL_DENSITY_RELATION_NOT_SAME_ROOT_OR_SAME_ENERGY",
+        "new_molecular_F": null,
+        "new_molecular_energy": null,
+        "scientific_operator_id": null,
+        "endpoint_qualification": "NOT_EXECUTED"
+      }
+    }
+  ],
+  "directions": {
+    "occupied_white_direction": {
+      "npz_member": "array_0004",
+      "source_field": "root.directions.occupied_white_direction",
+      "shape": [
+        14
+      ],
+      "dtype": "<f8",
+      "finite": true,
+      "sha256": "3d74fccd8d1442a6ff11e8062b2b122a9e7023f135910e88ebbf3091df85a6c4"
+    },
+    "virtual_white_direction": {
+      "npz_member": "array_0005",
+      "source_field": "root.directions.virtual_white_direction",
+      "shape": [
+        14
+      ],
+      "dtype": "<f8",
+      "finite": true,
+      "sha256": "17390a8b93d4798c607e7dd486bf2722e596bc2dd0b0e262e8b041044a1f3d22"
+    },
+    "occupied_anchor_masked_metric_norm": 1.4142135623730951,
+    "virtual_anchor_masked_metric_norm": 1.1591816861420505,
+    "occupied_projection_norm": 1.4142135623730971,
+    "virtual_projection_norm_before_roundoff_removal": 0.717331423793903,
+    "virtual_projection_norm_after_roundoff_removal": 0.717331423793903,
+    "occupied_projection_fraction_of_metric_anchor": 1.0000000000000013,
+    "virtual_projection_fraction_of_metric_anchor": 0.6188257046928521,
+    "minimum_projection_fraction_exclusive": 1e-12,
+    "projection_fraction_role": "NUMERICAL_DIRECTION_ADMISSION_NOT_SCIENTIFIC_FINAL_GATE",
+    "normalized_cross_before_roundoff_removal": 3.586364974517085e-17,
+    "roundoff_correction_relative_norm": 3.586364974517056e-17,
+    "occupied_norm_error": 0.0,
+    "virtual_norm_error": 2.220446049250313e-16,
+    "normalized_cross_after_roundoff_removal": 1.355854680848614e-31,
+    "occupied_membership_residual": 1.6131268672844426e-15,
+    "virtual_membership_residual": 3.717455589816139e-15,
+    "density_or_projector_repaired": false
+  },
+  "pure_array_preparation": {
+    "status": "PASS_ARRAY_ADMISSION_ONLY",
+    "count": 4,
+    "source_preserved": true,
+    "repairs": false,
+    "scientific_F_energy_grid_counts": "NOT_EXECUTED",
+    "ordinary_occupied_space_preserved": false,
+    "V2_claim": false
+  },
+  "engineering_tests": {
+    "status": "PASS_SCOPED_ENGINEERING_ONLY",
+    "unique_tests": 97,
+    "new_tests": 29,
+    "regressions": 68,
+    "test_executions": 194,
+    "groups": [
+      {
+        "pattern": "test_user_molecule_occupied_space_seeds.py",
+        "tests": 17,
+        "status": "PASS_ENGINEERING_ONLY"
+      },
+      {
+        "pattern": "test_user_molecule_occupied_space_admission.py",
+        "tests": 12,
+        "status": "PASS_ENGINEERING_ONLY"
+      },
+      {
+        "pattern": "test_user_molecule_occupation_response.py",
+        "tests": 19,
+        "status": "PASS_ENGINEERING_ONLY"
+      },
+      {
+        "pattern": "test_user_molecule_occupation_response_contract.py",
+        "tests": 20,
+        "status": "PASS_ENGINEERING_ONLY"
+      },
+      {
+        "pattern": "test_user_molecule_residual_budget.py",
+        "tests": 12,
+        "status": "PASS_ENGINEERING_ONLY"
+      },
+      {
+        "pattern": "test_user_molecule_solver_candidate.py",
+        "tests": 17,
+        "status": "PASS_ENGINEERING_ONLY"
+      }
+    ],
+    "a1": "97 tests PASS; mandatory example FAIL_TypeError before fake journal/callback; full attempt FAIL",
+    "a2": "97 tests and mandatory12callbackexample PASS",
+    "fake_admission_test_counts": {
+      "before": {
+        "entered": 0,
+        "completed": 0,
+        "failed": 0
+      },
+      "after": {
+        "entered": 59,
+        "completed": 57,
+        "failed": 2
+      },
+      "delta": {
+        "entered": 59,
+        "completed": 57,
+        "failed": 2
+      },
+      "counter_kind": "EXPLICIT_WRAPPER_ENTRIES_NOT_NATIVE_F_OR_NR_CALLS",
+      "subtests_and_callbacks_are_not_unit_test_counts": true
+    },
+    "mandatory_example": {
+      "status": "PASS_ENGINEERING_ONLY",
+      "required": true,
+      "script_path": "/recipe/export_example.py",
+      "script_size_bytes": 12306,
+      "script_sha256": "607f7b23af4f21419a48ffd999d770faa57a4056281a5a0bfeb1eec9ba33cf32",
+      "script_mount": {
+        "mount_point": "/recipe/export_example.py",
+        "filesystem": "9p",
+        "mount_options": [
+          "ro",
+          "noatime"
+        ],
+        "read_only": true
+      },
+      "summary": {
+        "status": "PASS_ENGINEERING_ONLY",
+        "execution_kind": "ENGINEERING_FAKE",
+        "array_audit": "seed-array-audit.json",
+        "prepared_archive": {
+          "json": "prepared-seed-family.json",
+          "json_sha256": "a165633039bb3f3b250e872595e39510749a9003a412247cb1e9e315c003a961",
+          "npz": "prepared-seed-family.npz",
+          "npz_sha256": "f5da3ad1de1e1cea561408fe43ef93099c0ffbdcd8faba11eef8142d39b450fa",
+          "members": 10
+        },
+        "fake_result_archive": {
+          "json": "fake-admission-result.json",
+          "json_sha256": "88d1432e4a92563d63f4bb4e6d271bb3c78d6f3ecd05de9ea39a563b595f129d",
+          "npz": "fake-admission-result.npz",
+          "npz_sha256": "7ea944feff67ad7189c66c2024922aef406011018e3298c79a0bca6677c2472d",
+          "members": 84
+        },
+        "runtime_test_commit": "029cd557f2a858051a4f98d34cadc981b932346c",
+        "image_id": "sha256:24f46f33264924e5d3d3bec386298585267c6f30d6e6a0cd0a6486ecf45db93d",
+        "image_build_commit": "5098775c9cf40468ab92712447a3e5c7b1361a63",
+        "python": "3.12.13",
+        "numpy": "2.5.1",
+        "synthetic_slots": 12,
+        "synthetic_callback_events": 12,
+        "synthetic_comparisons": 8,
+        "native_F": "GUARD_REQUIRED_SEPARATE_RECEIPT",
+        "new_SCF_or_root_search": "NOT_EXECUTED",
+        "peak_bytes_at_example_end": null,
+        "scope": "ONE_GUARDED_ENGINEERING_ARRAY_PROCESS_NOT_MOLECULAR_RESOURCE_QUALIFICATION",
+        "scientific_budget": null,
+        "Compute": false,
+        "research_delta_hartree": null
+      },
+      "fake_admission_counters_before": {
+        "entered": 59,
+        "completed": 57,
+        "failed": 2
+      },
+      "fake_admission_counters_after": {
+        "entered": 71,
+        "completed": 69,
+        "failed": 2
+      },
+      "fake_admission_counter_delta": {
+        "entered": 12,
+        "completed": 12,
+        "failed": 0
+      },
+      "counter_kind": "EXPLICIT_WRAPPER_ENTRIES_NOT_NATIVE_F_OR_NR_CALLS"
+    },
+    "guard_integrity": "PASS_ALL_THIRTEEN_BINDINGS_HELD",
+    "native_forbidden_attempts": [],
+    "module_native_count": "UNOBSERVED / null; actual zero independently established by held guards",
+    "older_regression_callback_layers": "NOT_ADDITIVELY_INSTRUMENTED_BY_NEW_ADMISSION_COUNTER"
+  },
+  "static_review": {
+    "status": "INTERNAL_STATIC_REVIEW_COMPLETED_WITH_SPECIFIC_FINDINGS_CLOSED",
+    "scope": "SOURCE_AND_SAVED_ARRAY_REVIEW_NOT_EXTERNAL_METHOD_APPROVAL",
+    "source_commit": "029cd557f2a858051a4f98d34cadc981b932346c",
+    "reviewers": [
+      "Codex occupation_source_audit",
+      "Codex response_probe_contract"
+    ],
+    "findings": [
+      {
+        "id": "SOURCE_RECIPE_BINDING",
+        "resolution": "Purely regenerate full family from source D/S/anchors/angles; compare canonical digest before first callback; synced self-hash swaps/forgeries refuse"
+      },
+      {
+        "id": "FAKE_SNAPSHOT_SCOPE",
+        "resolution": "Every saved snapshot has ENGINEERING_FAKE plus synthetic evidence label; wire operator_source is a callback declaration, not a native F observation"
+      },
+      {
+        "id": "EXAMPLE_CONSTRUCTOR",
+        "resolution": "a1 TypeError preserved; keyword-only path/batch_id corrected in retained a2 script; no scientific source change"
+      },
+      {
+        "id": "PROFILE_HASH_ALIAS",
+        "resolution": "Executed input/ledger preserved; sidecar distinguishes canonical JSON, exported LF raw file and worktree CRLF raw file"
+      }
+    ],
+    "single_use_limit": "Same prepared Python object in same process only; deep copy/recreation/another process is not content-level persistent de-duplication or authorization",
+    "array_algebra_review": "Rank-one projector rotation and independent rank-two Rodrigues expression agree; no solver or physical-energy validation",
+    "external_expert_process": "CANCELLED_BY_USER",
+    "external_role_required": false,
+    "Compute": false
+  },
+  "saved_array_verification": {
+    "status": "PASS_READONLY_SAVED_ARRAY_AND_FAKE_LEDGER_AUDIT",
+    "actual_source_commit": "029cd557f2a858051a4f98d34cadc981b932346c",
+    "verified_archives": [
+      {
+        "json": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a2\\output\\prepared-seed-family.json",
+        "json_sha256": "a165633039bb3f3b250e872595e39510749a9003a412247cb1e9e315c003a961",
+        "npz_sha256": "f5da3ad1de1e1cea561408fe43ef93099c0ffbdcd8faba11eef8142d39b450fa",
+        "members": 10
+      },
+      {
+        "json": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a2\\output\\fake-admission-result.json",
+        "json_sha256": "88d1432e4a92563d63f4bb4e6d271bb3c78d6f3ecd05de9ea39a563b595f129d",
+        "npz_sha256": "7ea944feff67ad7189c66c2024922aef406011018e3298c79a0bca6677c2472d",
+        "members": 84
+      }
+    ],
+    "verified_npz_members": 94,
+    "seeds": [
+      {
+        "angle_rad": -0.25,
+        "density_id": "987b007d2d30c295efcdacffcdfb17ef47d89617c8db80cb30f23455a5dfe521",
+        "host_reconstruction_relative": 4.6714725324936545e-15
+      },
+      {
+        "angle_rad": -0.1,
+        "density_id": "6b0d501aba96ac5c53ca633491e105d7c5dab13836350bd6d7350437f91bd7c0",
+        "host_reconstruction_relative": 4.6310703388358516e-15
+      },
+      {
+        "angle_rad": 0.1,
+        "density_id": "d8be75fe06f0827aaa1214c8b83156bf596cf80a12407fc489e43dfbe9d94218",
+        "host_reconstruction_relative": 4.4882401722766026e-15
+      },
+      {
+        "angle_rad": 0.25,
+        "density_id": "cfc94a243ea486db1e49b142c407529f9389919ddb5fae2282c489a214fb90e3",
+        "host_reconstruction_relative": 4.545409302778943e-15
+      }
+    ],
+    "synthetic_operator_ids_verified": 12,
+    "slots_verified": 12,
+    "unique_unit_tests": 97,
+    "unit_test_executions_across_two_engineering_processes": 194,
+    "scientific_calls": 0,
+    "guarded_native_calls": 0,
+    "source_of_zero_native_claim": "ACTUAL_HELD_13_BINDINGS_ZERO_ENTRY_LOG_IN_BOTH_EXECUTIONS",
+    "a1_failure_preserved": "LOCAL_EXAMPLE_CONSTRUCTOR_PARAMETER_BEFORE_FAKE_JOURNAL_OR_EXAMPLE_CALLBACK",
+    "a1_original_supervisor_native_count": "null; derived zero proof retained in its guard receipt, not overwritten",
+    "molecular_operator_energy_equivalence": "NOT_EXECUTED",
+    "root_acceptance": "NOT_EXECUTED",
+    "Compute": false
+  },
+  "resources": {
+    "engineering_processes": 2,
+    "hard_memory_mib": 512,
+    "CPU": 1,
+    "swap_mib": 0,
+    "network": "none",
+    "nonroot": "10001:10001",
+    "source_and_inputs": "READONLY",
+    "a2_wall_seconds_through_cleanup": 11.110000000044238,
+    "peak_observed_bytes": null,
+    "peak_status": "NOT_OBSERVED_memory.peak_unavailable_in_actual_container",
+    "all_containers_removed": true,
+    "scope": "ENGINEERING_ONLY_NOT_NEW_MOLECULAR_RESOURCE_QUALIFICATION"
+  },
+  "evidence": {
+    "INPUT_PREPARATION.json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\INPUT_PREPARATION.json",
+      "size_bytes": 433,
+      "sha256": "4517631c21ada8ac6a8852f1256e16d0fde01bbfba843c6856367c51ca5e6951"
+    },
+    "SAVED_ARRAY_VERIFICATION.json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\SAVED_ARRAY_VERIFICATION.json",
+      "size_bytes": 2347,
+      "sha256": "64ab3fdeec4c18426b9d419b4ad2ef0d142403c6e295e160c0973f3d3ab5e71a"
+    },
+    "STATIC_REVIEW.json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\STATIC_REVIEW.json",
+      "size_bytes": 1573,
+      "sha256": "0f87f01086b6f525444b7739177001aed60923adcdb60643eeea84178d2f59b2"
+    },
+    "PROFILE_IDENTITY_CLARIFICATION.json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\PROFILE_IDENTITY_CLARIFICATION.json",
+      "size_bytes": 1708,
+      "sha256": "ba531bc1085f92f82c23b067813b9db6777d9cdef7a46fbbef715d3d6199b96e"
+    },
+    "engineering-a1\\EXECUTION.json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a1\\EXECUTION.json",
+      "size_bytes": 583,
+      "sha256": "18385991b89411ef414aeb1a319cac984fdb40e2620737c64f8d4b4a41073c40"
+    },
+    "engineering-a2\\EXECUTION.json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a2\\EXECUTION.json",
+      "size_bytes": 585,
+      "sha256": "7f41c3f5a44bd8ea109390c30b523b441a4dba6361c352d83043a624f83d550b"
+    },
+    "engineering-a2\\output\\occupied-space-engineering-tests.json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a2\\output\\occupied-space-engineering-tests.json",
+      "size_bytes": 77119,
+      "sha256": "4bb2693c7a4332569176de339a2e3969bcb9d6b33b0850262676e3cced7382da"
+    },
+    "engineering-a2\\output\\seed-array-audit.json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a2\\output\\seed-array-audit.json",
+      "size_bytes": 7222,
+      "sha256": "d7178a007d2ebeed7acaf10afb68eb784e512da50557338d593014001e70617a"
+    },
+    "engineering-a2\\output\\prepared-seed-family.json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a2\\output\\prepared-seed-family.json",
+      "size_bytes": 13624,
+      "sha256": "a165633039bb3f3b250e872595e39510749a9003a412247cb1e9e315c003a961"
+    },
+    "engineering-a2\\output\\prepared-seed-family.npz": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a2\\output\\prepared-seed-family.npz",
+      "size_bytes": 12398,
+      "sha256": "f5da3ad1de1e1cea561408fe43ef93099c0ffbdcd8faba11eef8142d39b450fa"
+    },
+    "engineering-a2\\output\\fake-admission-result.json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a2\\output\\fake-admission-result.json",
+      "size_bytes": 88063,
+      "sha256": "88d1432e4a92563d63f4bb4e6d271bb3c78d6f3ecd05de9ea39a563b595f129d"
+    },
+    "engineering-a2\\output\\fake-admission-result.npz": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a2\\output\\fake-admission-result.npz",
+      "size_bytes": 117958,
+      "sha256": "7ea944feff67ad7189c66c2024922aef406011018e3298c79a0bca6677c2472d"
+    },
+    "engineering-a2\\output\\fake-callbacks.json": {
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261007-user-molecule-occupied-space-admission\\engineering-a2\\output\\fake-callbacks.json",
+      "size_bytes": 7137,
+      "sha256": "ddce087fa70d90f77abec492bfd7936c4f06c19a9496294424e98ef1e128b45a"
+    }
+  },
+  "new_true_F_NR_SCF_grid_integral_calls": 0,
+  "scientific_budget": null,
+  "qualified_endpoints": 0,
+  "Compute": false,
+  "scientific_approval": false,
+  "research_delta_hartree": null,
+  "original_operators_profiles_final_thresholds": "UNCHANGED",
+  "UM_P12_UM_P13_T06_full_T05": "NOT_EXECUTED",
+  "stationarity_stability": "NOT_ESTABLISHED / NOT_EXECUTED",
+  "historical_9F_and603slot_budgets": "PRESERVED_CLOSED_NOT_REOPENED",
+  "next_response_proposal": "validation/user-molecule/occupied-space/response-proposal-v1.json",
+  "full_W01_W07_CI_this_round": "NOT_EXECUTED",
+  "GitHub_Actions": "NOT_EXECUTED",
+  "image_distribution": "BLOCKED",
+  "new_image_build_WSL_upgrade_publication": "NOT_EXECUTED",
+  "external_expert_process": "CANCELLED_BY_USER",
+  "legacy_L4_resume": "UNSUPPORTED_CHECKPOINT_SAVE_ONLY",
+  "_public_projection": {
+    "kind": "PUBLIC_READING_PROJECTION_NOT_ORIGINAL_EVIDENCE",
+    "original_sha256": "639169c302a6cf6a1e58a54b8b835f96a3da0e41dec9adb20e6bc1e6fce50d0d",
+    "original_size_bytes": 38846,
+    "original_git_commit": "eb65b4586c83637569f6359814338c1292948861",
+    "original_local_archive": "pre-withdrawal-git-tree.zip",
+    "scientific_numeric_values_changed": false,
+    "acceptance_transferred_to_current_code": false
+  }
+}

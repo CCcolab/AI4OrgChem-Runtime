@@ -43,10 +43,12 @@ python -B -m unittest discover -s tests -p "test_numerical_witnesses.py" -v
 
 [manifest.json](manifest.json) 逐一登记载荷的来源 bundle、相对路径、原字节哈希、父证据、源／Runtime 提交、镜像身份、成员哈希、派生哈希及缺失项。普通水分子文件为 **ORIGINAL_BYTES**，可与原结果与原 host manifest 的字节哈希直接比较。条件 snapshot／NPZ 为明确标注的 **DERIVED_SELECTED_FIELDS / DERIVED_SELECTED_MEMBERS**；原始结果哈希识别未复制的原件，不是此派生文件的哈希。派生文件不含个人 Windows 绝对路径。
 
-普通见证绑定 [deployment-20261008.json](../../validation/molecular-service/deployment-20261008.json) 中的 water result／host manifest。条件见证绑定 [seed-v2-20261007.json](../../validation/user-molecule/seed-v2-20261007.json) 的原 result 与原 gate，并核对 [local-runtime-framework-20261007.json](../../validation/local-runtime-framework-20261007.json) 中密封交付 manifest 的 SHA-256。原 AO S/h 从 V2 已声明的 ordinary cache 精确字节身份抽取，未生成新积分。
+普通见证绑定 [deployment-20261008.json](../../validation/molecular-service/deployment-20261008.public.json) 中的 water result／host manifest。条件见证绑定 [seed-v2-20261007.json](../../validation/user-molecule/seed-v2-20261007.public.json) 的原 result 与原 gate，并核对 [local-runtime-framework-20261007.json](../../validation/local-runtime-framework-20261007.public.json) 中密封交付 manifest 的 SHA-256。原 AO S/h 从 V2 已声明的 ordinary cache 精确字节身份抽取，未生成新积分。
 
 条件包选择 `true_evaluation_at_returned_density`，同时核对 solver 返回密度、评估请求密度、保存密度成员与域分隔 density ID。没有以最后回调、试探密度或相近密度替换它。完整回调历史、ERI、格点、日志和完整容器验收材料不在此最小包内；哈希联系本地字节与已登记声明，不提供引擎真实性认证。
 
 [extract.py](extract.py) 保留提取过程，可接受三个原始证据目录参数 `--water`、`--seed`、`--ordinary-cache` 来重建此子集。它使用相同导入守卫，提取后回验 **13 个原文件**的 SHA-256 未变；不修改原件。默认审计命令不需要这些私人目录。新提取需持有原件，应使用独立 `--package` 输出目录。
 
 English: These are saved-array witnesses, audited with NumPy only. Audit success confirms byte bindings and the recorded interpretation, including rejection of the conditional endpoint. Derived subset hashes are distinct from original source hashes. No SCF, integrals, grids or new F(D) evaluation is performed; stability, method validity, root existence and physical bond energies are not established.
+
+当前三个公开父记录是明确标注的 `.public.json` 摘要，原记录按原字节保存在本地历史归档；manifest 同时登记公开摘要与原件的不同哈希。八个数值载荷保持原字节。公开摘要不是原始执行日志；当前复核仍按原门槛拒绝条件端点，不转移历史验收。

@@ -35,3 +35,9 @@ scripts/runtime_host_safety.py -text
 # explicitly worktree identities; Git blob identities are recorded separately.
 validation/review-response-engineering-20261010.json -text whitespace=cr-at-eol
 docs/runtime-guide/capabilities-v2.json -text whitespace=cr-at-eol
+# Public reading projections have new, explicitly recorded byte identities.
+validation/**/*.public.json -text whitespace=cr-at-eol
+validation/public-projections-*.json -text whitespace=cr-at-eol
+validation/platform-withdrawal-*.json -text whitespace=cr-at-eol
+configs/protocol-cases-v1.json -text
+scripts/prepare-high-cost-cases.py -text

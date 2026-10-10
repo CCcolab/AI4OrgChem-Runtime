@@ -5,7 +5,9 @@ from pathlib import Path
 import unittest
 
 from runtime.user_molecule.input import read_request
-from runtime.historical_materials import load_historical_source_materials
+from runtime.historical_materials import (
+    HistoricalMaterialError, MATERIALS, load_historical_source_materials,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 RECORDS = ROOT / 'validation/user-molecule/w05'
@@ -61,7 +63,7 @@ class W05PreparationContractTests(unittest.TestCase):
         self.assertIsNone(decisions['approver'])
         self.assertIsNone(decisions['approved_at'])
         self.assertFalse(decisions['scientific_scf_budget_authorized'])
-        state = load(ROOT / 'validation/user-molecule/implementation-state.json')
+        state = load(ROOT / 'validation/user-molecule/implementation-state.public.json')
         self.assertFalse(state['compute_enabled'])
         self.assertFalse(state['work_packages']['W05']['ready_to_execute_scf'])
         # Preparation files remain historical; actual failed runs must not be
@@ -105,22 +107,34 @@ class W05PreparationContractTests(unittest.TestCase):
         self.assertEqual(budget['status'], 'PROPOSED_FOR_REVIEW_NOT_SCF_AUTHORIZATION')
 
     def test_frozen_source_materials_and_rule_identity_match(self):
-        historical = load_historical_source_materials(ROOT)
+        # Old design documents are retained only in an explicit local archive.
+        # Their original SHA bindings remain in the source index; current
+        # descriptions must never be passed off as those old reviewed bytes.
+        with self.assertRaisesRegex(HistoricalMaterialError,
+                                    '^HISTORICAL_MATERIALS_LOCAL_ARCHIVE_ONLY$'):
+            load_historical_source_materials()
+        archived = {item['original_path']: item for item in MATERIALS}
+        archived_seen = set()
         for source in load(RECORDS / 'source-index.json')['local_sources']:
             if source['owner'] == 'runtime':
+                if source['path'] in archived:
+                    expected = archived[source['path']]
+                    self.assertEqual(source, {'owner': expected['owner'],
+                        'path': expected['original_path'], 'commit': expected['source_commit'],
+                        'sha256': expected['sha256']})
+                    archived_seen.add(source['path'])
+                    continue  # Binding only; no original-document byte acceptance here.
                 # The index records the reviewed Windows working bytes. A Linux
                 # checkout may use LF. Verify this particular historical hash
                 # by an exact EOL transformation; any other change still fails.
-                # Two original design sources are exact 55726d4 snapshots;
-                # current documents retain the later consultation cancellation.
-                raw = (historical[source['path']] if source['path'] in historical
-                       else (ROOT / source['path']).read_bytes())
+                raw = (ROOT / source['path']).read_bytes()
                 lf = raw.replace(b'\r\n', b'\n')
                 with self.subTest(source=source['path']):
                     self.assertIn(source['sha256'],
                         {hashlib.sha256(data).hexdigest() for data in (raw, lf, lf.replace(b'\n', b'\r\n'))})
+        self.assertEqual(archived_seen, set(archived))
         lock = load(ROOT / 'locks/source.user-molecule.lock.json')
-        state = load(RECORDS / 'preparation-status.json')
+        state = load(RECORDS / 'preparation-status.public.json')
         self.assertEqual(state['science_commit'], lock['source_commit'])
         for check in load(RECORDS / 'inspect-review.json')['candidate_checks']:
             self.assertEqual(check['identities']['condition_rules_sha256'], lock['condition_rules_sha256'])

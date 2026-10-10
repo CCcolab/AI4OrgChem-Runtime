@@ -43,4 +43,4 @@ runtime 与 science 是真实 Git worktree，分支名分别为 implementation/u
 
 默认共享锁为 ai4orgchem-runtime-runs/.host-locks/windows-quantum.lock，兼容原启动器；容器另用同一锁根下 quantum.lock。它只协调本 runtime 管理的任务，不能锁住用户独立运行的科研进程。原准备目录 user-molecule-runs/locks 与 scratch 仍保留；它们不是当前默认锁或容器 tmpfs。
 
-用法见 [用户指南](USER_MOLECULE_RUN_zh-CN.md)，状态与限制见 [交付报告](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.md)。原历史包与准备快照未覆盖；镜像、原始证据和私有输入未自动加入 Git。公开范围另行确认。
+用法见 [用户指南](USER_MOLECULE_RUN_zh-CN.public.md)，状态与限制见 [交付报告](USER_MOLECULE_W01_W04_DELIVERY_zh-CN.public.md)。原历史包与准备快照未覆盖；镜像、原始证据和私有输入未自动加入 Git。公开范围另行确认。

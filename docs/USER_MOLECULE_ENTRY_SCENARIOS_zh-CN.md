@@ -1,8 +1,8 @@
 # 用户分子计算场景与边界
 
-日期：2026-10-05；DRAFT-3 配套。下列是拟开发的使用场景，不是已实现或已验收的服务。以 [设计与验收合同](USER_MOLECULE_ENTRY_DESIGN_zh-CN.md)为执行边界。专业用户提出自己的问题，系统提供有明确条件的数值结果；不要求研究原著背景，也不替用户决定科学模型。条件态、占据和数值资格见 [操作性定义](USER_MOLECULE_CONDITION_DEFINITION_zh-CN.md)；与外部方法的关系见 [方法对照](USER_MOLECULE_METHOD_COMPARISON_zh-CN.md)。
+日期：2026-10-05；DRAFT-3 配套。下列是拟开发的使用场景，不是已实现或已验收的服务。以 [设计与验收合同](USER_MOLECULE_ENTRY_DESIGN_zh-CN.public.md)为执行边界。专业用户提出自己的问题，系统提供有明确条件的数值结果；不要求研究原著背景，也不替用户决定科学模型。条件态、占据和数值资格见 [操作性定义](USER_MOLECULE_CONDITION_DEFINITION_zh-CN.md)；与外部方法的关系见 [方法对照](USER_MOLECULE_METHOD_COMPARISON_zh-CN.md)。
 
-LOCAL-MOLECULE-DETAILS-1：新增 C06 化学键微观研究应用专题，复用 C01—C03，实施顺序见 [本地细则](USER_MOLECULE_IMPLEMENTATION_DETAILS_zh-CN.md)。它不是新计算任务或范围扩张；本地 Docker/启动器优先，Colab 暂缓。
+LOCAL-MOLECULE-DETAILS-1：新增 C06 化学键微观研究应用专题，复用 C01—C03，实施顺序见 [本地细则](USER_MOLECULE_IMPLEMENTATION_DETAILS_zh-CN.public.md)。它不是新计算任务或范围扩张；本地 Docker/启动器优先，Colab 暂缓。
 
 ## 选择服务的简表
 

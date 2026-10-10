@@ -28,7 +28,7 @@
 
 原驱动/协议中的未跟踪开发文件按工作字节冻结，原仓库HEAD仅是上下文，不冒称其属于公开v0.3.2驱动。运行契约只读挂载，源码/依赖只读，UID/GID10001、网络none且仅lo、无新增特权；实际Docker配置与容器内cgroup观测均通过。每个容器已按所有权删除，删除前后结果、回执与manifest再次核对，输出哈希一致。
 
-机器记录见[部署状态](../validation/registered-cases/deployment-20261008.json)，直接使用见[固定案例指南](REGISTERED_CASES_zh-CN.md)。原始记录/日志、wheel、构建来源ZIP及独立静审位于本地阶段目录 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261008-registered-p02-p13-p01`；最终备份清单另存，不将日志强行嵌入源码。
+机器记录见[部署状态](../validation/registered-cases/deployment-20261008.public.json)，直接使用见[固定案例指南](REGISTERED_CASES_zh-CN.md)。原始记录/日志、wheel、构建来源ZIP及独立静审位于本地阶段目录 `D:\AI4Science\ai4orgchem-runtime-deliveries\20261008-registered-p02-p13-p01`；最终备份清单另存，不将日志强行嵌入源码。
 
 ## 工程测试与记录更正
 
@@ -40,6 +40,5 @@ CI辅助脚本初次对`No such object`做大小写敏感判断，而实际stder
 
 ## 保留边界与待办
 
-WSLc保持BLOCKED / NOT_EXECUTED，平台升级与实机验收暂停。GitHub CI仍NOT_EXECUTED，本轮未推送。镜像分发BLOCKED：保留旧许可/对应源码缺口，并新增RDKit/Pillow及随包组件完整审查待办；本地构建通过不构成分发许可。源码公开另行确认，新增分支、文件和历史不自动纳入此前2460eef/0288eb8候选。
 
 P03—P12没有增加计算入口；全P01、P13原量子优化、原文献认证、任意用户分子Compute、在线计算及Colab均未增加。旧139-NR OPEN记录和预算不复用、不重试、不补写关闭。既有P14七任务及其旧身份保留，L4可保存检查点但不支持恢复运行。没有升级WSL、清理原工作区、改原科学规则、公开镜像/标签/Release，或重新启动外部专家咨询。

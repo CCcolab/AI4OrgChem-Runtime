@@ -1,4 +1,4 @@
-"""Exact retained W05 document bytes, not current policy or scientific approval.
+"""Exact local W05 archive bytes, not public policy or scientific approval.
 
 Only the two explicitly audited documents are supported. No Git, engines,
 scientific libraries, repairs, or network operations are invoked at runtime.
@@ -10,6 +10,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+LOCAL_ARCHIVE_ONLY = 'HISTORICAL_MATERIALS_LOCAL_ARCHIVE_ONLY'
 HISTORY_DIR = 'validation/user-molecule/w05/historical-source-materials'
 MANIFEST_PATH = HISTORY_DIR + '/mapping.json'
 SOURCE_INDEX_PATH = 'validation/user-molecule/w05/source-index.json'
@@ -130,18 +131,27 @@ def _verified(runtime_root):
     return contents, receipt
 
 
-def load_historical_source_materials(runtime_root=ROOT):
-    """Return the two verified original-path -> exact-bytes bindings."""
+def _require_archive(runtime_root):
+    if runtime_root is None:
+        raise HistoricalMaterialError(LOCAL_ARCHIVE_ONLY)
+    return runtime_root
+
+
+def load_historical_source_materials(runtime_root=None):
+    """Verify explicit local archive bytes; never guess a public-tree fallback."""
+    runtime_root = _require_archive(runtime_root)
     return _verified(runtime_root)[0]
 
 
-def verify_historical_source_materials(runtime_root=ROOT):
+def verify_historical_source_materials(runtime_root=None):
     """Return a JSON-safe integrity receipt, never a scientific approval."""
+    runtime_root = _require_archive(runtime_root)
     return _verified(runtime_root)[1]
 
 
-def read_historical_source_material(source, *, runtime_root=ROOT):
+def read_historical_source_material(source, *, runtime_root=None):
     """Read only an exact old source-index row; caller cannot redirect its path."""
+    runtime_root = _require_archive(runtime_root)
     matches = [item for item in MATERIALS if isinstance(source, dict) and source.get('path') == item['original_path']]
     if len(matches) != 1: raise HistoricalMaterialError('Unsupported historical source row')
     item = matches[0]

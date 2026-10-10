@@ -56,7 +56,7 @@ def main():
             guard_operations=[row[3] for row in bindings],forbidden_attempts=attempts,changed_guards=changed,
             guard_status='PASS' if len(bindings)==14 and not attempts and not changed else 'FAIL',
             elapsed_seconds=time.monotonic()-started)
-        helper.save(output/'summary.json',record)
+        helper.save(output/'summary.public.json',record)
     print(json.dumps({'status':record['status'],'unique_tests':len(seen),'native_calls':0}))
 
 

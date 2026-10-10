@@ -1,0 +1,64 @@
+{
+  "source_sha256": "2e1fcfe923a9235d4371ad0f7b3b6bfdf2fddc4c185940d9f148a2c88cb177cb",
+  "results": [
+    {
+      "name": "Actual ZIP extracted page rendered /unpacked/docs/index.html",
+      "status": "PASS",
+      "head_complete": true,
+      "font": "system-ui, -apple-system, \"Microsoft YaHei\", sans-serif",
+      "bg": "rgb(247, 249, 252)"
+    },
+    {
+      "name": "Extracted page search /unpacked/docs/index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Extracted page request copy /unpacked/docs/index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual re-export HTML /unpacked/docs/index.html",
+      "status": "PASS",
+      "bytes": 216663,
+      "sha256": "2e1fcfe923a9235d4371ad0f7b3b6bfdf2fddc4c185940d9f148a2c88cb177cb"
+    },
+    {
+      "name": "Actual re-export ZIP /unpacked/docs/index.html",
+      "status": "DOWNLOADED",
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-platform-withdrawal\\web-reviewed\\reexport\\root.zip",
+      "sha256": "ff711c95c9445aa7615f057b0fe741c44e2c5254643e2b8b657c1e528877c2af"
+    },
+    {
+      "name": "Actual ZIP extracted page rendered /AI4OrgChem-Runtime/unpacked/docs/index.html",
+      "status": "PASS",
+      "head_complete": true,
+      "font": "system-ui, -apple-system, \"Microsoft YaHei\", sans-serif",
+      "bg": "rgb(247, 249, 252)"
+    },
+    {
+      "name": "Extracted page search /AI4OrgChem-Runtime/unpacked/docs/index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Extracted page request copy /AI4OrgChem-Runtime/unpacked/docs/index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual re-export HTML /AI4OrgChem-Runtime/unpacked/docs/index.html",
+      "status": "PASS",
+      "bytes": 216663,
+      "sha256": "2e1fcfe923a9235d4371ad0f7b3b6bfdf2fddc4c185940d9f148a2c88cb177cb"
+    },
+    {
+      "name": "Actual re-export ZIP /AI4OrgChem-Runtime/unpacked/docs/index.html",
+      "status": "DOWNLOADED",
+      "path": "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261010-platform-withdrawal\\web-reviewed\\reexport\\subpath.zip",
+      "sha256": "ff711c95c9445aa7615f057b0fe741c44e2c5254643e2b8b657c1e528877c2af"
+    },
+    {
+      "name": "Missing-style export is refused",
+      "status": "PASS"
+    }
+  ],
+  "science_calls": 0
+}

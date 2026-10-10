@@ -1,0 +1,67 @@
+{
+  "schema": "public-scope-and-guide-review-v1",
+  "date": "2026-10-10",
+  "base_public_commit": "86e29b47b38fbd31717ff9aac653386d2e3f768d",
+  "local_original_archive_commit": "eb65b4586c83637569f6359814338c1292948861",
+  "original_archive_sha256": "9528a59d29b92599d17c9dbdfcb7a9870b0a153e7b27fa59dd710cf5456497f3",
+  "current_supported_platforms": [
+    "Docker scoped service acceptance",
+    "ordinary WSL2 native read-only readiness; no transferred Docker science acceptance"
+  ],
+  "history_rewritten": false,
+  "scientific_rules_changed": false,
+  "scientific_tolerances_changed": false,
+  "new_scientific_calls": 0,
+  "global_configuration_changes": 0,
+  "local_engineering": {
+    "executed": 528,
+    "passed": 526,
+    "skipped": 2,
+    "record": "validation/platform-withdrawal-engineering-20261010.json",
+    "sha256": "21ff7035fc0c616e28e38a76591f5f507b87805f20ccfb1734a2e5333ac897da"
+  },
+  "web_review": {
+    "WEB-01": "SAME_INSTALLATION_RECORD_MAIN_ORDINARY_PATH",
+    "WEB-02": "ACTUAL_HTML_AND_ZIP_HEAD_AND_REEXPORT_VERIFIED",
+    "WEB-03": "RETIRED_PLATFORM_WITHDRAWN_CURRENT_TREE_AND_DOWNLOADS_ORIGINALS_LOCAL",
+    "WEB-04": "SOURCE_CLONE_CWD_AND_COMMIT_RECORDING_PROVIDED",
+    "WEB-05": "REAL_TASK_P11_PARAMETER",
+    "WEB-06": "CURRENT_PUBLIC_STATUS_AND_HISTORICAL_CI_DISTINGUISHED",
+    "WEB-07": "CURRENT_ARTIFACT_RECORD_SEPARATE_FROM_HISTORICAL_HASHES",
+    "WEB-08": "CURRENT_17_SERVICE_MATRIX_WITH_INPUT_PROTOCOL_RESULT_AND_ENTRY_LINKS"
+  },
+  "web_record": "validation/web-guide/current-delivery-20261010.json",
+  "new_remote_ci": "NOT_EXECUTED_AT_LOCAL_COMMIT_PREPARATION",
+  "known_previous_remote_ci": {
+    "commit": "86e29b47b38fbd31717ff9aac653386d2e3f768d",
+    "run_id": 38003025857,
+    "successful_jobs": 3
+  },
+  "limits": {
+    "conditional_user_compute": "BLOCKED_NO_QUALIFIED_ENDPOINT",
+    "high_cost_accepted_units": 2,
+    "high_cost_registered_units": 78,
+    "public_prebuilt_image_distribution": "BLOCKED",
+    "L4_resume_supported": false,
+    "true_200_percent_browser_zoom": "NOT_EXECUTED",
+    "full_keyboard": "NOT_EXECUTED",
+    "multiple_browser_engines": "NOT_EXECUTED"
+  },
+  "source_overlay_contract": "REVIEWED_ENGINEERING_PLATFORM_METADATA_REBIND_V3",
+  "catalog_metadata_only_proofs": [
+    {
+      "path": "configs/protocol-cases-v1.json",
+      "scientific_content_unchanged": true,
+      "only_platform_metadata_removed": true,
+      "original_sha256": "64abfaa9090e72b893458f1fc261b9f0cc4efce9d95458997b9077a95da0d4a4",
+      "current_sha256": "f88cc182bcaa9e57e44e8bab5410ac3efa24f3e2d1cec54053144b1d6c890c54"
+    },
+    {
+      "path": "configs/high-cost-cases-v1.json",
+      "scientific_content_unchanged": true,
+      "only_platform_metadata_removed": true,
+      "original_sha256": "0fa3a9205eaec088f704bfc4139c15a01ec5a3b684300f37015b7aa464282308",
+      "current_sha256": "92186233f5d6dc1b44034ace1701e278316c317fbe25fc1a398de48a7585befd"
+    }
+  ]
+}
