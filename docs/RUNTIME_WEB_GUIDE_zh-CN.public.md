@@ -15,11 +15,11 @@ Runtime源码及用户提供的网页指南已按用户授权同步到[公开仓
 
 以下各轮导入、改名与推送前局部验收属于历史记录；其中“未推送／公开待确认／远端CI NOT_EXECUTED”保留当时意义，当前状态以本段及新同步记录为准。当前活动网页仍以docs/index.html为唯一编辑入口，维护字节增补另行保存身份，不把此前浏览器实测套用给后来字节。
 
-以下导入／模块改名章节保留各自历史字节；当前网页身份与导出见文末“推送前验收记录口径修订”。
+以下导入／模块改名章节保留各自历史口径。当前维护范围见 [IMPORTED.md](runtime-guide/IMPORTED.md)，当前实际下载包见 [current-guide.zip](runtime-guide/current-guide.zip)，本轮网页字节和受限实测见 [专项修订记录](../validation/web-guide/special-review-followup-20261010.json)。旧 source/archive 仅在本地归档及既有 Git 历史中保留，不随当前公开文件树提供。
 
 2026-10-09已接纳 YouMind 更新的 `v0.3.0-candidate` 为本地文档候选，本轮未发现必须继续修改的功能或声明问题。网页入口为 [docs/index.html](index.html)，可直接在本地浏览器打开。
 
-完整原包10成员保存在 [runtime-guide/source](runtime-guide/source/README.md)，原ZIP备份在 [runtime-guide/archive](runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip)。网页是使用指南，本地科学计算由对应Runtime入口执行。GitHub推送和Pages部署留待后续整体同步，当前未执行。
+完整原包10成员保存在 `runtime-guide/source`（本地历史归档，原路径 `runtime-guide/source/README.md`，当前公开树不提供下载），原ZIP备份在 `runtime-guide/archive`（本地历史归档，原路径 `runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate.zip`，当前公开树不提供下载）。网页是使用指南，本地科学计算由对应Runtime入口执行。GitHub推送和Pages部署留待后续整体同步，当前未执行。
 
 ## 验证与身份
 
@@ -43,7 +43,7 @@ Runtime源码及用户提供的网页指南已按用户授权同步到[公开仓
 
 本轮只改变展示与维护材料。普通用户分子服务仍限定普通RHF单点；十四个模块采用固定案例或已有证据，没有扩大任意分子条件态、优化或尺寸扫描能力。高成本固定状态清单的接入与实际验收继续分别说明。
 
-模块改名轮的实际网页导出当时保存在 [current/README.md](runtime-guide/current/README.md)，可携带包为 [模块名称修订ZIP](runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip)。current是从唯一活动入口重新生成的维护快照，不作为第二个日常编辑入口；source及原ZIP是历史导入材料。
+模块改名轮的实际网页导出当时保存在 [current/README.md](runtime-guide/current/README.md)，可携带包为 `模块名称修订ZIP`（本地历史归档，原路径 `runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-module-names.zip`，当前公开树不提供下载）。current是从唯一活动入口重新生成的维护快照，不作为第二个日常编辑入口；source及原ZIP是历史导入材料。
 
 本次独立本地Edge检查通过三宽度默认／展开布局、十四名称与对应表、按功能名搜索、三路径与清除、79个复制目标、七项实际导出、ZIP CRC／10成员及根／模拟仓库子路径重开。复制内容仅允许Windows CRLF→LF归一化，计算命令及输入文本与导入版一致。禁JavaScript检查使用浏览器原生折叠操作读取全部名称；首次默认收起文本探针与后续检查均保留在记录中。真实200%缩放、完整键盘及多浏览器未执行，不宣称完整网页认证。
 
@@ -53,18 +53,18 @@ Runtime源码及用户提供的网页指南已按用户授权同步到[公开仓
 
 最终静态审查发现，原维护导出的“当前全部NOT_EXECUTED”会与已经保存的局部浏览器实测混淆。现已把YouMind原始维护文字明确标为历史；浏览器内手工QA初始未填写另列，包外实测按实际HTML SHA与范围登记。未把手工QA所有项自动改成PASS，真实200%缩放、完整键盘和多浏览器仍未执行。
 
-当前活动入口仍为docs/index.html；[current维护导出](runtime-guide/current/README.md)现对应本轮字节，可携带[最终口径修订网页包](runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-final-consistency.zip)。旧模块名称包、原YouMind包和原始导入快照均保留。此前记录中的current_export是历史导出位置；原字节可在对应归档ZIP及Git提交恢复，不用当前目录冒充旧哈希。
+当前活动入口仍为docs/index.html；[current维护导出](runtime-guide/current/README.md)现对应本轮字节，可携带`最终口径修订网页包`（本地历史归档，原路径 `runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-final-consistency.zip`，当前公开树不提供下载）。旧模块名称包、原YouMind包和原始导入快照均保留。此前记录中的current_export是历史导出位置；原字节可在对应归档ZIP及Git提交恢复，不用当前目录冒充旧哈希。
 
 本轮三宽度默认／全展开、79逻辑复制目标、功能名搜索、三路径、七项导出CRC和HTTP根／子路径重开、真禁JS原生展开阅读通过；计算命令及水模板原字节不变。新身份与范围见[final-consistency-20261009.json](../validation/web-guide/final-consistency-20261009.json)和[本轮浏览器记录](../validation/web-guide/browser-final-consistency-20261009.json)。没有科学重算、镜像重建、WSL变更或公开动作，未分配新Runtime版本。
 
 ### 维护语义与两项下载出口补核
 
-当前活动字节和current目录以[final-consistency-r2-20261009.json](../validation/web-guide/final-consistency-r2-20261009.json)为准，[本轮浏览器记录](../validation/web-guide/browser-final-consistency-r2-20261009.json)绑定新HTML。明确保留“仅描述当时状态，不是当前能力”的原意；guide与sources附加的交付说明同样标为历史，不再把原提供时未执行误写成当前全未执行。旧final-consistency记录／归档继续保留各自身份。最新[可携带网页包](runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-final-consistency-r2.zip)另存，未更改原始输入或科学内容。
+当前活动字节和current目录以[final-consistency-r2-20261009.json](../validation/web-guide/final-consistency-r2-20261009.json)为准，[本轮浏览器记录](../validation/web-guide/browser-final-consistency-r2-20261009.json)绑定新HTML。明确保留“仅描述当时状态，不是当前能力”的原意；guide与sources附加的交付说明同样标为历史，不再把原提供时未执行误写成当前全未执行。旧final-consistency记录／归档继续保留各自身份。最新`可携带网页包`（本地历史归档，原路径 `runtime-guide/archive/ai4orgchem-runtime-guide-v0.3.0-candidate-final-consistency-r2.zip`，当前公开树不提供下载）另存，未更改原始输入或科学内容。
 
 ## 公开状态增补后的当前网页身份
 
-本次仅同步已发生的源码公开与三项远端CI结果，Pages仍未启用。当前HTML、10成员导出与归档身份见[public-status-20261009.json](../validation/web-guide/public-status-20261009.json)，[局部浏览器记录](../validation/web-guide/browser-public-status-20261009.json)绑定新字节；三宽度、79复制、三路径、模块名搜索、七导出、HTTP根/模拟子路径和真禁JS阅读通过。全部计算命令与水模板未变，旧原包与r2归档继续保留各自哈希。[当前可携带网页包](runtime-guide/archive/ai4orgchem-runtime-guide-public-status-20261009.zip)只是指南；200%/全键盘/多浏览器仍未执行，未分配新Runtime版本。
+本次仅同步已发生的源码公开与三项远端CI结果，Pages仍未启用。当前HTML、10成员导出与归档身份见[public-status-20261009.json](../validation/web-guide/public-status-20261009.json)，[局部浏览器记录](../validation/web-guide/browser-public-status-20261009.json)绑定新字节；三宽度、79复制、三路径、模块名搜索、七导出、HTTP根/模拟子路径和真禁JS阅读通过。全部计算命令与水模板未变，旧原包与r2归档继续保留各自哈希。`当前可携带网页包`（本地历史归档，原路径 `runtime-guide/archive/ai4orgchem-runtime-guide-public-status-20261009.zip`，当前公开树不提供下载）只是指南；200%/全键盘/多浏览器仍未执行，未分配新Runtime版本。
 
 ## 2026-10-10用户首页目的与模块目录
 
-首页和两语言README已调整为项目目的、自己的XYZ单点入口、六组十四固定协议模块与入门步骤；技术部署和历史验证记录默认折叠，原文与旧归档保留。当前活动字节、current导出及[用户首页网页包](runtime-guide/archive/ai4orgchem-runtime-guide-user-home-20261010.zip)见[用户首页记录](../validation/web-guide/user-home-20261010.public.json)和[新版浏览器核对](../validation/web-guide/browser-user-home-20261010.json)，不继承旧网页哈希的PASS。25项局部检查包括折叠后的QA直达，79计算/输入复制目标和所有代码块未变；功能和科学范围不随展示整理扩大。
+首页和两语言README已调整为项目目的、自己的XYZ单点入口、六组十四固定协议模块与入门步骤；技术部署和历史验证记录默认折叠，原文与旧归档保留。当前活动字节、current导出及`用户首页网页包`（本地历史归档，原路径 `runtime-guide/archive/ai4orgchem-runtime-guide-user-home-20261010.zip`，当前公开树不提供下载）见[用户首页记录](../validation/web-guide/user-home-20261010.public.json)和[新版浏览器核对](../validation/web-guide/browser-user-home-20261010.json)，不继承旧网页哈希的PASS。25项局部检查包括折叠后的QA直达，79计算/输入复制目标和所有代码块未变；功能和科学范围不随展示整理扩大。

@@ -162,7 +162,9 @@
       "original_sha256": "5c4471ce41e094da686d25360d9e7ee254638cff1161cceeca5b89a66e640ca0",
       "original_size_bytes": 11379,
       "projection_sha256_before_reference_updates": "e500d42cea3c8203db0b40a32c634b2de356df40aa9cebde2d5a67bd63db908c",
-      "projection_sha256": "8cd1ce1b640fcbeebb732649cd20a89dac553c9f6ebb30b0e7577fcd5496ada5"
+      "projection_sha256": "656d3580b60ce2a13ca2ae9d3d240652370979230cf43e1e9cc32620cffad4d8",
+      "projection_sha256_before_local_archive_link_notice": "8cd1ce1b640fcbeebb732649cd20a89dac553c9f6ebb30b0e7577fcd5496ada5",
+      "review_revision": "20261010_EXPLICIT_LOCAL_ONLY_HISTORICAL_ARCHIVE_LINKS"
     },
     {
       "path": "docs/SIX_ISSUE_REMEDIATION_20261009_zh-CN.public.md",
