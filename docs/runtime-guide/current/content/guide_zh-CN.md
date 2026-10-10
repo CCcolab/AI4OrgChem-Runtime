@@ -2224,11 +2224,19 @@ YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点
 
 <a id="github-public-status"></a>
 
-### 源码与指南已同步 GitHub
+### 当前公开版本：AI4OrgChem Runtime v0.1.0
+
+2026-10-10已正式发布[v0.1.0源码与指南Release](https://github.com/CCcolab/AI4OrgChem-Runtime/releases/tag/v0.1.0)，标签指向**b4a74e7**。提供带Git身份证明的源码ZIP、10成员指南ZIP和SHA-256清单；网页不提供在线计算，实际命令在用户本地Runtime执行。
+
+GitHub仓库右侧的Releases已有Latest版本；引用入口由CITATION.cff提供。[作者与维护者说明](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/AUTHORS.md)已公开。Contributors和Languages由GitHub自动统计，旧本地邮箱未关联账号，不改写历史或虚构贡献者；Packages未发布，镜像分发仍受限制。
+
+发布提交的[两个公开CI job](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38054799419)和[Pages部署](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38054799318)成功，限定工程范围，不认证全部科学服务。原失败浏览器下载补验已由外部审阅者经负责人报告为限定PASS；旧失败记录保留。条件态Compute仍未开放，L4检查点不支持恢复。
+
+### 首次源码同步（历史记录）
 
 2026-10-09 已按项目负责人授权公开到 [CCcolab/AI4OrgChem-Runtime](https://github.com/CCcolab/AI4OrgChem-Runtime)。首个候选提交 **06d5088** 的 [首次远端 CI](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122) 三项 job 均成功：Linux 构建、L0/L1、容器探针及限定工程测试；真实 P11 预检保留一项跳过。不是全部科学任务验收。网页文件已随源码同步，GitHub Pages 已于2026-10-10启用，可[直接打开静态指南](https://cccolab.github.io/AI4OrgChem-Runtime/)；本页不提供在线计算，复制的计算命令在用户本地执行。
 
-；镜像分发 BLOCKED；旧条件态 Compute BLOCKED；L4 仅保存检查点、不能恢复运行。下面原提供时及既有版本的状态记录保留历史范围，当前公开与 CI 记录见 [本次同步记录](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.public.md)。未创建新 Runtime 版本、标签或 Release。
+；镜像分发 BLOCKED；旧条件态 Compute BLOCKED；L4 仅保存检查点、不能恢复运行。下面原提供时及既有版本的状态记录保留历史范围，当前公开与 CI 记录见 [本次同步记录](https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/GITHUB_PUBLIC_SYNC_20261009_zh-CN.public.md)。该首次同步时尚未创建Runtime版本、标签或Release；当前状态以上方v0.1.0记录为准。
 
 ### 原提供时的项目与阅读状态（历史）
 
@@ -2626,6 +2634,9 @@ AI4OrgChem v0.3.2 · 固定提交：
 如果当前浏览器的动态导出被完整性守卫拒绝，可下载已核验的部署文件：[静态指南 ZIP](https://cccolab.github.io/AI4OrgChem-Runtime/runtime-guide/current-guide.zip) · [静态指南 HTML](https://cccolab.github.io/AI4OrgChem-Runtime/runtime-guide/current/docs/index.html)。这些文件由实际下载产物核验后随仓库部署，不依赖当前浏览器的快照解析；身份与哈希见本轮导出验收记录。动态导出的守卫继续保留。
 
 静态指南由GitHub Pages托管；托管服务的访问记录由GitHub管理。网页不向计算后端提交分子或请求，复制与导出在本地浏览器完成；科学计算在用户本地Runtime执行。
+
+## 发布后同步状态说明
+当前同步卡已补齐v0.1.0正式发布；本次实际正文与下载字节见validation/web-guide/postrelease-status-card-20261010.json。正式Release标签和附件保持不变，不用新网页字节冒充旧包。
 
 ## v0.1.0源码与指南发布材料
 发布入口：https://github.com/CCcolab/AI4OrgChem-Runtime/releases/tag/v0.1.0 。本次发布链接文字与实际导出字节记录见 validation/web-guide/release-v0.1.0-downloads.json；旧修订及原浏览器补验记录各保留其原字节身份，不作为本次新包哈希。没有改动导出算法或科学代码。

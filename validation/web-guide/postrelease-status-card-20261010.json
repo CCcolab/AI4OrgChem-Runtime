@@ -1,0 +1,92 @@
+{
+  "schema": "postrelease-status-card-v1",
+  "version": "0.1.0",
+  "released_tag_commit": "b4a74e7667bd601a4fe3090e0092f029f13848b1",
+  "scope": "Current guide status card and derived maintenance copies only",
+  "status": "PASS_LOCAL_ACTUAL_DOWNLOAD_BYTE_CHECK",
+  "html": {
+    "bytes": 230982,
+    "sha256": "931321224af726e760efc438a5339b7a62178e8f1e3762a1c8643dca2a36f904"
+  },
+  "zip": {
+    "bytes": 504822,
+    "sha256": "b8aadcffb11e40e79f985183f1a943a242da6d0b7c4ef6b55fc7b4d8c376c61a",
+    "crc": "PASS",
+    "members": 10
+  },
+  "members": [
+    {
+      "path": "docs/index.html",
+      "size": 230982,
+      "sha256": "931321224af726e760efc438a5339b7a62178e8f1e3762a1c8643dca2a36f904",
+      "reason": null
+    },
+    {
+      "path": "docs/.nojekyll",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": null
+    },
+    {
+      "path": "README.md",
+      "size": 39895,
+      "sha256": "8bed6ec4fd5481d0595277c00c15903a11fc2a8a4cb9eb4824f924005a31e515",
+      "reason": null
+    },
+    {
+      "path": "content/guide_zh-CN.md",
+      "size": 125435,
+      "sha256": "7acc6210be3e29dd652fdb06e657d7c466b04ea327f59faaf4889d72cdeb25ae",
+      "reason": null
+    },
+    {
+      "path": "provenance/sources.md",
+      "size": 20209,
+      "sha256": "5f7e4409db97a73304fc5aa36722f4f806c2c7c36e98aa3a91d284e619a419e1",
+      "reason": null
+    },
+    {
+      "path": "verification/checks.md",
+      "size": 41299,
+      "sha256": "0c86c883056b3d76e38e2518be9619bc277126ba834543bed23dc3c562b0d64a",
+      "reason": null
+    },
+    {
+      "path": "MIGRATION.md",
+      "size": 43038,
+      "sha256": "ce9c854cc6cb717f737efe8b7c7b8897277a05af271c4ce028afcb22d895b2ef",
+      "reason": null
+    },
+    {
+      "path": "MANIFEST.txt",
+      "size": 1844,
+      "sha256": "f894b6310d3e217bead025dae0d9c53d7f5a943448238518ebc3ad74a5d5f7b6",
+      "reason": null
+    },
+    {
+      "path": "templates/molecular-service/water/request.json",
+      "size": 277,
+      "sha256": "31d50fb7859d8610134002cc138e4441548691177bd067db1cc58a1a55483b92",
+      "reason": null
+    },
+    {
+      "path": "templates/molecular-service/water/molecule.xyz",
+      "size": 123,
+      "sha256": "a056dc7e69e3b8682f8f0c4176a3d51a0cf6b0d2c2e499261b17f93532aa68c7",
+      "reason": null
+    }
+  ],
+  "code_texts_unchanged": 82,
+  "export_algorithm_unchanged": true,
+  "formal_release_assets_replaced": false,
+  "formal_tag_rewritten": false,
+  "scientific_calls": 0,
+  "GitHub_sidebar_current": {
+    "release": "v0.1.0 Latest published",
+    "citation": "CITATION.cff available",
+    "contributors": "No account-linked contributors; historical local author identity preserved",
+    "languages": "GitHub generated",
+    "packages": "No published prebuilt image"
+  },
+  "previous_release_download_receipt_preserved": true
+}

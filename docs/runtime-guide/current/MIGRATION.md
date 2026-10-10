@@ -1,3 +1,6 @@
+# v0.1.0发布后同步状态说明
+指南中的当前同步卡已补齐正式Release、作者、引用及GitHub自动统计说明；本次正文修订与实际导出身份见validation/web-guide/postrelease-status-card-20261010.json。已发布v0.1.0标签及附件不替换；原发布包记录仍绑定其当时字节。
+
 # v0.1.0发布链接与指南身份
 当前源码与指南版本为v0.1.0，Release入口https://github.com/CCcolab/AI4OrgChem-Runtime/releases/tag/v0.1.0 。本次实际导出身份见validation/web-guide/release-v0.1.0-downloads.json；原浏览器补验PASS是外部审阅者经负责人报告，对应此前固定字节，见validation/web-guide/external-browser-retest-20261010.json。旧记录保持原身份。源码ZIP用于安装，指南ZIP不含计算引擎。
 
@@ -321,6 +324,9 @@ NOT_EXECUTED
 
 ## 文件索引表局部滚动修复
 文件索引表局部滚动修复已写入，修后独立三宽度复测待执行。360/768/1440 须在全部 details 展开时独立复测；原次不登记通过、不套用旧哈希。裸表已在源 HTML 中置入可键盘聚焦的 table-scroll 局部滚动区域，保留表格 min-width:680px 与现有 grid/card/details 收缩规则；cleanExport 与 ZIP 内 docs/index.html 沿用源 HTML 修复，导出算法未改。
+
+## 发布后同步状态说明
+当时同步卡已补齐v0.1.0正式发布；原次实际正文与下载字节见validation/web-guide/postrelease-status-card-20261010.json。正式Release标签和附件保持不变，不用新网页字节冒充旧包。
 
 ## v0.1.0源码与指南发布材料
 发布入口：https://github.com/CCcolab/AI4OrgChem-Runtime/releases/tag/v0.1.0 。原次发布链接文字与实际导出字节记录见 validation/web-guide/release-v0.1.0-downloads.json；旧修订及原浏览器补验记录各保留其原字节身份，不作为原次新包哈希。没有改动导出算法或科学代码。

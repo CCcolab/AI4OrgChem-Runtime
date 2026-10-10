@@ -273,6 +273,9 @@ YouMind原自动回读BLOCKED历史继续保留，不要求用户再次重复点
 
 原YouMind提供时状态（历史）：条件Compute BLOCKED；；远CI NOT\_EXECUTED；镜像分发BLOCKED；外部专家咨询已取消非前置。该原包轮不运行Runtime/Docker/WSL/科学，不发布、不改权限；本次公开与实际CI另见当前同步记录。
 
+## 发布后同步状态说明
+当前同步卡已补齐v0.1.0正式发布；本次实际正文与下载字节见validation/web-guide/postrelease-status-card-20261010.json。正式Release标签和附件保持不变，不用新网页字节冒充旧包。
+
 ## v0.1.0源码与指南发布材料
 发布入口：https://github.com/CCcolab/AI4OrgChem-Runtime/releases/tag/v0.1.0 。本次发布链接文字与实际导出字节记录见 validation/web-guide/release-v0.1.0-downloads.json；旧修订及原浏览器补验记录各保留其原字节身份，不作为本次新包哈希。没有改动导出算法或科学代码。
 
