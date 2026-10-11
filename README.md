@@ -2,11 +2,11 @@
 
 [中文说明](README_zh-CN.md)
 
-**Version v0.1.0** · [Release and downloads](https://github.com/CCcolab/AI4OrgChem-Runtime/releases/tag/v0.1.0) · [release scope](docs/en/RELEASE_v0.1.0.md) · [authors and acknowledgements](AUTHORS.md). Source and guide only; no prebuilt image or bundled environment.
+**Version v0.1.0** · [Release and downloads](docs/en/DOWNLOADS.md) · [release scope](docs/en/RELEASE_v0.1.0.md) · [authors and acknowledgements](docs/en/AUTHORS.md). Source and guide only; no prebuilt image or bundled environment.
 
 **[Open the Runtime user guide](https://cccolab.github.io/AI4OrgChem-Runtime/en/)**
 
-**Author and maintainer:** [Xiao Chen / CCcolab](https://github.com/CCcolab). **AI-assisted engineering contributor: OpenAI Codex** — Runtime implementation, input and resource checks, engineering tests, evidence records, documentation and guide maintenance, under the maintainer's direction. See [contributions and acknowledgements](AUTHORS.md#codex-contributions--codex-贡献).
+**Author and maintainer:** [Xiao Chen / CCcolab](https://github.com/CCcolab). **AI-assisted engineering contributor: OpenAI Codex** — Runtime implementation, input and resource checks, engineering tests, evidence records, documentation and guide maintenance, under the maintainer's direction. See [contributions and acknowledgements](docs/en/AUTHORS.md#codex-contributions).
 
 ## Purpose and goals
 

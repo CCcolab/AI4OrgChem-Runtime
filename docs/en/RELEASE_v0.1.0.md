@@ -18,4 +18,6 @@ The release notes record two public CI jobs/Pages for `f3c6bdf` and a prior loca
 
 Conditional user Compute remains BLOCKED, complete canonical/virtual-orbital gates are not implemented, ordinary stability was not executed, and only two of 78 high-cost registered states have historical pilot acceptance. The remaining 76 states, complete assembly and new-installation science replay remain unexecuted. L4 checkpoints do not resume. User DFT/ions/open-shell/general optimization/scans and full original-project certification are not part of this release.
 
-No prebuilt image or complete bundled environment is distributed. Runtime-owned code is Apache-2.0; third-party and YouMind rights remain separate. See [publication boundaries](PUBLICATION_BOUNDARIES.md), [AUTHORS](../../AUTHORS.md) and [CITATION.cff](../../CITATION.cff). Packages remain unpublished; GitHub Contributors/Languages are generated from actual account-attributed commits/files.
+No prebuilt image or complete bundled environment is distributed. Runtime-owned code is Apache-2.0; third-party and YouMind rights remain separate. See [publication boundaries](PUBLICATION_BOUNDARIES.md), [authors and acknowledgements](AUTHORS.md) and [CITATION.cff](../../CITATION.cff). Packages remain unpublished; GitHub Contributors/Languages are generated from actual account-attributed commits/files.
+
+For asset links, original sizes/hashes and the distinction between release assets and later English documentation, see [English release and downloads](DOWNLOADS.md).
