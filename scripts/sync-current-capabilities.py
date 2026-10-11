@@ -37,7 +37,7 @@ def targets(root=ROOT):
         text = (root/name).read_text(encoding='utf-8')
         body = ('当前服务的输入、方法、实际验收、成本及解释范围见[专业服务矩阵](docs/CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)，'
                 '机器可读声明见[当前能力表](configs/runtime-capabilities-v2.json)。'
-                if zh else 'See the [current professional service matrix](docs/CURRENT_PROFESSIONAL_SERVICES_zh-CN.md) for inputs, methods, recorded acceptance, cost and interpretation; the [current capability registry](configs/runtime-capabilities-v2.json) is the machine-readable declaration.')
+                if zh else 'See the [current professional service matrix](docs/en/CURRENT_PROFESSIONAL_SERVICES.md) for inputs, methods, recorded acceptance, cost and interpretation; the [current capability registry](configs/runtime-capabilities-v2.json) is the machine-readable declaration.')
         scope = (f"已记录 [{ci['commit'][:8]} 的 {ci['successful_jobs']} 个 CI job 成功]({ci['url']})；仅覆盖登记工程合同和旧入口 L0/L1，不认证本次修改或全部科学服务。"
                  if zh else f"[{ci['successful_jobs']} CI jobs succeeded for {ci['commit'][:8]}]({ci['url']}); this records engineering contracts and legacy L0/L1, not acceptance of later changes or all scientific services.")
         block = START+'\n'+body+'\n\n'+scope+'\n'+END
