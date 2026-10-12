@@ -2,6 +2,12 @@
 
 # Install a local Runtime from source
 
+## What is installed, and what is needed only once?
+
+This is the unified Runtime source/shared Docker environment installation guide, not a standalone installer per calculation module. Source still needs dependency preparation and a local image build; the dedicated source ZIP does not contain a complete installed environment and the guide ZIP is reading material. Prepare/build establishes this environment or a separate new one; it is not repeated before every calculation.
+
+For ordinary RHF alone, follow [the complete RHF installation/use steps](CURRENT_MOLECULAR_SINGLE_POINT.md) and register only `molecular-service`. Other service registrations below are optional and do not start calculations. The original seven-task/P14 environment has a separate build/identity contract. With an existing image/service record, go directly to its run instructions and retain that record.
+
 This installation path creates its own local image and service identities. Historical scientific acceptance never transfers automatically to a new image. It does not modify your existing research environment or global WSL configuration.
 
 ## Prerequisites and source download
