@@ -6,6 +6,10 @@
 
 Runtime engineering, testing and documentation were carried out with **OpenAI Codex** under the project owner's direction. Scientific interpretation and publication responsibility remain with the human project owner.
 
+## Skill instructions
+
+Xiao Chen provided eleven personal Skills created on YouMind. Codex adapted these for external Agent use and added four scoped workflow instruction Skills under the maintainer's direction. The platform's tools and calculation engines are not bundled; local tests are scoped records, not independent certification. See [Skills](../../skills/README.md) and [test scope](../../skills/TESTING.md).
+
 ## Codex contributions
 
 Codex's AI-assisted engineering contributions are present in Runtime's main branch and recorded development history:

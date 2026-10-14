@@ -14,6 +14,12 @@ AI4OrgChem Runtime helps you run molecular calculations on your own computer and
 
 The goal is to make it easier to obtain single-point energies, inspect orbitals and density matrices, and reproduce specified energy and structure comparisons. The online guide helps you choose a module and prepare a command; calculations run in your local Runtime.
 
+## Agent Skills
+
+[Browse 15 calculation and review Skills](skills/README.md) · [Install and invoke](skills/USAGE.md) · [Local tests and limitations](skills/TESTING.md).
+
+Use an Agent with your existing backend to prepare inputs, analyze tables/matrices, review energy and structural records, or navigate registered Runtime services. Skills are instruction-only and can be installed individually; they do not include a chemistry engine or expand Runtime's accepted computational scope. This post-v0.1.0 source addition is obtained from the branch/commit containing `skills/`, not the immutable v0.1.0 assets or guide ZIP.
+
 ## Calculate your own molecule
 
 | Module | Input | Results and supported scope |
@@ -172,7 +178,7 @@ Third-party notice materials and outstanding corresponding-source requirements: 
 
 Source publication and image distribution are assessed separately: [publication boundaries and local candidate](docs/en/PUBLICATION_BOUNDARIES.md). Source and guide synchronization is complete; native wheel provenance remains unresolved and no image has been distributed.
 
-Professional review documentation (English summaries; Chinese originals retained): [S1–S6 services and task mapping](docs/en/HISTORICAL_RECORDS.md#professional-services), [result interpretation](docs/en/REVIEW_RESULTS.md), [three user paths](docs/en/CURRENT_USER_PATHS.md), and [historical Docker example](docs/en/HISTORICAL_RECORDS.md#p14-review-20261002). The [review report](docs/en/P14_REVIEW_TEMPLATE.md) and [feedback](docs/en/FEEDBACK_TEMPLATE.md) templates are filled manually. An automatic summarizer is not implemented; the legacy seven-task entry remains, with three separate fixed P02/P13/P01 entries added on 2026-10-08. The original `2460eef` candidate and this documentation supplement retain their distinct historical identities; both are included in the complete history authorized for the current source synchronization. Eleven YouMind Skill exports are deferred by the user and are not included as implemented Skills.
+Professional review documentation (English summaries; Chinese originals retained): [S1–S6 services and task mapping](docs/en/HISTORICAL_RECORDS.md#professional-services), [result interpretation](docs/en/REVIEW_RESULTS.md), [three user paths](docs/en/CURRENT_USER_PATHS.md), and [historical Docker example](docs/en/HISTORICAL_RECORDS.md#p14-review-20261002). The [review report](docs/en/P14_REVIEW_TEMPLATE.md) and [feedback](docs/en/FEEDBACK_TEMPLATE.md) templates are filled manually. An automatic summarizer is not implemented; the legacy seven-task entry remains, with three separate fixed P02/P13/P01 entries added on 2026-10-08. The original `2460eef` candidate and this documentation supplement retain their distinct historical identities; both are included in the complete history authorized for the current source synchronization. That earlier export deferral is historical. The current source now includes [15 instruction Skills](skills/README.md), with separate local test scope; engines are not bundled.
 
 
 </details>

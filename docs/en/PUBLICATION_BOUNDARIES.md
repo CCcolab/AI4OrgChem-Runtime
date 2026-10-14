@@ -8,6 +8,12 @@ Public files include Runtime-owned code, source/dependency locks, user documenta
 
 Git clone supplies source/history. The dedicated installation ZIP adds Git-object proofs, not a complete installed environment. Source publication does not imply public images or acceptance of every registered state/arbitrary molecule. v0.1.0 source/guide Release and tag have explicit owner authorization; that authorization excludes images. See [release scope](RELEASE_v0.1.0.md).
 
+## Skill source supplement
+
+The added public scope is 15 instruction folders and portable guides under skills/, their manifest, and a derived local-test summary under validation/skills. Personal YouMind originals, maintainer-specific directories, full test workers/logs/arrays and failure archives remain local. Eleven instructions adapt the owner's personal Skills; four extend local workflows. Authorship and owned-instruction licensing are recorded in AUTHORS/NOTICE/LICENSE. The summaries do not independently reproduce every test or establish new CI/scientific acceptance. A single platform-display editorial cleanup has separately recorded pre-test/current hashes.
+
+This post-v0.1.0 supplement does not change the old tag, Release assets, images or static-guide ZIP. Future formal packaging has a separate scope.
+
 ## Engineering and science
 
 Current public CI has two engineering jobs; see [test distribution](TEST_DISTRIBUTION.md) and actual run-linked records in the repository. Historical three/four-job runs keep their original commit/scope. Pipelines build/test and may upload bounded evidence; they do not push images, tag versions or publish Releases. Manual authorized release publication is separate.

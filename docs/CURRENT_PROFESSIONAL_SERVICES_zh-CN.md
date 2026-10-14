@@ -4,6 +4,10 @@
 
 项目的目的，是让专业用户在明确的方法、输入和资源范围内运行计算，并核对代码、输入、结果和解释之间的联系。普通分子入口与固定案例承担不同用途：普通 RHF 接受用户 XYZ；其余案例重放登记对象和协议，不接受任意换分子。原项目的独立实现、Runtime 协议重放、共享 PySCF 库的包装对照分别报告。
 
+## Agent使用层
+
+[15个Skill模块](../skills/README_zh-CN.md)提供准备、分析与复核指导。独立分析可用用户已有环境；本表仍描述实际Runtime计算服务。Skill的通用方案不等于新增生产入口，所列输入、协议、来源、资源和资格保持不变。测试摘要见[限定范围](../skills/TESTING_zh-CN.md)。
+
 ## 来源与实际身份
 
 四家源码安装服务的科学来源为冻结提交 [`28511f3d`](https://github.com/CCcolab/AI4OrgChem/tree/28511f3d84fa65707a107cde1e8121a7b4334ecb) 的 [588 份基线锁](../locks/source-files.sha256.json)，加上 [3 份已捕获适配文件](../assets/science-install-overlay/cc743790)；合计 591 份由 [安装来源锁](../locks/source.installation.lock.json)核对。参考原项目 `02ea458` 是评审上下文，不替换冻结基线。P03—P12 的驱动和工作树来源另按各模块来源锁披露，不能全部标成冻结提交。详见 [安装来源](SCIENCE_INSTALL_SOURCE_20261009_zh-CN.md)。独立 P14 七任务使用冻结588份基线的提交归档，不合并这3份安装适配文件；其来源、构建和运行另按 [P14独立合同](CURRENT_P14_BUILD_RUN_zh-CN.md)及能力表中的 P14.source 核对。

@@ -22,6 +22,12 @@ This acknowledges Codex's actual work; it does not attribute those commits to th
 
 本节明确记录 Codex 已参与并合入项目的工作。GitHub 右侧 Contributors 按账号关联的提交自动统计，本节署名与该统计分别呈现；科学源码原有署名、人工解释与发布责任继续保留。
 
+## Skills / 技能指令
+
+Xiao Chen supplied the first eleven personal chemistry Skills created on YouMind. OpenAI Codex adapted their instructions for use outside that platform, prepared usage guides and ran scoped local workflows under the maintainer's direction. Four additional instruction Skills cover fixed-protocol energy review, constrained optimization, multistate/size comparisons and Runtime usage. YouMind is the original authoring platform, not a bundled calculation engine or an independent scientific reviewer. See [the catalog](skills/README.md) and [test scope](skills/TESTING.md).
+
+前11份个人指令来自维护者在YouMind创建的Skill；Codex完成平台外适配、文档与限定测试，另补4份流程指令。原始汇编和完整本地证据保留归档，公开目录只含明确范围的指令与材料，不将平台或AI协助署名当成科学认证。
+
 ## Git commit attribution / Git 提交身份
 
 GitHub's Contributors sidebar is derived from account-associated commits on the default branch. Historical Runtime commits through `a4a39a4` retain `Codex (AI4OrgChem local)` / `ai4orgchem@localhost`; these unlinked local identities remain part of the public provenance and are not rewritten.

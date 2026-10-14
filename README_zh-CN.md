@@ -14,6 +14,12 @@ AI4OrgChem Runtime 帮助你在自己的电脑上进行分子计算，并复核�
 
 我们的目标是降低单点能量计算、轨道与密度矩阵分析，以及指定能量和结构对照的使用门槛。在线指南帮助你选择模块和准备命令；实际计算在你的本地 Runtime 中执行。
 
+## Agent Skill 技能模块
+
+[查看15个计算与复核Skill](skills/README_zh-CN.md) · [安装与调用](skills/USAGE_zh-CN.md) · [测试范围](skills/TESTING_zh-CN.md)。
+
+可让Agent结合已有后端准备输入、分析表格/矩阵、复核能量与结构结果，或选择实际Runtime服务。按需安装单项即可，Skill不自带计算引擎，也不扩大Runtime已有计算验收范围。该模块是v0.1.0之后的源码增补，应取得包含skills/的分支或提交；旧v0.1.0附件和网页指南ZIP不包含本次新增文件。
+
 ## 计算自己的分子
 
 | 计算模块 | 输入 | 输出与支持范围 |
@@ -177,7 +183,7 @@ Runtime源码和指南现已公开同步，本轮以提交身份记录候选，�
 
 不纳入 GPU 训练、在线 Agent 服务、新命题、P09/P10 完整重优化、任意用户分子条件态或原著全文。第二批另提供固定协议的 P09 诊断与 P10 普通 DFT 扫描，范围见下方指南。运行任务不临时安装软件、更新源码或调用大模型 API。项目不新增科学判定，也不构成科学认证。
 
-专业复核阅读层见 [S1—S6 模块对应与服务卡片](docs/PROFESSIONAL_SERVICES_zh-CN.public.md)、[结果判读](docs/REVIEW_RESULTS_zh-CN.public.md)、[三类用户路径](docs/CURRENT_USER_PATHS_zh-CN.md)及[已有 Docker 记录示例](docs/examples/P14_REVIEW_20261002_zh-CN.public.md)。[复核报告](docs/templates/REVIEW_REPORT_zh-CN.public.md)与[反馈模板](docs/templates/FEEDBACK_zh-CN.public.md)供手工填写；自动汇总工具未实现，旧七任务入口保留；2026-10-08另增加三个固定P02/P13/P01入口，见上方指南。该文档增补与 `2460eef` 此前候选保留不同历史身份；两者现已纳入用户授权公开的完整历史。十一份YouMind Skill导出由用户延后，不作为已实现Skill交付。
+专业复核阅读层见 [S1—S6 模块对应与服务卡片](docs/PROFESSIONAL_SERVICES_zh-CN.public.md)、[结果判读](docs/REVIEW_RESULTS_zh-CN.public.md)、[三类用户路径](docs/CURRENT_USER_PATHS_zh-CN.md)及[已有 Docker 记录示例](docs/examples/P14_REVIEW_20261002_zh-CN.public.md)。[复核报告](docs/templates/REVIEW_REPORT_zh-CN.public.md)与[反馈模板](docs/templates/FEEDBACK_zh-CN.public.md)供手工填写；自动汇总工具未实现，旧七任务入口保留；2026-10-08另增加三个固定P02/P13/P01入口，见上方指南。该文档增补与 `2460eef` 此前候选保留不同历史身份；两者现已纳入用户授权公开的完整历史。此前延后导出的记录属于历史；当前源码已增加[15份Skill指令](skills/README_zh-CN.md)，测试范围单独登记，不携带执行引擎。
 
 获授权的首次推送已触发现有 GitHub Actions CI：[run 37933616122](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/37933616122)三个限定job均成功，执行构建／轻量测试并上传运行证据附件，保留七天；日志和附件已纳入用户授权公开范围。CI不推送镜像、不打正式标签、不发布Release。本次运行不替代历史科学验收，不执行高成本科学重放；本地工程CI旧记录继续单独保留。
 

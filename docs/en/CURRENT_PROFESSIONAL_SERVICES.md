@@ -4,6 +4,10 @@
 
 This English service matrix follows the Chinese matrix dated 2026-10-10, whose stated review baseline is `be51dcb`. The [capability registry](../../configs/runtime-capabilities-v2.json) supplies machine identities and acceptance references. A capability declaration is navigation, not run authorization. Source, image and input identities remain specific to each accepted run.
 
+## Agent guidance layer
+
+[15 instruction Skills](../../skills/README.md) help prepare, analyze and review tasks with an existing environment. This matrix still describes actual Runtime services. A generic Skill proposal is not a new production entry, and input/protocol/source/resource/qualification contracts remain unchanged. See [local Skill test scope](../../skills/TESTING.md).
+
 ## Source and interpretation
 
 The four installation families use the [588-file frozen baseline](../../locks/source-files.sha256.json) at `28511f3d84fa65707a107cde1e8121a7b4334ecb`, plus [three captured adapters](../../assets/science-install-overlay/cc743790), checked by [the installation source lock](../../locks/source.installation.lock.json): 591 files in total. The original project `02ea458` is review context, not a replacement baseline. Module drivers and captured working-tree context have their own disclosed source identities. P14 independently uses the 588-file archive without these installation adapters.

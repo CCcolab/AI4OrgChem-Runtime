@@ -41,3 +41,7 @@ validation/public-projections-*.json -text whitespace=cr-at-eol
 validation/platform-withdrawal-*.json -text whitespace=cr-at-eol
 configs/protocol-cases-v1.json -text
 scripts/prepare-high-cost-cases.py -text
+# Distributed Skill instruction bytes and their identity declarations are exact.
+skills/**/SKILL.md -text whitespace=cr-at-eol
+skills/manifest.json -text whitespace=cr-at-eol
+validation/skills/test-summary.json -text whitespace=cr-at-eol

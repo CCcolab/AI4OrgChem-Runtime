@@ -2,6 +2,8 @@
 
 # Install a local Runtime from source
 
+**For Agent Skills alone, start with [Skill installation](../../skills/USAGE.md); you do not need to build the entire Runtime just to load instructions.** Use this page when selecting actual Runtime services. Skills do not extend accepted service scope or provide an engine.
+
 ## What is installed, and what is needed only once?
 
 This is the unified Runtime source/shared Docker environment installation guide, not a standalone installer per calculation module. Source still needs dependency preparation and a local image build; the dedicated source ZIP does not contain a complete installed environment and the guide ZIP is reading material. Prepare/build establishes this environment or a separate new one; it is not repeated before every calculation.

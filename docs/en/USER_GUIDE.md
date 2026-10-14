@@ -10,6 +10,8 @@ AI4OrgChem Runtime helps you run scoped local molecular calculations and review 
 2. Choose [your own XYZ](CURRENT_MOLECULAR_SINGLE_POINT.md) or a registered research module from the table below. Use the same service installation record for all its commands.
 3. Keep a new complete run directory. Read the module-specific checks and [result interpretation](REVIEW_RESULTS.md), then use the [review template](CURRENT_SERVICE_REVIEW.md) where needed. Execution success and scientific interpretation are separate.
 
+For Agent-assisted preparation and saved-data analysis, see the separate [Skills catalog](../../skills/README.md) and [installation steps](../../skills/USAGE.md). Loading a Skill does not require starting Docker or grant a new scientific service.
+
 | Your goal | English guide |
 | --- | --- |
 | RHF single-point energy, orbitals and AO density for your molecule | [Small-system molecular service](CURRENT_MOLECULAR_SINGLE_POINT.md) |
