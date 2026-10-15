@@ -38,8 +38,8 @@ def targets(root=ROOT):
         body = ('当前服务的输入、方法、实际验收、成本及解释范围见[专业服务矩阵](docs/CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)，'
                 '机器可读声明见[当前能力表](configs/runtime-capabilities-v2.json)。'
                 if zh else 'See the [current professional service matrix](docs/en/CURRENT_PROFESSIONAL_SERVICES.md) for inputs, methods, recorded acceptance, cost and interpretation; the [current capability registry](configs/runtime-capabilities-v2.json) is the machine-readable declaration.')
-        scope = (f"最近已保存 [{ci['commit'][:8]} 的 {ci['successful_jobs']} 个 CI job 成功]({ci['url']})；仅覆盖该提交的工程合同和旧入口 L0/L1；本轮新增回归的远端 CI 未执行，不认证全部科学服务。15 个 Skill 是 v0.1.0 之后的源码增补，旧 Release 资产和指南 ZIP 不自动包含。"
-                 if zh else f"Latest saved CI: [{ci['successful_jobs']} jobs succeeded for {ci['commit'][:8]}]({ci['url']}); this covers that commit’s engineering contracts and legacy L0/L1. Remote CI for this increment is NOT_EXECUTED. The 15 Skills are a post-v0.1.0 source supplement; old Release assets and guide ZIP do not automatically include them.")
+        scope = (f"已记录的工程验证基线：[{ci['commit'][:8]} 的 {ci['successful_jobs']} 个 CI job 成功]({ci['url']})。{ci['scope_zh']} [CI 回执与交付范围](docs/DELIVERY_SYNC_20261015_zh-CN.md)。15 个 Skill 是 v0.1.0 之后的源码增补，旧 Release 资产和指南 ZIP 不自动包含。"
+                 if zh else f"Recorded engineering baseline: [{ci['successful_jobs']} jobs succeeded for {ci['commit'][:8]}]({ci['url']}). {ci['scope']} See the [CI receipt and delivery scope](docs/en/DELIVERY_SYNC_20261015.md). The 15 Skills are a post-v0.1.0 source supplement; old Release assets and guide ZIP do not automatically include them.")
         block = START+'\n'+body+'\n\n'+scope+'\n'+END
         anchor = '## 使用与环境准备' if zh else '## Usage and environment setup'
         # Keep the generated note above the existing technical disclosure.
@@ -70,7 +70,8 @@ def targets(root=ROOT):
              '<p>按研究问题选择模块；具体输入、结果字段、成本及允许解释见'
              '<a href="https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/CURRENT_PROFESSIONAL_SERVICES_zh-CN.md" target="_blank" rel="noopener noreferrer">当前专业服务矩阵</a>。'
              '本表引用统一能力登记，不授予计算权限，也不将历史验收转移到新安装。</p>'
-             f'<p><a href="{html.escape(ci["url"])}" target="_blank" rel="noopener noreferrer">提交 {ci["commit"][:8]} 的 {ci["successful_jobs"]} 个 CI job 成功</a>，范围是该提交的工程合同与旧入口 L0/L1。本轮远端 CI 未执行。15 个 Skill 属于发布后的源码增补，旧 Release 资产与指南 ZIP 不自动包含。</p>'
+             f'<p><a href="{html.escape(ci["url"])}" target="_blank" rel="noopener noreferrer">已记录工程基线 {ci["commit"][:8]} 的 {ci["successful_jobs"]} 个 CI job 成功</a>。{html.escape(ci["scope_zh"])} '
+             +link('docs/DELIVERY_SYNC_20261015_zh-CN.md','CI 回执与交付范围')+'。15 个 Skill 属于发布后的源码增补，旧 Release 资产与指南 ZIP 不自动包含。</p>'
              '<div class="table-scroll"><table><thead><tr><th>服务</th><th>输入与方法范围</th><th>已有数值验收</th><th>输入、协议、结果与入口</th></tr></thead><tbody>'+rows+'</tbody></table></div>'
              '<p><a href="https://cccolab.github.io/AI4OrgChem-Runtime/runtime-guide/capabilities-v2.json" target="_blank" rel="noopener noreferrer">下载同源能力表 JSON</a>；'
              '<a href="https://github.com/CCcolab/AI4OrgChem-Runtime/tree/main/evidence/numerical-witnesses" target="_blank" rel="noopener noreferrer">最小数值见证与只读复核</a>。'
@@ -89,8 +90,9 @@ def targets(root=ROOT):
     if english.exists():
         text = english.read_text(encoding='utf-8')
         block = (START+'<section class="note" id="current-service-registry"><h2>Version and verification records</h2>'
-                 f'<p>Latest saved engineering CI: <a href="{html.escape(ci["url"])}">{ci["successful_jobs"]} jobs at {ci["commit"][:8]}</a>. '
-                 'This covers installation engineering and legacy L0/L1 at that commit. Remote CI for this local increment is NOT_EXECUTED.</p>'
+                 f'<p>Recorded engineering CI baseline: <a href="{html.escape(ci["url"])}">{ci["successful_jobs"]} jobs at {ci["commit"][:8]}</a>. '
+                 f'{html.escape(ci["scope"])} '
+                 '<a href="https://github.com/CCcolab/AI4OrgChem-Runtime/blob/main/docs/en/DELIVERY_SYNC_20261015.md">CI receipt and delivery scope</a>.</p>'
                  '<p><a href="https://github.com/CCcolab/AI4OrgChem-Runtime/tree/main/skills">15 instruction Skills</a> were added after v0.1.0. '
                  'The original Release assets and guide ZIP do not automatically contain them. '
                  'P11/P12 have 78 registered units with two accepted historical pilots; user conditional Compute remains closed.</p>'

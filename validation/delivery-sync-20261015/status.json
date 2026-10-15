@@ -1,0 +1,37 @@
+{
+  "schema": "delivery-ci-follow-up-v1",
+  "date": "2026-10-15",
+  "kind": "CURRENT_FOLLOW_UP_TO_PRESERVED_HISTORICAL_RECEIPTS",
+  "runtime_tested_commit": "09cbab553d5920157a14b97fac1c5ea9059c28a1",
+  "remote_ci_receipt": "remote-ci-09cbab5.json",
+  "remote_ci": "PASS_SCOPED_RECORDED_COMMIT",
+  "historical_status_records": [
+    "validation/review-20261015/status.json",
+    "validation/review-corrections-20261015/status.json"
+  ],
+  "independent_correction_review": {
+    "R01": "CLOSED_USER_REPORTED_INDEPENDENT_REVIEW",
+    "R02": "CLOSED_USER_REPORTED_INDEPENDENT_REVIEW",
+    "evidence_source": "Direct user message; external ZIP not provided locally; not represented as our independent execution"
+  },
+  "fresh_installation": {
+    "linux_ci_engineering": "PASS_AT_09cbab5_ZERO_SCIENCE",
+    "windows_plus_new_water_rhf": "DEFERRED_BY_USER_NOT_EXECUTED"
+  },
+  "independent_agent_behavior": "DEFERRED_BY_USER_NOT_EXECUTED",
+  "science_documentation_commit": "9091389a2adb147dbae98602e332a9accdde4a57",
+  "science_documentation_diff": {
+    "documents": 4,
+    "generated_manifests": 2,
+    "scientific_code_or_saved_results_changed": false
+  },
+  "existing_qualifications": {
+    "user_conditional_compute": "BLOCKED",
+    "p11_p12_registered_units": 78,
+    "p11_p12_accepted_pilots": 2,
+    "wavefunction_stability": "NOT_EXECUTED",
+    "l4_resume_supported": false,
+    "public_prebuilt_image": "BLOCKED"
+  },
+  "publication": "Source main synchronization only; no new tag, Release, image distribution or scientific acceptance"
+}

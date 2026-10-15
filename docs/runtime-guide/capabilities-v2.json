@@ -38,16 +38,29 @@
   },
   "ci": {
     "status": "SUCCESS_RECORDED_COMMIT_ONLY",
-    "commit": "2f9e7f75d9a984429d3b836dcbc50e0dfea3c489",
-    "run_id": 38554057542,
-    "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38554057542",
-    "successful_jobs": 2,
+    "commit": "09cbab553d5920157a14b97fac1c5ea9059c28a1",
+    "run_id": 38692149789,
+    "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38692149789",
+    "successful_jobs": 3,
     "job_names": [
       "linux",
+      "public-review-regression",
       "public-installation-engineering"
     ],
-    "scope": "Recorded installation engineering and legacy L0/L1; excludes Skill execution, new orbital review and later local changes.",
+    "scope": "At the recorded commit only: 96 deterministic program checks, saved-array review, a fresh Linux CI source installation with zero-science file/I-O probes, and legacy L0/L1. This is not independent Agent evaluation, Windows installation acceptance or new molecular acceptance.",
     "historical_records": [
+      {
+        "status": "SUCCESS_RECORDED_COMMIT_ONLY",
+        "commit": "2f9e7f75d9a984429d3b836dcbc50e0dfea3c489",
+        "run_id": 38554057542,
+        "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38554057542",
+        "successful_jobs": 2,
+        "job_names": [
+          "linux",
+          "public-installation-engineering"
+        ],
+        "scope": "Recorded installation engineering and legacy L0/L1; excludes Skill execution, new orbital review and later local changes."
+      },
       {
         "status": "SUCCESS_RECORDED_COMMIT_ONLY",
         "commit": "be51dcbbd2e9ef519c55f9598faf18c567f76184",
@@ -65,11 +78,20 @@
         "scope": "Existing engineering contracts and legacy L0/L1 jobs only; not all scientific services; does not certify later edits"
       }
     ],
-    "local_increment_remote_ci": "NOT_EXECUTED",
+    "local_increment_remote_ci": "SUCCESS_RECORDED_COMMIT_ONLY",
     "public_regression_job": {
       "name": "public-review-regression",
-      "remote_status": "NOT_EXECUTED",
-      "scientific_calls_allowed": false
+      "remote_status": "SUCCESS_RECORDED_COMMIT_ONLY",
+      "scientific_calls_allowed": false,
+      "run_id": 38692149789
+    },
+    "scope_zh": "仅覆盖所列提交：96 项确定性程序回归、保存数组复核、Linux CI 新建源码安装与零科学调用文件/IO 探针，以及旧入口 L0/L1；不等于独立 Agent、Windows 新安装或新增分子计算验收。",
+    "receipt": "validation/delivery-sync-20261015/remote-ci-09cbab5.json",
+    "installation_scope": {
+      "linux_ci_engineering": "PASS_AT_RECORDED_COMMIT",
+      "windows_user_installation": "DEFERRED_BY_USER_NOT_EXECUTED",
+      "new_rhf_end_to_end": "DEFERRED_BY_USER_NOT_EXECUTED",
+      "scientific_acceptance_inherited": false
     }
   },
   "platform": {
@@ -1424,10 +1446,13 @@
     "date": "2026-10-15",
     "scope": "HOST_ONLY_DOCUMENTATION_AND_SYNTHETIC_SAVED_ARRAY_REGRESSION",
     "local_validation": "SEE_LINKED_INCREMENT_STATUS_RECORD",
-    "remote_ci": "NOT_EXECUTED",
+    "remote_ci": "SUCCESS_RECORDED_COMMIT_ONLY",
     "new_scf_integral_optimization_calls": 0,
     "historical_scientific_acceptance_transferred": false,
     "status_record": "validation/review-20261015/status.json",
-    "corrections_status_record": "validation/review-corrections-20261015/status.json"
+    "corrections_status_record": "validation/review-corrections-20261015/status.json",
+    "remote_ci_record": "validation/delivery-sync-20261015/remote-ci-09cbab5.json",
+    "current_follow_up_record": "validation/delivery-sync-20261015/status.json",
+    "historical_status_records_preserved": true
   }
 }

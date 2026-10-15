@@ -1,0 +1,157 @@
+{
+  "schema": "remote-ci-acceptance-record-v1",
+  "status": "PASS_SCOPED_REMOTE_CI",
+  "date": "2026-10-15",
+  "run_id": 38692149789,
+  "run_attempt": 1,
+  "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38692149789",
+  "commit": "09cbab553d5920157a14b97fac1c5ea9059c28a1",
+  "branch": "ci/review-corrections-20261015",
+  "event": "push",
+  "github_conclusion": "success",
+  "elapsed_seconds": 70.0,
+  "jobs": [
+    {
+      "name": "public-installation-engineering",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38692149789/job/116280295320"
+    },
+    {
+      "name": "linux",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38692149789/job/116280295566"
+    },
+    {
+      "name": "public-review-regression",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38692149789/job/116280295699"
+    }
+  ],
+  "regression": {
+    "status": "PASS",
+    "executed": 96,
+    "skipped": 0,
+    "tested_source_git_hashes_checked": 20,
+    "skill_instruction_git_hashes_checked": 15,
+    "environment": {
+      "python": "3.12.3",
+      "numpy": "2.5.1",
+      "rdkit": "2026.03.4"
+    },
+    "not_agent_behavior_evaluation": true
+  },
+  "legacy": {
+    "L0_evidence_validators": 4,
+    "L1_core_tests": 11,
+    "runs": [
+      {
+        "task": "evidence",
+        "status": "PASS",
+        "image_id": "sha256:defc53965da6a86bd8ebcae4d2e016cd0bc3bc8fea9fe6f3877c6fd2b0203353",
+        "run_id": "20261015T062425Z-evidence-3406ce4030e5",
+        "numerical_qualification": "NOT_APPLICABLE"
+      },
+      {
+        "task": "core-tests",
+        "status": "PASS",
+        "image_id": "sha256:defc53965da6a86bd8ebcae4d2e016cd0bc3bc8fea9fe6f3877c6fd2b0203353",
+        "run_id": "20261015T062427Z-core-tests-6154db62b4f0",
+        "numerical_qualification": "NOT_APPLICABLE"
+      }
+    ],
+    "platform_probe": "PASS",
+    "frozen_source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+    "not_new_molecular_acceptance": true
+  },
+  "installation": {
+    "status": "PASS_ENGINEERING",
+    "scope": "ACTUAL_FRESH_GITHUB_UBUNTU_LINUX_AMD64_SOURCE_INSTALLATION_AND_FILE_IO",
+    "built_image": {
+      "base_image_id": "sha256:c1f52987eab38463b462793a3e872381d49d164889c877c5c239ce04783ff234",
+      "image_distribution": "BLOCKED",
+      "image_id": "sha256:4b62111581713328e67030bb232bebd59fda1c4f36f5cbb5f693c52f5332fd73",
+      "local_tag": "ai4orgchem-runtime:source-installation-09cbab553d59-49bc4e8f",
+      "runtime_build_commit": "09cbab553d5920157a14b97fac1c5ea9059c28a1",
+      "schema": "runtime-source-built-image-v1",
+      "scientific_acceptance": "NOT_INHERITED"
+    },
+    "services": {
+      "high-cost-cases": {
+        "file_count": 100,
+        "status": "PASS_SOURCE_BINDING_ZERO_SCIENCE",
+        "unchanged_rows": 93
+      },
+      "molecular-service": {
+        "file_count": 20,
+        "status": "PASS_SOURCE_BINDING_ZERO_SCIENCE",
+        "unchanged_rows": 17
+      },
+      "protocol-cases": {
+        "file_count": 113,
+        "status": "PASS_SOURCE_BINDING_ZERO_SCIENCE",
+        "unchanged_rows": 108
+      },
+      "registered-cases": {
+        "file_count": 37,
+        "status": "PASS_SOURCE_BINDING_ZERO_SCIENCE",
+        "unchanged_rows": 34
+      }
+    },
+    "checks": [
+      "public_pinned_source_prepare",
+      "git_proven_context",
+      "local_only_build",
+      "four_registered_service_identities",
+      "four_actual_host_source_bindings",
+      "uid10001",
+      "source_readonly",
+      "network_none",
+      "linux_permission_negative_and_positive",
+      "nonzero_process_exit",
+      "owned_container_removal",
+      "output_after_removal"
+    ],
+    "current_log_hashes_checked": 80,
+    "reconstructed_historical_context_logs": 2,
+    "scientific_calls": 0,
+    "scientific_acceptance": "NOT_INHERITED",
+    "windows_user_installation": "NOT_EXECUTED",
+    "new_rhf_execution": "NOT_EXECUTED"
+  },
+  "saved_arrays": {
+    "witness_audit": "PASS_READ_ONLY_NUMPY_AUDIT",
+    "water_mo": "PASS_SAVED_ARRAYS_ONLY",
+    "conditional_endpoint": "REJECTED",
+    "stability": "NOT_EXECUTED"
+  },
+  "artifacts": {
+    "count": 3,
+    "github_zip_digests_verified": 3,
+    "all_crc": "PASS",
+    "all_current_ci_evidence_downloaded": true,
+    "original_raw_zips_retained": true
+  },
+  "preservation": {
+    "runtime_protected_files_unchanged": 175,
+    "skill_instructions_unchanged": 15,
+    "prior_receipts_unchanged": true,
+    "original_science_workspace_unchanged": true,
+    "local_runtime_worktree_clean": true
+  },
+  "changes": {
+    "dedicated_branch_pushed": true,
+    "main_modified": false,
+    "source_code_modified_for_ci": false,
+    "local_docker_or_wsl_started": false,
+    "registry_push_tag_release": false
+  },
+  "remaining": {
+    "new_ordinary_rhf_end_to_end": "NOT_EXECUTED",
+    "independent_agent_behavior": "NOT_EXECUTED",
+    "fresh_installation": "LINUX_CI_ENGINEERING_SCOPE_PASSED; WINDOWS_OR_FULL_USER_CALCULATION_PATH_NOT_EXECUTED",
+    "user_conditional_compute": "BLOCKED"
+  }
+}

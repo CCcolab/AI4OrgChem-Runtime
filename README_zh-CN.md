@@ -64,7 +64,7 @@ AI4OrgChem Runtime 帮助你在自己的电脑上进行分子计算，并复核�
 <!-- CURRENT_CAPABILITIES_START -->
 当前服务的输入、方法、实际验收、成本及解释范围见[专业服务矩阵](docs/CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)，机器可读声明见[当前能力表](configs/runtime-capabilities-v2.json)。
 
-最近已保存 [2f9e7f75 的 2 个 CI job 成功](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38554057542)；仅覆盖该提交的工程合同和旧入口 L0/L1；本轮新增回归的远端 CI 未执行，不认证全部科学服务。15 个 Skill 是 v0.1.0 之后的源码增补，旧 Release 资产和指南 ZIP 不自动包含。
+已记录的工程验证基线：[09cbab55 的 3 个 CI job 成功](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38692149789)。仅覆盖所列提交：96 项确定性程序回归、保存数组复核、Linux CI 新建源码安装与零科学调用文件/IO 探针，以及旧入口 L0/L1；不等于独立 Agent、Windows 新安装或新增分子计算验收。 [CI 回执与交付范围](docs/DELIVERY_SYNC_20261015_zh-CN.md)。15 个 Skill 是 v0.1.0 之后的源码增补，旧 Release 资产和指南 ZIP 不自动包含。
 <!-- CURRENT_CAPABILITIES_END -->
 
 开发测试文件保留在本地，不随当前公开仓库或安装包分发。当前 CI 保留公开源码安装、容器权限与退出码、输出保留及旧入口 L0/L1 验证；Runtime 单元测试不再在公开 CI 中执行。此前测试通过记录保留其原提交与范围，详见[测试分发范围](docs/TEST_DISTRIBUTION_zh-CN.md)。
