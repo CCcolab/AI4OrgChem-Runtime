@@ -1,0 +1,285 @@
+{
+  "schema": "conditional-protocol-qualification-notes-v1",
+  "date": "2026-10-15",
+  "kind": "READ_ONLY_SOURCE_AND_RECORD_REVIEW_NOT_NEW_SCIENTIFIC_QUALIFICATION",
+  "protocols": [
+    {
+      "id": "P04",
+      "energy_definition": "E(FUD)-E(DSI3) = direct term + orbital response",
+      "operator_rules": "Frozen state/projector partitions and reference/reporting bases from the P04 source driver; not replaced with P09 h/S/F/ERI rules.",
+      "electron_count_metrics": "State-specific original/reporting and conditional metrics must retain their labels; missing AO/grid diagnostics remain missing.",
+      "allowed_variations_and_gaps": "Fixed registered geometry; source-specific occupied/projector iteration. A complete independently checked allowed tangent space and energy-derivative proof is not supplied by the public live acceptance.",
+      "source_bindings": [
+        {
+          "path": "runtime/protocol_cases/p03_p06.py",
+          "sha256": "0c468c7ae84c78f5747d13abbee765771b049bcac51dd564e55b861cd0daecae",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        },
+        {
+          "path": "reference/protocol_cases/source_tree/scripts/run_target_c_source_native_reporting_basis_direct_response.py",
+          "sha256": "fa0f6fe260fc7aa06be9d8e29d2da383d6ff1244e8b320d9b1b8747ecdd84298",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        }
+      ],
+      "historical_qualification": "Historical scoped ledger and one live point accepted; no general stationarity/stability certification.",
+      "this_review_fixed_point": "NOT_REEXECUTED",
+      "this_review_tangent_stationarity": "NOT_EXECUTED",
+      "this_review_second_order_stability": "NOT_EXECUTED",
+      "new_scientific_calls": 0,
+      "claim": "Protocol-defined operational comparison only; no automatic physical bond energy, causal or variational qualification."
+    },
+    {
+      "id": "P05",
+      "energy_definition": "E(G)-E(FUD) = direct term + orbital response",
+      "operator_rules": "Frozen grouped state/projector operators and source continuation; distinct from the P09 fifteen-class definition.",
+      "electron_count_metrics": "Keep each state metric and occupied mapping explicit; no grid electron count is inferred from a report.",
+      "allowed_variations_and_gaps": "Fixed 17-degree live point and closed-shell occupied roots; no new geometry variation or general tangent qualification.",
+      "source_bindings": [
+        {
+          "path": "runtime/protocol_cases/p03_p06.py",
+          "sha256": "0c468c7ae84c78f5747d13abbee765771b049bcac51dd564e55b861cd0daecae",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        },
+        {
+          "path": "reference/protocol_cases/source_tree/experiments/validation/source_optimized_table_5_15_pi_sigma_nba_gate0.py",
+          "sha256": "ffe41c910ccd4a17e2b8d6095fc61bf9d591b9fc5f7562d181fa955709f0e9a3",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        }
+      ],
+      "historical_qualification": "Saved seven-angle ledger and one repaired live point; original failure retained.",
+      "this_review_fixed_point": "NOT_REEXECUTED",
+      "this_review_tangent_stationarity": "NOT_EXECUTED",
+      "this_review_second_order_stability": "NOT_EXECUTED",
+      "new_scientific_calls": 0,
+      "claim": "Protocol-defined operational comparison only; no automatic physical bond energy, causal or variational qualification."
+    },
+    {
+      "id": "P06",
+      "energy_definition": "E(PDSI)-E(FUL), with source energy assembly terms",
+      "operator_rules": "Frozen FUL/PDSI fragment partitions and occupied roots in the original implementation; do not substitute another conditional kernel.",
+      "electron_count_metrics": "State-specific metrics; do not equate atom population, metric trace and grid integration.",
+      "allowed_variations_and_gaps": "Fixed registered 0-degree point; saved 0/17-degree ledger. Allowed orbital changes follow the frozen occupied-root definition; no new tangent or stability proof.",
+      "source_bindings": [
+        {
+          "path": "runtime/protocol_cases/p03_p06.py",
+          "sha256": "0c468c7ae84c78f5747d13abbee765771b049bcac51dd564e55b861cd0daecae",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        },
+        {
+          "path": "reference/protocol_cases/source_tree/experiments/validation/source_table_5_19_independent_assembly_gate0.py",
+          "sha256": "b9995a238d1900870fbc824b528136e57f95e9c0c8434dd7f15d7ee258a9ea84",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        }
+      ],
+      "historical_qualification": "Scoped fixed-point/assembly checks only; not an observable steric energy.",
+      "this_review_fixed_point": "NOT_REEXECUTED",
+      "this_review_tangent_stationarity": "NOT_EXECUTED",
+      "this_review_second_order_stability": "NOT_EXECUTED",
+      "new_scientific_calls": 0,
+      "claim": "Protocol-defined operational comparison only; no automatic physical bond energy, causal or variational qualification."
+    },
+    {
+      "id": "P07",
+      "energy_definition": "Same-Hamiltonian five-state path sum including explicit bridge",
+      "operator_rules": "No new operator or SCF is applied by ledger review; compatible state definitions and bridge signs are required.",
+      "electron_count_metrics": "Use metrics from the originating states; the scalar ledger cannot reconstruct density qualification.",
+      "allowed_variations_and_gaps": "Arithmetic only. No orbital or geometry variation is executed by this service.",
+      "source_bindings": [
+        {
+          "path": "runtime/protocol_cases/p07_p08.py",
+          "sha256": "3af0d50f17a3202205d607d328467322b99385d8c3e5ce7f87b4b2705c1cd4b5",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        }
+      ],
+      "historical_qualification": "Ledger-only arithmetic acceptance, not a mechanism or stability test.",
+      "this_review_fixed_point": "NOT_REEXECUTED",
+      "this_review_tangent_stationarity": "NOT_EXECUTED",
+      "this_review_second_order_stability": "NOT_EXECUTED",
+      "new_scientific_calls": 0,
+      "claim": "Protocol-defined operational comparison only; no automatic physical bond energy, causal or variational qualification."
+    },
+    {
+      "id": "P08",
+      "energy_definition": "GL(2014) corrected energy and ordinary@GL comparison; hydrogenation references separately",
+      "operator_rules": "Cross-fragment pi F/S deletion and cross-fragment exact-exchange correction from gl2014.py; do not replace by the fifteen-class P09 ERI mask.",
+      "electron_count_metrics": "Modified-overlap electron count and original AO count are distinct; grid values require an actually saved grid calculation.",
+      "allowed_variations_and_gaps": "Runtime live is fixed saved GL geometry with source-specific SCF; no new optimization or full allowed-direction variational analysis.",
+      "source_bindings": [
+        {
+          "path": "runtime/protocol_cases/p07_p08.py",
+          "sha256": "3af0d50f17a3202205d607d328467322b99385d8c3e5ce7f87b4b2705c1cd4b5",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        },
+        {
+          "path": "reference/protocol_cases/source_tree/src/ai4orgchem/lfmo/gl2014.py",
+          "sha256": "617d5dc861b380345488800f47201624dcdd5b2cb232d0952fec198ff7df23c5",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        }
+      ],
+      "historical_qualification": "One frozen ordinary RKS/GL endpoint comparison, not independent-program or full P08 rerun.",
+      "this_review_fixed_point": "NOT_REEXECUTED",
+      "this_review_tangent_stationarity": "NOT_EXECUTED",
+      "this_review_second_order_stability": "NOT_EXECUTED",
+      "new_scientific_calls": 0,
+      "claim": "Protocol-defined operational comparison only; no automatic physical bond energy, causal or variational qualification."
+    },
+    {
+      "id": "P09",
+      "energy_definition": "Tr(D h_tilde)+0.5 Tr(D J)-a_x/4 Tr(D K)+E_XC+E_nuc",
+      "operator_rules": "Frozen h/S/F interfragment-pi masks and fifteen-class ERI deletion. raw F = h_tilde+J-a_x/2 K+V_XC, then F is masked again. E_XC is a saved/integrated scalar, not Tr(D V_XC).",
+      "electron_count_metrics": "Tr(S_tilde D), Tr(S D), and actual grid integral are separate diagnostics.",
+      "allowed_variations_and_gaps": "Fixed registered geometry and closed-shell density in the conditional metric. The energy derivative must be compared only on explicitly allowed density/orbital variations; the public smoke does not prove a general allowed tangent relation.",
+      "source_bindings": [
+        {
+          "path": "runtime/protocol_cases/p09_p10.py",
+          "sha256": "d17052847e1ec85566dc9858e6163424e7639a44eee9565f9b728ed282f689af",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        },
+        {
+          "path": "reference/protocol_cases/source_tree/src/ai4orgchem/qm/p09_conditional_scf.py",
+          "sha256": "33c7eeeb19bcdbc1d21fa30aa32694ca333b859a9cdc22caaad8ed064060d0ab",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        },
+        {
+          "path": "reference/protocol_cases/source_tree/src/ai4orgchem/qm/p09_energy_assembly.py",
+          "sha256": "71c50e5202d4bf4fb8be2f8c07f6a87bc11e15aa0a2bafee9c25f338d5f226a0",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        }
+      ],
+      "historical_qualification": "Historical fixed-geometry diagnostics and one stability call in stated scope; do not transfer ordinary-state stability to the conditional state.",
+      "this_review_fixed_point": "NOT_REEXECUTED",
+      "this_review_tangent_stationarity": "NOT_EXECUTED",
+      "this_review_second_order_stability": "NOT_EXECUTED",
+      "new_scientific_calls": 0,
+      "claim": "Protocol-defined operational comparison only; no automatic physical bond energy, causal or variational qualification."
+    },
+    {
+      "id": "P11-A",
+      "energy_definition": "Furan LDE = (E_G-E_GL)-[(E_GE1-E_GL)+2(E_GE2-E_GL)]",
+      "operator_rules": "Frozen furan h/F/S mask, retaining undeleted ERIs; not identical to the P09 fifteen-class ERI deletion branch.",
+      "electron_count_metrics": "Frozen conditional-overlap occupations and separately labelled physical AO diagnostics where available.",
+      "allowed_variations_and_gaps": "Source furan constrained geometric parameters. Runtime has no newly accepted conditional furan optimization in this increment.",
+      "source_bindings": [
+        {
+          "path": "runtime/high_cost_cases/p11.py",
+          "sha256": "52b9deb59e005dfe7828bdb00253a05a2e10c23c36f8a5c2db44d66753df48c3",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        },
+        {
+          "path": "reference/high_cost_cases/source_tree/docs/theory/p11_furan_lde_protocol_v0.1.md",
+          "sha256": "427cf78f9a8c8c1767c9512505e02b05af36df2779b5e7ce61a42b1be147626c",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        }
+      ],
+      "historical_qualification": "Historical original-project record distinct from Runtime; only ordinary benzene-G pilot accepted in the P11 Runtime family.",
+      "this_review_fixed_point": "NOT_REEXECUTED",
+      "this_review_tangent_stationarity": "NOT_EXECUTED",
+      "this_review_second_order_stability": "NOT_EXECUTED",
+      "new_scientific_calls": 0,
+      "claim": "Protocol-defined operational comparison only; no automatic physical bond energy, causal or variational qualification."
+    },
+    {
+      "id": "P11-B",
+      "energy_definition": "Source-2007 benzene/cyanobenzene state energies, ESE/CE/IE assembly",
+      "operator_rules": "Interfragment-pi F and S blocks masked each iteration; physical hcore and ERIs retained in the energy functional.",
+      "electron_count_metrics": "Occupied columns are orthonormal in modified S; original AO and grid counts cannot be replaced by that trace.",
+      "allowed_variations_and_gaps": "Original planar, state-specific optimizations; gradient qualification applies only to the stated constraints. No full Cartesian Hessian or general masked-functional proof is added.",
+      "source_bindings": [
+        {
+          "path": "runtime/high_cost_cases/p11.py",
+          "sha256": "52b9deb59e005dfe7828bdb00253a05a2e10c23c36f8a5c2db44d66753df48c3",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        },
+        {
+          "path": "reference/high_cost_cases/source_tree/src/ai4orgchem/qm/p11_source2007_rks.py",
+          "sha256": "f3ec507d0b35795b13efeb9f96e84cd69327cc2d93d3c4defbcdc9eaf7604bc9",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        }
+      ],
+      "historical_qualification": "Original 13-state result retains its identity; Runtime only benzene-G pilot, other P11 states not newly accepted.",
+      "this_review_fixed_point": "NOT_REEXECUTED",
+      "this_review_tangent_stationarity": "NOT_EXECUTED",
+      "this_review_second_order_stability": "NOT_EXECUTED",
+      "new_scientific_calls": 0,
+      "claim": "Protocol-defined operational comparison only; no automatic physical bond energy, causal or variational qualification."
+    },
+    {
+      "id": "P12",
+      "energy_definition": "ESE=delta_EA-sum(delta_EAm); CESE=ESE-sum(delta_EnAm)",
+      "operator_rules": "Source-2011 h/S/F masks and direct J/K X14 exchange subtraction, with frozen state and symmetry definitions; distinct from source-2007 and P09 fifteen-class paths.",
+      "electron_count_metrics": "Conditional-overlap occupation count; physical AO/grid diagnostics are separately required when used.",
+      "allowed_variations_and_gaps": "Registered planar N12/N14/N16 state optimizations. Current Runtime only N12-G pilot; no complete conditional collection, new CESE or full-dimensional minimum proof.",
+      "source_bindings": [
+        {
+          "path": "runtime/high_cost_cases/p12.py",
+          "sha256": "e419434a9c20f69bb1f89707e6c667ea8911922272fb58a65d99045eaaf4531f",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        },
+        {
+          "path": "reference/high_cost_cases/source_tree/src/ai4orgchem/qm/p12_source2011_rks.py",
+          "sha256": "381bef6586388d72f3af5196bf97ad092c868e992ecd3670be01b934e2e65882",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        }
+      ],
+      "historical_qualification": "Original three-point CESE evidence and Runtime pilot acceptance are different records. No new state computed.",
+      "this_review_fixed_point": "NOT_REEXECUTED",
+      "this_review_tangent_stationarity": "NOT_EXECUTED",
+      "this_review_second_order_stability": "NOT_EXECUTED",
+      "new_scientific_calls": 0,
+      "claim": "Protocol-defined operational comparison only; no automatic physical bond energy, causal or variational qualification."
+    },
+    {
+      "id": "P14",
+      "energy_definition": "E(G)-E(PLG) at fixed geometry and separate optimized five-parameter endpoint; dDelta_r",
+      "operator_rules": "Frozen P09-derived h/S/F masks and source fifteen-class exchange/ERI rules; exact baseline sources are locked, not replaced by P11/P12 adapters.",
+      "electron_count_metrics": "Modified metric versus original AO/grid counts must be separately named; unavailable arrays/derivatives remain unknown.",
+      "allowed_variations_and_gaps": "One planar D3h C12H6 system with five geometry parameters. Historical G/PLG gradient checks apply to that protocol; they do not establish all Cartesian directions, frequencies or a global minimum.",
+      "source_bindings": [
+        {
+          "path": "docs/CURRENT_P14_BUILD_RUN_zh-CN.md",
+          "sha256": "014cca4398e93497c23ae9a38f9900c125feb1be6b3dfe3ab542337161b23923",
+          "role": "CURRENT_INTERPRETATION_DOCUMENT"
+        },
+        {
+          "path": "locks/source-files.sha256.json",
+          "sha256": "ea627867332fca8c6aef3c716f3564b292d042e05d78da9378f5155c2ed4cab9",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        }
+      ],
+      "historical_qualification": "Historical seven-task evidence and compatible four-parent classification remain; no new computation or general stationarity proof.",
+      "this_review_fixed_point": "NOT_REEXECUTED",
+      "this_review_tangent_stationarity": "NOT_EXECUTED",
+      "this_review_second_order_stability": "NOT_EXECUTED",
+      "new_scientific_calls": 0,
+      "claim": "Protocol-defined operational comparison only; no automatic physical bond energy, causal or variational qualification."
+    },
+    {
+      "id": "USER-CONDITIONAL-V2",
+      "energy_definition": "Saved diagnostic functional; no accepted research endpoint",
+      "operator_rules": "Implemented V2 and registered h/S/F/ERI rules retain their prior identity. No new occupation, gap, solver or threshold change.",
+      "electron_count_metrics": "Saved Tr(S_tilde D) about 16; original AO/grid about 16.4745. Saved grid value is not recomputed.",
+      "allowed_variations_and_gaps": "Recorded global 2/0 occupied map and positive-gap gates remain; no new root search, iteration or allowed-direction proof.",
+      "source_bindings": [
+        {
+          "path": "docs/en/CURRENT_PROFESSIONAL_SERVICES.md",
+          "sha256": "3aec1b542148ecfb1ca463228d094c60fc5ccde4009b33c8ec142d7238b1f2f2",
+          "role": "CURRENT_INTERPRETATION_DOCUMENT"
+        },
+        {
+          "path": "validation/user-molecule/seed-v2-20261007.public.json",
+          "sha256": "16aaccb1ccbf105a257e41ad098e0eb9da872b968843332ab2e07f5e3ec4e960",
+          "role": "UNCHANGED_EXISTING_SOURCE_OR_HISTORICAL_RECORD"
+        }
+      ],
+      "historical_qualification": "No qualifying endpoint; Compute BLOCKED. Diagnostics neither prove no root exists nor invalidate original P01-P14.",
+      "this_review_fixed_point": "NOT_REEXECUTED",
+      "this_review_tangent_stationarity": "NOT_EXECUTED",
+      "this_review_second_order_stability": "NOT_EXECUTED",
+      "new_scientific_calls": 0,
+      "claim": "Protocol-defined operational comparison only; no automatic physical bond energy, causal or variational qualification."
+    }
+  ],
+  "new_derivatives_or_stability_calls": 0,
+  "historical_results_changed": false,
+  "future_research": "Additional integrals, F(D), SCF, gradients, optimization or stability work require a separate method and budget; not authorized by these notes."
+}

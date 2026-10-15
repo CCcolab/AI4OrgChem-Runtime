@@ -16,7 +16,14 @@
       "origin": "OWNER_PERSONAL_YOUMIND_INSTRUCTIONS_ADAPTED_FOR_CODEX",
       "test_snapshot_sha256": null,
       "scoped_case_count": null,
-      "current_instruction_matches_workflow_test_snapshot": null
+      "current_instruction_matches_workflow_test_snapshot": null,
+      "public_example_coverage": {
+        "instruction_sha256": "544d148b58fffda3abd2745a2e2dfb6b6de1f9625a636a7e62ed9d5b93ffb868",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "table-fitting-residuals",
@@ -30,7 +37,14 @@
       "origin": "OWNER_PERSONAL_YOUMIND_INSTRUCTIONS_ADAPTED_FOR_CODEX",
       "test_snapshot_sha256": "9ab4b2dbc60bd6cceb41b4bf31fdc080a62826790dc1d7b18b73e9aae0d570a7",
       "scoped_case_count": 13,
-      "current_instruction_matches_workflow_test_snapshot": true
+      "current_instruction_matches_workflow_test_snapshot": true,
+      "public_example_coverage": {
+        "instruction_sha256": "9ab4b2dbc60bd6cceb41b4bf31fdc080a62826790dc1d7b18b73e9aae0d570a7",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "orbital-localization-density",
@@ -44,7 +58,14 @@
       "origin": "OWNER_PERSONAL_YOUMIND_INSTRUCTIONS_ADAPTED_FOR_CODEX",
       "test_snapshot_sha256": "90e7a13579a374f248a74537b0dfd878dd7feea8910b2c31506f223031c4500b",
       "scoped_case_count": 12,
-      "current_instruction_matches_workflow_test_snapshot": true
+      "current_instruction_matches_workflow_test_snapshot": true,
+      "public_example_coverage": {
+        "instruction_sha256": "90e7a13579a374f248a74537b0dfd878dd7feea8910b2c31506f223031c4500b",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "molecular-graph-energy-ledger",
@@ -58,7 +79,14 @@
       "origin": "OWNER_PERSONAL_YOUMIND_INSTRUCTIONS_ADAPTED_FOR_CODEX",
       "test_snapshot_sha256": "e7437c63b3cdcfc84c78bf3956296953d612f914e7cc3bd7493834fe746046e6",
       "scoped_case_count": 12,
-      "current_instruction_matches_workflow_test_snapshot": true
+      "current_instruction_matches_workflow_test_snapshot": true,
+      "public_example_coverage": {
+        "instruction_sha256": "e7437c63b3cdcfc84c78bf3956296953d612f914e7cc3bd7493834fe746046e6",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "same-hamiltonian-path-closure",
@@ -72,7 +100,14 @@
       "origin": "OWNER_PERSONAL_YOUMIND_INSTRUCTIONS_ADAPTED_FOR_CODEX",
       "test_snapshot_sha256": "c30f37082913d06228504ef532f685dc2c7395b00e34c54fd393a1146360cb13",
       "scoped_case_count": 10,
-      "current_instruction_matches_workflow_test_snapshot": true
+      "current_instruction_matches_workflow_test_snapshot": true,
+      "public_example_coverage": {
+        "instruction_sha256": "c30f37082913d06228504ef532f685dc2c7395b00e34c54fd393a1146360cb13",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "nonorthogonal-subspace",
@@ -86,7 +121,14 @@
       "origin": "OWNER_PERSONAL_YOUMIND_INSTRUCTIONS_ADAPTED_FOR_CODEX",
       "test_snapshot_sha256": "ebcc8dc5c1878843cf2f7988c75dde3d982dced297c7b7c877b6c365bded3264",
       "scoped_case_count": 10,
-      "current_instruction_matches_workflow_test_snapshot": true
+      "current_instruction_matches_workflow_test_snapshot": true,
+      "public_example_coverage": {
+        "instruction_sha256": "ebcc8dc5c1878843cf2f7988c75dde3d982dced297c7b7c877b6c365bded3264",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "partition-mask-audit",
@@ -100,7 +142,14 @@
       "origin": "OWNER_PERSONAL_YOUMIND_INSTRUCTIONS_ADAPTED_FOR_CODEX",
       "test_snapshot_sha256": "5ea32ee5180bbe67f8892749984ca11ca6a8fa5a9e4dcd079950d6cb68ecc530",
       "scoped_case_count": 9,
-      "current_instruction_matches_workflow_test_snapshot": true
+      "current_instruction_matches_workflow_test_snapshot": true,
+      "public_example_coverage": {
+        "instruction_sha256": "5ea32ee5180bbe67f8892749984ca11ca6a8fa5a9e4dcd079950d6cb68ecc530",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "reflection-parity",
@@ -114,7 +163,14 @@
       "origin": "OWNER_PERSONAL_YOUMIND_INSTRUCTIONS_ADAPTED_FOR_CODEX",
       "test_snapshot_sha256": "414ff69c8fed464db19243c4d4044ff0120b357912f3f6bb29aa1530e071da63",
       "scoped_case_count": 9,
-      "current_instruction_matches_workflow_test_snapshot": true
+      "current_instruction_matches_workflow_test_snapshot": true,
+      "public_example_coverage": {
+        "instruction_sha256": "414ff69c8fed464db19243c4d4044ff0120b357912f3f6bb29aa1530e071da63",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "fragment-working-basis",
@@ -128,7 +184,14 @@
       "origin": "OWNER_PERSONAL_YOUMIND_INSTRUCTIONS_ADAPTED_FOR_CODEX",
       "test_snapshot_sha256": "cf57a9216317c55560cd1ba2000cf5129c8ac203a501a95dd5bdd2e548f8ba4b",
       "scoped_case_count": 9,
-      "current_instruction_matches_workflow_test_snapshot": true
+      "current_instruction_matches_workflow_test_snapshot": true,
+      "public_example_coverage": {
+        "instruction_sha256": "cf57a9216317c55560cd1ba2000cf5129c8ac203a501a95dd5bdd2e548f8ba4b",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "nuclear-repulsion-response",
@@ -142,7 +205,14 @@
       "origin": "OWNER_PERSONAL_YOUMIND_INSTRUCTIONS_ADAPTED_FOR_CODEX",
       "test_snapshot_sha256": "9c0752fa5a3bd369afbf560e9851c6f2fe9c8b2e9f374d3c5406a2187794e83b",
       "scoped_case_count": 11,
-      "current_instruction_matches_workflow_test_snapshot": true
+      "current_instruction_matches_workflow_test_snapshot": true,
+      "public_example_coverage": {
+        "instruction_sha256": "9c0752fa5a3bd369afbf560e9851c6f2fe9c8b2e9f374d3c5406a2187794e83b",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "scan-energy-curvature",
@@ -156,7 +226,14 @@
       "origin": "OWNER_PERSONAL_YOUMIND_INSTRUCTIONS_ADAPTED_FOR_CODEX",
       "test_snapshot_sha256": "d93575b6f42ff9e0710085352cc41a013269e5542b4e8f203c32a126d8043215",
       "scoped_case_count": 11,
-      "current_instruction_matches_workflow_test_snapshot": true
+      "current_instruction_matches_workflow_test_snapshot": true,
+      "public_example_coverage": {
+        "instruction_sha256": "d93575b6f42ff9e0710085352cc41a013269e5542b4e8f203c32a126d8043215",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "fixed-protocol-energy-review",
@@ -170,7 +247,14 @@
       "origin": "LOCAL_CODEX_WORKFLOW_EXTENSION",
       "test_snapshot_sha256": "2e4f65d589ad296e5ac91e8c7f51de37d13641e8ad3e9013fe0c889f3edd080e",
       "scoped_case_count": 18,
-      "current_instruction_matches_workflow_test_snapshot": true
+      "current_instruction_matches_workflow_test_snapshot": true,
+      "public_example_coverage": {
+        "instruction_sha256": "2e4f65d589ad296e5ac91e8c7f51de37d13641e8ad3e9013fe0c889f3edd080e",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "constrained-optimization-response",
@@ -184,7 +268,14 @@
       "origin": "LOCAL_CODEX_WORKFLOW_EXTENSION",
       "test_snapshot_sha256": "4613b2d31a9b10b9a3fb47941c422fd29751bface158b585fae8dee4bdf60e1e",
       "scoped_case_count": 13,
-      "current_instruction_matches_workflow_test_snapshot": true
+      "current_instruction_matches_workflow_test_snapshot": true,
+      "public_example_coverage": {
+        "instruction_sha256": "4613b2d31a9b10b9a3fb47941c422fd29751bface158b585fae8dee4bdf60e1e",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "multistate-size-comparison",
@@ -198,7 +289,14 @@
       "origin": "LOCAL_CODEX_WORKFLOW_EXTENSION",
       "test_snapshot_sha256": "b83c8ac2a15b540439be02ac656ae4c868de5563dfd9e68df66d0cd28a253d58",
       "scoped_case_count": 16,
-      "current_instruction_matches_workflow_test_snapshot": true
+      "current_instruction_matches_workflow_test_snapshot": true,
+      "public_example_coverage": {
+        "instruction_sha256": "b83c8ac2a15b540439be02ac656ae4c868de5563dfd9e68df66d0cd28a253d58",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     },
     {
       "name": "runtime-usage-assistant",
@@ -212,7 +310,14 @@
       "origin": "LOCAL_CODEX_WORKFLOW_EXTENSION",
       "test_snapshot_sha256": "9fba12d593b3bfaa0536ef46836379defb59b5febb9af58a86d798c769dcfc82",
       "scoped_case_count": 17,
-      "current_instruction_matches_workflow_test_snapshot": false
+      "current_instruction_matches_workflow_test_snapshot": false,
+      "public_example_coverage": {
+        "instruction_sha256": "bdd6d63b3e45dbef2eb376ca49d576117167fc33fd83c8eba3fe482330754ae0",
+        "normal_examples": 1,
+        "specific_refusals": 1,
+        "common_io_failure_examples": 1,
+        "scope": "Selected deterministic checks only; not full instruction or Agent execution."
+      }
     }
   ],
   "license_reference": "../LICENSE",
@@ -227,5 +332,16 @@
       "change": "Replace withdrawn platform name with generic unaccepted-platform limitation; no method or execution rule change",
       "previous_test_snapshot_retained": true
     }
-  ]
+  ],
+  "public_program_regression": {
+    "introduced_date": "2026-10-15",
+    "type": "DETERMINISTIC_PROGRAM_EXAMPLES_NOT_AGENT_EVALUATION",
+    "command": "python -B scripts/run-public-review-regression.py --output NEW_DIRECTORY",
+    "fixtures": "validation/public_regression/fixtures.json",
+    "result": "validation/review-20261015/public-regression-result.json",
+    "historical_test_snapshots_retained": true,
+    "remote_ci": "NOT_EXECUTED",
+    "current_rhf_new_end_to_end": "NOT_EXECUTED_NO_CALCULATION_AUTHORIZED",
+    "independent_blind_agent_evaluation": "NOT_EXECUTED"
+  }
 }

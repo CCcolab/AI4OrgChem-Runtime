@@ -1,0 +1,16 @@
+{
+  "schema": "ai4s-claims-readonly-check-v1",
+  "status": "PASS_DECLARATION_SCOPE_ONLY",
+  "source_commit": "02ea458881872f26be3e03fe8bf2de549f82b2a9",
+  "path": "ai4s-agent/EVALUATION_SUMMARY.json",
+  "sha256": "6d2d19f2d1f92fa587fdd13ab1cf9a82f30f8a03546dc5c36e1ba6c93c726d6d",
+  "checks": {
+    "M2_scoped": true,
+    "dataset_17_3_5": true,
+    "mixed_active_learning": true,
+    "symbolic_pass_and_fail": true,
+    "no_general_agent_or_industrial_claim": true
+  },
+  "training_or_agent_replay_executed": false,
+  "source_modified": false
+}

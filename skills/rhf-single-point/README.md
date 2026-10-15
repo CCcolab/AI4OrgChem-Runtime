@@ -101,3 +101,5 @@ Jupyter用户可让Agent生成Notebook单元格，但应显式指定输入和新
 ## 测试范围 / Test scope
 
 2026-10-14本地记录：两份已有水分子单点运行记录（指令后续修订另列）。反例的正确拒绝也计作符合预期；保存结果重算、解析模型、工程探针和真实量化调用分别报告。公开交付只有[限定测试摘要](../../validation/skills/test-summary.json)和[范围说明](../TESTING_zh-CN.md)，不含全部原始运行载荷，不能据此独立复现全部测试。未认证所有输入、其他平台或完整科学功能。
+
+Additional saved-array canonical-MO review: [English](../../docs/en/CANONICAL_ORBITAL_REVIEW.md) · [中文](../../docs/CANONICAL_ORBITAL_REVIEW_zh-CN.md). The current instruction has deterministic input/failure examples, not a newly executed RHF endpoint.

@@ -46,6 +46,43 @@ jobs:
           path: ${{ runner.temp }}/ai4orgchem-runs
           if-no-files-found: warn
           retention-days: 7
+  public-review-regression:
+    # Deterministic instruction examples, host contracts and saved arrays only.
+    # No quantum backend is installed; no Docker/WSL, build or scientific job.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - name: Install only pinned review dependencies
+        run: |
+          python3 -c "import sys; sys.exit(0 if sys.version_info[:2] == (3, 12) else 'CPython 3.12 required for pinned wheels')"
+          python3 -m pip install --only-binary=:all: --require-hashes -r validation/public_regression/requirements-ci.txt
+      - name: Public zero-science regression and frozen witness review
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+          OMP_NUM_THREADS: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+        run: |
+          set -euo pipefail
+          python3 -B scripts/sync-current-capabilities.py
+          python3 -B scripts/run-public-review-regression.py --output "$RUNNER_TEMP/public-review-regression"
+          python3 -B scripts/audit-numerical-witnesses.py > "$RUNNER_TEMP/public-review-regression/saved-witness-audit.json"
+          python3 -B scripts/review-canonical-orbitals.py \
+            --npz evidence/numerical-witnesses/ordinary-water/orbitals-density.npz \
+            --electron-count 10 --output "$RUNNER_TEMP/saved-canonical-orbitals"
+      - name: Preserve public review records
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: public-review-regression-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/public-review-regression/
+            ${{ runner.temp }}/saved-canonical-orbitals/
+          if-no-files-found: warn
+          retention-days: 7
   public-installation-engineering:
     # Public pinned source preparation, local-only build and stdlib file probes.
     # No SCF, optimization, scientific replay, registry push, tag or Release.

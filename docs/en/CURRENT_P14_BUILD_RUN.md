@@ -75,3 +75,5 @@ Do not supply frozen JSON without manifests or combine incompatible historical s
 Keep each run-manifest.json, stdout/stderr and applicable result.json/report.md/checkpoint.json. Check numerical gates, exits, hashes and source/image/dependency identity; a created file or child exit0 alone is not PASS. Current Runtime returns4 for failed/unknown/missing scientific gates; preserve old-image behavior as historical evidence.
 
 Use [result interpretation](REVIEW_RESULTS.md) and [the four-parent template](P14_REVIEW_TEMPLATE.md), distinguishing execution, numerical checks, comparison and classification. Conclusions apply to the fixed protocol, not arbitrary molecules/all aromaticity theories. L4 saves checkpoints but **cannot resume**. User-entry failures do not automatically reopen P01–P14. This documentation change ran no build/science and changed no rules/thresholds.
+
+See [conditional-protocol qualification](CONDITIONAL_PROTOCOL_QUALIFICATION.md) for energy, metrics, allowed variations and remaining gaps. No new calculation or historical PASS transfer is implied.

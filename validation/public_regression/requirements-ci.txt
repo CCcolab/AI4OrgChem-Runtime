@@ -1,0 +1,5 @@
+# Existing Linux/amd64 CPython 3.12 wheel identities, reused from historical
+# dependency records. This job deliberately does not install a quantum backend.
+numpy==2.5.1 --hash=sha256:59fda5e192b570217ec2580c96f00e9a7e12ef6866a900eb089b62c1a32545ca
+rdkit==2026.3.4 --hash=sha256:bec605934ad781e91aa10d434ac986ee18e191ae9dfa65fcabb1784aadf33edb
+pillow==11.3.0 --hash=sha256:676b2815362456b5b3216b4fd5bd89d362100dc6f4945154ff172e206a22c024

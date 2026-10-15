@@ -1,0 +1,72 @@
+{
+  "schema": "review-remediation-status-v1",
+  "date": "2026-10-15",
+  "base_runtime_commit": "2f9e7f75d9a984429d3b836dcbc50e0dfea3c489",
+  "base_science_commit": "02ea458881872f26be3e03fe8bf2de549f82b2a9",
+  "scope": "LOCAL_DOCUMENTATION_AND_ZERO_MOLECULAR_BACKEND_REGRESSION",
+  "new_scf_integral_geometry_optimization_training_calls": 0,
+  "docker_wsl_or_image_build_started": false,
+  "push_tag_release": false,
+  "results": {
+    "F01": {
+      "status": "PARTIAL",
+      "completed": "Public deterministic inputs/programs/oracles/tolerances/logs; current instruction hashes bound",
+      "remaining": "Current RHF real end-to-end and independent Agent evaluation NOT_EXECUTED under user no-calculation boundary"
+    },
+    "F02": {
+      "status": "DOCUMENTED_WITH_EXPLICIT_GAPS",
+      "completed": "Per-protocol energy/operator/metric/allowed-variation and qualification notes",
+      "remaining": "No new tangent/derivative/stability science performed"
+    },
+    "F03": {
+      "status": "ADDITIONAL_HOST_REVIEW_IMPLEMENTED_AND_LOCALLY_TESTED",
+      "completed": "Versioned full-MO array review, corrupt-virtual rejection, one saved-water audit",
+      "remaining": "Not wired into frozen worker; stability NOT_EXECUTED; not all historical molecules reviewed"
+    },
+    "F04": {
+      "status": "PARTIAL",
+      "completed": "Public deterministic/host regression and read-only witness checks; lightweight CI job configured",
+      "remaining": "New remote CI and fresh-installation/container end-to-end NOT_EXECUTED"
+    },
+    "F05": {
+      "status": "LOCAL_DOCUMENTATION_COMPLETE",
+      "completed": "Runtime explanation and four isolated-upstream Markdown updates; no energy/classification change",
+      "remaining": "No push; published pages remain unchanged until separately synchronized"
+    },
+    "F06": {
+      "status": "VERIFIED_NO_DECLARATION_CHANGE_NEEDED",
+      "completed": "M2_scoped, 17/3/5 data, mixed active-learning and PySR pass/fail retained",
+      "remaining": "General Agent or prediction service not claimed"
+    },
+    "F07": {
+      "status": "LOCAL_GENERATED_DECLARATIONS_SYNCHRONIZED",
+      "completed": "Latest recorded 2f9 CI separate from this increment and historical scientific acceptance; post-release Skill scope disclosed",
+      "remaining": "Remote CI NOT_EXECUTED; old Release assets and guide ZIP unchanged"
+    }
+  },
+  "local_public_regression": {
+    "status": "PASS",
+    "tests": 79,
+    "normal_skill_examples": 15,
+    "expected_refusals": 15,
+    "common_io_failure_contexts": 15,
+    "additional_tests": 34,
+    "source_record": "validation/review-20261015/public-regression-result.json"
+  },
+  "preservation": {
+    "runtime_protected_files": 175,
+    "all_unchanged": true,
+    "instruction_bytes_unchanged": true,
+    "original_scientific_workspace_unchanged": true,
+    "frozen_gates_and_results_unchanged": true
+  },
+  "remote_ci": "NOT_EXECUTED",
+  "independent_agent_eval": "NOT_EXECUTED",
+  "current_rhf_real_execution": "NOT_EXECUTED_BY_USER_BOUNDARY",
+  "ci_static_review": "SOURCE_DIFF_PERMISSION_AND_COMMAND_SCOPE_REVIEW_COMPLETE; YAML parser NOT_EXECUTED_missing_optional_parser",
+  "p14_validator_this_increment": "NOT_EXECUTED_MISSING_JSONSCHEMA",
+  "wavefunction_stability": "NOT_EXECUTED",
+  "user_conditional_compute": "BLOCKED",
+  "p11_p12_accepted_runtime_pilots": 2,
+  "p11_p12_registered_units": 78
+}

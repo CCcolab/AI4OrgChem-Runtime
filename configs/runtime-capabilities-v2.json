@@ -1,7 +1,7 @@
 {
   "schema_version": "runtime-capabilities-v2",
-  "date": "2026-10-10",
-  "reviewed_runtime_commit": "be51dcbbd2e9ef519c55f9598faf18c567f76184",
+  "date": "2026-10-15",
+  "reviewed_runtime_commit": "2f9e7f75d9a984429d3b836dcbc50e0dfea3c489",
   "declaration_grants_execution_authorization": false,
   "declaration_scope": "Current capability navigation only; enabled rows still require actual installation/image/input/source/resource/budget admission. Historical acceptance identifies its own code and image, not this update.",
   "historical_snapshot": "validation/local-runtime-capabilities-v1.public.json",
@@ -24,16 +24,38 @@
       "status": "PUBLIC_STATIC_GUIDE",
       "url": "https://cccolab.github.io/AI4OrgChem-Runtime/",
       "online_calculation": false
+    },
+    "skills": {
+      "status": "POST_V0_1_0_SOURCE_SUPPLEMENT",
+      "count": 15,
+      "introduced_commit": "2f9e7f75d9a984429d3b836dcbc50e0dfea3c489",
+      "catalog": "skills/README.md",
+      "testing": "skills/TESTING.md",
+      "included_in_original_v0_1_0_release_assets": false,
+      "included_in_original_guide_zip": false,
+      "qualification": "Instruction modules; no engine, online calculation or extension of accepted scientific services."
     }
   },
   "ci": {
     "status": "SUCCESS_RECORDED_COMMIT_ONLY",
-    "commit": "be51dcbbd2e9ef519c55f9598faf18c567f76184",
-    "run_id": 38036972441,
-    "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38036972441",
+    "commit": "2f9e7f75d9a984429d3b836dcbc50e0dfea3c489",
+    "run_id": 38554057542,
+    "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38554057542",
     "successful_jobs": 2,
-    "scope": "Public pinned installation engineering and legacy L0/L1 only; no new scientific replay; does not certify later edits",
+    "job_names": [
+      "linux",
+      "public-installation-engineering"
+    ],
+    "scope": "Recorded installation engineering and legacy L0/L1; excludes Skill execution, new orbital review and later local changes.",
     "historical_records": [
+      {
+        "status": "SUCCESS_RECORDED_COMMIT_ONLY",
+        "commit": "be51dcbbd2e9ef519c55f9598faf18c567f76184",
+        "run_id": 38036972441,
+        "url": "https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38036972441",
+        "successful_jobs": 2,
+        "scope": "Public pinned installation engineering and legacy L0/L1 only; no new scientific replay; does not certify later edits"
+      },
       {
         "status": "SUCCESS_RECORDED_COMMIT_ONLY",
         "commit": "86e29b47b38fbd31717ff9aac653386d2e3f768d",
@@ -42,7 +64,13 @@
         "successful_jobs": 3,
         "scope": "Existing engineering contracts and legacy L0/L1 jobs only; not all scientific services; does not certify later edits"
       }
-    ]
+    ],
+    "local_increment_remote_ci": "NOT_EXECUTED",
+    "public_regression_job": {
+      "name": "public-review-regression",
+      "remote_status": "NOT_EXECUTED",
+      "scientific_calls_allowed": false
+    }
   },
   "platform": {
     "docker": "SCOPED_LOCAL_ACCEPTANCE_RECORDS"
@@ -1390,5 +1418,15 @@
   "platforms": {
     "docker": "SCOPED_LOCAL_ACCEPTANCE_PER_SERVICE",
     "ordinary_wsl2": "REGISTERED_NATIVE_READINESS_ONLY_NO_DOCKER_ACCEPTANCE_TRANSFER"
+  },
+  "reviewed_runtime_commit_role": "PRE_EDIT_REVIEW_BASELINE_NOT_ACCEPTANCE_OF_THIS_LOCAL_INCREMENT",
+  "review_increment": {
+    "date": "2026-10-15",
+    "scope": "HOST_ONLY_DOCUMENTATION_AND_SYNTHETIC_SAVED_ARRAY_REGRESSION",
+    "local_validation": "SEE_LINKED_INCREMENT_STATUS_RECORD",
+    "remote_ci": "NOT_EXECUTED",
+    "new_scf_integral_optimization_calls": 0,
+    "historical_scientific_acceptance_transferred": false,
+    "status_record": "validation/review-20261015/status.json"
   }
 }

@@ -94,3 +94,5 @@ The initial twelve numerical checks qualify only the recorded fixed-geometry RHF
 The complete orbital orthogonality/eigen gate is not implemented; wavefunction stability and physical-ground-state certification were not executed. Four historical molecule runs and four same-version PySCF direct-call controls establish scoped wrapper consistency, not an independent-engine scientific certification. HOMO–LUMO gap is a diagnostic rather than a gate for this service. Preserve the original four results and twelve checks.
 
 User DFT, ions, open-shell states, general optimization, scans and conditional-state comparisons are outside this entry. The historical `start-molecular-service.ps1` requires its own original candidate image and is not the new-installation launcher.
+
+An [additional saved-array MO review](CANONICAL_ORBITAL_REVIEW.md) is available as a separate tool. It is not integrated into frozen production gates and does not establish stability or rewrite historical acceptance.

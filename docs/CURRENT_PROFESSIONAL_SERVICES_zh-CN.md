@@ -73,3 +73,5 @@ P11/P12共注册78态，两个先导态的验收不迁移到其余76态、当前
 ## 当前交付范围
 
 普通 RHF 的闭壳层单重态是用户模型假设；当前布尔值只指指定几何的首版数值门禁。全 canonical／虚轨道资格未建立，宿主 evidence_review 的 qualification_scope／orbital_export_qualification 单独披露；完整轨道新门禁版本未实现，不改变原12项检查或四分子记录。
+
+维护补充：[条件态协议与资格](CONDITIONAL_PROTOCOL_QUALIFICATION_zh-CN.md) · [完整 MO 附加审查](CANONICAL_ORBITAL_REVIEW_zh-CN.md) · [P12 比较量](P12_COMPARISON_METRICS_zh-CN.md)。公开最小回归是确定性程序示例，不等于 Agent 盲测或新增科学验收。

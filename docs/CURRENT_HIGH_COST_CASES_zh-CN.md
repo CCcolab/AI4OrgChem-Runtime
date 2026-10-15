@@ -83,3 +83,5 @@ python -B .\scripts\run-installed-runtime.py --installation-record ..\installati
 | P12单态live | 16 | 14GiB | 20GiB | 12小时、最多80几何步 |
 
 读取终端返回目录中的 `output/result.json`、`output/worker-receipt.json`、`output/guard-receipt.json`、`output/run-manifest.json`、宿主记录和预算；按[专业服务矩阵](CURRENT_PROFESSIONAL_SERVICES_zh-CN.md)判断本态checks、方法和身份。保留实际存在的optimized.xyz、轨迹及中间文件；不要求所有状态共享同一轨迹格式。资源不足就记录拒绝，不改内存门槛或科学容差。旧已通过P12不因本轮文档检查重新准入。单态通过不等于全多态组装通过，L4无resume。
+
+N16 两种百分比的公式、分母与舍入来源见 [P12 比较量说明](P12_COMPARISON_METRICS_zh-CN.md)。历史结果与验收身份保持不变。

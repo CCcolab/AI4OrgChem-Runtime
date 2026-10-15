@@ -73,3 +73,5 @@ evidence是冻结字节核查，core-tests是科学核心测试，不是用户�
 每个实际运行目录保留run-manifest.json、stdout/stderr、适用的result.json/report.md和checkpoint.json。核对数值门槛、退出码、输出哈希、源／镜像／依赖身份；有文件或子程序退出0不自动等于PASS。科学门槛FAIL、UNKNOWN或缺失时当前Runtime返回4，历史镜像旧行为不倒写。
 
 按[结果判读](REVIEW_RESULTS_zh-CN.public.md)和[四父模板](templates/REVIEW_REPORT_zh-CN.public.md)分别列执行、数值、比较和分类。固定协议分类不推广为任意分子或全部芳香性结论。L4可保存检查点，**不支持恢复运行**。原P01—P14不因新增用户入口失败自动重审。本文修订未执行构建／计算，不修改原规则或门槛。
+
+条件态的能量、度量、允许变化和未完成资格见[协议资格说明](CONDITIONAL_PROTOCOL_QUALIFICATION_zh-CN.md)。不新增计算或转移旧 PASS。

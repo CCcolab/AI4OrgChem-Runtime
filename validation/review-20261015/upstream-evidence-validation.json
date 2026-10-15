@@ -1,0 +1,29 @@
+{
+  "scope": "READ_ONLY_SAVED_EVIDENCE_NOT_NEW_SCIENCE",
+  "review_base": "02ea458881872f26be3e03fe8bf2de549f82b2a9",
+  "validators": {
+    "p12": {
+      "status": "PASS",
+      "verdict": "P12_CONSISTENT",
+      "evidence_points": [
+        12,
+        14,
+        16
+      ],
+      "n16_direct_GE_count": 28,
+      "failures": []
+    },
+    "p14": {
+      "status": "NOT_EXECUTED_MISSING_DEPENDENCY",
+      "dependency": "jsonschema",
+      "scientific_execution": false,
+      "environment_modified": false
+    },
+    "public-evidence": {
+      "status": "PASS",
+      "propositions_checked": 14,
+      "failures": [],
+      "scope": "packaged processed evidence and frozen verdict integrity only"
+    }
+  }
+}

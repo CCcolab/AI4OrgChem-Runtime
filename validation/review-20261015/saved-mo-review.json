@@ -1,0 +1,54 @@
+{
+  "schema": "canonical-mo-array-review-v1",
+  "policy_sha256": "bba1d52af1e49fbcd80d67794590458c881332c75308a63f9c2e7cde8aac067d",
+  "policy": {
+    "schema": "canonical-mo-review-policy-v1",
+    "role": "HOST_ONLY_ADDITIONAL_ARRAY_REVIEW_NOT_REPLACEMENT_OF_FROZEN_ENDPOINT_GATES",
+    "orthonormality_frobenius_absolute_max": 1e-08,
+    "generalized_eigen_frobenius_hartree_max": 1e-07,
+    "whitened_eigen_relative_max": 1e-08,
+    "hermitian_frobenius_absolute_max": 1e-10,
+    "minimum_overlap_eigenvalue": 1e-10,
+    "maximum_overlap_condition_number": 10000000000.0,
+    "energy_sort_absolute_hartree_max": 1e-10,
+    "density_reconstruction_relative_max": 1e-09,
+    "threshold_basis": "Explicit engineering review policy. Occupied orthonormality, AO metric and density scales follow frozen ordinary-v1 checks. The new full-space equation and normalized residual limits are declared engineering choices, not a new scientific convergence/stability criterion. No original threshold is modified.",
+    "relative_residual_definition": "||Fw Cw - Cw diag(epsilon)||F / max(||Fw Cw||F, (1 hartree) ||Cw||F), Fw=S^(-1/2) F S^(-1/2), Cw=S^(1/2) C",
+    "normalization_note": "Full C-dagger-S-C-I norm is absolute and dimensionless. Raw generalized eigen residual is in hartree; the whitened relative residual is dimensionless. All stated thresholds apply together. Sorting uses absolute hartree tolerance. No implicit numpy allclose relative tolerance.",
+    "wavefunction_stability": "NOT_EXECUTED"
+  },
+  "endpoint_numerical_qualification": {
+    "status": "NOT_REEVALUATED_BY_ORBITAL_REVIEW"
+  },
+  "wavefunction_stability": {
+    "status": "NOT_EXECUTED",
+    "qualified": false
+  },
+  "production_gate_modified": false,
+  "scientific_backend_calls": 0,
+  "full_orbital_qualification": {
+    "status": "PASS_SAVED_ARRAYS_ONLY",
+    "qualified": true,
+    "checks": {
+      "full_orthonormality": true,
+      "generalized_eigen_equation": true,
+      "whitened_relative_eigen_equation": true,
+      "occupation_electron_count": true,
+      "occupation_energy_column_alignment": true,
+      "density_corresponds_to_occupied_columns": true
+    },
+    "residuals": {
+      "full_orthonormality_frobenius": 2.2882505745197993e-14,
+      "generalized_eigen_frobenius_hartree": 5.406036685047802e-09,
+      "whitened_eigen_relative": 2.4148008800054685e-10,
+      "whitened_eigen_frobenius_hartree": 5.198632221636114e-09,
+      "overlap_hermitian_frobenius": 0.0,
+      "fock_hermitian_frobenius": 0.0,
+      "density_reconstruction_relative": 0.0
+    },
+    "density_correspondence": "CHECKED",
+    "scope": "Complete canonical arrays at the supplied geometry/operator only; no SCF, method, stability or new-installation acceptance."
+  },
+  "input_npz_sha256": "a26a28d072c8709303440e18dec05535d2f6789d8b39bd7588b8b0a4bb73e919",
+  "review_tool_sha256": "006ca567b5082e800ef86c29185a186b1ca2e981c1c75b013ac293a8b5e7cdd9"
+}

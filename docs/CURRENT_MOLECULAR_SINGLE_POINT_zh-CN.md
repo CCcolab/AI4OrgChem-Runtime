@@ -88,3 +88,5 @@ python -B .\scripts\run-installed-runtime.py --installation-record ..\installati
 首版数值门禁仅限定指定几何 RHF 的已登记检查。所有 canonical 轨道，尤其虚空间，不因现有布尔值通过而取得全空间资格；全 MO 本征残差只是诊断。新宿主回执的 `evidence_review.qualification_scope` 与 `evidence_review.orbital_export_qualification` 明确该限制。全轨道正交／本征门禁的新版本尚未实现；稳定性与物理基态认证未执行。原四分子结果及12项门禁不改写。
 
 历史候选环境的操作与身份见 [历史普通服务节选](MOLECULAR_SINGLE_POINT_zh-CN.public.md)，只适用于其原候选镜像。当前安装不要使用其中的 start-molecular-service.ps1。
+
+[完整 MO 附加只读审查](CANONICAL_ORBITAL_REVIEW_zh-CN.md)已提供独立工具；尚未接入冻结生产门槛，稳定性仍未执行，不改写历史验收。

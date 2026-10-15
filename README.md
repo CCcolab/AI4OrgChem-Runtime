@@ -64,7 +64,7 @@ For component licenses and distribution conditions, see the [license review](doc
 <!-- CURRENT_CAPABILITIES_START -->
 See the [current professional service matrix](docs/en/CURRENT_PROFESSIONAL_SERVICES.md) for inputs, methods, recorded acceptance, cost and interpretation; the [current capability registry](configs/runtime-capabilities-v2.json) is the machine-readable declaration.
 
-[2 CI jobs succeeded for be51dcbb](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38036972441); this records engineering contracts and legacy L0/L1, not acceptance of later changes or all scientific services.
+Latest saved CI: [2 jobs succeeded for 2f9e7f75](https://github.com/CCcolab/AI4OrgChem-Runtime/actions/runs/38554057542); this covers that commit’s engineering contracts and legacy L0/L1. Remote CI for this increment is NOT_EXECUTED. The 15 Skills are a post-v0.1.0 source supplement; old Release assets and guide ZIP do not automatically include them.
 <!-- CURRENT_CAPABILITIES_END -->
 
 Runtime development tests are retained locally and excluded from the current public tree and installation package. Public CI now covers source installation, container permissions/exit codes/output persistence and legacy L0/L1; Runtime unit suites are no longer executed in public CI. Prior passing records retain their original commits and scope. See [test distribution scope](docs/en/TEST_DISTRIBUTION.md).

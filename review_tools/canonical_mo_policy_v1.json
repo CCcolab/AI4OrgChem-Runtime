@@ -1,0 +1,16 @@
+{
+  "schema": "canonical-mo-review-policy-v1",
+  "role": "HOST_ONLY_ADDITIONAL_ARRAY_REVIEW_NOT_REPLACEMENT_OF_FROZEN_ENDPOINT_GATES",
+  "orthonormality_frobenius_absolute_max": 1e-8,
+  "generalized_eigen_frobenius_hartree_max": 1e-7,
+  "whitened_eigen_relative_max": 1e-8,
+  "hermitian_frobenius_absolute_max": 1e-10,
+  "minimum_overlap_eigenvalue": 1e-10,
+  "maximum_overlap_condition_number": 1e10,
+  "energy_sort_absolute_hartree_max": 1e-10,
+  "density_reconstruction_relative_max": 1e-9,
+  "threshold_basis": "Explicit engineering review policy. Occupied orthonormality, AO metric and density scales follow frozen ordinary-v1 checks. The new full-space equation and normalized residual limits are declared engineering choices, not a new scientific convergence/stability criterion. No original threshold is modified.",
+  "relative_residual_definition": "||Fw Cw - Cw diag(epsilon)||F / max(||Fw Cw||F, (1 hartree) ||Cw||F), Fw=S^(-1/2) F S^(-1/2), Cw=S^(1/2) C",
+  "normalization_note": "Full C-dagger-S-C-I norm is absolute and dimensionless. Raw generalized eigen residual is in hartree; the whitened relative residual is dimensionless. All stated thresholds apply together. Sorting uses absolute hartree tolerance. No implicit numpy allclose relative tolerance.",
+  "wavefunction_stability": "NOT_EXECUTED"
+}

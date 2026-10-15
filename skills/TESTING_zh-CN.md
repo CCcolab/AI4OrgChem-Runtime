@@ -29,3 +29,13 @@ RHF保留水分子6-31G(d)/STO-3G两次历史运行，每次一次SCF；当前�
 限定Windows数学/RDKit及既有Linux后端记录不证明全部平台。尚未覆盖新的条件SCF、真实约束分子优化、完整P11/P12多态、真实四父分类、全新引擎安装/生命周期、波函数稳定性和完整轨道资格。新镜像/协议/输入不继承旧Runtime资格；本模块测试没有进入当前公开GitHub Actions jobs。
 
 本次公开整理只核查格式、哈希、安全复制和链接，不重算、不修改旧v0.1.0标签或Release。
+
+## 2026-10-15 公开最小程序回归
+
+现已公开[固定输入、预期值、容差及执行程序](../validation/public_regression/README.md)。每个 Skill 对应正常数据、具体拒绝数据，以及同一记录器在该上下文下的缺文件失败测试。新增检查还覆盖旧端点通过而虚轨道损坏的反例、预算未闭合与缺态组装等生产 API。它们是确定性程序示例，不是 Agent 阅读指令后实际完成任务的独立评测。
+
+```console
+python -B scripts/run-public-review-regression.py --output /path/to/new-review-record
+```
+
+本轮只用合成数据及保存数组，不运行新 RHF、SCF、积分、分子优化、训练或容器。当前 RHF Skill 的真实端到端补验仍为 NOT_EXECUTED（用户明确本轮不计算）；使用助手只补显式服务选择/准入检查，不冒充自然语言路由盲测。新增 CI 已配置，远端运行 NOT_EXECUTED。历史 170 项及其哈希不改写；当前指令字节不因新增示例而改变。详见[本轮状态](../validation/review-20261015/status.json)。

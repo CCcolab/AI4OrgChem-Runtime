@@ -48,3 +48,5 @@ Standalone analysis or another backend's preparation range does not extend Runti
 ## 测试范围 / Test scope
 
 2026-10-14本地记录：13个限定流程场景符合预设预期。反例的正确拒绝也计作符合预期；保存结果重算、解析模型、工程探针和真实量化调用分别报告。公开交付只有[限定测试摘要](../../validation/skills/test-summary.json)和[范围说明](../TESTING_zh-CN.md)，不含全部原始运行载荷，不能据此独立复现全部测试。未认证所有输入、其他平台或完整科学功能。
+
+For Runtime conditional states, see the [protocol qualification note](../../docs/en/CONDITIONAL_PROTOCOL_QUALIFICATION.md) / [中文](../../docs/CONDITIONAL_PROTOCOL_QUALIFICATION_zh-CN.md). Restricted gradients, full stationarity and stability remain separate.

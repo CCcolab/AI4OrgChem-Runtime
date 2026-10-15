@@ -31,3 +31,5 @@
 本地记录包括两份历史水分子RHF运行、其余10项的106个限定场景，以及新增4项的64个限定场景；不是独立Agent盲测或全部科学功能认证。本次仅整理公开材料，没有重算。
 
 这是v0.1.0之后的源码增补。取得包含skills/的分支或提交；旧v0.1.0标签/Release附件、网页指南ZIP不会自动包含这些文件。本次不新增版本号、标签、镜像或Release。
+
+公开维护补充：[最小程序回归](../validation/public_regression/README.md) · [完整 MO 附加审查](../docs/CANONICAL_ORBITAL_REVIEW_zh-CN.md)。仅执行工程/合成数据检查，未补跑当前 RHF；历史测试不转为新版本 Agent 验收。15 个 Skill 属于 v0.1.0 后源码增补，旧 Release 资产及指南 ZIP 不自动包含。

@@ -53,3 +53,5 @@ Counts have different meanings. A preparation without a grid reports grid integr
 Conditional Compute remains closed; these diagnoses do not prove that no qualified root exists and do not automatically overturn original P01–P14. External expert consultation was cancelled by the owner and is not an implementation gate. Ordinary closed-shell singlet input is a model assumption; complete canonical/virtual-orbital qualification is not implemented, and ordinary wavefunction stability was not executed.
 
 Use the [current review template](CURRENT_SERVICE_REVIEW.md), or the [P14 four-parent template](P14_REVIEW_TEMPLATE.md). Separate execution, numerical checks, scientific comparison and interpretation. Report missing, unknown, unavailable and unexecuted items explicitly rather than generating PASS.
+
+Review additions: [conditional protocols](CONDITIONAL_PROTOCOL_QUALIFICATION.md) · [additional MO review](CANONICAL_ORBITAL_REVIEW.md) · [P12 metrics](P12_COMPARISON_METRICS.md). Public deterministic examples do not constitute blind Agent or new scientific acceptance.

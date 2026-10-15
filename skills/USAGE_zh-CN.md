@@ -72,3 +72,5 @@ fi
 ## 5. 输出与本地测试
 
 写入新目录；记录输入、单位、方法、参数、版本、真实日志与执行状态。未执行/不合格不得填成功结果，残差和容差来源分列。[测试范围](TESTING_zh-CN.md)说明每项实际覆盖和未执行事项；公开摘要不含全部原始证据。安装示例的隔离副本检查不认证所有平台。
+
+公开维护补充：[最小程序回归](../validation/public_regression/README.md) · [完整 MO 附加审查](../docs/CANONICAL_ORBITAL_REVIEW_zh-CN.md)。仅执行工程/合成数据检查，未补跑当前 RHF；历史测试不转为新版本 Agent 验收。15 个 Skill 属于 v0.1.0 后源码增补，旧 Release 资产及指南 ZIP 不自动包含。

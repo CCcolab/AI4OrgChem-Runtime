@@ -1,0 +1,26 @@
+{
+  "schema": "p12-comparison-metrics-explanation-v1",
+  "kind": "DERIVED_READ_ONLY_SCALAR_EXPLANATION_NOT_NEW_SCIENCE",
+  "source_commit": "28511f3d84fa65707a107cde1e8121a7b4334ecb",
+  "source_path": "evidence/P01-P14/P12/n16-same-basis-ledger.json",
+  "source_sha256": "29bc336739475af39ef92bca1460f0ccbf127db411571a895e608c3c8d864200",
+  "rounded_comparison": {
+    "project_cese_kcal_mol": -0.339527,
+    "printed_source_cese_kcal_mol": -0.65,
+    "absolute_difference_kcal_mol": 0.310473,
+    "source_magnitude_difference_percent": 47.76507692307692,
+    "precision": "Calculated from displayed rounded values, not a new electronic-structure result"
+  },
+  "registered_metric": {
+    "formula": "abs(CESE) / abs(sum_delta_EAm + sum_delta_EnAm)",
+    "sum_delta_EAm_kcal_mol": 17.426664112539722,
+    "sum_delta_EnAm_kcal_mol": -1.282813532688139,
+    "cese_kcal_mol": -0.33952721462311064,
+    "ratio": 0.021031365035480403,
+    "percent": 2.1031365035480403,
+    "threshold_ratio": 0.1,
+    "denominator_note": "Signed contributions are summed first, then the absolute value is taken. This is not sum(abs(each contribution))."
+  },
+  "historical_verdict_changed": false,
+  "new_scientific_calls": 0
+}

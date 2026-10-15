@@ -31,3 +31,5 @@ Every Skill contains `SKILL.md` and a bilingual `README.md`; no optional subfold
 Local records comprise two historical water RHF runs, 106 scenarios for the other ten original modules, and 64 scenarios for four workflow modules. These are scoped maintainer records, not independent blind Agent evaluation or full scientific certification. No scientific run is repeated for this packaging.
 
 This is a post-v0.1.0 source supplement: obtain the branch/commit that contains `skills/`. The immutable v0.1.0 tag/assets and the static guide ZIP do not gain these files. No new version, tag, image or Release is created by this addition.
+
+Review additions: [public deterministic regression](../validation/public_regression/README.md) · [saved-array MO review](../docs/en/CANONICAL_ORBITAL_REVIEW.md). No new RHF is run and historical tests are not new-version Agent acceptance. These 15 Skills are a post-v0.1.0 source supplement, not automatically part of old Release assets or guide ZIP.

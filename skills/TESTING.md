@@ -29,3 +29,13 @@ The public summary hashes refer to locally retained original records. Full reque
 Only the recorded Windows numeric/RDKit and existing Linux-backend scopes were tested. Installing the folders is not backend or cross-platform scientific acceptance. Full conditional SCF, real constrained molecular optimization, complete P11/P12 collections, real four-parent classification, fresh-engine installation/lifecycle, stable wavefunctions and full orbital qualification remain outside these Skill tests. Historical Runtime acceptance does not transfer to another image, protocol or molecule. Skill tests are not run by the current public GitHub Actions jobs.
 
 Publication packaging checks validate current formatting, instruction hashes, safe copies and internal links only. They do not repeat scientific calculation or modify the existing v0.1.0 Release.
+
+## 2026-10-15 public deterministic regression
+
+A [public minimal set](../validation/public_regression/README.md) now includes fixed inputs, expected values, explicit tolerances and programs. Every Skill has a normal example, a specific refusal and a common missing-file recording case. Further probes use the existing budget/assembly/input APIs and reject corrupt virtual orbitals even when the old endpoint flag passes. These are deterministic program checks, not independent Agent task evaluation.
+
+```console
+python -B scripts/run-public-review-regression.py --output /path/to/new-review-record
+```
+
+This increment uses only synthetic data and saved arrays. No new RHF/SCF, integrals, molecular optimization, training or container execution occurs. Current RHF end-to-end calculation remains NOT_EXECUTED under the user's no-calculation boundary. Usage-assistant examples validate explicit service selection/admission, not natural-language routing. The new CI job is configured; remote execution is NOT_EXECUTED. The historical 170 cases and their hashes are retained, as are current instruction bytes. See [increment status](../validation/review-20261015/status.json).

@@ -83,3 +83,5 @@ Replace `ACTUAL_RUN_ID` with the real launcher-returned directory. Create a sepa
 Ledger/preflight requires1GiB scratch as well as its1GiB memory profile. The live limits in the table above are task-specific, not idle daily memory consumption.
 
 Read `output/result.json`, `output/worker-receipt.json`, `output/guard-receipt.json`, `output/run-manifest.json`, host records and budget from the actual returned run. Use [the matrix](CURRENT_PROFESSIONAL_SERVICES.md) for state checks/method/identity. Keep actual optimized.xyz/trajectories/intermediates without assuming a uniform trajectory format. Insufficient resources mean recorded refusal, not reduced memory/scientific thresholds. No new admission is imposed on the previously accepted P12 by this documentation review. Single-state acceptance is not complete assembly; L4 has no resume.
+
+See [P12 comparison metrics](P12_COMPARISON_METRICS.md) for the distinct denominators and rounding sources. Historical results and acceptance identities are unchanged.

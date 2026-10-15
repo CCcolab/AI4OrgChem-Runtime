@@ -1,0 +1,728 @@
+{
+  "schema": "public-skill-check-examples-v1",
+  "scope": "Deterministic examples linked to current instruction hashes; not Agent behavior or scientific backend acceptance.",
+  "cases": [
+    {
+      "skill": "rhf-single-point",
+      "normal": {},
+      "expected": {
+        "electrons": 10,
+        "scf_calls": 0
+      },
+      "refusal": {
+        "changes": {
+          "multiplicity": 3
+        }
+      },
+      "refusal_message": "neutral singlet",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "table-fitting-residuals",
+      "normal": {
+        "x": [
+          0,
+          1,
+          2
+        ],
+        "y": [
+          1,
+          3,
+          5
+        ]
+      },
+      "expected": {
+        "coefficients": [
+          1,
+          2
+        ],
+        "rss": 0
+      },
+      "refusal": {
+        "x": [
+          1,
+          1,
+          1
+        ],
+        "y": [
+          1,
+          3,
+          5
+        ]
+      },
+      "refusal_message": "rank-deficient",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "orbital-localization-density",
+      "normal": {
+        "C": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "U": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "occupations": [
+          2,
+          2
+        ]
+      },
+      "expected": {
+        "density_residual": 0
+      },
+      "refusal": {
+        "C": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "U": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "occupations": [
+          2,
+          0
+        ]
+      },
+      "refusal_message": "unequal occupations",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "molecular-graph-energy-ledger",
+      "normal": {
+        "smiles": "CCO",
+        "query": "CO"
+      },
+      "expected": {
+        "matches": 1,
+        "quantum_energy_generated": false
+      },
+      "refusal": {
+        "smiles": "CCO.[Na+]",
+        "query": "CO"
+      },
+      "refusal_message": "fragment policy",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "same-hamiltonian-path-closure",
+      "normal": {
+        "edges": [
+          {
+            "from": "A",
+            "to": "B",
+            "energy": 1,
+            "protocol": "synthetic-H"
+          },
+          {
+            "from": "B",
+            "to": "A",
+            "energy": -1,
+            "protocol": "synthetic-H"
+          }
+        ]
+      },
+      "expected": {
+        "closure": 0,
+        "independent_evidence": false
+      },
+      "refusal": {
+        "edges": [
+          {
+            "from": "A",
+            "to": "B",
+            "energy": 1,
+            "protocol": "synthetic-H"
+          },
+          {
+            "from": "B",
+            "to": "A",
+            "energy": -1,
+            "protocol": "other-H"
+          }
+        ]
+      },
+      "refusal_message": "incompatible",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "nonorthogonal-subspace",
+      "normal": {
+        "S": [
+          [
+            1,
+            0.2
+          ],
+          [
+            0.2,
+            1
+          ]
+        ],
+        "B": [
+          [
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        "v": [
+          0,
+          1
+        ]
+      },
+      "expected": {
+        "rank": 1,
+        "squared_leakage": 0.96
+      },
+      "refusal": {
+        "S": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "B": [
+          [
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        "v": [
+          0,
+          1
+        ]
+      },
+      "refusal_message": "positive metric",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "partition-mask-audit",
+      "normal": {
+        "matrix": [
+          [
+            2,
+            0.2
+          ],
+          [
+            0.2,
+            2
+          ]
+        ],
+        "mask": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "requires_positive_metric": true
+      },
+      "expected": {
+        "minimum_eigenvalue": 2
+      },
+      "refusal": {
+        "matrix": [
+          [
+            1,
+            0.8,
+            0.8
+          ],
+          [
+            0.8,
+            1,
+            0.8
+          ],
+          [
+            0.8,
+            0.8,
+            1
+          ]
+        ],
+        "mask": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "requires_positive_metric": true
+      },
+      "refusal_message": "destroys positive",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "reflection-parity",
+      "normal": {
+        "S": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "R": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "B": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": {
+        "closure_residual": 0
+      },
+      "refusal": {
+        "S": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "R": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "B": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ]
+      },
+      "refusal_message": "not reflection-closed",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "fragment-working-basis",
+      "normal": {
+        "B": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "S": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "supports": [
+          [
+            0
+          ],
+          [
+            1
+          ]
+        ],
+        "required_rank": 2
+      },
+      "expected": {
+        "rank": 2,
+        "gram": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "refusal": {
+        "B": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "S": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "supports": [
+          [
+            0
+          ],
+          [
+            1
+          ]
+        ],
+        "required_rank": 2
+      },
+      "refusal_message": "coverage/rank",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "nuclear-repulsion-response",
+      "normal": {
+        "charges": [
+          1,
+          1
+        ],
+        "coordinates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ]
+        ],
+        "unit": "bohr"
+      },
+      "expected": {
+        "energy_hartree": 0.5,
+        "gradient_hartree_per_bohr": [
+          [
+            0.25,
+            0,
+            0
+          ],
+          [
+            -0.25,
+            0,
+            0
+          ]
+        ]
+      },
+      "refusal": {
+        "charges": [
+          1,
+          1
+        ],
+        "coordinates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "unit": "bohr"
+      },
+      "refusal_message": "coincident",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "scan-energy-curvature",
+      "normal": {
+        "x": [
+          -1,
+          0,
+          2
+        ],
+        "energy": [
+          1,
+          0,
+          4
+        ],
+        "unit": "bohr",
+        "state_ids": [
+          "A",
+          "A",
+          "A"
+        ]
+      },
+      "expected": {
+        "curvature": 2,
+        "unit": "hartree/bohr2"
+      },
+      "refusal": {
+        "x": [
+          -1,
+          0,
+          2
+        ],
+        "energy": [
+          1,
+          0,
+          4
+        ],
+        "unit": "bohr",
+        "state_ids": [
+          "A",
+          "B",
+          "A"
+        ]
+      },
+      "refusal_message": "discontinuity",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "fixed-protocol-energy-review",
+      "normal": {
+        "states": [
+          {
+            "protocol": "synthetic-fixed",
+            "geometry": "synthetic-g",
+            "qualified": true,
+            "energy": -2
+          },
+          {
+            "protocol": "synthetic-fixed",
+            "geometry": "synthetic-g",
+            "qualified": true,
+            "energy": -1.9
+          }
+        ]
+      },
+      "expected": {
+        "difference_hartree": 0.1,
+        "physical_bond_energy_claimed": false
+      },
+      "refusal": {
+        "states": [
+          {
+            "protocol": "synthetic-fixed",
+            "geometry": "synthetic-g",
+            "qualified": true,
+            "energy": -2
+          },
+          {
+            "protocol": "synthetic-fixed",
+            "geometry": "other-geometry",
+            "qualified": true,
+            "energy": -1.9
+          }
+        ]
+      },
+      "refusal_message": "incompatible fixed",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "constrained-optimization-response",
+      "normal": {
+        "jacobian": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "cartesian_gradient": [
+          2,
+          -2
+        ],
+        "claim_full_minimum": false
+      },
+      "expected": {
+        "reduced_gradient": [
+          0
+        ],
+        "cartesian_norm": 2.8284271247461903,
+        "molecular_optimization_calls": 0
+      },
+      "refusal": {
+        "jacobian": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "cartesian_gradient": [
+          2,
+          -2
+        ],
+        "claim_full_minimum": true
+      },
+      "refusal_message": "full minimum",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "multistate-size-comparison",
+      "normal": {
+        "required": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": {
+            "qualified": true,
+            "weight": 2,
+            "energy": 1
+          },
+          "B": {
+            "qualified": true,
+            "weight": -1,
+            "energy": 3
+          }
+        }
+      },
+      "expected": {
+        "assembled_energy": -1,
+        "new_state_calculations": 0
+      },
+      "refusal": {
+        "required": [
+          "A",
+          "B",
+          "C"
+        ],
+        "states": {
+          "A": {
+            "qualified": true,
+            "weight": 2,
+            "energy": 1
+          },
+          "B": {
+            "qualified": true,
+            "weight": -1,
+            "energy": 3
+          }
+        }
+      },
+      "refusal_message": "missing or extra",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    },
+    {
+      "skill": "runtime-usage-assistant",
+      "normal": {
+        "service": "ordinary-molecular-single-point"
+      },
+      "expected": {
+        "profile": "rhf-631gd-small-v1",
+        "execution_authorized": false,
+        "docker_calls": 0
+      },
+      "refusal": {
+        "service": "user-compute"
+      },
+      "refusal_message": "not enabled",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 0,
+      "failure_kind": "MISSING_FILE_IN_COMMON_RECORDING_HARNESS_NOT_A_REAL_BACKEND_FAILURE"
+    }
+  ]
+}
