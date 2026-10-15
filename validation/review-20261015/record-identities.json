@@ -1,0 +1,22 @@
+{
+  "schema": "review-record-byte-identities-v1",
+  "kind": "ORIGINAL_LOCAL_TEST_RECORD_BYTES",
+  "not_new_scientific_result": true,
+  "files": [
+    {
+      "path": "validation/review-20261015/public-regression-result.json",
+      "sha256": "21b1404df585a00cec7cba690f2f6f459a2be319bae3dc5facf959fa197bbf7f",
+      "size_bytes": 12514
+    },
+    {
+      "path": "validation/review-20261015/public-regression.log",
+      "sha256": "f24d80c772596261384004876770dbea51feaa593b921c3333b869e7decbd673",
+      "size_bytes": 10320
+    },
+    {
+      "path": "validation/review-20261015/saved-mo-review.json",
+      "sha256": "ff548f4d5c74ea3cc9941cd2ac1b57f43400f80f9ad9daba5042200e0d9a5716",
+      "size_bytes": 2976
+    }
+  ]
+}

@@ -45,3 +45,7 @@ scripts/prepare-high-cost-cases.py -text
 skills/**/SKILL.md -text whitespace=cr-at-eol
 skills/manifest.json -text whitespace=cr-at-eol
 validation/skills/test-summary.json -text whitespace=cr-at-eol
+# Keep this increment's actual Windows test-record bytes across clean clones.
+validation/review-20261015/public-regression-result.json -text whitespace=cr-at-eol
+validation/review-20261015/public-regression.log -text whitespace=cr-at-eol
+validation/review-20261015/saved-mo-review.json -text whitespace=cr-at-eol
