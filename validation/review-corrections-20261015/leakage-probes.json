@@ -1,0 +1,116 @@
+{
+  "kind": "MAINTAINER_ARRAY_PROBES_ONLY",
+  "before_runtime_commit": "18007dc4ca04ca762a43ed942781ef31787043a2",
+  "probes": [
+    {
+      "id": "unit",
+      "expected_ratio": 1,
+      "before": {
+        "rank": 1,
+        "squared_leakage": 1.0
+      },
+      "after": {
+        "status": "CHECK_COMPLETED",
+        "value": {
+          "rank": 1,
+          "squared_leakage": 1.0
+        }
+      },
+      "matches_expected": true
+    },
+    {
+      "id": "scale2",
+      "expected_ratio": 1,
+      "before": {
+        "rank": 1,
+        "squared_leakage": 4.0
+      },
+      "after": {
+        "status": "CHECK_COMPLETED",
+        "value": {
+          "rank": 1,
+          "squared_leakage": 1.0
+        }
+      },
+      "matches_expected": true
+    },
+    {
+      "id": "scale-negative3",
+      "expected_ratio": 1,
+      "before": {
+        "rank": 1,
+        "squared_leakage": 9.0
+      },
+      "after": {
+        "status": "CHECK_COMPLETED",
+        "value": {
+          "rank": 1,
+          "squared_leakage": 1.0
+        }
+      },
+      "matches_expected": true
+    },
+    {
+      "id": "complex2i",
+      "expected_ratio": 1,
+      "before": {
+        "rank": 1,
+        "squared_leakage": 4.0
+      },
+      "after": {
+        "status": "CHECK_COMPLETED",
+        "value": {
+          "rank": 1,
+          "squared_leakage": 1.0
+        }
+      },
+      "matches_expected": true
+    },
+    {
+      "id": "metric4",
+      "expected_ratio": 1,
+      "before": {
+        "rank": 1,
+        "squared_leakage": 4.0
+      },
+      "after": {
+        "status": "CHECK_COMPLETED",
+        "value": {
+          "rank": 1,
+          "squared_leakage": 1.0
+        }
+      },
+      "matches_expected": true
+    },
+    {
+      "id": "mixed",
+      "expected_ratio": 0.5,
+      "before": {
+        "rank": 1,
+        "squared_leakage": 4.0
+      },
+      "after": {
+        "status": "CHECK_COMPLETED",
+        "value": {
+          "rank": 1,
+          "squared_leakage": 0.5
+        }
+      },
+      "matches_expected": true
+    },
+    {
+      "id": "zero",
+      "expected_ratio": null,
+      "before": {
+        "rank": 1,
+        "squared_leakage": 0.0
+      },
+      "after": {
+        "status": "UNDEFINED_REFUSED",
+        "message": "zero vector has undefined normalized leakage"
+      },
+      "matches_expected": true
+    }
+  ],
+  "quantum_calls": 0
+}

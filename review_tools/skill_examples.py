@@ -32,6 +32,64 @@ def metric(value):
     return s
 
 
+def normalized_subspace_leakage(data):
+    """One-vector S-norm ratio, using whitened SVD; never a molecular result.
+
+    Scaling v and each B column before whitening prevents magnitude overflow or
+    underflow. The policy thresholds and supported shapes are versioned beside
+    this example, separately from every frozen scientific worker.
+    """
+    policy = json.loads((Path(__file__).with_name('nonorthogonal_leakage_policy_v1.json')).read_bytes())
+    s = array(data['S'])
+    require(s.ndim == 2 and s.shape[0] == s.shape[1] and len(s) > 0,
+            'nonempty square metric required')
+    s = metric(s)
+    b, v = array(data['B']), array(data['v'])
+    require(b.ndim == 2 and b.shape[0] == len(s) and b.shape[1] > 0,
+            'B must have shape (n, k) with k >= 1')
+    require(v.ndim == 1 and v.shape == (len(s),),
+            'v must be one vector with shape (n,); columns/batches are not supported')
+
+    def component_scale(x, axis=None):
+        return np.maximum(np.max(np.abs(x.real), axis=axis),
+                          np.max(np.abs(x.imag), axis=axis))
+
+    def rescale(x, scale):
+        # Separate real/imaginary divisions also work for subnormal scales;
+        # complex division by a tiny real scalar may overflow its reciprocal.
+        return x.real/scale + 1j*(x.imag/scale) if np.iscomplexobj(x) else x/scale
+
+    v_scale = float(component_scale(v))
+    require(v_scale > 0, 'zero vector has undefined normalized leakage')
+    s_scaled = rescale(s, float(component_scale(s)))
+    eig = np.linalg.eigvalsh(s_scaled)
+    require(np.isfinite(eig).all() and eig[0] > 0 and
+            eig[-1]/eig[0] <= policy['maximum_metric_condition_number'],
+            'metric condition prevents reliable normalized leakage')
+    whitening = np.linalg.cholesky(s_scaled).conj().T
+    b_scale = component_scale(b, axis=0)
+    b_scaled = rescale(b, np.where(b_scale > 0, b_scale, 1.))
+    white_b = whitening@b_scaled
+    white_v = whitening@rescale(v, v_scale)
+    require(np.isfinite(white_b).all() and np.isfinite(white_v).all(),
+            'nonfinite whitened data')
+    u, singular, _ = np.linalg.svd(white_b, full_matrices=False)
+    require(np.isfinite(singular).all(), 'nonfinite singular values')
+    cutoff = policy['relative_singular_value_cutoff']*singular[0]
+    rank = int(np.count_nonzero(singular > cutoff))
+    projected = u[:, :rank]@(u[:, :rank].conj().T@white_v)
+    residual = white_v-projected
+    denominator = float(np.vdot(white_v, white_v).real)
+    numerator = float(np.vdot(residual, residual).real)
+    require(np.isfinite(denominator) and denominator > np.finfo(float).tiny and
+            np.isfinite(numerator), 'S-norm ratio is not reliably defined')
+    ratio = numerator/denominator
+    tolerance = policy['ratio_roundoff_tolerance']
+    require(np.isfinite(ratio) and -tolerance <= ratio <= 1+tolerance,
+            'normalized leakage is outside its reliable range')
+    return {'rank': rank, 'squared_leakage': float(np.clip(ratio, 0., 1.))}
+
+
 def evaluate(name, data):
     if name == 'rhf-single-point':
         from runtime.molecular_service.input import parse_request, strict_json
@@ -73,11 +131,7 @@ def evaluate(name, data):
         require(all(rows[i]['to'] == rows[(i+1) % len(rows)]['from'] for i in range(len(rows))), 'path has a missing bridge')
         return {'closure': float(sum(r['energy'] for r in rows)), 'independent_evidence': False}
     if name == 'nonorthogonal-subspace':
-        s, b, v = metric(data['S']), array(data['B']), array(data['v'])
-        gram = b.conj().T@s@b
-        projected = b@np.linalg.pinv(gram, rcond=1e-12)@b.conj().T@s@v
-        residual = v-projected
-        return {'rank': int(np.linalg.matrix_rank(gram)), 'squared_leakage': float(np.real(residual.conj().T@s@residual))}
+        return normalized_subspace_leakage(data)
     if name == 'partition-mask-audit':
         a, mask = array(data['matrix']), array(data['mask'])
         require(a.shape == mask.shape and np.all((mask == 0) | (mask == 1)), 'binary same-shape mask required')

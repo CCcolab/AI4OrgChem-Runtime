@@ -39,3 +39,7 @@ python -B scripts/run-public-review-regression.py --output /path/to/new-review-r
 ```
 
 This increment uses only synthetic data and saved arrays. No new RHF/SCF, integrals, molecular optimization, training or container execution occurs. Current RHF end-to-end calculation remains NOT_EXECUTED under the user's no-calculation boundary. Usage-assistant examples validate explicit service selection/admission, not natural-language routing. The new CI job is configured; remote execution is NOT_EXECUTED. The historical 170 cases and their hashes are retained, as are current instruction bytes. See [increment status](../validation/review-20261015/status.json).
+
+## Follow-up normalization correction (local, not pushed)
+
+R02 adds 17 analytic leakage checks; the current 96-test run includes the previous 79 checks and uses the corrected implementation. Prior logs and the historical 170-scenario record remain unchanged. Read the [correction scope and evidence](../docs/REVIEW_CORRECTIONS_20261015_zh-CN.md). The new tests are programs, not independent Agent behavior; real RHF, remote CI and fresh installation remain NOT_EXECUTED.

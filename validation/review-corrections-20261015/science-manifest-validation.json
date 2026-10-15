@@ -1,0 +1,162 @@
+{
+  "before": {
+    "command": [
+      "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261015-review-remediation\\independent-check-env\\Scripts\\python.exe",
+      "-B",
+      "software/scripts/validate_release_package.py"
+    ],
+    "returncode": 1,
+    "result": {
+      "status": "FAIL",
+      "repository_files": 590,
+      "manifest_rows": 589,
+      "duplicate_groups": 18,
+      "allowed_historical_duplicate_groups": 18,
+      "workflow_uses_secrets": false,
+      "expensive_quantum_chemistry_in_ci": false,
+      "failure_count": 4,
+      "failures": [
+        "manifest digest mismatch: evidence/P01-P14/P12/protocol.md",
+        "manifest digest mismatch: evidence/P01-P14/P12/report.md",
+        "manifest digest mismatch: manuscripts/P01-P14_evidence_matrix_EN.md",
+        "manifest digest mismatch: manuscripts/P01-P14_evidence_matrix_zh-CN.md"
+      ]
+    },
+    "kind": "MAINTAINER_LOCAL_REPRODUCTION_NOT_ORIGINAL_REVIEWER_LOG"
+  },
+  "after": {
+    "status": "PASS_SAVED_RECORD_AND_RELEASE_CHECKS_ONLY",
+    "new_changed_files": [
+      "manifests/FILE_INVENTORY.md",
+      "manifests/sha256-manifest.json"
+    ],
+    "records": [
+      {
+        "name": "refresh",
+        "command": [
+          "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261015-review-remediation\\independent-check-env\\Scripts\\python.exe",
+          "-B",
+          "software/scripts/refresh_release_snapshot.py"
+        ],
+        "returncode": 0,
+        "stdout_log": "R01-refresh.stdout.log",
+        "stderr_log": "R01-refresh.stderr.log",
+        "result": {
+          "status": "REFRESHED_VALIDATION_REQUIRED",
+          "repository_root": "D:\\AI4Science\\ai4orgchem-runtime-workspaces\\review-20261015\\science",
+          "inventory_rows": 587,
+          "manifest_rows": 589,
+          "next_command": "python software/scripts/validate_release_package.py"
+        }
+      },
+      {
+        "name": "release",
+        "command": [
+          "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261015-review-remediation\\independent-check-env\\Scripts\\python.exe",
+          "-B",
+          "software/scripts/validate_release_package.py"
+        ],
+        "returncode": 0,
+        "stdout_log": "R01-release.stdout.log",
+        "stderr_log": "R01-release.stderr.log",
+        "result": {
+          "status": "PASS",
+          "repository_files": 590,
+          "manifest_rows": 589,
+          "duplicate_groups": 18,
+          "allowed_historical_duplicate_groups": 18,
+          "workflow_uses_secrets": false,
+          "expensive_quantum_chemistry_in_ci": false,
+          "failure_count": 0,
+          "failures": []
+        }
+      },
+      {
+        "name": "p12",
+        "command": [
+          "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261015-review-remediation\\independent-check-env\\Scripts\\python.exe",
+          "-B",
+          "software/scripts/validate_p12_evidence.py"
+        ],
+        "returncode": 0,
+        "stdout_log": "R01-p12.stdout.log",
+        "stderr_log": "R01-p12.stderr.log",
+        "result": {
+          "status": "PASS",
+          "verdict": "P12_CONSISTENT",
+          "evidence_points": [
+            12,
+            14,
+            16
+          ],
+          "n16_direct_GE_count": 28,
+          "failures": []
+        }
+      },
+      {
+        "name": "public",
+        "command": [
+          "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261015-review-remediation\\independent-check-env\\Scripts\\python.exe",
+          "-B",
+          "software/scripts/validate_public_evidence.py"
+        ],
+        "returncode": 0,
+        "stdout_log": "R01-public.stdout.log",
+        "stderr_log": "R01-public.stderr.log",
+        "result": {
+          "status": "PASS",
+          "propositions_checked": 14,
+          "failures": [],
+          "scope": "packaged processed evidence and frozen verdict integrity only"
+        }
+      },
+      {
+        "name": "p14",
+        "command": [
+          "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261015-review-remediation\\independent-check-env\\Scripts\\python.exe",
+          "-B",
+          "software/scripts/validate_p14_evidence.py"
+        ],
+        "returncode": 0,
+        "stdout_log": "R01-p14.stdout.log",
+        "stderr_log": "R01-p14.stderr.log",
+        "result": {
+          "status": "PASS",
+          "evidence_files_checked": 4,
+          "input_files_checked": 2,
+          "schema": "Draft 2020-12",
+          "deterministic_decision_rebuild": true,
+          "expensive_qm_rerun": false,
+          "failures": []
+        }
+      },
+      {
+        "name": "navigation",
+        "command": [
+          "D:\\AI4Science\\ai4orgchem-runtime-deliveries\\20261015-review-remediation\\independent-check-env\\Scripts\\python.exe",
+          "-B",
+          "software/scripts/validate_evidence_navigation.py"
+        ],
+        "returncode": 0,
+        "stdout_log": "R01-navigation.stdout.log",
+        "stderr_log": "R01-navigation.stderr.log",
+        "result": {
+          "status": "PASS",
+          "propositions_navigated": 14,
+          "bilingual_indexes": 2,
+          "navigation_links_checked": 143,
+          "classification_counts": {
+            "consistent": 14,
+            "partially_consistent": 0,
+            "globally_inconsistent": 0,
+            "unknown": 0
+          },
+          "classification_snapshot": "v0.3.2_fourteen_consistent",
+          "failures": []
+        }
+      }
+    ],
+    "scientific_calls": 0
+  },
+  "logs_in_complete_review_package": true
+}

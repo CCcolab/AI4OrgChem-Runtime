@@ -49,3 +49,7 @@ validation/skills/test-summary.json -text whitespace=cr-at-eol
 validation/review-20261015/public-regression-result.json -text whitespace=cr-at-eol
 validation/review-20261015/public-regression.log -text whitespace=cr-at-eol
 validation/review-20261015/saved-mo-review.json -text whitespace=cr-at-eol
+
+# Correction receipts retain exact bytes; the prior review records stay unchanged.
+validation/review-corrections-20261015/public-regression-result.json -text whitespace=cr-at-eol
+validation/review-corrections-20261015/public-regression.log -text whitespace=cr-at-eol

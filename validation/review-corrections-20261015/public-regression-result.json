@@ -1,0 +1,263 @@
+{
+  "schema": "public-review-regression-v1",
+  "scope": "DETERMINISTIC_EXAMPLES_AND_SAVED_ARRAY_CHECKS_NOT_AGENT_EVALUATION",
+  "remote_ci": "NOT_EXECUTED_BY_THIS_LOCAL_COMMAND",
+  "new_molecular_backend_calls": 0,
+  "status": "PASS",
+  "discovered": 96,
+  "executed": 96,
+  "skipped": 0,
+  "failures": [],
+  "errors": [],
+  "test_ids": [
+    "test_canonical_orbitals.CanonicalQualification.test_absolute_orthogonality_limit_is_enforced",
+    "test_canonical_orbitals.CanonicalQualification.test_complete_valid_arrays",
+    "test_canonical_orbitals.CanonicalQualification.test_complex_phase_is_valid",
+    "test_canonical_orbitals.CanonicalQualification.test_corrupt_virtual_rejected_while_old_endpoint_passes",
+    "test_canonical_orbitals.CanonicalQualification.test_density_mismatch_rejected",
+    "test_canonical_orbitals.CanonicalQualification.test_fractional_occupation_not_closed_shell_policy",
+    "test_canonical_orbitals.CanonicalQualification.test_missing_fock_not_pass",
+    "test_canonical_orbitals.CanonicalQualification.test_nonfinite_rejected",
+    "test_canonical_orbitals.CanonicalQualification.test_nonhermitian_fock_rejected",
+    "test_canonical_orbitals.CanonicalQualification.test_nonpositive_metric_rejected",
+    "test_canonical_orbitals.CanonicalQualification.test_rectangular_space_rejected",
+    "test_canonical_orbitals.CanonicalQualification.test_wrong_electron_count_not_pass",
+    "test_canonical_orbitals.CanonicalQualification.test_wrong_energy_column_rejected",
+    "test_canonical_orbitals.CanonicalQualification.test_wrong_occupations_rejected",
+    "test_host_contracts.HostContracts.test_confirmed_cleanup_settles_once_only",
+    "test_host_contracts.HostContracts.test_empty_p11_assembly_does_not_pass",
+    "test_host_contracts.HostContracts.test_empty_p12_assembly_does_not_pass",
+    "test_host_contracts.HostContracts.test_filtered_partial_discovery_exits_nonzero",
+    "test_host_contracts.HostContracts.test_foreign_input_cannot_authorize_compute",
+    "test_host_contracts.HostContracts.test_orbital_cli_existing_output_is_not_modified",
+    "test_host_contracts.HostContracts.test_orbital_cli_missing_input_records_failure",
+    "test_host_contracts.HostContracts.test_unknown_cleanup_holds_budget_and_blocks_concurrency",
+    "test_host_contracts.HostContracts.test_worker_source_lock_still_matches_original_engine",
+    "test_host_contracts.HostContracts.test_zero_test_discovery_exits_nonzero",
+    "test_nonorthogonal_leakage.LeakageExamples.test_basis_column_scaling_invariant",
+    "test_nonorthogonal_leakage.LeakageExamples.test_complex_hermitian_metric",
+    "test_nonorthogonal_leakage.LeakageExamples.test_complex_scalar",
+    "test_nonorthogonal_leakage.LeakageExamples.test_extreme_nonzero_scaling_invariant",
+    "test_nonorthogonal_leakage.LeakageExamples.test_full_subspace",
+    "test_nonorthogonal_leakage.LeakageExamples.test_ill_conditioned_metric_refused",
+    "test_nonorthogonal_leakage.LeakageExamples.test_mixed_direction",
+    "test_nonorthogonal_leakage.LeakageExamples.test_nonfinite_refusals",
+    "test_nonorthogonal_leakage.LeakageExamples.test_nonunit_metric",
+    "test_nonorthogonal_leakage.LeakageExamples.test_rank_deficient_basis",
+    "test_nonorthogonal_leakage.LeakageExamples.test_scaled_negative",
+    "test_nonorthogonal_leakage.LeakageExamples.test_scaled_positive",
+    "test_nonorthogonal_leakage.LeakageExamples.test_shape_refusals",
+    "test_nonorthogonal_leakage.LeakageExamples.test_unit_vector",
+    "test_nonorthogonal_leakage.LeakageExamples.test_zero_basis",
+    "test_nonorthogonal_leakage.LeakageExamples.test_zero_vector_is_recorded_refusal",
+    "test_nonorthogonal_leakage.LeakageExamples.test_zero_vector_refused",
+    "test_skill_examples.AdditionalContracts.test_capability_generator_has_no_drift",
+    "test_skill_examples.AdditionalContracts.test_complex_equal_fractional_occupations",
+    "test_skill_examples.AdditionalContracts.test_degrees_are_converted_to_radians",
+    "test_skill_examples.AdditionalContracts.test_existing_output_is_unchanged",
+    "test_skill_examples.AdditionalContracts.test_external_document_instruction_is_data",
+    "test_skill_examples.AdditionalContracts.test_fock_need_not_be_positive",
+    "test_skill_examples.AdditionalContracts.test_instruction_hashes_and_all_fifteen_fixtures",
+    "test_skill_examples.AdditionalContracts.test_missing_path_bridge",
+    "test_skill_examples.AdditionalContracts.test_p12_denominators_remain_distinct",
+    "test_skill_examples.AdditionalContracts.test_rank_deficient_nonorthogonal_basis",
+    "test_skill_examples.InstructionExamples.test_io_failure__constrained_optimization_response",
+    "test_skill_examples.InstructionExamples.test_io_failure__fixed_protocol_energy_review",
+    "test_skill_examples.InstructionExamples.test_io_failure__fragment_working_basis",
+    "test_skill_examples.InstructionExamples.test_io_failure__molecular_graph_energy_ledger",
+    "test_skill_examples.InstructionExamples.test_io_failure__multistate_size_comparison",
+    "test_skill_examples.InstructionExamples.test_io_failure__nonorthogonal_subspace",
+    "test_skill_examples.InstructionExamples.test_io_failure__nuclear_repulsion_response",
+    "test_skill_examples.InstructionExamples.test_io_failure__orbital_localization_density",
+    "test_skill_examples.InstructionExamples.test_io_failure__partition_mask_audit",
+    "test_skill_examples.InstructionExamples.test_io_failure__reflection_parity",
+    "test_skill_examples.InstructionExamples.test_io_failure__rhf_single_point",
+    "test_skill_examples.InstructionExamples.test_io_failure__runtime_usage_assistant",
+    "test_skill_examples.InstructionExamples.test_io_failure__same_hamiltonian_path_closure",
+    "test_skill_examples.InstructionExamples.test_io_failure__scan_energy_curvature",
+    "test_skill_examples.InstructionExamples.test_io_failure__table_fitting_residuals",
+    "test_skill_examples.InstructionExamples.test_normal__constrained_optimization_response",
+    "test_skill_examples.InstructionExamples.test_normal__fixed_protocol_energy_review",
+    "test_skill_examples.InstructionExamples.test_normal__fragment_working_basis",
+    "test_skill_examples.InstructionExamples.test_normal__molecular_graph_energy_ledger",
+    "test_skill_examples.InstructionExamples.test_normal__multistate_size_comparison",
+    "test_skill_examples.InstructionExamples.test_normal__nonorthogonal_subspace",
+    "test_skill_examples.InstructionExamples.test_normal__nuclear_repulsion_response",
+    "test_skill_examples.InstructionExamples.test_normal__orbital_localization_density",
+    "test_skill_examples.InstructionExamples.test_normal__partition_mask_audit",
+    "test_skill_examples.InstructionExamples.test_normal__reflection_parity",
+    "test_skill_examples.InstructionExamples.test_normal__rhf_single_point",
+    "test_skill_examples.InstructionExamples.test_normal__runtime_usage_assistant",
+    "test_skill_examples.InstructionExamples.test_normal__same_hamiltonian_path_closure",
+    "test_skill_examples.InstructionExamples.test_normal__scan_energy_curvature",
+    "test_skill_examples.InstructionExamples.test_normal__table_fitting_residuals",
+    "test_skill_examples.InstructionExamples.test_refusal__constrained_optimization_response",
+    "test_skill_examples.InstructionExamples.test_refusal__fixed_protocol_energy_review",
+    "test_skill_examples.InstructionExamples.test_refusal__fragment_working_basis",
+    "test_skill_examples.InstructionExamples.test_refusal__molecular_graph_energy_ledger",
+    "test_skill_examples.InstructionExamples.test_refusal__multistate_size_comparison",
+    "test_skill_examples.InstructionExamples.test_refusal__nonorthogonal_subspace",
+    "test_skill_examples.InstructionExamples.test_refusal__nuclear_repulsion_response",
+    "test_skill_examples.InstructionExamples.test_refusal__orbital_localization_density",
+    "test_skill_examples.InstructionExamples.test_refusal__partition_mask_audit",
+    "test_skill_examples.InstructionExamples.test_refusal__reflection_parity",
+    "test_skill_examples.InstructionExamples.test_refusal__rhf_single_point",
+    "test_skill_examples.InstructionExamples.test_refusal__runtime_usage_assistant",
+    "test_skill_examples.InstructionExamples.test_refusal__same_hamiltonian_path_closure",
+    "test_skill_examples.InstructionExamples.test_refusal__scan_energy_curvature",
+    "test_skill_examples.InstructionExamples.test_refusal__table_fitting_residuals"
+  ],
+  "expected_refusal_cases": 15,
+  "expected_common_io_failures": 15,
+  "normal_skill_examples": 15,
+  "skill_snapshots": [
+    {
+      "name": "rhf-single-point",
+      "sha256": "544d148b58fffda3abd2745a2e2dfb6b6de1f9625a636a7e62ed9d5b93ffb868"
+    },
+    {
+      "name": "table-fitting-residuals",
+      "sha256": "9ab4b2dbc60bd6cceb41b4bf31fdc080a62826790dc1d7b18b73e9aae0d570a7"
+    },
+    {
+      "name": "orbital-localization-density",
+      "sha256": "90e7a13579a374f248a74537b0dfd878dd7feea8910b2c31506f223031c4500b"
+    },
+    {
+      "name": "molecular-graph-energy-ledger",
+      "sha256": "e7437c63b3cdcfc84c78bf3956296953d612f914e7cc3bd7493834fe746046e6"
+    },
+    {
+      "name": "same-hamiltonian-path-closure",
+      "sha256": "c30f37082913d06228504ef532f685dc2c7395b00e34c54fd393a1146360cb13"
+    },
+    {
+      "name": "nonorthogonal-subspace",
+      "sha256": "ebcc8dc5c1878843cf2f7988c75dde3d982dced297c7b7c877b6c365bded3264"
+    },
+    {
+      "name": "partition-mask-audit",
+      "sha256": "5ea32ee5180bbe67f8892749984ca11ca6a8fa5a9e4dcd079950d6cb68ecc530"
+    },
+    {
+      "name": "reflection-parity",
+      "sha256": "414ff69c8fed464db19243c4d4044ff0120b357912f3f6bb29aa1530e071da63"
+    },
+    {
+      "name": "fragment-working-basis",
+      "sha256": "cf57a9216317c55560cd1ba2000cf5129c8ac203a501a95dd5bdd2e548f8ba4b"
+    },
+    {
+      "name": "nuclear-repulsion-response",
+      "sha256": "9c0752fa5a3bd369afbf560e9851c6f2fe9c8b2e9f374d3c5406a2187794e83b"
+    },
+    {
+      "name": "scan-energy-curvature",
+      "sha256": "d93575b6f42ff9e0710085352cc41a013269e5542b4e8f203c32a126d8043215"
+    },
+    {
+      "name": "fixed-protocol-energy-review",
+      "sha256": "2e4f65d589ad296e5ac91e8c7f51de37d13641e8ad3e9013fe0c889f3edd080e"
+    },
+    {
+      "name": "constrained-optimization-response",
+      "sha256": "4613b2d31a9b10b9a3fb47941c422fd29751bface158b585fae8dee4bdf60e1e"
+    },
+    {
+      "name": "multistate-size-comparison",
+      "sha256": "b83c8ac2a15b540439be02ac656ae4c868de5563dfd9e68df66d0cd28a253d58"
+    },
+    {
+      "name": "runtime-usage-assistant",
+      "sha256": "bdd6d63b3e45dbef2eb376ca49d576117167fc33fd83c8eba3fe482330754ae0"
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.4.6",
+    "rdkit": "2026.03.6"
+  },
+  "source_files": [
+    {
+      "path": "review_tools/__init__.py",
+      "sha256": "a7a06aaaec0d2f63b1211c96f90ea19164952f0f07263d07af035b1baa438bb1"
+    },
+    {
+      "path": "review_tools/canonical_mo_policy_v1.json",
+      "sha256": "bba1d52af1e49fbcd80d67794590458c881332c75308a63f9c2e7cde8aac067d"
+    },
+    {
+      "path": "review_tools/canonical_orbitals.py",
+      "sha256": "2eca56b14b8a8f39d32f83c2f4a7f671c7d6b347bca02be9df2fdd4d5a7f2431"
+    },
+    {
+      "path": "review_tools/nonorthogonal_leakage_policy_v1.json",
+      "sha256": "ea1dfdb5a1a9fd8e09d896df6994dbc4ebd210f8586763d8b1d5462376fbdd08"
+    },
+    {
+      "path": "review_tools/skill_examples.py",
+      "sha256": "667ad1017c8913185a6fe4b5b0106db0edded9214900f019757476bf59800873"
+    },
+    {
+      "path": "runtime/__init__.py",
+      "sha256": "c55fc52a6d57b55df9a0159ed179906cee3fda48fa8aee103d8374139094b96b"
+    },
+    {
+      "path": "runtime/high_cost_cases/__init__.py",
+      "sha256": "9822619428da26b2d587ba9689fd16662319fce10baaac99086339eb011b749e"
+    },
+    {
+      "path": "runtime/high_cost_cases/assembly.py",
+      "sha256": "139382ea915941440077274b269d0713ac332d53cc453b6cfe9a903b7ce11aee"
+    },
+    {
+      "path": "runtime/high_cost_cases/budget.py",
+      "sha256": "aa43c02c6b37f2eceb43b3177563c47d7c4d313d6bc77c8a13ed1573b3cfc84c"
+    },
+    {
+      "path": "runtime/high_cost_cases/p11.py",
+      "sha256": "52b9deb59e005dfe7828bdb00253a05a2e10c23c36f8a5c2db44d66753df48c3"
+    },
+    {
+      "path": "runtime/high_cost_cases/p12.py",
+      "sha256": "e419434a9c20f69bb1f89707e6c667ea8911922272fb58a65d99045eaaf4531f"
+    },
+    {
+      "path": "runtime/molecular_service/__init__.py",
+      "sha256": "f9969ec55165b27c50c9b030487b77588e70f0e7cce6fffdc736079cc710d75e"
+    },
+    {
+      "path": "runtime/molecular_service/engine.py",
+      "sha256": "9a55d1a037272807db570f6a77da79cf0f26c15819a048c7bcd3721ff56558e5"
+    },
+    {
+      "path": "runtime/molecular_service/input.py",
+      "sha256": "8f542d1e8b34fd90e5978f9dfd4769a97a6936bfd1f4f54a2a3757929fe47bf2"
+    },
+    {
+      "path": "scripts/run-public-review-regression.py",
+      "sha256": "31a65b9b0bc9d9875b9ed01d349fd92da1c1af1c9c60e7c9bdf4eda7dadd4d36"
+    },
+    {
+      "path": "validation/public_regression/fixtures.json",
+      "sha256": "8b98e7873f674b74d0c508b4beb5a98e2b38994ea8875336ed122e05d535e364"
+    },
+    {
+      "path": "validation/public_regression/test_canonical_orbitals.py",
+      "sha256": "66425d8e55c6cb18831b6e1478a44d3ed157cd7b5779ee24eeb09075be1bce5f"
+    },
+    {
+      "path": "validation/public_regression/test_host_contracts.py",
+      "sha256": "83635d9d1279cc802fc2271185f2ef640d8f6f6700dfd4afc3ab8fb93ec3cf20"
+    },
+    {
+      "path": "validation/public_regression/test_nonorthogonal_leakage.py",
+      "sha256": "c9c2551671a4bea7b147f8f6bc02461996a6df398f4e478b200d23cfd249bc2a"
+    },
+    {
+      "path": "validation/public_regression/test_skill_examples.py",
+      "sha256": "b5d52da1c522291a7df9732de1a63e61a53513b7fcf40cc624b438b006fc1960"
+    }
+  ],
+  "elapsed_seconds": 3.422000000020489
+}

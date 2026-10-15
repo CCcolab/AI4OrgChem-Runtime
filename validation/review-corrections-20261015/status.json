@@ -1,0 +1,74 @@
+{
+  "schema": "review-corrections-status-v1",
+  "date": "2026-10-15",
+  "base_runtime_commit": "18007dc4ca04ca762a43ed942781ef31787043a2",
+  "base_science_documentation_commit": "968167c2749c76304c1ff2c100a2e92d340838ea",
+  "kind": "MAINTAINER_LOCAL_FIX_AND_VERIFICATION_NOT_INDEPENDENT_CLOSURE",
+  "R01": {
+    "status": "LOCAL_FIX_VERIFIED_AWAITING_REVIEW",
+    "scope": "Two generated internal manifests refreshed with existing script; original four documents unchanged in this correction",
+    "cumulative_science_diff_from_02ea458": {
+      "documents": 4,
+      "generated_manifests": 2,
+      "total": 6
+    },
+    "before_release_validator_exit": 1,
+    "after_release_validator_exit": 0,
+    "after_read_only_validators_passed": [
+      "release",
+      "p12",
+      "public",
+      "p14",
+      "navigation"
+    ],
+    "record": "science-manifest-validation.json"
+  },
+  "R02": {
+    "status": "LOCAL_FIX_VERIFIED_AWAITING_REVIEW",
+    "scope": "Deterministic nonorthogonal example only; normalized squared S-norm fraction, zero-vector refusal, finite/dimension/complex checks and declared numerical policy",
+    "required_new_tests": 17,
+    "record": "leakage-probes.json",
+    "policy": "review_tools/nonorthogonal_leakage_policy_v1.json"
+  },
+  "regression": {
+    "status": "PASS",
+    "executed": 96,
+    "skipped": 0,
+    "previous_checks_included": 79,
+    "new_leakage_checks": 17,
+    "normal_skill_examples": 15,
+    "specific_refusals": 15,
+    "common_io_contexts": 15,
+    "additional_checks": 51,
+    "new_quantum_calls": 0,
+    "tested_source_files": 20,
+    "record": "public-regression-result.json",
+    "sandbox_first_attempt": "TEMP_DIRECTORY_PERMISSION_ERRORS_RETAINED",
+    "successful_rerun": "SAME_SOURCE_OUTSIDE_SANDBOX_WITH_APPROVAL"
+  },
+  "preservation": {
+    "runtime_protected_files": 175,
+    "all_unchanged": true,
+    "historical_79_receipts_unchanged": true,
+    "historical_170_fields_and_records_preserved": true,
+    "skill_instructions_unchanged": 15,
+    "original_science_workspace_unchanged": true,
+    "old_tags_releases_results_and_run_identities_unchanged": true
+  },
+  "follow_up": {
+    "new_rhf_end_to_end": "NOT_EXECUTED",
+    "independent_agent_behavior": "NOT_EXECUTED",
+    "remote_ci": "NOT_EXECUTED",
+    "fresh_runtime_installation": "NOT_EXECUTED"
+  },
+  "scientific_capabilities": {
+    "user_conditional_compute": "BLOCKED",
+    "p11_p12_accepted_pilots": 2,
+    "p11_p12_registered_units": 78,
+    "wavefunction_stability": "NOT_EXECUTED",
+    "l4_resume_supported": false
+  },
+  "new_scf_integral_grid_fock_optimization_training_calls": 0,
+  "docker_wsl_image_build_push_tag_release": false,
+  "reviewer_record_zip": "NOT_PRESENT_IN_LOCAL_INPUTS; supplied Markdown reviewed; maintainer reproductions are identified separately"
+}

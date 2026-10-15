@@ -39,3 +39,7 @@ python -B scripts/run-public-review-regression.py --output /path/to/new-review-r
 ```
 
 本轮只用合成数据及保存数组，不运行新 RHF、SCF、积分、分子优化、训练或容器。当前 RHF Skill 的真实端到端补验仍为 NOT_EXECUTED（用户明确本轮不计算）；使用助手只补显式服务选择/准入检查，不冒充自然语言路由盲测。新增 CI 已配置，远端运行 NOT_EXECUTED。历史 170 项及其哈希不改写；当前指令字节不因新增示例而改变。详见[本轮状态](../validation/review-20261015/status.json)。
+
+## 后续归一化回修（本地，未推送）
+
+R02 新增 17 项泄漏率解析检查，本次 96 项包含原 79 项及修正后的实现。旧日志及历史 170 项记录原字节保留。详见[回修范围与证据](../docs/REVIEW_CORRECTIONS_20261015_zh-CN.md)。这些仍是程序测试，不是独立 Agent 行为验收；真实 RHF、远端 CI 和全新安装继续未执行。

@@ -1,0 +1,14 @@
+{
+  "status": "PASS_SAME_VIEW_PRESERVATION",
+  "protected_files": 175,
+  "skill_instructions": 15,
+  "prior_79_record_files": 10,
+  "tested_sources_match": 20,
+  "science_change_this_round": [
+    "manifests/FILE_INVENTORY.md",
+    "manifests/sha256-manifest.json"
+  ],
+  "original_science_workspace_unchanged": true,
+  "new_quantum_calls": 0,
+  "scientific_source_results_thresholds_run_identities_unchanged": true
+}

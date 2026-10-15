@@ -371,10 +371,27 @@
     "type": "DETERMINISTIC_PROGRAM_EXAMPLES_NOT_AGENT_EVALUATION",
     "command": "python -B scripts/run-public-review-regression.py --output NEW_DIRECTORY",
     "fixtures": "validation/public_regression/fixtures.json",
-    "result": "validation/review-20261015/public-regression-result.json",
+    "result": "validation/review-corrections-20261015/public-regression-result.json",
     "historical_test_snapshots_retained": true,
     "remote_ci": "NOT_EXECUTED",
     "current_rhf_new_end_to_end": "NOT_EXECUTED_NO_CALCULATION_AUTHORIZED",
-    "independent_blind_agent_evaluation": "NOT_EXECUTED"
-  }
+    "independent_blind_agent_evaluation": "NOT_EXECUTED",
+    "correction": "R02 normalized nonorthogonal squared leakage; zero-vector refusal",
+    "policy": "review_tools/nonorthogonal_leakage_policy_v1.json",
+    "required_leakage_regressions": 17,
+    "executed_tests": 96
+  },
+  "public_program_regression_history": [
+    {
+      "introduced_date": "2026-10-15",
+      "type": "DETERMINISTIC_PROGRAM_EXAMPLES_NOT_AGENT_EVALUATION",
+      "command": "python -B scripts/run-public-review-regression.py --output NEW_DIRECTORY",
+      "fixtures": "validation/public_regression/fixtures.json",
+      "result": "validation/review-20261015/public-regression-result.json",
+      "historical_test_snapshots_retained": true,
+      "remote_ci": "NOT_EXECUTED",
+      "current_rhf_new_end_to_end": "NOT_EXECUTED_NO_CALCULATION_AUTHORIZED",
+      "independent_blind_agent_evaluation": "NOT_EXECUTED"
+    }
+  ]
 }

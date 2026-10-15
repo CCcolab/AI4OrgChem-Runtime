@@ -125,3 +125,9 @@ Jupyter用户可让Agent生成Notebook单元格，但应显式指定输入和新
 ## 测试范围 / Test scope
 
 2026-10-14本地记录：10个限定流程场景符合预设预期。反例的正确拒绝也计作符合预期；保存结果重算、解析模型、工程探针和真实量化调用分别报告。公开交付只有[限定测试摘要](../../validation/skills/test-summary.json)和[范围说明](../TESTING_zh-CN.md)，不含全部原始运行载荷，不能据此独立复现全部测试。未认证所有输入、其他平台或完整科学功能。
+
+## Local analytic example correction / 本地解析示例回修
+
+The repository review example uses the normalized squared S-norm fraction, explicitly refuses zero vectors, and supports one vector `(n,)` only. It is separate from this instruction-only folder and from production scientific workers. See the [policy](../../review_tools/nonorthogonal_leakage_policy_v1.json), [17 analytic tests](../../validation/public_regression/test_nonorthogonal_leakage.py), and [correction record](../../docs/REVIEW_CORRECTIONS_20261015_zh-CN.md). The instruction bytes and historical ten-scenario record are unchanged.
+
+本次只修正仓库内解析示例：泄漏率包含归一化分母，零向量不可定义，形状和复数处理显式检查。新 96 项是本轮程序回归，不回写历史 79 项或 170 项，不构成独立 Agent 或科学服务验收。

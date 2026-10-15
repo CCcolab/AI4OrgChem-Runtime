@@ -38,12 +38,15 @@ def main(argv=None):
                 if isinstance(item,unittest.TestSuite):yield from ids(item)
                 else:yield item.id()
         discovered=list(ids(suite))
-        required_modules=('test_skill_examples','test_canonical_orbitals','test_host_contracts')
+        required_modules=('test_skill_examples','test_canonical_orbitals','test_host_contracts','test_nonorthogonal_leakage')
         if args.pattern!='test_*.py' or any(not any(x.startswith(name+'.') for x in discovered) for name in required_modules):
             raise ValueError('Incomplete suite discovery; filtered or missing public modules cannot PASS')
         manifest=json.loads((ROOT/'skills/manifest.json').read_bytes())
         expected=[f'test_{kind}__{r["name"].replace("-","_")}' for r in manifest['skills'] for kind in ('normal','refusal','io_failure')]
         missing=[name for name in expected if not any(x.endswith('.'+name) for x in discovered)]
+        leakage_policy=json.loads((ROOT/'review_tools/nonorthogonal_leakage_policy_v1.json').read_bytes())
+        missing.extend(name for name in leakage_policy['required_tests']
+                       if 'test_nonorthogonal_leakage.LeakageExamples.'+name not in discovered)
         if not discovered or missing:raise ValueError('Incomplete discovery; zero/partial tests cannot PASS: '+str(missing))
         with (args.output/'unittest.log').open('w',encoding='utf-8') as log:
             result=unittest.TextTestRunner(stream=log,verbosity=2).run(suite)
@@ -60,7 +63,7 @@ def main(argv=None):
             if not filename:continue
             path=Path(filename).resolve()
             if path.suffix=='.py' and path.is_relative_to(ROOT):imported.add(path)
-        imported.update({Path(__file__).resolve(),ROOT/'validation/public_regression/fixtures.json',ROOT/'review_tools/canonical_mo_policy_v1.json'})
+        imported.update({Path(__file__).resolve(),ROOT/'validation/public_regression/fixtures.json',ROOT/'review_tools/canonical_mo_policy_v1.json',ROOT/'review_tools/nonorthogonal_leakage_policy_v1.json'})
         record['source_files']=[{'path':p.relative_to(ROOT).as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(imported)]
         code=0 if status=='PASS' else 1
     except Exception as exc:
